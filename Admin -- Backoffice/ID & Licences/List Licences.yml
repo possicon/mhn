@@ -1,0 +1,27 @@
+info:
+  name: List Licences
+  type: http
+  seq: 1
+
+http:
+  method: GET
+  url: "{{base_url}}/admin/licence?search=Business&filter=Business"
+  params:
+    - name: search
+      value: Business
+      type: query
+    - name: filter
+      value: Business
+      type: query
+  body:
+    type: json
+    data: ""
+  auth:
+    type: bearer
+    token: "{{adminToken}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

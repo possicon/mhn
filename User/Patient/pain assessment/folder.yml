@@ -1,0 +1,7 @@
+info:
+  name: pain assessment
+  type: folder
+  seq: 24
+
+request:
+  auth: inherit

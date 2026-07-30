@@ -1,0 +1,22 @@
+info:
+  name: Organizations
+  type: http
+  seq: 10
+
+http:
+  method: POST
+  url: "{{base_url}}/admin/health-area/organizations"
+  body:
+    type: json
+    data: "{\r
+
+      \  \"active\": false // if you want to filter, else do not add\r
+
+      }"
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

@@ -1,0 +1,102 @@
+info:
+  name: Manage Provider
+  type: http
+  seq: 4
+
+http:
+  method: POST
+  url: "{{base_url}}/admin/paymentMethod/manage-provider"
+  body:
+    type: json
+    data: "{\r
+
+      \    \"id\":\"9bc5787b-5a68-4a4a-9181-042dc0f12ecb\",\r
+
+      \    \"payment_provider\": [\"Parkway Wallet\", \"Interswitch\", \"Monieppoint\"]\r
+
+      }"
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+examples:
+  - name: Manage Provider
+    request:
+      url: "{{base_url}}/admin/paymentMethod/manage-provider"
+      method: POST
+      body:
+        type: json
+        data: "{\r
+
+          \    \"id\":\"9bc2ad35-20ec-41bd-b028-d510cd3f32cc\",\r
+
+          \    \"payment_provider\": [\"Parkway Wallet\", \"Interswitch\", \"Monieppoint\"]\r
+
+          }"
+    response:
+      status: 200
+      statusText: OK
+      headers:
+        - name: Date
+          value: Mon, 08 Apr 2024 20:17:55 GMT
+        - name: Server
+          value: Apache/2.4.54 (Win64) OpenSSL/1.1.1q mod_fcgid/2.3.10-dev
+        - name: X-Powered-By
+          value: PHP/8.2.16
+        - name: Cache-Control
+          value: no-cache, private
+        - name: X-RateLimit-Limit
+          value: "60"
+        - name: X-RateLimit-Remaining
+          value: "59"
+        - name: Access-Control-Allow-Origin
+          value: "*"
+        - name: Vary
+          value: Authorization
+        - name: Keep-Alive
+          value: timeout=5, max=100
+        - name: Connection
+          value: Keep-Alive
+        - name: Transfer-Encoding
+          value: chunked
+        - name: Content-Type
+          value: application/json
+      body:
+        type: json
+        data: |-
+          {
+              "success": true,
+              "code": 0,
+              "locale": "en",
+              "message": "Payment Provider updated",
+              "data": {
+                  "paymentMethod": {
+                      "id": "9bc2ad35-20ec-41bd-b028-d510cd3f32cc",
+                      "country_id": "9b9faee2-eb16-4fa3-aa6d-dec4a6025d81",
+                      "country": "Germany",
+                      "status": "active",
+                      "collection_type": [
+                          "Cash",
+                          "Bank Transfer",
+                          "POS",
+                          "Card"
+                      ],
+                      "payment_provider": [
+                          "Parkway Wallet",
+                          "Interswitch",
+                          "Monieppoint"
+                      ],
+                      "payment_provider_count": 3,
+                      "bank_account": [
+                          "GTB",
+                          "UBA",
+                          "ACCESS",
+                          "FIRST BANK"
+                      ]
+                  }
+              }
+          }

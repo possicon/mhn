@@ -1,0 +1,86 @@
+info:
+  name: profile
+  type: http
+  seq: 1
+
+http:
+  method: GET
+  url: "{{base_url}}/user/profile"
+  headers:
+    - name: Accept
+      value: application/json
+  params:
+    - name: search
+      value: select ward
+      type: query
+      disabled: true
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+examples:
+  - name: get profile
+    request:
+      url: "{{base_url}}/user/profile"
+      method: GET
+      headers:
+        - name: Accept
+          value: application/json
+      params:
+        - name: search
+          value: select ward
+          type: query
+          disabled: true
+    response:
+      status: 200
+      statusText: OK
+      headers:
+        - name: Server
+          value: nginx/1.24.0 (Ubuntu)
+        - name: Content-Type
+          value: application/json
+        - name: Transfer-Encoding
+          value: chunked
+        - name: Connection
+          value: keep-alive
+        - name: Cache-Control
+          value: no-cache, private
+        - name: Date
+          value: Fri, 17 Jul 2026 05:54:48 GMT
+        - name: X-RateLimit-Limit
+          value: "60"
+        - name: X-RateLimit-Remaining
+          value: "58"
+        - name: Vary
+          value: Origin
+        - name: X-Frame-Options
+          value: SAMEORIGIN
+        - name: X-XSS-Protection
+          value: 1; mode=block
+        - name: X-Content-Type-Options
+          value: nosniff
+      body:
+        type: json
+        data: |-
+          {
+              "success": true,
+              "message": "User fetched successfully",
+              "data": {
+                  "id": "a134bfd5-bb77-4c87-a0e0-ad7e2a793325",
+                  "first_name": "Sedrick",
+                  "middle_name": "Mac",
+                  "last_name": "Ledner",
+                  "gender": "male",
+                  "email": "toheebabiodun03@gmail.com",
+                  "username": "Jamison9",
+                  "branch": null,
+                  "role": "owner",
+                  "phone": "9037714162",
+                  "avatar": "http://mhn.test//storage/17/bird_2.jpg",
+                  "date_joined": "2026-03-02T19:21:28.000000Z"
+              }
+          }

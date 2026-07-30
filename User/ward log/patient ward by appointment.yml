@@ -1,0 +1,204 @@
+info:
+  name: patient ward by appointment
+  type: http
+  seq: 3
+
+http:
+  method: GET
+  url: "{{base_url}}/user/organization/patient_appointment_wards?patient_id=9ea8d8a4-2cdd-4e08-baaf-a2d7048f8a32&appointment_id=9eb91989-9ad5-43bd-980a-d9318b4649c8"
+  headers:
+    - name: Accept
+      value: application/json
+  params:
+    - name: patient_id
+      value: 9ea8d8a4-2cdd-4e08-baaf-a2d7048f8a32
+      type: query
+    - name: appointment_id
+      value: 9eb91989-9ad5-43bd-980a-d9318b4649c8
+      type: query
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+examples:
+  - name: patient ward by appointment
+    request:
+      url: "{{base_url}}/user/organization/patient_appointment_wards?patient_id=9ea8d8a4-2cdd-4e08-baaf-a2d7048f8a32&appointment_id=9eb91989-9ad5-43bd-980a-d9318b4649c8"
+      method: GET
+      headers:
+        - name: Accept
+          value: application/json
+      params:
+        - name: patient_id
+          value: 9ea8d8a4-2cdd-4e08-baaf-a2d7048f8a32
+          type: query
+        - name: appointment_id
+          value: 9eb91989-9ad5-43bd-980a-d9318b4649c8
+          type: query
+    response:
+      status: 200
+      statusText: OK
+      headers:
+        - name: Date
+          value: Fri, 02 May 2025 20:21:15 GMT
+        - name: Server
+          value: Apache/2.4.54 (Win64) OpenSSL/1.1.1d mod_fcgid/2.3.10-dev
+        - name: X-Powered-By
+          value: PHP/8.2.17
+        - name: Cache-Control
+          value: no-cache, private
+        - name: X-RateLimit-Limit
+          value: "60"
+        - name: X-RateLimit-Remaining
+          value: "59"
+        - name: Access-Control-Allow-Origin
+          value: "*"
+        - name: Vary
+          value: Authorization
+        - name: Keep-Alive
+          value: timeout=5, max=100
+        - name: Connection
+          value: Keep-Alive
+        - name: Transfer-Encoding
+          value: chunked
+        - name: Content-Type
+          value: application/json
+      body:
+        type: json
+        data: |-
+          {
+              "success": true,
+              "code": 0,
+              "locale": "en",
+              "message": "Wards for patient appointment",
+              "data": {
+                  "items": [
+                      {
+                          "id": "9ed1422d-afba-49be-99d6-d3ccb6814bc3",
+                          "appointment_id": "9eb91989-9ad5-43bd-980a-d9318b4649c8",
+                          "patient_id": "9ea8d8a4-2cdd-4e08-baaf-a2d7048f8a32",
+                          "bed_id": "9ed143e7-13e2-46cc-bf95-4b38eb4e54c7",
+                          "room_id": "9ed14332-68b3-4100-b63a-5ab9f83aa176",
+                          "ward_id": "9ec6b535-2386-4918-9043-8c24faf4278e",
+                          "admitted_at": "2025-05-02T20:14:18.000000Z",
+                          "discharged_at": null,
+                          "daily_charge": null,
+                          "status": "admitted",
+                          "notes": null,
+                          "created_by": {
+                              "id": "9bc6382c-bb73-4c7d-9409-677fe560485d",
+                              "first_name": "General",
+                              "middle_name": "Prince",
+                              "last_name": "Emmanuel",
+                              "gender": "male",
+                              "status": "Active",
+                              "phone": "0802323232323",
+                              "email": "contactus@mhn.ng",
+                              "username": null,
+                              "email_verified_at": null,
+                              "type": "owner",
+                              "country_id": "9b9faee3-6aaa-4050-bd6c-98a43e674250",
+                              "branch_id": null,
+                              "organization_id": "9bc5eb78-74d2-45f4-a677-05d07dca6a63",
+                              "company_id": null,
+                              "reset_token": null,
+                              "token_time": null,
+                              "created_at": "2024-04-10T12:41:22.000000Z",
+                              "updated_at": "2024-04-11T18:11:50.000000Z",
+                              "deleted_at": null,
+                              "country_call_code": null
+                          },
+                          "updated_by": {
+                              "id": "9bc6382c-bb73-4c7d-9409-677fe560485d",
+                              "first_name": "General",
+                              "middle_name": "Prince",
+                              "last_name": "Emmanuel",
+                              "gender": "male",
+                              "status": "Active",
+                              "phone": "0802323232323",
+                              "email": "contactus@mhn.ng",
+                              "username": null,
+                              "email_verified_at": null,
+                              "type": "owner",
+                              "country_id": "9b9faee3-6aaa-4050-bd6c-98a43e674250",
+                              "branch_id": null,
+                              "organization_id": "9bc5eb78-74d2-45f4-a677-05d07dca6a63",
+                              "company_id": null,
+                              "reset_token": null,
+                              "token_time": null,
+                              "created_at": "2024-04-10T12:41:22.000000Z",
+                              "updated_at": "2024-04-11T18:11:50.000000Z",
+                              "deleted_at": null,
+                              "country_call_code": null
+                          },
+                          "organization_id": "9bc5eb78-74d2-45f4-a677-05d07dca6a63",
+                          "created_at": "2025-05-02T19:59:16.000000Z",
+                          "updated_at": "2025-05-02T20:14:18.000000Z",
+                          "days_in_bed": null,
+                          "billId": null,
+                          "patient": {
+                              "id": "9ea8d8a4-2cdd-4e08-baaf-a2d7048f8a32",
+                              "created_by_organization_id": "9bc5eb78-74d2-45f4-a677-05d07dca6a63",
+                              "patient_sequence": "MHN_USA791167867",
+                              "title": "Mr",
+                              "first_name": "Emma1",
+                              "last_name": "Prince1",
+                              "middle_name": "Ogbuagu1",
+                              "dob": "2022-02-02",
+                              "gender": "male",
+                              "occupation": "Engineer",
+                              "nin": "79183109118",
+                              "martial_status": "single",
+                              "tribe": "Igbo",
+                              "religion": "Christianity",
+                              "created_at": "2025-04-12T17:51:03.000000Z",
+                              "updated_at": "2025-04-12T17:51:03.000000Z",
+                              "preferred_language": "9bfad77f-9532-493c-88b9-6b99ebe55b8b",
+                              "status": "in-patient",
+                              "city_id": "9ba1338d-f1ca-487b-ae34-471ddc6a7bc2",
+                              "state_id": "9ba01c32-186f-4ce1-84a5-0ee8884d02de",
+                              "country_id": "9b9faee3-6aaa-4050-bd6c-98a43e674250",
+                              "address": "31 Onitsha Rd",
+                              "email_address": "lovebirds@mhn.com",
+                              "additional_mobile": "09087653421",
+                              "primary_mobile": "08023456789",
+                              "deleted_at": null,
+                              "user_id": "9ea8d8a4-2f05-4b97-a309-52a7b40b4764",
+                              "file_number": "98530903"
+                          },
+                          "bed": {
+                              "id": "9ed143e7-13e2-46cc-bf95-4b38eb4e54c7",
+                              "description": "this is not compuslory",
+                              "status": "available",
+                              "created_at": "2025-05-02T20:04:05.000000Z",
+                              "updated_at": "2025-05-02T20:04:05.000000Z",
+                              "organization_id": "9bc5eb78-74d2-45f4-a677-05d07dca6a63",
+                              "room_id": "9ed14332-68b3-4100-b63a-5ab9f83aa176",
+                              "service_item_id": "9ed143e7-0ee6-4021-90af-7c4e5acb216a"
+                          },
+                          "room": {
+                              "id": "9ed14332-68b3-4100-b63a-5ab9f83aa176",
+                              "name": "P&C",
+                              "type": "private",
+                              "description": "room description",
+                              "created_at": "2025-05-02T20:02:07.000000Z",
+                              "updated_at": "2025-05-02T20:02:07.000000Z",
+                              "ward_id": "9ec6b535-2386-4918-9043-8c24faf4278e",
+                              "organization_id": "9bc5eb78-74d2-45f4-a677-05d07dca6a63"
+                          },
+                          "ward": {
+                              "id": "9ec6b535-2386-4918-9043-8c24faf4278e",
+                              "name": "private",
+                              "description": "ward with private rooms",
+                              "created_at": "2025-04-27T14:06:48.000000Z",
+                              "updated_at": "2025-04-27T14:06:48.000000Z",
+                              "organization_id": "9bc5eb78-74d2-45f4-a677-05d07dca6a63"
+                          }
+                      }
+                  ]
+              }
+          }

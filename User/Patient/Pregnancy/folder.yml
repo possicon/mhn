@@ -1,0 +1,7 @@
+info:
+  name: Pregnancy
+  type: folder
+  seq: 19
+
+request:
+  auth: inherit

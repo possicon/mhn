@@ -1,0 +1,130 @@
+info:
+  name: Assign Location to a plan
+  type: http
+  seq: 13
+
+http:
+  method: POST
+  url: "{{base_url}}/admin/plan/assignLocation"
+  body:
+    type: json
+    data: "{\r
+
+      \    \"plan_id\": \"9baa6a1f-a6ae-4a64-9330-aff8996c87f7\",\r
+
+      \    \"country_id\": \"9b9faee2-c7c5-4f3f-951a-1ca8d5befc24\"\r
+
+      }"
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+examples:
+  - name: Sample Request
+    request:
+      url: "{{base_url}}/admin/plan/assignLocation"
+      method: POST
+      body:
+        type: json
+        data: "{\r
+
+          \    \"plan_id\": \"9baa6a1f-a6ae-4a64-9330-aff8996c87f7\",\r
+
+          \    \"country_id\": \"9b9faee2-dd02-4ae5-945c-0a57977b0ae0\"\r
+
+          }"
+    response:
+      status: 201
+      statusText: Created
+      headers:
+        - name: Date
+          value: Wed, 27 Mar 2024 19:25:41 GMT
+        - name: Server
+          value: Apache/2.4.54 (Win64) OpenSSL/1.1.1q mod_fcgid/2.3.10-dev
+        - name: X-Powered-By
+          value: PHP/8.2.16
+        - name: Cache-Control
+          value: no-cache, private
+        - name: X-RateLimit-Limit
+          value: "60"
+        - name: X-RateLimit-Remaining
+          value: "59"
+        - name: Access-Control-Allow-Origin
+          value: "*"
+        - name: Vary
+          value: Authorization
+        - name: Keep-Alive
+          value: timeout=5, max=100
+        - name: Connection
+          value: Keep-Alive
+        - name: Transfer-Encoding
+          value: chunked
+        - name: Content-Type
+          value: application/json
+      body:
+        type: json
+        data: |-
+          {
+              "success": true,
+              "code": 0,
+              "locale": "en",
+              "message": "Country assigned successfully",
+              "data": {
+                  "plan": {
+                      "name": "Plan At",
+                      "description": "This amazing plan gives you an awesome description.",
+                      "organization_types": [
+                          {
+                              "id": 1,
+                              "name": "Hospitals & Health Centers",
+                              "active": true,
+                              "pivot": {
+                                  "plan_id": "9baa6a1f-a6ae-4a64-9330-aff8996c87f7",
+                                  "organization_type_id": 1
+                              }
+                          },
+                          {
+                              "id": 2,
+                              "name": "Pharmacy",
+                              "active": true,
+                              "pivot": {
+                                  "plan_id": "9baa6a1f-a6ae-4a64-9330-aff8996c87f7",
+                                  "organization_type_id": 2
+                              }
+                          },
+                          {
+                              "id": 4,
+                              "name": "Laboratory",
+                              "active": true,
+                              "pivot": {
+                                  "plan_id": "9baa6a1f-a6ae-4a64-9330-aff8996c87f7",
+                                  "organization_type_id": 4
+                              }
+                          }
+                      ],
+                      "type": "Temporary",
+                      "start_date": "2024-01-01",
+                      "end_date": "2024-05-05",
+                      "number_of_branches": 2,
+                      "number_of_storage": "1TB",
+                      "number_of_users": 3,
+                      "telemedicine": false,
+                      "hmo": false,
+                      "pricing_per_user": 10,
+                      "active": false,
+                      "amount_monthly": "8000",
+                      "amount_quarterly": "20000",
+                      "amount_yearly": "35000",
+                      "has_trial": true,
+                      "trial_period": 60,
+                      "sms_credit": "50",
+                      "support_type": 1,
+                      "cancellation_period": 30,
+                      "refund_eligibility": false
+                  }
+              }
+          }

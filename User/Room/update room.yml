@@ -1,0 +1,106 @@
+info:
+  name: update room
+  type: http
+  seq: 2
+
+http:
+  method: PATCH
+  url: "{{base_url}}/user/organization/rooms/:id"
+  headers:
+    - name: Accept
+      value: application/json
+  params:
+    - name: id
+      value: 9ec6b9b6-2c17-4b96-bc76-3cecea8d34e1
+      type: path
+  body:
+    type: json
+    data: "{\r
+
+      \    \"type\":\"private test\",\r
+
+      \    \"name\":\"iuc test\",\r
+
+      \    \"description\":\"room description test\"\r
+
+      }"
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+examples:
+  - name: update room
+    request:
+      url: "{{base_url}}/user/organization/rooms/:id"
+      method: PATCH
+      headers:
+        - name: Accept
+          value: application/json
+      params:
+        - name: id
+          value: 9ec6b9b6-2c17-4b96-bc76-3cecea8d34e1
+          type: path
+      body:
+        type: json
+        data: "{\r
+
+          \    \"type\":\"private test\",\r
+
+          \    \"name\":\"iuc test\",\r
+
+          \    \"description\":\"room description test\"\r
+
+          }"
+    response:
+      status: 200
+      statusText: OK
+      headers:
+        - name: Date
+          value: Sun, 27 Apr 2025 20:48:05 GMT
+        - name: Server
+          value: Apache/2.4.54 (Win64) OpenSSL/1.1.1d mod_fcgid/2.3.10-dev
+        - name: X-Powered-By
+          value: PHP/8.2.17
+        - name: Cache-Control
+          value: no-cache, private
+        - name: X-RateLimit-Limit
+          value: "60"
+        - name: X-RateLimit-Remaining
+          value: "59"
+        - name: Access-Control-Allow-Origin
+          value: "*"
+        - name: Vary
+          value: Authorization
+        - name: Keep-Alive
+          value: timeout=5, max=100
+        - name: Connection
+          value: Keep-Alive
+        - name: Transfer-Encoding
+          value: chunked
+        - name: Content-Type
+          value: application/json
+      body:
+        type: json
+        data: |-
+          {
+              "success": true,
+              "code": 0,
+              "locale": "en",
+              "message": "Room updated successfully",
+              "data": {
+                  "item": {
+                      "id": "9ec6b9b6-2c17-4b96-bc76-3cecea8d34e1",
+                      "name": "iuc test",
+                      "type": "private test",
+                      "description": "room description test",
+                      "created_at": "2025-04-27T14:19:24.000000Z",
+                      "updated_at": "2025-04-27T20:48:06.000000Z",
+                      "ward_id": "9ec6b535-2386-4918-9043-8c24faf4278e",
+                      "organization_id": "9bc5eb78-74d2-45f4-a677-05d07dca6a63"
+                  }
+              }
+          }

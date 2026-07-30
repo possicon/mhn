@@ -1,0 +1,61 @@
+info:
+  name: List Regions Copy
+  type: http
+  seq: 1
+
+http:
+  method: GET
+  url: "{{base_url}}/generic/region"
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+examples:
+  - name: Sample Response
+    request:
+      url: /region/list
+      method: GET
+    response:
+      body:
+        type: text
+        data: "{\r
+
+          \  \"success\": true,\r
+
+          \  \"regions\": [\r
+
+          \    {\r
+
+          \      \"id\": 1,\r
+
+          \      \"name\": \"Africa\",\r
+
+          \      \"code\": null,\r
+
+          \      \"description\": null,\r
+
+          \      \"countries_count\": 2\r
+
+          \    },\r
+
+          \    {\r
+
+          \      \"id\": 2,\r
+
+          \      \"name\": \"Europe\",\r
+
+          \      \"code\": null,\r
+
+          \      \"description\": null,\r
+
+          \      \"countries_count\": 0\r
+
+          \    }\r
+
+          \  ]\r
+
+          }"

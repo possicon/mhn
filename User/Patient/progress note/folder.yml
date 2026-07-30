@@ -1,0 +1,7 @@
+info:
+  name: progress note
+  type: folder
+  seq: 27
+
+request:
+  auth: inherit

@@ -1,0 +1,192 @@
+info:
+  name: Login - High
+  type: http
+  seq: 1
+
+http:
+  method: POST
+  url: "{{base_url}}/user/auth/login"
+  headers:
+    - name: Accept
+      value: application/json
+  body:
+    type: json
+    data: "{\r
+
+      \    // \"email\": \"contactus@mhn.ng\",\r
+
+      \    \"email\": \"lekki@gmail.com\",\r
+
+      \    //\"username\": \"0802323232323\", // If user has username set, he can log in with it.\r
+
+      \    \"password\":\"Skim@007\"\r
+
+      \    // \"password\":\"moyoMhn@35\"\r
+
+      }"
+  auth: inherit
+
+runtime:
+  scripts:
+    - type: after-response
+      code: |-
+        const status = res.statusText
+        if (status === "OK") {
+            const token = res.getBody().data.token
+            console.log(token)
+            pm.collectionVariables.set("local_token", token)
+        }
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+examples:
+  - name: Login - High
+    request:
+      url: "{{base_url}}/user/auth/login"
+      method: POST
+      headers:
+        - name: Accept
+          value: application/json
+      body:
+        type: json
+        data: "{\r
+
+          \    \"email\": \"contactus@mhn.ng\",\r
+
+          \    //\"username\": \"0802323232323\", // If user has username set, he can log in with it.\r
+
+          \    \"password\":\"moyoMhn@35\"\r
+
+          }"
+    response:
+      status: 200
+      statusText: OK
+      headers:
+        - name: Date
+          value: Mon, 29 Apr 2024 07:15:53 GMT
+        - name: Server
+          value: Apache/2.4.54 (Win64) OpenSSL/1.1.1q mod_fcgid/2.3.10-dev
+        - name: X-Powered-By
+          value: PHP/8.2.16
+        - name: Cache-Control
+          value: no-cache, private
+        - name: X-RateLimit-Limit
+          value: "60"
+        - name: X-RateLimit-Remaining
+          value: "58"
+        - name: Access-Control-Allow-Origin
+          value: "*"
+        - name: Keep-Alive
+          value: timeout=5, max=100
+        - name: Connection
+          value: Keep-Alive
+        - name: Transfer-Encoding
+          value: chunked
+        - name: Content-Type
+          value: application/json
+      body:
+        type: json
+        data: |-
+          {
+              "success": true,
+              "message": "Signin successfull",
+              "data": {
+                  "token": "60|Ln7Sqin9qj6PbGg1D0Pq614cybl0uk5W56yAfbZy4ed924a7",
+                  "firstname": "General",
+                  "email": "contactus@mhn.ng",
+                  "phone": "0802323232323",
+                  "avatar": null,
+                  "redirect": "",
+                  "type": "owner",
+                  "organization": "MHN",
+                  "organization_id": "9bc5eb78-74d2-45f4-a677-05d07dca6a63",
+                  "interested_plan": "9bd21ab6-24de-4a8f-91da-a16d95939fd3",
+                  "plan": "9bd21ab6-24de-4a8f-91da-a16d95939fd3",
+                  "country": {
+                      "id": "9b9faee3-6aaa-4050-bd6c-98a43e674250",
+                      "name": "United States",
+                      "region_id": "9b9ecc53-4727-43a1-bf0e-9e05de7c568a",
+                      "currency_name": "United States dollar",
+                      "currency_symbol": "USD",
+                      "active": true,
+                      "flag": null
+                  },
+                  "role": [
+                      {
+                          "id": 3,
+                          "name": "owner",
+                          "status": "active",
+                          "guard_name": "user",
+                          "created_at": "2024-04-10T13:34:12.000000Z",
+                          "updated_at": "2024-04-10T13:34:12.000000Z",
+                          "deleted_at": null,
+                          "pivot": {
+                              "model_type": "App\\Models\\User",
+                              "model_uuid": "9bc6382c-bb73-4c7d-9409-677fe560485d",
+                              "role_id": 3
+                          },
+                          "permissions": [
+                              {
+                                  "id": 1,
+                                  "name": "create",
+                                  "guard_name": "user",
+                                  "group_name": "user",
+                                  "created_at": "2024-04-27T16:16:57.000000Z",
+                                  "updated_at": "2024-04-27T16:16:57.000000Z",
+                                  "pivot": {
+                                      "role_id": 3,
+                                      "permission_id": 1
+                                  }
+                              },
+                              {
+                                  "id": 2,
+                                  "name": "edit",
+                                  "guard_name": "user",
+                                  "group_name": "user",
+                                  "created_at": "2024-04-27T16:16:57.000000Z",
+                                  "updated_at": "2024-04-27T16:16:57.000000Z",
+                                  "pivot": {
+                                      "role_id": 3,
+                                      "permission_id": 2
+                                  }
+                              },
+                              {
+                                  "id": 3,
+                                  "name": "delete",
+                                  "guard_name": "user",
+                                  "group_name": "user",
+                                  "created_at": "2024-04-27T16:16:57.000000Z",
+                                  "updated_at": "2024-04-27T16:16:57.000000Z",
+                                  "pivot": {
+                                      "role_id": 3,
+                                      "permission_id": 3
+                                  }
+                              }
+                          ]
+                      }
+                  ],
+                  "modules": [
+                      {
+                          "id": "9be8a28b-2ac4-4f57-8392-381789bc6773",
+                          "role_id": 3,
+                          "module_id": 14242,
+                          "created_at": "2024-04-27T16:16:57.000000Z",
+                          "updated_at": "2024-04-27T16:16:57.000000Z",
+                          "module": {
+                              "id": 14242,
+                              "name": "hmo_mager",
+                              "img": "dfsd",
+                              "description": "sfrwfcz",
+                              "organization_type_id": 1,
+                              "active": 1,
+                              "created_at": null,
+                              "updated_at": null
+                          }
+                      }
+                  ]
+              }
+          }

@@ -1,0 +1,123 @@
+info:
+  name: list
+  type: http
+  seq: 2
+
+http:
+  method: GET
+  url: "{{base_url}}/user/patient/:id/physical"
+  headers:
+    - name: Accept
+      value: application/json
+  params:
+    - name: id
+      value: 9c22ec62-cfa4-476c-8921-a924a32f20d7
+      type: path
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+examples:
+  - name: list
+    request:
+      url: "{{base_url}}/user/patient/:id/physical"
+      method: GET
+      headers:
+        - name: Accept
+          value: application/json
+      params:
+        - name: id
+          value: 9c22ec62-cfa4-476c-8921-a924a32f20d7
+          type: path
+    response:
+      status: 200
+      statusText: OK
+      headers:
+        - name: Date
+          value: Fri, 14 Jun 2024 11:10:11 GMT
+        - name: Server
+          value: Apache/2.4.54 (Win64) OpenSSL/1.1.1q mod_fcgid/2.3.10-dev
+        - name: X-Powered-By
+          value: PHP/8.2.16
+        - name: Cache-Control
+          value: no-cache, private
+        - name: X-RateLimit-Limit
+          value: "60"
+        - name: X-RateLimit-Remaining
+          value: "57"
+        - name: Access-Control-Allow-Origin
+          value: "*"
+        - name: Vary
+          value: Authorization
+        - name: Keep-Alive
+          value: timeout=5, max=100
+        - name: Connection
+          value: Keep-Alive
+        - name: Transfer-Encoding
+          value: chunked
+        - name: Content-Type
+          value: application/json
+      body:
+        type: json
+        data: |-
+          {
+              "success": true,
+              "code": 0,
+              "locale": "en",
+              "message": "success",
+              "data": {
+                  "items": [
+                      {
+                          "id": "9c48b288-b1f5-4875-80cf-1d9a24f735ef",
+                          "patient_id": "9c22ec62-cfa4-476c-8921-a924a32f20d7",
+                          "visit_date": "2024-06-14 00:00:00",
+                          "observation": "Difficulty with bending, lifting, and prolonged sitting",
+                          "palpation_findings": "palpation_findings",
+                          "range_of_motion": [
+                              "Cervical Spine",
+                              "Hip"
+                          ],
+                          "movement": [
+                              "Flexion",
+                              "Adduction"
+                          ],
+                          "measurement": [
+                              "20",
+                              "25"
+                          ],
+                          "joint_notes": [
+                              "joint_notes",
+                              "joint_notes"
+                          ],
+                          "muscle_strength": [
+                              "Shoulder",
+                              "Hip"
+                          ],
+                          "muscle": [
+                              "Deltoid",
+                              "Gluteus Medius"
+                          ],
+                          "strength_grade": [
+                              "0/5",
+                              "1/5"
+                          ],
+                          "muscle_strength_notes": [
+                              "muscle_strength_notes",
+                              "muscle_strength_notes"
+                          ],
+                          "flexibility": "flexibility",
+                          "posture_analysis": "posture_analysis",
+                          "gait_analysis": "gait_analysis",
+                          "special_tests": "special_tests",
+                          "created_at": "2024-06-14T10:21:08.000000Z",
+                          "updated_at": "2024-06-14T10:32:03.000000Z",
+                          "joint_count": 2,
+                          "muscle_count": 2
+                      }
+                  ]
+              }
+          }

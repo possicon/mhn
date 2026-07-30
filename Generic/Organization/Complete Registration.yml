@@ -1,0 +1,132 @@
+info:
+  name: Complete Registration
+  type: http
+  seq: 5
+
+http:
+  method: POST
+  url: "{{base_url}}/generic/organization/complete-registration"
+  headers:
+    - name: Accept
+      value: application/json
+  body:
+    type: json
+    data: |
+      {
+          "id":"9bd69b2b-2ebe-4e48-8cea-e24e2d42c743", // The organization id
+          // "health_areas_ids": [
+          //     "1a1a1a1a-1a1a-1a1a-1a1a-1a1a1a1a1a11",
+          //     "1a1a1a1a-1a1a-1a1a-1a1a-1a1a1a1a1a12",
+          //     "1a1a1a1a-1a1a-1a1a-1a1a-1a1a1a1a1a13",
+          //     "1a1a1a1a-1a1a-1a1a-1a1a-1a1a1a1a1a14"
+          // ],
+          "email":"possicon%40gmail.com",
+          "name":"Sherrif",
+          "phone": "080237322323"
+
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+examples:
+  - name: Complete Registration
+    request:
+      url: "{{base_url}}/generic/organization/complete-registration"
+      method: POST
+      headers:
+        - name: Accept
+          value: application/json
+      body:
+        type: json
+        data: |-
+          {
+              "id":"9bd2846c-d947-4894-8042-699fe026fdc6", // The organization id
+              "health_areas_ids": [
+                  "1a1a1a1a-1a1a-1a1a-1a1a-1a1a1a1a1a11",
+                  "1a1a1a1a-1a1a-1a1a-1a1a-1a1a1a1a1a12",
+                  "1a1a1a1a-1a1a-1a1a-1a1a-1a1a1a1a1a13",
+                  "1a1a1a1a-1a1a-1a1a-1a1a-1a1a1a1a1a14"
+              ],
+              "phone": "0802323232323",
+              "email":"moyo@mhn.ng",
+              "name":"Moyo"
+          }
+    response:
+      status: 200
+      statusText: OK
+      headers:
+        - name: Date
+          value: Tue, 16 Apr 2024 16:51:12 GMT
+        - name: Server
+          value: Apache/2.4.54 (Win64) OpenSSL/1.1.1q mod_fcgid/2.3.10-dev
+        - name: X-Powered-By
+          value: PHP/8.2.16
+        - name: Cache-Control
+          value: no-cache, private
+        - name: X-RateLimit-Limit
+          value: "60"
+        - name: X-RateLimit-Remaining
+          value: "58"
+        - name: Access-Control-Allow-Origin
+          value: "*"
+        - name: Keep-Alive
+          value: timeout=5, max=100
+        - name: Connection
+          value: Keep-Alive
+        - name: Transfer-Encoding
+          value: chunked
+        - name: Content-Type
+          value: application/json
+      body:
+        type: json
+        data: |-
+          {
+              "success": true,
+              "code": 0,
+              "locale": "en",
+              "message": "Updated successfully",
+              "data": {
+                  "organization": {
+                      "id": "9bd2846c-d947-4894-8042-699fe026fdc6",
+                      "name": "MHN",
+                      "domain": null,
+                      "incoming_server": null,
+                      "outgoing_server": null,
+                      "email": "moyo@mhn.ng",
+                      "invited": false,
+                      "country_id": "9b9faee2-c7c5-4f3f-951a-1ca8d5befc24",
+                      "organization_type_id": null,
+                      "region_id": null,
+                      "interested_plan_id": "9bd21ab6-24de-4a8f-91da-a16d95939fd3",
+                      "plan_id": null,
+                      "plan_frequency": "monthly",
+                      "description": null,
+                      "landmark": null,
+                      "status": "Account Created",
+                      "step": "0",
+                      "active": true,
+                      "address": null,
+                      "phone": null,
+                      "state_id": null,
+                      "city_id": null,
+                      "grade_id": null,
+                      "token_time": "2024-04-16 16:37:38"
+                  },
+                  "owner": {
+                      "first_name": "Moyo",
+                      "email": "moyo@mhn.ng",
+                      "type": "owner",
+                      "organization_id": "9bd2846c-d947-4894-8042-699fe026fdc6",
+                      "phone": "0802323232323",
+                      "username": null,
+                      "id": "9bd28df7-d8c7-4938-ac74-e649a165c540",
+                      "updated_at": "2024-04-16T16:51:12.000000Z",
+                      "created_at": "2024-04-16T16:51:12.000000Z"
+                  }
+              }
+          }

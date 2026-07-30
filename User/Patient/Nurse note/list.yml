@@ -1,0 +1,106 @@
+info:
+  name: list
+  type: http
+  seq: 2
+
+http:
+  method: GET
+  url: "{{base_url}}/user/nurseNote/patient/:id"
+  headers:
+    - name: Accept
+      value: application/json
+  params:
+    - name: id
+      value: 9c22ec62-cfa4-476c-8921-a924a32f20d7
+      type: path
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+examples:
+  - name: list
+    request:
+      url: "{{base_url}}/user/nurseNote/patient/:id"
+      method: GET
+      headers:
+        - name: Accept
+          value: application/json
+      params:
+        - name: id
+          value: 9c22ec62-cfa4-476c-8921-a924a32f20d7
+          type: path
+    response:
+      status: 200
+      statusText: OK
+      headers:
+        - name: Date
+          value: Thu, 20 Jun 2024 20:32:07 GMT
+        - name: Server
+          value: Apache/2.4.54 (Win64) OpenSSL/1.1.1q mod_fcgid/2.3.10-dev
+        - name: X-Powered-By
+          value: PHP/8.2.16
+        - name: Cache-Control
+          value: no-cache, private
+        - name: X-RateLimit-Limit
+          value: "60"
+        - name: X-RateLimit-Remaining
+          value: "58"
+        - name: Access-Control-Allow-Origin
+          value: "*"
+        - name: Vary
+          value: Authorization
+        - name: Keep-Alive
+          value: timeout=5, max=100
+        - name: Connection
+          value: Keep-Alive
+        - name: Transfer-Encoding
+          value: chunked
+        - name: Content-Type
+          value: application/json
+      body:
+        type: json
+        data: |-
+          {
+              "success": true,
+              "code": 0,
+              "locale": "en",
+              "message": "success",
+              "data": {
+                  "items": [
+                      {
+                          "id": "9c559d18-f9a9-4c03-b57e-a790512b8026",
+                          "template": "SOAP",
+                          "note": "assessment",
+                          "taken_by": "9bc6382c-bb73-4c7d-9409-677fe560485d",
+                          "patient_id": "9c22ec62-cfa4-476c-8921-a924a32f20d7",
+                          "created_at": "2024-06-20T20:26:58.000000Z",
+                          "updated_at": "2024-06-20T20:26:58.000000Z",
+                          "nurse": {
+                              "id": "9bc6382c-bb73-4c7d-9409-677fe560485d",
+                              "first_name": "General",
+                              "middle_name": "Prince",
+                              "last_name": "Emmanuel"
+                          }
+                      },
+                      {
+                          "id": "9c559edd-adb1-494b-9e6f-4777d57f478a",
+                          "template": "SOAP",
+                          "note": "assessment",
+                          "taken_by": "9bc6382c-bb73-4c7d-9409-677fe560485d",
+                          "patient_id": "9c22ec62-cfa4-476c-8921-a924a32f20d7",
+                          "created_at": "2024-06-20T20:31:54.000000Z",
+                          "updated_at": "2024-06-20T20:31:54.000000Z",
+                          "nurse": {
+                              "id": "9bc6382c-bb73-4c7d-9409-677fe560485d",
+                              "first_name": "General",
+                              "middle_name": "Prince",
+                              "last_name": "Emmanuel"
+                          }
+                      }
+                  ]
+              }
+          }

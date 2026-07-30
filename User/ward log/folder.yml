@@ -1,0 +1,7 @@
+info:
+  name: ward log
+  type: folder
+  seq: 18
+
+request:
+  auth: inherit

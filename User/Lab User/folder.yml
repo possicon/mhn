@@ -1,0 +1,9 @@
+info:
+  name: Lab User
+  type: folder
+  seq: 12
+
+request:
+  auth:
+    type: bearer
+    token: "{{local_token}}"

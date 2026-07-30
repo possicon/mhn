@@ -1,0 +1,11 @@
+info:
+  name: Plans
+  type: folder
+  seq: 4
+
+request:
+  auth: inherit
+
+docs:
+  content: Every endpoint that interacts with plans and their location models
+  type: text/markdown

@@ -1,0 +1,1207 @@
+info:
+  name: hmoList
+  type: http
+  seq: 11
+
+http:
+  method: GET
+  url: "{{base_url}}/user/organization/hmo_list"
+  headers:
+    - name: Accept
+      value: application/json
+  auth:
+    type: bearer
+    token: "{{token}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+examples:
+  - name: hmoList
+    request:
+      url: "{{base_url}}/user/organization/hmo_list"
+      method: GET
+      headers:
+        - name: Accept
+          value: application/json
+    response:
+      status: 200
+      statusText: OK
+      headers:
+        - name: Date
+          value: Fri, 23 Aug 2024 11:10:24 GMT
+        - name: Server
+          value: Apache/2.4.54 (Win64) OpenSSL/1.1.1q mod_fcgid/2.3.10-dev
+        - name: X-Powered-By
+          value: PHP/8.2.16
+        - name: Cache-Control
+          value: no-cache, private
+        - name: X-RateLimit-Limit
+          value: "60"
+        - name: X-RateLimit-Remaining
+          value: "59"
+        - name: Access-Control-Allow-Origin
+          value: "*"
+        - name: Vary
+          value: Authorization
+        - name: Keep-Alive
+          value: timeout=5, max=100
+        - name: Connection
+          value: Keep-Alive
+        - name: Transfer-Encoding
+          value: chunked
+        - name: Content-Type
+          value: application/json
+      body:
+        type: json
+        data: |-
+          {
+              "success": true,
+              "code": 0,
+              "locale": "en",
+              "message": "success",
+              "data": {
+                  "data": [
+                      {
+                          "id": "9c3c9dfc-28a1-47d4-a575-99f67b3ec4ef",
+                          "hmo_id": "9bbbac52-edd1-4aa7-8254-c29c14fa6249",
+                          "plan_name": "Diamond",
+                          "organization_id": "9bc5eb78-74d2-45f4-a677-05d07dca6a63",
+                          "service_item_id": null,
+                          "created_at": "2024-06-08T10:13:45.000000Z",
+                          "updated_at": "2024-06-08T10:13:45.000000Z",
+                          "plan_count": 0,
+                          "hmo": {
+                              "id": "9bbbac52-edd1-4aa7-8254-c29c14fa6249",
+                              "health_provider": "Relaince",
+                              "type": "public",
+                              "contact_name": "Moyo",
+                              "contact_email_address": "moyo@reliance.com",
+                              "contact_phone_number": "09023456789",
+                              "status": "active",
+                              "description": null,
+                              "country_id": "9b9faee2-a2a4-4bcc-a758-53dfee793de6",
+                              "created_at": "2024-04-05T07:52:03.000000Z",
+                              "updated_at": "2024-04-05T13:49:10.000000Z",
+                              "deleted_at": null
+                          }
+                      },
+                      {
+                          "id": "9c3c9dfc-c92f-4725-b2ab-8b4a13e0a88b",
+                          "hmo_id": "9bbbac52-edd1-4aa7-8254-c29c14fa6249",
+                          "plan_name": "Diamond",
+                          "organization_id": "9bc5eb78-74d2-45f4-a677-05d07dca6a63",
+                          "service_item_id": null,
+                          "created_at": "2024-06-08T10:13:45.000000Z",
+                          "updated_at": "2024-06-08T10:13:45.000000Z",
+                          "plan_count": 0,
+                          "hmo": {
+                              "id": "9bbbac52-edd1-4aa7-8254-c29c14fa6249",
+                              "health_provider": "Relaince",
+                              "type": "public",
+                              "contact_name": "Moyo",
+                              "contact_email_address": "moyo@reliance.com",
+                              "contact_phone_number": "09023456789",
+                              "status": "active",
+                              "description": null,
+                              "country_id": "9b9faee2-a2a4-4bcc-a758-53dfee793de6",
+                              "created_at": "2024-04-05T07:52:03.000000Z",
+                              "updated_at": "2024-04-05T13:49:10.000000Z",
+                              "deleted_at": null
+                          }
+                      },
+                      {
+                          "id": "9c3c9dfc-ca41-4e08-9ded-e46524165435",
+                          "hmo_id": "9bc5ba19-853f-4edc-9f84-0298ee1a1b6c",
+                          "plan_name": "Diamond",
+                          "organization_id": "9bc5eb78-74d2-45f4-a677-05d07dca6a63",
+                          "service_item_id": null,
+                          "created_at": "2024-06-08T10:13:45.000000Z",
+                          "updated_at": "2024-06-08T10:13:45.000000Z",
+                          "plan_count": 0,
+                          "hmo": {
+                              "id": "9bc5ba19-853f-4edc-9f84-0298ee1a1b6c",
+                              "health_provider": "Ypest",
+                              "type": "private",
+                              "contact_name": "Moyo",
+                              "contact_email_address": "moyo@reliance.com",
+                              "contact_phone_number": "09023456789",
+                              "status": "inactive",
+                              "description": "still optional",
+                              "country_id": "9b9faee2-a2a4-4bcc-a758-53dfee793de6",
+                              "created_at": "2024-04-10T07:48:50.000000Z",
+                              "updated_at": "2024-04-10T07:56:28.000000Z",
+                              "deleted_at": null
+                          }
+                      },
+                      {
+                          "id": "9c40cb0e-3cc2-4204-9756-30546252d39a",
+                          "hmo_id": "9bbbac52-edd1-4aa7-8254-c29c14fa6249",
+                          "plan_name": "Diamognd",
+                          "organization_id": "9bc5eb78-74d2-45f4-a677-05d07dca6a63",
+                          "service_item_id": null,
+                          "created_at": "2024-06-10T12:03:05.000000Z",
+                          "updated_at": "2024-06-10T12:03:05.000000Z",
+                          "plan_count": 0,
+                          "hmo": {
+                              "id": "9bbbac52-edd1-4aa7-8254-c29c14fa6249",
+                              "health_provider": "Relaince",
+                              "type": "public",
+                              "contact_name": "Moyo",
+                              "contact_email_address": "moyo@reliance.com",
+                              "contact_phone_number": "09023456789",
+                              "status": "active",
+                              "description": null,
+                              "country_id": "9b9faee2-a2a4-4bcc-a758-53dfee793de6",
+                              "created_at": "2024-04-05T07:52:03.000000Z",
+                              "updated_at": "2024-04-05T13:49:10.000000Z",
+                              "deleted_at": null
+                          }
+                      },
+                      {
+                          "id": "9c40cb0e-4a53-478c-a216-d80f733d0b4e",
+                          "hmo_id": "9bbbac52-edd1-4aa7-8254-c29c14fa6249",
+                          "plan_name": "Diamognd",
+                          "organization_id": "9bc5eb78-74d2-45f4-a677-05d07dca6a63",
+                          "service_item_id": null,
+                          "created_at": "2024-06-10T12:03:05.000000Z",
+                          "updated_at": "2024-06-10T12:03:05.000000Z",
+                          "plan_count": 0,
+                          "hmo": {
+                              "id": "9bbbac52-edd1-4aa7-8254-c29c14fa6249",
+                              "health_provider": "Relaince",
+                              "type": "public",
+                              "contact_name": "Moyo",
+                              "contact_email_address": "moyo@reliance.com",
+                              "contact_phone_number": "09023456789",
+                              "status": "active",
+                              "description": null,
+                              "country_id": "9b9faee2-a2a4-4bcc-a758-53dfee793de6",
+                              "created_at": "2024-04-05T07:52:03.000000Z",
+                              "updated_at": "2024-04-05T13:49:10.000000Z",
+                              "deleted_at": null
+                          }
+                      },
+                      {
+                          "id": "9c40cb0e-4b09-47f4-ae24-fee0ef716d21",
+                          "hmo_id": "9bbbac52-edd1-4aa7-8254-c29c14fa6249",
+                          "plan_name": "Diamognd",
+                          "organization_id": "9bc5eb78-74d2-45f4-a677-05d07dca6a63",
+                          "service_item_id": null,
+                          "created_at": "2024-06-10T12:03:05.000000Z",
+                          "updated_at": "2024-06-10T12:03:05.000000Z",
+                          "plan_count": 0,
+                          "hmo": {
+                              "id": "9bbbac52-edd1-4aa7-8254-c29c14fa6249",
+                              "health_provider": "Relaince",
+                              "type": "public",
+                              "contact_name": "Moyo",
+                              "contact_email_address": "moyo@reliance.com",
+                              "contact_phone_number": "09023456789",
+                              "status": "active",
+                              "description": null,
+                              "country_id": "9b9faee2-a2a4-4bcc-a758-53dfee793de6",
+                              "created_at": "2024-04-05T07:52:03.000000Z",
+                              "updated_at": "2024-04-05T13:49:10.000000Z",
+                              "deleted_at": null
+                          }
+                      },
+                      {
+                          "id": "9c40d39b-5b03-4fe8-9411-1502cf68e30f",
+                          "hmo_id": "9bbbac52-edd1-4aa7-8254-c29c14fa6249",
+                          "plan_name": "Diamogngd",
+                          "organization_id": "9bc5eb78-74d2-45f4-a677-05d07dca6a63",
+                          "service_item_id": null,
+                          "created_at": "2024-06-10T12:27:00.000000Z",
+                          "updated_at": "2024-06-10T12:27:00.000000Z",
+                          "plan_count": 0,
+                          "hmo": {
+                              "id": "9bbbac52-edd1-4aa7-8254-c29c14fa6249",
+                              "health_provider": "Relaince",
+                              "type": "public",
+                              "contact_name": "Moyo",
+                              "contact_email_address": "moyo@reliance.com",
+                              "contact_phone_number": "09023456789",
+                              "status": "active",
+                              "description": null,
+                              "country_id": "9b9faee2-a2a4-4bcc-a758-53dfee793de6",
+                              "created_at": "2024-04-05T07:52:03.000000Z",
+                              "updated_at": "2024-04-05T13:49:10.000000Z",
+                              "deleted_at": null
+                          }
+                      },
+                      {
+                          "id": "9c40d39b-5f7d-4593-aa5e-31fe15edadab",
+                          "hmo_id": "9bbbac52-edd1-4aa7-8254-c29c14fa6249",
+                          "plan_name": "Diamogngd",
+                          "organization_id": "9bc5eb78-74d2-45f4-a677-05d07dca6a63",
+                          "service_item_id": null,
+                          "created_at": "2024-06-10T12:27:00.000000Z",
+                          "updated_at": "2024-06-10T12:27:00.000000Z",
+                          "plan_count": 0,
+                          "hmo": {
+                              "id": "9bbbac52-edd1-4aa7-8254-c29c14fa6249",
+                              "health_provider": "Relaince",
+                              "type": "public",
+                              "contact_name": "Moyo",
+                              "contact_email_address": "moyo@reliance.com",
+                              "contact_phone_number": "09023456789",
+                              "status": "active",
+                              "description": null,
+                              "country_id": "9b9faee2-a2a4-4bcc-a758-53dfee793de6",
+                              "created_at": "2024-04-05T07:52:03.000000Z",
+                              "updated_at": "2024-04-05T13:49:10.000000Z",
+                              "deleted_at": null
+                          }
+                      },
+                      {
+                          "id": "9c40d39b-609e-46e5-9e4a-ca35d398e922",
+                          "hmo_id": "9bbbac52-edd1-4aa7-8254-c29c14fa6249",
+                          "plan_name": "Diamogngd",
+                          "organization_id": "9bc5eb78-74d2-45f4-a677-05d07dca6a63",
+                          "service_item_id": null,
+                          "created_at": "2024-06-10T12:27:00.000000Z",
+                          "updated_at": "2024-06-10T12:27:00.000000Z",
+                          "plan_count": 0,
+                          "hmo": {
+                              "id": "9bbbac52-edd1-4aa7-8254-c29c14fa6249",
+                              "health_provider": "Relaince",
+                              "type": "public",
+                              "contact_name": "Moyo",
+                              "contact_email_address": "moyo@reliance.com",
+                              "contact_phone_number": "09023456789",
+                              "status": "active",
+                              "description": null,
+                              "country_id": "9b9faee2-a2a4-4bcc-a758-53dfee793de6",
+                              "created_at": "2024-04-05T07:52:03.000000Z",
+                              "updated_at": "2024-04-05T13:49:10.000000Z",
+                              "deleted_at": null
+                          }
+                      },
+                      {
+                          "id": "9c740c38-73cb-4706-9e3b-bc6a1c31a33e",
+                          "hmo_id": "9bbbac52-edd1-4aa7-8254-c29c14fa6249",
+                          "plan_name": "Diamonds",
+                          "organization_id": "9bc5eb78-74d2-45f4-a677-05d07dca6a63",
+                          "service_item_id": null,
+                          "created_at": "2024-07-05T23:32:31.000000Z",
+                          "updated_at": "2024-07-05T23:32:31.000000Z",
+                          "plan_count": 0,
+                          "hmo": {
+                              "id": "9bbbac52-edd1-4aa7-8254-c29c14fa6249",
+                              "health_provider": "Relaince",
+                              "type": "public",
+                              "contact_name": "Moyo",
+                              "contact_email_address": "moyo@reliance.com",
+                              "contact_phone_number": "09023456789",
+                              "status": "active",
+                              "description": null,
+                              "country_id": "9b9faee2-a2a4-4bcc-a758-53dfee793de6",
+                              "created_at": "2024-04-05T07:52:03.000000Z",
+                              "updated_at": "2024-04-05T13:49:10.000000Z",
+                              "deleted_at": null
+                          }
+                      },
+                      {
+                          "id": "9c740c38-789d-48ab-b555-b5b4cd1ee10a",
+                          "hmo_id": "9bbbac52-edd1-4aa7-8254-c29c14fa6249",
+                          "plan_name": "Diamonds",
+                          "organization_id": "9bc5eb78-74d2-45f4-a677-05d07dca6a63",
+                          "service_item_id": null,
+                          "created_at": "2024-07-05T23:32:31.000000Z",
+                          "updated_at": "2024-07-05T23:32:31.000000Z",
+                          "plan_count": 0,
+                          "hmo": {
+                              "id": "9bbbac52-edd1-4aa7-8254-c29c14fa6249",
+                              "health_provider": "Relaince",
+                              "type": "public",
+                              "contact_name": "Moyo",
+                              "contact_email_address": "moyo@reliance.com",
+                              "contact_phone_number": "09023456789",
+                              "status": "active",
+                              "description": null,
+                              "country_id": "9b9faee2-a2a4-4bcc-a758-53dfee793de6",
+                              "created_at": "2024-04-05T07:52:03.000000Z",
+                              "updated_at": "2024-04-05T13:49:10.000000Z",
+                              "deleted_at": null
+                          }
+                      },
+                      {
+                          "id": "9c740c38-794d-4f26-8293-a8708ba19cba",
+                          "hmo_id": "9bbbac52-edd1-4aa7-8254-c29c14fa6249",
+                          "plan_name": "Diamonds",
+                          "organization_id": "9bc5eb78-74d2-45f4-a677-05d07dca6a63",
+                          "service_item_id": null,
+                          "created_at": "2024-07-05T23:32:31.000000Z",
+                          "updated_at": "2024-07-05T23:32:31.000000Z",
+                          "plan_count": 0,
+                          "hmo": {
+                              "id": "9bbbac52-edd1-4aa7-8254-c29c14fa6249",
+                              "health_provider": "Relaince",
+                              "type": "public",
+                              "contact_name": "Moyo",
+                              "contact_email_address": "moyo@reliance.com",
+                              "contact_phone_number": "09023456789",
+                              "status": "active",
+                              "description": null,
+                              "country_id": "9b9faee2-a2a4-4bcc-a758-53dfee793de6",
+                              "created_at": "2024-04-05T07:52:03.000000Z",
+                              "updated_at": "2024-04-05T13:49:10.000000Z",
+                              "deleted_at": null
+                          }
+                      },
+                      {
+                          "id": "9cd3c798-708c-4d52-93d5-7f5a018bf735",
+                          "hmo_id": "9bbbac52-edd1-4aa7-8254-c29c14fa6249",
+                          "plan_name": "Diamond",
+                          "organization_id": "9bc5eb78-74d2-45f4-a677-05d07dca6a63",
+                          "service_item_id": "9cd37172-7cf4-4d10-9a51-9d5d6898fd96",
+                          "created_at": "2024-08-22T13:40:06.000000Z",
+                          "updated_at": "2024-08-22T13:40:06.000000Z",
+                          "plan_count": 0,
+                          "hmo": {
+                              "id": "9bbbac52-edd1-4aa7-8254-c29c14fa6249",
+                              "health_provider": "Relaince",
+                              "type": "public",
+                              "contact_name": "Moyo",
+                              "contact_email_address": "moyo@reliance.com",
+                              "contact_phone_number": "09023456789",
+                              "status": "active",
+                              "description": null,
+                              "country_id": "9b9faee2-a2a4-4bcc-a758-53dfee793de6",
+                              "created_at": "2024-04-05T07:52:03.000000Z",
+                              "updated_at": "2024-04-05T13:49:10.000000Z",
+                              "deleted_at": null
+                          }
+                      },
+                      {
+                          "id": "9cd3c798-7fad-4f3f-aab2-47f5b3ab6d15",
+                          "hmo_id": "9bbbac52-edd1-4aa7-8254-c29c14fa6249",
+                          "plan_name": "Diamond",
+                          "organization_id": "9bc5eb78-74d2-45f4-a677-05d07dca6a63",
+                          "service_item_id": "9cd37172-85e7-4b43-a4de-cd8a806874bb",
+                          "created_at": "2024-08-22T13:40:06.000000Z",
+                          "updated_at": "2024-08-22T13:40:06.000000Z",
+                          "plan_count": 0,
+                          "hmo": {
+                              "id": "9bbbac52-edd1-4aa7-8254-c29c14fa6249",
+                              "health_provider": "Relaince",
+                              "type": "public",
+                              "contact_name": "Moyo",
+                              "contact_email_address": "moyo@reliance.com",
+                              "contact_phone_number": "09023456789",
+                              "status": "active",
+                              "description": null,
+                              "country_id": "9b9faee2-a2a4-4bcc-a758-53dfee793de6",
+                              "created_at": "2024-04-05T07:52:03.000000Z",
+                              "updated_at": "2024-04-05T13:49:10.000000Z",
+                              "deleted_at": null
+                          }
+                      },
+                      {
+                          "id": "9cd3c798-81af-4168-84a9-d4ce0200d498",
+                          "hmo_id": "9bbbac52-edd1-4aa7-8254-c29c14fa6249",
+                          "plan_name": "Diamond",
+                          "organization_id": "9bc5eb78-74d2-45f4-a677-05d07dca6a63",
+                          "service_item_id": "9cd37172-8d87-42e1-822a-1ef5b1a35b85",
+                          "created_at": "2024-08-22T13:40:06.000000Z",
+                          "updated_at": "2024-08-22T13:40:06.000000Z",
+                          "plan_count": 0,
+                          "hmo": {
+                              "id": "9bbbac52-edd1-4aa7-8254-c29c14fa6249",
+                              "health_provider": "Relaince",
+                              "type": "public",
+                              "contact_name": "Moyo",
+                              "contact_email_address": "moyo@reliance.com",
+                              "contact_phone_number": "09023456789",
+                              "status": "active",
+                              "description": null,
+                              "country_id": "9b9faee2-a2a4-4bcc-a758-53dfee793de6",
+                              "created_at": "2024-04-05T07:52:03.000000Z",
+                              "updated_at": "2024-04-05T13:49:10.000000Z",
+                              "deleted_at": null
+                          }
+                      },
+                      {
+                          "id": "9cd3cd83-7f0f-4cd6-81d2-55728f11ca4c",
+                          "hmo_id": "9bbbac52-edd1-4aa7-8254-c29c14fa6249",
+                          "plan_name": "Diamond",
+                          "organization_id": "9bc5eb78-74d2-45f4-a677-05d07dca6a63",
+                          "service_item_id": "9cd37172-a491-4f4c-88d9-d2c946c3382f",
+                          "created_at": "2024-08-22T13:56:39.000000Z",
+                          "updated_at": "2024-08-22T13:56:39.000000Z",
+                          "plan_count": 0,
+                          "hmo": {
+                              "id": "9bbbac52-edd1-4aa7-8254-c29c14fa6249",
+                              "health_provider": "Relaince",
+                              "type": "public",
+                              "contact_name": "Moyo",
+                              "contact_email_address": "moyo@reliance.com",
+                              "contact_phone_number": "09023456789",
+                              "status": "active",
+                              "description": null,
+                              "country_id": "9b9faee2-a2a4-4bcc-a758-53dfee793de6",
+                              "created_at": "2024-04-05T07:52:03.000000Z",
+                              "updated_at": "2024-04-05T13:49:10.000000Z",
+                              "deleted_at": null
+                          }
+                      },
+                      {
+                          "id": "9cd3cd83-8c62-4fa5-8a29-973f81262ec0",
+                          "hmo_id": "9bbbac52-edd1-4aa7-8254-c29c14fa6249",
+                          "plan_name": "Diamond",
+                          "organization_id": "9bc5eb78-74d2-45f4-a677-05d07dca6a63",
+                          "service_item_id": "9cd37172-a557-4fbf-a7ee-cd2a4123edbf",
+                          "created_at": "2024-08-22T13:56:39.000000Z",
+                          "updated_at": "2024-08-22T13:56:39.000000Z",
+                          "plan_count": 0,
+                          "hmo": {
+                              "id": "9bbbac52-edd1-4aa7-8254-c29c14fa6249",
+                              "health_provider": "Relaince",
+                              "type": "public",
+                              "contact_name": "Moyo",
+                              "contact_email_address": "moyo@reliance.com",
+                              "contact_phone_number": "09023456789",
+                              "status": "active",
+                              "description": null,
+                              "country_id": "9b9faee2-a2a4-4bcc-a758-53dfee793de6",
+                              "created_at": "2024-04-05T07:52:03.000000Z",
+                              "updated_at": "2024-04-05T13:49:10.000000Z",
+                              "deleted_at": null
+                          }
+                      },
+                      {
+                          "id": "9cd3cd83-9036-4882-b925-8cbdbb4b8482",
+                          "hmo_id": "9bbbac52-edd1-4aa7-8254-c29c14fa6249",
+                          "plan_name": "Diamond",
+                          "organization_id": "9bc5eb78-74d2-45f4-a677-05d07dca6a63",
+                          "service_item_id": "9cd37172-a61c-4091-a826-ccb0c4f583f4",
+                          "created_at": "2024-08-22T13:56:39.000000Z",
+                          "updated_at": "2024-08-22T13:56:39.000000Z",
+                          "plan_count": 0,
+                          "hmo": {
+                              "id": "9bbbac52-edd1-4aa7-8254-c29c14fa6249",
+                              "health_provider": "Relaince",
+                              "type": "public",
+                              "contact_name": "Moyo",
+                              "contact_email_address": "moyo@reliance.com",
+                              "contact_phone_number": "09023456789",
+                              "status": "active",
+                              "description": null,
+                              "country_id": "9b9faee2-a2a4-4bcc-a758-53dfee793de6",
+                              "created_at": "2024-04-05T07:52:03.000000Z",
+                              "updated_at": "2024-04-05T13:49:10.000000Z",
+                              "deleted_at": null
+                          }
+                      },
+                      {
+                          "id": "9cd4270b-64ee-40c9-943d-5db588a8ec54",
+                          "hmo_id": "9bbbac52-edd1-4aa7-8254-c29c14fa6249",
+                          "plan_name": "Diamond",
+                          "organization_id": "9bc5eb78-74d2-45f4-a677-05d07dca6a63",
+                          "service_item_id": "9cd37172-9e3c-44de-aff1-1ef5e6ab1572",
+                          "created_at": "2024-08-22T18:07:00.000000Z",
+                          "updated_at": "2024-08-22T18:07:00.000000Z",
+                          "plan_count": 0,
+                          "hmo": {
+                              "id": "9bbbac52-edd1-4aa7-8254-c29c14fa6249",
+                              "health_provider": "Relaince",
+                              "type": "public",
+                              "contact_name": "Moyo",
+                              "contact_email_address": "moyo@reliance.com",
+                              "contact_phone_number": "09023456789",
+                              "status": "active",
+                              "description": null,
+                              "country_id": "9b9faee2-a2a4-4bcc-a758-53dfee793de6",
+                              "created_at": "2024-04-05T07:52:03.000000Z",
+                              "updated_at": "2024-04-05T13:49:10.000000Z",
+                              "deleted_at": null
+                          }
+                      },
+                      {
+                          "id": "9cd4270b-6b2a-4aee-be22-fbd5eda35132",
+                          "hmo_id": "9bbbac52-edd1-4aa7-8254-c29c14fa6249",
+                          "plan_name": "Diamond",
+                          "organization_id": "9bc5eb78-74d2-45f4-a677-05d07dca6a63",
+                          "service_item_id": "9cd37172-9d7a-4571-901a-78d8d708574b",
+                          "created_at": "2024-08-22T18:07:00.000000Z",
+                          "updated_at": "2024-08-22T18:07:00.000000Z",
+                          "plan_count": 0,
+                          "hmo": {
+                              "id": "9bbbac52-edd1-4aa7-8254-c29c14fa6249",
+                              "health_provider": "Relaince",
+                              "type": "public",
+                              "contact_name": "Moyo",
+                              "contact_email_address": "moyo@reliance.com",
+                              "contact_phone_number": "09023456789",
+                              "status": "active",
+                              "description": null,
+                              "country_id": "9b9faee2-a2a4-4bcc-a758-53dfee793de6",
+                              "created_at": "2024-04-05T07:52:03.000000Z",
+                              "updated_at": "2024-04-05T13:49:10.000000Z",
+                              "deleted_at": null
+                          }
+                      },
+                      {
+                          "id": "9cd4270b-6cdd-42b5-bdbf-2dc8b41cf33d",
+                          "hmo_id": "9bbbac52-edd1-4aa7-8254-c29c14fa6249",
+                          "plan_name": "Diamond",
+                          "organization_id": "9bc5eb78-74d2-45f4-a677-05d07dca6a63",
+                          "service_item_id": "9cd37172-9b57-4e8f-a840-ec0588f26e2a",
+                          "created_at": "2024-08-22T18:07:00.000000Z",
+                          "updated_at": "2024-08-22T18:07:00.000000Z",
+                          "plan_count": 0,
+                          "hmo": {
+                              "id": "9bbbac52-edd1-4aa7-8254-c29c14fa6249",
+                              "health_provider": "Relaince",
+                              "type": "public",
+                              "contact_name": "Moyo",
+                              "contact_email_address": "moyo@reliance.com",
+                              "contact_phone_number": "09023456789",
+                              "status": "active",
+                              "description": null,
+                              "country_id": "9b9faee2-a2a4-4bcc-a758-53dfee793de6",
+                              "created_at": "2024-04-05T07:52:03.000000Z",
+                              "updated_at": "2024-04-05T13:49:10.000000Z",
+                              "deleted_at": null
+                          }
+                      },
+                      {
+                          "id": "9cd4290c-e2a6-4744-a190-92f6519df18c",
+                          "hmo_id": "9bbbac52-edd1-4aa7-8254-c29c14fa6249",
+                          "plan_name": "Diamond",
+                          "organization_id": "9bc5eb78-74d2-45f4-a677-05d07dca6a63",
+                          "service_item_id": "9cd37172-9f9d-4091-830c-b04612d1e0f5",
+                          "created_at": "2024-08-22T18:12:37.000000Z",
+                          "updated_at": "2024-08-22T18:12:37.000000Z",
+                          "plan_count": 0,
+                          "hmo": {
+                              "id": "9bbbac52-edd1-4aa7-8254-c29c14fa6249",
+                              "health_provider": "Relaince",
+                              "type": "public",
+                              "contact_name": "Moyo",
+                              "contact_email_address": "moyo@reliance.com",
+                              "contact_phone_number": "09023456789",
+                              "status": "active",
+                              "description": null,
+                              "country_id": "9b9faee2-a2a4-4bcc-a758-53dfee793de6",
+                              "created_at": "2024-04-05T07:52:03.000000Z",
+                              "updated_at": "2024-04-05T13:49:10.000000Z",
+                              "deleted_at": null
+                          }
+                      },
+                      {
+                          "id": "9cd4290c-e861-4ad7-a36d-80f86e96af9d",
+                          "hmo_id": "9bbbac52-edd1-4aa7-8254-c29c14fa6249",
+                          "plan_name": "Diamond",
+                          "organization_id": "9bc5eb78-74d2-45f4-a677-05d07dca6a63",
+                          "service_item_id": "9cd37172-9888-405c-882e-f1019c013f7b",
+                          "created_at": "2024-08-22T18:12:37.000000Z",
+                          "updated_at": "2024-08-22T18:12:37.000000Z",
+                          "plan_count": 0,
+                          "hmo": {
+                              "id": "9bbbac52-edd1-4aa7-8254-c29c14fa6249",
+                              "health_provider": "Relaince",
+                              "type": "public",
+                              "contact_name": "Moyo",
+                              "contact_email_address": "moyo@reliance.com",
+                              "contact_phone_number": "09023456789",
+                              "status": "active",
+                              "description": null,
+                              "country_id": "9b9faee2-a2a4-4bcc-a758-53dfee793de6",
+                              "created_at": "2024-04-05T07:52:03.000000Z",
+                              "updated_at": "2024-04-05T13:49:10.000000Z",
+                              "deleted_at": null
+                          }
+                      },
+                      {
+                          "id": "9cd4290c-ea72-48fc-8fc5-9970f358d5d7",
+                          "hmo_id": "9bbbac52-edd1-4aa7-8254-c29c14fa6249",
+                          "plan_name": "Diamond",
+                          "organization_id": "9bc5eb78-74d2-45f4-a677-05d07dca6a63",
+                          "service_item_id": "9cd37172-b24b-4ba4-8409-790a1d841695",
+                          "created_at": "2024-08-22T18:12:37.000000Z",
+                          "updated_at": "2024-08-22T18:12:37.000000Z",
+                          "plan_count": 0,
+                          "hmo": {
+                              "id": "9bbbac52-edd1-4aa7-8254-c29c14fa6249",
+                              "health_provider": "Relaince",
+                              "type": "public",
+                              "contact_name": "Moyo",
+                              "contact_email_address": "moyo@reliance.com",
+                              "contact_phone_number": "09023456789",
+                              "status": "active",
+                              "description": null,
+                              "country_id": "9b9faee2-a2a4-4bcc-a758-53dfee793de6",
+                              "created_at": "2024-04-05T07:52:03.000000Z",
+                              "updated_at": "2024-04-05T13:49:10.000000Z",
+                              "deleted_at": null
+                          }
+                      },
+                      {
+                          "id": "9cd42e4c-6f29-4092-8111-0303d1e62907",
+                          "hmo_id": "9bbbac52-edd1-4aa7-8254-c29c14fa6249",
+                          "plan_name": "Diamond",
+                          "organization_id": "9bc5eb78-74d2-45f4-a677-05d07dca6a63",
+                          "service_item_id": "9cd37172-b85a-4479-832f-bd6f78ffdc43",
+                          "created_at": "2024-08-22T18:27:17.000000Z",
+                          "updated_at": "2024-08-22T18:27:17.000000Z",
+                          "plan_count": 0,
+                          "hmo": {
+                              "id": "9bbbac52-edd1-4aa7-8254-c29c14fa6249",
+                              "health_provider": "Relaince",
+                              "type": "public",
+                              "contact_name": "Moyo",
+                              "contact_email_address": "moyo@reliance.com",
+                              "contact_phone_number": "09023456789",
+                              "status": "active",
+                              "description": null,
+                              "country_id": "9b9faee2-a2a4-4bcc-a758-53dfee793de6",
+                              "created_at": "2024-04-05T07:52:03.000000Z",
+                              "updated_at": "2024-04-05T13:49:10.000000Z",
+                              "deleted_at": null
+                          }
+                      },
+                      {
+                          "id": "9cd42e4c-79eb-4e53-8b73-749065cbfe79",
+                          "hmo_id": "9bbbac52-edd1-4aa7-8254-c29c14fa6249",
+                          "plan_name": "Diamond",
+                          "organization_id": "9bc5eb78-74d2-45f4-a677-05d07dca6a63",
+                          "service_item_id": "9cd37172-b78b-475f-a959-ee559951bbe1",
+                          "created_at": "2024-08-22T18:27:17.000000Z",
+                          "updated_at": "2024-08-22T18:27:17.000000Z",
+                          "plan_count": 0,
+                          "hmo": {
+                              "id": "9bbbac52-edd1-4aa7-8254-c29c14fa6249",
+                              "health_provider": "Relaince",
+                              "type": "public",
+                              "contact_name": "Moyo",
+                              "contact_email_address": "moyo@reliance.com",
+                              "contact_phone_number": "09023456789",
+                              "status": "active",
+                              "description": null,
+                              "country_id": "9b9faee2-a2a4-4bcc-a758-53dfee793de6",
+                              "created_at": "2024-04-05T07:52:03.000000Z",
+                              "updated_at": "2024-04-05T13:49:10.000000Z",
+                              "deleted_at": null
+                          }
+                      },
+                      {
+                          "id": "9cd42e4c-7beb-45d5-9f81-858d6372aa2e",
+                          "hmo_id": "9bbbac52-edd1-4aa7-8254-c29c14fa6249",
+                          "plan_name": "Diamond",
+                          "organization_id": "9bc5eb78-74d2-45f4-a677-05d07dca6a63",
+                          "service_item_id": "9cd37172-b6a4-4ed2-bce9-2d16432aba18",
+                          "created_at": "2024-08-22T18:27:17.000000Z",
+                          "updated_at": "2024-08-22T18:27:17.000000Z",
+                          "plan_count": 0,
+                          "hmo": {
+                              "id": "9bbbac52-edd1-4aa7-8254-c29c14fa6249",
+                              "health_provider": "Relaince",
+                              "type": "public",
+                              "contact_name": "Moyo",
+                              "contact_email_address": "moyo@reliance.com",
+                              "contact_phone_number": "09023456789",
+                              "status": "active",
+                              "description": null,
+                              "country_id": "9b9faee2-a2a4-4bcc-a758-53dfee793de6",
+                              "created_at": "2024-04-05T07:52:03.000000Z",
+                              "updated_at": "2024-04-05T13:49:10.000000Z",
+                              "deleted_at": null
+                          }
+                      },
+                      {
+                          "id": "9cd4301a-0a1b-474d-b1a9-da99cee24032",
+                          "hmo_id": "9bbbac52-edd1-4aa7-8254-c29c14fa6249",
+                          "plan_name": "Diamond",
+                          "organization_id": "9bc5eb78-74d2-45f4-a677-05d07dca6a63",
+                          "service_item_id": "9cd37172-847e-435e-b3ab-af416c514d09",
+                          "created_at": "2024-08-22T18:32:20.000000Z",
+                          "updated_at": "2024-08-22T18:32:20.000000Z",
+                          "plan_count": 0,
+                          "hmo": {
+                              "id": "9bbbac52-edd1-4aa7-8254-c29c14fa6249",
+                              "health_provider": "Relaince",
+                              "type": "public",
+                              "contact_name": "Moyo",
+                              "contact_email_address": "moyo@reliance.com",
+                              "contact_phone_number": "09023456789",
+                              "status": "active",
+                              "description": null,
+                              "country_id": "9b9faee2-a2a4-4bcc-a758-53dfee793de6",
+                              "created_at": "2024-04-05T07:52:03.000000Z",
+                              "updated_at": "2024-04-05T13:49:10.000000Z",
+                              "deleted_at": null
+                          }
+                      },
+                      {
+                          "id": "9cd4301a-1045-4c5e-b1d7-0a94e4b373ea",
+                          "hmo_id": "9bbbac52-edd1-4aa7-8254-c29c14fa6249",
+                          "plan_name": "Diamond",
+                          "organization_id": "9bc5eb78-74d2-45f4-a677-05d07dca6a63",
+                          "service_item_id": "9cd37172-8551-43e5-9b24-e2854fb1eb42",
+                          "created_at": "2024-08-22T18:32:20.000000Z",
+                          "updated_at": "2024-08-22T18:32:20.000000Z",
+                          "plan_count": 0,
+                          "hmo": {
+                              "id": "9bbbac52-edd1-4aa7-8254-c29c14fa6249",
+                              "health_provider": "Relaince",
+                              "type": "public",
+                              "contact_name": "Moyo",
+                              "contact_email_address": "moyo@reliance.com",
+                              "contact_phone_number": "09023456789",
+                              "status": "active",
+                              "description": null,
+                              "country_id": "9b9faee2-a2a4-4bcc-a758-53dfee793de6",
+                              "created_at": "2024-04-05T07:52:03.000000Z",
+                              "updated_at": "2024-04-05T13:49:10.000000Z",
+                              "deleted_at": null
+                          }
+                      },
+                      {
+                          "id": "9cd4301a-12ad-4956-813a-c8c9f346c6c4",
+                          "hmo_id": "9bbbac52-edd1-4aa7-8254-c29c14fa6249",
+                          "plan_name": "Diamond",
+                          "organization_id": "9bc5eb78-74d2-45f4-a677-05d07dca6a63",
+                          "service_item_id": "9cd37172-865f-4be0-bf9d-fc9c9201b77b",
+                          "created_at": "2024-08-22T18:32:20.000000Z",
+                          "updated_at": "2024-08-22T18:32:20.000000Z",
+                          "plan_count": 0,
+                          "hmo": {
+                              "id": "9bbbac52-edd1-4aa7-8254-c29c14fa6249",
+                              "health_provider": "Relaince",
+                              "type": "public",
+                              "contact_name": "Moyo",
+                              "contact_email_address": "moyo@reliance.com",
+                              "contact_phone_number": "09023456789",
+                              "status": "active",
+                              "description": null,
+                              "country_id": "9b9faee2-a2a4-4bcc-a758-53dfee793de6",
+                              "created_at": "2024-04-05T07:52:03.000000Z",
+                              "updated_at": "2024-04-05T13:49:10.000000Z",
+                              "deleted_at": null
+                          }
+                      },
+                      {
+                          "id": "9cd43401-17bd-4b78-831f-2149f61edff8",
+                          "hmo_id": "9bc5ba19-853f-4edc-9f84-0298ee1a1b6c",
+                          "plan_name": "Diamond",
+                          "organization_id": "9bc5eb78-74d2-45f4-a677-05d07dca6a63",
+                          "service_item_id": "9cd37172-847e-435e-b3ab-af416c514d09",
+                          "created_at": "2024-08-22T18:43:14.000000Z",
+                          "updated_at": "2024-08-22T18:43:14.000000Z",
+                          "plan_count": 0,
+                          "hmo": {
+                              "id": "9bc5ba19-853f-4edc-9f84-0298ee1a1b6c",
+                              "health_provider": "Ypest",
+                              "type": "private",
+                              "contact_name": "Moyo",
+                              "contact_email_address": "moyo@reliance.com",
+                              "contact_phone_number": "09023456789",
+                              "status": "inactive",
+                              "description": "still optional",
+                              "country_id": "9b9faee2-a2a4-4bcc-a758-53dfee793de6",
+                              "created_at": "2024-04-10T07:48:50.000000Z",
+                              "updated_at": "2024-04-10T07:56:28.000000Z",
+                              "deleted_at": null
+                          }
+                      },
+                      {
+                          "id": "9cd43401-1dfb-49ae-9901-8b3bf2b9795d",
+                          "hmo_id": "9bc5ba19-853f-4edc-9f84-0298ee1a1b6c",
+                          "plan_name": "Diamond",
+                          "organization_id": "9bc5eb78-74d2-45f4-a677-05d07dca6a63",
+                          "service_item_id": "9cd37172-8551-43e5-9b24-e2854fb1eb42",
+                          "created_at": "2024-08-22T18:43:14.000000Z",
+                          "updated_at": "2024-08-22T18:43:14.000000Z",
+                          "plan_count": 0,
+                          "hmo": {
+                              "id": "9bc5ba19-853f-4edc-9f84-0298ee1a1b6c",
+                              "health_provider": "Ypest",
+                              "type": "private",
+                              "contact_name": "Moyo",
+                              "contact_email_address": "moyo@reliance.com",
+                              "contact_phone_number": "09023456789",
+                              "status": "inactive",
+                              "description": "still optional",
+                              "country_id": "9b9faee2-a2a4-4bcc-a758-53dfee793de6",
+                              "created_at": "2024-04-10T07:48:50.000000Z",
+                              "updated_at": "2024-04-10T07:56:28.000000Z",
+                              "deleted_at": null
+                          }
+                      },
+                      {
+                          "id": "9cd43401-1fa0-4607-a59c-628d0514e25c",
+                          "hmo_id": "9bc5ba19-853f-4edc-9f84-0298ee1a1b6c",
+                          "plan_name": "Diamond",
+                          "organization_id": "9bc5eb78-74d2-45f4-a677-05d07dca6a63",
+                          "service_item_id": "9cd37172-865f-4be0-bf9d-fc9c9201b77b",
+                          "created_at": "2024-08-22T18:43:14.000000Z",
+                          "updated_at": "2024-08-22T18:43:14.000000Z",
+                          "plan_count": 0,
+                          "hmo": {
+                              "id": "9bc5ba19-853f-4edc-9f84-0298ee1a1b6c",
+                              "health_provider": "Ypest",
+                              "type": "private",
+                              "contact_name": "Moyo",
+                              "contact_email_address": "moyo@reliance.com",
+                              "contact_phone_number": "09023456789",
+                              "status": "inactive",
+                              "description": "still optional",
+                              "country_id": "9b9faee2-a2a4-4bcc-a758-53dfee793de6",
+                              "created_at": "2024-04-10T07:48:50.000000Z",
+                              "updated_at": "2024-04-10T07:56:28.000000Z",
+                              "deleted_at": null
+                          }
+                      },
+                      {
+                          "id": "9cd434f6-6aa4-4d99-9f0a-196dddc8738b",
+                          "hmo_id": "9bc45cf3-2894-43d4-9afe-3e8ac61e6fb5",
+                          "plan_name": "Diamond",
+                          "organization_id": "9bc5eb78-74d2-45f4-a677-05d07dca6a63",
+                          "service_item_id": "9cd37172-847e-435e-b3ab-af416c514d09",
+                          "created_at": "2024-08-22T18:45:55.000000Z",
+                          "updated_at": "2024-08-22T18:45:55.000000Z",
+                          "plan_count": 0,
+                          "hmo": {
+                              "id": "9bc45cf3-2894-43d4-9afe-3e8ac61e6fb5",
+                              "health_provider": "Relainces00",
+                              "type": "public",
+                              "contact_name": "Moyo",
+                              "contact_email_address": "moyo@reliance.com",
+                              "contact_phone_number": "09023456789",
+                              "status": "inactive",
+                              "description": null,
+                              "country_id": "9b9faee2-a2a4-4bcc-a758-53dfee793de6",
+                              "created_at": "2024-04-09T15:32:33.000000Z",
+                              "updated_at": "2024-04-09T15:32:33.000000Z",
+                              "deleted_at": null
+                          }
+                      },
+                      {
+                          "id": "9cd434f6-73d0-433d-bc0b-314eb8bcc938",
+                          "hmo_id": "9bc45cf3-2894-43d4-9afe-3e8ac61e6fb5",
+                          "plan_name": "Diamond",
+                          "organization_id": "9bc5eb78-74d2-45f4-a677-05d07dca6a63",
+                          "service_item_id": "9cd37172-8551-43e5-9b24-e2854fb1eb42",
+                          "created_at": "2024-08-22T18:45:55.000000Z",
+                          "updated_at": "2024-08-22T18:45:55.000000Z",
+                          "plan_count": 0,
+                          "hmo": {
+                              "id": "9bc45cf3-2894-43d4-9afe-3e8ac61e6fb5",
+                              "health_provider": "Relainces00",
+                              "type": "public",
+                              "contact_name": "Moyo",
+                              "contact_email_address": "moyo@reliance.com",
+                              "contact_phone_number": "09023456789",
+                              "status": "inactive",
+                              "description": null,
+                              "country_id": "9b9faee2-a2a4-4bcc-a758-53dfee793de6",
+                              "created_at": "2024-04-09T15:32:33.000000Z",
+                              "updated_at": "2024-04-09T15:32:33.000000Z",
+                              "deleted_at": null
+                          }
+                      },
+                      {
+                          "id": "9cd434f6-7519-4ce8-9349-875b0a427a97",
+                          "hmo_id": "9bc45cf3-2894-43d4-9afe-3e8ac61e6fb5",
+                          "plan_name": "Diamond",
+                          "organization_id": "9bc5eb78-74d2-45f4-a677-05d07dca6a63",
+                          "service_item_id": "9cd37172-865f-4be0-bf9d-fc9c9201b77b",
+                          "created_at": "2024-08-22T18:45:55.000000Z",
+                          "updated_at": "2024-08-22T18:45:55.000000Z",
+                          "plan_count": 0,
+                          "hmo": {
+                              "id": "9bc45cf3-2894-43d4-9afe-3e8ac61e6fb5",
+                              "health_provider": "Relainces00",
+                              "type": "public",
+                              "contact_name": "Moyo",
+                              "contact_email_address": "moyo@reliance.com",
+                              "contact_phone_number": "09023456789",
+                              "status": "inactive",
+                              "description": null,
+                              "country_id": "9b9faee2-a2a4-4bcc-a758-53dfee793de6",
+                              "created_at": "2024-04-09T15:32:33.000000Z",
+                              "updated_at": "2024-04-09T15:32:33.000000Z",
+                              "deleted_at": null
+                          }
+                      },
+                      {
+                          "id": "9cd43d37-c467-4593-8344-d4b3b87d9175",
+                          "hmo_id": "9bbc08fc-7f98-4b54-bc89-75ac11300de5",
+                          "plan_name": "Diamond",
+                          "organization_id": "9bc5eb78-74d2-45f4-a677-05d07dca6a63",
+                          "service_item_id": "9cd37172-847e-435e-b3ab-af416c514d09",
+                          "created_at": "2024-08-22T19:09:00.000000Z",
+                          "updated_at": "2024-08-22T19:09:00.000000Z",
+                          "plan_count": 0,
+                          "hmo": null
+                      },
+                      {
+                          "id": "9cd43d37-d45f-4e37-80bc-c44adf14f45e",
+                          "hmo_id": "9bbc08fc-7f98-4b54-bc89-75ac11300de5",
+                          "plan_name": "Diamond",
+                          "organization_id": "9bc5eb78-74d2-45f4-a677-05d07dca6a63",
+                          "service_item_id": "9cd37172-8551-43e5-9b24-e2854fb1eb42",
+                          "created_at": "2024-08-22T19:09:00.000000Z",
+                          "updated_at": "2024-08-22T19:09:00.000000Z",
+                          "plan_count": 0,
+                          "hmo": null
+                      },
+                      {
+                          "id": "9cd43d37-d8fc-4393-b30c-c7817013228b",
+                          "hmo_id": "9bbc08fc-7f98-4b54-bc89-75ac11300de5",
+                          "plan_name": "Diamond",
+                          "organization_id": "9bc5eb78-74d2-45f4-a677-05d07dca6a63",
+                          "service_item_id": "9cd37172-865f-4be0-bf9d-fc9c9201b77b",
+                          "created_at": "2024-08-22T19:09:00.000000Z",
+                          "updated_at": "2024-08-22T19:09:00.000000Z",
+                          "plan_count": 0,
+                          "hmo": null
+                      },
+                      {
+                          "id": "9cd4c2f1-4e73-423c-a781-3920d1192216",
+                          "hmo_id": "9bbbac52-edd1-4aa7-8254-c29c14fa6249",
+                          "plan_name": "diamond",
+                          "organization_id": "9bc5eb78-74d2-45f4-a677-05d07dca6a63",
+                          "service_item_id": "9cd37172-8c5f-4653-99b1-bdfdf368fe7f",
+                          "created_at": "2024-08-23T01:22:55.000000Z",
+                          "updated_at": "2024-08-23T01:22:55.000000Z",
+                          "plan_count": 0,
+                          "hmo": {
+                              "id": "9bbbac52-edd1-4aa7-8254-c29c14fa6249",
+                              "health_provider": "Relaince",
+                              "type": "public",
+                              "contact_name": "Moyo",
+                              "contact_email_address": "moyo@reliance.com",
+                              "contact_phone_number": "09023456789",
+                              "status": "active",
+                              "description": null,
+                              "country_id": "9b9faee2-a2a4-4bcc-a758-53dfee793de6",
+                              "created_at": "2024-04-05T07:52:03.000000Z",
+                              "updated_at": "2024-04-05T13:49:10.000000Z",
+                              "deleted_at": null
+                          }
+                      },
+                      {
+                          "id": "9cd4c4db-5746-4072-aa45-9fc836b1c3c5",
+                          "hmo_id": "9bbbac52-edd1-4aa7-8254-c29c14fa6249",
+                          "plan_name": "diamond",
+                          "organization_id": "9bc5eb78-74d2-45f4-a677-05d07dca6a63",
+                          "service_item_id": "9cd37172-939e-4fa3-a2bc-4ea51856d230",
+                          "created_at": "2024-08-23T01:28:17.000000Z",
+                          "updated_at": "2024-08-23T01:28:17.000000Z",
+                          "plan_count": 0,
+                          "hmo": {
+                              "id": "9bbbac52-edd1-4aa7-8254-c29c14fa6249",
+                              "health_provider": "Relaince",
+                              "type": "public",
+                              "contact_name": "Moyo",
+                              "contact_email_address": "moyo@reliance.com",
+                              "contact_phone_number": "09023456789",
+                              "status": "active",
+                              "description": null,
+                              "country_id": "9b9faee2-a2a4-4bcc-a758-53dfee793de6",
+                              "created_at": "2024-04-05T07:52:03.000000Z",
+                              "updated_at": "2024-04-05T13:49:10.000000Z",
+                              "deleted_at": null
+                          }
+                      },
+                      {
+                          "id": "9cd4c582-76fd-4ecb-a046-e5e9558d6aa5",
+                          "hmo_id": "9bbbac52-edd1-4aa7-8254-c29c14fa6249",
+                          "plan_name": "diamond",
+                          "organization_id": "9bc5eb78-74d2-45f4-a677-05d07dca6a63",
+                          "service_item_id": "9cd37172-94d6-4ce2-a778-c52d0a5876a3",
+                          "created_at": "2024-08-23T01:30:06.000000Z",
+                          "updated_at": "2024-08-23T01:30:06.000000Z",
+                          "plan_count": 0,
+                          "hmo": {
+                              "id": "9bbbac52-edd1-4aa7-8254-c29c14fa6249",
+                              "health_provider": "Relaince",
+                              "type": "public",
+                              "contact_name": "Moyo",
+                              "contact_email_address": "moyo@reliance.com",
+                              "contact_phone_number": "09023456789",
+                              "status": "active",
+                              "description": null,
+                              "country_id": "9b9faee2-a2a4-4bcc-a758-53dfee793de6",
+                              "created_at": "2024-04-05T07:52:03.000000Z",
+                              "updated_at": "2024-04-05T13:49:10.000000Z",
+                              "deleted_at": null
+                          }
+                      },
+                      {
+                          "id": "9cd4cb10-469d-4f8c-b53e-bd5fa4572491",
+                          "hmo_id": "9bbbac52-edd1-4aa7-8254-c29c14fa6249",
+                          "plan_name": "diamond",
+                          "organization_id": "9bc5eb78-74d2-45f4-a677-05d07dca6a63",
+                          "service_item_id": "9cd37172-9677-4080-8f28-2cf050e38228",
+                          "created_at": "2024-08-23T01:45:38.000000Z",
+                          "updated_at": "2024-08-23T01:45:38.000000Z",
+                          "plan_count": 0,
+                          "hmo": {
+                              "id": "9bbbac52-edd1-4aa7-8254-c29c14fa6249",
+                              "health_provider": "Relaince",
+                              "type": "public",
+                              "contact_name": "Moyo",
+                              "contact_email_address": "moyo@reliance.com",
+                              "contact_phone_number": "09023456789",
+                              "status": "active",
+                              "description": null,
+                              "country_id": "9b9faee2-a2a4-4bcc-a758-53dfee793de6",
+                              "created_at": "2024-04-05T07:52:03.000000Z",
+                              "updated_at": "2024-04-05T13:49:10.000000Z",
+                              "deleted_at": null
+                          }
+                      },
+                      {
+                          "id": "9cd4e6e5-316d-40e9-aff1-b7e30c00f179",
+                          "hmo_id": "9bbbac52-edd1-4aa7-8254-c29c14fa6249",
+                          "plan_name": "diamond",
+                          "organization_id": "9bc5eb78-74d2-45f4-a677-05d07dca6a63",
+                          "service_item_id": "9cd37172-9c56-406b-95e3-935a0f650e84",
+                          "created_at": "2024-08-23T03:03:27.000000Z",
+                          "updated_at": "2024-08-23T03:03:27.000000Z",
+                          "plan_count": 0,
+                          "hmo": {
+                              "id": "9bbbac52-edd1-4aa7-8254-c29c14fa6249",
+                              "health_provider": "Relaince",
+                              "type": "public",
+                              "contact_name": "Moyo",
+                              "contact_email_address": "moyo@reliance.com",
+                              "contact_phone_number": "09023456789",
+                              "status": "active",
+                              "description": null,
+                              "country_id": "9b9faee2-a2a4-4bcc-a758-53dfee793de6",
+                              "created_at": "2024-04-05T07:52:03.000000Z",
+                              "updated_at": "2024-04-05T13:49:10.000000Z",
+                              "deleted_at": null
+                          }
+                      },
+                      {
+                          "id": "9cd56ebd-16de-4b0f-90bf-615dc93fc23f",
+                          "hmo_id": "9bbbac52-edd1-4aa7-8254-c29c14fa6249",
+                          "plan_name": "diamond",
+                          "organization_id": "9bc5eb78-74d2-45f4-a677-05d07dca6a63",
+                          "service_item_id": "9cd37172-82f5-43d3-a31f-e093e49b90bb",
+                          "created_at": "2024-08-23T09:23:18.000000Z",
+                          "updated_at": "2024-08-23T09:23:18.000000Z",
+                          "plan_count": 0,
+                          "hmo": {
+                              "id": "9bbbac52-edd1-4aa7-8254-c29c14fa6249",
+                              "health_provider": "Relaince",
+                              "type": "public",
+                              "contact_name": "Moyo",
+                              "contact_email_address": "moyo@reliance.com",
+                              "contact_phone_number": "09023456789",
+                              "status": "active",
+                              "description": null,
+                              "country_id": "9b9faee2-a2a4-4bcc-a758-53dfee793de6",
+                              "created_at": "2024-04-05T07:52:03.000000Z",
+                              "updated_at": "2024-04-05T13:49:10.000000Z",
+                              "deleted_at": null
+                          }
+                      },
+                      {
+                          "id": "9cd56ebd-1e82-4d6c-b4f0-2adb5eb9dc6e",
+                          "hmo_id": "9bbbac52-edd1-4aa7-8254-c29c14fa6249",
+                          "plan_name": "diamond",
+                          "organization_id": "9bc5eb78-74d2-45f4-a677-05d07dca6a63",
+                          "service_item_id": "9cd37172-83d0-44cb-88ed-ea6642ddd300",
+                          "created_at": "2024-08-23T09:23:18.000000Z",
+                          "updated_at": "2024-08-23T09:23:18.000000Z",
+                          "plan_count": 0,
+                          "hmo": {
+                              "id": "9bbbac52-edd1-4aa7-8254-c29c14fa6249",
+                              "health_provider": "Relaince",
+                              "type": "public",
+                              "contact_name": "Moyo",
+                              "contact_email_address": "moyo@reliance.com",
+                              "contact_phone_number": "09023456789",
+                              "status": "active",
+                              "description": null,
+                              "country_id": "9b9faee2-a2a4-4bcc-a758-53dfee793de6",
+                              "created_at": "2024-04-05T07:52:03.000000Z",
+                              "updated_at": "2024-04-05T13:49:10.000000Z",
+                              "deleted_at": null
+                          }
+                      },
+                      {
+                          "id": "9cd56ebd-4726-4380-8c5d-77bbc833f4fe",
+                          "hmo_id": "9bbbac52-edd1-4aa7-8254-c29c14fa6249",
+                          "plan_name": "diamond",
+                          "organization_id": "9bc5eb78-74d2-45f4-a677-05d07dca6a63",
+                          "service_item_id": "9cd37172-86ed-4033-947a-20639d80e305",
+                          "created_at": "2024-08-23T09:23:18.000000Z",
+                          "updated_at": "2024-08-23T09:23:18.000000Z",
+                          "plan_count": 0,
+                          "hmo": {
+                              "id": "9bbbac52-edd1-4aa7-8254-c29c14fa6249",
+                              "health_provider": "Relaince",
+                              "type": "public",
+                              "contact_name": "Moyo",
+                              "contact_email_address": "moyo@reliance.com",
+                              "contact_phone_number": "09023456789",
+                              "status": "active",
+                              "description": null,
+                              "country_id": "9b9faee2-a2a4-4bcc-a758-53dfee793de6",
+                              "created_at": "2024-04-05T07:52:03.000000Z",
+                              "updated_at": "2024-04-05T13:49:10.000000Z",
+                              "deleted_at": null
+                          }
+                      },
+                      {
+                          "id": "9cd56ebd-4dd4-486e-9557-d00e8f11d9e2",
+                          "hmo_id": "9bbbac52-edd1-4aa7-8254-c29c14fa6249",
+                          "plan_name": "diamond",
+                          "organization_id": "9bc5eb78-74d2-45f4-a677-05d07dca6a63",
+                          "service_item_id": "9cd37172-87c3-4f8c-ac31-eb56b341b6eb",
+                          "created_at": "2024-08-23T09:23:18.000000Z",
+                          "updated_at": "2024-08-23T09:23:18.000000Z",
+                          "plan_count": 0,
+                          "hmo": {
+                              "id": "9bbbac52-edd1-4aa7-8254-c29c14fa6249",
+                              "health_provider": "Relaince",
+                              "type": "public",
+                              "contact_name": "Moyo",
+                              "contact_email_address": "moyo@reliance.com",
+                              "contact_phone_number": "09023456789",
+                              "status": "active",
+                              "description": null,
+                              "country_id": "9b9faee2-a2a4-4bcc-a758-53dfee793de6",
+                              "created_at": "2024-04-05T07:52:03.000000Z",
+                              "updated_at": "2024-04-05T13:49:10.000000Z",
+                              "deleted_at": null
+                          }
+                      },
+                      {
+                          "id": "9cd56ebd-5225-4e4a-bb54-12ff4d6f4372",
+                          "hmo_id": "9bbbac52-edd1-4aa7-8254-c29c14fa6249",
+                          "plan_name": "diamond",
+                          "organization_id": "9bc5eb78-74d2-45f4-a677-05d07dca6a63",
+                          "service_item_id": "9cd37172-8a4b-49d0-96c0-e3fb976f809f",
+                          "created_at": "2024-08-23T09:23:18.000000Z",
+                          "updated_at": "2024-08-23T09:23:18.000000Z",
+                          "plan_count": 0,
+                          "hmo": {
+                              "id": "9bbbac52-edd1-4aa7-8254-c29c14fa6249",
+                              "health_provider": "Relaince",
+                              "type": "public",
+                              "contact_name": "Moyo",
+                              "contact_email_address": "moyo@reliance.com",
+                              "contact_phone_number": "09023456789",
+                              "status": "active",
+                              "description": null,
+                              "country_id": "9b9faee2-a2a4-4bcc-a758-53dfee793de6",
+                              "created_at": "2024-04-05T07:52:03.000000Z",
+                              "updated_at": "2024-04-05T13:49:10.000000Z",
+                              "deleted_at": null
+                          }
+                      }
+                  ]
+              }
+          }

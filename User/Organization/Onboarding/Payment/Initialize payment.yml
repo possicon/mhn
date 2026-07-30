@@ -1,0 +1,43 @@
+info:
+  name: Initialize payment
+  type: http
+  seq: 1
+
+http:
+  method: POST
+  url: "{{base_url}}/user/organization/onboarding/payment"
+  headers:
+    - name: Accept
+      value: application/json
+  body:
+    type: json
+    data: "{\r
+
+      \    \"plan_id\": \"9bd21ab6-24de-4a8f-91da-a16d95939fd3\",\r
+
+      \    \"plan_frequency\":\"monthly\", // or quarterly or yearly.\r
+
+      \    \"gateway\": \"paystack\",\r
+
+      \    \"redirect_url\":\"http://mhn.net/dashboard\", // dashboard\r
+
+      \    \"callbackUrl\":\"https://google.com\", //optional\r
+
+      \    \"purpose\":\"plan_renewal\",// or plan_renewal or new_plan\r
+
+      \    //\"branch_id\":\"9be1f262-1550-41cb-934f-381ad7cb955c\"//optional\r
+
+      \    \"organization_id\":\"9bd2846c-d947-4894-8042-699fe026fdc6\"//optional\r
+
+      \r
+
+      }"
+  auth:
+    type: bearer
+    token: 61|uB9pfysZpEfeRBpKX0eVhbJuHRPfea2dStVFKu9Y08bc923b
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

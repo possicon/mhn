@@ -1,0 +1,142 @@
+info:
+  name: my current consultation
+  type: http
+  seq: 2
+
+http:
+  method: GET
+  url: "{{base_url}}/user/my_consultations?physiotherapy=1"
+  headers:
+    - name: Accept
+      value: application/json
+  params:
+    - name: search
+      value: "0"
+      type: query
+      disabled: true
+    - name: antenatal
+      value: "1"
+      type: query
+      disabled: true
+    - name: physiotherapy
+      value: "1"
+      type: query
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+examples:
+  - name: my current consultation
+    request:
+      url: "{{base_url}}/user/my_consultations"
+      method: GET
+      headers:
+        - name: Accept
+          value: application/json
+    response:
+      status: 200
+      statusText: OK
+      headers:
+        - name: Date
+          value: Tue, 28 May 2024 00:29:59 GMT
+        - name: Server
+          value: Apache/2.4.54 (Win64) OpenSSL/1.1.1q mod_fcgid/2.3.10-dev
+        - name: X-Powered-By
+          value: PHP/8.2.16
+        - name: Cache-Control
+          value: no-cache, private
+        - name: X-RateLimit-Limit
+          value: "60"
+        - name: X-RateLimit-Remaining
+          value: "59"
+        - name: Access-Control-Allow-Origin
+          value: "*"
+        - name: Vary
+          value: Authorization
+        - name: Keep-Alive
+          value: timeout=5, max=100
+        - name: Connection
+          value: Keep-Alive
+        - name: Transfer-Encoding
+          value: chunked
+        - name: Content-Type
+          value: application/json
+      body:
+        type: json
+        data: |-
+          {
+              "success": true,
+              "code": 0,
+              "locale": "en",
+              "message": "You have successfully  fetch all my consultations",
+              "data": {
+                  "data": [
+                      {
+                          "id": "9c2592fe-b2d0-4782-ac97-b9810e524a5a",
+                          "purpose_of_visit": {
+                              "id": "9be982a5-4bda-4d19-8af3-a345ab0f98f0",
+                              "name": "Hospital Resistration"
+                          },
+                          "mode_of_appointment": "telemedicine",
+                          "type_of_appointment": "immediate",
+                          "payment_type": "hmo",
+                          "has_free_consultation": 0,
+                          "consultation_fee": "58560.00",
+                          "name": "Hospital Resistration",
+                          "policy_name": null,
+                          "plan": "Gold",
+                          "appointment_date": "2024/05/30",
+                          "tele_medicine_url": "http://www.telemedicine.com",
+                          "model_id": "9c111152-abe1-4490-ab04-c066445133a7",
+                          "model_type": "App\\Models\\Patient",
+                          "visit_date": "2024-05-27 00:00:00",
+                          "has_locked_doctor": 1,
+                          "assigned_doctor": "9bc6382c-bb73-4c7d-9409-677fe560485d",
+                          "status": "scheduled",
+                          "fee_status": null,
+                          "is_cancelled": 0,
+                          "cancelled_by": null,
+                          "queue_no": 2,
+                          "created_at": "2024-05-27T23:18:58.000000Z",
+                          "updated_at": "2024-05-27T23:22:35.000000Z",
+                          "first_name": "Goodness",
+                          "last_name": "Ebubechukwu",
+                          "middle_name": "Ogbuagu",
+                          "patient_sequence": "MHN_USAi2dTkjg",
+                          "patient": {
+                              "id": "9c111152-abe1-4490-ab04-c066445133a7",
+                              "first_name": "Goodness",
+                              "last_name": "Ebubechukwu",
+                              "middle_name": "Ogbuagu",
+                              "patient_sequence": "MHN_USAi2dTkjg",
+                              "media": {
+                                  "4809614b-e475-4169-b4fe-23d17c548289": {
+                                      "name": "IMG-20231127-WA0007",
+                                      "file_name": "IMG-20231127-WA0007.jpg",
+                                      "uuid": "4809614b-e475-4169-b4fe-23d17c548289",
+                                      "preview_url": "",
+                                      "original_url": "http://127.0.0.1:8000/storage/88/IMG-20231127-WA0007.jpg",
+                                      "order": 3,
+                                      "custom_properties": [],
+                                      "extension": "jpg",
+                                      "size": 45808
+                                  }
+                              }
+                          },
+                          "assignedDoctor": {
+                              "id": "9bc6382c-bb73-4c7d-9409-677fe560485d",
+                              "first_name": "General",
+                              "last_name": "Emmanuel",
+                              "middle_name": "Prince"
+                          }
+                      }
+                  ],
+                  "total": 1,
+                  "currentPage": 1,
+                  "perPage": 20
+              }
+          }

@@ -1,0 +1,26 @@
+info:
+  name: Activate or deactivate licences
+  type: http
+  seq: 4
+
+http:
+  method: PATCH
+  url: "{{base_url}}/admin/licence/toggleActivate"
+  body:
+    type: json
+    data: "{\r
+
+      \  \"action\":\"activate\",\r
+
+      \  \"ids\": [\"9baa1efa-ff0c-4178-9972-9cca951edf40\"]\r
+
+      }"
+  auth:
+    type: bearer
+    token: "{{token}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

@@ -1,0 +1,174 @@
+info:
+  name: Create Plan
+  type: http
+  seq: 3
+
+http:
+  method: POST
+  url: "{{base_url}}/admin/plan"
+  headers:
+    - name: Accept
+      value: application/json
+  body:
+    type: json
+    data: "{\r
+
+      \  \"name\": \"Plan A1\",\r
+
+      \  \"organization_type_ids\": [1,2, 4],\r
+
+      \  \"type\": \"temporary\",\r
+
+      \  \"description\":\"This amazing plan gives you an awesome description.\",\r
+
+      \  \"start_date\": \"2024-01-01\", // required only if type = temporary\r
+
+      \  \"end_date\": \"2024-05-05\",  // required only if type = temporary\r
+
+      \  \"number_of_branches\": 2,\r
+
+      \  \"number_of_users\": 3,\r
+
+      \  \"pricing_per_user\": 10,\r
+
+      \  \"hmo\": false,\r
+
+      \  \"number_of_storage\": \"1TB\" ,\r
+
+      \  \"telemedicine\": false\r
+
+      }"
+  auth:
+    type: bearer
+    token: 29|gegnogrshPFtTYEiwmUFq9qhE2XTMAFRcnPmazFK6eb0ffde
+
+runtime:
+  scripts:
+    - type: after-response
+      code: |-
+        test("Successfully created plan", function () {
+            expect(res.getStatus()).to.be.oneOf([200, 201]);
+        });
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+examples:
+  - name: Create Plan
+    request:
+      url: "{{base_url}}/admin/plan"
+      method: POST
+      body:
+        type: json
+        data: "{\r
+
+          \  \"name\": \"Plan A1\",\r
+
+          \  \"organization_type_ids\": [1,2, 4],\r
+
+          \  \"type\": \"temporary\",\r
+
+          \  \"description\":\"This amazing plan gives you an awesome description.\",\r
+
+          \  \"start_date\": \"2024-01-01\", // required only if type = temporary\r
+
+          \  \"end_date\": \"2024-05-05\",  // required only if type = temporary\r
+
+          \  \"number_of_branches\": 2,\r
+
+          \  \"number_of_users\": 3,\r
+
+          \  \"pricing_per_user\": 10,\r
+
+          \  \"hmo\": false,\r
+
+          \  \"number_of_storage\": \"1TB\" ,\r
+
+          \  \"telemedicine\": false\r
+
+          }"
+    response:
+      status: 201
+      statusText: Created
+      headers:
+        - name: Date
+          value: Wed, 27 Mar 2024 12:46:28 GMT
+        - name: Server
+          value: Apache/2.4.54 (Win64) OpenSSL/1.1.1q mod_fcgid/2.3.10-dev
+        - name: X-Powered-By
+          value: PHP/8.2.16
+        - name: Cache-Control
+          value: no-cache, private
+        - name: X-RateLimit-Limit
+          value: "60"
+        - name: X-RateLimit-Remaining
+          value: "59"
+        - name: Access-Control-Allow-Origin
+          value: "*"
+        - name: Vary
+          value: Authorization
+        - name: Keep-Alive
+          value: timeout=5, max=100
+        - name: Connection
+          value: Keep-Alive
+        - name: Transfer-Encoding
+          value: chunked
+        - name: Content-Type
+          value: application/json
+      body:
+        type: json
+        data: |-
+          {
+              "success": true,
+              "code": 0,
+              "locale": "en",
+              "message": "Plan created successfully",
+              "data": {
+                  "plan": {
+                      "name": "Plan A1",
+                      "description": "This amazing plan gives you an awesome description.",
+                      "organization_types": [
+                          {
+                              "id": 1,
+                              "name": "Hospitals & Health Centers",
+                              "active": true,
+                              "pivot": {
+                                  "plan_id": "9ba9fac4-be23-4414-af12-9ad7bc7061bb",
+                                  "organization_type_id": 1
+                              }
+                          },
+                          {
+                              "id": 2,
+                              "name": "Pharmacy",
+                              "active": true,
+                              "pivot": {
+                                  "plan_id": "9ba9fac4-be23-4414-af12-9ad7bc7061bb",
+                                  "organization_type_id": 2
+                              }
+                          },
+                          {
+                              "id": 4,
+                              "name": "Laboratory",
+                              "active": true,
+                              "pivot": {
+                                  "plan_id": "9ba9fac4-be23-4414-af12-9ad7bc7061bb",
+                                  "organization_type_id": 4
+                              }
+                          }
+                      ],
+                      "type": "Temporary",
+                      "start_date": "2024-01-01",
+                      "end_date": "2024-05-05",
+                      "number_of_branches": 2,
+                      "number_of_storage": "1TB",
+                      "number_of_users": 3,
+                      "telemedicine": false,
+                      "hmo": false,
+                      "pricing_per_user": 10,
+                      "active": "active"
+                  }
+              }
+          }

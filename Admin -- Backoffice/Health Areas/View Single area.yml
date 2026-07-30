@@ -1,0 +1,24 @@
+info:
+  name: View Single area
+  type: http
+  seq: 2
+
+http:
+  method: GET
+  url: "{{base_url}}/admin/health-area/:id"
+  params:
+    - name: id
+      value: 9bb5ed5c-17d6-4eb9-bda1-27d4c172b26d
+      type: path
+  body:
+    type: json
+    data: ""
+  auth:
+    type: bearer
+    token: "{{token}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

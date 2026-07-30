@@ -1,0 +1,11 @@
+info:
+  name: Location
+  type: folder
+  seq: 1
+
+request:
+  auth: inherit
+
+docs:
+  content: This contains every endpoint concerning the location system.
+  type: text/markdown

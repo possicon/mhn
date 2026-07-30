@@ -1,0 +1,83 @@
+info:
+  name: show
+  type: http
+  seq: 3
+
+http:
+  method: GET
+  url: "{{base_url}}/user/wardRoundNote/:id"
+  params:
+    - name: id
+      value: 9c55aa47-e6af-477e-8db3-0ed01900191a
+      type: path
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+examples:
+  - name: show
+    request:
+      url: "{{base_url}}/user/wardRoundNote/:id"
+      method: GET
+      params:
+        - name: id
+          value: 9c55aa47-e6af-477e-8db3-0ed01900191a
+          type: path
+    response:
+      status: 200
+      statusText: OK
+      headers:
+        - name: Date
+          value: Thu, 20 Jun 2024 21:49:21 GMT
+        - name: Server
+          value: Apache/2.4.54 (Win64) OpenSSL/1.1.1q mod_fcgid/2.3.10-dev
+        - name: X-Powered-By
+          value: PHP/8.2.16
+        - name: Cache-Control
+          value: no-cache, private
+        - name: X-RateLimit-Limit
+          value: "60"
+        - name: X-RateLimit-Remaining
+          value: "58"
+        - name: Access-Control-Allow-Origin
+          value: "*"
+        - name: Vary
+          value: Authorization
+        - name: Keep-Alive
+          value: timeout=5, max=100
+        - name: Connection
+          value: Keep-Alive
+        - name: Transfer-Encoding
+          value: chunked
+        - name: Content-Type
+          value: application/json
+      body:
+        type: json
+        data: |-
+          {
+              "success": true,
+              "code": 0,
+              "locale": "en",
+              "message": "success",
+              "data": {
+                  "item": {
+                      "id": "9c55aa47-e6af-477e-8db3-0ed01900191a",
+                      "template": "SOAP",
+                      "note": "assessment",
+                      "taken_by": "9bc6382c-bb73-4c7d-9409-677fe560485d",
+                      "patient_id": "9c22ec62-cfa4-476c-8921-a924a32f20d7",
+                      "created_at": "2024-06-20T21:03:49.000000Z",
+                      "updated_at": "2024-06-20T21:03:49.000000Z",
+                      "doctor": {
+                          "id": "9bc6382c-bb73-4c7d-9409-677fe560485d",
+                          "first_name": "General",
+                          "middle_name": "Prince",
+                          "last_name": "Emmanuel"
+                      }
+                  }
+              }
+          }

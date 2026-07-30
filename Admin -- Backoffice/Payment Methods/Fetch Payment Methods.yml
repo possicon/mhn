@@ -1,0 +1,266 @@
+info:
+  name: Fetch Payment Methods
+  type: http
+  seq: 2
+
+http:
+  method: GET
+  url: "{{base_url}}/admin/paymentMethod"
+  params:
+    - name: collectionType
+      value: Cash
+      type: query
+      disabled: true
+    - name: status
+      value: active
+      type: query
+      disabled: true
+    - name: country
+      value: Ghana
+      type: query
+      disabled: true
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+examples:
+  - name: Fetch Payment Methods
+    request:
+      url: "{{base_url}}/admin/paymentMethod"
+      method: GET
+      params:
+        - name: collectionType
+          value: Cash
+          type: query
+          disabled: true
+        - name: status
+          value: active
+          type: query
+          disabled: true
+        - name: country
+          value: Ghana
+          type: query
+          disabled: true
+    response:
+      status: 200
+      statusText: OK
+      headers:
+        - name: Date
+          value: Mon, 08 Apr 2024 20:16:39 GMT
+        - name: Server
+          value: Apache/2.4.54 (Win64) OpenSSL/1.1.1q mod_fcgid/2.3.10-dev
+        - name: X-Powered-By
+          value: PHP/8.2.16
+        - name: Cache-Control
+          value: no-cache, private
+        - name: X-RateLimit-Limit
+          value: "60"
+        - name: X-RateLimit-Remaining
+          value: "58"
+        - name: Access-Control-Allow-Origin
+          value: "*"
+        - name: Vary
+          value: Authorization
+        - name: Keep-Alive
+          value: timeout=5, max=100
+        - name: Connection
+          value: Keep-Alive
+        - name: Transfer-Encoding
+          value: chunked
+        - name: Content-Type
+          value: application/json
+      body:
+        type: json
+        data: |-
+          {
+              "success": true,
+              "code": 0,
+              "locale": "en",
+              "message": "Payment method fetched successfully",
+              "data": {
+                  "data": [
+                      {
+                          "id": "9bc2bf69-9306-4d0d-b797-0cb500abbd6b",
+                          "country_id": "9b9faee3-2ab6-4c13-8120-167e66a8ff18",
+                          "country": "Nigeria",
+                          "status": "active",
+                          "collection_type": [
+                              "Cash",
+                              "Bank Transfer",
+                              "POS",
+                              "Card"
+                          ],
+                          "payment_provider": [
+                              "Paystack",
+                              "Interswitch",
+                              "Monieppoint",
+                              "Flutterwave",
+                              "Parkway Wallet"
+                          ],
+                          "payment_provider_count": 5,
+                          "bank_account": [
+                              "GTB",
+                              "UBA",
+                              "ACCESS",
+                              "FIRST BANK"
+                          ]
+                      },
+                      {
+                          "id": "9bc2ad35-20ec-41bd-b028-d510cd3f32cc",
+                          "country_id": "9b9faee2-eb16-4fa3-aa6d-dec4a6025d81",
+                          "country": "Germany",
+                          "status": "active",
+                          "collection_type": [
+                              "Cash",
+                              "Bank Transfer",
+                              "POS",
+                              "Card"
+                          ],
+                          "payment_provider": [
+                              "Parkway Wallet",
+                              "Interswitch",
+                              "Monieppoint",
+                              "Flutterwave"
+                          ],
+                          "payment_provider_count": 4,
+                          "bank_account": [
+                              "GTB",
+                              "UBA",
+                              "ACCESS",
+                              "FIRST BANK"
+                          ]
+                      },
+                      {
+                          "id": "9bc2aaeb-c0d2-461c-85bd-42151bcf0bee",
+                          "country_id": "9b9faee2-d39f-43ba-aa41-a76eb2c7f40f",
+                          "country": "Croatia",
+                          "status": "active",
+                          "collection_type": [
+                              "Cash",
+                              "Bank Transfer",
+                              "POS",
+                              "Card"
+                          ],
+                          "payment_provider": [
+                              "Paystack",
+                              "Interswitch",
+                              "Monieppoint",
+                              "Flutterwave"
+                          ],
+                          "payment_provider_count": 4,
+                          "bank_account": [
+                              "GTB",
+                              "UBA",
+                              "ACCESS",
+                              "FIRST BANK"
+                          ]
+                      },
+                      {
+                          "id": "9bc2a2f6-70a7-47fa-bd63-7f0df7d82686",
+                          "country_id": "9b9faee2-bb3e-4e69-a684-5f52ec93df19",
+                          "country": "Bhutan",
+                          "status": "active",
+                          "collection_type": [
+                              "Cash",
+                              "Bank Transfer",
+                              "POS",
+                              "Card"
+                          ],
+                          "payment_provider": [
+                              "Paystack",
+                              "Interswitch",
+                              "Monieppoint",
+                              "Flutterwave"
+                          ],
+                          "payment_provider_count": 4,
+                          "bank_account": [
+                              "GTB",
+                              "UBA",
+                              "ACCESS",
+                              "FIRST BANK"
+                          ]
+                      },
+                      {
+                          "id": "9bc2a1eb-fba4-4792-a8e6-86b9237f6ccd",
+                          "country_id": "9b9faee2-b64b-4aa1-b7ba-ab75b4b25b5c",
+                          "country": "Belgium",
+                          "status": "active",
+                          "collection_type": [
+                              "Cash",
+                              "Bank Transfer",
+                              "POS",
+                              "Card"
+                          ],
+                          "payment_provider": [
+                              "Paystack",
+                              "Interswitch",
+                              "Monieppoint",
+                              "Flutterwave"
+                          ],
+                          "payment_provider_count": 4,
+                          "bank_account": [
+                              "GTB",
+                              "UBA",
+                              "ACCESS",
+                              "FIRST BANK"
+                          ]
+                      },
+                      {
+                          "id": "9bc29bc5-41c0-487a-a013-e43a922d0be9",
+                          "country_id": "9b9faee2-af45-40db-be97-54553460b20c",
+                          "country": "Austria",
+                          "status": "active",
+                          "collection_type": [
+                              "Cash",
+                              "Bank Transfer",
+                              "POS",
+                              "Card"
+                          ],
+                          "payment_provider": [
+                              "Paystack",
+                              "Interswitch",
+                              "Monieppoint",
+                              "Flutterwave"
+                          ],
+                          "payment_provider_count": 4,
+                          "bank_account": [
+                              "GTB",
+                              "UBA",
+                              "ACCESS",
+                              "FIRST BANK"
+                          ]
+                      },
+                      {
+                          "id": "9bc29a56-f303-4594-b79e-25418f0cd969",
+                          "country_id": "9b9faee2-ebaf-4a0d-b0ad-63c3f260d6ff",
+                          "country": "Ghana",
+                          "status": "active",
+                          "collection_type": [
+                              "Cash",
+                              "Bank Transfer",
+                              "POS",
+                              "Card"
+                          ],
+                          "payment_provider": [
+                              "Paystack",
+                              "Interswitch",
+                              "Monieppoint",
+                              "Flutterwave"
+                          ],
+                          "payment_provider_count": 4,
+                          "bank_account": [
+                              "GTB",
+                              "UBA",
+                              "ACCESS",
+                              "FIRST BANK"
+                          ]
+                      }
+                  ],
+                  "total_pages": 1,
+                  "current_page": 1
+              }
+          }

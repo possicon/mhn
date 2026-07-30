@@ -1,0 +1,420 @@
+info:
+  name: vital history
+  type: http
+  seq: 2
+
+http:
+  method: GET
+  url: "{{base_url}}/user/patients/:id/vitals"
+  headers:
+    - name: Accept
+      value: application/json
+  params:
+    - name: id
+      value: 9c111152-abe1-4490-ab04-c066445133a7
+      type: path
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+examples:
+  - name: vital history
+    request:
+      url: "{{base_url}}/user/patients/:id/vitals"
+      method: GET
+      headers:
+        - name: Accept
+          value: application/json
+      params:
+        - name: id
+          value: 9c111152-abe1-4490-ab04-c066445133a7
+          type: path
+    response:
+      status: 200
+      statusText: OK
+      headers:
+        - name: Date
+          value: Sun, 02 Jun 2024 11:21:36 GMT
+        - name: Server
+          value: Apache/2.4.54 (Win64) OpenSSL/1.1.1q mod_fcgid/2.3.10-dev
+        - name: X-Powered-By
+          value: PHP/8.2.16
+        - name: Cache-Control
+          value: no-cache, private
+        - name: X-RateLimit-Limit
+          value: "60"
+        - name: X-RateLimit-Remaining
+          value: "59"
+        - name: Access-Control-Allow-Origin
+          value: "*"
+        - name: Vary
+          value: Authorization
+        - name: Keep-Alive
+          value: timeout=5, max=100
+        - name: Connection
+          value: Keep-Alive
+        - name: Transfer-Encoding
+          value: chunked
+        - name: Content-Type
+          value: application/json
+      body:
+        type: json
+        data: |-
+          {
+              "success": true,
+              "code": 0,
+              "locale": "en",
+              "message": "success",
+              "data": {
+                  "item": {
+                      "id": "9c111152-abe1-4490-ab04-c066445133a7",
+                      "patient_sequence": "MHN_USAi2dTkjg",
+                      "title": "Miss",
+                      "first_name": "Goodness",
+                      "last_name": "Ebubechukwu",
+                      "middle_name": "Ogbuagu",
+                      "dob": "2022-02-02",
+                      "gender": "female",
+                      "occupation": "Engineer",
+                      "nin": "79183109178",
+                      "martial_status": "single",
+                      "tribe": "Igbo",
+                      "religion": "Christianity",
+                      "created_at": "2024-05-17T18:39:50.000000Z",
+                      "updated_at": "2024-05-26T01:55:34.000000Z",
+                      "preferred_language": "9bfad77f-9532-493c-88b9-6b99ebe55b8b",
+                      "status": "out-patient",
+                      "city_id": "9ba1338d-f1ca-487b-ae34-471ddc6a7bc2",
+                      "state_id": "9ba01c32-186f-4ce1-84a5-0ee8884d02de",
+                      "country_id": "9b9faee2-b2e9-4033-bf57-d000bb45d6f5",
+                      "address": "31 Onitsha Rd",
+                      "email_address": "contactlove@mhn.com",
+                      "additional_mobile": "09087653421",
+                      "primary_mobile": "08023456789",
+                      "deleted_at": null,
+                      "user_id": "9c111152-c552-43a7-a1b1-0fc8e1226ad6",
+                      "age": 2,
+                      "vitals": [
+                          {
+                              "id": "9c30a0ed-2b25-45f6-9551-695cd679b6c9",
+                              "height_in_feet": "65",
+                              "height_in_inch": "50",
+                              "weight": "250",
+                              "temperature": "46",
+                              "blood_pressure": "80",
+                              "diastolic": "34",
+                              "bmi": "90",
+                              "patient_id": "9c111152-abe1-4490-ab04-c066445133a7",
+                              "taken_by": {
+                                  "id": "9bc6382c-bb73-4c7d-9409-677fe560485d",
+                                  "first_name": "General",
+                                  "middle_name": "Prince",
+                                  "last_name": "Emmanuel",
+                                  "gender": "male",
+                                  "status": "Active",
+                                  "phone": "0802323232323",
+                                  "email": "contactus@mhn.ng",
+                                  "username": null,
+                                  "email_verified_at": null,
+                                  "type": "owner",
+                                  "country_id": "9b9faee3-6aaa-4050-bd6c-98a43e674250",
+                                  "branch_id": null,
+                                  "organization_id": "9bc5eb78-74d2-45f4-a677-05d07dca6a63",
+                                  "company_id": null,
+                                  "reset_token": null,
+                                  "token_time": null,
+                                  "created_at": "2024-04-10T13:41:22.000000Z",
+                                  "updated_at": "2024-04-11T19:11:50.000000Z",
+                                  "deleted_at": null
+                              },
+                              "visit_date": "2024-06-02 00:00:00",
+                              "complaints": "High appetite for food",
+                              "created_at": "2024-06-02T11:12:02.000000Z",
+                              "updated_at": "2024-06-02T11:12:02.000000Z"
+                          }
+                      ]
+                  }
+              }
+          }
+  - name: vital history
+    request:
+      url: "{{base_url}}/user/patients/:id/vitals"
+      method: GET
+      headers:
+        - name: Accept
+          value: application/json
+      params:
+        - name: id
+          value: 9c111152-abe1-4490-ab04-c066445133a7
+          type: path
+    response:
+      status: 200
+      statusText: OK
+      headers:
+        - name: Date
+          value: Thu, 20 Jun 2024 09:31:00 GMT
+        - name: Server
+          value: Apache/2.4.54 (Win64) OpenSSL/1.1.1q mod_fcgid/2.3.10-dev
+        - name: X-Powered-By
+          value: PHP/8.2.16
+        - name: Cache-Control
+          value: no-cache, private
+        - name: X-RateLimit-Limit
+          value: "60"
+        - name: X-RateLimit-Remaining
+          value: "59"
+        - name: Access-Control-Allow-Origin
+          value: "*"
+        - name: Vary
+          value: Authorization
+        - name: Keep-Alive
+          value: timeout=5, max=100
+        - name: Connection
+          value: Keep-Alive
+        - name: Transfer-Encoding
+          value: chunked
+        - name: Content-Type
+          value: application/json
+      body:
+        type: json
+        data: |-
+          {
+              "success": true,
+              "code": 0,
+              "locale": "en",
+              "message": "success",
+              "data": {
+                  "item": {
+                      "id": "9c111152-abe1-4490-ab04-c066445133a7",
+                      "patient_sequence": "MHN_USAi2dTkjg",
+                      "title": "Miss",
+                      "first_name": "Goodness",
+                      "last_name": "Ebubechukwu",
+                      "middle_name": "Ogbuagu",
+                      "dob": "2022-02-02",
+                      "gender": "female",
+                      "occupation": "Engineer",
+                      "nin": "79183109178",
+                      "martial_status": "single",
+                      "tribe": "Igbo",
+                      "religion": "Christianity",
+                      "created_at": "2024-05-17T18:39:50.000000Z",
+                      "updated_at": "2024-06-03T10:25:02.000000Z",
+                      "preferred_language": "9bfad77f-9532-493c-88b9-6b99ebe55b8b",
+                      "status": "out-patient",
+                      "city_id": "9ba1338d-f1ca-487b-ae34-471ddc6a7bc2",
+                      "state_id": "9ba01c32-186f-4ce1-84a5-0ee8884d02de",
+                      "country_id": "9b9faee2-b2e9-4033-bf57-d000bb45d6f5",
+                      "address": "31 Onitsha Rd",
+                      "email_address": "contactlove@mhn.com",
+                      "additional_mobile": "09087653421",
+                      "primary_mobile": "08023456789",
+                      "deleted_at": null,
+                      "user_id": "9c111152-c552-43a7-a1b1-0fc8e1226ad6",
+                      "file_number": null,
+                      "age": 2,
+                      "vitals": [
+                          {
+                              "id": "9c452d8c-18f3-47e0-87a7-157e90b921bc",
+                              "height_in_feet": "65",
+                              "height_in_inch": "50",
+                              "weight": "250",
+                              "temperature": "46",
+                              "respiratory_rate": null,
+                              "pulse_in_bps": null,
+                              "blood_pressure": "90",
+                              "diastolic": "34",
+                              "oxygen_saturation_level": null,
+                              "fetal_heart_rate": null,
+                              "random_blood_sugar": null,
+                              "fasting_blood_sugar": null,
+                              "bmi": "90",
+                              "patient_id": "9c111152-abe1-4490-ab04-c066445133a7",
+                              "taken_by": {
+                                  "id": "9bc6382c-bb73-4c7d-9409-677fe560485d",
+                                  "first_name": "General",
+                                  "middle_name": "Prince",
+                                  "last_name": "Emmanuel",
+                                  "gender": "male",
+                                  "status": "Active",
+                                  "phone": "0802323232323",
+                                  "email": "contactus@mhn.ng",
+                                  "username": null,
+                                  "email_verified_at": null,
+                                  "type": "owner",
+                                  "country_id": "9b9faee3-6aaa-4050-bd6c-98a43e674250",
+                                  "branch_id": null,
+                                  "organization_id": "9bc5eb78-74d2-45f4-a677-05d07dca6a63",
+                                  "company_id": null,
+                                  "reset_token": null,
+                                  "token_time": null,
+                                  "created_at": "2024-04-10T13:41:22.000000Z",
+                                  "updated_at": "2024-04-11T19:11:50.000000Z",
+                                  "deleted_at": null
+                              },
+                              "visit_date": "2024-06-12 00:00:00",
+                              "complaints": "High appetite for food",
+                              "created_at": "2024-06-12T16:21:48.000000Z",
+                              "updated_at": "2024-06-12T16:22:34.000000Z"
+                          }
+                      ]
+                  }
+              }
+          }
+  - name: vital history
+    request:
+      url: "{{base_url}}/user/patients/:id/vitals"
+      method: GET
+      headers:
+        - name: Accept
+          value: application/json
+      params:
+        - name: id
+          value: 9c111152-abe1-4490-ab04-c066445133a7
+          type: path
+    response:
+      status: 200
+      statusText: OK
+      headers:
+        - name: Date
+          value: Thu, 12 Dec 2024 10:55:29 GMT
+        - name: Server
+          value: Apache/2.4.54 (Win64) OpenSSL/1.1.1d mod_fcgid/2.3.10-dev
+        - name: X-Powered-By
+          value: PHP/8.2.17
+        - name: Cache-Control
+          value: no-cache, private
+        - name: X-RateLimit-Limit
+          value: "60"
+        - name: X-RateLimit-Remaining
+          value: "59"
+        - name: Access-Control-Allow-Origin
+          value: "*"
+        - name: Vary
+          value: Authorization
+        - name: Keep-Alive
+          value: timeout=5, max=100
+        - name: Connection
+          value: Keep-Alive
+        - name: Transfer-Encoding
+          value: chunked
+        - name: Content-Type
+          value: application/json
+      body:
+        type: json
+        data: |-
+          {
+              "success": true,
+              "code": 0,
+              "locale": "en",
+              "message": "success",
+              "data": {
+                  "patient": {
+                      "id": "9c111152-abe1-4490-ab04-c066445133a7",
+                      "created_by_organization_id": null,
+                      "patient_sequence": "MHN_USAi2dTkjg",
+                      "title": "Miss",
+                      "first_name": "Goodness",
+                      "last_name": "Ebubechukwu",
+                      "middle_name": "Ogbuagu",
+                      "dob": "2022-02-02",
+                      "gender": "female",
+                      "occupation": "Engineer",
+                      "nin": "79183109178",
+                      "martial_status": "single",
+                      "tribe": "Igbo",
+                      "religion": "Christianity",
+                      "created_at": "2024-05-17T18:39:50.000000Z",
+                      "updated_at": "2024-09-24T23:51:49.000000Z",
+                      "preferred_language": "9bfad77f-9532-493c-88b9-6b99ebe55b8b",
+                      "status": "out-patient",
+                      "city_id": "9ba1338d-f1ca-487b-ae34-471ddc6a7bc2",
+                      "state_id": "9ba01c32-186f-4ce1-84a5-0ee8884d02de",
+                      "country_id": "9b9faee2-b2e9-4033-bf57-d000bb45d6f5",
+                      "address": "31 Onitsha Rd",
+                      "email_address": "contactlove@mhn.com",
+                      "additional_mobile": "09087653421",
+                      "primary_mobile": "08023456789",
+                      "deleted_at": null,
+                      "user_id": "9c111152-c552-43a7-a1b1-0fc8e1226ad6",
+                      "file_number": "68792308",
+                      "vitals": [
+                          {
+                              "id": "9c60800e-cb8d-4ba0-92a5-458eb362343f",
+                              "height_in_feet": null,
+                              "height_in_inch": null,
+                              "weight": "250",
+                              "temperature": "46",
+                              "respiratory_rate": "46",
+                              "pulse_in_bps": "67",
+                              "blood_pressure": "80",
+                              "diastolic": "34",
+                              "oxygen_saturation_level": "20",
+                              "fetal_heart_rate": "56",
+                              "random_blood_sugar": "75",
+                              "fasting_blood_sugar": "56",
+                              "bmi": "90",
+                              "patient_id": "9c111152-abe1-4490-ab04-c066445133a7",
+                              "taken_by": "9bc6382c-bb73-4c7d-9409-677fe560485d",
+                              "visit_date": "2024-06-26 00:00:00",
+                              "complaints": null,
+                              "created_at": "2024-06-26T06:19:52.000000Z",
+                              "updated_at": "2024-06-26T06:19:52.000000Z"
+                          },
+                          {
+                              "id": "9c5e8072-b40e-4ae8-b25f-1db58c0e0c1f",
+                              "height_in_feet": null,
+                              "height_in_inch": null,
+                              "weight": "250",
+                              "temperature": "46",
+                              "respiratory_rate": "46",
+                              "pulse_in_bps": "67",
+                              "blood_pressure": "80",
+                              "diastolic": "34",
+                              "oxygen_saturation_level": "20",
+                              "fetal_heart_rate": "56",
+                              "random_blood_sugar": "75",
+                              "fasting_blood_sugar": "56",
+                              "bmi": "90",
+                              "patient_id": "9c111152-abe1-4490-ab04-c066445133a7",
+                              "taken_by": "9bc6382c-bb73-4c7d-9409-677fe560485d",
+                              "visit_date": "2024-06-25 00:00:00",
+                              "complaints": null,
+                              "created_at": "2024-06-25T06:29:19.000000Z",
+                              "updated_at": "2024-06-25T06:29:19.000000Z"
+                          },
+                          {
+                              "id": "9c452d8c-18f3-47e0-87a7-157e90b921bc",
+                              "height_in_feet": "65",
+                              "height_in_inch": "50",
+                              "weight": "250",
+                              "temperature": "46",
+                              "respiratory_rate": null,
+                              "pulse_in_bps": null,
+                              "blood_pressure": "90",
+                              "diastolic": "34",
+                              "oxygen_saturation_level": null,
+                              "fetal_heart_rate": null,
+                              "random_blood_sugar": null,
+                              "fasting_blood_sugar": null,
+                              "bmi": "90",
+                              "patient_id": "9c111152-abe1-4490-ab04-c066445133a7",
+                              "taken_by": "9bc6382c-bb73-4c7d-9409-677fe560485d",
+                              "visit_date": "2024-06-12 00:00:00",
+                              "complaints": "High appetite for food",
+                              "created_at": "2024-06-12T16:21:48.000000Z",
+                              "updated_at": "2024-06-12T16:22:34.000000Z"
+                          }
+                      ]
+                  },
+                  "pagination": {
+                      "total": 3,
+                      "page": 1,
+                      "take": 20
+                  }
+              }
+          }

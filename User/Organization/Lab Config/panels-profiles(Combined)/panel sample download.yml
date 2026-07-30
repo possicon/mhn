@@ -1,0 +1,67 @@
+info:
+  name: panel sample download
+  type: http
+  seq: 7
+
+http:
+  method: POST
+  url: "{{base_url}}/user/organization/panels/download"
+  headers:
+    - name: Accept
+      value: application/json
+  body:
+    type: text
+    data: ""
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+examples:
+  - name: panel sample download
+    request:
+      url: "{{base_url}}/user/organization/panels/download"
+      method: POST
+      headers:
+        - name: Accept
+          value: application/json
+      body:
+        type: text
+        data: ""
+    response:
+      status: 200
+      statusText: OK
+      headers:
+        - name: Server
+          value: nginx/1.24.0 (Ubuntu)
+        - name: Content-Type
+          value: text/csv; charset=UTF-8
+        - name: Transfer-Encoding
+          value: chunked
+        - name: Connection
+          value: keep-alive
+        - name: Content-Disposition
+          value: attachment; filename=panel_sample.csv
+        - name: Cache-Control
+          value: no-cache, private
+        - name: Date
+          value: Thu, 05 Mar 2026 08:37:41 GMT
+        - name: X-RateLimit-Limit
+          value: "60"
+        - name: X-RateLimit-Remaining
+          value: "59"
+        - name: Vary
+          value: Origin
+        - name: X-Frame-Options
+          value: SAMEORIGIN
+        - name: X-XSS-Protection
+          value: 1; mode=block
+        - name: X-Content-Type-Options
+          value: nosniff
+      body:
+        type: text
+        data: |
+          diagnostic_family,panel_name,gender,description,individual_diagnostic,test_preparation

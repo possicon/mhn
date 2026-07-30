@@ -1,0 +1,36 @@
+info:
+  name: Edit Role
+  type: http
+  seq: 13
+
+http:
+  method: PATCH
+  url: "{{base_url}}/admin/roles/:id"
+  headers:
+    - name: Accept
+      value: application/json
+    - name: Content-Type
+      value: application/x-www-form-urlencoded
+  params:
+    - name: id
+      value: "2"
+      type: path
+  body:
+    type: form-urlencoded
+    data:
+      - name: name
+        value: Owner
+      - name: guard_name
+        value: user
+      - name: group_name
+        value: Owner
+        disabled: true
+  auth:
+    type: bearer
+    token: "{{adminToken}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

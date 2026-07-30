@@ -1,0 +1,38 @@
+info:
+  name: Create licence
+  type: http
+  seq: 8
+
+http:
+  method: POST
+  url: "{{base_url}}/admin/licence/create"
+  body:
+    type: json
+    data: "{\r
+
+      \    \"name\": \"CAC Licence\",\r
+
+      \    \"purpose\": \"Business Registration\",\r
+
+      \    \"category\": \"Business\",\r
+
+      \    \"has_number\": true,\r
+
+      \    \"country_id\": \"9bb5e95c-833f-41b0-ac8e-2efb5bccfd55\",\r
+
+      \    \"number\": 10,\r
+
+      \    \"is_required\": true,\r
+
+      \    \"has_file\": true\r
+
+      }"
+  auth:
+    type: bearer
+    token: "{{token}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

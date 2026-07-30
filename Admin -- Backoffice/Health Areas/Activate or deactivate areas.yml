@@ -1,0 +1,24 @@
+info:
+  name: Activate or deactivate areas
+  type: http
+  seq: 4
+
+http:
+  method: POST
+  url: "{{base_url}}/admin/health-area/action"
+  body:
+    type: json
+    data: "{\r
+
+      \  \"action\":\"activate\",\r
+
+      \  \"ids\": [\"9b2cf4a9-9262-4ace-80f2-bef3d7d31499\",\"9b2cccd4-d01a-4106-9026-c81be71857b5\"]\r
+
+      }"
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

@@ -1,0 +1,168 @@
+info:
+  name: Licences
+  type: http
+  seq: 8
+
+http:
+  method: POST
+  url: "{{base_url}}/user/organization/onboarding/license"
+  headers:
+    - name: Accept
+      value: application/json
+  body:
+    type: multipart-form
+    data:
+      - name: licence_id
+        type: text
+        value: 9bca3307-0c0e-4251-9a7f-01ac0f380652
+      - name: business_reg_number
+        type: text
+        value: BV12940532422
+      - name: file[0]
+        type: file
+        value:
+          - 5oA73jH7j/image.jfif
+  auth:
+    type: bearer
+    token: 22|7jJ1COJNqxhApubITdsrbkwsBlvyS3xCNLdtOkWX9aa30b3a
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+examples:
+  - name: Onboarding Step 1 - Licences
+    request:
+      url: "{{base_url}}/user/organization/onboarding/license"
+      method: POST
+      headers:
+        - name: Accept
+          value: application/json
+      body:
+        type: multipart-form
+        data:
+          - name: licence_id
+            type: text
+            value: 9bca3307-0c0e-4251-9a7f-01ac0f380652
+          - name: business_reg_number
+            type: text
+            value: BV12940532422
+          - name: file[0]
+            type: file
+            value:
+              - Yz5XDBTSb/IMG-20231127-WA0007.jpg
+    response:
+      status: 200
+      statusText: OK
+      headers:
+        - name: Date
+          value: Fri, 12 Apr 2024 20:21:27 GMT
+        - name: Server
+          value: Apache/2.4.54 (Win64) OpenSSL/1.1.1q mod_fcgid/2.3.10-dev
+        - name: X-Powered-By
+          value: PHP/8.2.16
+        - name: Cache-Control
+          value: no-cache, private
+        - name: X-RateLimit-Limit
+          value: "60"
+        - name: X-RateLimit-Remaining
+          value: "58"
+        - name: Access-Control-Allow-Origin
+          value: "*"
+        - name: Vary
+          value: Authorization
+        - name: Keep-Alive
+          value: timeout=5, max=100
+        - name: Connection
+          value: Keep-Alive
+        - name: Transfer-Encoding
+          value: chunked
+        - name: Content-Type
+          value: application/json
+      body:
+        type: json
+        data: |-
+          {
+              "success": true,
+              "code": 0,
+              "locale": "en",
+              "message": "Licence uploaded successfully",
+              "data": {
+                  "org": {
+                      "id": "9bc5eb78-74d2-45f4-a677-05d07dca6a63",
+                      "name": "MHN",
+                      "domain": "pinnacles",
+                      "incoming_server": "https://google.com",
+                      "outgoing_server": "https://mhn.net",
+                      "email": "pinnacles@pinnacle.com",
+                      "invited": false,
+                      "country_id": "9b9faee2-a19d-4d99-8756-2f4afcd8e79d",
+                      "organization_type_id": 1,
+                      "region_id": "9b9ecc53-4276-4e13-bda6-461083ecb376",
+                      "interested_plan_id": "9baa6a1f-a6ae-4a64-9330-aff8996c87f7",
+                      "plan_id": null,
+                      "description": null,
+                      "landmark": null,
+                      "status": "Org Onboarded",
+                      "step": "1",
+                      "active": true,
+                      "address": "Glover road, Ikoyi",
+                      "phone": "12345678",
+                      "state_id": "9ba01c32-4a17-4952-8f15-b4a212027e04",
+                      "city_id": "9ba1338d-f1ca-487b-ae34-471ddc6a7bc2",
+                      "grade_id": 1,
+                      "token": null,
+                      "token_time": null,
+                      "organization_licenses": [
+                          {
+                              "id": "9bcacd3a-80bf-4c56-a383-b7c9bea97bc3",
+                              "number": "BV12940532422",
+                              "file": null,
+                              "licence_id": "9bca3307-0c0e-4251-9a7f-01ac0f380652",
+                              "organization_id": "9bc5eb78-74d2-45f4-a677-05d07dca6a63",
+                              "created_at": "2024-04-12T20:21:28.000000Z",
+                              "updated_at": "2024-04-12T20:21:28.000000Z",
+                              "licence": {
+                                  "id": "9bca3307-0c0e-4251-9a7f-01ac0f380652",
+                                  "name": "CAC Licence",
+                                  "country_id": "9b9faee2-a096-437f-8597-f31142b0bd51",
+                                  "category": "Business",
+                                  "purpose": "Business Registration",
+                                  "has_number": true,
+                                  "is_required": true,
+                                  "has_file": true,
+                                  "number": "10",
+                                  "description": null,
+                                  "active": true,
+                                  "media": [
+                                      {
+                                          "id": 53,
+                                          "uuid": "8813f2ca-27bf-4be3-8b65-eae0e8652282",
+                                          "model_type": "App\\Models\\V1\\Admin\\Licence",
+                                          "model_id": "9bca3307-0c0e-4251-9a7f-01ac0f380652",
+                                          "collection_name": "license",
+                                          "name": "IMG-20231127-WA0007",
+                                          "file_name": "IMG-20231127-WA0007.jpg",
+                                          "mime_type": "image/jpeg",
+                                          "disk": "public",
+                                          "conversions_disk": "public",
+                                          "size": 45808,
+                                          "manipulations": [],
+                                          "custom_properties": [],
+                                          "generated_conversions": [],
+                                          "responsive_images": [],
+                                          "order_column": 1,
+                                          "created_at": "2024-04-12T20:21:28.000000Z",
+                                          "updated_at": "2024-04-12T20:21:28.000000Z",
+                                          "original_url": "http://mhn.test/storage/53/IMG-20231127-WA0007.jpg",
+                                          "preview_url": ""
+                                      }
+                                  ]
+                              }
+                          }
+                      ]
+                  }
+              }
+          }

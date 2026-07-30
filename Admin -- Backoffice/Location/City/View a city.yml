@@ -1,0 +1,78 @@
+info:
+  name: View a city
+  type: http
+  seq: 5
+
+http:
+  method: GET
+  url: "{{base_url}}/admin/city/:cityId"
+  params:
+    - name: cityId
+      value: 9b9c6434-d21e-4081-92e0-fcc999d8dc7e
+      type: path
+  auth:
+    type: bearer
+    token: 3|UsNNxyjjD0VjtK9h3hFoM88kl1e8zCW2gbD5JGQa49f54573
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+examples:
+  - name: View a city
+    request:
+      url: "{{base_url}}/admin/city/:cityId"
+      method: GET
+      params:
+        - name: cityId
+          value: 9b9c6434-d21e-4081-92e0-fcc999d8dc7e
+          type: path
+    response:
+      status: 200
+      statusText: OK
+      headers:
+        - name: Date
+          value: Wed, 20 Mar 2024 18:43:13 GMT
+        - name: Server
+          value: Apache/2.4.54 (Win64) OpenSSL/1.1.1q PHP/8.1.10
+        - name: Vary
+          value: Authorization
+        - name: X-Powered-By
+          value: PHP/8.1.10
+        - name: Cache-Control
+          value: no-cache, private
+        - name: X-RateLimit-Limit
+          value: "60"
+        - name: X-RateLimit-Remaining
+          value: "59"
+        - name: Access-Control-Allow-Origin
+          value: "*"
+        - name: Keep-Alive
+          value: timeout=5, max=100
+        - name: Connection
+          value: Keep-Alive
+        - name: Transfer-Encoding
+          value: chunked
+        - name: Content-Type
+          value: application/json
+      body:
+        type: json
+        data: |-
+          {
+              "success": true,
+              "code": 0,
+              "locale": "en",
+              "message": "Fetched city successfully",
+              "data": {
+                  "country": {
+                      "id": "9b9c6434-d21e-4081-92e0-fcc999d8dc7e",
+                      "name": "Ikoyi",
+                      "state_id": "9b9c4ee1-2351-423b-acf4-1b87888be46d",
+                      "active": true,
+                      "created_at": "2024-03-20T18:39:43.000000Z",
+                      "updated_at": "2024-03-20T18:39:43.000000Z"
+                  }
+              }
+          }

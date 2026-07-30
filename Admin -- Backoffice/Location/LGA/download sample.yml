@@ -1,0 +1,25 @@
+info:
+  name: download sample
+  type: http
+  seq: 9
+
+http:
+  method: POST
+  url: "{{base_url}}/admin/lga/sample"
+  headers:
+    - name: Accept
+      value: multipart/form-data
+  body:
+    type: multipart-form
+    data:
+      - name: file
+        type: file
+        value:
+          - /C:/Users/MY PC/Downloads/cities - Copy.csv
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

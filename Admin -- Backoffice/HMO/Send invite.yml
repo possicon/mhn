@@ -1,0 +1,67 @@
+info:
+  name: Send invite
+  type: http
+  seq: 10
+
+http:
+  method: POST
+  url: "{{base_url}}/admin/hmo/send-invite/:hmo"
+  params:
+    - name: hmo
+      value: 9bbbac52-edd1-4aa7-8254-c29c14fa6249
+      type: path
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+examples:
+  - name: Send invite
+    request:
+      url: "{{base_url}}/admin/hmo/send-invite/:hmo"
+      method: POST
+      params:
+        - name: hmo
+          value: 9bbbac52-edd1-4aa7-8254-c29c14fa6249
+          type: path
+    response:
+      status: 200
+      statusText: OK
+      headers:
+        - name: Date
+          value: Fri, 05 Apr 2024 13:45:03 GMT
+        - name: Server
+          value: Apache/2.4.54 (Win64) OpenSSL/1.1.1q mod_fcgid/2.3.10-dev
+        - name: X-Powered-By
+          value: PHP/8.2.16
+        - name: Cache-Control
+          value: no-cache, private
+        - name: X-RateLimit-Limit
+          value: "60"
+        - name: X-RateLimit-Remaining
+          value: "58"
+        - name: Access-Control-Allow-Origin
+          value: "*"
+        - name: Vary
+          value: Authorization
+        - name: Keep-Alive
+          value: timeout=5, max=100
+        - name: Connection
+          value: Keep-Alive
+        - name: Transfer-Encoding
+          value: chunked
+        - name: Content-Type
+          value: application/json
+      body:
+        type: json
+        data: |-
+          {
+              "success": true,
+              "code": 0,
+              "locale": "en",
+              "message": "Activation email sent.",
+              "data": null
+          }

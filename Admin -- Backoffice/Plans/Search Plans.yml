@@ -1,0 +1,108 @@
+info:
+  name: Search Plans
+  type: http
+  seq: 10
+
+http:
+  method: POST
+  url: "{{base_url}}/admin/plan/search"
+  body:
+    type: json
+    data: "{\r
+
+      \    \"name\":\"plan\",\r
+
+      \    \"skip\":0,\r
+
+      \    \"take\":50\r
+
+      }"
+  auth: inherit
+
+runtime:
+  scripts:
+    - type: after-response
+      code: |-
+        test("Successfully searched plans", function () {
+            expect(res.getStatus()).to.be.oneOf([200, 201]);
+        });
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+examples:
+  - name: Search Plans
+    request:
+      url: "{{base_url}}/admin/plan/search"
+      method: POST
+      body:
+        type: json
+        data: "{\r
+
+          \    \"name\":\"plan\",\r
+
+          \    \"skip\":0,\r
+
+          \    \"take\":50\r
+
+          }"
+    response:
+      status: 200
+      statusText: OK
+      headers:
+        - name: Date
+          value: Mon, 25 Mar 2024 17:48:43 GMT
+        - name: Server
+          value: Apache/2.4.54 (Win64) OpenSSL/1.1.1q mod_fcgid/2.3.10-dev
+        - name: X-Powered-By
+          value: PHP/8.2.16
+        - name: Cache-Control
+          value: no-cache, private
+        - name: X-RateLimit-Limit
+          value: "60"
+        - name: X-RateLimit-Remaining
+          value: "59"
+        - name: Access-Control-Allow-Origin
+          value: "*"
+        - name: Vary
+          value: Authorization
+        - name: Keep-Alive
+          value: timeout=5, max=100
+        - name: Connection
+          value: Keep-Alive
+        - name: Transfer-Encoding
+          value: chunked
+        - name: Content-Type
+          value: application/json
+      body:
+        type: json
+        data: |-
+          {
+              "success": true,
+              "code": 0,
+              "locale": "en",
+              "message": "Plan assigned successfully.",
+              "data": {
+                  "data": [
+                      {
+                          "name": "Plan Name",
+                          "countries": 6,
+                          "organization_type": "Pharmacy",
+                          "type": "Temporary",
+                          "active": false
+                      },
+                      {
+                          "name": "3rd Test plan",
+                          "countries": 0,
+                          "organization_type": "Pharmacy",
+                          "type": "Temporary",
+                          "active": true
+                      }
+                  ],
+                  "total_pages": 1,
+                  "current_page": 1
+              }
+          }

@@ -1,0 +1,99 @@
+info:
+  name: add 2
+  type: http
+  seq: 2
+
+http:
+  method: POST
+  url: "{{base_url}}/user/patient/xray"
+  headers:
+    - name: Accept
+      value: application/json
+  body:
+    type: json
+    data: "{\r
+
+      \    \"patient_id\":\"9c7adca5-7205-43b4-b60d-04ebb7769058\",\r
+
+      \    \"laboratory\":\"mhn network\",\r
+
+      \    \"appointment_id\":\"9e668d48-f4a9-4b98-aa9e-b30e582ee9af\",\r
+
+      \    \"note\":\"note\",\r
+
+      \    \"category\":\"X-rays\", //X-rays,Ultrasounds\r
+
+      \    \"tests\":\"9cfe8383-2614-48d1-b4e3-4740703f202e\"\r
+
+      }"
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+examples:
+  - name: add 2
+    request:
+      url: "{{base_url}}/user/patient/xray"
+      method: POST
+      headers:
+        - name: Accept
+          value: application/json
+      body:
+        type: json
+        data: "{\r
+
+          \    \"patient_id\":\"9c111152-abe1-4490-ab04-c066445133a7\",\r
+
+          \    \"laboratory\":\"mhn network\",\r
+
+          \    \"appointment_id\":\"9d166f7e-2b46-492e-ae7b-58390a55e7d0\",\r
+
+          \    \"note\":\"note\",\r
+
+          \    \"category\":\"X-rays\", //X-rays,Ultrasounds\r
+
+          \    \"tests\":\"9cfe8383-2614-48d1-b4e3-4740703f202e\"\r
+
+          }"
+    response:
+      status: 201
+      statusText: Created
+      headers:
+        - name: Date
+          value: Mon, 04 Nov 2024 15:46:23 GMT
+        - name: Server
+          value: Apache/2.4.54 (Win64) OpenSSL/1.1.1q mod_fcgid/2.3.10-dev
+        - name: X-Powered-By
+          value: PHP/8.2.16
+        - name: Cache-Control
+          value: no-cache, private
+        - name: X-RateLimit-Limit
+          value: "60"
+        - name: X-RateLimit-Remaining
+          value: "58"
+        - name: Access-Control-Allow-Origin
+          value: "*"
+        - name: Vary
+          value: Authorization
+        - name: Keep-Alive
+          value: timeout=5, max=100
+        - name: Connection
+          value: Keep-Alive
+        - name: Transfer-Encoding
+          value: chunked
+        - name: Content-Type
+          value: application/json
+      body:
+        type: json
+        data: |-
+          {
+              "success": true,
+              "code": 0,
+              "locale": "en",
+              "message": "You have successfully added xray",
+              "data": null
+          }

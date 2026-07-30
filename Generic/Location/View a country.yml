@@ -1,0 +1,87 @@
+info:
+  name: View a country
+  type: http
+  seq: 7
+
+http:
+  method: GET
+  url: "{{base_url}}/generic/country/:id"
+  headers:
+    - name: Content-Type
+      value: application/vnd.api+json
+    - name: ""
+      value: ""
+      disabled: true
+  params:
+    - name: id
+      value: 9b904668-f08d-4456-a91b-3eaf17410e1b
+      type: path
+  auth:
+    type: bearer
+    token: "{{token}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+examples:
+  - name: View a country
+    request:
+      url: "{{base_url}}/admin/country/:coutryId"
+      method: GET
+      params:
+        - name: coutryId
+          value: 9b9c15cf-b38d-42d3-9399-d1712cb8f7d1
+          type: path
+    response:
+      status: 200
+      statusText: OK
+      headers:
+        - name: Date
+          value: Wed, 20 Mar 2024 16:44:36 GMT
+        - name: Server
+          value: Apache/2.4.54 (Win64) OpenSSL/1.1.1q PHP/8.1.10
+        - name: Vary
+          value: Authorization
+        - name: X-Powered-By
+          value: PHP/8.1.10
+        - name: Cache-Control
+          value: no-cache, private
+        - name: X-RateLimit-Limit
+          value: "60"
+        - name: X-RateLimit-Remaining
+          value: "58"
+        - name: Access-Control-Allow-Origin
+          value: "*"
+        - name: Keep-Alive
+          value: timeout=5, max=100
+        - name: Connection
+          value: Keep-Alive
+        - name: Transfer-Encoding
+          value: chunked
+        - name: Content-Type
+          value: application/json
+      body:
+        type: json
+        data: |-
+          {
+              "success": true,
+              "code": 0,
+              "locale": "en",
+              "message": "Fetched country successfully",
+              "data": {
+                  "country": {
+                      "id": "9b9c15cf-b38d-42d3-9399-d1712cb8f7d1",
+                      "name": "Najia",
+                      "region_id": "1a1a1a1a-1a1a-1a1a-1a1a-1a1a1a1a1a11",
+                      "flag": "https://www.countryflags.com/wp-content/uploads/nigeria-flag-png-large.png",
+                      "active": true,
+                      "code": null,
+                      "currency": "₦",
+                      "created_at": "2024-03-20T15:00:31.000000Z",
+                      "updated_at": "2024-03-20T16:40:34.000000Z"
+                  }
+              }
+          }

@@ -1,0 +1,642 @@
+info:
+  name: List
+  type: http
+  seq: 3
+
+http:
+  method: GET
+  url: "{{base_url}}/user/patients/:id/treatment_intervention?filter=refer only"
+  headers:
+    - name: Accept
+      value: application/json
+  params:
+    - name: search
+      value: refer only
+      type: query
+      disabled: true
+    - name: filter
+      value: refer only
+      type: query
+    - name: id
+      value: 9ea8d8a4-2cdd-4e08-baaf-a2d7048f8a32
+      type: path
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+examples:
+  - name: List
+    request:
+      url: "{{base_url}}/user/patients/:id/treatment_intervention?filter=refer only"
+      method: GET
+      headers:
+        - name: Accept
+          value: application/json
+      params:
+        - name: search
+          value: refer only
+          type: query
+          disabled: true
+        - name: filter
+          value: refer only
+          type: query
+        - name: id
+          value: 9ea8d8a4-2cdd-4e08-baaf-a2d7048f8a32
+          type: path
+    response:
+      status: 200
+      statusText: OK
+      headers:
+        - name: Date
+          value: Mon, 05 May 2025 12:08:58 GMT
+        - name: Server
+          value: Apache/2.4.54 (Win64) OpenSSL/1.1.1d mod_fcgid/2.3.10-dev
+        - name: X-Powered-By
+          value: PHP/8.2.17
+        - name: Cache-Control
+          value: no-cache, private
+        - name: X-RateLimit-Limit
+          value: "60"
+        - name: X-RateLimit-Remaining
+          value: "59"
+        - name: Access-Control-Allow-Origin
+          value: "*"
+        - name: Vary
+          value: Authorization
+        - name: Keep-Alive
+          value: timeout=5, max=100
+        - name: Connection
+          value: Keep-Alive
+        - name: Transfer-Encoding
+          value: chunked
+        - name: Content-Type
+          value: application/json
+      body:
+        type: json
+        data: |-
+          {
+              "success": true,
+              "code": 0,
+              "locale": "en",
+              "message": "success",
+              "data": {
+                  "page": 1,
+                  "total": 7,
+                  "data": [
+                      {
+                          "id": "9ed1422d-abfa-454c-b684-aa183f0881c7",
+                          "patient_id": "9ea8d8a4-2cdd-4e08-baaf-a2d7048f8a32",
+                          "visit_date": "2025-05-02 00:00:00",
+                          "treatment_plan": "treatment and refer",
+                          "refer_to": null,
+                          "procedures": null,
+                          "programs": null,
+                          "admission": 1,
+                          "prescription": null,
+                          "followup": null,
+                          "prenatal_care": null,
+                          "hospital_id": null,
+                          "reasons_for_refer": null,
+                          "additional_note": null,
+                          "trimester": null,
+                          "number_of_examination": null,
+                          "prenatal_care_frequency": null,
+                          "prenatal_care_note": null,
+                          "followup_occurrence": null,
+                          "followup_note": null,
+                          "followup_start_date": null,
+                          "followup_end_date": null,
+                          "followup_time": null,
+                          "followup_doctor_id": null,
+                          "repeat_followup": 0,
+                          "prescription_ids": null,
+                          "instruction_for_wards": "instruction_for_wards",
+                          "program_id": null,
+                          "procedure_id": null,
+                          "requested_by": {
+                              "id": "9bc6382c-bb73-4c7d-9409-677fe560485d",
+                              "first_name": "General",
+                              "middle_name": "Prince",
+                              "last_name": "Emmanuel",
+                              "gender": "male",
+                              "status": "Active",
+                              "phone": "0802323232323",
+                              "email": "contactus@mhn.ng",
+                              "username": null,
+                              "email_verified_at": null,
+                              "type": "owner",
+                              "country_id": "9b9faee3-6aaa-4050-bd6c-98a43e674250",
+                              "branch_id": null,
+                              "organization_id": "9bc5eb78-74d2-45f4-a677-05d07dca6a63",
+                              "company_id": null,
+                              "reset_token": null,
+                              "token_time": null,
+                              "created_at": "2024-04-10T12:41:22.000000Z",
+                              "updated_at": "2024-04-11T18:11:50.000000Z",
+                              "deleted_at": null,
+                              "country_call_code": null
+                          },
+                          "created_at": "2025-05-02T19:59:16.000000Z",
+                          "updated_at": "2025-05-02T20:55:45.000000Z",
+                          "admission_status": "admitted",
+                          "discharge_date": null,
+                          "appointment_id": "9eb91989-9ad5-43bd-980a-d9318b4649c8",
+                          "admission_date": "2025-05-02 00:00:00",
+                          "billId": null,
+                          "ward": "9ec6b535-2386-4918-9043-8c24faf4278e",
+                          "room": "9ed14332-68b3-4100-b63a-5ab9f83aa176",
+                          "bed_number": "9ed15641-c3d4-43e3-89d2-6a1f139f1f24",
+                          "bed_changed": 1,
+                          "bed_changed_at": "2025-05-02 21:55:45",
+                          "bed": {
+                              "id": "9ed15641-c3d4-43e3-89d2-6a1f139f1f24",
+                              "description": "this is not compuslory",
+                              "status": "available",
+                              "created_at": "2025-05-02T20:55:25.000000Z",
+                              "updated_at": "2025-05-02T21:06:36.000000Z",
+                              "organization_id": "9bc5eb78-74d2-45f4-a677-05d07dca6a63",
+                              "room_id": "9ed14332-68b3-4100-b63a-5ab9f83aa176",
+                              "service_item_id": "9ed15641-c019-4a71-9868-52a4bfadc3a7",
+                              "ward": {
+                                  "id": "9ec6b535-2386-4918-9043-8c24faf4278e",
+                                  "name": "private",
+                                  "description": "ward with private rooms",
+                                  "created_at": "2025-04-27T14:06:48.000000Z",
+                                  "updated_at": "2025-04-27T14:06:48.000000Z",
+                                  "organization_id": "9bc5eb78-74d2-45f4-a677-05d07dca6a63",
+                                  "laravel_through_key": "9ed14332-68b3-4100-b63a-5ab9f83aa176"
+                              },
+                              "room": {
+                                  "id": "9ed14332-68b3-4100-b63a-5ab9f83aa176",
+                                  "name": "P&C",
+                                  "type": "private",
+                                  "description": "room description",
+                                  "created_at": "2025-05-02T20:02:07.000000Z",
+                                  "updated_at": "2025-05-02T20:02:07.000000Z",
+                                  "ward_id": "9ec6b535-2386-4918-9043-8c24faf4278e",
+                                  "organization_id": "9bc5eb78-74d2-45f4-a677-05d07dca6a63"
+                              },
+                              "service_item": {
+                                  "id": "9ed15641-c019-4a71-9868-52a4bfadc3a7",
+                                  "name": "2CP",
+                                  "service_type": "bed",
+                                  "created_at": "2025-05-02T20:55:25.000000Z",
+                                  "updated_at": "2025-05-02T20:55:25.000000Z",
+                                  "organization_id": "9bc5eb78-74d2-45f4-a677-05d07dca6a63",
+                                  "description": "this is not compuslory",
+                                  "category": "ward",
+                                  "status": "active",
+                                  "medicine_type": null
+                              }
+                          }
+                      },
+                      {
+                          "id": "9ecb1a21-f60f-4099-9fbc-765f514feae5",
+                          "patient_id": "9ea8d8a4-2cdd-4e08-baaf-a2d7048f8a32",
+                          "visit_date": "2025-04-29 00:00:00",
+                          "treatment_plan": "treatment and refer",
+                          "refer_to": null,
+                          "procedures": null,
+                          "programs": null,
+                          "admission": 1,
+                          "prescription": null,
+                          "followup": null,
+                          "prenatal_care": null,
+                          "hospital_id": null,
+                          "reasons_for_refer": null,
+                          "additional_note": null,
+                          "trimester": null,
+                          "number_of_examination": null,
+                          "prenatal_care_frequency": null,
+                          "prenatal_care_note": null,
+                          "followup_occurrence": null,
+                          "followup_note": null,
+                          "followup_start_date": null,
+                          "followup_end_date": null,
+                          "followup_time": null,
+                          "followup_doctor_id": null,
+                          "repeat_followup": 0,
+                          "prescription_ids": null,
+                          "instruction_for_wards": "instruction_for_wards",
+                          "program_id": null,
+                          "procedure_id": null,
+                          "requested_by": {
+                              "id": "9bc6382c-bb73-4c7d-9409-677fe560485d",
+                              "first_name": "General",
+                              "middle_name": "Prince",
+                              "last_name": "Emmanuel",
+                              "gender": "male",
+                              "status": "Active",
+                              "phone": "0802323232323",
+                              "email": "contactus@mhn.ng",
+                              "username": null,
+                              "email_verified_at": null,
+                              "type": "owner",
+                              "country_id": "9b9faee3-6aaa-4050-bd6c-98a43e674250",
+                              "branch_id": null,
+                              "organization_id": "9bc5eb78-74d2-45f4-a677-05d07dca6a63",
+                              "company_id": null,
+                              "reset_token": null,
+                              "token_time": null,
+                              "created_at": "2024-04-10T12:41:22.000000Z",
+                              "updated_at": "2024-04-11T18:11:50.000000Z",
+                              "deleted_at": null,
+                              "country_call_code": null
+                          },
+                          "created_at": "2025-04-29T18:32:19.000000Z",
+                          "updated_at": "2025-04-30T03:08:17.000000Z",
+                          "admission_status": "awaiting admission",
+                          "discharge_date": "2025-04-30 04:08:15",
+                          "appointment_id": "9eb75d01-ce8e-4f5f-ba1c-d9ed53942c69",
+                          "admission_date": "2025-04-29 00:00:00",
+                          "billId": "9ecbd2a8-1d41-495b-a2b3-49791ab65e13",
+                          "ward": "9ec6b535-2386-4918-9043-8c24faf4278e",
+                          "room": "9ec6ba34-ed06-44ca-8bed-3ac00cf304ae",
+                          "bed_number": "9ec83fef-0311-422b-b257-4d84e71d85d7",
+                          "bed_changed": 0,
+                          "bed_changed_at": null,
+                          "bed": {
+                              "id": "9ec83fef-0311-422b-b257-4d84e71d85d7",
+                              "description": "this is not compuslory",
+                              "status": "occupied",
+                              "created_at": "2025-04-28T08:30:32.000000Z",
+                              "updated_at": "2025-05-02T19:59:16.000000Z",
+                              "organization_id": "9bc5eb78-74d2-45f4-a677-05d07dca6a63",
+                              "room_id": "9ec6ba34-ed06-44ca-8bed-3ac00cf304ae",
+                              "service_item_id": "9ec83fee-fd79-4752-94a3-0c5f331d6d62",
+                              "ward": {
+                                  "id": "9ec6b535-2386-4918-9043-8c24faf4278e",
+                                  "name": "private",
+                                  "description": "ward with private rooms",
+                                  "created_at": "2025-04-27T14:06:48.000000Z",
+                                  "updated_at": "2025-04-27T14:06:48.000000Z",
+                                  "organization_id": "9bc5eb78-74d2-45f4-a677-05d07dca6a63",
+                                  "laravel_through_key": "9ec6ba34-ed06-44ca-8bed-3ac00cf304ae"
+                              },
+                              "room": {
+                                  "id": "9ec6ba34-ed06-44ca-8bed-3ac00cf304ae",
+                                  "name": "iuc",
+                                  "type": "private",
+                                  "description": "room description",
+                                  "created_at": "2025-04-27T14:20:47.000000Z",
+                                  "updated_at": "2025-04-27T14:20:47.000000Z",
+                                  "ward_id": "9ec6b535-2386-4918-9043-8c24faf4278e",
+                                  "organization_id": "9bc5eb78-74d2-45f4-a677-05d07dca6a63"
+                              },
+                              "service_item": {
+                                  "id": "9ec83fee-fd79-4752-94a3-0c5f331d6d62",
+                                  "name": "2A",
+                                  "service_type": "bed",
+                                  "created_at": "2025-04-28T08:30:32.000000Z",
+                                  "updated_at": "2025-04-28T08:30:32.000000Z",
+                                  "organization_id": "9bc5eb78-74d2-45f4-a677-05d07dca6a63",
+                                  "description": "this is not compuslory",
+                                  "category": "ward",
+                                  "status": "active",
+                                  "medicine_type": null
+                              }
+                          }
+                      },
+                      {
+                          "id": "9ecb17f5-9dde-4d46-b0f7-b81d11c00bd8",
+                          "patient_id": "9ea8d8a4-2cdd-4e08-baaf-a2d7048f8a32",
+                          "visit_date": "2025-04-29 00:00:00",
+                          "treatment_plan": "treatment and refer",
+                          "refer_to": null,
+                          "procedures": 1,
+                          "programs": null,
+                          "admission": null,
+                          "prescription": null,
+                          "followup": null,
+                          "prenatal_care": null,
+                          "hospital_id": null,
+                          "reasons_for_refer": null,
+                          "additional_note": null,
+                          "trimester": null,
+                          "number_of_examination": null,
+                          "prenatal_care_frequency": null,
+                          "prenatal_care_note": null,
+                          "followup_occurrence": null,
+                          "followup_note": null,
+                          "followup_start_date": null,
+                          "followup_end_date": null,
+                          "followup_time": null,
+                          "followup_doctor_id": null,
+                          "repeat_followup": 0,
+                          "prescription_ids": null,
+                          "instruction_for_wards": null,
+                          "program_id": null,
+                          "procedure_id": "9ecb17f5-9b49-406b-8dd7-f7aa2a0b72d9",
+                          "requested_by": {
+                              "id": "9bc6382c-bb73-4c7d-9409-677fe560485d",
+                              "first_name": "General",
+                              "middle_name": "Prince",
+                              "last_name": "Emmanuel",
+                              "gender": "male",
+                              "status": "Active",
+                              "phone": "0802323232323",
+                              "email": "contactus@mhn.ng",
+                              "username": null,
+                              "email_verified_at": null,
+                              "type": "owner",
+                              "country_id": "9b9faee3-6aaa-4050-bd6c-98a43e674250",
+                              "branch_id": null,
+                              "organization_id": "9bc5eb78-74d2-45f4-a677-05d07dca6a63",
+                              "company_id": null,
+                              "reset_token": null,
+                              "token_time": null,
+                              "created_at": "2024-04-10T12:41:22.000000Z",
+                              "updated_at": "2024-04-11T18:11:50.000000Z",
+                              "deleted_at": null,
+                              "country_call_code": null
+                          },
+                          "created_at": "2025-04-29T18:26:15.000000Z",
+                          "updated_at": "2025-04-29T18:26:15.000000Z",
+                          "admission_status": "awaiting admission",
+                          "discharge_date": null,
+                          "appointment_id": "9eb75d01-ce8e-4f5f-ba1c-d9ed53942c69",
+                          "admission_date": null,
+                          "billId": null,
+                          "ward": null,
+                          "room": null,
+                          "bed_number": null,
+                          "bed_changed": 0,
+                          "bed_changed_at": null,
+                          "bed": null
+                      },
+                      {
+                          "id": "9eca32f7-80ef-424d-bfc0-e857937e4168",
+                          "patient_id": "9ea8d8a4-2cdd-4e08-baaf-a2d7048f8a32",
+                          "visit_date": "2025-04-29 00:00:00",
+                          "treatment_plan": "treatment and refer",
+                          "refer_to": null,
+                          "procedures": 1,
+                          "programs": null,
+                          "admission": null,
+                          "prescription": null,
+                          "followup": null,
+                          "prenatal_care": null,
+                          "hospital_id": null,
+                          "reasons_for_refer": null,
+                          "additional_note": null,
+                          "trimester": null,
+                          "number_of_examination": null,
+                          "prenatal_care_frequency": null,
+                          "prenatal_care_note": null,
+                          "followup_occurrence": null,
+                          "followup_note": null,
+                          "followup_start_date": null,
+                          "followup_end_date": null,
+                          "followup_time": null,
+                          "followup_doctor_id": null,
+                          "repeat_followup": 0,
+                          "prescription_ids": null,
+                          "instruction_for_wards": null,
+                          "program_id": null,
+                          "procedure_id": "9eca32f7-7e54-4cfa-93f3-52c3ad891f12",
+                          "requested_by": {
+                              "id": "9bc6382c-bb73-4c7d-9409-677fe560485d",
+                              "first_name": "General",
+                              "middle_name": "Prince",
+                              "last_name": "Emmanuel",
+                              "gender": "male",
+                              "status": "Active",
+                              "phone": "0802323232323",
+                              "email": "contactus@mhn.ng",
+                              "username": null,
+                              "email_verified_at": null,
+                              "type": "owner",
+                              "country_id": "9b9faee3-6aaa-4050-bd6c-98a43e674250",
+                              "branch_id": null,
+                              "organization_id": "9bc5eb78-74d2-45f4-a677-05d07dca6a63",
+                              "company_id": null,
+                              "reset_token": null,
+                              "token_time": null,
+                              "created_at": "2024-04-10T12:41:22.000000Z",
+                              "updated_at": "2024-04-11T18:11:50.000000Z",
+                              "deleted_at": null,
+                              "country_call_code": null
+                          },
+                          "created_at": "2025-04-29T07:45:56.000000Z",
+                          "updated_at": "2025-04-29T07:45:56.000000Z",
+                          "admission_status": "awaiting admission",
+                          "discharge_date": null,
+                          "appointment_id": "9eb75d01-ce8e-4f5f-ba1c-d9ed53942c69",
+                          "admission_date": null,
+                          "billId": null,
+                          "ward": null,
+                          "room": null,
+                          "bed_number": null,
+                          "bed_changed": 0,
+                          "bed_changed_at": null,
+                          "bed": null
+                      },
+                      {
+                          "id": "9eae19f2-22e9-4af0-bc8b-ffe1f8fdf0da",
+                          "patient_id": "9ea8d8a4-2cdd-4e08-baaf-a2d7048f8a32",
+                          "visit_date": "2025-04-15 00:00:00",
+                          "treatment_plan": "treatment and refer",
+                          "refer_to": null,
+                          "procedures": null,
+                          "programs": null,
+                          "admission": 1,
+                          "prescription": null,
+                          "followup": null,
+                          "prenatal_care": null,
+                          "hospital_id": null,
+                          "reasons_for_refer": null,
+                          "additional_note": null,
+                          "trimester": null,
+                          "number_of_examination": null,
+                          "prenatal_care_frequency": null,
+                          "prenatal_care_note": null,
+                          "followup_occurrence": null,
+                          "followup_note": null,
+                          "followup_start_date": null,
+                          "followup_end_date": null,
+                          "followup_time": null,
+                          "followup_doctor_id": null,
+                          "repeat_followup": 0,
+                          "prescription_ids": null,
+                          "instruction_for_wards": "instruction_for_wards",
+                          "program_id": null,
+                          "procedure_id": null,
+                          "requested_by": {
+                              "id": "9bc6382c-bb73-4c7d-9409-677fe560485d",
+                              "first_name": "General",
+                              "middle_name": "Prince",
+                              "last_name": "Emmanuel",
+                              "gender": "male",
+                              "status": "Active",
+                              "phone": "0802323232323",
+                              "email": "contactus@mhn.ng",
+                              "username": null,
+                              "email_verified_at": null,
+                              "type": "owner",
+                              "country_id": "9b9faee3-6aaa-4050-bd6c-98a43e674250",
+                              "branch_id": null,
+                              "organization_id": "9bc5eb78-74d2-45f4-a677-05d07dca6a63",
+                              "company_id": null,
+                              "reset_token": null,
+                              "token_time": null,
+                              "created_at": "2024-04-10T12:41:22.000000Z",
+                              "updated_at": "2024-04-11T18:11:50.000000Z",
+                              "deleted_at": null,
+                              "country_call_code": null
+                          },
+                          "created_at": "2025-04-15T08:32:47.000000Z",
+                          "updated_at": "2025-04-15T08:52:32.000000Z",
+                          "admission_status": "discharged",
+                          "discharge_date": "2025-04-15 09:52:32",
+                          "appointment_id": "9e6e2d2d-9916-4b5a-abf1-3712c710402a",
+                          "admission_date": "2025-04-15 00:00:00",
+                          "billId": null,
+                          "ward": null,
+                          "room": null,
+                          "bed_number": null,
+                          "bed_changed": 0,
+                          "bed_changed_at": null,
+                          "bed": null
+                      },
+                      {
+                          "id": "9eae0de6-2ab1-4481-862a-c9e3a6e0fc1d",
+                          "patient_id": "9ea8d8a4-2cdd-4e08-baaf-a2d7048f8a32",
+                          "visit_date": "2025-04-15 00:00:00",
+                          "treatment_plan": "treatment and refer",
+                          "refer_to": null,
+                          "procedures": 1,
+                          "programs": null,
+                          "admission": null,
+                          "prescription": null,
+                          "followup": null,
+                          "prenatal_care": null,
+                          "hospital_id": null,
+                          "reasons_for_refer": null,
+                          "additional_note": null,
+                          "trimester": null,
+                          "number_of_examination": null,
+                          "prenatal_care_frequency": null,
+                          "prenatal_care_note": null,
+                          "followup_occurrence": null,
+                          "followup_note": null,
+                          "followup_start_date": null,
+                          "followup_end_date": null,
+                          "followup_time": null,
+                          "followup_doctor_id": null,
+                          "repeat_followup": 0,
+                          "prescription_ids": null,
+                          "instruction_for_wards": null,
+                          "program_id": null,
+                          "procedure_id": "9eae0de6-28b9-42b8-a688-96679e087dbd",
+                          "requested_by": {
+                              "id": "9bc6382c-bb73-4c7d-9409-677fe560485d",
+                              "first_name": "General",
+                              "middle_name": "Prince",
+                              "last_name": "Emmanuel",
+                              "gender": "male",
+                              "status": "Active",
+                              "phone": "0802323232323",
+                              "email": "contactus@mhn.ng",
+                              "username": null,
+                              "email_verified_at": null,
+                              "type": "owner",
+                              "country_id": "9b9faee3-6aaa-4050-bd6c-98a43e674250",
+                              "branch_id": null,
+                              "organization_id": "9bc5eb78-74d2-45f4-a677-05d07dca6a63",
+                              "company_id": null,
+                              "reset_token": null,
+                              "token_time": null,
+                              "created_at": "2024-04-10T12:41:22.000000Z",
+                              "updated_at": "2024-04-11T18:11:50.000000Z",
+                              "deleted_at": null,
+                              "country_call_code": null
+                          },
+                          "created_at": "2025-04-15T07:59:06.000000Z",
+                          "updated_at": "2025-04-15T07:59:06.000000Z",
+                          "admission_status": "awaiting admission",
+                          "discharge_date": null,
+                          "appointment_id": "9e6e2d2d-9916-4b5a-abf1-3712c710402a",
+                          "admission_date": null,
+                          "billId": null,
+                          "ward": null,
+                          "room": null,
+                          "bed_number": null,
+                          "bed_changed": 0,
+                          "bed_changed_at": null,
+                          "bed": null
+                      },
+                      {
+                          "id": "9eae0d88-6058-4709-ac22-217785f34a51",
+                          "patient_id": "9ea8d8a4-2cdd-4e08-baaf-a2d7048f8a32",
+                          "visit_date": "2025-04-15 00:00:00",
+                          "treatment_plan": "treatment and refer",
+                          "refer_to": null,
+                          "procedures": 1,
+                          "programs": null,
+                          "admission": null,
+                          "prescription": null,
+                          "followup": null,
+                          "prenatal_care": null,
+                          "hospital_id": null,
+                          "reasons_for_refer": null,
+                          "additional_note": null,
+                          "trimester": null,
+                          "number_of_examination": null,
+                          "prenatal_care_frequency": null,
+                          "prenatal_care_note": null,
+                          "followup_occurrence": null,
+                          "followup_note": null,
+                          "followup_start_date": null,
+                          "followup_end_date": null,
+                          "followup_time": null,
+                          "followup_doctor_id": null,
+                          "repeat_followup": 0,
+                          "prescription_ids": null,
+                          "instruction_for_wards": null,
+                          "program_id": null,
+                          "procedure_id": "9eae0d88-5ccb-41a5-a1ce-028d14e0e0b9",
+                          "requested_by": {
+                              "id": "9bc6382c-bb73-4c7d-9409-677fe560485d",
+                              "first_name": "General",
+                              "middle_name": "Prince",
+                              "last_name": "Emmanuel",
+                              "gender": "male",
+                              "status": "Active",
+                              "phone": "0802323232323",
+                              "email": "contactus@mhn.ng",
+                              "username": null,
+                              "email_verified_at": null,
+                              "type": "owner",
+                              "country_id": "9b9faee3-6aaa-4050-bd6c-98a43e674250",
+                              "branch_id": null,
+                              "organization_id": "9bc5eb78-74d2-45f4-a677-05d07dca6a63",
+                              "company_id": null,
+                              "reset_token": null,
+                              "token_time": null,
+                              "created_at": "2024-04-10T12:41:22.000000Z",
+                              "updated_at": "2024-04-11T18:11:50.000000Z",
+                              "deleted_at": null,
+                              "country_call_code": null
+                          },
+                          "created_at": "2025-04-15T07:58:05.000000Z",
+                          "updated_at": "2025-04-15T07:58:05.000000Z",
+                          "admission_status": "awaiting admission",
+                          "discharge_date": null,
+                          "appointment_id": "9e6e2d2d-9916-4b5a-abf1-3712c710402a",
+                          "admission_date": null,
+                          "billId": null,
+                          "ward": null,
+                          "room": null,
+                          "bed_number": null,
+                          "bed_changed": 0,
+                          "bed_changed_at": null,
+                          "bed": null
+                      }
+                  ],
+                  "take": 20
+              }
+          }

@@ -1,0 +1,139 @@
+info:
+  name: add
+  type: http
+  seq: 1
+
+http:
+  method: POST
+  url: "{{base_url}}/user/organization/diagnostic/individual"
+  headers:
+    - name: Accept
+      value: application/json
+  body:
+    type: json
+    data: "{\r
+
+      \    \"diagnostic_family\":[\"hematology\",\"biochemistry\"], //hematology,biochemistry,microbiology\r
+
+      \    \"test_name\":\"{{$randomWord}}\",\r
+
+      \    \"result_type\":\"number\", // number,normal/abnormal,positive/negative,file\r
+
+      \    \"minimum_range\":\"5\",\r
+
+      \    \"gender\":\"Male\",\r
+
+      \    \"description\":\"This is blood test require for body\",\r
+
+      \    \"maximum_range\":\"10\",\r
+
+      \    // \"sample\":\"9d7b170c-948d-49e1-bdcb-b0c47c4b5a93\",\r
+
+      \    // \"vial\":\"9d7b0ed0-493a-4c7a-84de-5e4e6698c464\",\r
+
+      \    \"unit\":\"0fe2ce85-1864-11f1-a29f-201e88722275\",\r
+
+      \    \"test_preparation\":\"test preparation\"\r
+
+      }"
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+examples:
+  - name: add
+    request:
+      url: "{{base_url}}/user/organization/diagnostic/individual"
+      method: POST
+      headers:
+        - name: Accept
+          value: application/json
+      body:
+        type: json
+        data: "{\r
+
+          \    \"diagnostic_family\":[\"hematology\",\"biochemistry\"], //hematology,biochemistry,microbiology\r
+
+          \    \"test_name\":\"{{$randomWord}}\",\r
+
+          \    \"result_type\":\"number\", // number,normal/abnormal,positive/negative,file\r
+
+          \    \"minimum_range\":\"5\",\r
+
+          \    \"gender\":\"Male\",\r
+
+          \    \"description\":\"This is blood test require for body\",\r
+
+          \    \"maximum_range\":\"10\",\r
+
+          \    // \"sample\":\"9d7b170c-948d-49e1-bdcb-b0c47c4b5a93\",\r
+
+          \    // \"vial\":\"9d7b0ed0-493a-4c7a-84de-5e4e6698c464\",\r
+
+          \    \"unit\":\"0fe2ce85-1864-11f1-a29f-201e88722275\",\r
+
+          \    \"test_preparation\":\"test preparation\"\r
+
+          }"
+    response:
+      status: 200
+      statusText: OK
+      headers:
+        - name: Server
+          value: nginx/1.24.0 (Ubuntu)
+        - name: Content-Type
+          value: application/json
+        - name: Transfer-Encoding
+          value: chunked
+        - name: Connection
+          value: keep-alive
+        - name: Cache-Control
+          value: no-cache, private
+        - name: Date
+          value: Tue, 16 Jun 2026 20:06:42 GMT
+        - name: X-RateLimit-Limit
+          value: "60"
+        - name: X-RateLimit-Remaining
+          value: "58"
+        - name: Vary
+          value: Origin
+        - name: X-Frame-Options
+          value: SAMEORIGIN
+        - name: X-XSS-Protection
+          value: 1; mode=block
+        - name: X-Content-Type-Options
+          value: nosniff
+      body:
+        type: json
+        data: |-
+          {
+              "success": true,
+              "code": 0,
+              "locale": "en",
+              "message": "success",
+              "data": {
+                  "item": {
+                      "test_name": "a20a0c55-308a-4b72-91fe-b248e952d68d",
+                      "gender": "Male",
+                      "description": "This is blood test require for body",
+                      "result_type": "number",
+                      "minimum_range": "5",
+                      "maximum_range": "10",
+                      "unit": "0fe2ce85-1864-11f1-a29f-201e88722275",
+                      "test_preparation": "test preparation",
+                      "diagnostic_family": [
+                          "hematology",
+                          "biochemistry"
+                      ],
+                      "organization_id": "a134be07-5a37-4059-b549-37210fe65250",
+                      "done_by_id": "a134bfd5-bb77-4c87-a0e0-ad7e2a793325",
+                      "id": "a20a0c55-3282-4193-902a-cb6c6389fc53",
+                      "updated_at": "2026-06-16T20:06:42.000000Z",
+                      "created_at": "2026-06-16T20:06:42.000000Z"
+                  }
+              }
+          }

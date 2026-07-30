@@ -1,0 +1,33 @@
+info:
+  name: Add Role
+  type: http
+  seq: 7
+
+http:
+  method: POST
+  url: "{{base_url}}/admin/roles"
+  headers:
+    - name: Accept
+      value: application/json
+    - name: Content-Type
+      value: application/x-www-form-urlencoded
+    - name: ""
+      value: ""
+      disabled: true
+  body:
+    type: form-urlencoded
+    data:
+      - name: name
+        value: Hospital Admin
+      - name: guard_name
+        value: user
+      - name: group_name
+        value: Hospital Admin
+        disabled: true
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

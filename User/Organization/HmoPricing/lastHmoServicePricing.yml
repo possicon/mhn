@@ -1,0 +1,174 @@
+info:
+  name: lastHmoServicePricing
+  type: http
+  seq: 14
+
+http:
+  method: POST
+  url: "{{base_url}}/user/organization/lastHmoServicePricing"
+  headers:
+    - name: Accept
+      value: application/json
+  body:
+    type: multipart-form
+    data:
+      - name: hmo_id
+        type: text
+        value: 9bbbac52-edd1-4aa7-8254-c29c14fa6249
+      - name: plan_name
+        type: text
+        value: gold
+  auth:
+    type: bearer
+    token: 78|IJJwsPNGwfjrHdMvXfMgKzfYaTOw56YXrF1VLHE8b494a4af
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+examples:
+  - name: lastHmoServicePricing
+    request:
+      url: "{{base_url}}/user/organization/lastHmoServicePricing"
+      method: POST
+      headers:
+        - name: Accept
+          value: application/json
+      body:
+        type: multipart-form
+        data:
+          - name: hmo_id
+            type: text
+            value: 9bbbac52-edd1-4aa7-8254-c29c14fa6249
+          - name: plan_name
+            type: text
+            value: diamond
+    response:
+      status: 200
+      statusText: OK
+      headers:
+        - name: Date
+          value: Tue, 17 Sep 2024 08:22:50 GMT
+        - name: Server
+          value: Apache/2.4.54 (Win64) OpenSSL/1.1.1q mod_fcgid/2.3.10-dev
+        - name: X-Powered-By
+          value: PHP/8.2.16
+        - name: Cache-Control
+          value: no-cache, private
+        - name: X-RateLimit-Limit
+          value: "60"
+        - name: X-RateLimit-Remaining
+          value: "58"
+        - name: Access-Control-Allow-Origin
+          value: "*"
+        - name: Vary
+          value: Authorization
+        - name: Keep-Alive
+          value: timeout=5, max=100
+        - name: Connection
+          value: Keep-Alive
+        - name: Transfer-Encoding
+          value: chunked
+        - name: Content-Type
+          value: application/json
+      body:
+        type: json
+        data: |-
+          {
+              "success": true,
+              "code": 0,
+              "locale": "en",
+              "message": "Success",
+              "data": {
+                  "data": [
+                      {
+                          "id": "9d07a3af-bc3f-4d1f-98c7-eab5676e98f5",
+                          "hmo_id": "9bbbac52-edd1-4aa7-8254-c29c14fa6249",
+                          "plan_name": "diamond",
+                          "organization_id": "9bc5eb78-74d2-45f4-a677-05d07dca6a63",
+                          "service_item_id": "9cfe8382-e00e-4771-8587-0af7056865cb",
+                          "created_at": "2024-09-17T08:22:45.000000Z",
+                          "updated_at": "2024-09-17T08:22:45.000000Z",
+                          "service_items": {
+                              "id": "9cfe8382-e00e-4771-8587-0af7056865cb",
+                              "name": "Health Screening",
+                              "service_type": "general",
+                              "created_at": "2024-09-12T19:30:20.000000Z",
+                              "updated_at": "2024-09-13T07:51:08.000000Z",
+                              "organization_id": null,
+                              "description": "dgdgd",
+                              "category": null,
+                              "status": "active"
+                          },
+                          "organization_service_items": {
+                              "id": "9cffb65a-b141-4099-bbe8-af1a0796222a",
+                              "service_item_id": "9cfe8382-e00e-4771-8587-0af7056865cb",
+                              "hmo_id": "9bbbac52-edd1-4aa7-8254-c29c14fa6249",
+                              "organization_id": "9bc5eb78-74d2-45f4-a677-05d07dca6a63",
+                              "care_type": "secondary care",
+                              "amount": "340.00",
+                              "status": "active",
+                              "created_at": "2024-09-13T09:48:19.000000Z",
+                              "updated_at": "2024-09-15T12:37:54.000000Z"
+                          },
+                          "latest_hmo_service_item_pricing_logs": null,
+                          "hmo_service_pricings": [
+                              {
+                                  "id": "9d07a3af-bf1b-44c2-94b9-51c0d7720862",
+                                  "hmo_service_id": "9d07a3af-bc3f-4d1f-98c7-eab5676e98f5",
+                                  "coverage_type": "partial",
+                                  "percent": "5.22",
+                                  "status": "active",
+                                  "created_at": "2024-09-17T08:22:45.000000Z",
+                                  "updated_at": "2024-09-17T08:22:45.000000Z"
+                              }
+                          ]
+                      },
+                      {
+                          "id": "9d07a3af-c83d-4f93-b926-22111384d388",
+                          "hmo_id": "9bbbac52-edd1-4aa7-8254-c29c14fa6249",
+                          "plan_name": "diamond",
+                          "organization_id": "9bc5eb78-74d2-45f4-a677-05d07dca6a63",
+                          "service_item_id": "9cfe8382-e184-41e9-9838-9a0b047b6b31",
+                          "created_at": "2024-09-17T08:22:45.000000Z",
+                          "updated_at": "2024-09-17T08:22:45.000000Z",
+                          "service_items": {
+                              "id": "9cfe8382-e184-41e9-9838-9a0b047b6b31",
+                              "name": "Annual Physical Exam",
+                              "service_type": "general",
+                              "created_at": "2024-09-12T19:30:20.000000Z",
+                              "updated_at": "2024-09-13T07:51:08.000000Z",
+                              "organization_id": null,
+                              "description": "dlgdgd",
+                              "category": null,
+                              "status": "active"
+                          },
+                          "organization_service_items": {
+                              "id": "9cffb65a-a31f-46a8-849e-a07593d660e9",
+                              "service_item_id": "9cfe8382-e184-41e9-9838-9a0b047b6b31",
+                              "hmo_id": "9bbbac52-edd1-4aa7-8254-c29c14fa6249",
+                              "organization_id": "9bc5eb78-74d2-45f4-a677-05d07dca6a63",
+                              "care_type": "primary care",
+                              "amount": "730.00",
+                              "status": "active",
+                              "created_at": "2024-09-13T09:48:19.000000Z",
+                              "updated_at": "2024-09-15T12:37:54.000000Z"
+                          },
+                          "latest_hmo_service_item_pricing_logs": null,
+                          "hmo_service_pricings": [
+                              {
+                                  "id": "9d07a3af-ca03-4b2e-939b-883b91745831",
+                                  "hmo_service_id": "9d07a3af-c83d-4f93-b926-22111384d388",
+                                  "coverage_type": "full",
+                                  "percent": "100.00",
+                                  "status": "active",
+                                  "created_at": "2024-09-17T08:22:45.000000Z",
+                                  "updated_at": "2024-09-17T08:22:45.000000Z"
+                              }
+                          ]
+                      }
+                  ]
+              }
+          }

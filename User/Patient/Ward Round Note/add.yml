@@ -1,0 +1,103 @@
+info:
+  name: add
+  type: http
+  seq: 1
+
+http:
+  method: POST
+  url: "{{base_url}}/user/wardRoundNote"
+  headers:
+    - name: Accept
+      value: application/json
+  body:
+    type: json
+    data: "{\r
+
+      \    \"patient_id\":\"9c22ec62-cfa4-476c-8921-a924a32f20d7\",\r
+
+      \    \"template\":\"SOAP\",\r
+
+      \    \"note\":\"assessment\"\r
+
+      }"
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+examples:
+  - name: add
+    request:
+      url: "{{base_url}}/user/wardRoundNote"
+      method: POST
+      headers:
+        - name: Accept
+          value: application/json
+      body:
+        type: json
+        data: "{\r
+
+          \    \"patient_id\":\"9c22ec62-cfa4-476c-8921-a924a32f20d7\",\r
+
+          \    \"template\":\"SOAP\",\r
+
+          \    \"note\":\"assessment\"\r
+
+          }"
+    response:
+      status: 201
+      statusText: Created
+      headers:
+        - name: Date
+          value: Thu, 20 Jun 2024 21:03:49 GMT
+        - name: Server
+          value: Apache/2.4.54 (Win64) OpenSSL/1.1.1q mod_fcgid/2.3.10-dev
+        - name: X-Powered-By
+          value: PHP/8.2.16
+        - name: Cache-Control
+          value: no-cache, private
+        - name: X-RateLimit-Limit
+          value: "60"
+        - name: X-RateLimit-Remaining
+          value: "58"
+        - name: Access-Control-Allow-Origin
+          value: "*"
+        - name: Vary
+          value: Authorization
+        - name: Keep-Alive
+          value: timeout=5, max=100
+        - name: Connection
+          value: Keep-Alive
+        - name: Transfer-Encoding
+          value: chunked
+        - name: Content-Type
+          value: application/json
+      body:
+        type: json
+        data: |-
+          {
+              "success": true,
+              "code": 0,
+              "locale": "en",
+              "message": "success",
+              "data": {
+                  "item": {
+                      "patient_id": "9c22ec62-cfa4-476c-8921-a924a32f20d7",
+                      "template": "SOAP",
+                      "note": "assessment",
+                      "taken_by": "9bc6382c-bb73-4c7d-9409-677fe560485d",
+                      "id": "9c55aa47-e6af-477e-8db3-0ed01900191a",
+                      "updated_at": "2024-06-20T21:03:49.000000Z",
+                      "created_at": "2024-06-20T21:03:49.000000Z",
+                      "doctor": {
+                          "id": "9bc6382c-bb73-4c7d-9409-677fe560485d",
+                          "first_name": "General",
+                          "middle_name": "Prince",
+                          "last_name": "Emmanuel"
+                      }
+                  }
+              }
+          }

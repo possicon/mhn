@@ -1,0 +1,104 @@
+info:
+  name: View a bank account
+  type: http
+  seq: 3
+
+http:
+  method: GET
+  url: "{{base_url}}/user/organization/settings/bank_account/:id"
+  params:
+    - name: id
+      value: 9bfdc6d7-b78b-461a-8803-6e9f991e2483
+      type: path
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+examples:
+  - name: View a bank account
+    request:
+      url: "{{base_url}}/user/organization/settings/bank_account/:id"
+      method: GET
+      params:
+        - name: id
+          value: 9bfdc6d7-b78b-461a-8803-6e9f991e2483
+          type: path
+    response:
+      status: 200
+      statusText: OK
+      headers:
+        - name: Date
+          value: Wed, 08 May 2024 04:52:41 GMT
+        - name: Server
+          value: Apache/2.4.54 (Win64) OpenSSL/1.1.1q mod_fcgid/2.3.10-dev
+        - name: X-Powered-By
+          value: PHP/8.2.16
+        - name: Cache-Control
+          value: no-cache, private
+        - name: X-RateLimit-Limit
+          value: "60"
+        - name: X-RateLimit-Remaining
+          value: "59"
+        - name: Access-Control-Allow-Origin
+          value: "*"
+        - name: Vary
+          value: Authorization
+        - name: Keep-Alive
+          value: timeout=5, max=100
+        - name: Connection
+          value: Keep-Alive
+        - name: Transfer-Encoding
+          value: chunked
+        - name: Content-Type
+          value: application/json
+      body:
+        type: json
+        data: |-
+          {
+              "success": true,
+              "code": 0,
+              "locale": "en",
+              "message": "You have successfully fetched bank account",
+              "data": {
+                  "item": {
+                      "id": "9bfdc6d7-b78b-461a-8803-6e9f991e2483",
+                      "number": "3100317126",
+                      "bank": "First Bank",
+                      "type": "bank transfer",
+                      "organization_id": "9bc5eb78-74d2-45f4-a677-05d07dca6a63",
+                      "created_at": "2024-05-08T04:30:51.000000Z",
+                      "updated_at": "2024-05-08T04:30:51.000000Z",
+                      "organization": {
+                          "id": "9bc5eb78-74d2-45f4-a677-05d07dca6a63",
+                          "name": "MHN",
+                          "domain": "pinnacles",
+                          "incoming_server": "https://google.com",
+                          "outgoing_server": "https://mhn.net",
+                          "email": "pinnacles@pinnacle.com",
+                          "invited": false,
+                          "country_id": "9b9faee3-6aaa-4050-bd6c-98a43e674250",
+                          "organization_type_id": 1,
+                          "region_id": "9b9ecc53-4276-4e13-bda6-461083ecb376",
+                          "interested_plan_id": "9bd21ab6-24de-4a8f-91da-a16d95939fd3",
+                          "plan_id": "9bd21ab6-24de-4a8f-91da-a16d95939fd3",
+                          "plan_frequency": "monthly",
+                          "description": null,
+                          "landmark": null,
+                          "status": "Org Onboarded",
+                          "step": "1",
+                          "active": true,
+                          "address": "Glover road, Ikoyis",
+                          "phone": "12345678",
+                          "state_id": "9ba01c32-4a17-4952-8f15-b4a212027e04",
+                          "city_id": "9ba1338d-f1ca-487b-ae34-471ddc6a7bc2",
+                          "grade_id": 1,
+                          "token_time": null,
+                          "domain_email": ""
+                      }
+                  }
+              }
+          }

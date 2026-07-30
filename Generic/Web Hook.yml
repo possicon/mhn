@@ -1,0 +1,15 @@
+info:
+  name: Web Hook
+  type: http
+  seq: 8
+
+http:
+  method: POST
+  url: https://api.mobilehealthnet.com/api/v1/generic/paystack/webhook
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

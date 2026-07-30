@@ -1,0 +1,1306 @@
+info:
+  name: Subscriptions
+  type: http
+  seq: 2
+
+http:
+  method: GET
+  url: "{{base_url}}/user/organization/subscriptions"
+  auth:
+    type: bearer
+    token: 63|Ki7c6FHC4M1SPelKwr0kwLf9d7ZC73mYFTMZN34gef853891
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+examples:
+  - name: Subscriptions
+    request:
+      url: "{{base_url}}/user/organization/subscriptions"
+      method: GET
+    response:
+      status: 200
+      statusText: OK
+      headers:
+        - name: Date
+          value: Thu, 02 May 2024 06:09:49 GMT
+        - name: Server
+          value: Apache/2.4.54 (Win64) OpenSSL/1.1.1q mod_fcgid/2.3.10-dev
+        - name: X-Powered-By
+          value: PHP/8.2.16
+        - name: Cache-Control
+          value: no-cache, private
+        - name: X-RateLimit-Limit
+          value: "60"
+        - name: X-RateLimit-Remaining
+          value: "59"
+        - name: Access-Control-Allow-Origin
+          value: "*"
+        - name: Vary
+          value: Authorization
+        - name: Keep-Alive
+          value: timeout=5, max=100
+        - name: Connection
+          value: Keep-Alive
+        - name: Transfer-Encoding
+          value: chunked
+        - name: Content-Type
+          value: application/json
+      body:
+        type: json
+        data: |-
+          {
+              "success": true,
+              "code": 0,
+              "locale": "en",
+              "message": "Organization subscriptions fetched successfully.",
+              "data": {
+                  "data": [
+                      {
+                          "id": "9bd9edac-5d2a-4e7c-af13-1b0c79d2b2d7",
+                          "organization_id": "9bc5eb78-74d2-45f4-a677-05d07dca6a63",
+                          "plan_id": "9bd21ab6-24de-4a8f-91da-a16d95939fd3",
+                          "transaction_id": "9bd944d0-c8fe-4c2b-996f-f171bbca6a2b",
+                          "branch_id": null,
+                          "amount": "15000.00",
+                          "start_date": "2024-04-20",
+                          "end_date": "2024-05-20",
+                          "created_at": "2024-04-20T08:49:37.000000Z",
+                          "updated_at": "2024-04-20T08:49:37.000000Z",
+                          "status": "active",
+                          "organization": {
+                              "id": "9bc5eb78-74d2-45f4-a677-05d07dca6a63",
+                              "name": "MHN"
+                          },
+                          "plan": {
+                              "id": "9bd21ab6-24de-4a8f-91da-a16d95939fd3",
+                              "name": "Plan A1"
+                          },
+                          "branch": null,
+                          "transaction": {
+                              "id": "9bd944d0-c8fe-4c2b-996f-f171bbca6a2b",
+                              "payment_status": "success",
+                              "payment_method": "card",
+                              "payment_purpose": "plan_subscription"
+                          }
+                      },
+                      {
+                          "id": "9bd9f717-8d6d-481c-a5bc-6939dfa4cc72",
+                          "organization_id": "9bc5eb78-74d2-45f4-a677-05d07dca6a63",
+                          "plan_id": "9bd21ab6-24de-4a8f-91da-a16d95939fd3",
+                          "transaction_id": null,
+                          "branch_id": null,
+                          "amount": "15000.00",
+                          "start_date": "2024-04-20",
+                          "end_date": "2024-05-20",
+                          "created_at": "2024-04-20T09:15:57.000000Z",
+                          "updated_at": "2024-04-20T09:15:57.000000Z",
+                          "status": "active",
+                          "organization": {
+                              "id": "9bc5eb78-74d2-45f4-a677-05d07dca6a63",
+                              "name": "MHN"
+                          },
+                          "plan": {
+                              "id": "9bd21ab6-24de-4a8f-91da-a16d95939fd3",
+                              "name": "Plan A1"
+                          },
+                          "branch": null,
+                          "transaction": null
+                      },
+                      {
+                          "id": "9bda2c98-26e7-4ae2-8131-8c8c758bfafe",
+                          "organization_id": "9bc5eb78-74d2-45f4-a677-05d07dca6a63",
+                          "plan_id": "9bd21ab6-24de-4a8f-91da-a16d95939fd3",
+                          "transaction_id": null,
+                          "branch_id": null,
+                          "amount": "15000.00",
+                          "start_date": "2024-04-20",
+                          "end_date": "2024-05-20",
+                          "created_at": "2024-04-20T11:45:33.000000Z",
+                          "updated_at": "2024-04-20T11:45:33.000000Z",
+                          "status": "active",
+                          "organization": {
+                              "id": "9bc5eb78-74d2-45f4-a677-05d07dca6a63",
+                              "name": "MHN"
+                          },
+                          "plan": {
+                              "id": "9bd21ab6-24de-4a8f-91da-a16d95939fd3",
+                              "name": "Plan A1"
+                          },
+                          "branch": null,
+                          "transaction": null
+                      },
+                      {
+                          "id": "9bda2e4a-6920-4fad-a8ad-f7a8801be2b4",
+                          "organization_id": "9bc5eb78-74d2-45f4-a677-05d07dca6a63",
+                          "plan_id": "9bd21ab6-24de-4a8f-91da-a16d95939fd3",
+                          "transaction_id": null,
+                          "branch_id": null,
+                          "amount": "15000.00",
+                          "start_date": "2024-04-20",
+                          "end_date": "2024-05-20",
+                          "created_at": "2024-04-20T11:50:18.000000Z",
+                          "updated_at": "2024-04-20T11:50:18.000000Z",
+                          "status": "active",
+                          "organization": {
+                              "id": "9bc5eb78-74d2-45f4-a677-05d07dca6a63",
+                              "name": "MHN"
+                          },
+                          "plan": {
+                              "id": "9bd21ab6-24de-4a8f-91da-a16d95939fd3",
+                              "name": "Plan A1"
+                          },
+                          "branch": null,
+                          "transaction": null
+                      },
+                      {
+                          "id": "9bda2f64-3768-4ad3-ba97-50578317f3e9",
+                          "organization_id": "9bc5eb78-74d2-45f4-a677-05d07dca6a63",
+                          "plan_id": "9bd21ab6-24de-4a8f-91da-a16d95939fd3",
+                          "transaction_id": null,
+                          "branch_id": null,
+                          "amount": "15000.00",
+                          "start_date": "2024-04-20",
+                          "end_date": "2024-05-20",
+                          "created_at": "2024-04-20T11:53:22.000000Z",
+                          "updated_at": "2024-04-20T11:53:22.000000Z",
+                          "status": "active",
+                          "organization": {
+                              "id": "9bc5eb78-74d2-45f4-a677-05d07dca6a63",
+                              "name": "MHN"
+                          },
+                          "plan": {
+                              "id": "9bd21ab6-24de-4a8f-91da-a16d95939fd3",
+                              "name": "Plan A1"
+                          },
+                          "branch": null,
+                          "transaction": null
+                      },
+                      {
+                          "id": "9bda3018-6b06-4f28-b47f-0ce7fadf9219",
+                          "organization_id": "9bc5eb78-74d2-45f4-a677-05d07dca6a63",
+                          "plan_id": "9bd21ab6-24de-4a8f-91da-a16d95939fd3",
+                          "transaction_id": null,
+                          "branch_id": null,
+                          "amount": "15000.00",
+                          "start_date": "2024-04-20",
+                          "end_date": "2024-05-20",
+                          "created_at": "2024-04-20T11:55:20.000000Z",
+                          "updated_at": "2024-04-20T11:55:20.000000Z",
+                          "status": "active",
+                          "organization": {
+                              "id": "9bc5eb78-74d2-45f4-a677-05d07dca6a63",
+                              "name": "MHN"
+                          },
+                          "plan": {
+                              "id": "9bd21ab6-24de-4a8f-91da-a16d95939fd3",
+                              "name": "Plan A1"
+                          },
+                          "branch": null,
+                          "transaction": null
+                      },
+                      {
+                          "id": "9bda3177-9e3a-45da-9b3f-0bf4474b4e09",
+                          "organization_id": "9bc5eb78-74d2-45f4-a677-05d07dca6a63",
+                          "plan_id": "9bd21ab6-24de-4a8f-91da-a16d95939fd3",
+                          "transaction_id": null,
+                          "branch_id": null,
+                          "amount": "15000.00",
+                          "start_date": "2024-04-20",
+                          "end_date": "2024-05-20",
+                          "created_at": "2024-04-20T11:59:10.000000Z",
+                          "updated_at": "2024-04-20T11:59:10.000000Z",
+                          "status": "active",
+                          "organization": {
+                              "id": "9bc5eb78-74d2-45f4-a677-05d07dca6a63",
+                              "name": "MHN"
+                          },
+                          "plan": {
+                              "id": "9bd21ab6-24de-4a8f-91da-a16d95939fd3",
+                              "name": "Plan A1"
+                          },
+                          "branch": null,
+                          "transaction": null
+                      },
+                      {
+                          "id": "9bda31d0-ca80-4c41-9351-998f26334b58",
+                          "organization_id": "9bc5eb78-74d2-45f4-a677-05d07dca6a63",
+                          "plan_id": "9bd21ab6-24de-4a8f-91da-a16d95939fd3",
+                          "transaction_id": null,
+                          "branch_id": null,
+                          "amount": "15000.00",
+                          "start_date": "2024-04-20",
+                          "end_date": "2024-05-20",
+                          "created_at": "2024-04-20T12:00:09.000000Z",
+                          "updated_at": "2024-04-20T12:00:09.000000Z",
+                          "status": "active",
+                          "organization": {
+                              "id": "9bc5eb78-74d2-45f4-a677-05d07dca6a63",
+                              "name": "MHN"
+                          },
+                          "plan": {
+                              "id": "9bd21ab6-24de-4a8f-91da-a16d95939fd3",
+                              "name": "Plan A1"
+                          },
+                          "branch": null,
+                          "transaction": null
+                      },
+                      {
+                          "id": "9bda3af0-cff3-46e1-b5f5-c079356c7147",
+                          "organization_id": "9bc5eb78-74d2-45f4-a677-05d07dca6a63",
+                          "plan_id": "9bd21ab6-24de-4a8f-91da-a16d95939fd3",
+                          "transaction_id": null,
+                          "branch_id": null,
+                          "amount": "15000.00",
+                          "start_date": "2024-04-20",
+                          "end_date": "2024-05-20",
+                          "created_at": "2024-04-20T12:25:40.000000Z",
+                          "updated_at": "2024-04-20T12:25:40.000000Z",
+                          "status": "active",
+                          "organization": {
+                              "id": "9bc5eb78-74d2-45f4-a677-05d07dca6a63",
+                              "name": "MHN"
+                          },
+                          "plan": {
+                              "id": "9bd21ab6-24de-4a8f-91da-a16d95939fd3",
+                              "name": "Plan A1"
+                          },
+                          "branch": null,
+                          "transaction": null
+                      },
+                      {
+                          "id": "9bda3d56-124f-4ecd-8b40-80e938153592",
+                          "organization_id": "9bc5eb78-74d2-45f4-a677-05d07dca6a63",
+                          "plan_id": "9bd21ab6-24de-4a8f-91da-a16d95939fd3",
+                          "transaction_id": null,
+                          "branch_id": null,
+                          "amount": "15000.00",
+                          "start_date": "2024-04-20",
+                          "end_date": "2024-05-20",
+                          "created_at": "2024-04-20T12:32:22.000000Z",
+                          "updated_at": "2024-04-20T12:32:22.000000Z",
+                          "status": "active",
+                          "organization": {
+                              "id": "9bc5eb78-74d2-45f4-a677-05d07dca6a63",
+                              "name": "MHN"
+                          },
+                          "plan": {
+                              "id": "9bd21ab6-24de-4a8f-91da-a16d95939fd3",
+                              "name": "Plan A1"
+                          },
+                          "branch": null,
+                          "transaction": null
+                      },
+                      {
+                          "id": "9bda3faa-a23a-4070-9a7f-e664388ae396",
+                          "organization_id": "9bc5eb78-74d2-45f4-a677-05d07dca6a63",
+                          "plan_id": "9bd21ab6-24de-4a8f-91da-a16d95939fd3",
+                          "transaction_id": null,
+                          "branch_id": null,
+                          "amount": "15000.00",
+                          "start_date": "2024-04-20",
+                          "end_date": "2024-05-20",
+                          "created_at": "2024-04-20T12:38:53.000000Z",
+                          "updated_at": "2024-04-20T12:38:53.000000Z",
+                          "status": "active",
+                          "organization": {
+                              "id": "9bc5eb78-74d2-45f4-a677-05d07dca6a63",
+                              "name": "MHN"
+                          },
+                          "plan": {
+                              "id": "9bd21ab6-24de-4a8f-91da-a16d95939fd3",
+                              "name": "Plan A1"
+                          },
+                          "branch": null,
+                          "transaction": null
+                      },
+                      {
+                          "id": "9bda4028-f6ad-4d31-a79b-03bc427caab6",
+                          "organization_id": "9bc5eb78-74d2-45f4-a677-05d07dca6a63",
+                          "plan_id": "9bd21ab6-24de-4a8f-91da-a16d95939fd3",
+                          "transaction_id": null,
+                          "branch_id": null,
+                          "amount": "15000.00",
+                          "start_date": "2024-04-20",
+                          "end_date": "2024-05-20",
+                          "created_at": "2024-04-20T12:40:16.000000Z",
+                          "updated_at": "2024-04-20T12:40:16.000000Z",
+                          "status": "active",
+                          "organization": {
+                              "id": "9bc5eb78-74d2-45f4-a677-05d07dca6a63",
+                              "name": "MHN"
+                          },
+                          "plan": {
+                              "id": "9bd21ab6-24de-4a8f-91da-a16d95939fd3",
+                              "name": "Plan A1"
+                          },
+                          "branch": null,
+                          "transaction": null
+                      },
+                      {
+                          "id": "9bda40d5-85ca-4464-acda-5663dfdc6c56",
+                          "organization_id": "9bc5eb78-74d2-45f4-a677-05d07dca6a63",
+                          "plan_id": "9bd21ab6-24de-4a8f-91da-a16d95939fd3",
+                          "transaction_id": null,
+                          "branch_id": null,
+                          "amount": "15000.00",
+                          "start_date": "2024-04-20",
+                          "end_date": "2024-05-20",
+                          "created_at": "2024-04-20T12:42:09.000000Z",
+                          "updated_at": "2024-04-20T12:42:09.000000Z",
+                          "status": "active",
+                          "organization": {
+                              "id": "9bc5eb78-74d2-45f4-a677-05d07dca6a63",
+                              "name": "MHN"
+                          },
+                          "plan": {
+                              "id": "9bd21ab6-24de-4a8f-91da-a16d95939fd3",
+                              "name": "Plan A1"
+                          },
+                          "branch": null,
+                          "transaction": null
+                      },
+                      {
+                          "id": "9bda4263-389d-4ecb-b6bf-1aa04120f014",
+                          "organization_id": "9bc5eb78-74d2-45f4-a677-05d07dca6a63",
+                          "plan_id": "9bd21ab6-24de-4a8f-91da-a16d95939fd3",
+                          "transaction_id": null,
+                          "branch_id": null,
+                          "amount": "15000.00",
+                          "start_date": "2024-04-20",
+                          "end_date": "2024-05-20",
+                          "created_at": "2024-04-20T12:46:29.000000Z",
+                          "updated_at": "2024-04-20T12:46:29.000000Z",
+                          "status": "active",
+                          "organization": {
+                              "id": "9bc5eb78-74d2-45f4-a677-05d07dca6a63",
+                              "name": "MHN"
+                          },
+                          "plan": {
+                              "id": "9bd21ab6-24de-4a8f-91da-a16d95939fd3",
+                              "name": "Plan A1"
+                          },
+                          "branch": null,
+                          "transaction": null
+                      },
+                      {
+                          "id": "9bda43fb-e2a4-4291-976c-f88b74dfb539",
+                          "organization_id": "9bc5eb78-74d2-45f4-a677-05d07dca6a63",
+                          "plan_id": "9bd21ab6-24de-4a8f-91da-a16d95939fd3",
+                          "transaction_id": null,
+                          "branch_id": null,
+                          "amount": "15000.00",
+                          "start_date": "2024-04-20",
+                          "end_date": "2024-05-20",
+                          "created_at": "2024-04-20T12:50:57.000000Z",
+                          "updated_at": "2024-04-20T12:50:57.000000Z",
+                          "status": "active",
+                          "organization": {
+                              "id": "9bc5eb78-74d2-45f4-a677-05d07dca6a63",
+                              "name": "MHN"
+                          },
+                          "plan": {
+                              "id": "9bd21ab6-24de-4a8f-91da-a16d95939fd3",
+                              "name": "Plan A1"
+                          },
+                          "branch": null,
+                          "transaction": null
+                      },
+                      {
+                          "id": "9bda4523-3bb8-4a34-b90c-909b016f8638",
+                          "organization_id": "9bc5eb78-74d2-45f4-a677-05d07dca6a63",
+                          "plan_id": "9bd21ab6-24de-4a8f-91da-a16d95939fd3",
+                          "transaction_id": null,
+                          "branch_id": null,
+                          "amount": "15000.00",
+                          "start_date": "2024-04-20",
+                          "end_date": "2024-05-20",
+                          "created_at": "2024-04-20T12:54:11.000000Z",
+                          "updated_at": "2024-04-20T12:54:11.000000Z",
+                          "status": "active",
+                          "organization": {
+                              "id": "9bc5eb78-74d2-45f4-a677-05d07dca6a63",
+                              "name": "MHN"
+                          },
+                          "plan": {
+                              "id": "9bd21ab6-24de-4a8f-91da-a16d95939fd3",
+                              "name": "Plan A1"
+                          },
+                          "branch": null,
+                          "transaction": null
+                      },
+                      {
+                          "id": "9bda4747-4a7f-41eb-b709-def6fc88b6ec",
+                          "organization_id": "9bc5eb78-74d2-45f4-a677-05d07dca6a63",
+                          "plan_id": "9bd21ab6-24de-4a8f-91da-a16d95939fd3",
+                          "transaction_id": null,
+                          "branch_id": null,
+                          "amount": "15000.00",
+                          "start_date": "2024-04-20",
+                          "end_date": "2024-05-20",
+                          "created_at": "2024-04-20T13:00:10.000000Z",
+                          "updated_at": "2024-04-20T13:00:10.000000Z",
+                          "status": "active",
+                          "organization": {
+                              "id": "9bc5eb78-74d2-45f4-a677-05d07dca6a63",
+                              "name": "MHN"
+                          },
+                          "plan": {
+                              "id": "9bd21ab6-24de-4a8f-91da-a16d95939fd3",
+                              "name": "Plan A1"
+                          },
+                          "branch": null,
+                          "transaction": null
+                      },
+                      {
+                          "id": "9bda485e-e59c-42eb-963c-45d7653ebfe5",
+                          "organization_id": "9bc5eb78-74d2-45f4-a677-05d07dca6a63",
+                          "plan_id": "9bd21ab6-24de-4a8f-91da-a16d95939fd3",
+                          "transaction_id": null,
+                          "branch_id": null,
+                          "amount": "15000.00",
+                          "start_date": "2024-04-20",
+                          "end_date": "2024-05-20",
+                          "created_at": "2024-04-20T13:03:13.000000Z",
+                          "updated_at": "2024-04-20T13:03:13.000000Z",
+                          "status": "active",
+                          "organization": {
+                              "id": "9bc5eb78-74d2-45f4-a677-05d07dca6a63",
+                              "name": "MHN"
+                          },
+                          "plan": {
+                              "id": "9bd21ab6-24de-4a8f-91da-a16d95939fd3",
+                              "name": "Plan A1"
+                          },
+                          "branch": null,
+                          "transaction": null
+                      },
+                      {
+                          "id": "9bda4995-6554-440a-abcb-ceb520c4e1bc",
+                          "organization_id": "9bc5eb78-74d2-45f4-a677-05d07dca6a63",
+                          "plan_id": "9bd21ab6-24de-4a8f-91da-a16d95939fd3",
+                          "transaction_id": null,
+                          "branch_id": null,
+                          "amount": "15000.00",
+                          "start_date": "2024-04-20",
+                          "end_date": "2024-05-20",
+                          "created_at": "2024-04-20T13:06:37.000000Z",
+                          "updated_at": "2024-04-20T13:06:37.000000Z",
+                          "status": "active",
+                          "organization": {
+                              "id": "9bc5eb78-74d2-45f4-a677-05d07dca6a63",
+                              "name": "MHN"
+                          },
+                          "plan": {
+                              "id": "9bd21ab6-24de-4a8f-91da-a16d95939fd3",
+                              "name": "Plan A1"
+                          },
+                          "branch": null,
+                          "transaction": null
+                      },
+                      {
+                          "id": "9bda4ab7-9f0a-41dd-a2ff-144b9566de73",
+                          "organization_id": "9bc5eb78-74d2-45f4-a677-05d07dca6a63",
+                          "plan_id": "9bd21ab6-24de-4a8f-91da-a16d95939fd3",
+                          "transaction_id": null,
+                          "branch_id": null,
+                          "amount": "15000.00",
+                          "start_date": "2024-04-20",
+                          "end_date": "2024-05-20",
+                          "created_at": "2024-04-20T13:09:47.000000Z",
+                          "updated_at": "2024-04-20T13:09:47.000000Z",
+                          "status": "active",
+                          "organization": {
+                              "id": "9bc5eb78-74d2-45f4-a677-05d07dca6a63",
+                              "name": "MHN"
+                          },
+                          "plan": {
+                              "id": "9bd21ab6-24de-4a8f-91da-a16d95939fd3",
+                              "name": "Plan A1"
+                          },
+                          "branch": null,
+                          "transaction": null
+                      },
+                      {
+                          "id": "9bda4bcf-991b-4a83-8b52-396bd0236c68",
+                          "organization_id": "9bc5eb78-74d2-45f4-a677-05d07dca6a63",
+                          "plan_id": "9bd21ab6-24de-4a8f-91da-a16d95939fd3",
+                          "transaction_id": null,
+                          "branch_id": null,
+                          "amount": "15000.00",
+                          "start_date": "2024-04-20",
+                          "end_date": "2024-05-20",
+                          "created_at": "2024-04-20T13:12:50.000000Z",
+                          "updated_at": "2024-04-20T13:12:50.000000Z",
+                          "status": "active",
+                          "organization": {
+                              "id": "9bc5eb78-74d2-45f4-a677-05d07dca6a63",
+                              "name": "MHN"
+                          },
+                          "plan": {
+                              "id": "9bd21ab6-24de-4a8f-91da-a16d95939fd3",
+                              "name": "Plan A1"
+                          },
+                          "branch": null,
+                          "transaction": null
+                      },
+                      {
+                          "id": "9bda4f02-c7c0-4649-8016-4325399bb6c1",
+                          "organization_id": "9bc5eb78-74d2-45f4-a677-05d07dca6a63",
+                          "plan_id": "9bd21ab6-24de-4a8f-91da-a16d95939fd3",
+                          "transaction_id": null,
+                          "branch_id": null,
+                          "amount": "15000.00",
+                          "start_date": "2024-04-20",
+                          "end_date": "2024-05-20",
+                          "created_at": "2024-04-20T13:21:47.000000Z",
+                          "updated_at": "2024-04-20T13:21:47.000000Z",
+                          "status": "active",
+                          "organization": {
+                              "id": "9bc5eb78-74d2-45f4-a677-05d07dca6a63",
+                              "name": "MHN"
+                          },
+                          "plan": {
+                              "id": "9bd21ab6-24de-4a8f-91da-a16d95939fd3",
+                              "name": "Plan A1"
+                          },
+                          "branch": null,
+                          "transaction": null
+                      },
+                      {
+                          "id": "9bda4f62-ed9b-4c1a-900f-8e5ec941e1a4",
+                          "organization_id": "9bc5eb78-74d2-45f4-a677-05d07dca6a63",
+                          "plan_id": "9bd21ab6-24de-4a8f-91da-a16d95939fd3",
+                          "transaction_id": null,
+                          "branch_id": null,
+                          "amount": "15000.00",
+                          "start_date": "2024-04-20",
+                          "end_date": "2024-05-20",
+                          "created_at": "2024-04-20T13:22:50.000000Z",
+                          "updated_at": "2024-04-20T13:22:50.000000Z",
+                          "status": "active",
+                          "organization": {
+                              "id": "9bc5eb78-74d2-45f4-a677-05d07dca6a63",
+                              "name": "MHN"
+                          },
+                          "plan": {
+                              "id": "9bd21ab6-24de-4a8f-91da-a16d95939fd3",
+                              "name": "Plan A1"
+                          },
+                          "branch": null,
+                          "transaction": null
+                      },
+                      {
+                          "id": "9bda50de-581a-44a8-99a7-26cf39360f78",
+                          "organization_id": "9bc5eb78-74d2-45f4-a677-05d07dca6a63",
+                          "plan_id": "9bd21ab6-24de-4a8f-91da-a16d95939fd3",
+                          "transaction_id": null,
+                          "branch_id": null,
+                          "amount": "15000.00",
+                          "start_date": "2024-04-20",
+                          "end_date": "2024-05-20",
+                          "created_at": "2024-04-20T13:26:59.000000Z",
+                          "updated_at": "2024-04-20T13:26:59.000000Z",
+                          "status": "active",
+                          "organization": {
+                              "id": "9bc5eb78-74d2-45f4-a677-05d07dca6a63",
+                              "name": "MHN"
+                          },
+                          "plan": {
+                              "id": "9bd21ab6-24de-4a8f-91da-a16d95939fd3",
+                              "name": "Plan A1"
+                          },
+                          "branch": null,
+                          "transaction": null
+                      },
+                      {
+                          "id": "9bda513e-797f-4c05-8738-82996489f528",
+                          "organization_id": "9bc5eb78-74d2-45f4-a677-05d07dca6a63",
+                          "plan_id": "9bd21ab6-24de-4a8f-91da-a16d95939fd3",
+                          "transaction_id": null,
+                          "branch_id": null,
+                          "amount": "15000.00",
+                          "start_date": "2024-04-20",
+                          "end_date": "2024-05-20",
+                          "created_at": "2024-04-20T13:28:02.000000Z",
+                          "updated_at": "2024-04-20T13:28:02.000000Z",
+                          "status": "active",
+                          "organization": {
+                              "id": "9bc5eb78-74d2-45f4-a677-05d07dca6a63",
+                              "name": "MHN"
+                          },
+                          "plan": {
+                              "id": "9bd21ab6-24de-4a8f-91da-a16d95939fd3",
+                              "name": "Plan A1"
+                          },
+                          "branch": null,
+                          "transaction": null
+                      },
+                      {
+                          "id": "9bda51d3-4f8a-4527-abfb-084eb16f9aee",
+                          "organization_id": "9bc5eb78-74d2-45f4-a677-05d07dca6a63",
+                          "plan_id": "9bd21ab6-24de-4a8f-91da-a16d95939fd3",
+                          "transaction_id": null,
+                          "branch_id": null,
+                          "amount": "15000.00",
+                          "start_date": "2024-04-20",
+                          "end_date": "2024-05-20",
+                          "created_at": "2024-04-20T13:29:39.000000Z",
+                          "updated_at": "2024-04-20T13:29:39.000000Z",
+                          "status": "active",
+                          "organization": {
+                              "id": "9bc5eb78-74d2-45f4-a677-05d07dca6a63",
+                              "name": "MHN"
+                          },
+                          "plan": {
+                              "id": "9bd21ab6-24de-4a8f-91da-a16d95939fd3",
+                              "name": "Plan A1"
+                          },
+                          "branch": null,
+                          "transaction": null
+                      },
+                      {
+                          "id": "9bda52ec-970f-4d3a-9869-1dd748f64417",
+                          "organization_id": "9bc5eb78-74d2-45f4-a677-05d07dca6a63",
+                          "plan_id": "9bd21ab6-24de-4a8f-91da-a16d95939fd3",
+                          "transaction_id": null,
+                          "branch_id": null,
+                          "amount": "15000.00",
+                          "start_date": "2024-04-20",
+                          "end_date": "2024-05-20",
+                          "created_at": "2024-04-20T13:32:44.000000Z",
+                          "updated_at": "2024-04-20T13:32:44.000000Z",
+                          "status": "active",
+                          "organization": {
+                              "id": "9bc5eb78-74d2-45f4-a677-05d07dca6a63",
+                              "name": "MHN"
+                          },
+                          "plan": {
+                              "id": "9bd21ab6-24de-4a8f-91da-a16d95939fd3",
+                              "name": "Plan A1"
+                          },
+                          "branch": null,
+                          "transaction": null
+                      },
+                      {
+                          "id": "9bda5572-8aed-4082-a46f-511dbdcd94a4",
+                          "organization_id": "9bc5eb78-74d2-45f4-a677-05d07dca6a63",
+                          "plan_id": "9bd21ab6-24de-4a8f-91da-a16d95939fd3",
+                          "transaction_id": null,
+                          "branch_id": null,
+                          "amount": "15000.00",
+                          "start_date": "2024-04-20",
+                          "end_date": "2024-05-20",
+                          "created_at": "2024-04-20T13:39:47.000000Z",
+                          "updated_at": "2024-04-20T13:39:47.000000Z",
+                          "status": "active",
+                          "organization": {
+                              "id": "9bc5eb78-74d2-45f4-a677-05d07dca6a63",
+                              "name": "MHN"
+                          },
+                          "plan": {
+                              "id": "9bd21ab6-24de-4a8f-91da-a16d95939fd3",
+                              "name": "Plan A1"
+                          },
+                          "branch": null,
+                          "transaction": null
+                      },
+                      {
+                          "id": "9bda5687-93cf-48a6-9320-a1ca3d9ffa00",
+                          "organization_id": "9bc5eb78-74d2-45f4-a677-05d07dca6a63",
+                          "plan_id": "9bd21ab6-24de-4a8f-91da-a16d95939fd3",
+                          "transaction_id": null,
+                          "branch_id": null,
+                          "amount": "15000.00",
+                          "start_date": "2024-04-20",
+                          "end_date": "2024-05-20",
+                          "created_at": "2024-04-20T13:42:49.000000Z",
+                          "updated_at": "2024-04-20T13:42:49.000000Z",
+                          "status": "active",
+                          "organization": {
+                              "id": "9bc5eb78-74d2-45f4-a677-05d07dca6a63",
+                              "name": "MHN"
+                          },
+                          "plan": {
+                              "id": "9bd21ab6-24de-4a8f-91da-a16d95939fd3",
+                              "name": "Plan A1"
+                          },
+                          "branch": null,
+                          "transaction": null
+                      },
+                      {
+                          "id": "9bda579d-9395-4e6e-ad80-40b6f803ce8e",
+                          "organization_id": "9bc5eb78-74d2-45f4-a677-05d07dca6a63",
+                          "plan_id": "9bd21ab6-24de-4a8f-91da-a16d95939fd3",
+                          "transaction_id": null,
+                          "branch_id": null,
+                          "amount": "15000.00",
+                          "start_date": "2024-04-20",
+                          "end_date": "2024-05-20",
+                          "created_at": "2024-04-20T13:45:51.000000Z",
+                          "updated_at": "2024-04-20T13:45:51.000000Z",
+                          "status": "active",
+                          "organization": {
+                              "id": "9bc5eb78-74d2-45f4-a677-05d07dca6a63",
+                              "name": "MHN"
+                          },
+                          "plan": {
+                              "id": "9bd21ab6-24de-4a8f-91da-a16d95939fd3",
+                              "name": "Plan A1"
+                          },
+                          "branch": null,
+                          "transaction": null
+                      },
+                      {
+                          "id": "9bda58b3-169a-43f7-be01-347d2d18c523",
+                          "organization_id": "9bc5eb78-74d2-45f4-a677-05d07dca6a63",
+                          "plan_id": "9bd21ab6-24de-4a8f-91da-a16d95939fd3",
+                          "transaction_id": null,
+                          "branch_id": null,
+                          "amount": "15000.00",
+                          "start_date": "2024-04-20",
+                          "end_date": "2024-05-20",
+                          "created_at": "2024-04-20T13:48:53.000000Z",
+                          "updated_at": "2024-04-20T13:48:53.000000Z",
+                          "status": "active",
+                          "organization": {
+                              "id": "9bc5eb78-74d2-45f4-a677-05d07dca6a63",
+                              "name": "MHN"
+                          },
+                          "plan": {
+                              "id": "9bd21ab6-24de-4a8f-91da-a16d95939fd3",
+                              "name": "Plan A1"
+                          },
+                          "branch": null,
+                          "transaction": null
+                      },
+                      {
+                          "id": "9bda59c8-4b3a-4c4c-a080-05f164574358",
+                          "organization_id": "9bc5eb78-74d2-45f4-a677-05d07dca6a63",
+                          "plan_id": "9bd21ab6-24de-4a8f-91da-a16d95939fd3",
+                          "transaction_id": null,
+                          "branch_id": null,
+                          "amount": "15000.00",
+                          "start_date": "2024-04-20",
+                          "end_date": "2024-05-20",
+                          "created_at": "2024-04-20T13:51:54.000000Z",
+                          "updated_at": "2024-04-20T13:51:54.000000Z",
+                          "status": "active",
+                          "organization": {
+                              "id": "9bc5eb78-74d2-45f4-a677-05d07dca6a63",
+                              "name": "MHN"
+                          },
+                          "plan": {
+                              "id": "9bd21ab6-24de-4a8f-91da-a16d95939fd3",
+                              "name": "Plan A1"
+                          },
+                          "branch": null,
+                          "transaction": null
+                      },
+                      {
+                          "id": "9bda5add-db3b-4454-a2f3-86ad7dd002fd",
+                          "organization_id": "9bc5eb78-74d2-45f4-a677-05d07dca6a63",
+                          "plan_id": "9bd21ab6-24de-4a8f-91da-a16d95939fd3",
+                          "transaction_id": null,
+                          "branch_id": null,
+                          "amount": "15000.00",
+                          "start_date": "2024-04-20",
+                          "end_date": "2024-05-20",
+                          "created_at": "2024-04-20T13:54:56.000000Z",
+                          "updated_at": "2024-04-20T13:54:56.000000Z",
+                          "status": "active",
+                          "organization": {
+                              "id": "9bc5eb78-74d2-45f4-a677-05d07dca6a63",
+                              "name": "MHN"
+                          },
+                          "plan": {
+                              "id": "9bd21ab6-24de-4a8f-91da-a16d95939fd3",
+                              "name": "Plan A1"
+                          },
+                          "branch": null,
+                          "transaction": null
+                      },
+                      {
+                          "id": "9bda5bf3-9231-4095-bff8-a0f74eb18d6a",
+                          "organization_id": "9bc5eb78-74d2-45f4-a677-05d07dca6a63",
+                          "plan_id": "9bd21ab6-24de-4a8f-91da-a16d95939fd3",
+                          "transaction_id": null,
+                          "branch_id": null,
+                          "amount": "15000.00",
+                          "start_date": "2024-04-20",
+                          "end_date": "2024-05-20",
+                          "created_at": "2024-04-20T13:57:58.000000Z",
+                          "updated_at": "2024-04-20T13:57:58.000000Z",
+                          "status": "active",
+                          "organization": {
+                              "id": "9bc5eb78-74d2-45f4-a677-05d07dca6a63",
+                              "name": "MHN"
+                          },
+                          "plan": {
+                              "id": "9bd21ab6-24de-4a8f-91da-a16d95939fd3",
+                              "name": "Plan A1"
+                          },
+                          "branch": null,
+                          "transaction": null
+                      },
+                      {
+                          "id": "9bda5d08-d28f-41c2-87f4-29632c1574f5",
+                          "organization_id": "9bc5eb78-74d2-45f4-a677-05d07dca6a63",
+                          "plan_id": "9bd21ab6-24de-4a8f-91da-a16d95939fd3",
+                          "transaction_id": null,
+                          "branch_id": null,
+                          "amount": "15000.00",
+                          "start_date": "2024-04-20",
+                          "end_date": "2024-05-20",
+                          "created_at": "2024-04-20T14:01:00.000000Z",
+                          "updated_at": "2024-04-20T14:01:00.000000Z",
+                          "status": "active",
+                          "organization": {
+                              "id": "9bc5eb78-74d2-45f4-a677-05d07dca6a63",
+                              "name": "MHN"
+                          },
+                          "plan": {
+                              "id": "9bd21ab6-24de-4a8f-91da-a16d95939fd3",
+                              "name": "Plan A1"
+                          },
+                          "branch": null,
+                          "transaction": null
+                      },
+                      {
+                          "id": "9bda5e1e-3307-4b06-869d-65696727b5d5",
+                          "organization_id": "9bc5eb78-74d2-45f4-a677-05d07dca6a63",
+                          "plan_id": "9bd21ab6-24de-4a8f-91da-a16d95939fd3",
+                          "transaction_id": null,
+                          "branch_id": null,
+                          "amount": "15000.00",
+                          "start_date": "2024-04-20",
+                          "end_date": "2024-05-20",
+                          "created_at": "2024-04-20T14:04:02.000000Z",
+                          "updated_at": "2024-04-20T14:04:02.000000Z",
+                          "status": "active",
+                          "organization": {
+                              "id": "9bc5eb78-74d2-45f4-a677-05d07dca6a63",
+                              "name": "MHN"
+                          },
+                          "plan": {
+                              "id": "9bd21ab6-24de-4a8f-91da-a16d95939fd3",
+                              "name": "Plan A1"
+                          },
+                          "branch": null,
+                          "transaction": null
+                      },
+                      {
+                          "id": "9bda61f8-9dc8-4d3d-8033-5038a517767a",
+                          "organization_id": "9bc5eb78-74d2-45f4-a677-05d07dca6a63",
+                          "plan_id": "9bd21ab6-24de-4a8f-91da-a16d95939fd3",
+                          "transaction_id": null,
+                          "branch_id": null,
+                          "amount": "15000.00",
+                          "start_date": "2024-04-20",
+                          "end_date": "2024-05-20",
+                          "created_at": "2024-04-20T14:14:48.000000Z",
+                          "updated_at": "2024-04-20T14:14:48.000000Z",
+                          "status": "active",
+                          "organization": {
+                              "id": "9bc5eb78-74d2-45f4-a677-05d07dca6a63",
+                              "name": "MHN"
+                          },
+                          "plan": {
+                              "id": "9bd21ab6-24de-4a8f-91da-a16d95939fd3",
+                              "name": "Plan A1"
+                          },
+                          "branch": null,
+                          "transaction": null
+                      },
+                      {
+                          "id": "9bda632e-fe42-45b8-8ac3-a14d709ab317",
+                          "organization_id": "9bc5eb78-74d2-45f4-a677-05d07dca6a63",
+                          "plan_id": "9bd21ab6-24de-4a8f-91da-a16d95939fd3",
+                          "transaction_id": null,
+                          "branch_id": null,
+                          "amount": "15000.00",
+                          "start_date": "2024-04-20",
+                          "end_date": "2024-05-20",
+                          "created_at": "2024-04-20T14:18:11.000000Z",
+                          "updated_at": "2024-04-20T14:18:11.000000Z",
+                          "status": "active",
+                          "organization": {
+                              "id": "9bc5eb78-74d2-45f4-a677-05d07dca6a63",
+                              "name": "MHN"
+                          },
+                          "plan": {
+                              "id": "9bd21ab6-24de-4a8f-91da-a16d95939fd3",
+                              "name": "Plan A1"
+                          },
+                          "branch": null,
+                          "transaction": null
+                      },
+                      {
+                          "id": "9bda6449-c019-4b06-98ec-16f4f37dd262",
+                          "organization_id": "9bc5eb78-74d2-45f4-a677-05d07dca6a63",
+                          "plan_id": "9bd21ab6-24de-4a8f-91da-a16d95939fd3",
+                          "transaction_id": null,
+                          "branch_id": null,
+                          "amount": "15000.00",
+                          "start_date": "2024-04-20",
+                          "end_date": "2024-05-20",
+                          "created_at": "2024-04-20T14:21:17.000000Z",
+                          "updated_at": "2024-04-20T14:21:17.000000Z",
+                          "status": "active",
+                          "organization": {
+                              "id": "9bc5eb78-74d2-45f4-a677-05d07dca6a63",
+                              "name": "MHN"
+                          },
+                          "plan": {
+                              "id": "9bd21ab6-24de-4a8f-91da-a16d95939fd3",
+                              "name": "Plan A1"
+                          },
+                          "branch": null,
+                          "transaction": null
+                      },
+                      {
+                          "id": "9bda660f-f6b5-43a2-935e-0545498cd5c3",
+                          "organization_id": "9bc5eb78-74d2-45f4-a677-05d07dca6a63",
+                          "plan_id": "9bd21ab6-24de-4a8f-91da-a16d95939fd3",
+                          "transaction_id": null,
+                          "branch_id": null,
+                          "amount": "15000.00",
+                          "start_date": "2024-04-20",
+                          "end_date": "2024-05-20",
+                          "created_at": "2024-04-20T14:26:14.000000Z",
+                          "updated_at": "2024-04-20T14:26:14.000000Z",
+                          "status": "active",
+                          "organization": {
+                              "id": "9bc5eb78-74d2-45f4-a677-05d07dca6a63",
+                              "name": "MHN"
+                          },
+                          "plan": {
+                              "id": "9bd21ab6-24de-4a8f-91da-a16d95939fd3",
+                              "name": "Plan A1"
+                          },
+                          "branch": null,
+                          "transaction": null
+                      },
+                      {
+                          "id": "9bda67c9-1679-469d-a489-7c1e1e5665d5",
+                          "organization_id": "9bc5eb78-74d2-45f4-a677-05d07dca6a63",
+                          "plan_id": "9bd21ab6-24de-4a8f-91da-a16d95939fd3",
+                          "transaction_id": null,
+                          "branch_id": null,
+                          "amount": "15000.00",
+                          "start_date": "2024-04-20",
+                          "end_date": "2024-05-20",
+                          "created_at": "2024-04-20T14:31:04.000000Z",
+                          "updated_at": "2024-04-20T14:31:04.000000Z",
+                          "status": "active",
+                          "organization": {
+                              "id": "9bc5eb78-74d2-45f4-a677-05d07dca6a63",
+                              "name": "MHN"
+                          },
+                          "plan": {
+                              "id": "9bd21ab6-24de-4a8f-91da-a16d95939fd3",
+                              "name": "Plan A1"
+                          },
+                          "branch": null,
+                          "transaction": null
+                      },
+                      {
+                          "id": "9bda67d5-aa2a-4383-98c4-4c293e439dc0",
+                          "organization_id": "9bc5eb78-74d2-45f4-a677-05d07dca6a63",
+                          "plan_id": "9bd21ab6-24de-4a8f-91da-a16d95939fd3",
+                          "transaction_id": null,
+                          "branch_id": null,
+                          "amount": "15000.00",
+                          "start_date": "2024-04-20",
+                          "end_date": "2024-05-20",
+                          "created_at": "2024-04-20T14:31:12.000000Z",
+                          "updated_at": "2024-04-20T14:31:12.000000Z",
+                          "status": "active",
+                          "organization": {
+                              "id": "9bc5eb78-74d2-45f4-a677-05d07dca6a63",
+                              "name": "MHN"
+                          },
+                          "plan": {
+                              "id": "9bd21ab6-24de-4a8f-91da-a16d95939fd3",
+                              "name": "Plan A1"
+                          },
+                          "branch": null,
+                          "transaction": null
+                      },
+                      {
+                          "id": "9bda680a-1bb4-422f-b6f6-0ac8f51e8c5b",
+                          "organization_id": "9bc5eb78-74d2-45f4-a677-05d07dca6a63",
+                          "plan_id": "9bd21ab6-24de-4a8f-91da-a16d95939fd3",
+                          "transaction_id": null,
+                          "branch_id": null,
+                          "amount": "15000.00",
+                          "start_date": "2024-04-20",
+                          "end_date": "2024-05-20",
+                          "created_at": "2024-04-20T14:31:46.000000Z",
+                          "updated_at": "2024-04-20T14:31:46.000000Z",
+                          "status": "active",
+                          "organization": {
+                              "id": "9bc5eb78-74d2-45f4-a677-05d07dca6a63",
+                              "name": "MHN"
+                          },
+                          "plan": {
+                              "id": "9bd21ab6-24de-4a8f-91da-a16d95939fd3",
+                              "name": "Plan A1"
+                          },
+                          "branch": null,
+                          "transaction": null
+                      },
+                      {
+                          "id": "9bda6df0-48d6-49cb-b671-1dac82fd88f6",
+                          "organization_id": "9bc5eb78-74d2-45f4-a677-05d07dca6a63",
+                          "plan_id": "9bd21ab6-24de-4a8f-91da-a16d95939fd3",
+                          "transaction_id": null,
+                          "branch_id": null,
+                          "amount": "15000.00",
+                          "start_date": "2024-04-20",
+                          "end_date": "2024-05-20",
+                          "created_at": "2024-04-20T14:48:16.000000Z",
+                          "updated_at": "2024-04-20T14:48:16.000000Z",
+                          "status": "active",
+                          "organization": {
+                              "id": "9bc5eb78-74d2-45f4-a677-05d07dca6a63",
+                              "name": "MHN"
+                          },
+                          "plan": {
+                              "id": "9bd21ab6-24de-4a8f-91da-a16d95939fd3",
+                              "name": "Plan A1"
+                          },
+                          "branch": null,
+                          "transaction": null
+                      },
+                      {
+                          "id": "9bda6f55-c0ba-4888-87ef-b82156affb10",
+                          "organization_id": "9bc5eb78-74d2-45f4-a677-05d07dca6a63",
+                          "plan_id": "9bd21ab6-24de-4a8f-91da-a16d95939fd3",
+                          "transaction_id": null,
+                          "branch_id": null,
+                          "amount": "15000.00",
+                          "start_date": "2024-04-20",
+                          "end_date": "2024-05-20",
+                          "created_at": "2024-04-20T14:52:10.000000Z",
+                          "updated_at": "2024-04-20T14:52:10.000000Z",
+                          "status": "active",
+                          "organization": {
+                              "id": "9bc5eb78-74d2-45f4-a677-05d07dca6a63",
+                              "name": "MHN"
+                          },
+                          "plan": {
+                              "id": "9bd21ab6-24de-4a8f-91da-a16d95939fd3",
+                              "name": "Plan A1"
+                          },
+                          "branch": null,
+                          "transaction": null
+                      },
+                      {
+                          "id": "9bddd974-11bf-40ef-9b02-0d01acfa0cc2",
+                          "organization_id": "9bc5eb78-74d2-45f4-a677-05d07dca6a63",
+                          "plan_id": "9bd21ab6-24de-4a8f-91da-a16d95939fd3",
+                          "transaction_id": null,
+                          "branch_id": null,
+                          "amount": "15000.00",
+                          "start_date": "2024-04-22",
+                          "end_date": "2024-05-22",
+                          "created_at": "2024-04-22T07:36:23.000000Z",
+                          "updated_at": "2024-04-22T07:36:23.000000Z",
+                          "status": "active",
+                          "organization": {
+                              "id": "9bc5eb78-74d2-45f4-a677-05d07dca6a63",
+                              "name": "MHN"
+                          },
+                          "plan": {
+                              "id": "9bd21ab6-24de-4a8f-91da-a16d95939fd3",
+                              "name": "Plan A1"
+                          },
+                          "branch": null,
+                          "transaction": null
+                      },
+                      {
+                          "id": "9bf0351a-d441-4d1a-8a4f-d6bc39344c7e",
+                          "organization_id": "9bc5eb78-74d2-45f4-a677-05d07dca6a63",
+                          "plan_id": "9bd21ab6-24de-4a8f-91da-a16d95939fd3",
+                          "transaction_id": null,
+                          "branch_id": "9be1f262-1550-41cb-934f-381ad7cb955c",
+                          "amount": "15000.00",
+                          "start_date": "2024-05-01",
+                          "end_date": "2024-06-01",
+                          "created_at": "2024-05-01T10:37:34.000000Z",
+                          "updated_at": "2024-05-01T10:37:34.000000Z",
+                          "status": "active",
+                          "organization": {
+                              "id": "9bc5eb78-74d2-45f4-a677-05d07dca6a63",
+                              "name": "MHN"
+                          },
+                          "plan": {
+                              "id": "9bd21ab6-24de-4a8f-91da-a16d95939fd3",
+                              "name": "Plan A1"
+                          },
+                          "branch": {
+                              "id": "9be1f262-1550-41cb-934f-381ad7cb955c",
+                              "name": "Apapa"
+                          },
+                          "transaction": null
+                      },
+                      {
+                          "id": "9bf03a9e-7dea-4d8f-889c-d0920e77b196",
+                          "organization_id": "9bc5eb78-74d2-45f4-a677-05d07dca6a63",
+                          "plan_id": "9bd21ab6-24de-4a8f-91da-a16d95939fd3",
+                          "transaction_id": null,
+                          "branch_id": "9be1f262-1550-41cb-934f-381ad7cb955c",
+                          "amount": "15000.00",
+                          "start_date": "2024-05-01",
+                          "end_date": "2024-06-01",
+                          "created_at": "2024-05-01T10:52:59.000000Z",
+                          "updated_at": "2024-05-01T10:52:59.000000Z",
+                          "status": "active",
+                          "organization": {
+                              "id": "9bc5eb78-74d2-45f4-a677-05d07dca6a63",
+                              "name": "MHN"
+                          },
+                          "plan": {
+                              "id": "9bd21ab6-24de-4a8f-91da-a16d95939fd3",
+                              "name": "Plan A1"
+                          },
+                          "branch": {
+                              "id": "9be1f262-1550-41cb-934f-381ad7cb955c",
+                              "name": "Apapa"
+                          },
+                          "transaction": null
+                      },
+                      {
+                          "id": "9bf03e2c-d482-448d-9110-760dc1023897",
+                          "organization_id": "9bc5eb78-74d2-45f4-a677-05d07dca6a63",
+                          "plan_id": "9bd21ab6-24de-4a8f-91da-a16d95939fd3",
+                          "transaction_id": null,
+                          "branch_id": "9be1f262-1550-41cb-934f-381ad7cb955c",
+                          "amount": "15000.00",
+                          "start_date": "2024-05-01",
+                          "end_date": "2024-06-01",
+                          "created_at": "2024-05-01T11:02:55.000000Z",
+                          "updated_at": "2024-05-01T11:02:55.000000Z",
+                          "status": "active",
+                          "organization": {
+                              "id": "9bc5eb78-74d2-45f4-a677-05d07dca6a63",
+                              "name": "MHN"
+                          },
+                          "plan": {
+                              "id": "9bd21ab6-24de-4a8f-91da-a16d95939fd3",
+                              "name": "Plan A1"
+                          },
+                          "branch": {
+                              "id": "9be1f262-1550-41cb-934f-381ad7cb955c",
+                              "name": "Apapa"
+                          },
+                          "transaction": null
+                      },
+                      {
+                          "id": "9bf03ed5-a940-464e-b085-9bd376213dd7",
+                          "organization_id": "9bc5eb78-74d2-45f4-a677-05d07dca6a63",
+                          "plan_id": "9bd21ab6-24de-4a8f-91da-a16d95939fd3",
+                          "transaction_id": null,
+                          "branch_id": "9be1f262-1550-41cb-934f-381ad7cb955c",
+                          "amount": "15000.00",
+                          "start_date": "2024-05-01",
+                          "end_date": "2024-06-01",
+                          "created_at": "2024-05-01T11:04:46.000000Z",
+                          "updated_at": "2024-05-01T11:04:46.000000Z",
+                          "status": "active",
+                          "organization": {
+                              "id": "9bc5eb78-74d2-45f4-a677-05d07dca6a63",
+                              "name": "MHN"
+                          },
+                          "plan": {
+                              "id": "9bd21ab6-24de-4a8f-91da-a16d95939fd3",
+                              "name": "Plan A1"
+                          },
+                          "branch": {
+                              "id": "9be1f262-1550-41cb-934f-381ad7cb955c",
+                              "name": "Apapa"
+                          },
+                          "transaction": null
+                      },
+                      {
+                          "id": "9bf04025-4e08-407a-b88a-21e21a1fa24f",
+                          "organization_id": "9bc5eb78-74d2-45f4-a677-05d07dca6a63",
+                          "plan_id": "9bd21ab6-24de-4a8f-91da-a16d95939fd3",
+                          "transaction_id": null,
+                          "branch_id": "9be1f262-1550-41cb-934f-381ad7cb955c",
+                          "amount": "15000.00",
+                          "start_date": "2024-05-01",
+                          "end_date": "2024-06-01",
+                          "created_at": "2024-05-01T11:08:26.000000Z",
+                          "updated_at": "2024-05-01T11:08:26.000000Z",
+                          "status": "active",
+                          "organization": {
+                              "id": "9bc5eb78-74d2-45f4-a677-05d07dca6a63",
+                              "name": "MHN"
+                          },
+                          "plan": {
+                              "id": "9bd21ab6-24de-4a8f-91da-a16d95939fd3",
+                              "name": "Plan A1"
+                          },
+                          "branch": {
+                              "id": "9be1f262-1550-41cb-934f-381ad7cb955c",
+                              "name": "Apapa"
+                          },
+                          "transaction": null
+                      },
+                      {
+                          "id": "9bf040fe-39d3-44bf-8f6e-5bf96fe5cfc7",
+                          "organization_id": "9bc5eb78-74d2-45f4-a677-05d07dca6a63",
+                          "plan_id": "9bd21ab6-24de-4a8f-91da-a16d95939fd3",
+                          "transaction_id": null,
+                          "branch_id": "9be1f262-1550-41cb-934f-381ad7cb955c",
+                          "amount": "15000.00",
+                          "start_date": "2024-05-01",
+                          "end_date": "2024-06-01",
+                          "created_at": "2024-05-01T11:10:48.000000Z",
+                          "updated_at": "2024-05-01T11:10:48.000000Z",
+                          "status": "active",
+                          "organization": {
+                              "id": "9bc5eb78-74d2-45f4-a677-05d07dca6a63",
+                              "name": "MHN"
+                          },
+                          "plan": {
+                              "id": "9bd21ab6-24de-4a8f-91da-a16d95939fd3",
+                              "name": "Plan A1"
+                          },
+                          "branch": {
+                              "id": "9be1f262-1550-41cb-934f-381ad7cb955c",
+                              "name": "Apapa"
+                          },
+                          "transaction": null
+                      },
+                      {
+                          "id": "9bf0bfcc-9ce3-4e73-bf12-17334abefbb0",
+                          "organization_id": "9bc5eb78-74d2-45f4-a677-05d07dca6a63",
+                          "plan_id": "9bd21ab6-24de-4a8f-91da-a16d95939fd3",
+                          "transaction_id": null,
+                          "branch_id": null,
+                          "amount": "15000.00",
+                          "start_date": "2024-05-01",
+                          "end_date": "2024-06-01",
+                          "created_at": "2024-05-01T17:05:23.000000Z",
+                          "updated_at": "2024-05-01T17:05:23.000000Z",
+                          "status": "active",
+                          "organization": {
+                              "id": "9bc5eb78-74d2-45f4-a677-05d07dca6a63",
+                              "name": "MHN"
+                          },
+                          "plan": {
+                              "id": "9bd21ab6-24de-4a8f-91da-a16d95939fd3",
+                              "name": "Plan A1"
+                          },
+                          "branch": null,
+                          "transaction": null
+                      }
+                  ]
+              }
+          }

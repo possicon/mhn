@@ -1,0 +1,7 @@
+info:
+  name: Language
+  type: folder
+  seq: 1
+
+request:
+  auth: inherit

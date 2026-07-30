@@ -1,0 +1,112 @@
+info:
+  name: Add user
+  type: http
+  seq: 5
+
+http:
+  method: POST
+  url: "{{base_url}}/admin/user/add-user"
+  headers:
+    - name: Accept
+      value: application/json
+  body:
+    type: json
+    data: "{\r
+
+      \    \"account_type\": \"user\",\r
+
+      \    \"first_name\": \"Chimdinma\",\r
+
+      \    \"last_name\": \"Ogbuagu\",\r
+
+      \    \"gender\":\"female\",\r
+
+      \    \"email\":\"chimdinmaprecioujs@gmail.com\",\r
+
+      \    \"country_id\":\"9b9faee3-2ab6-4c13-8120-167e66a8ff18\",\r
+
+      \    \"role_id\": \"3\",\r
+
+      \    \"country_call_code\":\"234\",\r
+
+      \    \"phone_number\": \"8137885678\",\r
+
+      \    \"organization_id\": \"9bc5eb78-74d2-45f4-a677-05d07dca6a63\"\r
+
+      }"
+  auth:
+    type: bearer
+    token: "{{adminToken}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+examples:
+  - name: Add user
+    request:
+      url: "{{base_url}}/admin/add-user"
+      method: POST
+      body:
+        type: json
+        data: "{\r
+
+          \    \"account_type\": \"admin\",\r
+
+          \    \"first_name\": \"Prince\",\r
+
+          \    \"last_name\": \"Ogbuagu\",\r
+
+          \    \"gender\":\"male\",\r
+
+          \    \"email\":\"example@gmail.com\",\r
+
+          \    \"country_id\":\"9b9faee2-9ca2-41d0-962c-f7f60ef04bdb\",\r
+
+          \    \"role_id\": 1,\r
+
+          \    \"phone_number\": \"08137885678\",\r
+
+          \    \"organization_id\": \"1a1a1a1a-1a1a-1a1a-1a1a-1a1a1a1a1a14\"\r
+
+          }"
+    response:
+      status: 201
+      statusText: Created
+      headers:
+        - name: Date
+          value: Tue, 02 Apr 2024 10:23:21 GMT
+        - name: Server
+          value: Apache/2.4.54 (Win64) OpenSSL/1.1.1q mod_fcgid/2.3.10-dev
+        - name: X-Powered-By
+          value: PHP/8.2.16
+        - name: Cache-Control
+          value: no-cache, private
+        - name: X-RateLimit-Limit
+          value: "60"
+        - name: X-RateLimit-Remaining
+          value: "59"
+        - name: Access-Control-Allow-Origin
+          value: "*"
+        - name: Vary
+          value: Authorization
+        - name: Keep-Alive
+          value: timeout=5, max=100
+        - name: Connection
+          value: Keep-Alive
+        - name: Transfer-Encoding
+          value: chunked
+        - name: Content-Type
+          value: application/json
+      body:
+        type: json
+        data: |-
+          {
+              "success": true,
+              "code": 0,
+              "locale": "en",
+              "message": "Account created successfully",
+              "data": null
+          }

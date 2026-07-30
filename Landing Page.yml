@@ -1,0 +1,132 @@
+info:
+  name: Landing Page
+  type: http
+  seq: 4
+
+http:
+  method: POST
+  url: "{{base_url}}/user/landing"
+  body:
+    type: json
+    data: "{\r
+
+      \    \"country\": \"\" // When user selects a country, else null.\r
+
+      }"
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+examples:
+  - name: Landing Page
+    request:
+      url: /landing
+      method: GET
+    response:
+      headers:
+        - name: Content-Type
+          value: application/json
+      body:
+        type: json
+        data: |-
+          {
+              "success": true,
+              "plans": [
+                  {
+                      "id": 2,
+                      "plan_id": 1,
+                      "country_id": 2,
+                      "amount_monthly": "9925",
+                      "amount_quarterly": "39036",
+                      "amount_yearly": "119319",
+                      "has_trial": true,
+                      "trial_period": 60,
+                      "cancellation_period": 30,
+                      "support_type": "24/7 Priority Chat",
+                      "refund_eligibility": false,
+                      "active": true,
+                      "plan": {
+                          "id": 1,
+                          "name": "Test plan 1",
+                          "organization_type_id": 1,
+                          "description": null,
+                          "type": "Permanent",
+                          "start_date": null,
+                          "end_date": null,
+                          "active": true,
+                          "number_of_departments": 25,
+                          "number_of_doctors": 14,
+                          "number_of_pharmacy_users": 19,
+                          "number_of_store_users": 33,
+                          "number_of_wards": 21,
+                          "number_of_ward_users": 15,
+                          "number_of_clinical_lab_users": 17,
+                          "number_of_xray_lab_users": 5,
+                          "number_of_doctor_assistants": 19,
+                          "number_of_account_admin": 34,
+                          "number_of_cashiers": 15,
+                          "number_of_billing_users": 8,
+                          "number_of_hospital_admin": 29,
+                          "number_of_hr_users": 16
+                      },
+                      "country": {
+                          "id": 2,
+                          "name": "Ghana",
+                          "region_id": 1,
+                          "flag": "https://www.countryflags.com/wp-content/uploads/ghana-flag-png-large.png",
+                          "currency": "GH₵",
+                          "active": true
+                      }
+                  },
+                  {
+                      "id": 4,
+                      "plan_id": 2,
+                      "country_id": 2,
+                      "amount_monthly": "2461",
+                      "amount_quarterly": "14133",
+                      "amount_yearly": "41875",
+                      "has_trial": false,
+                      "trial_period": 0,
+                      "cancellation_period": 30,
+                      "support_type": "Basic Chat",
+                      "refund_eligibility": false,
+                      "active": true,
+                      "plan": {
+                          "id": 2,
+                          "name": "2nd Test plan",
+                          "organization_type_id": 2,
+                          "description": null,
+                          "type": "Temporary",
+                          "start_date": "2024-01-01",
+                          "end_date": "2024-05-05",
+                          "active": true,
+                          "number_of_departments": 34,
+                          "number_of_doctors": 30,
+                          "number_of_pharmacy_users": 12,
+                          "number_of_store_users": 6,
+                          "number_of_wards": 34,
+                          "number_of_ward_users": 8,
+                          "number_of_clinical_lab_users": 8,
+                          "number_of_xray_lab_users": 28,
+                          "number_of_doctor_assistants": 11,
+                          "number_of_account_admin": 14,
+                          "number_of_cashiers": 21,
+                          "number_of_billing_users": 35,
+                          "number_of_hospital_admin": 28,
+                          "number_of_hr_users": 7
+                      },
+                      "country": {
+                          "id": 2,
+                          "name": "Ghana",
+                          "region_id": 1,
+                          "flag": "https://www.countryflags.com/wp-content/uploads/ghana-flag-png-large.png",
+                          "currency": "GH₵",
+                          "active": true
+                      }
+                  }
+              ]
+          }

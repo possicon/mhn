@@ -1,0 +1,7 @@
+info:
+  name: Customer Support
+  type: folder
+  seq: 13
+
+request:
+  auth: inherit

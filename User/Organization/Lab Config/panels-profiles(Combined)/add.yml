@@ -1,0 +1,149 @@
+info:
+  name: add
+  type: http
+  seq: 1
+
+http:
+  method: POST
+  url: "{{base_url}}/user/organization/panels/profiles"
+  headers:
+    - name: Accept
+      value: application/json
+  body:
+    type: json
+    data: "{\r
+
+      \    \"diagnostic_family\":[\"hematology\",\"biochemistry\"], //hematology,biochemistry,microbiology\r
+
+      \    \"panel_name\":\"{{$randomWord}}\",\r
+
+      \    \"gender\":\"Female\",\r
+
+      \    \"description\":\"This is blood test require for body\",\r
+
+      \    \"test_preparation\":\"test preparation\",\r
+
+      \    \"individual_diagnostic\":[\"a139c7ba-b98e-44c5-b8bd-9eee64a99d5d\"]\r
+
+      }"
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+examples:
+  - name: add
+    request:
+      url: "{{base_url}}/user/organization/panels/profiles"
+      method: POST
+      headers:
+        - name: Accept
+          value: application/json
+      body:
+        type: json
+        data: "{\r
+
+          \    \"diagnostic_family\":[\"hematology\",\"biochemistry\"], //hematology,biochemistry,microbiology\r
+
+          \    \"panel_name\":\"{{$randomWord}}\",\r
+
+          \    \"gender\":\"Female\",\r
+
+          \    \"description\":\"This is blood test require for body\",\r
+
+          \    \"test_preparation\":\"test preparation\",\r
+
+          \    \"individual_diagnostic\":[\"a139c7ba-b98e-44c5-b8bd-9eee64a99d5d\"]\r
+
+          }"
+    response:
+      status: 200
+      statusText: OK
+      headers:
+        - name: Server
+          value: nginx/1.24.0 (Ubuntu)
+        - name: Content-Type
+          value: application/json
+        - name: Transfer-Encoding
+          value: chunked
+        - name: Connection
+          value: keep-alive
+        - name: Cache-Control
+          value: no-cache, private
+        - name: Date
+          value: Tue, 16 Jun 2026 20:42:31 GMT
+        - name: X-RateLimit-Limit
+          value: "60"
+        - name: X-RateLimit-Remaining
+          value: "58"
+        - name: Vary
+          value: Origin
+        - name: X-Frame-Options
+          value: SAMEORIGIN
+        - name: X-XSS-Protection
+          value: 1; mode=block
+        - name: X-Content-Type-Options
+          value: nosniff
+      body:
+        type: json
+        data: |-
+          {
+              "success": true,
+              "code": 0,
+              "locale": "en",
+              "message": "success",
+              "data": {
+                  "item": {
+                      "panel_name": {
+                          "id": "a20a1923-a570-4462-a364-f15adceff5a1",
+                          "name": "wireless"
+                      },
+                      "gender": "Female",
+                      "description": "This is blood test require for body",
+                      "test_preparation": "test preparation",
+                      "diagnostic_family": [
+                          "hematology",
+                          "biochemistry"
+                      ],
+                      "individual_diagnostic": [
+                          "a139c7ba-b98e-44c5-b8bd-9eee64a99d5d"
+                      ],
+                      "organization_id": "a134be07-5a37-4059-b549-37210fe65250",
+                      "done_by_id": "a134bfd5-bb77-4c87-a0e0-ad7e2a793325",
+                      "id": "a20a1923-a65e-48d6-92e8-57eef6d1c11c",
+                      "updated_at": "2026-06-16T20:42:31.000000Z",
+                      "created_at": "2026-06-16T20:42:31.000000Z",
+                      "diagnostic_family_count": 2,
+                      "individual_diagnostic_count": 1,
+                      "diagnostic_configs": [
+                          {
+                              "id": "a139c7ba-b98e-44c5-b8bd-9eee64a99d5d",
+                              "diagnostic_family": "[\"hematology\", \"biochemistry\"]",
+                              "test_name": "a134bd87-d6ba-4706-912a-ab34e32217e6",
+                              "gender": "Male",
+                              "description": "This is blood test require for body",
+                              "result_type": "number",
+                              "normal_range": null,
+                              "status": null,
+                              "minimum_range": "5",
+                              "maximum_range": "10",
+                              "sample": null,
+                              "vial": null,
+                              "unit": "0fe2ce85-1864-11f1-a29f-201e88722275",
+                              "test_preparation": "test preparation",
+                              "organization_id": "a134be07-5a37-4059-b549-37210fe65250",
+                              "done_by_id": "a134bfd5-bb77-4c87-a0e0-ad7e2a793325",
+                              "created_at": "2026-03-05T07:22:41.000000Z",
+                              "updated_at": "2026-03-05T07:22:41.000000Z"
+                          }
+                      ],
+                      "service": {
+                          "id": "a20a1923-a570-4462-a364-f15adceff5a1",
+                          "name": "wireless"
+                      }
+                  }
+              }
+          }

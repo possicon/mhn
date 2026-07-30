@@ -1,0 +1,125 @@
+info:
+  name: List All Organization
+  type: http
+  seq: 1
+
+http:
+  method: GET
+  url: "{{base_url}}/admin/organization?search=Org Onboarded"
+  params:
+    - name: take
+      value: "10"
+      type: query
+      disabled: true
+    - name: page
+      value: "2"
+      type: query
+      disabled: true
+    - name: search
+      value: Org Onboarded
+      type: query
+    - name: filter
+      value: Hospitals & Health Centers
+      type: query
+      disabled: true
+  body:
+    type: json
+    data: ""
+  auth:
+    type: bearer
+    token: "{{adminToken}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+examples:
+  - name: List All Organization
+    request:
+      url: "{{base_url}}/admin/organization?search=Org Onboarded"
+      method: GET
+      params:
+        - name: take
+          value: "10"
+          type: query
+          disabled: true
+        - name: page
+          value: "2"
+          type: query
+          disabled: true
+        - name: search
+          value: Org Onboarded
+          type: query
+        - name: filter
+          value: Hospitals & Health Centers
+          type: query
+          disabled: true
+      body:
+        type: json
+        data: ""
+    response:
+      status: 200
+      statusText: OK
+      headers:
+        - name: Date
+          value: Fri, 13 Dec 2024 22:35:02 GMT
+        - name: Server
+          value: Apache/2.4.54 (Win64) OpenSSL/1.1.1d mod_fcgid/2.3.10-dev
+        - name: X-Powered-By
+          value: PHP/8.2.17
+        - name: Cache-Control
+          value: no-cache, private
+        - name: X-RateLimit-Limit
+          value: "60"
+        - name: X-RateLimit-Remaining
+          value: "59"
+        - name: Access-Control-Allow-Origin
+          value: "*"
+        - name: Vary
+          value: Authorization
+        - name: Keep-Alive
+          value: timeout=5, max=100
+        - name: Connection
+          value: Keep-Alive
+        - name: Transfer-Encoding
+          value: chunked
+        - name: Content-Type
+          value: application/json
+      body:
+        type: json
+        data: |-
+          {
+              "success": true,
+              "code": 0,
+              "locale": "en",
+              "message": "Fetched organizations successfully",
+              "data": {
+                  "organizations": [
+                      {
+                          "id": "9bd69b2b-2ebe-4e48-8cea-e24e2d42c743",
+                          "name": "Ikorodu  NG",
+                          "region": "Africa",
+                          "country": "United States",
+                          "orgType": null,
+                          "email": "possicon@gmail.com",
+                          "status": "Org Onboarded",
+                          "invited_status": false
+                      },
+                      {
+                          "id": "9bc5eb78-74d2-45f4-a677-05d07dca6a63",
+                          "name": "MHN",
+                          "region": "Africa",
+                          "country": "United States",
+                          "orgType": "Hospitals & Health Centers",
+                          "email": "pinnacles@pinnacle.com",
+                          "status": "Org Onboarded",
+                          "invited_status": false
+                      }
+                  ],
+                  "total": 2,
+                  "take": 20,
+                  "page": 1
+              }
+          }

@@ -1,0 +1,172 @@
+info:
+  name: me
+  type: http
+  seq: 6
+
+http:
+  method: GET
+  url: "{{base_url}}/user/getUser"
+  headers:
+    - name: Accept
+      value: application/json
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+examples:
+  - name: New Request
+    request:
+      url: "{{base_url}}/user/getUser"
+      method: GET
+      headers:
+        - name: Accept
+          value: application/json
+    response:
+      status: 200
+      statusText: OK
+      headers:
+        - name: Date
+          value: Fri, 25 Apr 2025 09:38:36 GMT
+        - name: Server
+          value: Apache/2.4.54 (Win64) OpenSSL/1.1.1d mod_fcgid/2.3.10-dev
+        - name: X-Powered-By
+          value: PHP/8.2.17
+        - name: Cache-Control
+          value: no-cache, private
+        - name: X-RateLimit-Limit
+          value: "60"
+        - name: X-RateLimit-Remaining
+          value: "59"
+        - name: Access-Control-Allow-Origin
+          value: "*"
+        - name: Vary
+          value: Authorization
+        - name: Keep-Alive
+          value: timeout=5, max=100
+        - name: Connection
+          value: Keep-Alive
+        - name: Transfer-Encoding
+          value: chunked
+        - name: Content-Type
+          value: application/json
+      body:
+        type: json
+        data: |-
+          {
+              "success": true,
+              "message": "User fetched successfully",
+              "data": {
+                  "user_id": "9bc6382c-bb73-4c7d-9409-677fe560485d",
+                  "firstname": "General",
+                  "email": "contactus@mhn.ng",
+                  "phone": "0802323232323",
+                  "avatar": null,
+                  "type": "owner",
+                  "organization": "MHN",
+                  "organization_id": "9bc5eb78-74d2-45f4-a677-05d07dca6a63",
+                  "subdomain": "emmanuel",
+                  "interested_plan": "9c0c8b10-3620-4653-90f0-8ee32c2cce49",
+                  "plan": "9c0c8b10-3620-4653-90f0-8ee32c2cce49",
+                  "country": {
+                      "id": "9b9faee3-6aaa-4050-bd6c-98a43e674250",
+                      "name": "United States",
+                      "region_id": "9b9ecc53-4727-43a1-bf0e-9e05de7c568a",
+                      "currency_name": "United States dollar",
+                      "currency_symbol": "USD",
+                      "active": true,
+                      "flag": null
+                  },
+                  "roles": [
+                      {
+                          "id": 3,
+                          "name": "owner",
+                          "status": "active",
+                          "guard_name": "user",
+                          "created_at": "2024-04-10T12:34:12.000000Z",
+                          "updated_at": "2024-04-10T12:34:12.000000Z",
+                          "deleted_at": null,
+                          "pivot": {
+                              "model_type": "App\\Models\\User",
+                              "model_uuid": "9bc6382c-bb73-4c7d-9409-677fe560485d",
+                              "role_id": 3
+                          },
+                          "permissions": [
+                              {
+                                  "id": 1,
+                                  "name": "create",
+                                  "guard_name": "user",
+                                  "group_name": "user",
+                                  "created_at": "2024-04-27T15:16:57.000000Z",
+                                  "updated_at": "2024-04-27T15:16:57.000000Z",
+                                  "pivot": {
+                                      "role_id": 3,
+                                      "permission_id": 1
+                                  }
+                              },
+                              {
+                                  "id": 2,
+                                  "name": "edit",
+                                  "guard_name": "user",
+                                  "group_name": "user",
+                                  "created_at": "2024-04-27T15:16:57.000000Z",
+                                  "updated_at": "2024-04-27T15:16:57.000000Z",
+                                  "pivot": {
+                                      "role_id": 3,
+                                      "permission_id": 2
+                                  }
+                              },
+                              {
+                                  "id": 3,
+                                  "name": "delete",
+                                  "guard_name": "user",
+                                  "group_name": "user",
+                                  "created_at": "2024-04-27T15:16:57.000000Z",
+                                  "updated_at": "2024-04-27T15:16:57.000000Z",
+                                  "pivot": {
+                                      "role_id": 3,
+                                      "permission_id": 3
+                                  }
+                              }
+                          ]
+                      },
+                      {
+                          "id": 6,
+                          "name": "doctor",
+                          "status": "active",
+                          "guard_name": "user",
+                          "created_at": "2024-04-27T15:35:38.000000Z",
+                          "updated_at": "2024-04-27T15:39:12.000000Z",
+                          "deleted_at": null,
+                          "pivot": {
+                              "model_type": "App\\Models\\User",
+                              "model_uuid": "9bc6382c-bb73-4c7d-9409-677fe560485d",
+                              "role_id": 6
+                          },
+                          "permissions": []
+                      }
+                  ],
+                  "modules": [
+                      {
+                          "id": "9be8a28b-2ac4-4f57-8392-381789bc6773",
+                          "role_id": 3,
+                          "module_id": 14242,
+                          "created_at": "2024-04-27T15:16:57.000000Z",
+                          "updated_at": "2024-04-27T15:16:57.000000Z",
+                          "module": {
+                              "id": 14242,
+                              "name": "hmo_mager",
+                              "img": "dfsd",
+                              "description": "sfrwfcz",
+                              "organization_type_id": 1,
+                              "active": 1,
+                              "created_at": null,
+                              "updated_at": null
+                          }
+                      }
+                  ]
+              }
+          }

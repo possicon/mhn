@@ -1,0 +1,40 @@
+info:
+  name: Edit licence
+  type: http
+  seq: 7
+
+http:
+  method: PATCH
+  url: "{{base_url}}/admin/licence/edit"
+  body:
+    type: json
+    data: "{\r
+
+      \    \"id\": \"9bba493a-4af4-46cd-8af9-5a49534b0d64\",\r
+
+      \    \"name\": \"Business Name Registration\",\r
+
+      \    \"purpose\": \"Business organization\",\r
+
+      \    \"category\": \"Business Identification\",\r
+
+      \    \"has_number\": false,\r
+
+      \    \"country_id\": \"9bb5e95c-833f-41b0-ac8e-2efb5bccfd55\",\r
+
+      \    \"number\": \"1899\",\r
+
+      \    \"is_required\": true,\r
+
+      \    \"has_file\": false\r
+
+      }"
+  auth:
+    type: bearer
+    token: "{{token}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

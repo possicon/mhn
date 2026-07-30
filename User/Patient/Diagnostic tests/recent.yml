@@ -1,0 +1,156 @@
+info:
+  name: recent
+  type: http
+  seq: 15
+
+http:
+  method: GET
+  url: "{{base_url}}/user/organization/test/recent?for_completed_list=0"
+  headers:
+    - name: Accept
+      value: application/json
+  params:
+    - name: for_completed_list
+      value: "0"
+      type: query
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+examples:
+  - name: recent
+    request:
+      url: "{{base_url}}/user/organization/test/recent?for_completed_list=0"
+      method: GET
+      headers:
+        - name: Accept
+          value: application/json
+      params:
+        - name: for_completed_list
+          value: "0"
+          type: query
+    response:
+      status: 200
+      statusText: OK
+      headers:
+        - name: Date
+          value: Fri, 15 Nov 2024 13:37:20 GMT
+        - name: Server
+          value: Apache/2.4.54 (Win64) OpenSSL/1.1.1d mod_fcgid/2.3.10-dev
+        - name: X-Powered-By
+          value: PHP/8.2.17
+        - name: Cache-Control
+          value: no-cache, private
+        - name: X-RateLimit-Limit
+          value: "60"
+        - name: X-RateLimit-Remaining
+          value: "58"
+        - name: Access-Control-Allow-Origin
+          value: "*"
+        - name: Vary
+          value: Authorization
+        - name: Keep-Alive
+          value: timeout=5, max=100
+        - name: Connection
+          value: Keep-Alive
+        - name: Transfer-Encoding
+          value: chunked
+        - name: Content-Type
+          value: application/json
+      body:
+        type: json
+        data: |-
+          {
+              "success": true,
+              "code": 0,
+              "locale": "en",
+              "message": "success",
+              "data": {
+                  "data": [
+                      {
+                          "id": "9d7e7d9f-ca45-436c-9527-a497cae5700b",
+                          "general_name": "hematology",
+                          "created_at": "2024-11-15T10:19:50.000000Z",
+                          "patient_first_name": "Goodness",
+                          "patient_last_name": "Ebubechukwu",
+                          "patient_sequence": "MHN_USAi2dTkjg"
+                      },
+                      {
+                          "id": "9d7e7d9f-cc8d-4537-95a0-c5863229adfe",
+                          "general_name": "biochemistry",
+                          "created_at": "2024-11-15T10:19:50.000000Z",
+                          "patient_first_name": "Goodness",
+                          "patient_last_name": "Ebubechukwu",
+                          "patient_sequence": "MHN_USAi2dTkjg"
+                      },
+                      {
+                          "id": "9d7e7d9f-ce05-450d-bc0b-709de026112d",
+                          "general_name": "microbiology",
+                          "created_at": "2024-11-15T10:19:50.000000Z",
+                          "patient_first_name": "Goodness",
+                          "patient_last_name": "Ebubechukwu",
+                          "patient_sequence": "MHN_USAi2dTkjg"
+                      },
+                      {
+                          "id": "9d7e7d9f-cf3c-4eb9-a915-c5fa94cee3f1",
+                          "general_name": "biochemistry",
+                          "created_at": "2024-11-15T10:19:50.000000Z",
+                          "patient_first_name": "Goodness",
+                          "patient_last_name": "Ebubechukwu",
+                          "patient_sequence": "MHN_USAi2dTkjg"
+                      },
+                      {
+                          "id": "9d7e7d9f-d070-494d-9a6e-724f0491e2c7",
+                          "general_name": "microbiology",
+                          "created_at": "2024-11-15T10:19:50.000000Z",
+                          "patient_first_name": "Goodness",
+                          "patient_last_name": "Ebubechukwu",
+                          "patient_sequence": "MHN_USAi2dTkjg"
+                      },
+                      {
+                          "id": "9d7e7d70-22a2-4f3f-904b-88240f50fe49",
+                          "general_name": null,
+                          "created_at": "2024-11-15T10:19:19.000000Z",
+                          "patient_first_name": "Goodness",
+                          "patient_last_name": "Ebubechukwu",
+                          "patient_sequence": "MHN_USAi2dTkjg"
+                      },
+                      {
+                          "id": "9d7e7634-a93b-4cb6-8804-5bfdc87fe7aa",
+                          "general_name": "hematology",
+                          "created_at": "2024-11-15T09:59:06.000000Z",
+                          "patient_first_name": "Goodness",
+                          "patient_last_name": "Ebubechukwu",
+                          "patient_sequence": "MHN_USAi2dTkjg"
+                      },
+                      {
+                          "id": "9d7e7634-aabe-4170-a9cd-c20c4bab0286",
+                          "general_name": "biochemistry",
+                          "created_at": "2024-11-15T09:59:06.000000Z",
+                          "patient_first_name": "Goodness",
+                          "patient_last_name": "Ebubechukwu",
+                          "patient_sequence": "MHN_USAi2dTkjg"
+                      },
+                      {
+                          "id": "9d7e7634-ac25-4336-9124-c8f9c66b350e",
+                          "general_name": "microbiology",
+                          "created_at": "2024-11-15T09:59:06.000000Z",
+                          "patient_first_name": "Goodness",
+                          "patient_last_name": "Ebubechukwu",
+                          "patient_sequence": "MHN_USAi2dTkjg"
+                      },
+                      {
+                          "id": "9d7e7634-ad8e-496b-9651-933a06aa3f5d",
+                          "general_name": "biochemistry",
+                          "created_at": "2024-11-15T09:59:06.000000Z",
+                          "patient_first_name": "Goodness",
+                          "patient_last_name": "Ebubechukwu",
+                          "patient_sequence": "MHN_USAi2dTkjg"
+                      }
+                  ]
+              }
+          }

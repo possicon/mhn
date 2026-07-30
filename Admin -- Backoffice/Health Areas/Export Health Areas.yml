@@ -1,0 +1,30 @@
+info:
+  name: Export Health Areas
+  type: http
+  seq: 11
+
+http:
+  method: GET
+  url: "{{base_url}}/admin/health-area/export"
+  body:
+    type: json
+    data: "{\r
+
+      \  \"type\": \"csv\", // or \"pdf\". \"csv\" is the default.\r
+
+      \  \"ids\":  null\r
+
+      //   [\r
+
+      //     \"9b6dcafe-8cb5-4caa-900e-29e7bf508400\"\r
+
+      //   ] //ids can be null if you want all plans to be exported.\r
+
+      }"
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

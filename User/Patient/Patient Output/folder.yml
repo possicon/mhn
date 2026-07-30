@@ -1,0 +1,7 @@
+info:
+  name: Patient Output
+  type: folder
+  seq: 37
+
+request:
+  auth: inherit

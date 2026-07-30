@@ -1,0 +1,92 @@
+info:
+  name: show
+  type: http
+  seq: 3
+
+http:
+  method: GET
+  url: "{{base_url}}/user/patient/:id/medical_history/:past_medical_condition"
+  headers:
+    - name: Accept
+      value: application/json
+  params:
+    - name: id
+      value: 9c111152-abe1-4490-ab04-c066445133a7
+      type: path
+    - name: past_medical_condition
+      value: 9c17e77c-dec0-4ccb-afa0-9dbab09af53c
+      type: path
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+examples:
+  - name: show
+    request:
+      url: "{{base_url}}/user/patient/:id/medical_history/:past_medical_condition"
+      method: GET
+      headers:
+        - name: Accept
+          value: application/json
+      params:
+        - name: id
+          value: 9c111152-abe1-4490-ab04-c066445133a7
+          type: path
+        - name: past_medical_condition
+          value: 9c17e77c-dec0-4ccb-afa0-9dbab09af53c
+          type: path
+    response:
+      status: 200
+      statusText: OK
+      headers:
+        - name: Date
+          value: Tue, 28 May 2024 01:52:36 GMT
+        - name: Server
+          value: Apache/2.4.54 (Win64) OpenSSL/1.1.1q mod_fcgid/2.3.10-dev
+        - name: X-Powered-By
+          value: PHP/8.2.16
+        - name: Cache-Control
+          value: no-cache, private
+        - name: X-RateLimit-Limit
+          value: "60"
+        - name: X-RateLimit-Remaining
+          value: "59"
+        - name: Access-Control-Allow-Origin
+          value: "*"
+        - name: Vary
+          value: Authorization
+        - name: Keep-Alive
+          value: timeout=5, max=100
+        - name: Connection
+          value: Keep-Alive
+        - name: Transfer-Encoding
+          value: chunked
+        - name: Content-Type
+          value: application/json
+      body:
+        type: json
+        data: |-
+          {
+              "success": true,
+              "code": 0,
+              "locale": "en",
+              "message": "You have successfully fetched the past medical condition",
+              "data": {
+                  "condition": {
+                      "id": "9c17e77c-dec0-4ccb-afa0-9dbab09af53c",
+                      "patient_id": "9c111152-abe1-4490-ab04-c066445133a7",
+                      "visit_date": "2024-05-21 00:00:00",
+                      "name_of_ailments": [
+                          "Fever",
+                          "Diabetes",
+                          "Kidney Failure"
+                      ],
+                      "created_at": "2024-05-21T04:13:39.000000Z",
+                      "updated_at": "2024-05-21T04:13:39.000000Z"
+                  }
+              }
+          }

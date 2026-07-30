@@ -1,0 +1,139 @@
+info:
+  name: update
+  type: http
+  seq: 6
+
+http:
+  method: POST
+  url: "{{base_url}}/user/physical/:id"
+  headers:
+    - name: Accept
+      value: application/json
+  params:
+    - name: id
+      value: 9c48b288-b1f5-4875-80cf-1d9a24f735ef
+      type: path
+  body:
+    type: json
+    data: "{\r
+
+      \    \"observation\":\"Difficulty with bending, lifting, and prolonged sitting\",\r
+
+      \    \"palpation_findings\":\"palpation_findings\",\r
+
+      \    \"range_of_motion\":[\"Cervical Spine\",\"Hip\"],\r
+
+      \    \"movement\":[\"Flexion\",\"Adduction\"],\r
+
+      \    \"measurement\":[\"20\",\"25\"],\r
+
+      \    \"joint_notes\":[\"joint_notes\",\"joint_notes\"],\r
+
+      \    \"muscle_strength\":[\"Shoulder\",\"Hip\"],\r
+
+      \    \"muscle\":[\"Deltoid\",\"Gluteus Medius\"],\r
+
+      \    \"strength_grade\":[\"0/5\",\"1/5\"],\r
+
+      \    \"flexibility\":\"flexibility\",\r
+
+      \    \"posture_analysis\":\"posture_analysis\",\r
+
+      \    \"gait_analysis\":\"gait_analysis\",\r
+
+      \    \"special_tests\":\"special_tests\",\r
+
+      \    \"muscle_strength_notes\":[\"muscle_strength_notes\",\"muscle_strength_notes\"]\r
+
+      }"
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+examples:
+  - name: update
+    request:
+      url: "{{base_url}}/user/physical/:id"
+      method: POST
+      headers:
+        - name: Accept
+          value: application/json
+      params:
+        - name: id
+          value: 9c48b288-b1f5-4875-80cf-1d9a24f735ef
+          type: path
+      body:
+        type: json
+        data: "{\r
+
+          \    \"observation\":\"Difficulty with bending, lifting, and prolonged sitting\",\r
+
+          \    \"palpation_findings\":\"palpation_findings\",\r
+
+          \    \"range_of_motion\":[\"Cervical Spine\",\"Hip\"],\r
+
+          \    \"movement\":[\"Flexion\",\"Adduction\"],\r
+
+          \    \"measurement\":[\"20\",\"25\"],\r
+
+          \    \"joint_notes\":[\"joint_notes\",\"joint_notes\"],\r
+
+          \    \"muscle_strength\":[\"Shoulder\",\"Hip\"],\r
+
+          \    \"muscle\":[\"Deltoid\",\"Gluteus Medius\"],\r
+
+          \    \"strength_grade\":[\"0/5\",\"1/5\"],\r
+
+          \    \"flexibility\":\"flexibility\",\r
+
+          \    \"posture_analysis\":\"posture_analysis\",\r
+
+          \    \"gait_analysis\":\"gait_analysis\",\r
+
+          \    \"special_tests\":\"special_tests\",\r
+
+          \    \"muscle_strength_notes\":[\"muscle_strength_notes\",\"muscle_strength_notes\"]\r
+
+          }"
+    response:
+      status: 200
+      statusText: OK
+      headers:
+        - name: Date
+          value: Fri, 14 Jun 2024 10:32:03 GMT
+        - name: Server
+          value: Apache/2.4.54 (Win64) OpenSSL/1.1.1q mod_fcgid/2.3.10-dev
+        - name: X-Powered-By
+          value: PHP/8.2.16
+        - name: Cache-Control
+          value: no-cache, private
+        - name: X-RateLimit-Limit
+          value: "60"
+        - name: X-RateLimit-Remaining
+          value: "58"
+        - name: Access-Control-Allow-Origin
+          value: "*"
+        - name: Vary
+          value: Authorization
+        - name: Keep-Alive
+          value: timeout=5, max=100
+        - name: Connection
+          value: Keep-Alive
+        - name: Transfer-Encoding
+          value: chunked
+        - name: Content-Type
+          value: application/json
+      body:
+        type: json
+        data: |-
+          {
+              "success": true,
+              "code": 0,
+              "locale": "en",
+              "message": "success",
+              "data": null
+          }

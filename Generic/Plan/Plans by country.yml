@@ -1,0 +1,135 @@
+info:
+  name: Plans by country
+  type: http
+  seq: 3
+
+http:
+  method: GET
+  url: "{{base_url}}/generic/countries/:countryId/plans"
+  headers:
+    - name: Accept
+      value: application/json
+  params:
+    - name: countryId
+      value: "161"
+      type: path
+  body:
+    type: json
+    data: |-
+      // 9bb5e95c-833f-41b0-ac8e-2efb5bccfd55 // Local
+      // 9bb76bef-d804-4b6c-9711-452aea125be9 //Stage 
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+examples:
+  - name: Plans by country
+    request:
+      url: "{{base_url}}/generic/countries/:countryId/plans"
+      method: GET
+      headers:
+        - name: Accept
+          value: application/json
+      params:
+        - name: countryId
+          value: 9b9faee2-dd02-4ae5-945c-0a57977b0ae0
+          type: path
+    response:
+      status: 200
+      statusText: OK
+      headers:
+        - name: Date
+          value: Sun, 14 Apr 2024 17:34:38 GMT
+        - name: Server
+          value: Apache/2.4.54 (Win64) OpenSSL/1.1.1q mod_fcgid/2.3.10-dev
+        - name: X-Powered-By
+          value: PHP/8.2.16
+        - name: Cache-Control
+          value: no-cache, private
+        - name: X-RateLimit-Limit
+          value: "60"
+        - name: X-RateLimit-Remaining
+          value: "58"
+        - name: Access-Control-Allow-Origin
+          value: "*"
+        - name: Keep-Alive
+          value: timeout=5, max=100
+        - name: Connection
+          value: Keep-Alive
+        - name: Transfer-Encoding
+          value: chunked
+        - name: Content-Type
+          value: application/json
+      body:
+        type: json
+        data: |-
+          {
+              "success": true,
+              "code": 0,
+              "locale": "en",
+              "message": "Plan fetched successfully",
+              "data": {
+                  "items": [
+                      {
+                          "id": "9baa6a1f-a6ae-4a64-9330-aff8996c87f7",
+                          "name": "Plan At",
+                          "type": "Temporary",
+                          "description": "This amazing plan gives you an awesome description.",
+                          "start_date": "2024-01-01",
+                          "end_date": "2024-05-05",
+                          "active": false,
+                          "number_of_branches": 2,
+                          "number_of_users": 3,
+                          "telemedicine": false,
+                          "hmo": false,
+                          "number_of_storage": "1TB",
+                          "pricing_per_user": 10,
+                          "amount_monthly": "8000",
+                          "amount_quarterly": "20000",
+                          "amount_yearly": "35000",
+                          "has_trial": true,
+                          "trial_period": 60,
+                          "sms_credit": "50",
+                          "cancellation_period": 30,
+                          "support_type": 1,
+                          "refund_eligibility": false,
+                          "pivot": {
+                              "country_id": "9b9faee2-dd02-4ae5-945c-0a57977b0ae0",
+                              "plan_id": "9baa6a1f-a6ae-4a64-9330-aff8996c87f7"
+                          }
+                      },
+                      {
+                          "id": "9bb797ec-71d4-41cc-a925-ede56ca483c1",
+                          "name": "Plan A5",
+                          "type": "Temporary",
+                          "description": "This amazing plan gives you an awesome description.",
+                          "start_date": "2024-01-01",
+                          "end_date": "2024-05-05",
+                          "active": false,
+                          "number_of_branches": 2,
+                          "number_of_users": 3,
+                          "telemedicine": false,
+                          "hmo": false,
+                          "number_of_storage": "1TB",
+                          "pricing_per_user": 10,
+                          "amount_monthly": null,
+                          "amount_quarterly": null,
+                          "amount_yearly": null,
+                          "has_trial": false,
+                          "trial_period": 0,
+                          "sms_credit": "30",
+                          "cancellation_period": 0,
+                          "support_type": 1,
+                          "refund_eligibility": false,
+                          "pivot": {
+                              "country_id": "9b9faee2-dd02-4ae5-945c-0a57977b0ae0",
+                              "plan_id": "9bb797ec-71d4-41cc-a925-ede56ca483c1"
+                          }
+                      }
+                  ]
+              }
+          }

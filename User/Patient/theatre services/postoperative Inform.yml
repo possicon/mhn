@@ -1,0 +1,163 @@
+info:
+  name: postoperative Inform
+  type: http
+  seq: 11
+
+http:
+  method: POST
+  url: "{{base_url}}/user/postoperativeInform"
+  headers:
+    - name: Accept
+      value: application/json
+  body:
+    type: json
+    data: "{\r
+
+      \    \"patient_procedure_id\":\"9c5b932e-d503-446f-889d-b227738214c2\",\r
+
+      \    \"immediate_postoperative_condition\":\"immediate_postoperative_condition\",\r
+
+      \    \"followup_appointment_date\":\"04/04/2024 4:30PM\",\r
+
+      \    \"pain_management_plan\":\"pain_management_plan\",\r
+
+      \    \"pain_postoperative_medications\":\"pain_postoperative_medications\",\r
+
+      \    \"recovery_room_duration\":\"90\",\r
+
+      \    \"followup_appointment_purpose\":\"followup_appointment_purpose\",\r
+
+      \    \"postoperative_diagnosis\":\"preoperative_diagnosis\",\r
+
+      \    \"instructions_for_postoperative_care\":\"instructions_for_postoperative_care\",\r
+
+      \    \"complications_in_recovery\":\"complications_in_recovery\",\r
+
+      \    \"for_antenatal\":1,\r
+
+      \    \"diastolic\":\"34\",\r
+
+      \    \"bmi\":\"90\",\r
+
+      \    \"weight\":\"250\",\r
+
+      \    \"temperature\":\"46\",\r
+
+      \    \"blood_pressure\":\"80\",\r
+
+      \    \"respiratory_rate\":\"46\",\r
+
+      \    \"pulse_in_bps\":\"67\",\r
+
+      \    \"oxygen_saturation_level\":\"20\",\r
+
+      \    \"fetal_heart_rate\":\"56\", // if for_antenatal is 1\r
+
+      \    \"random_blood_sugar\":\"75\",\r
+
+      \    \"fasting_blood_sugar\":\"56\"\r
+
+      }"
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+examples:
+  - name: postoperative Inform
+    request:
+      url: "{{base_url}}/user/postoperativeInform"
+      method: POST
+      headers:
+        - name: Accept
+          value: application/json
+      body:
+        type: json
+        data: "{\r
+
+          \    \"patient_procedure_id\":\"9c5b932e-d503-446f-889d-b227738214c2\",\r
+
+          \    \"immediate_postoperative_condition\":\"immediate_postoperative_condition\",\r
+
+          \    \"followup_appointment_date\":\"04/04/2024 4:30PM\",\r
+
+          \    \"pain_management_plan\":\"pain_management_plan\",\r
+
+          \    \"pain_postoperative_medications\":\"pain_postoperative_medications\",\r
+
+          \    \"recovery_room_duration\":\"90\",\r
+
+          \    \"followup_appointment_purpose\":\"followup_appointment_purpose\",\r
+
+          \    \"postoperative_diagnosis\":\"preoperative_diagnosis\",\r
+
+          \    \"instructions_for_postoperative_care\":\"instructions_for_postoperative_care\",\r
+
+          \    \"complications_in_recovery\":\"complications_in_recovery\",\r
+
+          \    \"for_antenatal\":1,\r
+
+          \    \"diastolic\":\"34\",\r
+
+          \    \"bmi\":\"90\",\r
+
+          \    \"weight\":\"250\",\r
+
+          \    \"temperature\":\"46\",\r
+
+          \    \"blood_pressure\":\"80\",\r
+
+          \    \"respiratory_rate\":\"46\",\r
+
+          \    \"pulse_in_bps\":\"67\",\r
+
+          \    \"oxygen_saturation_level\":\"20\",\r
+
+          \    \"fetal_heart_rate\":\"56\", // if for_antenatal is 1\r
+
+          \    \"random_blood_sugar\":\"75\",\r
+
+          \    \"fasting_blood_sugar\":\"56\"\r
+
+          }"
+    response:
+      status: 201
+      statusText: Created
+      headers:
+        - name: Date
+          value: Wed, 26 Jun 2024 06:19:51 GMT
+        - name: Server
+          value: Apache/2.4.54 (Win64) OpenSSL/1.1.1q mod_fcgid/2.3.10-dev
+        - name: X-Powered-By
+          value: PHP/8.2.16
+        - name: Cache-Control
+          value: no-cache, private
+        - name: X-RateLimit-Limit
+          value: "60"
+        - name: X-RateLimit-Remaining
+          value: "58"
+        - name: Access-Control-Allow-Origin
+          value: "*"
+        - name: Vary
+          value: Authorization
+        - name: Keep-Alive
+          value: timeout=5, max=100
+        - name: Connection
+          value: Keep-Alive
+        - name: Transfer-Encoding
+          value: chunked
+        - name: Content-Type
+          value: application/json
+      body:
+        type: json
+        data: |-
+          {
+              "success": true,
+              "code": 0,
+              "locale": "en",
+              "message": "success",
+              "data": null
+          }

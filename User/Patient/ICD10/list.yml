@@ -1,0 +1,2806 @@
+info:
+  name: list
+  type: http
+  seq: 1
+
+http:
+  method: GET
+  url: "{{base_url}}/user/icd10?search=Z633&sort=category&direction=asc"
+  headers:
+    - name: Accept
+      value: application/json
+  params:
+    - name: search
+      value: Z633
+      type: query
+    - name: sort
+      value: category
+      type: query
+    - name: direction
+      value: asc
+      type: query
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+examples:
+  - name: list
+    request:
+      url: "{{base_url}}/user/icd10?search=renal&sort=category&direction=asc"
+      method: GET
+      headers:
+        - name: Accept
+          value: application/json
+      params:
+        - name: search
+          value: renal
+          type: query
+        - name: sort
+          value: category
+          type: query
+        - name: direction
+          value: asc
+          type: query
+    response:
+      status: 200
+      statusText: OK
+      headers:
+        - name: Date
+          value: Sat, 25 May 2024 01:30:17 GMT
+        - name: Server
+          value: Apache/2.4.54 (Win64) OpenSSL/1.1.1q mod_fcgid/2.3.10-dev
+        - name: X-Powered-By
+          value: PHP/8.2.16
+        - name: Cache-Control
+          value: no-cache, private
+        - name: X-RateLimit-Limit
+          value: "60"
+        - name: X-RateLimit-Remaining
+          value: "59"
+        - name: Access-Control-Allow-Origin
+          value: "*"
+        - name: Vary
+          value: Authorization
+        - name: Keep-Alive
+          value: timeout=5, max=100
+        - name: Connection
+          value: Keep-Alive
+        - name: Transfer-Encoding
+          value: chunked
+        - name: Content-Type
+          value: application/json
+      body:
+        type: json
+        data: |-
+          {
+              "success": true,
+              "code": 0,
+              "locale": "en",
+              "message": "You have successfully  fetch all ICD10",
+              "data": {
+                  "data": [
+                      {
+                          "id": "9c1fb3ae-71a8-4828-bdcb-4a97c9f55c1a",
+                          "catId": "O048",
+                          "gradeCode": "2",
+                          "diseaseCode": "O0482",
+                          "name": "Renal failure following (induced) termination of pregnancy",
+                          "category": "(Induced) termination of pregnancy with other and unspecified complications",
+                          "description": "Renal failure following (induced) termination of pregnancy",
+                          "created_at": "2024-05-25T01:15:24.000000Z",
+                          "updated_at": "2024-05-25T01:15:24.000000Z"
+                      },
+                      {
+                          "id": "9c1fb3c2-e1cd-4627-ba80-12e017ec2aeb",
+                          "catId": "R934",
+                          "gradeCode": "1",
+                          "diseaseCode": "R9341",
+                          "name": "Abn radlgc find on dx imaging renal pelv, ureter, or blddr",
+                          "category": "Abnormal findings on diagnostic imaging of urinary organs",
+                          "description": "Abnormal radiologic findings on diagnostic imaging of renal pelvis, ureter, or bladder",
+                          "created_at": "2024-05-25T01:15:38.000000Z",
+                          "updated_at": "2024-05-25T01:15:38.000000Z"
+                      },
+                      {
+                          "id": "9c1fb3bc-73fd-46a7-a084-23bf4f38fe71",
+                          "catId": "Q273",
+                          "gradeCode": "4",
+                          "diseaseCode": "Q2734",
+                          "name": "Arteriovenous malformation of renal vessel",
+                          "category": "Arteriovenous malformation (peripheral)",
+                          "description": "Arteriovenous malformation of renal vessel",
+                          "created_at": "2024-05-25T01:15:33.000000Z",
+                          "updated_at": "2024-05-25T01:15:33.000000Z"
+                      },
+                      {
+                          "id": "9c1fb37c-e420-4f3e-956e-d6aacfcb125e",
+                          "catId": "I70",
+                          "gradeCode": "1",
+                          "diseaseCode": "I701",
+                          "name": "Atherosclerosis of renal artery",
+                          "category": "Atherosclerosis",
+                          "description": "Atherosclerosis of renal artery",
+                          "created_at": "2024-05-25T01:14:52.000000Z",
+                          "updated_at": "2024-05-25T01:14:52.000000Z"
+                      },
+                      {
+                          "id": "9c1fb35b-a074-4a1d-81fb-3c2344228873",
+                          "catId": "D350",
+                          "gradeCode": "0",
+                          "diseaseCode": "D3500",
+                          "name": "Benign neoplasm of unspecified adrenal gland",
+                          "category": "Benign neoplasm of adrenal gland",
+                          "description": "Benign neoplasm of unspecified adrenal gland",
+                          "created_at": "2024-05-25T01:14:30.000000Z",
+                          "updated_at": "2024-05-25T01:14:30.000000Z"
+                      },
+                      {
+                          "id": "9c1fb35b-a1ae-44c5-bbe6-ea13e5c1bf6a",
+                          "catId": "D350",
+                          "gradeCode": "1",
+                          "diseaseCode": "D3501",
+                          "name": "Benign neoplasm of right adrenal gland",
+                          "category": "Benign neoplasm of adrenal gland",
+                          "description": "Benign neoplasm of right adrenal gland",
+                          "created_at": "2024-05-25T01:14:30.000000Z",
+                          "updated_at": "2024-05-25T01:14:30.000000Z"
+                      },
+                      {
+                          "id": "9c1fb35b-a2e7-4068-9cd4-0ad8eeb349ba",
+                          "catId": "D350",
+                          "gradeCode": "2",
+                          "diseaseCode": "D3502",
+                          "name": "Benign neoplasm of left adrenal gland",
+                          "category": "Benign neoplasm of adrenal gland",
+                          "description": "Benign neoplasm of left adrenal gland",
+                          "created_at": "2024-05-25T01:14:30.000000Z",
+                          "updated_at": "2024-05-25T01:14:30.000000Z"
+                      },
+                      {
+                          "id": "9c1fb35b-677c-45ad-aec2-e14a9a3d23d5",
+                          "catId": "D301",
+                          "gradeCode": "0",
+                          "diseaseCode": "D3010",
+                          "name": "Benign neoplasm of unspecified renal pelvis",
+                          "category": "Benign neoplasm of renal pelvis",
+                          "description": "Benign neoplasm of unspecified renal pelvis",
+                          "created_at": "2024-05-25T01:14:30.000000Z",
+                          "updated_at": "2024-05-25T01:14:30.000000Z"
+                      },
+                      {
+                          "id": "9c1fb35b-68d5-475c-ba97-ec2fb748a9bc",
+                          "catId": "D301",
+                          "gradeCode": "1",
+                          "diseaseCode": "D3011",
+                          "name": "Benign neoplasm of right renal pelvis",
+                          "category": "Benign neoplasm of renal pelvis",
+                          "description": "Benign neoplasm of right renal pelvis",
+                          "created_at": "2024-05-25T01:14:30.000000Z",
+                          "updated_at": "2024-05-25T01:14:30.000000Z"
+                      },
+                      {
+                          "id": "9c1fb35b-6a53-4f35-baf5-93151adc7f41",
+                          "catId": "D301",
+                          "gradeCode": "2",
+                          "diseaseCode": "D3012",
+                          "name": "Benign neoplasm of left renal pelvis",
+                          "category": "Benign neoplasm of renal pelvis",
+                          "description": "Benign neoplasm of left renal pelvis",
+                          "created_at": "2024-05-25T01:14:30.000000Z",
+                          "updated_at": "2024-05-25T01:14:30.000000Z"
+                      },
+                      {
+                          "id": "9c1fb38e-27ee-49b8-b919-b730ad059d56",
+                          "catId": "M1A372",
+                          "gradeCode": "0",
+                          "diseaseCode": "M1A3720",
+                          "name": "Chronic gout due to renal impairment, left ank/ft, w/o toph",
+                          "category": "Chronic gout due to renal impairment, left ankle and foot",
+                          "description": "Chronic gout due to renal impairment, left ankle and foot, without tophus (tophi)",
+                          "created_at": "2024-05-25T01:15:03.000000Z",
+                          "updated_at": "2024-05-25T01:15:03.000000Z"
+                      },
+                      {
+                          "id": "9c1fb38e-28c9-4575-8504-d07b85f15327",
+                          "catId": "M1A372",
+                          "gradeCode": "1",
+                          "diseaseCode": "M1A3721",
+                          "name": "Chronic gout due to renal impairment, left ank/ft, w toph",
+                          "category": "Chronic gout due to renal impairment, left ankle and foot",
+                          "description": "Chronic gout due to renal impairment, left ankle and foot, with tophus (tophi)",
+                          "created_at": "2024-05-25T01:15:03.000000Z",
+                          "updated_at": "2024-05-25T01:15:03.000000Z"
+                      },
+                      {
+                          "id": "9c1fb38e-033f-4bfa-a7ea-19a529b7dc31",
+                          "catId": "M1A322",
+                          "gradeCode": "0",
+                          "diseaseCode": "M1A3220",
+                          "name": "Chronic gout due to renal impairment, left elbow, w/o tophus",
+                          "category": "Chronic gout due to renal impairment, left elbow",
+                          "description": "Chronic gout due to renal impairment, left elbow, without tophus (tophi)",
+                          "created_at": "2024-05-25T01:15:03.000000Z",
+                          "updated_at": "2024-05-25T01:15:03.000000Z"
+                      },
+                      {
+                          "id": "9c1fb38e-0475-4ed1-b8ad-3f6883f4cab9",
+                          "catId": "M1A322",
+                          "gradeCode": "1",
+                          "diseaseCode": "M1A3221",
+                          "name": "Chronic gout due to renal impairment, left elbow, w tophus",
+                          "category": "Chronic gout due to renal impairment, left elbow",
+                          "description": "Chronic gout due to renal impairment, left elbow, with tophus (tophi)",
+                          "created_at": "2024-05-25T01:15:03.000000Z",
+                          "updated_at": "2024-05-25T01:15:03.000000Z"
+                      },
+                      {
+                          "id": "9c1fb38e-13c7-46ec-b17f-db22528b9a3e",
+                          "catId": "M1A342",
+                          "gradeCode": "0",
+                          "diseaseCode": "M1A3420",
+                          "name": "Chronic gout due to renal impairment, left hand, w/o tophus",
+                          "category": "Chronic gout due to renal impairment, left hand",
+                          "description": "Chronic gout due to renal impairment, left hand, without tophus (tophi)",
+                          "created_at": "2024-05-25T01:15:03.000000Z",
+                          "updated_at": "2024-05-25T01:15:03.000000Z"
+                      },
+                      {
+                          "id": "9c1fb38e-14e0-4585-8dde-d9267de333ee",
+                          "catId": "M1A342",
+                          "gradeCode": "1",
+                          "diseaseCode": "M1A3421",
+                          "name": "Chronic gout due to renal impairment, left hand, with tophus",
+                          "category": "Chronic gout due to renal impairment, left hand",
+                          "description": "Chronic gout due to renal impairment, left hand, with tophus (tophi)",
+                          "created_at": "2024-05-25T01:15:03.000000Z",
+                          "updated_at": "2024-05-25T01:15:03.000000Z"
+                      },
+                      {
+                          "id": "9c1fb38e-1a9e-4e75-ad7e-2ae59047db4c",
+                          "catId": "M1A352",
+                          "gradeCode": "0",
+                          "diseaseCode": "M1A3520",
+                          "name": "Chronic gout due to renal impairment, left hip, w/o tophus",
+                          "category": "Chronic gout due to renal impairment, left hip",
+                          "description": "Chronic gout due to renal impairment, left hip, without tophus (tophi)",
+                          "created_at": "2024-05-25T01:15:03.000000Z",
+                          "updated_at": "2024-05-25T01:15:03.000000Z"
+                      },
+                      {
+                          "id": "9c1fb38e-1bcf-4276-adc9-5037edd74c72",
+                          "catId": "M1A352",
+                          "gradeCode": "1",
+                          "diseaseCode": "M1A3521",
+                          "name": "Chronic gout due to renal impairment, left hip, with tophus",
+                          "category": "Chronic gout due to renal impairment, left hip",
+                          "description": "Chronic gout due to renal impairment, left hip, with tophus (tophi)",
+                          "created_at": "2024-05-25T01:15:03.000000Z",
+                          "updated_at": "2024-05-25T01:15:03.000000Z"
+                      },
+                      {
+                          "id": "9c1fb38e-224b-41d6-bfc6-20adaaefc42a",
+                          "catId": "M1A362",
+                          "gradeCode": "0",
+                          "diseaseCode": "M1A3620",
+                          "name": "Chronic gout due to renal impairment, left knee, w/o tophus",
+                          "category": "Chronic gout due to renal impairment, left knee",
+                          "description": "Chronic gout due to renal impairment, left knee, without tophus (tophi)",
+                          "created_at": "2024-05-25T01:15:03.000000Z",
+                          "updated_at": "2024-05-25T01:15:03.000000Z"
+                      },
+                      {
+                          "id": "9c1fb38e-237f-4928-959c-3c6557853bb4",
+                          "catId": "M1A362",
+                          "gradeCode": "1",
+                          "diseaseCode": "M1A3621",
+                          "name": "Chronic gout due to renal impairment, left knee, with tophus",
+                          "category": "Chronic gout due to renal impairment, left knee",
+                          "description": "Chronic gout due to renal impairment, left knee, with tophus (tophi)",
+                          "created_at": "2024-05-25T01:15:03.000000Z",
+                          "updated_at": "2024-05-25T01:15:03.000000Z"
+                      },
+                      {
+                          "id": "9c1fb38d-fbb6-492d-b74e-cf087119d8a4",
+                          "catId": "M1A312",
+                          "gradeCode": "0",
+                          "diseaseCode": "M1A3120",
+                          "name": "Chronic gout due to renal impairment, l shoulder, w/o toph",
+                          "category": "Chronic gout due to renal impairment, left shoulder",
+                          "description": "Chronic gout due to renal impairment, left shoulder, without tophus (tophi)",
+                          "created_at": "2024-05-25T01:15:03.000000Z",
+                          "updated_at": "2024-05-25T01:15:03.000000Z"
+                      },
+                      {
+                          "id": "9c1fb38d-fcf4-47b3-af20-e24da9ea75d1",
+                          "catId": "M1A312",
+                          "gradeCode": "1",
+                          "diseaseCode": "M1A3121",
+                          "name": "Chronic gout due to renal impairment, left shoulder, w toph",
+                          "category": "Chronic gout due to renal impairment, left shoulder",
+                          "description": "Chronic gout due to renal impairment, left shoulder, with tophus (tophi)",
+                          "created_at": "2024-05-25T01:15:03.000000Z",
+                          "updated_at": "2024-05-25T01:15:03.000000Z"
+                      },
+                      {
+                          "id": "9c1fb38e-0b9e-4eb6-86ee-1b7887192a4d",
+                          "catId": "M1A332",
+                          "gradeCode": "0",
+                          "diseaseCode": "M1A3320",
+                          "name": "Chronic gout due to renal impairment, left wrist, w/o tophus",
+                          "category": "Chronic gout due to renal impairment, left wrist",
+                          "description": "Chronic gout due to renal impairment, left wrist, without tophus (tophi)",
+                          "created_at": "2024-05-25T01:15:03.000000Z",
+                          "updated_at": "2024-05-25T01:15:03.000000Z"
+                      },
+                      {
+                          "id": "9c1fb38e-0d17-4bba-ad7d-9bfd17678c13",
+                          "catId": "M1A332",
+                          "gradeCode": "1",
+                          "diseaseCode": "M1A3321",
+                          "name": "Chronic gout due to renal impairment, left wrist, w tophus",
+                          "category": "Chronic gout due to renal impairment, left wrist",
+                          "description": "Chronic gout due to renal impairment, left wrist, with tophus (tophi)",
+                          "created_at": "2024-05-25T01:15:03.000000Z",
+                          "updated_at": "2024-05-25T01:15:03.000000Z"
+                      },
+                      {
+                          "id": "9c1fb38e-2e73-47bf-9c08-0c30f66e9d94",
+                          "catId": "M1A39",
+                          "gradeCode": "X0",
+                          "diseaseCode": "M1A39X0",
+                          "name": "Chronic gout due to renal impairment, mult sites, w/o toph",
+                          "category": "Chronic gout due to renal impairment, multiple sites",
+                          "description": "Chronic gout due to renal impairment, multiple sites, without tophus (tophi)",
+                          "created_at": "2024-05-25T01:15:03.000000Z",
+                          "updated_at": "2024-05-25T01:15:03.000000Z"
+                      },
+                      {
+                          "id": "9c1fb38e-2f90-4f3d-846f-6705533b015d",
+                          "catId": "M1A39",
+                          "gradeCode": "X1",
+                          "diseaseCode": "M1A39X1",
+                          "name": "Chronic gout due to renal impairment, multiple sites, w toph",
+                          "category": "Chronic gout due to renal impairment, multiple sites",
+                          "description": "Chronic gout due to renal impairment, multiple sites, with tophus (tophi)",
+                          "created_at": "2024-05-25T01:15:03.000000Z",
+                          "updated_at": "2024-05-25T01:15:03.000000Z"
+                      },
+                      {
+                          "id": "9c1fb38e-263e-4ca7-b324-d3c7d5af638f",
+                          "catId": "M1A371",
+                          "gradeCode": "0",
+                          "diseaseCode": "M1A3710",
+                          "name": "Chronic gout due to renal impairment, right ank/ft, w/o toph",
+                          "category": "Chronic gout due to renal impairment, right ankle and foot",
+                          "description": "Chronic gout due to renal impairment, right ankle and foot, without tophus (tophi)",
+                          "created_at": "2024-05-25T01:15:03.000000Z",
+                          "updated_at": "2024-05-25T01:15:03.000000Z"
+                      },
+                      {
+                          "id": "9c1fb38e-2713-4a98-b314-2520e2fc068a",
+                          "catId": "M1A371",
+                          "gradeCode": "1",
+                          "diseaseCode": "M1A3711",
+                          "name": "Chronic gout due to renal impairment, right ank/ft, w toph",
+                          "category": "Chronic gout due to renal impairment, right ankle and foot",
+                          "description": "Chronic gout due to renal impairment, right ankle and foot, with tophus (tophi)",
+                          "created_at": "2024-05-25T01:15:03.000000Z",
+                          "updated_at": "2024-05-25T01:15:03.000000Z"
+                      },
+                      {
+                          "id": "9c1fb38e-00a1-44b6-bfc0-894268e0d63a",
+                          "catId": "M1A321",
+                          "gradeCode": "0",
+                          "diseaseCode": "M1A3210",
+                          "name": "Chronic gout due to renal impairment, right elbow, w/o toph",
+                          "category": "Chronic gout due to renal impairment, right elbow",
+                          "description": "Chronic gout due to renal impairment, right elbow, without tophus (tophi)",
+                          "created_at": "2024-05-25T01:15:03.000000Z",
+                          "updated_at": "2024-05-25T01:15:03.000000Z"
+                      },
+                      {
+                          "id": "9c1fb38e-01f1-4f52-b6de-54ea22a6e0e3",
+                          "catId": "M1A321",
+                          "gradeCode": "1",
+                          "diseaseCode": "M1A3211",
+                          "name": "Chronic gout due to renal impairment, right elbow, w tophus",
+                          "category": "Chronic gout due to renal impairment, right elbow",
+                          "description": "Chronic gout due to renal impairment, right elbow, with tophus (tophi)",
+                          "created_at": "2024-05-25T01:15:03.000000Z",
+                          "updated_at": "2024-05-25T01:15:03.000000Z"
+                      },
+                      {
+                          "id": "9c1fb38e-117b-4027-9b2f-d0961b452ac0",
+                          "catId": "M1A341",
+                          "gradeCode": "0",
+                          "diseaseCode": "M1A3410",
+                          "name": "Chronic gout due to renal impairment, right hand, w/o tophus",
+                          "category": "Chronic gout due to renal impairment, right hand",
+                          "description": "Chronic gout due to renal impairment, right hand, without tophus (tophi)",
+                          "created_at": "2024-05-25T01:15:03.000000Z",
+                          "updated_at": "2024-05-25T01:15:03.000000Z"
+                      },
+                      {
+                          "id": "9c1fb38e-129d-46ce-b7c5-921deca70e52",
+                          "catId": "M1A341",
+                          "gradeCode": "1",
+                          "diseaseCode": "M1A3411",
+                          "name": "Chronic gout due to renal impairment, right hand, w tophus",
+                          "category": "Chronic gout due to renal impairment, right hand",
+                          "description": "Chronic gout due to renal impairment, right hand, with tophus (tophi)",
+                          "created_at": "2024-05-25T01:15:03.000000Z",
+                          "updated_at": "2024-05-25T01:15:03.000000Z"
+                      },
+                      {
+                          "id": "9c1fb38e-1854-4833-8786-01666b910007",
+                          "catId": "M1A351",
+                          "gradeCode": "0",
+                          "diseaseCode": "M1A3510",
+                          "name": "Chronic gout due to renal impairment, right hip, w/o tophus",
+                          "category": "Chronic gout due to renal impairment, right hip",
+                          "description": "Chronic gout due to renal impairment, right hip, without tophus (tophi)",
+                          "created_at": "2024-05-25T01:15:03.000000Z",
+                          "updated_at": "2024-05-25T01:15:03.000000Z"
+                      },
+                      {
+                          "id": "9c1fb38e-1969-47fb-b268-32d0f9a17b6d",
+                          "catId": "M1A351",
+                          "gradeCode": "1",
+                          "diseaseCode": "M1A3511",
+                          "name": "Chronic gout due to renal impairment, right hip, with tophus",
+                          "category": "Chronic gout due to renal impairment, right hip",
+                          "description": "Chronic gout due to renal impairment, right hip, with tophus (tophi)",
+                          "created_at": "2024-05-25T01:15:03.000000Z",
+                          "updated_at": "2024-05-25T01:15:03.000000Z"
+                      },
+                      {
+                          "id": "9c1fb38e-1fb8-414b-9684-bdbcd1505296",
+                          "catId": "M1A361",
+                          "gradeCode": "0",
+                          "diseaseCode": "M1A3610",
+                          "name": "Chronic gout due to renal impairment, right knee, w/o tophus",
+                          "category": "Chronic gout due to renal impairment, right knee",
+                          "description": "Chronic gout due to renal impairment, right knee, without tophus (tophi)",
+                          "created_at": "2024-05-25T01:15:03.000000Z",
+                          "updated_at": "2024-05-25T01:15:03.000000Z"
+                      },
+                      {
+                          "id": "9c1fb38e-20d8-4373-99cc-a2e837873d49",
+                          "catId": "M1A361",
+                          "gradeCode": "1",
+                          "diseaseCode": "M1A3611",
+                          "name": "Chronic gout due to renal impairment, right knee, w tophus",
+                          "category": "Chronic gout due to renal impairment, right knee",
+                          "description": "Chronic gout due to renal impairment, right knee, with tophus (tophi)",
+                          "created_at": "2024-05-25T01:15:03.000000Z",
+                          "updated_at": "2024-05-25T01:15:03.000000Z"
+                      },
+                      {
+                          "id": "9c1fb38d-f952-415b-b4ea-013fd44a21f4",
+                          "catId": "M1A311",
+                          "gradeCode": "0",
+                          "diseaseCode": "M1A3110",
+                          "name": "Chronic gout due to renal impairment, r shoulder, w/o toph",
+                          "category": "Chronic gout due to renal impairment, right shoulder",
+                          "description": "Chronic gout due to renal impairment, right shoulder, without tophus (tophi)",
+                          "created_at": "2024-05-25T01:15:03.000000Z",
+                          "updated_at": "2024-05-25T01:15:03.000000Z"
+                      },
+                      {
+                          "id": "9c1fb38d-fa84-4f5a-bc9a-0e60c544524e",
+                          "catId": "M1A311",
+                          "gradeCode": "1",
+                          "diseaseCode": "M1A3111",
+                          "name": "Chronic gout due to renal impairment, right shoulder, w toph",
+                          "category": "Chronic gout due to renal impairment, right shoulder",
+                          "description": "Chronic gout due to renal impairment, right shoulder, with tophus (tophi)",
+                          "created_at": "2024-05-25T01:15:03.000000Z",
+                          "updated_at": "2024-05-25T01:15:03.000000Z"
+                      },
+                      {
+                          "id": "9c1fb38e-088a-4932-921a-4fd9e9770504",
+                          "catId": "M1A331",
+                          "gradeCode": "0",
+                          "diseaseCode": "M1A3310",
+                          "name": "Chronic gout due to renal impairment, right wrist, w/o toph",
+                          "category": "Chronic gout due to renal impairment, right wrist",
+                          "description": "Chronic gout due to renal impairment, right wrist, without tophus (tophi)",
+                          "created_at": "2024-05-25T01:15:03.000000Z",
+                          "updated_at": "2024-05-25T01:15:03.000000Z"
+                      },
+                      {
+                          "id": "9c1fb38e-0a30-48b1-b85b-70e11aeffad1",
+                          "catId": "M1A331",
+                          "gradeCode": "1",
+                          "diseaseCode": "M1A3311",
+                          "name": "Chronic gout due to renal impairment, right wrist, w tophus",
+                          "category": "Chronic gout due to renal impairment, right wrist",
+                          "description": "Chronic gout due to renal impairment, right wrist, with tophus (tophi)",
+                          "created_at": "2024-05-25T01:15:03.000000Z",
+                          "updated_at": "2024-05-25T01:15:03.000000Z"
+                      },
+                      {
+                          "id": "9c1fb38e-29e2-4d07-972f-8d4e74028c8d",
+                          "catId": "M1A379",
+                          "gradeCode": "0",
+                          "diseaseCode": "M1A3790",
+                          "name": "Chronic gout due to renal impairment, unsp ank/ft, w/o toph",
+                          "category": "Chronic gout due to renal impairment, unspecified ankle and foot",
+                          "description": "Chronic gout due to renal impairment, unspecified ankle and foot, without tophus (tophi)",
+                          "created_at": "2024-05-25T01:15:03.000000Z",
+                          "updated_at": "2024-05-25T01:15:03.000000Z"
+                      },
+                      {
+                          "id": "9c1fb38e-2add-4d18-b2ed-31edc107d4c2",
+                          "catId": "M1A379",
+                          "gradeCode": "1",
+                          "diseaseCode": "M1A3791",
+                          "name": "Chronic gout due to renal impairment, unsp ank/ft, w toph",
+                          "category": "Chronic gout due to renal impairment, unspecified ankle and foot",
+                          "description": "Chronic gout due to renal impairment, unspecified ankle and foot, with tophus (tophi)",
+                          "created_at": "2024-05-25T01:15:03.000000Z",
+                          "updated_at": "2024-05-25T01:15:03.000000Z"
+                      },
+                      {
+                          "id": "9c1fb38e-05b8-4870-823b-a579cbd0ff79",
+                          "catId": "M1A329",
+                          "gradeCode": "0",
+                          "diseaseCode": "M1A3290",
+                          "name": "Chronic gout due to renal impairment, unsp elbow, w/o tophus",
+                          "category": "Chronic gout due to renal impairment, unspecified elbow",
+                          "description": "Chronic gout due to renal impairment, unspecified elbow, without tophus (tophi)",
+                          "created_at": "2024-05-25T01:15:03.000000Z",
+                          "updated_at": "2024-05-25T01:15:03.000000Z"
+                      },
+                      {
+                          "id": "9c1fb38e-0711-4232-9ce0-1875984f1bac",
+                          "catId": "M1A329",
+                          "gradeCode": "1",
+                          "diseaseCode": "M1A3291",
+                          "name": "Chronic gout due to renal impairment, unsp elbow, w tophus",
+                          "category": "Chronic gout due to renal impairment, unspecified elbow",
+                          "description": "Chronic gout due to renal impairment, unspecified elbow, with tophus (tophi)",
+                          "created_at": "2024-05-25T01:15:03.000000Z",
+                          "updated_at": "2024-05-25T01:15:03.000000Z"
+                      },
+                      {
+                          "id": "9c1fb38e-1605-4a0f-8b7c-8fc7f375577d",
+                          "catId": "M1A349",
+                          "gradeCode": "0",
+                          "diseaseCode": "M1A3490",
+                          "name": "Chronic gout due to renal impairment, unsp hand, w/o tophus",
+                          "category": "Chronic gout due to renal impairment, unspecified hand",
+                          "description": "Chronic gout due to renal impairment, unspecified hand, without tophus (tophi)",
+                          "created_at": "2024-05-25T01:15:03.000000Z",
+                          "updated_at": "2024-05-25T01:15:03.000000Z"
+                      },
+                      {
+                          "id": "9c1fb38e-1735-4593-8255-89e04aae9773",
+                          "catId": "M1A349",
+                          "gradeCode": "1",
+                          "diseaseCode": "M1A3491",
+                          "name": "Chronic gout due to renal impairment, unsp hand, with tophus",
+                          "category": "Chronic gout due to renal impairment, unspecified hand",
+                          "description": "Chronic gout due to renal impairment, unspecified hand, with tophus (tophi)",
+                          "created_at": "2024-05-25T01:15:03.000000Z",
+                          "updated_at": "2024-05-25T01:15:03.000000Z"
+                      },
+                      {
+                          "id": "9c1fb38e-1d2d-465b-93fc-abb326f0bbea",
+                          "catId": "M1A359",
+                          "gradeCode": "0",
+                          "diseaseCode": "M1A3590",
+                          "name": "Chronic gout due to renal impairment, unsp hip, w/o tophus",
+                          "category": "Chronic gout due to renal impairment, unspecified hip",
+                          "description": "Chronic gout due to renal impairment, unspecified hip, without tophus (tophi)",
+                          "created_at": "2024-05-25T01:15:03.000000Z",
+                          "updated_at": "2024-05-25T01:15:03.000000Z"
+                      },
+                      {
+                          "id": "9c1fb38e-1e9b-41bc-bfd0-c06adbeb7baa",
+                          "catId": "M1A359",
+                          "gradeCode": "1",
+                          "diseaseCode": "M1A3591",
+                          "name": "Chronic gout due to renal impairment, unsp hip, with tophus",
+                          "category": "Chronic gout due to renal impairment, unspecified hip",
+                          "description": "Chronic gout due to renal impairment, unspecified hip, with tophus (tophi)",
+                          "created_at": "2024-05-25T01:15:03.000000Z",
+                          "updated_at": "2024-05-25T01:15:03.000000Z"
+                      },
+                      {
+                          "id": "9c1fb38e-2462-409a-ac9e-4a5d23bb6aeb",
+                          "catId": "M1A369",
+                          "gradeCode": "0",
+                          "diseaseCode": "M1A3690",
+                          "name": "Chronic gout due to renal impairment, unsp knee, w/o tophus",
+                          "category": "Chronic gout due to renal impairment, unspecified knee",
+                          "description": "Chronic gout due to renal impairment, unspecified knee, without tophus (tophi)",
+                          "created_at": "2024-05-25T01:15:03.000000Z",
+                          "updated_at": "2024-05-25T01:15:03.000000Z"
+                      },
+                      {
+                          "id": "9c1fb38e-253d-4c35-b55b-4f2a10b43531",
+                          "catId": "M1A369",
+                          "gradeCode": "1",
+                          "diseaseCode": "M1A3691",
+                          "name": "Chronic gout due to renal impairment, unsp knee, with tophus",
+                          "category": "Chronic gout due to renal impairment, unspecified knee",
+                          "description": "Chronic gout due to renal impairment, unspecified knee, with tophus (tophi)",
+                          "created_at": "2024-05-25T01:15:03.000000Z",
+                          "updated_at": "2024-05-25T01:15:03.000000Z"
+                      },
+                      {
+                          "id": "9c1fb38d-fe49-4c44-87dd-537c83c7addc",
+                          "catId": "M1A319",
+                          "gradeCode": "0",
+                          "diseaseCode": "M1A3190",
+                          "name": "Chronic gout due to renal impairment, unsp shldr, w/o toph",
+                          "category": "Chronic gout due to renal impairment, unspecified shoulder",
+                          "description": "Chronic gout due to renal impairment, unspecified shoulder, without tophus (tophi)",
+                          "created_at": "2024-05-25T01:15:03.000000Z",
+                          "updated_at": "2024-05-25T01:15:03.000000Z"
+                      },
+                      {
+                          "id": "9c1fb38d-ff90-495a-94a2-380b7ef31008",
+                          "catId": "M1A319",
+                          "gradeCode": "1",
+                          "diseaseCode": "M1A3191",
+                          "name": "Chronic gout due to renal impairment, unsp shoulder, w toph",
+                          "category": "Chronic gout due to renal impairment, unspecified shoulder",
+                          "description": "Chronic gout due to renal impairment, unspecified shoulder, with tophus (tophi)",
+                          "created_at": "2024-05-25T01:15:03.000000Z",
+                          "updated_at": "2024-05-25T01:15:03.000000Z"
+                      },
+                      {
+                          "id": "9c1fb38d-f69f-4913-ae81-de3018cb52fa",
+                          "catId": "M1A30",
+                          "gradeCode": "X0",
+                          "diseaseCode": "M1A30X0",
+                          "name": "Chronic gout due to renal impairment, unsp site, w/o tophus",
+                          "category": "Chronic gout due to renal impairment, unspecified site",
+                          "description": "Chronic gout due to renal impairment, unspecified site, without tophus (tophi)",
+                          "created_at": "2024-05-25T01:15:03.000000Z",
+                          "updated_at": "2024-05-25T01:15:03.000000Z"
+                      },
+                      {
+                          "id": "9c1fb38d-f7f6-4f9b-98db-e834545451b8",
+                          "catId": "M1A30",
+                          "gradeCode": "X1",
+                          "diseaseCode": "M1A30X1",
+                          "name": "Chronic gout due to renal impairment, unsp site, with tophus",
+                          "category": "Chronic gout due to renal impairment, unspecified site",
+                          "description": "Chronic gout due to renal impairment, unspecified site, with tophus (tophi)",
+                          "created_at": "2024-05-25T01:15:03.000000Z",
+                          "updated_at": "2024-05-25T01:15:03.000000Z"
+                      },
+                      {
+                          "id": "9c1fb38e-0e72-4f1d-92cb-9d41f650b992",
+                          "catId": "M1A339",
+                          "gradeCode": "0",
+                          "diseaseCode": "M1A3390",
+                          "name": "Chronic gout due to renal impairment, unsp wrist, w/o tophus",
+                          "category": "Chronic gout due to renal impairment, unspecified wrist",
+                          "description": "Chronic gout due to renal impairment, unspecified wrist, without tophus (tophi)",
+                          "created_at": "2024-05-25T01:15:03.000000Z",
+                          "updated_at": "2024-05-25T01:15:03.000000Z"
+                      },
+                      {
+                          "id": "9c1fb38e-0fc1-4a51-8872-ad983c16d9e6",
+                          "catId": "M1A339",
+                          "gradeCode": "1",
+                          "diseaseCode": "M1A3391",
+                          "name": "Chronic gout due to renal impairment, unsp wrist, w tophus",
+                          "category": "Chronic gout due to renal impairment, unspecified wrist",
+                          "description": "Chronic gout due to renal impairment, unspecified wrist, with tophus (tophi)",
+                          "created_at": "2024-05-25T01:15:03.000000Z",
+                          "updated_at": "2024-05-25T01:15:03.000000Z"
+                      },
+                      {
+                          "id": "9c1fb38e-2bff-4646-9310-73b5d6c2d972",
+                          "catId": "M1A38",
+                          "gradeCode": "X0",
+                          "diseaseCode": "M1A38X0",
+                          "name": "Chronic gout due to renal impairment, vertebrae, w/o tophus",
+                          "category": "Chronic gout due to renal impairment, vertebrae",
+                          "description": "Chronic gout due to renal impairment, vertebrae, without tophus (tophi)",
+                          "created_at": "2024-05-25T01:15:03.000000Z",
+                          "updated_at": "2024-05-25T01:15:03.000000Z"
+                      },
+                      {
+                          "id": "9c1fb38e-2d45-4d78-b7d1-8d3c038cd7c0",
+                          "catId": "M1A38",
+                          "gradeCode": "X1",
+                          "diseaseCode": "M1A38X1",
+                          "name": "Chronic gout due to renal impairment, vertebrae, with tophus",
+                          "category": "Chronic gout due to renal impairment, vertebrae",
+                          "description": "Chronic gout due to renal impairment, vertebrae, with tophus (tophi)",
+                          "created_at": "2024-05-25T01:15:03.000000Z",
+                          "updated_at": "2024-05-25T01:15:03.000000Z"
+                      },
+                      {
+                          "id": "9c1fb3ab-a7e1-42e5-8b4f-70cd393d2085",
+                          "catId": "N18",
+                          "gradeCode": "6",
+                          "diseaseCode": "N186",
+                          "name": "End stage renal disease",
+                          "category": "Chronic kidney disease (CKD)",
+                          "description": "End stage renal disease",
+                          "created_at": "2024-05-25T01:15:22.000000Z",
+                          "updated_at": "2024-05-25T01:15:22.000000Z"
+                      },
+                      {
+                          "id": "9c1fb494-03ad-435b-86fb-40e09e3d1c68",
+                          "catId": "T81711",
+                          "gradeCode": "A",
+                          "diseaseCode": "T81711A",
+                          "name": "Comp of renal artery following a procedure, NEC, init",
+                          "category": "Complication of renal artery following a procedure, not elsewhere classified",
+                          "description": "Complication of renal artery following a procedure, not elsewhere classified, initial encounter",
+                          "created_at": "2024-05-25T01:17:55.000000Z",
+                          "updated_at": "2024-05-25T01:17:55.000000Z"
+                      },
+                      {
+                          "id": "9c1fb494-04e3-427b-bd3f-87d0746327c0",
+                          "catId": "T81711",
+                          "gradeCode": "D",
+                          "diseaseCode": "T81711D",
+                          "name": "Comp of renal artery following a procedure, NEC, subs",
+                          "category": "Complication of renal artery following a procedure, not elsewhere classified",
+                          "description": "Complication of renal artery following a procedure, not elsewhere classified, subsequent encounter",
+                          "created_at": "2024-05-25T01:17:55.000000Z",
+                          "updated_at": "2024-05-25T01:17:55.000000Z"
+                      },
+                      {
+                          "id": "9c1fb494-061b-4790-9075-b46d4e000ffd",
+                          "catId": "T81711",
+                          "gradeCode": "S",
+                          "diseaseCode": "T81711S",
+                          "name": "Comp of renal artery following a procedure, NEC, sequela",
+                          "category": "Complication of renal artery following a procedure, not elsewhere classified",
+                          "description": "Complication of renal artery following a procedure, not elsewhere classified, sequela",
+                          "created_at": "2024-05-25T01:17:55.000000Z",
+                          "updated_at": "2024-05-25T01:17:55.000000Z"
+                      },
+                      {
+                          "id": "9c1fb3ae-8eff-41a8-91b2-c56ae5ae9889",
+                          "catId": "O08",
+                          "gradeCode": "4",
+                          "diseaseCode": "O084",
+                          "name": "Renal failure following ectopic and molar pregnancy",
+                          "category": "Complications following ectopic and molar pregnancy",
+                          "description": "Renal failure following ectopic and molar pregnancy",
+                          "created_at": "2024-05-25T01:15:24.000000Z",
+                          "updated_at": "2024-05-25T01:15:24.000000Z"
+                      },
+                      {
+                          "id": "9c1fb3bf-36f4-44f7-823c-49055d1d0054",
+                          "catId": "Q891",
+                          "gradeCode": "",
+                          "diseaseCode": "Q891",
+                          "name": "Congenital malformations of adrenal gland",
+                          "category": "Congenital malformations of adrenal gland",
+                          "description": "Congenital malformations of adrenal gland",
+                          "created_at": "2024-05-25T01:15:35.000000Z",
+                          "updated_at": "2024-05-25T01:15:35.000000Z"
+                      },
+                      {
+                          "id": "9c1fb3bd-9547-4a45-a34c-b2e00832fb84",
+                          "catId": "Q62",
+                          "gradeCode": "0",
+                          "diseaseCode": "Q620",
+                          "name": "Congenital hydronephrosis",
+                          "category": "Congenital obstructive defects of renal pelvis and congenital malformations of ureter",
+                          "description": "Congenital hydronephrosis",
+                          "created_at": "2024-05-25T01:15:34.000000Z",
+                          "updated_at": "2024-05-25T01:15:34.000000Z"
+                      },
+                      {
+                          "id": "9c1fb3bd-8754-4bf4-b08e-b05b46570c17",
+                          "catId": "Q610",
+                          "gradeCode": "0",
+                          "diseaseCode": "Q6100",
+                          "name": "Congenital renal cyst, unspecified",
+                          "category": "Congenital renal cyst",
+                          "description": "Congenital renal cyst, unspecified",
+                          "created_at": "2024-05-25T01:15:34.000000Z",
+                          "updated_at": "2024-05-25T01:15:34.000000Z"
+                      },
+                      {
+                          "id": "9c1fb3bd-8896-4dd4-a0a6-952ed8627ceb",
+                          "catId": "Q610",
+                          "gradeCode": "1",
+                          "diseaseCode": "Q6101",
+                          "name": "Congenital single renal cyst",
+                          "category": "Congenital renal cyst",
+                          "description": "Congenital single renal cyst",
+                          "created_at": "2024-05-25T01:15:34.000000Z",
+                          "updated_at": "2024-05-25T01:15:34.000000Z"
+                      },
+                      {
+                          "id": "9c1fb3bd-89cb-46f8-b124-599a8639f908",
+                          "catId": "Q610",
+                          "gradeCode": "2",
+                          "diseaseCode": "Q6102",
+                          "name": "Congenital multiple renal cysts",
+                          "category": "Congenital renal cyst",
+                          "description": "Congenital multiple renal cysts",
+                          "created_at": "2024-05-25T01:15:34.000000Z",
+                          "updated_at": "2024-05-25T01:15:34.000000Z"
+                      },
+                      {
+                          "id": "9c1fb3bd-a3f9-48c2-921a-4efc05aaea9a",
+                          "catId": "Q627",
+                          "gradeCode": "",
+                          "diseaseCode": "Q627",
+                          "name": "Congenital vesico-uretero-renal reflux",
+                          "category": "Congenital vesico-uretero-renal reflux",
+                          "description": "Congenital vesico-uretero-renal reflux",
+                          "created_at": "2024-05-25T01:15:34.000000Z",
+                          "updated_at": "2024-05-25T01:15:34.000000Z"
+                      },
+                      {
+                          "id": "9c1fb3e5-695d-47e7-a29b-909779caf238",
+                          "catId": "S37812",
+                          "gradeCode": "A",
+                          "diseaseCode": "S37812A",
+                          "name": "Contusion of adrenal gland, initial encounter",
+                          "category": "Contusion of adrenal gland",
+                          "description": "Contusion of adrenal gland, initial encounter",
+                          "created_at": "2024-05-25T01:16:00.000000Z",
+                          "updated_at": "2024-05-25T01:16:00.000000Z"
+                      },
+                      {
+                          "id": "9c1fb3e5-6a6f-48c1-9e48-55c3fbbc8bdd",
+                          "catId": "S37812",
+                          "gradeCode": "D",
+                          "diseaseCode": "S37812D",
+                          "name": "Contusion of adrenal gland, subsequent encounter",
+                          "category": "Contusion of adrenal gland",
+                          "description": "Contusion of adrenal gland, subsequent encounter",
+                          "created_at": "2024-05-25T01:16:00.000000Z",
+                          "updated_at": "2024-05-25T01:16:00.000000Z"
+                      },
+                      {
+                          "id": "9c1fb3e5-6bb4-4597-82b7-40fe9c530327",
+                          "catId": "S37812",
+                          "gradeCode": "S",
+                          "diseaseCode": "S37812S",
+                          "name": "Contusion of adrenal gland, sequela",
+                          "category": "Contusion of adrenal gland",
+                          "description": "Contusion of adrenal gland, sequela",
+                          "created_at": "2024-05-25T01:16:00.000000Z",
+                          "updated_at": "2024-05-25T01:16:00.000000Z"
+                      },
+                      {
+                          "id": "9c1fb4cc-1584-4ed3-9a0b-7cfd38db12ed",
+                          "catId": "Z992",
+                          "gradeCode": "",
+                          "diseaseCode": "Z992",
+                          "name": "Dependence on renal dialysis",
+                          "category": "Dependence on renal dialysis",
+                          "description": "Dependence on renal dialysis",
+                          "created_at": "2024-05-25T01:18:31.000000Z",
+                          "updated_at": "2024-05-25T01:18:31.000000Z"
+                      },
+                      {
+                          "id": "9c1fb360-6ff1-46dd-9505-80c4cef6b0b1",
+                          "catId": "E279",
+                          "gradeCode": "",
+                          "diseaseCode": "E279",
+                          "name": "Disorder of adrenal gland, unspecified",
+                          "category": "Disorder of adrenal gland, unspecified",
+                          "description": "Disorder of adrenal gland, unspecified",
+                          "created_at": "2024-05-25T01:14:33.000000Z",
+                          "updated_at": "2024-05-25T01:14:33.000000Z"
+                      },
+                      {
+                          "id": "9c1fb3ab-bf37-4f6e-81a1-08187168afc3",
+                          "catId": "N259",
+                          "gradeCode": "",
+                          "diseaseCode": "N259",
+                          "name": "Disorder rslt from impaired renal tubular function, unsp",
+                          "category": "Disorder resulting from impaired renal tubular function, unspecified",
+                          "description": "Disorder resulting from impaired renal tubular function, unspecified",
+                          "created_at": "2024-05-25T01:15:22.000000Z",
+                          "updated_at": "2024-05-25T01:15:22.000000Z"
+                      },
+                      {
+                          "id": "9c1fb3ab-b980-4f5b-a5a0-9436443afc2a",
+                          "catId": "N25",
+                          "gradeCode": "0",
+                          "diseaseCode": "N250",
+                          "name": "Renal osteodystrophy",
+                          "category": "Disorders resulting from impaired renal tubular function",
+                          "description": "Renal osteodystrophy",
+                          "created_at": "2024-05-25T01:15:22.000000Z",
+                          "updated_at": "2024-05-25T01:15:22.000000Z"
+                      },
+                      {
+                          "id": "9c1fb3ab-baf6-4750-ba36-74bc5bdbf7cd",
+                          "catId": "N25",
+                          "gradeCode": "1",
+                          "diseaseCode": "N251",
+                          "name": "Nephrogenic diabetes insipidus",
+                          "category": "Disorders resulting from impaired renal tubular function",
+                          "description": "Nephrogenic diabetes insipidus",
+                          "created_at": "2024-05-25T01:15:22.000000Z",
+                          "updated_at": "2024-05-25T01:15:22.000000Z"
+                      },
+                      {
+                          "id": "9c1fb37e-8d57-4d13-ba85-78c046c8a684",
+                          "catId": "I823",
+                          "gradeCode": "",
+                          "diseaseCode": "I823",
+                          "name": "Embolism and thrombosis of renal vein",
+                          "category": "Embolism and thrombosis of renal vein",
+                          "description": "Embolism and thrombosis of renal vein",
+                          "created_at": "2024-05-25T01:14:53.000000Z",
+                          "updated_at": "2024-05-25T01:14:53.000000Z"
+                      },
+                      {
+                          "id": "9c1fb3c0-e6fb-42a6-921a-6b330e59a0bc",
+                          "catId": "R392",
+                          "gradeCode": "",
+                          "diseaseCode": "R392",
+                          "name": "Extrarenal uremia",
+                          "category": "Extrarenal uremia",
+                          "description": "Extrarenal uremia",
+                          "created_at": "2024-05-25T01:15:36.000000Z",
+                          "updated_at": "2024-05-25T01:15:36.000000Z"
+                      },
+                      {
+                          "id": "9c1fb3ae-8096-46f5-8ca4-32ab2a4204a3",
+                          "catId": "O073",
+                          "gradeCode": "2",
+                          "diseaseCode": "O0732",
+                          "name": "Renal failure following failed attempted term of pregnancy",
+                          "category": "Failed attempted termination of pregnancy with other and unspecified complications",
+                          "description": "Renal failure following failed attempted termination of pregnancy",
+                          "created_at": "2024-05-25T01:15:24.000000Z",
+                          "updated_at": "2024-05-25T01:15:24.000000Z"
+                      },
+                      {
+                          "id": "9c1fb38e-d2ff-4284-99da-f8ce93c83708",
+                          "catId": "M103",
+                          "gradeCode": "0",
+                          "diseaseCode": "M1030",
+                          "name": "Gout due to renal impairment, unspecified site",
+                          "category": "Gout due to renal impairment",
+                          "description": "Gout due to renal impairment, unspecified site",
+                          "created_at": "2024-05-25T01:15:04.000000Z",
+                          "updated_at": "2024-05-25T01:15:04.000000Z"
+                      },
+                      {
+                          "id": "9c1fb38e-e4cd-4280-a850-989032943d95",
+                          "catId": "M1037",
+                          "gradeCode": "1",
+                          "diseaseCode": "M10371",
+                          "name": "Gout due to renal impairment, right ankle and foot",
+                          "category": "Gout due to renal impairment, ankle and foot",
+                          "description": "Gout due to renal impairment, right ankle and foot",
+                          "created_at": "2024-05-25T01:15:04.000000Z",
+                          "updated_at": "2024-05-25T01:15:04.000000Z"
+                      },
+                      {
+                          "id": "9c1fb38e-e5a7-4b2a-9338-2a4da479a679",
+                          "catId": "M1037",
+                          "gradeCode": "2",
+                          "diseaseCode": "M10372",
+                          "name": "Gout due to renal impairment, left ankle and foot",
+                          "category": "Gout due to renal impairment, ankle and foot",
+                          "description": "Gout due to renal impairment, left ankle and foot",
+                          "created_at": "2024-05-25T01:15:04.000000Z",
+                          "updated_at": "2024-05-25T01:15:04.000000Z"
+                      },
+                      {
+                          "id": "9c1fb38e-e6d2-4a16-8e2b-9d73afe9e722",
+                          "catId": "M1037",
+                          "gradeCode": "9",
+                          "diseaseCode": "M10379",
+                          "name": "Gout due to renal impairment, unspecified ankle and foot",
+                          "category": "Gout due to renal impairment, ankle and foot",
+                          "description": "Gout due to renal impairment, unspecified ankle and foot",
+                          "created_at": "2024-05-25T01:15:04.000000Z",
+                          "updated_at": "2024-05-25T01:15:04.000000Z"
+                      },
+                      {
+                          "id": "9c1fb38e-d7ba-4325-8fef-0d92de9d5328",
+                          "catId": "M1032",
+                          "gradeCode": "1",
+                          "diseaseCode": "M10321",
+                          "name": "Gout due to renal impairment, right elbow",
+                          "category": "Gout due to renal impairment, elbow",
+                          "description": "Gout due to renal impairment, right elbow",
+                          "created_at": "2024-05-25T01:15:04.000000Z",
+                          "updated_at": "2024-05-25T01:15:04.000000Z"
+                      },
+                      {
+                          "id": "9c1fb38e-d8c9-4904-82e4-71888c0e584d",
+                          "catId": "M1032",
+                          "gradeCode": "2",
+                          "diseaseCode": "M10322",
+                          "name": "Gout due to renal impairment, left elbow",
+                          "category": "Gout due to renal impairment, elbow",
+                          "description": "Gout due to renal impairment, left elbow",
+                          "created_at": "2024-05-25T01:15:04.000000Z",
+                          "updated_at": "2024-05-25T01:15:04.000000Z"
+                      },
+                      {
+                          "id": "9c1fb38e-d9e4-4003-8b6c-770760c1d8e5",
+                          "catId": "M1032",
+                          "gradeCode": "9",
+                          "diseaseCode": "M10329",
+                          "name": "Gout due to renal impairment, unspecified elbow",
+                          "category": "Gout due to renal impairment, elbow",
+                          "description": "Gout due to renal impairment, unspecified elbow",
+                          "created_at": "2024-05-25T01:15:04.000000Z",
+                          "updated_at": "2024-05-25T01:15:04.000000Z"
+                      },
+                      {
+                          "id": "9c1fb38e-de07-45ce-ba3f-61f92055005a",
+                          "catId": "M1034",
+                          "gradeCode": "1",
+                          "diseaseCode": "M10341",
+                          "name": "Gout due to renal impairment, right hand",
+                          "category": "Gout due to renal impairment, hand",
+                          "description": "Gout due to renal impairment, right hand",
+                          "created_at": "2024-05-25T01:15:04.000000Z",
+                          "updated_at": "2024-05-25T01:15:04.000000Z"
+                      },
+                      {
+                          "id": "9c1fb38e-deba-4c47-a1b5-f012ee1c0fa3",
+                          "catId": "M1034",
+                          "gradeCode": "2",
+                          "diseaseCode": "M10342",
+                          "name": "Gout due to renal impairment, left hand",
+                          "category": "Gout due to renal impairment, hand",
+                          "description": "Gout due to renal impairment, left hand",
+                          "created_at": "2024-05-25T01:15:04.000000Z",
+                          "updated_at": "2024-05-25T01:15:04.000000Z"
+                      },
+                      {
+                          "id": "9c1fb38e-df76-4c35-97c8-3d239de6e031",
+                          "catId": "M1034",
+                          "gradeCode": "9",
+                          "diseaseCode": "M10349",
+                          "name": "Gout due to renal impairment, unspecified hand",
+                          "category": "Gout due to renal impairment, hand",
+                          "description": "Gout due to renal impairment, unspecified hand",
+                          "created_at": "2024-05-25T01:15:04.000000Z",
+                          "updated_at": "2024-05-25T01:15:04.000000Z"
+                      },
+                      {
+                          "id": "9c1fb38e-e039-4de9-88eb-d948cb248bca",
+                          "catId": "M1035",
+                          "gradeCode": "1",
+                          "diseaseCode": "M10351",
+                          "name": "Gout due to renal impairment, right hip",
+                          "category": "Gout due to renal impairment, hip",
+                          "description": "Gout due to renal impairment, right hip",
+                          "created_at": "2024-05-25T01:15:04.000000Z",
+                          "updated_at": "2024-05-25T01:15:04.000000Z"
+                      },
+                      {
+                          "id": "9c1fb38e-e11e-40a8-9772-1b156e6fbc9a",
+                          "catId": "M1035",
+                          "gradeCode": "2",
+                          "diseaseCode": "M10352",
+                          "name": "Gout due to renal impairment, left hip",
+                          "category": "Gout due to renal impairment, hip",
+                          "description": "Gout due to renal impairment, left hip",
+                          "created_at": "2024-05-25T01:15:04.000000Z",
+                          "updated_at": "2024-05-25T01:15:04.000000Z"
+                      },
+                      {
+                          "id": "9c1fb38e-e1d9-420d-b9bf-42a2599dc671",
+                          "catId": "M1035",
+                          "gradeCode": "9",
+                          "diseaseCode": "M10359",
+                          "name": "Gout due to renal impairment, unspecified hip",
+                          "category": "Gout due to renal impairment, hip",
+                          "description": "Gout due to renal impairment, unspecified hip",
+                          "created_at": "2024-05-25T01:15:04.000000Z",
+                          "updated_at": "2024-05-25T01:15:04.000000Z"
+                      },
+                      {
+                          "id": "9c1fb38e-e290-45b5-abe7-ec43c095da6a",
+                          "catId": "M1036",
+                          "gradeCode": "1",
+                          "diseaseCode": "M10361",
+                          "name": "Gout due to renal impairment, right knee",
+                          "category": "Gout due to renal impairment, knee",
+                          "description": "Gout due to renal impairment, right knee",
+                          "created_at": "2024-05-25T01:15:04.000000Z",
+                          "updated_at": "2024-05-25T01:15:04.000000Z"
+                      },
+                      {
+                          "id": "9c1fb38e-e33e-4382-8afa-2b86437c14a6",
+                          "catId": "M1036",
+                          "gradeCode": "2",
+                          "diseaseCode": "M10362",
+                          "name": "Gout due to renal impairment, left knee",
+                          "category": "Gout due to renal impairment, knee",
+                          "description": "Gout due to renal impairment, left knee",
+                          "created_at": "2024-05-25T01:15:04.000000Z",
+                          "updated_at": "2024-05-25T01:15:04.000000Z"
+                      },
+                      {
+                          "id": "9c1fb38e-e3ed-49b4-bf17-5671e44c0eb4",
+                          "catId": "M1036",
+                          "gradeCode": "9",
+                          "diseaseCode": "M10369",
+                          "name": "Gout due to renal impairment, unspecified knee",
+                          "category": "Gout due to renal impairment, knee",
+                          "description": "Gout due to renal impairment, unspecified knee",
+                          "created_at": "2024-05-25T01:15:04.000000Z",
+                          "updated_at": "2024-05-25T01:15:04.000000Z"
+                      },
+                      {
+                          "id": "9c1fb38e-e95e-42de-846d-91eedd173918",
+                          "catId": "M1039",
+                          "gradeCode": "",
+                          "diseaseCode": "M1039",
+                          "name": "Gout due to renal impairment, multiple sites",
+                          "category": "Gout due to renal impairment, multiple sites",
+                          "description": "Gout due to renal impairment, multiple sites",
+                          "created_at": "2024-05-25T01:15:04.000000Z",
+                          "updated_at": "2024-05-25T01:15:04.000000Z"
+                      },
+                      {
+                          "id": "9c1fb38e-d413-474d-9f39-27ec4744b818",
+                          "catId": "M1031",
+                          "gradeCode": "1",
+                          "diseaseCode": "M10311",
+                          "name": "Gout due to renal impairment, right shoulder",
+                          "category": "Gout due to renal impairment, shoulder",
+                          "description": "Gout due to renal impairment, right shoulder",
+                          "created_at": "2024-05-25T01:15:04.000000Z",
+                          "updated_at": "2024-05-25T01:15:04.000000Z"
+                      },
+                      {
+                          "id": "9c1fb38e-d581-4cf7-a827-50eda708098e",
+                          "catId": "M1031",
+                          "gradeCode": "2",
+                          "diseaseCode": "M10312",
+                          "name": "Gout due to renal impairment, left shoulder",
+                          "category": "Gout due to renal impairment, shoulder",
+                          "description": "Gout due to renal impairment, left shoulder",
+                          "created_at": "2024-05-25T01:15:04.000000Z",
+                          "updated_at": "2024-05-25T01:15:04.000000Z"
+                      },
+                      {
+                          "id": "9c1fb38e-d69f-424e-b0da-ad3dc1300d75",
+                          "catId": "M1031",
+                          "gradeCode": "9",
+                          "diseaseCode": "M10319",
+                          "name": "Gout due to renal impairment, unspecified shoulder",
+                          "category": "Gout due to renal impairment, shoulder",
+                          "description": "Gout due to renal impairment, unspecified shoulder",
+                          "created_at": "2024-05-25T01:15:04.000000Z",
+                          "updated_at": "2024-05-25T01:15:04.000000Z"
+                      },
+                      {
+                          "id": "9c1fb38e-e811-4a94-b042-8d10d740b2c3",
+                          "catId": "M1038",
+                          "gradeCode": "",
+                          "diseaseCode": "M1038",
+                          "name": "Gout due to renal impairment, vertebrae",
+                          "category": "Gout due to renal impairment, vertebrae",
+                          "description": "Gout due to renal impairment, vertebrae",
+                          "created_at": "2024-05-25T01:15:04.000000Z",
+                          "updated_at": "2024-05-25T01:15:04.000000Z"
+                      },
+                      {
+                          "id": "9c1fb38e-db19-4fe1-a7fa-256752b36766",
+                          "catId": "M1033",
+                          "gradeCode": "1",
+                          "diseaseCode": "M10331",
+                          "name": "Gout due to renal impairment, right wrist",
+                          "category": "Gout due to renal impairment, wrist",
+                          "description": "Gout due to renal impairment, right wrist",
+                          "created_at": "2024-05-25T01:15:04.000000Z",
+                          "updated_at": "2024-05-25T01:15:04.000000Z"
+                      },
+                      {
+                          "id": "9c1fb38e-dc39-4d51-a48b-aa27159d17e8",
+                          "catId": "M1033",
+                          "gradeCode": "2",
+                          "diseaseCode": "M10332",
+                          "name": "Gout due to renal impairment, left wrist",
+                          "category": "Gout due to renal impairment, wrist",
+                          "description": "Gout due to renal impairment, left wrist",
+                          "created_at": "2024-05-25T01:15:04.000000Z",
+                          "updated_at": "2024-05-25T01:15:04.000000Z"
+                      },
+                      {
+                          "id": "9c1fb38e-dd55-495c-8227-91c348b2a6b1",
+                          "catId": "M1033",
+                          "gradeCode": "9",
+                          "diseaseCode": "M10339",
+                          "name": "Gout due to renal impairment, unspecified wrist",
+                          "category": "Gout due to renal impairment, wrist",
+                          "description": "Gout due to renal impairment, unspecified wrist",
+                          "created_at": "2024-05-25T01:15:04.000000Z",
+                          "updated_at": "2024-05-25T01:15:04.000000Z"
+                      },
+                      {
+                          "id": "9c1fb379-e387-4d47-b030-cffce082e7cf",
+                          "catId": "I12",
+                          "gradeCode": "0",
+                          "diseaseCode": "I120",
+                          "name": "Hyp chr kidney disease w stage 5 chr kidney disease or ESRD",
+                          "category": "Hypertensive chronic kidney disease",
+                          "description": "Hypertensive chronic kidney disease with stage 5 chronic kidney disease or end stage renal disease",
+                          "created_at": "2024-05-25T01:14:50.000000Z",
+                          "updated_at": "2024-05-25T01:14:50.000000Z"
+                      },
+                      {
+                          "id": "9c1fb379-e9f0-4a1d-a303-b08f3ce05063",
+                          "catId": "I132",
+                          "gradeCode": "",
+                          "diseaseCode": "I132",
+                          "name": "Hyp hrt & chr kdny dis w hrt fail and w stg 5 chr kdny/ESRD",
+                          "category": "Hypertensive heart and chronic kidney disease with heart failure and with stage 5 chronic kidney disease, or end stage renal disease",
+                          "description": "Hypertensive heart and chronic kidney disease with heart failure and with stage 5 chronic kidney disease, or end stage renal disease",
+                          "created_at": "2024-05-25T01:14:50.000000Z",
+                          "updated_at": "2024-05-25T01:14:50.000000Z"
+                      },
+                      {
+                          "id": "9c1fb379-e8b1-4bcb-b372-4bee0e784c63",
+                          "catId": "I131",
+                          "gradeCode": "1",
+                          "diseaseCode": "I1311",
+                          "name": "Hyp hrt and chr kdny dis w/o hrt fail, w stg 5 chr kdny/ESRD",
+                          "category": "Hypertensive heart and chronic kidney disease without heart failure",
+                          "description": "Hypertensive heart and chronic kidney disease without heart failure, with stage 5 chronic kidney disease, or end stage renal disease",
+                          "created_at": "2024-05-25T01:14:50.000000Z",
+                          "updated_at": "2024-05-25T01:14:50.000000Z"
+                      },
+                      {
+                          "id": "9c1fb3e5-6cfd-4028-81ea-94628c6a27f3",
+                          "catId": "S37813",
+                          "gradeCode": "A",
+                          "diseaseCode": "S37813A",
+                          "name": "Laceration of adrenal gland, initial encounter",
+                          "category": "Laceration of adrenal gland",
+                          "description": "Laceration of adrenal gland, initial encounter",
+                          "created_at": "2024-05-25T01:16:00.000000Z",
+                          "updated_at": "2024-05-25T01:16:00.000000Z"
+                      },
+                      {
+                          "id": "9c1fb3e5-6ed8-455d-81f8-9c0950de2355",
+                          "catId": "S37813",
+                          "gradeCode": "D",
+                          "diseaseCode": "S37813D",
+                          "name": "Laceration of adrenal gland, subsequent encounter",
+                          "category": "Laceration of adrenal gland",
+                          "description": "Laceration of adrenal gland, subsequent encounter",
+                          "created_at": "2024-05-25T01:16:00.000000Z",
+                          "updated_at": "2024-05-25T01:16:00.000000Z"
+                      },
+                      {
+                          "id": "9c1fb3e5-703c-4533-8394-a538a5adbb09",
+                          "catId": "S37813",
+                          "gradeCode": "S",
+                          "diseaseCode": "S37813S",
+                          "name": "Laceration of adrenal gland, sequela",
+                          "category": "Laceration of adrenal gland",
+                          "description": "Laceration of adrenal gland, sequela",
+                          "created_at": "2024-05-25T01:16:00.000000Z",
+                          "updated_at": "2024-05-25T01:16:00.000000Z"
+                      },
+                      {
+                          "id": "9c1fb3e2-4025-4b9a-be2a-bc9307efcf70",
+                          "catId": "S35412",
+                          "gradeCode": "A",
+                          "diseaseCode": "S35412A",
+                          "name": "Laceration of left renal artery, initial encounter",
+                          "category": "Laceration of left renal artery",
+                          "description": "Laceration of left renal artery, initial encounter",
+                          "created_at": "2024-05-25T01:15:58.000000Z",
+                          "updated_at": "2024-05-25T01:15:58.000000Z"
+                      },
+                      {
+                          "id": "9c1fb3e2-4143-4738-8fc5-cee4c6b5cbae",
+                          "catId": "S35412",
+                          "gradeCode": "D",
+                          "diseaseCode": "S35412D",
+                          "name": "Laceration of left renal artery, subsequent encounter",
+                          "category": "Laceration of left renal artery",
+                          "description": "Laceration of left renal artery, subsequent encounter",
+                          "created_at": "2024-05-25T01:15:58.000000Z",
+                          "updated_at": "2024-05-25T01:15:58.000000Z"
+                      },
+                      {
+                          "id": "9c1fb3e2-426a-403f-9c8c-abed003578f8",
+                          "catId": "S35412",
+                          "gradeCode": "S",
+                          "diseaseCode": "S35412S",
+                          "name": "Laceration of left renal artery, sequela",
+                          "category": "Laceration of left renal artery",
+                          "description": "Laceration of left renal artery, sequela",
+                          "created_at": "2024-05-25T01:15:58.000000Z",
+                          "updated_at": "2024-05-25T01:15:58.000000Z"
+                      },
+                      {
+                          "id": "9c1fb3e2-4a5c-47e2-bbdd-ca443955e2d3",
+                          "catId": "S35415",
+                          "gradeCode": "A",
+                          "diseaseCode": "S35415A",
+                          "name": "Laceration of left renal vein, initial encounter",
+                          "category": "Laceration of left renal vein",
+                          "description": "Laceration of left renal vein, initial encounter",
+                          "created_at": "2024-05-25T01:15:58.000000Z",
+                          "updated_at": "2024-05-25T01:15:58.000000Z"
+                      },
+                      {
+                          "id": "9c1fb3e2-4b6f-4681-9853-bedb1682bac9",
+                          "catId": "S35415",
+                          "gradeCode": "D",
+                          "diseaseCode": "S35415D",
+                          "name": "Laceration of left renal vein, subsequent encounter",
+                          "category": "Laceration of left renal vein",
+                          "description": "Laceration of left renal vein, subsequent encounter",
+                          "created_at": "2024-05-25T01:15:58.000000Z",
+                          "updated_at": "2024-05-25T01:15:58.000000Z"
+                      },
+                      {
+                          "id": "9c1fb3e2-4cb1-4813-ac0e-46c042e1df54",
+                          "catId": "S35415",
+                          "gradeCode": "S",
+                          "diseaseCode": "S35415S",
+                          "name": "Laceration of left renal vein, sequela",
+                          "category": "Laceration of left renal vein",
+                          "description": "Laceration of left renal vein, sequela",
+                          "created_at": "2024-05-25T01:15:58.000000Z",
+                          "updated_at": "2024-05-25T01:15:58.000000Z"
+                      },
+                      {
+                          "id": "9c1fb3e2-3cfe-4996-b3bd-a5404d99b2d8",
+                          "catId": "S35411",
+                          "gradeCode": "A",
+                          "diseaseCode": "S35411A",
+                          "name": "Laceration of right renal artery, initial encounter",
+                          "category": "Laceration of right renal artery",
+                          "description": "Laceration of right renal artery, initial encounter",
+                          "created_at": "2024-05-25T01:15:58.000000Z",
+                          "updated_at": "2024-05-25T01:15:58.000000Z"
+                      },
+                      {
+                          "id": "9c1fb3e2-3e17-4eb1-b9fd-6a24a8dd8822",
+                          "catId": "S35411",
+                          "gradeCode": "D",
+                          "diseaseCode": "S35411D",
+                          "name": "Laceration of right renal artery, subsequent encounter",
+                          "category": "Laceration of right renal artery",
+                          "description": "Laceration of right renal artery, subsequent encounter",
+                          "created_at": "2024-05-25T01:15:58.000000Z",
+                          "updated_at": "2024-05-25T01:15:58.000000Z"
+                      },
+                      {
+                          "id": "9c1fb3e2-3f24-45f8-9ea0-a00fc7e809a2",
+                          "catId": "S35411",
+                          "gradeCode": "S",
+                          "diseaseCode": "S35411S",
+                          "name": "Laceration of right renal artery, sequela",
+                          "category": "Laceration of right renal artery",
+                          "description": "Laceration of right renal artery, sequela",
+                          "created_at": "2024-05-25T01:15:58.000000Z",
+                          "updated_at": "2024-05-25T01:15:58.000000Z"
+                      },
+                      {
+                          "id": "9c1fb3e2-4701-4e43-b1ca-7ec8997c740b",
+                          "catId": "S35414",
+                          "gradeCode": "A",
+                          "diseaseCode": "S35414A",
+                          "name": "Laceration of right renal vein, initial encounter",
+                          "category": "Laceration of right renal vein",
+                          "description": "Laceration of right renal vein, initial encounter",
+                          "created_at": "2024-05-25T01:15:58.000000Z",
+                          "updated_at": "2024-05-25T01:15:58.000000Z"
+                      },
+                      {
+                          "id": "9c1fb3e2-481e-47a8-9c84-a7a52f158b7b",
+                          "catId": "S35414",
+                          "gradeCode": "D",
+                          "diseaseCode": "S35414D",
+                          "name": "Laceration of right renal vein, subsequent encounter",
+                          "category": "Laceration of right renal vein",
+                          "description": "Laceration of right renal vein, subsequent encounter",
+                          "created_at": "2024-05-25T01:15:58.000000Z",
+                          "updated_at": "2024-05-25T01:15:58.000000Z"
+                      },
+                      {
+                          "id": "9c1fb3e2-493f-4823-b1f4-50d9ad8c0663",
+                          "catId": "S35414",
+                          "gradeCode": "S",
+                          "diseaseCode": "S35414S",
+                          "name": "Laceration of right renal vein, sequela",
+                          "category": "Laceration of right renal vein",
+                          "description": "Laceration of right renal vein, sequela",
+                          "created_at": "2024-05-25T01:15:58.000000Z",
+                          "updated_at": "2024-05-25T01:15:58.000000Z"
+                      },
+                      {
+                          "id": "9c1fb3e2-437f-4c37-808f-f88dd218f3fb",
+                          "catId": "S35413",
+                          "gradeCode": "A",
+                          "diseaseCode": "S35413A",
+                          "name": "Laceration of unspecified renal artery, initial encounter",
+                          "category": "Laceration of unspecified renal artery",
+                          "description": "Laceration of unspecified renal artery, initial encounter",
+                          "created_at": "2024-05-25T01:15:58.000000Z",
+                          "updated_at": "2024-05-25T01:15:58.000000Z"
+                      },
+                      {
+                          "id": "9c1fb3e2-4492-4be8-875d-7912d5b41d07",
+                          "catId": "S35413",
+                          "gradeCode": "D",
+                          "diseaseCode": "S35413D",
+                          "name": "Laceration of unspecified renal artery, subsequent encounter",
+                          "category": "Laceration of unspecified renal artery",
+                          "description": "Laceration of unspecified renal artery, subsequent encounter",
+                          "created_at": "2024-05-25T01:15:58.000000Z",
+                          "updated_at": "2024-05-25T01:15:58.000000Z"
+                      },
+                      {
+                          "id": "9c1fb3e2-45d6-45ff-9301-5e9c35dfe505",
+                          "catId": "S35413",
+                          "gradeCode": "S",
+                          "diseaseCode": "S35413S",
+                          "name": "Laceration of unspecified renal artery, sequela",
+                          "category": "Laceration of unspecified renal artery",
+                          "description": "Laceration of unspecified renal artery, sequela",
+                          "created_at": "2024-05-25T01:15:58.000000Z",
+                          "updated_at": "2024-05-25T01:15:58.000000Z"
+                      },
+                      {
+                          "id": "9c1fb3e2-4ddd-4c24-9818-338d19aa4007",
+                          "catId": "S35416",
+                          "gradeCode": "A",
+                          "diseaseCode": "S35416A",
+                          "name": "Laceration of unspecified renal vein, initial encounter",
+                          "category": "Laceration of unspecified renal vein",
+                          "description": "Laceration of unspecified renal vein, initial encounter",
+                          "created_at": "2024-05-25T01:15:58.000000Z",
+                          "updated_at": "2024-05-25T01:15:58.000000Z"
+                      },
+                      {
+                          "id": "9c1fb3e2-4efb-469d-84c9-6515ad5d3dac",
+                          "catId": "S35416",
+                          "gradeCode": "D",
+                          "diseaseCode": "S35416D",
+                          "name": "Laceration of unspecified renal vein, subsequent encounter",
+                          "category": "Laceration of unspecified renal vein",
+                          "description": "Laceration of unspecified renal vein, subsequent encounter",
+                          "created_at": "2024-05-25T01:15:58.000000Z",
+                          "updated_at": "2024-05-25T01:15:58.000000Z"
+                      },
+                      {
+                          "id": "9c1fb3e2-503d-48e4-8221-d1b5f9a8eade",
+                          "catId": "S35416",
+                          "gradeCode": "S",
+                          "diseaseCode": "S35416S",
+                          "name": "Laceration of unspecified renal vein, sequela",
+                          "category": "Laceration of unspecified renal vein",
+                          "description": "Laceration of unspecified renal vein, sequela",
+                          "created_at": "2024-05-25T01:15:58.000000Z",
+                          "updated_at": "2024-05-25T01:15:58.000000Z"
+                      },
+                      {
+                          "id": "9c1fb357-188b-4b37-9686-819753caebe6",
+                          "catId": "C740",
+                          "gradeCode": "0",
+                          "diseaseCode": "C7400",
+                          "name": "Malignant neoplasm of cortex of unspecified adrenal gland",
+                          "category": "Malignant neoplasm of cortex of adrenal gland",
+                          "description": "Malignant neoplasm of cortex of unspecified adrenal gland",
+                          "created_at": "2024-05-25T01:14:27.000000Z",
+                          "updated_at": "2024-05-25T01:14:27.000000Z"
+                      },
+                      {
+                          "id": "9c1fb357-19ae-4470-85f6-cc760d8c8dbb",
+                          "catId": "C740",
+                          "gradeCode": "1",
+                          "diseaseCode": "C7401",
+                          "name": "Malignant neoplasm of cortex of right adrenal gland",
+                          "category": "Malignant neoplasm of cortex of adrenal gland",
+                          "description": "Malignant neoplasm of cortex of right adrenal gland",
+                          "created_at": "2024-05-25T01:14:27.000000Z",
+                          "updated_at": "2024-05-25T01:14:27.000000Z"
+                      },
+                      {
+                          "id": "9c1fb357-1adf-45c8-a55c-6434dae29209",
+                          "catId": "C740",
+                          "gradeCode": "2",
+                          "diseaseCode": "C7402",
+                          "name": "Malignant neoplasm of cortex of left adrenal gland",
+                          "category": "Malignant neoplasm of cortex of adrenal gland",
+                          "description": "Malignant neoplasm of cortex of left adrenal gland",
+                          "created_at": "2024-05-25T01:14:27.000000Z",
+                          "updated_at": "2024-05-25T01:14:27.000000Z"
+                      },
+                      {
+                          "id": "9c1fb356-bdab-4b7b-847b-125da4690c3f",
+                          "catId": "C64",
+                          "gradeCode": "1",
+                          "diseaseCode": "C641",
+                          "name": "Malignant neoplasm of right kidney, except renal pelvis",
+                          "category": "Malignant neoplasm of kidney, except renal pelvis",
+                          "description": "Malignant neoplasm of right kidney, except renal pelvis",
+                          "created_at": "2024-05-25T01:14:27.000000Z",
+                          "updated_at": "2024-05-25T01:14:27.000000Z"
+                      },
+                      {
+                          "id": "9c1fb356-becb-4890-a5bc-7b48f4c92bf3",
+                          "catId": "C64",
+                          "gradeCode": "2",
+                          "diseaseCode": "C642",
+                          "name": "Malignant neoplasm of left kidney, except renal pelvis",
+                          "category": "Malignant neoplasm of kidney, except renal pelvis",
+                          "description": "Malignant neoplasm of left kidney, except renal pelvis",
+                          "created_at": "2024-05-25T01:14:27.000000Z",
+                          "updated_at": "2024-05-25T01:14:27.000000Z"
+                      },
+                      {
+                          "id": "9c1fb356-bfe6-4f7c-b950-c460c49c130c",
+                          "catId": "C64",
+                          "gradeCode": "9",
+                          "diseaseCode": "C649",
+                          "name": "Malignant neoplasm of unsp kidney, except renal pelvis",
+                          "category": "Malignant neoplasm of kidney, except renal pelvis",
+                          "description": "Malignant neoplasm of unspecified kidney, except renal pelvis",
+                          "created_at": "2024-05-25T01:14:27.000000Z",
+                          "updated_at": "2024-05-25T01:14:27.000000Z"
+                      },
+                      {
+                          "id": "9c1fb357-1c1f-4411-9a99-b6e438d0db35",
+                          "catId": "C741",
+                          "gradeCode": "0",
+                          "diseaseCode": "C7410",
+                          "name": "Malignant neoplasm of medulla of unspecified adrenal gland",
+                          "category": "Malignant neoplasm of medulla of adrenal gland",
+                          "description": "Malignant neoplasm of medulla of unspecified adrenal gland",
+                          "created_at": "2024-05-25T01:14:27.000000Z",
+                          "updated_at": "2024-05-25T01:14:27.000000Z"
+                      },
+                      {
+                          "id": "9c1fb357-1d40-4b8c-8f01-47f6de840b40",
+                          "catId": "C741",
+                          "gradeCode": "1",
+                          "diseaseCode": "C7411",
+                          "name": "Malignant neoplasm of medulla of right adrenal gland",
+                          "category": "Malignant neoplasm of medulla of adrenal gland",
+                          "description": "Malignant neoplasm of medulla of right adrenal gland",
+                          "created_at": "2024-05-25T01:14:27.000000Z",
+                          "updated_at": "2024-05-25T01:14:27.000000Z"
+                      },
+                      {
+                          "id": "9c1fb357-1e8f-4d54-96ec-d7341b43e56f",
+                          "catId": "C741",
+                          "gradeCode": "2",
+                          "diseaseCode": "C7412",
+                          "name": "Malignant neoplasm of medulla of left adrenal gland",
+                          "category": "Malignant neoplasm of medulla of adrenal gland",
+                          "description": "Malignant neoplasm of medulla of left adrenal gland",
+                          "created_at": "2024-05-25T01:14:27.000000Z",
+                          "updated_at": "2024-05-25T01:14:27.000000Z"
+                      },
+                      {
+                          "id": "9c1fb356-c170-405c-8b1e-bce051063f3a",
+                          "catId": "C65",
+                          "gradeCode": "1",
+                          "diseaseCode": "C651",
+                          "name": "Malignant neoplasm of right renal pelvis",
+                          "category": "Malignant neoplasm of renal pelvis",
+                          "description": "Malignant neoplasm of right renal pelvis",
+                          "created_at": "2024-05-25T01:14:27.000000Z",
+                          "updated_at": "2024-05-25T01:14:27.000000Z"
+                      },
+                      {
+                          "id": "9c1fb356-c2b2-41a9-ade7-8eb7b32ae13c",
+                          "catId": "C65",
+                          "gradeCode": "2",
+                          "diseaseCode": "C652",
+                          "name": "Malignant neoplasm of left renal pelvis",
+                          "category": "Malignant neoplasm of renal pelvis",
+                          "description": "Malignant neoplasm of left renal pelvis",
+                          "created_at": "2024-05-25T01:14:27.000000Z",
+                          "updated_at": "2024-05-25T01:14:27.000000Z"
+                      },
+                      {
+                          "id": "9c1fb356-c3fa-48af-94c2-5e6489536aec",
+                          "catId": "C65",
+                          "gradeCode": "9",
+                          "diseaseCode": "C659",
+                          "name": "Malignant neoplasm of unspecified renal pelvis",
+                          "category": "Malignant neoplasm of renal pelvis",
+                          "description": "Malignant neoplasm of unspecified renal pelvis",
+                          "created_at": "2024-05-25T01:14:27.000000Z",
+                          "updated_at": "2024-05-25T01:14:27.000000Z"
+                      },
+                      {
+                          "id": "9c1fb357-1ffa-4acd-bc63-d5ff9d1df3f9",
+                          "catId": "C749",
+                          "gradeCode": "0",
+                          "diseaseCode": "C7490",
+                          "name": "Malignant neoplasm of unsp part of unspecified adrenal gland",
+                          "category": "Malignant neoplasm of unspecified part of adrenal gland",
+                          "description": "Malignant neoplasm of unspecified part of unspecified adrenal gland",
+                          "created_at": "2024-05-25T01:14:27.000000Z",
+                          "updated_at": "2024-05-25T01:14:27.000000Z"
+                      },
+                      {
+                          "id": "9c1fb357-2111-48a9-9fa7-de53020aed5f",
+                          "catId": "C749",
+                          "gradeCode": "1",
+                          "diseaseCode": "C7491",
+                          "name": "Malignant neoplasm of unsp part of right adrenal gland",
+                          "category": "Malignant neoplasm of unspecified part of adrenal gland",
+                          "description": "Malignant neoplasm of unspecified part of right adrenal gland",
+                          "created_at": "2024-05-25T01:14:27.000000Z",
+                          "updated_at": "2024-05-25T01:14:27.000000Z"
+                      },
+                      {
+                          "id": "9c1fb357-2289-429b-9eb3-4e3116cb6748",
+                          "catId": "C749",
+                          "gradeCode": "2",
+                          "diseaseCode": "C7492",
+                          "name": "Malignant neoplasm of unspecified part of left adrenal gland",
+                          "category": "Malignant neoplasm of unspecified part of adrenal gland",
+                          "description": "Malignant neoplasm of unspecified part of left adrenal gland",
+                          "created_at": "2024-05-25T01:14:27.000000Z",
+                          "updated_at": "2024-05-25T01:14:27.000000Z"
+                      },
+                      {
+                          "id": "9c1fb35c-2a23-477e-b743-ec121ef04113",
+                          "catId": "D441",
+                          "gradeCode": "0",
+                          "diseaseCode": "D4410",
+                          "name": "Neoplasm of uncertain behavior of unspecified adrenal gland",
+                          "category": "Neoplasm of uncertain behavior of adrenal gland",
+                          "description": "Neoplasm of uncertain behavior of unspecified adrenal gland",
+                          "created_at": "2024-05-25T01:14:30.000000Z",
+                          "updated_at": "2024-05-25T01:14:30.000000Z"
+                      },
+                      {
+                          "id": "9c1fb35c-2b45-4d00-a2af-29b6de717580",
+                          "catId": "D441",
+                          "gradeCode": "1",
+                          "diseaseCode": "D4411",
+                          "name": "Neoplasm of uncertain behavior of right adrenal gland",
+                          "category": "Neoplasm of uncertain behavior of adrenal gland",
+                          "description": "Neoplasm of uncertain behavior of right adrenal gland",
+                          "created_at": "2024-05-25T01:14:30.000000Z",
+                          "updated_at": "2024-05-25T01:14:30.000000Z"
+                      },
+                      {
+                          "id": "9c1fb35c-2c5a-414b-a860-f36b9c1fe643",
+                          "catId": "D441",
+                          "gradeCode": "2",
+                          "diseaseCode": "D4412",
+                          "name": "Neoplasm of uncertain behavior of left adrenal gland",
+                          "category": "Neoplasm of uncertain behavior of adrenal gland",
+                          "description": "Neoplasm of uncertain behavior of left adrenal gland",
+                          "created_at": "2024-05-25T01:14:30.000000Z",
+                          "updated_at": "2024-05-25T01:14:30.000000Z"
+                      },
+                      {
+                          "id": "9c1fb35c-101b-4e85-b3c1-c4a5706d7a1c",
+                          "catId": "D411",
+                          "gradeCode": "0",
+                          "diseaseCode": "D4110",
+                          "name": "Neoplasm of uncertain behavior of unspecified renal pelvis",
+                          "category": "Neoplasm of uncertain behavior of renal pelvis",
+                          "description": "Neoplasm of uncertain behavior of unspecified renal pelvis",
+                          "created_at": "2024-05-25T01:14:30.000000Z",
+                          "updated_at": "2024-05-25T01:14:30.000000Z"
+                      },
+                      {
+                          "id": "9c1fb35c-116c-454d-a796-c9b7e643df5b",
+                          "catId": "D411",
+                          "gradeCode": "1",
+                          "diseaseCode": "D4111",
+                          "name": "Neoplasm of uncertain behavior of right renal pelvis",
+                          "category": "Neoplasm of uncertain behavior of renal pelvis",
+                          "description": "Neoplasm of uncertain behavior of right renal pelvis",
+                          "created_at": "2024-05-25T01:14:30.000000Z",
+                          "updated_at": "2024-05-25T01:14:30.000000Z"
+                      },
+                      {
+                          "id": "9c1fb35c-1299-4720-a7eb-596c36995e1a",
+                          "catId": "D411",
+                          "gradeCode": "2",
+                          "diseaseCode": "D4112",
+                          "name": "Neoplasm of uncertain behavior of left renal pelvis",
+                          "category": "Neoplasm of uncertain behavior of renal pelvis",
+                          "description": "Neoplasm of uncertain behavior of left renal pelvis",
+                          "created_at": "2024-05-25T01:14:30.000000Z",
+                          "updated_at": "2024-05-25T01:14:30.000000Z"
+                      },
+                      {
+                          "id": "9c1fb3b9-7d9c-4149-8fbf-c2b17fa32653",
+                          "catId": "P00",
+                          "gradeCode": "1",
+                          "diseaseCode": "P001",
+                          "name": "Newborn aff by maternal renal and urinary tract diseases",
+                          "category": "Newborn affected by maternal conditions that may be unrelated to present pregnancy",
+                          "description": "Newborn affected by maternal renal and urinary tract diseases",
+                          "created_at": "2024-05-25T01:15:31.000000Z",
+                          "updated_at": "2024-05-25T01:15:31.000000Z"
+                      },
+                      {
+                          "id": "9c1fb3ab-799e-46db-9364-2328556c759a",
+                          "catId": "N13",
+                          "gradeCode": "2",
+                          "diseaseCode": "N132",
+                          "name": "Hydronephrosis with renal and ureteral calculous obstruction",
+                          "category": "Obstructive and reflux uropathy",
+                          "description": "Hydronephrosis with renal and ureteral calculous obstruction",
+                          "created_at": "2024-05-25T01:15:22.000000Z",
+                          "updated_at": "2024-05-25T01:15:22.000000Z"
+                      },
+                      {
+                          "id": "9c1fb3ae-61dd-4e92-b07a-23b10ef3ccb9",
+                          "catId": "O038",
+                          "gradeCode": "2",
+                          "diseaseCode": "O0382",
+                          "name": "Renal failure following complete or unsp spon abortion",
+                          "category": "Other and unspecified complications following complete or unspecified spontaneous abortion",
+                          "description": "Renal failure following complete or unspecified spontaneous abortion",
+                          "created_at": "2024-05-25T01:15:24.000000Z",
+                          "updated_at": "2024-05-25T01:15:24.000000Z"
+                      },
+                      {
+                          "id": "9c1fb3ae-51ae-4beb-ad1a-148427f0b4d5",
+                          "catId": "O033",
+                          "gradeCode": "2",
+                          "diseaseCode": "O0332",
+                          "name": "Renal failure following incomplete spontaneous abortion",
+                          "category": "Other and unspecified complications following incomplete spontaneous abortion",
+                          "description": "Renal failure following incomplete spontaneous abortion",
+                          "created_at": "2024-05-25T01:15:24.000000Z",
+                          "updated_at": "2024-05-25T01:15:24.000000Z"
+                      },
+                      {
+                          "id": "9c1fb37e-1b7e-4973-875a-732986863ec4",
+                          "catId": "I72",
+                          "gradeCode": "2",
+                          "diseaseCode": "I722",
+                          "name": "Aneurysm of renal artery",
+                          "category": "Other aneurysm",
+                          "description": "Aneurysm of renal artery",
+                          "created_at": "2024-05-25T01:14:53.000000Z",
+                          "updated_at": "2024-05-25T01:14:53.000000Z"
+                      },
+                      {
+                          "id": "9c1fb37e-471d-4845-8ff7-1768a98c8015",
+                          "catId": "I777",
+                          "gradeCode": "3",
+                          "diseaseCode": "I7773",
+                          "name": "Dissection of renal artery",
+                          "category": "Other arterial dissection",
+                          "description": "Dissection of renal artery",
+                          "created_at": "2024-05-25T01:14:53.000000Z",
+                          "updated_at": "2024-05-25T01:14:53.000000Z"
+                      },
+                      {
+                          "id": "9c1fb3bb-8447-4d52-af38-9ffc8c3ea71e",
+                          "catId": "P96",
+                          "gradeCode": "0",
+                          "diseaseCode": "P960",
+                          "name": "Congenital renal failure",
+                          "category": "Other conditions originating in the perinatal period",
+                          "description": "Congenital renal failure",
+                          "created_at": "2024-05-25T01:15:33.000000Z",
+                          "updated_at": "2024-05-25T01:15:33.000000Z"
+                      },
+                      {
+                          "id": "9c1fb3bc-6b6c-404c-a49e-3a0d7013024b",
+                          "catId": "Q27",
+                          "gradeCode": "1",
+                          "diseaseCode": "Q271",
+                          "name": "Congenital renal artery stenosis",
+                          "category": "Other congenital malformations of peripheral vascular system",
+                          "description": "Congenital renal artery stenosis",
+                          "created_at": "2024-05-25T01:15:33.000000Z",
+                          "updated_at": "2024-05-25T01:15:33.000000Z"
+                      },
+                      {
+                          "id": "9c1fb3bc-6ccd-4a41-93a5-22eb4e499264",
+                          "catId": "Q27",
+                          "gradeCode": "2",
+                          "diseaseCode": "Q272",
+                          "name": "Other congenital malformations of renal artery",
+                          "category": "Other congenital malformations of peripheral vascular system",
+                          "description": "Other congenital malformations of renal artery",
+                          "created_at": "2024-05-25T01:15:33.000000Z",
+                          "updated_at": "2024-05-25T01:15:33.000000Z"
+                      },
+                      {
+                          "id": "9c1fb384-f26f-4cca-87ac-230696198874",
+                          "catId": "K76",
+                          "gradeCode": "7",
+                          "diseaseCode": "K767",
+                          "name": "Hepatorenal syndrome",
+                          "category": "Other diseases of liver",
+                          "description": "Hepatorenal syndrome",
+                          "created_at": "2024-05-25T01:14:57.000000Z",
+                          "updated_at": "2024-05-25T01:14:57.000000Z"
+                      },
+                      {
+                          "id": "9c1fb360-669b-482e-b14d-429cab37a588",
+                          "catId": "E27",
+                          "gradeCode": "0",
+                          "diseaseCode": "E270",
+                          "name": "Other adrenocortical overactivity",
+                          "category": "Other disorders of adrenal gland",
+                          "description": "Other adrenocortical overactivity",
+                          "created_at": "2024-05-25T01:14:33.000000Z",
+                          "updated_at": "2024-05-25T01:14:33.000000Z"
+                      },
+                      {
+                          "id": "9c1fb360-67ea-425f-aef9-3e05c6172994",
+                          "catId": "E27",
+                          "gradeCode": "1",
+                          "diseaseCode": "E271",
+                          "name": "Primary adrenocortical insufficiency",
+                          "category": "Other disorders of adrenal gland",
+                          "description": "Primary adrenocortical insufficiency",
+                          "created_at": "2024-05-25T01:14:33.000000Z",
+                          "updated_at": "2024-05-25T01:14:33.000000Z"
+                      },
+                      {
+                          "id": "9c1fb360-68ce-4424-b294-ef16ff1746f5",
+                          "catId": "E27",
+                          "gradeCode": "2",
+                          "diseaseCode": "E272",
+                          "name": "Addisonian crisis",
+                          "category": "Other disorders of adrenal gland",
+                          "description": "Addisonian crisis",
+                          "created_at": "2024-05-25T01:14:33.000000Z",
+                          "updated_at": "2024-05-25T01:14:33.000000Z"
+                      },
+                      {
+                          "id": "9c1fb360-69f7-40ee-a359-9c142706af60",
+                          "catId": "E27",
+                          "gradeCode": "3",
+                          "diseaseCode": "E273",
+                          "name": "Drug-induced adrenocortical insufficiency",
+                          "category": "Other disorders of adrenal gland",
+                          "description": "Drug-induced adrenocortical insufficiency",
+                          "created_at": "2024-05-25T01:14:33.000000Z",
+                          "updated_at": "2024-05-25T01:14:33.000000Z"
+                      },
+                      {
+                          "id": "9c1fb3ab-bc73-432e-bfd4-2d8f2d6cd00f",
+                          "catId": "N258",
+                          "gradeCode": "1",
+                          "diseaseCode": "N2581",
+                          "name": "Secondary hyperparathyroidism of renal origin",
+                          "category": "Other disorders resulting from impaired renal tubular function",
+                          "description": "Secondary hyperparathyroidism of renal origin",
+                          "created_at": "2024-05-25T01:15:22.000000Z",
+                          "updated_at": "2024-05-25T01:15:22.000000Z"
+                      },
+                      {
+                          "id": "9c1fb3ab-bdf1-489f-90f9-e1e35d315bbc",
+                          "catId": "N258",
+                          "gradeCode": "9",
+                          "diseaseCode": "N2589",
+                          "name": "Oth disorders resulting from impaired renal tubular function",
+                          "category": "Other disorders resulting from impaired renal tubular function",
+                          "description": "Other disorders resulting from impaired renal tubular function",
+                          "created_at": "2024-05-25T01:15:22.000000Z",
+                          "updated_at": "2024-05-25T01:15:22.000000Z"
+                      },
+                      {
+                          "id": "9c1fb3e5-7174-48d2-af43-1b0fe33a1d9e",
+                          "catId": "S37818",
+                          "gradeCode": "A",
+                          "diseaseCode": "S37818A",
+                          "name": "Other injury of adrenal gland, initial encounter",
+                          "category": "Other injury of adrenal gland",
+                          "description": "Other injury of adrenal gland, initial encounter",
+                          "created_at": "2024-05-25T01:16:00.000000Z",
+                          "updated_at": "2024-05-25T01:16:00.000000Z"
+                      },
+                      {
+                          "id": "9c1fb3e5-72a9-41c3-84f5-27b6cb21409d",
+                          "catId": "S37818",
+                          "gradeCode": "D",
+                          "diseaseCode": "S37818D",
+                          "name": "Other injury of adrenal gland, subsequent encounter",
+                          "category": "Other injury of adrenal gland",
+                          "description": "Other injury of adrenal gland, subsequent encounter",
+                          "created_at": "2024-05-25T01:16:00.000000Z",
+                          "updated_at": "2024-05-25T01:16:00.000000Z"
+                      },
+                      {
+                          "id": "9c1fb3e5-7435-469d-962c-e8011e465018",
+                          "catId": "S37818",
+                          "gradeCode": "S",
+                          "diseaseCode": "S37818S",
+                          "name": "Other injury of adrenal gland, sequela",
+                          "category": "Other injury of adrenal gland",
+                          "description": "Other injury of adrenal gland, sequela",
+                          "created_at": "2024-05-25T01:16:00.000000Z",
+                          "updated_at": "2024-05-25T01:16:00.000000Z"
+                      },
+                      {
+                          "id": "9c1fb385-7a5b-41dc-a1b8-d9bbcf2da1da",
+                          "catId": "K918",
+                          "gradeCode": "3",
+                          "diseaseCode": "K9183",
+                          "name": "Postprocedural hepatorenal syndrome",
+                          "category": "Other intraoperative and postprocedural complications and disorders of digestive system",
+                          "description": "Postprocedural hepatorenal syndrome",
+                          "created_at": "2024-05-25T01:14:57.000000Z",
+                          "updated_at": "2024-05-25T01:14:57.000000Z"
+                      },
+                      {
+                          "id": "9c1fb3ba-d7e9-4023-a674-0ec3ce330b5e",
+                          "catId": "P54",
+                          "gradeCode": "4",
+                          "diseaseCode": "P544",
+                          "name": "Neonatal adrenal hemorrhage",
+                          "category": "Other neonatal hemorrhages",
+                          "description": "Neonatal adrenal hemorrhage",
+                          "created_at": "2024-05-25T01:15:32.000000Z",
+                          "updated_at": "2024-05-25T01:15:32.000000Z"
+                      },
+                      {
+                          "id": "9c1fb3bd-9a39-462a-817b-092c643d5b62",
+                          "catId": "Q623",
+                          "gradeCode": "1",
+                          "diseaseCode": "Q6231",
+                          "name": "Congenital ureterocele, orthotopic",
+                          "category": "Other obstructive defects of renal pelvis and ureter",
+                          "description": "Congenital ureterocele, orthotopic",
+                          "created_at": "2024-05-25T01:15:34.000000Z",
+                          "updated_at": "2024-05-25T01:15:34.000000Z"
+                      },
+                      {
+                          "id": "9c1fb3bd-9b08-46f3-8702-c5e3a7a286ce",
+                          "catId": "Q623",
+                          "gradeCode": "2",
+                          "diseaseCode": "Q6232",
+                          "name": "Cecoureterocele",
+                          "category": "Other obstructive defects of renal pelvis and ureter",
+                          "description": "Cecoureterocele",
+                          "created_at": "2024-05-25T01:15:34.000000Z",
+                          "updated_at": "2024-05-25T01:15:34.000000Z"
+                      },
+                      {
+                          "id": "9c1fb3bd-9c25-44c2-a00b-5004ef57609b",
+                          "catId": "Q623",
+                          "gradeCode": "9",
+                          "diseaseCode": "Q6239",
+                          "name": "Other obstructive defects of renal pelvis and ureter",
+                          "category": "Other obstructive defects of renal pelvis and ureter",
+                          "description": "Other obstructive defects of renal pelvis and ureter",
+                          "created_at": "2024-05-25T01:15:34.000000Z",
+                          "updated_at": "2024-05-25T01:15:34.000000Z"
+                      },
+                      {
+                          "id": "9c1fb3ab-91f7-433b-afa8-a5f650f98c8e",
+                          "catId": "N15",
+                          "gradeCode": "0",
+                          "diseaseCode": "N150",
+                          "name": "Balkan nephropathy",
+                          "category": "Other renal tubulo-interstitial diseases",
+                          "description": "Balkan nephropathy",
+                          "created_at": "2024-05-25T01:15:22.000000Z",
+                          "updated_at": "2024-05-25T01:15:22.000000Z"
+                      },
+                      {
+                          "id": "9c1fb3ab-9373-4002-b402-4321addbb3e0",
+                          "catId": "N15",
+                          "gradeCode": "1",
+                          "diseaseCode": "N151",
+                          "name": "Renal and perinephric abscess",
+                          "category": "Other renal tubulo-interstitial diseases",
+                          "description": "Renal and perinephric abscess",
+                          "created_at": "2024-05-25T01:15:22.000000Z",
+                          "updated_at": "2024-05-25T01:15:22.000000Z"
+                      },
+                      {
+                          "id": "9c1fb3ab-94f6-49a0-a704-70306e455399",
+                          "catId": "N15",
+                          "gradeCode": "8",
+                          "diseaseCode": "N158",
+                          "name": "Other specified renal tubulo-interstitial diseases",
+                          "category": "Other renal tubulo-interstitial diseases",
+                          "description": "Other specified renal tubulo-interstitial diseases",
+                          "created_at": "2024-05-25T01:15:22.000000Z",
+                          "updated_at": "2024-05-25T01:15:22.000000Z"
+                      },
+                      {
+                          "id": "9c1fb3ab-9683-45dc-af7d-56e98aed56b4",
+                          "catId": "N15",
+                          "gradeCode": "9",
+                          "diseaseCode": "N159",
+                          "name": "Renal tubulo-interstitial disease, unspecified",
+                          "category": "Other renal tubulo-interstitial diseases",
+                          "description": "Renal tubulo-interstitial disease, unspecified",
+                          "created_at": "2024-05-25T01:15:22.000000Z",
+                          "updated_at": "2024-05-25T01:15:22.000000Z"
+                      },
+                      {
+                          "id": "9c1fb360-6e80-4f0b-b891-2d5ad6432fc8",
+                          "catId": "E278",
+                          "gradeCode": "",
+                          "diseaseCode": "E278",
+                          "name": "Other specified disorders of adrenal gland",
+                          "category": "Other specified disorders of adrenal gland",
+                          "description": "Other specified disorders of adrenal gland",
+                          "created_at": "2024-05-25T01:14:33.000000Z",
+                          "updated_at": "2024-05-25T01:14:33.000000Z"
+                      },
+                      {
+                          "id": "9c1fb3e2-557f-4e82-8c93-5b28cb90d479",
+                          "catId": "S35492",
+                          "gradeCode": "A",
+                          "diseaseCode": "S35492A",
+                          "name": "Other specified injury of left renal artery, init encntr",
+                          "category": "Other specified injury of left renal artery",
+                          "description": "Other specified injury of left renal artery, initial encounter",
+                          "created_at": "2024-05-25T01:15:58.000000Z",
+                          "updated_at": "2024-05-25T01:15:58.000000Z"
+                      },
+                      {
+                          "id": "9c1fb3e2-56c6-4dbb-a971-aa31acb6d6e4",
+                          "catId": "S35492",
+                          "gradeCode": "D",
+                          "diseaseCode": "S35492D",
+                          "name": "Other specified injury of left renal artery, subs encntr",
+                          "category": "Other specified injury of left renal artery",
+                          "description": "Other specified injury of left renal artery, subsequent encounter",
+                          "created_at": "2024-05-25T01:15:58.000000Z",
+                          "updated_at": "2024-05-25T01:15:58.000000Z"
+                      },
+                      {
+                          "id": "9c1fb3e2-584a-48b8-9207-f12728773a4d",
+                          "catId": "S35492",
+                          "gradeCode": "S",
+                          "diseaseCode": "S35492S",
+                          "name": "Other specified injury of left renal artery, sequela",
+                          "category": "Other specified injury of left renal artery",
+                          "description": "Other specified injury of left renal artery, sequela",
+                          "created_at": "2024-05-25T01:15:58.000000Z",
+                          "updated_at": "2024-05-25T01:15:58.000000Z"
+                      },
+                      {
+                          "id": "9c1fb3e2-5fac-47d8-b57a-96765cdbf9c7",
+                          "catId": "S35495",
+                          "gradeCode": "A",
+                          "diseaseCode": "S35495A",
+                          "name": "Other specified injury of left renal vein, initial encounter",
+                          "category": "Other specified injury of left renal vein",
+                          "description": "Other specified injury of left renal vein, initial encounter",
+                          "created_at": "2024-05-25T01:15:58.000000Z",
+                          "updated_at": "2024-05-25T01:15:58.000000Z"
+                      },
+                      {
+                          "id": "9c1fb3e2-604f-48ce-a40f-49a06fa239ef",
+                          "catId": "S35495",
+                          "gradeCode": "D",
+                          "diseaseCode": "S35495D",
+                          "name": "Other specified injury of left renal vein, subs encntr",
+                          "category": "Other specified injury of left renal vein",
+                          "description": "Other specified injury of left renal vein, subsequent encounter",
+                          "created_at": "2024-05-25T01:15:58.000000Z",
+                          "updated_at": "2024-05-25T01:15:58.000000Z"
+                      },
+                      {
+                          "id": "9c1fb3e2-60f2-47fe-8552-f61ebda26ecf",
+                          "catId": "S35495",
+                          "gradeCode": "S",
+                          "diseaseCode": "S35495S",
+                          "name": "Other specified injury of left renal vein, sequela",
+                          "category": "Other specified injury of left renal vein",
+                          "description": "Other specified injury of left renal vein, sequela",
+                          "created_at": "2024-05-25T01:15:58.000000Z",
+                          "updated_at": "2024-05-25T01:15:58.000000Z"
+                      },
+                      {
+                          "id": "9c1fb3e2-5198-4875-bd27-1cd16487d4d3",
+                          "catId": "S35491",
+                          "gradeCode": "A",
+                          "diseaseCode": "S35491A",
+                          "name": "Other specified injury of right renal artery, init encntr",
+                          "category": "Other specified injury of right renal artery",
+                          "description": "Other specified injury of right renal artery, initial encounter",
+                          "created_at": "2024-05-25T01:15:58.000000Z",
+                          "updated_at": "2024-05-25T01:15:58.000000Z"
+                      },
+                      {
+                          "id": "9c1fb3e2-52d9-4bdd-9a5d-6fbd09cee308",
+                          "catId": "S35491",
+                          "gradeCode": "D",
+                          "diseaseCode": "S35491D",
+                          "name": "Other specified injury of right renal artery, subs encntr",
+                          "category": "Other specified injury of right renal artery",
+                          "description": "Other specified injury of right renal artery, subsequent encounter",
+                          "created_at": "2024-05-25T01:15:58.000000Z",
+                          "updated_at": "2024-05-25T01:15:58.000000Z"
+                      },
+                      {
+                          "id": "9c1fb3e2-5436-4127-8e35-4272bd265754",
+                          "catId": "S35491",
+                          "gradeCode": "S",
+                          "diseaseCode": "S35491S",
+                          "name": "Other specified injury of right renal artery, sequela",
+                          "category": "Other specified injury of right renal artery",
+                          "description": "Other specified injury of right renal artery, sequela",
+                          "created_at": "2024-05-25T01:15:58.000000Z",
+                          "updated_at": "2024-05-25T01:15:58.000000Z"
+                      },
+                      {
+                          "id": "9c1fb3e2-5d0a-496f-bd14-de85b1ed2259",
+                          "catId": "S35494",
+                          "gradeCode": "A",
+                          "diseaseCode": "S35494A",
+                          "name": "Other specified injury of right renal vein, init encntr",
+                          "category": "Other specified injury of right renal vein",
+                          "description": "Other specified injury of right renal vein, initial encounter",
+                          "created_at": "2024-05-25T01:15:58.000000Z",
+                          "updated_at": "2024-05-25T01:15:58.000000Z"
+                      },
+                      {
+                          "id": "9c1fb3e2-5e18-41af-947c-345a318f3841",
+                          "catId": "S35494",
+                          "gradeCode": "D",
+                          "diseaseCode": "S35494D",
+                          "name": "Other specified injury of right renal vein, subs encntr",
+                          "category": "Other specified injury of right renal vein",
+                          "description": "Other specified injury of right renal vein, subsequent encounter",
+                          "created_at": "2024-05-25T01:15:58.000000Z",
+                          "updated_at": "2024-05-25T01:15:58.000000Z"
+                      },
+                      {
+                          "id": "9c1fb3e2-5ef5-436f-92a0-3d5db96b7d08",
+                          "catId": "S35494",
+                          "gradeCode": "S",
+                          "diseaseCode": "S35494S",
+                          "name": "Other specified injury of right renal vein, sequela",
+                          "category": "Other specified injury of right renal vein",
+                          "description": "Other specified injury of right renal vein, sequela",
+                          "created_at": "2024-05-25T01:15:58.000000Z",
+                          "updated_at": "2024-05-25T01:15:58.000000Z"
+                      },
+                      {
+                          "id": "9c1fb3e2-59a3-4e0f-a3b5-868c693ee649",
+                          "catId": "S35493",
+                          "gradeCode": "A",
+                          "diseaseCode": "S35493A",
+                          "name": "Oth injury of unspecified renal artery, init encntr",
+                          "category": "Other specified injury of unspecified renal artery",
+                          "description": "Other specified injury of unspecified renal artery, initial encounter",
+                          "created_at": "2024-05-25T01:15:58.000000Z",
+                          "updated_at": "2024-05-25T01:15:58.000000Z"
+                      },
+                      {
+                          "id": "9c1fb3e2-5ac7-4157-a93f-a3410096b510",
+                          "catId": "S35493",
+                          "gradeCode": "D",
+                          "diseaseCode": "S35493D",
+                          "name": "Oth injury of unspecified renal artery, subs encntr",
+                          "category": "Other specified injury of unspecified renal artery",
+                          "description": "Other specified injury of unspecified renal artery, subsequent encounter",
+                          "created_at": "2024-05-25T01:15:58.000000Z",
+                          "updated_at": "2024-05-25T01:15:58.000000Z"
+                      },
+                      {
+                          "id": "9c1fb3e2-5bec-4b97-9564-9ed6bbaa1c2f",
+                          "catId": "S35493",
+                          "gradeCode": "S",
+                          "diseaseCode": "S35493S",
+                          "name": "Other specified injury of unspecified renal artery, sequela",
+                          "category": "Other specified injury of unspecified renal artery",
+                          "description": "Other specified injury of unspecified renal artery, sequela",
+                          "created_at": "2024-05-25T01:15:58.000000Z",
+                          "updated_at": "2024-05-25T01:15:58.000000Z"
+                      },
+                      {
+                          "id": "9c1fb3e2-618a-456f-a485-982ca7aa67b6",
+                          "catId": "S35496",
+                          "gradeCode": "A",
+                          "diseaseCode": "S35496A",
+                          "name": "Oth injury of unspecified renal vein, init encntr",
+                          "category": "Other specified injury of unspecified renal vein",
+                          "description": "Other specified injury of unspecified renal vein, initial encounter",
+                          "created_at": "2024-05-25T01:15:58.000000Z",
+                          "updated_at": "2024-05-25T01:15:58.000000Z"
+                      },
+                      {
+                          "id": "9c1fb3e2-620f-418d-8b44-363be9e68640",
+                          "catId": "S35496",
+                          "gradeCode": "D",
+                          "diseaseCode": "S35496D",
+                          "name": "Oth injury of unspecified renal vein, subs encntr",
+                          "category": "Other specified injury of unspecified renal vein",
+                          "description": "Other specified injury of unspecified renal vein, subsequent encounter",
+                          "created_at": "2024-05-25T01:15:58.000000Z",
+                          "updated_at": "2024-05-25T01:15:58.000000Z"
+                      },
+                      {
+                          "id": "9c1fb3e2-6337-4c0d-82cb-c82c33cc8fc8",
+                          "catId": "S35496",
+                          "gradeCode": "S",
+                          "diseaseCode": "S35496S",
+                          "name": "Other specified injury of unspecified renal vein, sequela",
+                          "category": "Other specified injury of unspecified renal vein",
+                          "description": "Other specified injury of unspecified renal vein, sequela",
+                          "created_at": "2024-05-25T01:15:58.000000Z",
+                          "updated_at": "2024-05-25T01:15:58.000000Z"
+                      },
+                      {
+                          "id": "9c1fb351-aaf3-4d85-8eb2-1d55017a6fb6",
+                          "catId": "A98",
+                          "gradeCode": "5",
+                          "diseaseCode": "A985",
+                          "name": "Hemorrhagic fever with renal syndrome",
+                          "category": "Other viral hemorrhagic fevers, not elsewhere classified",
+                          "description": "Hemorrhagic fever with renal syndrome",
+                          "created_at": "2024-05-25T01:14:23.000000Z",
+                          "updated_at": "2024-05-25T01:14:23.000000Z"
+                      },
+                      {
+                          "id": "9c1fb4cb-0d45-4e5a-8ef6-cf18051694fa",
+                          "catId": "Z9115",
+                          "gradeCode": "",
+                          "diseaseCode": "Z9115",
+                          "name": "Patient's noncompliance with renal dialysis",
+                          "category": "Patient's noncompliance with renal dialysis",
+                          "description": "Patient's noncompliance with renal dialysis",
+                          "created_at": "2024-05-25T01:18:31.000000Z",
+                          "updated_at": "2024-05-25T01:18:31.000000Z"
+                      },
+                      {
+                          "id": "9c1fb4c9-d725-4e22-ab0b-df5560795eb3",
+                          "catId": "Z8553",
+                          "gradeCode": "",
+                          "diseaseCode": "Z8553",
+                          "name": "Personal history of malignant neoplasm of renal pelvis",
+                          "category": "Personal history of malignant neoplasm of renal pelvis",
+                          "description": "Personal history of malignant neoplasm of renal pelvis",
+                          "created_at": "2024-05-25T01:18:30.000000Z",
+                          "updated_at": "2024-05-25T01:18:30.000000Z"
+                      },
+                      {
+                          "id": "9c1fb3b0-476c-443d-993e-ed5c6cb02cd9",
+                          "catId": "O2683",
+                          "gradeCode": "1",
+                          "diseaseCode": "O26831",
+                          "name": "Pregnancy related renal disease, first trimester",
+                          "category": "Pregnancy related renal disease",
+                          "description": "Pregnancy related renal disease, first trimester",
+                          "created_at": "2024-05-25T01:15:25.000000Z",
+                          "updated_at": "2024-05-25T01:15:25.000000Z"
+                      },
+                      {
+                          "id": "9c1fb3b0-481b-4d3f-b9f6-7481c8f67b31",
+                          "catId": "O2683",
+                          "gradeCode": "2",
+                          "diseaseCode": "O26832",
+                          "name": "Pregnancy related renal disease, second trimester",
+                          "category": "Pregnancy related renal disease",
+                          "description": "Pregnancy related renal disease, second trimester",
+                          "created_at": "2024-05-25T01:15:25.000000Z",
+                          "updated_at": "2024-05-25T01:15:25.000000Z"
+                      },
+                      {
+                          "id": "9c1fb3b0-4926-4938-acb2-873f2a393fc2",
+                          "catId": "O2683",
+                          "gradeCode": "3",
+                          "diseaseCode": "O26833",
+                          "name": "Pregnancy related renal disease, third trimester",
+                          "category": "Pregnancy related renal disease",
+                          "description": "Pregnancy related renal disease, third trimester",
+                          "created_at": "2024-05-25T01:15:25.000000Z",
+                          "updated_at": "2024-05-25T01:15:25.000000Z"
+                      },
+                      {
+                          "id": "9c1fb3b0-4a69-4ec7-b31c-5b1df454f551",
+                          "catId": "O2683",
+                          "gradeCode": "9",
+                          "diseaseCode": "O26839",
+                          "name": "Pregnancy related renal disease, unspecified trimester",
+                          "category": "Pregnancy related renal disease",
+                          "description": "Pregnancy related renal disease, unspecified trimester",
+                          "created_at": "2024-05-25T01:15:25.000000Z",
+                          "updated_at": "2024-05-25T01:15:25.000000Z"
+                      },
+                      {
+                          "id": "9c1fb4c7-62be-4f56-b001-8adebe8f4fb3",
+                          "catId": "Z490",
+                          "gradeCode": "1",
+                          "diseaseCode": "Z4901",
+                          "name": "Encounter for fit/adjst of extracorporeal dialysis catheter",
+                          "category": "Preparatory care for renal dialysis",
+                          "description": "Encounter for fitting and adjustment of extracorporeal dialysis catheter",
+                          "created_at": "2024-05-25T01:18:28.000000Z",
+                          "updated_at": "2024-05-25T01:18:28.000000Z"
+                      },
+                      {
+                          "id": "9c1fb4c7-646f-4e8e-bc97-01625e220984",
+                          "catId": "Z490",
+                          "gradeCode": "2",
+                          "diseaseCode": "Z4902",
+                          "name": "Encounter for fit/adjst of peritoneal dialysis catheter",
+                          "category": "Preparatory care for renal dialysis",
+                          "description": "Encounter for fitting and adjustment of peritoneal dialysis catheter",
+                          "created_at": "2024-05-25T01:18:28.000000Z",
+                          "updated_at": "2024-05-25T01:18:28.000000Z"
+                      },
+                      {
+                          "id": "9c1fb3bd-7f12-4a08-ac27-603d56a1e999",
+                          "catId": "Q60",
+                          "gradeCode": "0",
+                          "diseaseCode": "Q600",
+                          "name": "Renal agenesis, unilateral",
+                          "category": "Renal agenesis and other reduction defects of kidney",
+                          "description": "Renal agenesis, unilateral",
+                          "created_at": "2024-05-25T01:15:34.000000Z",
+                          "updated_at": "2024-05-25T01:15:34.000000Z"
+                      },
+                      {
+                          "id": "9c1fb3bd-8060-4c49-805c-883b77a02199",
+                          "catId": "Q60",
+                          "gradeCode": "1",
+                          "diseaseCode": "Q601",
+                          "name": "Renal agenesis, bilateral",
+                          "category": "Renal agenesis and other reduction defects of kidney",
+                          "description": "Renal agenesis, bilateral",
+                          "created_at": "2024-05-25T01:15:34.000000Z",
+                          "updated_at": "2024-05-25T01:15:34.000000Z"
+                      },
+                      {
+                          "id": "9c1fb3bd-812b-4daa-b0a2-ed1e1b52682f",
+                          "catId": "Q60",
+                          "gradeCode": "2",
+                          "diseaseCode": "Q602",
+                          "name": "Renal agenesis, unspecified",
+                          "category": "Renal agenesis and other reduction defects of kidney",
+                          "description": "Renal agenesis, unspecified",
+                          "created_at": "2024-05-25T01:15:34.000000Z",
+                          "updated_at": "2024-05-25T01:15:34.000000Z"
+                      },
+                      {
+                          "id": "9c1fb3bd-8225-4f1c-b354-149b213bb71a",
+                          "catId": "Q60",
+                          "gradeCode": "3",
+                          "diseaseCode": "Q603",
+                          "name": "Renal hypoplasia, unilateral",
+                          "category": "Renal agenesis and other reduction defects of kidney",
+                          "description": "Renal hypoplasia, unilateral",
+                          "created_at": "2024-05-25T01:15:34.000000Z",
+                          "updated_at": "2024-05-25T01:15:34.000000Z"
+                      },
+                      {
+                          "id": "9c1fb3bd-836f-415b-bf50-0806fdefb86c",
+                          "catId": "Q60",
+                          "gradeCode": "4",
+                          "diseaseCode": "Q604",
+                          "name": "Renal hypoplasia, bilateral",
+                          "category": "Renal agenesis and other reduction defects of kidney",
+                          "description": "Renal hypoplasia, bilateral",
+                          "created_at": "2024-05-25T01:15:34.000000Z",
+                          "updated_at": "2024-05-25T01:15:34.000000Z"
+                      },
+                      {
+                          "id": "9c1fb3bd-849c-4a0f-89c7-3cb332879d6d",
+                          "catId": "Q60",
+                          "gradeCode": "5",
+                          "diseaseCode": "Q605",
+                          "name": "Renal hypoplasia, unspecified",
+                          "category": "Renal agenesis and other reduction defects of kidney",
+                          "description": "Renal hypoplasia, unspecified",
+                          "created_at": "2024-05-25T01:15:34.000000Z",
+                          "updated_at": "2024-05-25T01:15:34.000000Z"
+                      },
+                      {
+                          "id": "9c1fb3bd-85ed-4142-b13b-6cad6436b634",
+                          "catId": "Q60",
+                          "gradeCode": "6",
+                          "diseaseCode": "Q606",
+                          "name": "Potter's syndrome",
+                          "category": "Renal agenesis and other reduction defects of kidney",
+                          "description": "Potter's syndrome",
+                          "created_at": "2024-05-25T01:15:34.000000Z",
+                          "updated_at": "2024-05-25T01:15:34.000000Z"
+                      },
+                      {
+                          "id": "9c1fb3bd-9029-4eaa-aa2a-3f84a2e6e73f",
+                          "catId": "Q614",
+                          "gradeCode": "",
+                          "diseaseCode": "Q614",
+                          "name": "Renal dysplasia",
+                          "category": "Renal dysplasia",
+                          "description": "Renal dysplasia",
+                          "created_at": "2024-05-25T01:15:34.000000Z",
+                          "updated_at": "2024-05-25T01:15:34.000000Z"
+                      },
+                      {
+                          "id": "9c1fb3ab-97ba-4589-afd3-9b6952b6a78d",
+                          "catId": "N16",
+                          "gradeCode": "",
+                          "diseaseCode": "N16",
+                          "name": "Renal tubulo-interstitial disord in diseases classd elswhr",
+                          "category": "Renal tubulo-interstitial disorders in diseases classified elsewhere",
+                          "description": "Renal tubulo-interstitial disorders in diseases classified elsewhere",
+                          "created_at": "2024-05-25T01:15:22.000000Z",
+                          "updated_at": "2024-05-25T01:15:22.000000Z"
+                      },
+                      {
+                          "id": "9c1fb379-ecb7-44dd-abb5-4a562b98603b",
+                          "catId": "I15",
+                          "gradeCode": "1",
+                          "diseaseCode": "I151",
+                          "name": "Hypertension secondary to other renal disorders",
+                          "category": "Secondary hypertension",
+                          "description": "Hypertension secondary to other renal disorders",
+                          "created_at": "2024-05-25T01:14:50.000000Z",
+                          "updated_at": "2024-05-25T01:14:50.000000Z"
+                      },
+                      {
+                          "id": "9c1fb357-a060-4494-b6e4-53ae75d5db9e",
+                          "catId": "C797",
+                          "gradeCode": "0",
+                          "diseaseCode": "C7970",
+                          "name": "Secondary malignant neoplasm of unspecified adrenal gland",
+                          "category": "Secondary malignant neoplasm of adrenal gland",
+                          "description": "Secondary malignant neoplasm of unspecified adrenal gland",
+                          "created_at": "2024-05-25T01:14:27.000000Z",
+                          "updated_at": "2024-05-25T01:14:27.000000Z"
+                      },
+                      {
+                          "id": "9c1fb357-a188-47b3-b2db-c35cdc5461e0",
+                          "catId": "C797",
+                          "gradeCode": "1",
+                          "diseaseCode": "C7971",
+                          "name": "Secondary malignant neoplasm of right adrenal gland",
+                          "category": "Secondary malignant neoplasm of adrenal gland",
+                          "description": "Secondary malignant neoplasm of right adrenal gland",
+                          "created_at": "2024-05-25T01:14:27.000000Z",
+                          "updated_at": "2024-05-25T01:14:27.000000Z"
+                      },
+                      {
+                          "id": "9c1fb357-a2bf-4476-b119-e2615d29319d",
+                          "catId": "C797",
+                          "gradeCode": "2",
+                          "diseaseCode": "C7972",
+                          "name": "Secondary malignant neoplasm of left adrenal gland",
+                          "category": "Secondary malignant neoplasm of adrenal gland",
+                          "description": "Secondary malignant neoplasm of left adrenal gland",
+                          "created_at": "2024-05-25T01:14:27.000000Z",
+                          "updated_at": "2024-05-25T01:14:27.000000Z"
+                      },
+                      {
+                          "id": "9c1fb357-8c80-46c0-bd2e-b68c8262ebd7",
+                          "catId": "C790",
+                          "gradeCode": "0",
+                          "diseaseCode": "C7900",
+                          "name": "Secondary malignant neoplasm of unsp kidney and renal pelvis",
+                          "category": "Secondary malignant neoplasm of kidney and renal pelvis",
+                          "description": "Secondary malignant neoplasm of unspecified kidney and renal pelvis",
+                          "created_at": "2024-05-25T01:14:27.000000Z",
+                          "updated_at": "2024-05-25T01:14:27.000000Z"
+                      },
+                      {
+                          "id": "9c1fb357-8db0-4d22-aeae-843bb00dbcd0",
+                          "catId": "C790",
+                          "gradeCode": "1",
+                          "diseaseCode": "C7901",
+                          "name": "Secondary malignant neoplasm of r kidney and renal pelvis",
+                          "category": "Secondary malignant neoplasm of kidney and renal pelvis",
+                          "description": "Secondary malignant neoplasm of right kidney and renal pelvis",
+                          "created_at": "2024-05-25T01:14:27.000000Z",
+                          "updated_at": "2024-05-25T01:14:27.000000Z"
+                      },
+                      {
+                          "id": "9c1fb357-8f05-4964-b1da-938924f6cc98",
+                          "catId": "C790",
+                          "gradeCode": "2",
+                          "diseaseCode": "C7902",
+                          "name": "Secondary malignant neoplasm of left kidney and renal pelvis",
+                          "category": "Secondary malignant neoplasm of kidney and renal pelvis",
+                          "description": "Secondary malignant neoplasm of left kidney and renal pelvis",
+                          "created_at": "2024-05-25T01:14:27.000000Z",
+                          "updated_at": "2024-05-25T01:14:27.000000Z"
+                      },
+                      {
+                          "id": "9c1fb34f-5f99-41f1-adbf-976c5aed993a",
+                          "catId": "A187",
+                          "gradeCode": "",
+                          "diseaseCode": "A187",
+                          "name": "Tuberculosis of adrenal glands",
+                          "category": "Tuberculosis of adrenal glands",
+                          "description": "Tuberculosis of adrenal glands",
+                          "created_at": "2024-05-25T01:14:22.000000Z",
+                          "updated_at": "2024-05-25T01:14:22.000000Z"
+                      },
+                      {
+                          "id": "9c1fb3ab-c3aa-4423-9bdb-be61c01d2ed6",
+                          "catId": "N26",
+                          "gradeCode": "9",
+                          "diseaseCode": "N269",
+                          "name": "Renal sclerosis, unspecified",
+                          "category": "Unspecified contracted kidney",
+                          "description": "Renal sclerosis, unspecified",
+                          "created_at": "2024-05-25T01:15:22.000000Z",
+                          "updated_at": "2024-05-25T01:15:22.000000Z"
+                      },
+                      {
+                          "id": "9c1fb3e5-7591-4880-bc02-81fc50e91991",
+                          "catId": "S37819",
+                          "gradeCode": "A",
+                          "diseaseCode": "S37819A",
+                          "name": "Unspecified injury of adrenal gland, initial encounter",
+                          "category": "Unspecified injury of adrenal gland",
+                          "description": "Unspecified injury of adrenal gland, initial encounter",
+                          "created_at": "2024-05-25T01:16:00.000000Z",
+                          "updated_at": "2024-05-25T01:16:00.000000Z"
+                      },
+                      {
+                          "id": "9c1fb3e5-76ed-41e4-9335-eabb17f1b36b",
+                          "catId": "S37819",
+                          "gradeCode": "D",
+                          "diseaseCode": "S37819D",
+                          "name": "Unspecified injury of adrenal gland, subsequent encounter",
+                          "category": "Unspecified injury of adrenal gland",
+                          "description": "Unspecified injury of adrenal gland, subsequent encounter",
+                          "created_at": "2024-05-25T01:16:00.000000Z",
+                          "updated_at": "2024-05-25T01:16:00.000000Z"
+                      },
+                      {
+                          "id": "9c1fb3e5-7852-4f54-9dc9-05495fffc6db",
+                          "catId": "S37819",
+                          "gradeCode": "S",
+                          "diseaseCode": "S37819S",
+                          "name": "Unspecified injury of adrenal gland, sequela",
+                          "category": "Unspecified injury of adrenal gland",
+                          "description": "Unspecified injury of adrenal gland, sequela",
+                          "created_at": "2024-05-25T01:16:00.000000Z",
+                          "updated_at": "2024-05-25T01:16:00.000000Z"
+                      },
+                      {
+                          "id": "9c1fb3e2-2ccc-427a-b70d-b0d7f2aed662",
+                          "catId": "S35402",
+                          "gradeCode": "A",
+                          "diseaseCode": "S35402A",
+                          "name": "Unspecified injury of left renal artery, initial encounter",
+                          "category": "Unspecified injury of left renal artery",
+                          "description": "Unspecified injury of left renal artery, initial encounter",
+                          "created_at": "2024-05-25T01:15:58.000000Z",
+                          "updated_at": "2024-05-25T01:15:58.000000Z"
+                      },
+                      {
+                          "id": "9c1fb3e2-2de9-47d4-929b-b04ca4f4fc51",
+                          "catId": "S35402",
+                          "gradeCode": "D",
+                          "diseaseCode": "S35402D",
+                          "name": "Unspecified injury of left renal artery, subs encntr",
+                          "category": "Unspecified injury of left renal artery",
+                          "description": "Unspecified injury of left renal artery, subsequent encounter",
+                          "created_at": "2024-05-25T01:15:58.000000Z",
+                          "updated_at": "2024-05-25T01:15:58.000000Z"
+                      },
+                      {
+                          "id": "9c1fb3e2-2f06-4374-bcce-6e23bdfcdb19",
+                          "catId": "S35402",
+                          "gradeCode": "S",
+                          "diseaseCode": "S35402S",
+                          "name": "Unspecified injury of left renal artery, sequela",
+                          "category": "Unspecified injury of left renal artery",
+                          "description": "Unspecified injury of left renal artery, sequela",
+                          "created_at": "2024-05-25T01:15:58.000000Z",
+                          "updated_at": "2024-05-25T01:15:58.000000Z"
+                      },
+                      {
+                          "id": "9c1fb3e2-36b2-453f-9cb2-f88f0e0a6b63",
+                          "catId": "S35405",
+                          "gradeCode": "A",
+                          "diseaseCode": "S35405A",
+                          "name": "Unspecified injury of left renal vein, initial encounter",
+                          "category": "Unspecified injury of left renal vein",
+                          "description": "Unspecified injury of left renal vein, initial encounter",
+                          "created_at": "2024-05-25T01:15:58.000000Z",
+                          "updated_at": "2024-05-25T01:15:58.000000Z"
+                      },
+                      {
+                          "id": "9c1fb3e2-37b8-4a6d-af2b-c8baae7dc1d1",
+                          "catId": "S35405",
+                          "gradeCode": "D",
+                          "diseaseCode": "S35405D",
+                          "name": "Unspecified injury of left renal vein, subsequent encounter",
+                          "category": "Unspecified injury of left renal vein",
+                          "description": "Unspecified injury of left renal vein, subsequent encounter",
+                          "created_at": "2024-05-25T01:15:58.000000Z",
+                          "updated_at": "2024-05-25T01:15:58.000000Z"
+                      },
+                      {
+                          "id": "9c1fb3e2-389e-443a-b3a9-1e3579710f80",
+                          "catId": "S35405",
+                          "gradeCode": "S",
+                          "diseaseCode": "S35405S",
+                          "name": "Unspecified injury of left renal vein, sequela",
+                          "category": "Unspecified injury of left renal vein",
+                          "description": "Unspecified injury of left renal vein, sequela",
+                          "created_at": "2024-05-25T01:15:58.000000Z",
+                          "updated_at": "2024-05-25T01:15:58.000000Z"
+                      },
+                      {
+                          "id": "9c1fb3e2-292a-452d-a876-d7fad78e4ed8",
+                          "catId": "S35401",
+                          "gradeCode": "A",
+                          "diseaseCode": "S35401A",
+                          "name": "Unspecified injury of right renal artery, initial encounter",
+                          "category": "Unspecified injury of right renal artery",
+                          "description": "Unspecified injury of right renal artery, initial encounter",
+                          "created_at": "2024-05-25T01:15:58.000000Z",
+                          "updated_at": "2024-05-25T01:15:58.000000Z"
+                      },
+                      {
+                          "id": "9c1fb3e2-2a4b-4dc6-be25-204bd8189da8",
+                          "catId": "S35401",
+                          "gradeCode": "D",
+                          "diseaseCode": "S35401D",
+                          "name": "Unspecified injury of right renal artery, subs encntr",
+                          "category": "Unspecified injury of right renal artery",
+                          "description": "Unspecified injury of right renal artery, subsequent encounter",
+                          "created_at": "2024-05-25T01:15:58.000000Z",
+                          "updated_at": "2024-05-25T01:15:58.000000Z"
+                      },
+                      {
+                          "id": "9c1fb3e2-2b8a-4489-bc80-dea6513e005d",
+                          "catId": "S35401",
+                          "gradeCode": "S",
+                          "diseaseCode": "S35401S",
+                          "name": "Unspecified injury of right renal artery, sequela",
+                          "category": "Unspecified injury of right renal artery",
+                          "description": "Unspecified injury of right renal artery, sequela",
+                          "created_at": "2024-05-25T01:15:58.000000Z",
+                          "updated_at": "2024-05-25T01:15:58.000000Z"
+                      },
+                      {
+                          "id": "9c1fb3e2-3374-4839-b8d9-2199005b05fe",
+                          "catId": "S35404",
+                          "gradeCode": "A",
+                          "diseaseCode": "S35404A",
+                          "name": "Unspecified injury of right renal vein, initial encounter",
+                          "category": "Unspecified injury of right renal vein",
+                          "description": "Unspecified injury of right renal vein, initial encounter",
+                          "created_at": "2024-05-25T01:15:58.000000Z",
+                          "updated_at": "2024-05-25T01:15:58.000000Z"
+                      },
+                      {
+                          "id": "9c1fb3e2-348f-406e-acc0-347f85761def",
+                          "catId": "S35404",
+                          "gradeCode": "D",
+                          "diseaseCode": "S35404D",
+                          "name": "Unspecified injury of right renal vein, subsequent encounter",
+                          "category": "Unspecified injury of right renal vein",
+                          "description": "Unspecified injury of right renal vein, subsequent encounter",
+                          "created_at": "2024-05-25T01:15:58.000000Z",
+                          "updated_at": "2024-05-25T01:15:58.000000Z"
+                      },
+                      {
+                          "id": "9c1fb3e2-359a-4413-86ed-e004027a87ae",
+                          "catId": "S35404",
+                          "gradeCode": "S",
+                          "diseaseCode": "S35404S",
+                          "name": "Unspecified injury of right renal vein, sequela",
+                          "category": "Unspecified injury of right renal vein",
+                          "description": "Unspecified injury of right renal vein, sequela",
+                          "created_at": "2024-05-25T01:15:58.000000Z",
+                          "updated_at": "2024-05-25T01:15:58.000000Z"
+                      },
+                      {
+                          "id": "9c1fb3e2-3003-4d6f-881a-62060e6fe14b",
+                          "catId": "S35403",
+                          "gradeCode": "A",
+                          "diseaseCode": "S35403A",
+                          "name": "Unspecified injury of unspecified renal artery, init encntr",
+                          "category": "Unspecified injury of unspecified renal artery",
+                          "description": "Unspecified injury of unspecified renal artery, initial encounter",
+                          "created_at": "2024-05-25T01:15:58.000000Z",
+                          "updated_at": "2024-05-25T01:15:58.000000Z"
+                      },
+                      {
+                          "id": "9c1fb3e2-3135-4800-b60c-b9513d6655eb",
+                          "catId": "S35403",
+                          "gradeCode": "D",
+                          "diseaseCode": "S35403D",
+                          "name": "Unspecified injury of unspecified renal artery, subs encntr",
+                          "category": "Unspecified injury of unspecified renal artery",
+                          "description": "Unspecified injury of unspecified renal artery, subsequent encounter",
+                          "created_at": "2024-05-25T01:15:58.000000Z",
+                          "updated_at": "2024-05-25T01:15:58.000000Z"
+                      },
+                      {
+                          "id": "9c1fb3e2-325e-433b-b154-6bd1875b5660",
+                          "catId": "S35403",
+                          "gradeCode": "S",
+                          "diseaseCode": "S35403S",
+                          "name": "Unspecified injury of unspecified renal artery, sequela",
+                          "category": "Unspecified injury of unspecified renal artery",
+                          "description": "Unspecified injury of unspecified renal artery, sequela",
+                          "created_at": "2024-05-25T01:15:58.000000Z",
+                          "updated_at": "2024-05-25T01:15:58.000000Z"
+                      },
+                      {
+                          "id": "9c1fb3e2-39b7-4f6c-abb3-ec5d76dc75d7",
+                          "catId": "S35406",
+                          "gradeCode": "A",
+                          "diseaseCode": "S35406A",
+                          "name": "Unspecified injury of unspecified renal vein, init encntr",
+                          "category": "Unspecified injury of unspecified renal vein",
+                          "description": "Unspecified injury of unspecified renal vein, initial encounter",
+                          "created_at": "2024-05-25T01:15:58.000000Z",
+                          "updated_at": "2024-05-25T01:15:58.000000Z"
+                      },
+                      {
+                          "id": "9c1fb3e2-3ad2-4079-9f58-27274228de0d",
+                          "catId": "S35406",
+                          "gradeCode": "D",
+                          "diseaseCode": "S35406D",
+                          "name": "Unspecified injury of unspecified renal vein, subs encntr",
+                          "category": "Unspecified injury of unspecified renal vein",
+                          "description": "Unspecified injury of unspecified renal vein, subsequent encounter",
+                          "created_at": "2024-05-25T01:15:58.000000Z",
+                          "updated_at": "2024-05-25T01:15:58.000000Z"
+                      },
+                      {
+                          "id": "9c1fb3e2-3be6-4b91-8766-adbf597cb832",
+                          "catId": "S35406",
+                          "gradeCode": "S",
+                          "diseaseCode": "S35406S",
+                          "name": "Unspecified injury of unspecified renal vein, sequela",
+                          "category": "Unspecified injury of unspecified renal vein",
+                          "description": "Unspecified injury of unspecified renal vein, sequela",
+                          "created_at": "2024-05-25T01:15:58.000000Z",
+                          "updated_at": "2024-05-25T01:15:58.000000Z"
+                      },
+                      {
+                          "id": "9c1fb3ab-b814-4c4a-991c-a2c23cbd94f4",
+                          "catId": "N23",
+                          "gradeCode": "",
+                          "diseaseCode": "N23",
+                          "name": "Unspecified renal colic",
+                          "category": "Unspecified renal colic",
+                          "description": "Unspecified renal colic",
+                          "created_at": "2024-05-25T01:15:22.000000Z",
+                          "updated_at": "2024-05-25T01:15:22.000000Z"
+                      },
+                      {
+                          "id": "9c1fb395-8044-4eac-a78f-f6d6bcbf9fa0",
+                          "catId": "M313",
+                          "gradeCode": "0",
+                          "diseaseCode": "M3130",
+                          "name": "Wegener's granulomatosis without renal involvement",
+                          "category": "Wegener's granulomatosis",
+                          "description": "Wegener's granulomatosis without renal involvement",
+                          "created_at": "2024-05-25T01:15:08.000000Z",
+                          "updated_at": "2024-05-25T01:15:08.000000Z"
+                      },
+                      {
+                          "id": "9c1fb395-816c-435b-b57d-1ab8728e3cde",
+                          "catId": "M313",
+                          "gradeCode": "1",
+                          "diseaseCode": "M3131",
+                          "name": "Wegener's granulomatosis with renal involvement",
+                          "category": "Wegener's granulomatosis",
+                          "description": "Wegener's granulomatosis with renal involvement",
+                          "created_at": "2024-05-25T01:15:08.000000Z",
+                          "updated_at": "2024-05-25T01:15:08.000000Z"
+                      }
+                  ],
+                  "total": 247
+              }
+          }

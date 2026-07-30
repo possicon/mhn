@@ -1,0 +1,109 @@
+info:
+  name: View user
+  type: http
+  seq: 1
+
+http:
+  method: GET
+  url: "{{base_url}}/user/organization/user/:userId/viewUser"
+  headers:
+    - name: Accept
+      value: application/json
+  params:
+    - name: userId
+      value: 9bd3be97-8dda-4664-ae09-35550c784096
+      type: path
+  auth:
+    type: bearer
+    token: 27|LpSWxWlyMOsVl1eYxiE8h90MLqSFlKFVX0edGSJgdcd13727
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+examples:
+  - name: View user
+    request:
+      url: "{{base_url}}/user/organization/user/:userId/viewUser"
+      method: GET
+      headers:
+        - name: Accept
+          value: application/json
+      params:
+        - name: userId
+          value: 9bd3be97-8dda-4664-ae09-35550c784096
+          type: path
+    response:
+      status: 200
+      statusText: OK
+      headers:
+        - name: Date
+          value: Wed, 17 Apr 2024 07:39:26 GMT
+        - name: Server
+          value: Apache/2.4.54 (Win64) OpenSSL/1.1.1q mod_fcgid/2.3.10-dev
+        - name: X-Powered-By
+          value: PHP/8.2.16
+        - name: Cache-Control
+          value: no-cache, private
+        - name: X-RateLimit-Limit
+          value: "60"
+        - name: X-RateLimit-Remaining
+          value: "58"
+        - name: Access-Control-Allow-Origin
+          value: "*"
+        - name: Vary
+          value: Authorization
+        - name: Keep-Alive
+          value: timeout=5, max=100
+        - name: Connection
+          value: Keep-Alive
+        - name: Transfer-Encoding
+          value: chunked
+        - name: Content-Type
+          value: application/json
+      body:
+        type: json
+        data: |-
+          {
+              "success": true,
+              "code": 0,
+              "locale": "en",
+              "message": "User fetched successfully",
+              "data": {
+                  "item": {
+                      "id": "9bd3be97-8dda-4664-ae09-35550c784096",
+                      "first_name": "Oham",
+                      "middle_name": null,
+                      "last_name": null,
+                      "gender": "male",
+                      "status": "Active",
+                      "phone": "09123456789",
+                      "email": "goodness@kohams.com",
+                      "username": null,
+                      "email_verified_at": null,
+                      "type": "user",
+                      "country_id": null,
+                      "organization_id": "9bc5eb78-74d2-45f4-a677-05d07dca6a63",
+                      "reset_token": null,
+                      "token_time": null,
+                      "created_at": "2024-04-17T07:03:00.000000Z",
+                      "updated_at": "2024-04-17T07:22:43.000000Z",
+                      "roles": [
+                          {
+                              "id": 2,
+                              "name": "Hospital Admin",
+                              "guard_name": "user",
+                              "created_at": "2024-03-31T16:52:41.000000Z",
+                              "updated_at": "2024-03-31T16:52:41.000000Z",
+                              "pivot": {
+                                  "model_type": "App\\Models\\User",
+                                  "model_uuid": "9bd3be97-8dda-4664-ae09-35550c784096",
+                                  "role_id": 2
+                              }
+                          }
+                      ]
+                  }
+              }
+          }

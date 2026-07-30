@@ -1,0 +1,132 @@
+info:
+  name: show
+  type: http
+  seq: 4
+
+http:
+  method: GET
+  url: "{{base_url}}/user/organization/package/:id"
+  headers:
+    - name: Accept
+      value: application/json
+  params:
+    - name: id
+      value: 9d7d3076-9c04-438f-bd67-43b5612ff2a8
+      type: path
+  auth:
+    type: bearer
+    token: 78|IJJwsPNGwfjrHdMvXfMgKzfYaTOw56YXrF1VLHE8b494a4af
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+examples:
+  - name: show
+    request:
+      url: "{{base_url}}/user/organization/package/:id"
+      method: GET
+      headers:
+        - name: Accept
+          value: application/json
+      params:
+        - name: id
+          value: 9d7d3076-9c04-438f-bd67-43b5612ff2a8
+          type: path
+    response:
+      status: 200
+      statusText: OK
+      headers:
+        - name: Date
+          value: Thu, 14 Nov 2024 19:00:12 GMT
+        - name: Server
+          value: Apache/2.4.54 (Win64) OpenSSL/1.1.1d mod_fcgid/2.3.10-dev
+        - name: X-Powered-By
+          value: PHP/8.2.17
+        - name: Cache-Control
+          value: no-cache, private
+        - name: X-RateLimit-Limit
+          value: "60"
+        - name: X-RateLimit-Remaining
+          value: "58"
+        - name: Access-Control-Allow-Origin
+          value: "*"
+        - name: Vary
+          value: Authorization
+        - name: Keep-Alive
+          value: timeout=5, max=100
+        - name: Connection
+          value: Keep-Alive
+        - name: Transfer-Encoding
+          value: chunked
+        - name: Content-Type
+          value: application/json
+      body:
+        type: json
+        data: |-
+          {
+              "success": true,
+              "code": 0,
+              "locale": "en",
+              "message": "success",
+              "data": {
+                  "data": {
+                      "id": "9d7d3076-9c04-438f-bd67-43b5612ff2a8",
+                      "diagnostic_family": [
+                          "hematology",
+                          "biochemistry"
+                      ],
+                      "test_name": {
+                          "id": "9cfe8382-f887-486e-9644-04a1642fa621",
+                          "name": "Liver Function Test"
+                      },
+                      "gender": "Female",
+                      "description": "This is blood test require for body",
+                      "combined_test": [
+                          "9d7d232a-c478-4f3d-8b40-1478eb28ec87",
+                          "9d7d232a-bf3c-4113-9f44-2261c336f7ad"
+                      ],
+                      "test_preparation": "test preparation",
+                      "organization_id": "9bc5eb78-74d2-45f4-a677-05d07dca6a63",
+                      "done_by_id": "9bc6382c-bb73-4c7d-9409-677fe560485d",
+                      "created_at": "2024-11-14T18:48:15.000000Z",
+                      "updated_at": "2024-11-14T18:48:15.000000Z",
+                      "service": {
+                          "id": "9cfe8382-f887-486e-9644-04a1642fa621",
+                          "name": "Liver Function Test"
+                      },
+                      "diagnostic_type_count": 2,
+                      "individual_test_count": 2,
+                      "panels": [
+                          {
+                              "id": "9d7d232a-bf3c-4113-9f44-2261c336f7ad",
+                              "diagnostic_family": "[\"biochemistry\"]",
+                              "panel_name": "9cfe8383-2210-450b-b85a-c33adada1b28",
+                              "gender": "Both",
+                              "description": "description",
+                              "individual_diagnostic": "[\"9d7caad0-96ba-4b36-9a9e-a1b5a2b733ee\"]",
+                              "test_preparation": "test_preparation",
+                              "organization_id": "9bc5eb78-74d2-45f4-a677-05d07dca6a63",
+                              "done_by_id": "9bc6382c-bb73-4c7d-9409-677fe560485d",
+                              "created_at": "2024-11-14T18:11:04.000000Z",
+                              "updated_at": "2024-11-14T18:11:04.000000Z"
+                          },
+                          {
+                              "id": "9d7d232a-c478-4f3d-8b40-1478eb28ec87",
+                              "diagnostic_family": "[\"microbiology\"]",
+                              "panel_name": "9cfe8383-2e8e-411f-8466-3e64ff9a2e2e",
+                              "gender": "M",
+                              "description": "description",
+                              "individual_diagnostic": "[\"9d7caad0-9aed-49b7-8341-30080ab0a90c\"]",
+                              "test_preparation": "test_preparation",
+                              "organization_id": "9bc5eb78-74d2-45f4-a677-05d07dca6a63",
+                              "done_by_id": "9bc6382c-bb73-4c7d-9409-677fe560485d",
+                              "created_at": "2024-11-14T18:11:04.000000Z",
+                              "updated_at": "2024-11-14T18:11:04.000000Z"
+                          }
+                      ]
+                  }
+              }
+          }

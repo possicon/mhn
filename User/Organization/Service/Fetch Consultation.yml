@@ -1,0 +1,157 @@
+info:
+  name: Fetch Consultation
+  type: http
+  seq: 2
+
+http:
+  method: GET
+  url: "{{base_url}}/user/organization/service/consultation"
+  headers:
+    - name: Accept
+      value: application/json
+  body:
+    type: json
+    data: "{\r
+
+      \    \"name\":\"131A\",\r
+
+      \    \"service_type\":\"bed\", // general,clinical lab,prescription,procedures,x-ray lab,ultraSounds,consultation,bed,pharmacy\r
+
+      \    \"description\":\"bed 1A\",\r
+
+      \    \"category\":\"ward\",\r
+
+      \    \"amount\":10000,\r
+
+      \    //\"medicine_type\":\"Pill\" // required if \"service_type\":\"pharmacy'\r
+
+      \    \"ward_id\": \"9ed142cb-16ec-41b5-928e-2478c81e4abc\", // required when service type is bed\r
+
+      \    \"status\": \"available\" // required when service type is bed , available or reserved\r
+
+      }"
+  auth:
+    type: bearer
+    token: "{{local_token}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+examples:
+  - name: Fetch Consultation
+    request:
+      url: "{{base_url}}/user/organization/service/consultation"
+      method: GET
+      headers:
+        - name: Accept
+          value: application/json
+      body:
+        type: json
+        data: "{\r
+
+          \    \"name\":\"131A\",\r
+
+          \    \"service_type\":\"bed\", // general,clinical lab,prescription,procedures,x-ray lab,ultraSounds,consultation,bed,pharmacy\r
+
+          \    \"description\":\"bed 1A\",\r
+
+          \    \"category\":\"ward\",\r
+
+          \    \"amount\":10000,\r
+
+          \    //\"medicine_type\":\"Pill\" // required if \"service_type\":\"pharmacy'\r
+
+          \    \"ward_id\": \"9ed142cb-16ec-41b5-928e-2478c81e4abc\", // required when service type is bed\r
+
+          \    \"status\": \"available\" // required when service type is bed , available or reserved\r
+
+          }"
+    response:
+      status: 200
+      statusText: OK
+      headers:
+        - name: Server
+          value: nginx/1.18.0 (Ubuntu)
+        - name: Content-Type
+          value: application/json
+        - name: Transfer-Encoding
+          value: chunked
+        - name: Connection
+          value: keep-alive
+        - name: Cache-Control
+          value: no-cache, private
+        - name: Date
+          value: Sun, 03 May 2026 08:53:36 GMT
+        - name: X-RateLimit-Limit
+          value: "60"
+        - name: X-RateLimit-Remaining
+          value: "59"
+        - name: Vary
+          value: Origin
+      body:
+        type: json
+        data: |-
+          {
+              "success": true,
+              "code": 0,
+              "locale": "en",
+              "message": "Consultation services fetched successfully.",
+              "data": {
+                  "services": {
+                      "id": "a16c7ee7-d108-42fc-9578-3d7dc7d327b3",
+                      "name": "Consultation",
+                      "service_type": "consultation",
+                      "organization_id": null,
+                      "description": "General Consultation",
+                      "category": "general",
+                      "status": "active",
+                      "medicine_type": null,
+                      "amount": null,
+                      "created_at": "2026-03-30T12:26:16.000000Z",
+                      "updated_at": "2026-04-02T10:44:15.000000Z",
+                      "latest_service_log": {
+                          "id": "a17f7b18-73d6-473b-92df-11c4348a8ac8",
+                          "service_id": "a16c7ee7-d108-42fc-9578-3d7dc7d327b3",
+                          "changed_by": {
+                              "id": "a16d238f-fbdc-428c-b535-769a4c68b523",
+                              "first_name": "Minab",
+                              "middle_name": "Moses",
+                              "last_name": "Michael",
+                              "gender": "male",
+                              "phone": "+234 809 688 0957",
+                              "email": "minab@gmail.com",
+                              "username": null,
+                              "email_verified_at": null,
+                              "type": "owner",
+                              "organization_id": "a16d22d8-6a4c-4814-b2f0-7c07f8f02cd9",
+                              "company_id": null,
+                              "reset_token": null,
+                              "token_time": null,
+                              "country_id": null,
+                              "branch_id": null,
+                              "status": "pending",
+                              "created_at": "2026-03-30T20:06:41.000000Z",
+                              "updated_at": "2026-04-08T22:48:23.000000Z",
+                              "deleted_at": null,
+                              "country_call_code": null
+                          },
+                          "old_amount": "0.00",
+                          "new_amount": "5000.00",
+                          "created_at": "2026-04-08T22:56:21.000000Z",
+                          "updated_at": "2026-04-08T22:56:21.000000Z"
+                      },
+                      "private_service_pricing": {
+                          "id": "a17444d4-43f7-472b-ad9a-6bbad429b37f",
+                          "service_item_id": "a16c7ee7-d108-42fc-9578-3d7dc7d327b3",
+                          "organization_id": "a1735ed6-68fb-41ca-acf2-c05fbc3cce95",
+                          "amount": "5000.00",
+                          "status": "active",
+                          "created_at": "2026-04-03T09:10:30.000000Z",
+                          "updated_at": "2026-04-03T09:10:30.000000Z"
+                      }
+                  }
+              }
+          }

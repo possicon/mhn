@@ -1,0 +1,141 @@
+info:
+  name: prescription with default
+  type: http
+  seq: 11
+
+http:
+  method: POST
+  url: "{{base_url}}/user/patient/treatment_intervention"
+  headers:
+    - name: Accept
+      value: application/json
+  body:
+    type: json
+    data: "{\r
+
+      \    \"treatment_plan\":\"treatment and refer\", //, treatment only , treatment and refer\r
+
+      \    \"patient_id\":\"9c22ec62-cfa4-476c-8921-a924a32f20d7\",\r
+
+      \    \"appointment_id\":\"9e6809b1-8a5e-4ffc-8b35-a86402ce4f4a\",\r
+
+      \    \"followup\":0, //required if treatment is treatment only or treatment and refer\r
+
+      \    \"prescription\":1, //required if treatment is treatment only or treatment and refer\r
+
+      \    \"programs\":0, //required if treatment is treatment only or treatment and refer\r
+
+      \    \"admission\":0, //required if treatment is treatment only or treatment and refer\r
+
+      \    \"procedures\":0,\r
+
+      \    \"pharmacy\":\"default\",\r
+
+      \    \"prescription_id\":\"9e6e21dc-8f98-45f7-8e67-35c86a6e998a\",\r
+
+      \   \"medicine_type\":[\"Pill\",\"Injection\"],\r
+
+      \    \"medicine_name\":[\"9d684a0c-c358-4abd-af70-6070987b1066\",\"9d684a0c-ff48-4cbd-8f98-99e48e86ae80\"],\r
+
+      \    \"medicine_dosage\":[\"1\",\"3\"],\r
+
+      \    \"medicine_frequency\":[\"3\", \"2\"],\r
+
+      \    \"medicine_period\":[\"weekly\",\"daily\"],\r
+
+      \    \"medicine_start_date\":[\"2025-03-15 00:00:00\",\"2025-03-16 00:00:00\"],\r
+
+      \    \"medicine_end_date\":[\"2025-03-21 00:00:00\",\"2025-03-20 00:00:00\"]\r
+
+      }"
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+examples:
+  - name: prescription
+    request:
+      url: "{{base_url}}/user/patient/treatment_intervention"
+      method: POST
+      headers:
+        - name: Accept
+          value: application/json
+      body:
+        type: json
+        data: "{\r
+
+          \    \"treatment_plan\":\"treatment and refer\", //, treatment only , treatment and refer\r
+
+          \    \"patient_id\":\"9c111152-abe1-4490-ab04-c066445133a7\",\r
+
+          \    \"followup\":0, //required if treatment is treatment only or treatment and refer\r
+
+          \    \"prescription\":1, //required if treatment is treatment only or treatment and refer\r
+
+          \    \"programs\":0, //required if treatment is treatment only or treatment and refer\r
+
+          \    \"admission\":0, //required if treatment is treatment only or treatment and refer\r
+
+          \    \"procedures\":0,\r
+
+          \    \"pharmacy\":\"default\",\r
+
+          \    \"medicine_name\":[\"Paracetamol\",\"Chlroquire\",\"Vitamin C\"],\r
+
+          \    \"medicine_type\":[\"Pill\",\"Injection\",\"Pill\"],\r
+
+          \    \"frequency\":[\"Daily\",\"Twice daily\",\"Daily\"],\r
+
+          \    \"period\":[\"Morning and evening\",\"Evening\",\"Morning\"],\r
+
+          \    \"start_date\":[\"08-02-2024\",\"10-03-2024\",\"15-04-2024\"],\r
+
+          \    \"end_date\":[\"15-02-2024\",\"13-03-2024\",\"15-05-2024\"],\r
+
+          \    \"amount\":[\"1000\",\"900\",\"700\"],\r
+
+          \    \"dosage\":[\"One Tab\",\"One Injection\",\"Two Tabs\"]\r
+
+          }"
+    response:
+      status: 201
+      statusText: Created
+      headers:
+        - name: Date
+          value: Wed, 12 Jun 2024 09:36:43 GMT
+        - name: Server
+          value: Apache/2.4.54 (Win64) OpenSSL/1.1.1q mod_fcgid/2.3.10-dev
+        - name: X-Powered-By
+          value: PHP/8.2.16
+        - name: Cache-Control
+          value: no-cache, private
+        - name: X-RateLimit-Limit
+          value: "60"
+        - name: X-RateLimit-Remaining
+          value: "59"
+        - name: Access-Control-Allow-Origin
+          value: "*"
+        - name: Vary
+          value: Authorization
+        - name: Keep-Alive
+          value: timeout=5, max=100
+        - name: Connection
+          value: Keep-Alive
+        - name: Transfer-Encoding
+          value: chunked
+        - name: Content-Type
+          value: application/json
+      body:
+        type: json
+        data: |-
+          {
+              "success": true,
+              "code": 0,
+              "locale": "en",
+              "message": "You have successfully saved",
+              "data": null
+          }

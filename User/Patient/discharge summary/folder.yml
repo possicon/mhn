@@ -1,0 +1,7 @@
+info:
+  name: discharge summary
+  type: folder
+  seq: 28
+
+request:
+  auth: inherit

@@ -1,0 +1,18 @@
+info:
+  name: inventory sample
+  type: http
+  seq: 13
+
+http:
+  method: POST
+  url: "{{base_url}}/user/organization/inventory/sample"
+  headers:
+    - name: Accept
+      value: application/json
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

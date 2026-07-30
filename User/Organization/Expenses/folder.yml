@@ -1,0 +1,9 @@
+info:
+  name: Expenses
+  type: folder
+  seq: 9
+
+request:
+  auth:
+    type: bearer
+    token: 63|Ki7c6FHC4M1SPelKwr0kwLf9d7ZC73mYFTMZN34gef853891

@@ -1,0 +1,73 @@
+info:
+  name: Check batch import status
+  type: http
+  seq: 8
+
+http:
+  method: GET
+  url: "{{base_url}}/admin/city/importCsv/batch?batchId=9ba10c43-01a6-460f-9685-ebba208b0b50"
+  params:
+    - name: batchId
+      value: 9ba10c43-01a6-460f-9685-ebba208b0b50
+      type: query
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+examples:
+  - name: Check batch import status
+    request:
+      url: "{{base_url}}/admin/city/importCsv/batch?batchId=9ba10c43-01a6-460f-9685-ebba208b0b50"
+      method: GET
+      params:
+        - name: batchId
+          value: 9ba10c43-01a6-460f-9685-ebba208b0b50
+          type: query
+    response:
+      status: 200
+      statusText: OK
+      headers:
+        - name: Date
+          value: Sat, 23 Mar 2024 02:15:43 GMT
+        - name: Server
+          value: Apache/2.4.54 (Win64) OpenSSL/1.1.1q mod_fcgid/2.3.10-dev
+        - name: X-Powered-By
+          value: PHP/8.2.16
+        - name: Cache-Control
+          value: no-cache, private
+        - name: X-RateLimit-Limit
+          value: "60"
+        - name: X-RateLimit-Remaining
+          value: "58"
+        - name: Access-Control-Allow-Origin
+          value: "*"
+        - name: Vary
+          value: Authorization
+        - name: Keep-Alive
+          value: timeout=5, max=100
+        - name: Connection
+          value: Keep-Alive
+        - name: Transfer-Encoding
+          value: chunked
+        - name: Content-Type
+          value: application/json
+      body:
+        type: json
+        data: |-
+          {
+              "id": "9ba10c43-01a6-460f-9685-ebba208b0b50",
+              "name": "",
+              "totalJobs": 151,
+              "pendingJobs": 113,
+              "processedJobs": 38,
+              "progress": 25,
+              "failedJobs": 0,
+              "options": [],
+              "createdAt": "2024-03-23T02:12:57.000000Z",
+              "cancelledAt": null,
+              "finishedAt": null
+          }

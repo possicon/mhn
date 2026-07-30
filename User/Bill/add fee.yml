@@ -1,0 +1,105 @@
+info:
+  name: add fee
+  type: http
+  seq: 9
+
+http:
+  method: POST
+  url: "{{base_url}}/user/organization/bills/:id/addFee"
+  headers:
+    - name: Accept
+      value: application/json
+  params:
+    - name: id
+      value: 9e607dbb-342e-4f4f-89a4-c93a18d8e8ee
+      type: path
+  body:
+    type: json
+    data: "{\r
+
+      \    \"amount\":3699,\r
+
+      \    \"care_type\":\"primary care\",\r
+
+      \    \"coverage_type\":\"partial\",\r
+
+      \    \"percent\":20,\r
+
+      \    \"is_amount_in_percent\":1\r
+
+      }"
+  auth:
+    type: bearer
+    token: "{{token}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+examples:
+  - name: add fee
+    request:
+      url: "{{base_url}}/user/organization/bills/:id/addFee"
+      method: POST
+      headers:
+        - name: Accept
+          value: application/json
+      params:
+        - name: id
+          value: 9d21b302-6bf0-49d6-8373-6571cfadb813
+          type: path
+      body:
+        type: json
+        data: "{\r
+
+          \    \"amount\":3699,\r
+
+          \    \"care_type\":\"primary care\",\r
+
+          \    \"coverage_type\":\"partial\",\r
+
+          \    \"percent\":20,\r
+
+          \    \"is_amount_in_percent\":1\r
+
+          }"
+    response:
+      status: 200
+      statusText: OK
+      headers:
+        - name: Date
+          value: Mon, 30 Sep 2024 11:17:58 GMT
+        - name: Server
+          value: Apache/2.4.54 (Win64) OpenSSL/1.1.1d mod_fcgid/2.3.10-dev
+        - name: X-Powered-By
+          value: PHP/8.2.17
+        - name: Cache-Control
+          value: no-cache, private
+        - name: X-RateLimit-Limit
+          value: "60"
+        - name: X-RateLimit-Remaining
+          value: "58"
+        - name: Access-Control-Allow-Origin
+          value: "*"
+        - name: Vary
+          value: Authorization
+        - name: Keep-Alive
+          value: timeout=5, max=100
+        - name: Connection
+          value: Keep-Alive
+        - name: Transfer-Encoding
+          value: chunked
+        - name: Content-Type
+          value: application/json
+      body:
+        type: json
+        data: |-
+          {
+              "success": true,
+              "code": 0,
+              "locale": "en",
+              "message": "Sucess",
+              "data": null
+          }

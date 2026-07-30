@@ -1,0 +1,95 @@
+info:
+  name: List Languages
+  type: http
+  seq: 2
+
+http:
+  method: GET
+  url: "{{base_url}}/user/language"
+  headers:
+    - name: Accept
+      value: application/json
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+examples:
+  - name: List Languages
+    request:
+      url: "{{base_url}}/user/language"
+      method: GET
+      headers:
+        - name: Accept
+          value: application/json
+    response:
+      status: 200
+      statusText: OK
+      headers:
+        - name: Date
+          value: Wed, 05 Jun 2024 10:49:29 GMT
+        - name: Server
+          value: Apache/2.4.54 (Win64) OpenSSL/1.1.1q mod_fcgid/2.3.10-dev
+        - name: X-Powered-By
+          value: PHP/8.2.16
+        - name: Cache-Control
+          value: no-cache, private
+        - name: X-RateLimit-Limit
+          value: "60"
+        - name: X-RateLimit-Remaining
+          value: "59"
+        - name: Access-Control-Allow-Origin
+          value: "*"
+        - name: Vary
+          value: Authorization
+        - name: Keep-Alive
+          value: timeout=5, max=100
+        - name: Connection
+          value: Keep-Alive
+        - name: Transfer-Encoding
+          value: chunked
+        - name: Content-Type
+          value: application/json
+      body:
+        type: json
+        data: |-
+          {
+              "success": true,
+              "code": 0,
+              "locale": "en",
+              "message": "You have successfully fetch all languages",
+              "data": {
+                  "data": [
+                      {
+                          "id": "9bfad77f-9532-493c-88b9-6b99ebe55b8b",
+                          "name": "English",
+                          "organization_id": "9bc5eb78-74d2-45f4-a677-05d07dca6a63",
+                          "status": "active",
+                          "created_at": "2024-05-06T17:29:55.000000Z",
+                          "updated_at": "2024-05-06T17:29:55.000000Z",
+                          "patients_count": 15
+                      },
+                      {
+                          "id": "9bfad77f-9d36-454e-96bb-8de110bacd4b",
+                          "name": "French",
+                          "organization_id": "9bc5eb78-74d2-45f4-a677-05d07dca6a63",
+                          "status": "active",
+                          "created_at": "2024-05-06T17:29:55.000000Z",
+                          "updated_at": "2024-05-06T17:29:55.000000Z",
+                          "patients_count": 0
+                      },
+                      {
+                          "id": "9bfad77f-9f5a-478d-b2df-227c4cb8db15",
+                          "name": "Igbo",
+                          "organization_id": "9bc5eb78-74d2-45f4-a677-05d07dca6a63",
+                          "status": "active",
+                          "created_at": "2024-05-06T17:29:55.000000Z",
+                          "updated_at": "2024-05-06T17:29:55.000000Z",
+                          "patients_count": 0
+                      }
+                  ]
+              }
+          }

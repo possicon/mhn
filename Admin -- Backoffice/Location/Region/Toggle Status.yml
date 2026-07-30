@@ -1,0 +1,78 @@
+info:
+  name: Toggle Status
+  type: http
+  seq: 6
+
+http:
+  method: POST
+  url: "{{base_url}}/admin/region/:regionId/toggleStatus"
+  params:
+    - name: regionId
+      value: 9b9ecc53-4276-4e13-bda6-461083ecb376
+      type: path
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+examples:
+  - name: Toggle Status
+    request:
+      url: "{{base_url}}/admin/region/:regionId/toggleStatus"
+      method: POST
+      params:
+        - name: regionId
+          value: 1a1a1a1a-1a1a-1a1a-1a1a-1a1a1a1a1a11
+          type: path
+    response:
+      status: 200
+      statusText: OK
+      headers:
+        - name: Date
+          value: Thu, 21 Mar 2024 08:29:26 GMT
+        - name: Server
+          value: Apache/2.4.54 (Win64) OpenSSL/1.1.1q PHP/8.1.10
+        - name: Vary
+          value: Authorization
+        - name: X-Powered-By
+          value: PHP/8.1.10
+        - name: Cache-Control
+          value: no-cache, private
+        - name: X-RateLimit-Limit
+          value: "60"
+        - name: X-RateLimit-Remaining
+          value: "57"
+        - name: Access-Control-Allow-Origin
+          value: "*"
+        - name: Keep-Alive
+          value: timeout=5, max=100
+        - name: Connection
+          value: Keep-Alive
+        - name: Transfer-Encoding
+          value: chunked
+        - name: Content-Type
+          value: application/json
+      body:
+        type: json
+        data: |-
+          {
+              "success": true,
+              "code": 0,
+              "locale": "en",
+              "message": "Region active successfully.",
+              "data": {
+                  "region": {
+                      "id": "1a1a1a1a-1a1a-1a1a-1a1a-1a1a1a1a1a11",
+                      "name": "Africa",
+                      "description": null,
+                      "code": null,
+                      "active": true,
+                      "countries_count": 4,
+                      "created_at": "2024-03-20T10:40:44.000000Z",
+                      "updated_at": "2024-03-21T08:29:27.000000Z"
+                  }
+              }
+          }

@@ -1,0 +1,94 @@
+info:
+  name: Invite Org from Admin
+  type: http
+  seq: 2
+
+http:
+  method: POST
+  url: "{{base_url}}/admin/organization/invite"
+  body:
+    type: json
+    data: "{\r
+
+      \    \"name\": \"Reddington Hospital, Lekki\",\r
+
+      \    \"email\": \"yabacoder@gmail.com\", // change to working email\r
+
+      \    \"region_id\": \"9b9ecc53-4276-4e13-bda6-461083ecb376\",\r
+
+      \    \"country_id\": \"9b9faee2-a19d-4d99-8756-2f4afcd8e79d\",\r
+
+      \    \"plan_id\": \"9c0c8b10-3620-4653-90f0-8ee32c2cce49\",  // Interested plan\r
+
+      \    \"description\": \"This can be null\",\r
+
+      \    \"url\": \"http://mobilehealthnet.com/comeback\"\r
+
+      }"
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+examples:
+  - name: Invite Org from Admin
+    request:
+      url: "{{base_url}}/admin/organization/invite"
+      method: POST
+      body:
+        type: json
+        data: "{\r
+
+          \    \"name\": \"Reddington Hospital, Lekki\",\r
+
+          \    \"email\": \"yabacoder@gmail.com\", // change to working email\r
+
+          \    \"region_id\": \"9b9ecc53-4276-4e13-bda6-461083ecb376\",\r
+
+          \    \"country_id\": \"9b9faee2-a19d-4d99-8756-2f4afcd8e79d\",\r
+
+          \    \"plan_id\": \"9c0c8b10-3620-4653-90f0-8ee32c2cce49\",  // Interested plan\r
+
+          \    \"description\": \"This can be null\",\r
+
+          \    \"url\": \"http://mobilehealthnet.com/comeback\"\r
+
+          }"
+    response:
+      status: 200
+      statusText: OK
+      headers:
+        - name: Date
+          value: Fri, 13 Dec 2024 23:06:11 GMT
+        - name: Server
+          value: Apache/2.4.54 (Win64) OpenSSL/1.1.1d mod_fcgid/2.3.10-dev
+        - name: X-Powered-By
+          value: PHP/8.2.17
+        - name: Cache-Control
+          value: no-cache, private
+        - name: X-RateLimit-Limit
+          value: "60"
+        - name: X-RateLimit-Remaining
+          value: "59"
+        - name: Access-Control-Allow-Origin
+          value: "*"
+        - name: Vary
+          value: Authorization
+        - name: Keep-Alive
+          value: timeout=5, max=100
+        - name: Connection
+          value: Keep-Alive
+        - name: Transfer-Encoding
+          value: chunked
+        - name: Content-Type
+          value: application/json
+      body:
+        type: json
+        data: |-
+          {
+              "success": true,
+              "message": "Invitation email sent successfully"
+          }

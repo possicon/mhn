@@ -1,0 +1,120 @@
+info:
+  name: Setup Domain
+  type: http
+  seq: 7
+
+http:
+  method: POST
+  url: "{{base_url}}/user/organization/onboarding/domain-setup"
+  headers:
+    - name: Accept
+      value: application/json
+  body:
+    type: json
+    data: "{\r
+
+      \    \"domain\": \"pinnacles\", // unique string - min 3\r
+
+      \    \"email\": \"pinnacles\", // if customised is 1 then email must be a valid email\r
+
+      \    \"customized\": 1, //0 or 1\r
+
+      \   \"incoming_server\":\"https://google.com\", //required if customised is true\r
+
+      \   \"outgoing_server\":\"https://mhn.net\" //required if customised is true\r
+
+      }"
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+examples:
+  - name: Setup Domain
+    request:
+      url: "{{base_url}}/user/organization/onboarding/domain-setup"
+      method: POST
+      headers:
+        - name: Accept
+          value: application/json
+      body:
+        type: json
+        data: "{\r
+
+          \    \"domain\": \"pinnacles\", // unique string - min 3\r
+
+          \    \"email\": \"pinnacles\", // if customised is 1 then email must be a valid email\r
+
+          \    \"customized\": 1, //0 or 1\r
+
+          \   \"incoming_server\":\"https://google.com\", //required if customised is true\r
+
+          \   \"outgoing_server\":\"https://mhn.net\" //required if customised is true\r
+
+          }"
+    response:
+      status: 200
+      statusText: OK
+      headers:
+        - name: Date
+          value: Fri, 12 Apr 2024 12:32:14 GMT
+        - name: Server
+          value: Apache/2.4.54 (Win64) OpenSSL/1.1.1q mod_fcgid/2.3.10-dev
+        - name: X-Powered-By
+          value: PHP/8.2.16
+        - name: Cache-Control
+          value: no-cache, private
+        - name: X-RateLimit-Limit
+          value: "60"
+        - name: X-RateLimit-Remaining
+          value: "59"
+        - name: Access-Control-Allow-Origin
+          value: "*"
+        - name: Vary
+          value: Authorization
+        - name: Keep-Alive
+          value: timeout=5, max=100
+        - name: Connection
+          value: Keep-Alive
+        - name: Transfer-Encoding
+          value: chunked
+        - name: Content-Type
+          value: application/json
+      body:
+        type: json
+        data: |-
+          {
+              "success": true,
+              "code": 0,
+              "locale": "en",
+              "message": "Domain and Email updated successfully",
+              "data": {
+                  "org": {
+                      "id": "9bc5eb78-74d2-45f4-a677-05d07dca6a63",
+                      "name": "MHN",
+                      "domain": "pinnacles",
+                      "incoming_server": "https://google.com",
+                      "outgoing_server": "https://mhn.net",
+                      "email": "pinnacles@pinnacle.com",
+                      "invited": false,
+                      "country_id": "9b9faee2-a19d-4d99-8756-2f4afcd8e79d",
+                      "organization_type_id": 1,
+                      "region_id": "9b9ecc53-4276-4e13-bda6-461083ecb376",
+                      "interested_plan_id": "9baa6a1f-a6ae-4a64-9330-aff8996c87f7",
+                      "plan_id": null,
+                      "description": null,
+                      "landmark": null,
+                      "status": "Org Onboarded",
+                      "step": "1",
+                      "active": true,
+                      "address": "Glover road, Ikoyi",
+                      "phone": "12345678",
+                      "state_id": "9ba01c32-4a17-4952-8f15-b4a212027e04",
+                      "city_id": "9ba1338d-f1ca-487b-ae34-471ddc6a7bc2",
+                      "grade_id": 1
+                  }
+              }
+          }

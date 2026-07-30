@@ -1,0 +1,138 @@
+info:
+  name: list
+  type: http
+  seq: 6
+
+http:
+  method: POST
+  url: "{{base_url}}/user/organization/list_invoice"
+  headers:
+    - name: Accept
+      value: application/json
+  body:
+    type: json
+    data: "{\r
+
+      \    \"patient_id\":\"9bf2e6d3-08c3-4826-b389-f0bebcca9fa9\"\r
+
+      }"
+  auth:
+    type: bearer
+    token: 64|wekxmT6fEC7W1savxR3VWd2fcLOu9fkY2pdTExtBe40532c7
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+examples:
+  - name: list
+    request:
+      url: "{{base_url}}/user/organization/list_invoice"
+      method: POST
+      headers:
+        - name: Accept
+          value: application/json
+      body:
+        type: json
+        data: "{\r
+
+          \    \"patient_id\":\"9bf2e6d3-08c3-4826-b389-f0bebcca9fa9\"\r
+
+          }"
+    response:
+      status: 200
+      statusText: OK
+      headers:
+        - name: Date
+          value: Mon, 07 Oct 2024 21:00:17 GMT
+        - name: Server
+          value: Apache/2.4.54 (Win64) OpenSSL/1.1.1q mod_fcgid/2.3.10-dev
+        - name: X-Powered-By
+          value: PHP/8.2.16
+        - name: Cache-Control
+          value: no-cache, private
+        - name: X-RateLimit-Limit
+          value: "60"
+        - name: X-RateLimit-Remaining
+          value: "59"
+        - name: Access-Control-Allow-Origin
+          value: "*"
+        - name: Vary
+          value: Authorization
+        - name: Keep-Alive
+          value: timeout=5, max=100
+        - name: Connection
+          value: Keep-Alive
+        - name: Transfer-Encoding
+          value: chunked
+        - name: Content-Type
+          value: application/json
+      body:
+        type: json
+        data: |-
+          {
+              "success": true,
+              "code": 0,
+              "locale": "en",
+              "message": "success",
+              "data": {
+                  "invoices": [
+                      {
+                          "id": "9d301de7-ca14-4b16-b181-9ad0cc7c1da7",
+                          "total_services_amount": "1000.00",
+                          "total_services_amount_to_pay": "1075.00",
+                          "total_services_vat": "75.00",
+                          "total_services_coverage": "0.00",
+                          "mode": "company",
+                          "bill_ids": "[\"9d0e918e-146d-458e-b913-fd1a06fe802c\", \"9d0e9240-3179-472e-a20e-4bd40c0c600a\"]",
+                          "created_at": "2024-10-07T11:17:38.000000Z",
+                          "updated_at": "2024-10-07T12:33:16.000000Z",
+                          "amount_paid": "7000.00",
+                          "notes": null,
+                          "receipt_no": null,
+                          "payment_method": "bank transfer",
+                          "appointment_id": "9d167445-bd3e-405f-913a-e99c91aa5f8c",
+                          "patient_id": "9bf2e6d3-08c3-4826-b389-f0bebcca9fa9",
+                          "invoice_number": null
+                      },
+                      {
+                          "id": "9d301e41-3bb4-4be9-bdd0-67466fe66995",
+                          "total_services_amount": "1000.00",
+                          "total_services_amount_to_pay": "1075.00",
+                          "total_services_vat": "75.00",
+                          "total_services_coverage": "0.00",
+                          "mode": "company",
+                          "bill_ids": "[\"9d0e918e-146d-458e-b913-fd1a06fe802c\", \"9d0e9240-3179-472e-a20e-4bd40c0c600a\"]",
+                          "created_at": "2024-10-07T11:18:35.000000Z",
+                          "updated_at": "2024-10-07T11:18:35.000000Z",
+                          "amount_paid": null,
+                          "notes": null,
+                          "receipt_no": null,
+                          "payment_method": null,
+                          "appointment_id": "9d167445-bd3e-405f-913a-e99c91aa5f8c",
+                          "patient_id": "9bf2e6d3-08c3-4826-b389-f0bebcca9fa9",
+                          "invoice_number": "INV-00000001"
+                      },
+                      {
+                          "id": "9d30db27-1639-4fb5-b63c-820b8fcbefd2",
+                          "total_services_amount": "1000.00",
+                          "total_services_amount_to_pay": "1075.00",
+                          "total_services_vat": "75.00",
+                          "total_services_coverage": "0.00",
+                          "mode": "company",
+                          "bill_ids": "[\"9d0e924d-2f88-4e7b-914b-1aa6d638792e\"]",
+                          "created_at": "2024-10-07T20:06:47.000000Z",
+                          "updated_at": "2024-10-07T20:06:47.000000Z",
+                          "amount_paid": null,
+                          "notes": null,
+                          "receipt_no": null,
+                          "payment_method": null,
+                          "appointment_id": "9d19a29a-761c-4a44-8c3c-8e5bb7510df1",
+                          "patient_id": "9bf2e6d3-08c3-4826-b389-f0bebcca9fa9",
+                          "invoice_number": "INV-00000005"
+                      }
+                  ]
+              }
+          }

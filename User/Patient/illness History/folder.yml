@@ -1,0 +1,7 @@
+info:
+  name: illness History
+  type: folder
+  seq: 23
+
+request:
+  auth: inherit

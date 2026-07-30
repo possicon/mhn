@@ -1,0 +1,146 @@
+info:
+  name: change bed after admit patient
+  type: http
+  seq: 17
+
+http:
+  method: POST
+  url: "{{base_url}}/user/changeBedAfterAdmitingPatient"
+  headers:
+    - name: Accept
+      value: application/json
+  body:
+    type: json
+    data: "{\r
+
+      \    \"id\":\"9ed1422d-abfa-454c-b684-aa183f0881c7\",\r
+
+      \    \"ward\":\"9ed142cb-16ec-41b5-928e-2478c81e4abc\",\r
+
+      \    //\"room\":\"9ed14332-68b3-4100-b63a-5ab9f83aa176\",\r
+
+      \    \"bed_number\":\"9f38f266-2734-4bc7-83c8-2dad93a54585\"\r
+
+      }"
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+examples:
+  - name: change bed before admit patient Copy
+    request:
+      url: "{{base_url}}/user/changeBedAfterAdmitingPatient"
+      method: POST
+      headers:
+        - name: Accept
+          value: application/json
+      body:
+        type: json
+        data: "{\r
+
+          \    \"id\":\"9ed1422d-abfa-454c-b684-aa183f0881c7\",\r
+
+          \    \"ward\":\"9ec6b535-2386-4918-9043-8c24faf4278e\",\r
+
+          \    \"room\":\"9ed14332-68b3-4100-b63a-5ab9f83aa176\",\r
+
+          \    \"bed_number\":\"9ed15641-c3d4-43e3-89d2-6a1f139f1f24\"\r
+
+          }"
+    response:
+      status: 200
+      statusText: OK
+      headers:
+        - name: Date
+          value: Fri, 02 May 2025 20:55:44 GMT
+        - name: Server
+          value: Apache/2.4.54 (Win64) OpenSSL/1.1.1d mod_fcgid/2.3.10-dev
+        - name: X-Powered-By
+          value: PHP/8.2.17
+        - name: Cache-Control
+          value: no-cache, private
+        - name: X-RateLimit-Limit
+          value: "60"
+        - name: X-RateLimit-Remaining
+          value: "57"
+        - name: Access-Control-Allow-Origin
+          value: "*"
+        - name: Vary
+          value: Authorization
+        - name: Keep-Alive
+          value: timeout=5, max=100
+        - name: Connection
+          value: Keep-Alive
+        - name: Transfer-Encoding
+          value: chunked
+        - name: Content-Type
+          value: application/json
+      body:
+        type: json
+        data: |-
+          {
+              "success": true,
+              "code": 0,
+              "locale": "en",
+              "message": "Successfully updated",
+              "data": {
+                  "item": {
+                      "id": "9ed1422d-abfa-454c-b684-aa183f0881c7",
+                      "patient_id": "9ea8d8a4-2cdd-4e08-baaf-a2d7048f8a32",
+                      "visit_date": "2025-05-02 00:00:00",
+                      "treatment_plan": "treatment and refer",
+                      "refer_to": null,
+                      "procedures": null,
+                      "programs": null,
+                      "admission": 1,
+                      "prescription": null,
+                      "followup": null,
+                      "prenatal_care": null,
+                      "hospital_id": null,
+                      "reasons_for_refer": null,
+                      "additional_note": null,
+                      "trimester": null,
+                      "number_of_examination": null,
+                      "prenatal_care_frequency": null,
+                      "prenatal_care_note": null,
+                      "followup_occurrence": null,
+                      "followup_note": null,
+                      "followup_start_date": null,
+                      "followup_end_date": null,
+                      "followup_time": null,
+                      "followup_doctor_id": null,
+                      "repeat_followup": 0,
+                      "prescription_ids": null,
+                      "instruction_for_wards": "instruction_for_wards",
+                      "program_id": null,
+                      "procedure_id": null,
+                      "requested_by": "9bc6382c-bb73-4c7d-9409-677fe560485d",
+                      "created_at": "2025-05-02T19:59:16.000000Z",
+                      "updated_at": "2025-05-02T20:55:45.000000Z",
+                      "admission_status": "admitted",
+                      "discharge_date": null,
+                      "appointment_id": "9eb91989-9ad5-43bd-980a-d9318b4649c8",
+                      "admission_date": "2025-05-02 00:00:00",
+                      "billId": null,
+                      "ward": "9ec6b535-2386-4918-9043-8c24faf4278e",
+                      "room": "9ed14332-68b3-4100-b63a-5ab9f83aa176",
+                      "bed_number": "9ed15641-c3d4-43e3-89d2-6a1f139f1f24",
+                      "bed_changed": true,
+                      "bed_changed_at": "2025-05-02T20:55:45.544408Z",
+                      "bed": {
+                          "id": "9ed14edd-ff0f-4431-8191-564d4e520610",
+                          "description": "this is not compuslory",
+                          "status": "available",
+                          "created_at": "2025-05-02T20:34:45.000000Z",
+                          "updated_at": "2025-05-02T20:55:45.000000Z",
+                          "organization_id": "9bc5eb78-74d2-45f4-a677-05d07dca6a63",
+                          "room_id": "9ed14332-68b3-4100-b63a-5ab9f83aa176",
+                          "service_item_id": "9ed14edd-fbc7-4c81-aba0-239ecf9d6354"
+                      }
+                  }
+              }
+          }

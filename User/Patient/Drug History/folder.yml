@@ -1,0 +1,7 @@
+info:
+  name: Drug History
+  type: folder
+  seq: 5
+
+request:
+  auth: inherit

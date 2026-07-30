@@ -1,0 +1,131 @@
+info:
+  name: List Roles
+  type: http
+  seq: 11
+
+http:
+  method: GET
+  url: "{{base_url}}/admin/roles"
+  body:
+    type: json
+    data: |-
+      {
+          "name":"Add Organization",
+          "group_name":"Owner",
+          "guard_name":"user"
+      }
+  auth:
+    type: bearer
+    token: "{{adminToken}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+examples:
+  - name: List Roles
+    request:
+      url: "{{base_url}}/admin/roles"
+      method: GET
+      body:
+        type: json
+        data: |-
+          {
+              "name":"Add Organization",
+              "group_name":"Owner",
+              "guard_name":"user"
+          }
+    response:
+      status: 200
+      statusText: OK
+      headers:
+        - name: Date
+          value: Mon, 02 Dec 2024 14:21:19 GMT
+        - name: Server
+          value: Apache/2.4.54 (Win64) OpenSSL/1.1.1d mod_fcgid/2.3.10-dev
+        - name: X-Powered-By
+          value: PHP/8.2.17
+        - name: Cache-Control
+          value: no-cache, private
+        - name: X-RateLimit-Limit
+          value: "60"
+        - name: X-RateLimit-Remaining
+          value: "58"
+        - name: Access-Control-Allow-Origin
+          value: "*"
+        - name: Vary
+          value: Authorization
+        - name: Keep-Alive
+          value: timeout=5, max=100
+        - name: Connection
+          value: Keep-Alive
+        - name: Transfer-Encoding
+          value: chunked
+        - name: Content-Type
+          value: application/json
+      body:
+        type: json
+        data: |-
+          {
+              "success": true,
+              "code": 0,
+              "locale": "en",
+              "message": "Roles fetched successfully",
+              "data": {
+                  "roles": [
+                      {
+                          "id": 8,
+                          "name": "patient",
+                          "people": 17,
+                          "module": 0,
+                          "permissions": 0,
+                          "status": "active"
+                      },
+                      {
+                          "id": 7,
+                          "name": "company",
+                          "people": 3,
+                          "module": 0,
+                          "permissions": 0,
+                          "status": "active"
+                      },
+                      {
+                          "id": 6,
+                          "name": "doctor",
+                          "people": 1,
+                          "module": 0,
+                          "permissions": 0,
+                          "status": "active"
+                      },
+                      {
+                          "id": 3,
+                          "name": "owner",
+                          "people": 4,
+                          "module": 1,
+                          "permissions": 3,
+                          "status": "active"
+                      },
+                      {
+                          "id": 2,
+                          "name": "hospital admin",
+                          "people": 11,
+                          "module": 0,
+                          "permissions": 0,
+                          "status": "inactive"
+                      },
+                      {
+                          "id": 1,
+                          "name": "admin",
+                          "people": 7,
+                          "module": 0,
+                          "permissions": 0,
+                          "status": "active"
+                      }
+                  ],
+                  "total": 6,
+                  "page": 1,
+                  "take": 20
+              }
+          }

@@ -1,0 +1,114 @@
+info:
+  name: View a user
+  type: http
+  seq: 2
+
+http:
+  method: GET
+  url: "{{base_url}}/admin/user/:userId"
+  headers:
+    - name: Accept
+      value: application/json
+  params:
+    - name: userId
+      value: 1a1a1a1a-1a1a-1a1a-1a1a-1a1a1a1a1a14
+      type: path
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+examples:
+  - name: View a user
+    request:
+      url: "{{base_url}}/admin/user/:userId"
+      method: GET
+      params:
+        - name: userId
+          value: 1a1a1a1a-1a1a-1a1a-1a1a-1a1a1a1a1a14
+          type: path
+    response:
+      status: 200
+      statusText: OK
+      headers:
+        - name: Date
+          value: Sun, 31 Mar 2024 17:15:18 GMT
+        - name: Server
+          value: Apache/2.4.54 (Win64) OpenSSL/1.1.1q mod_fcgid/2.3.10-dev
+        - name: X-Powered-By
+          value: PHP/8.2.16
+        - name: Cache-Control
+          value: no-cache, private
+        - name: X-RateLimit-Limit
+          value: "60"
+        - name: X-RateLimit-Remaining
+          value: "58"
+        - name: Access-Control-Allow-Origin
+          value: "*"
+        - name: Vary
+          value: Authorization
+        - name: Keep-Alive
+          value: timeout=5, max=100
+        - name: Connection
+          value: Keep-Alive
+        - name: Transfer-Encoding
+          value: chunked
+        - name: Content-Type
+          value: application/json
+      body:
+        type: json
+        data: |-
+          {
+              "success": true,
+              "code": 0,
+              "locale": "en",
+              "message": "User or admin fetched successfully",
+              "data": {
+                  "data": [
+                      {
+                          "id": "1a1a1a1a-1a1a-1a1a-1a1a-1a1a1a1a1a14",
+                          "first_name": "Zoie",
+                          "middle_name": null,
+                          "last_name": "Weil",
+                          "gender": "male",
+                          "status": "Active",
+                          "phone": null,
+                          "email": "example4@gmail.com",
+                          "username": null,
+                          "email_verified_at": null,
+                          "type": "owner",
+                          "country_id": "9b9faee2-9ee1-41e9-bc9b-3ece02c702bf",
+                          "organization_id": "1a1a1a1a-1a1a-1a1a-1a1a-1a1a1a1a1a14",
+                          "reset_token": null,
+                          "token_time": null,
+                          "created_at": "2024-03-21T10:51:41.000000Z",
+                          "updated_at": "2024-03-21T10:51:41.000000Z",
+                          "roles": [
+                              {
+                                  "id": 2,
+                                  "name": "Hospital Admin",
+                                  "guard_name": "user",
+                                  "created_at": "2024-03-31T16:52:41.000000Z",
+                                  "updated_at": "2024-03-31T16:52:41.000000Z",
+                                  "pivot": {
+                                      "model_type": "App\\Models\\User",
+                                      "model_uuid": "1a1a1a1a-1a1a-1a1a-1a1a-1a1a1a1a1a14",
+                                      "role_id": 2
+                                  }
+                              }
+                          ],
+                          "country": {
+                              "id": "9b9faee2-9ee1-41e9-bc9b-3ece02c702bf",
+                              "name": "Aland Islands",
+                              "region_id": "9b9ecc53-49e9-443f-9bc0-84a9c27d1652",
+                              "currency_name": "Euro",
+                              "currency_symbol": "EUR",
+                              "active": true
+                          }
+                      }
+                  ]
+              }
+          }

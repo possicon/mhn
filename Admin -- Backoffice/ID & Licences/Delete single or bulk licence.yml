@@ -1,0 +1,26 @@
+info:
+  name: Delete single or bulk licence
+  type: http
+  seq: 3
+
+http:
+  method: POST
+  url: "{{base_url}}/admin/licence/delete"
+  body:
+    type: json
+    data: "{\r
+
+      \  \"action\":\"delete\",\r
+
+      \  \"ids\": [\"9b8a0e2e-6079-47bd-902d-1693ae7423e9\"]\r
+
+      }"
+  auth:
+    type: bearer
+    token: "{{token}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

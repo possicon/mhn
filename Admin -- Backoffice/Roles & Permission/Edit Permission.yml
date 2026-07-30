@@ -1,0 +1,35 @@
+info:
+  name: Edit Permission
+  type: http
+  seq: 4
+
+http:
+  method: PATCH
+  url: "{{base_url}}/admin/permissions/:id"
+  headers:
+    - name: Accept
+      value: application/json
+    - name: Content-Type
+      value: application/x-www-form-urlencoded
+  params:
+    - name: id
+      value: "1"
+      type: path
+  body:
+    type: form-urlencoded
+    data:
+      - name: name
+        value: Update User
+      - name: guard_name
+        value: admin
+      - name: group_name
+        value: Admin
+  auth:
+    type: bearer
+    token: "{{token}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

@@ -1,0 +1,149 @@
+info:
+  name: maternal Information
+  type: http
+  seq: 18
+
+http:
+  method: POST
+  url: "{{base_url}}/user/patient/maternalInformation"
+  headers:
+    - name: Accept
+      value: application/json
+  body:
+    type: json
+    data: "{\r
+
+      \    \"patient_procedure_id\":\"9c5b95a4-cf9e-4760-bce3-e3594f34ed64\",\r
+
+      \    \"medications_administer\":\"medications administer\",\r
+
+      \    \"any_complications\":[\"a\",\"h\"],\r
+
+      \    \"for_antenatal\":1,\r
+
+      \    \"diastolic\":\"34\",\r
+
+      \    \"temperature\":\"46\",\r
+
+      \    \"blood_pressure\":\"80\",\r
+
+      \    \"respiratory_rate\":\"46\",\r
+
+      \    \"pulse_in_bps\":\"67\",\r
+
+      \    \"oxygen_saturation_level\":\"20\",\r
+
+      \    \"fetal_heart_rate\":\"56\", // if for_antenatal is 1\r
+
+      \    \"random_blood_sugar\":\"75\",\r
+
+      \    \"fasting_blood_sugar\":\"56\"\r
+
+      }"
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+examples:
+  - name: maternal Information
+    request:
+      url: "{{base_url}}/user/patient/maternalInformation"
+      method: POST
+      headers:
+        - name: Accept
+          value: application/json
+      body:
+        type: json
+        data: "{\r
+
+          \    \"patient_procedure_id\":\"9c5b95a4-cf9e-4760-bce3-e3594f34ed64\",\r
+
+          \    \"medications_administer\":\"medications administer\",\r
+
+          \    \"any_complications\":[\"a\",\"h\"],\r
+
+          \    \"for_antenatal\":1,\r
+
+          \    \"diastolic\":\"34\",\r
+
+          \    \"temperature\":\"46\",\r
+
+          \    \"blood_pressure\":\"80\",\r
+
+          \    \"respiratory_rate\":\"46\",\r
+
+          \    \"pulse_in_bps\":\"67\",\r
+
+          \    \"oxygen_saturation_level\":\"20\",\r
+
+          \    \"fetal_heart_rate\":\"56\", // if for_antenatal is 1\r
+
+          \    \"random_blood_sugar\":\"75\",\r
+
+          \    \"fasting_blood_sugar\":\"56\"\r
+
+          }"
+    response:
+      status: 201
+      statusText: Created
+      headers:
+        - name: Date
+          value: Wed, 26 Jun 2024 21:12:44 GMT
+        - name: Server
+          value: Apache/2.4.54 (Win64) OpenSSL/1.1.1q mod_fcgid/2.3.10-dev
+        - name: X-Powered-By
+          value: PHP/8.2.16
+        - name: Cache-Control
+          value: no-cache, private
+        - name: X-RateLimit-Limit
+          value: "60"
+        - name: X-RateLimit-Remaining
+          value: "58"
+        - name: Access-Control-Allow-Origin
+          value: "*"
+        - name: Vary
+          value: Authorization
+        - name: Keep-Alive
+          value: timeout=5, max=100
+        - name: Connection
+          value: Keep-Alive
+        - name: Transfer-Encoding
+          value: chunked
+        - name: Content-Type
+          value: application/json
+      body:
+        type: json
+        data: |-
+          {
+              "success": true,
+              "code": 0,
+              "locale": "en",
+              "message": "success",
+              "data": {
+                  "item": {
+                      "patient_procedure_id": "9c5b95a4-cf9e-4760-bce3-e3594f34ed64",
+                      "medications_administer": "medications administer",
+                      "diastolic": "34",
+                      "temperature": "46",
+                      "blood_pressure": "80",
+                      "respiratory_rate": "46",
+                      "pulse_in_bps": "67",
+                      "oxygen_saturation_level": "20",
+                      "fetal_heart_rate": "56",
+                      "random_blood_sugar": "75",
+                      "fasting_blood_sugar": "56",
+                      "any_complications": [
+                          "a",
+                          "h"
+                      ],
+                      "taken_by": "9bc6382c-bb73-4c7d-9409-677fe560485d",
+                      "id": "9c61bf60-ccf4-46a0-b79c-e8eab039d93c",
+                      "updated_at": "2024-06-26T21:12:45.000000Z",
+                      "created_at": "2024-06-26T21:12:45.000000Z"
+                  }
+              }
+          }

@@ -1,0 +1,178 @@
+info:
+  name: update
+  type: http
+  seq: 5
+
+http:
+  method: PATCH
+  url: "{{base_url}}/user/organization/panels/profiles/:id"
+  headers:
+    - name: Accept
+      value: application/json
+  params:
+    - name: id
+      value: 9d7cb6f0-de71-4618-b7ed-d21d242ee191
+      type: path
+  body:
+    type: json
+    data: "{\r
+
+      \    \"diagnostic_family\":[\"hematology\",\"biochemistry\"], //hematology,biochemistry,microbiology\r
+
+      \    \"panel_name\":\"9cfe8382-e184-41e9-9838-9a0b047b6b31\",\r
+
+      \    \"gender\":\"Both\",\r
+
+      \    \"description\":\"This is blood test require for body\",\r
+
+      \    \"test_preparation\":\"test\",\r
+
+      \    \"individual_diagnostic\":[\"9ce295d3-d5a4-461a-85af-29640ca53c3b\"]\r
+
+      }"
+  auth:
+    type: bearer
+    token: 78|IJJwsPNGwfjrHdMvXfMgKzfYaTOw56YXrF1VLHE8b494a4af
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+examples:
+  - name: update
+    request:
+      url: "{{base_url}}/user/organization/panels/profiles/:id"
+      method: PATCH
+      headers:
+        - name: Accept
+          value: application/json
+      params:
+        - name: id
+          value: 9d7cb6f0-de71-4618-b7ed-d21d242ee191
+          type: path
+      body:
+        type: json
+        data: "{\r
+
+          \    \"diagnostic_family\":[\"hematology\",\"biochemistry\"], //hematology,biochemistry,microbiology\r
+
+          \    \"panel_name\":\"9cfe8382-e184-41e9-9838-9a0b047b6b31\",\r
+
+          \    \"gender\":\"Both\",\r
+
+          \    \"description\":\"This is blood test require for body\",\r
+
+          \    \"test_preparation\":\"test\",\r
+
+          \    \"individual_diagnostic\":[\"9ce295d3-d5a4-461a-85af-29640ca53c3b\"]\r
+
+          }"
+    response:
+      status: 200
+      statusText: OK
+      headers:
+        - name: Date
+          value: Thu, 14 Nov 2024 13:57:08 GMT
+        - name: Server
+          value: Apache/2.4.54 (Win64) OpenSSL/1.1.1d mod_fcgid/2.3.10-dev
+        - name: X-Powered-By
+          value: PHP/8.2.17
+        - name: Cache-Control
+          value: no-cache, private
+        - name: X-RateLimit-Limit
+          value: "60"
+        - name: X-RateLimit-Remaining
+          value: "56"
+        - name: Access-Control-Allow-Origin
+          value: "*"
+        - name: Vary
+          value: Authorization
+        - name: Keep-Alive
+          value: timeout=5, max=100
+        - name: Connection
+          value: Keep-Alive
+        - name: Transfer-Encoding
+          value: chunked
+        - name: Content-Type
+          value: application/json
+      body:
+        type: json
+        data: |-
+          {
+              "success": true,
+              "code": 0,
+              "locale": "en",
+              "message": "success",
+              "data": {
+                  "data": {
+                      "id": "9d7cb6f0-de71-4618-b7ed-d21d242ee191",
+                      "diagnostic_family": [
+                          "hematology",
+                          "biochemistry"
+                      ],
+                      "panel_name": {
+                          "id": "9cfe8382-e184-41e9-9838-9a0b047b6b31",
+                          "name": "Annual Physical Exam"
+                      },
+                      "gender": "Both",
+                      "description": "This is blood test require for body",
+                      "individual_diagnostic": [
+                          "9d7caad0-9def-4f1b-8047-b14a0b2bc03a",
+                          "9d7caad0-a163-4f8a-a68e-ec89e384dc41"
+                      ],
+                      "test_preparation": "test",
+                      "organization_id": "9bc5eb78-74d2-45f4-a677-05d07dca6a63",
+                      "done_by_id": "9bc6382c-bb73-4c7d-9409-677fe560485d",
+                      "created_at": "2024-11-14T13:08:27.000000Z",
+                      "updated_at": "2024-11-14T13:57:09.000000Z",
+                      "service": {
+                          "id": "9cfe8382-e184-41e9-9838-9a0b047b6b31",
+                          "name": "Annual Physical Exam"
+                      },
+                      "diagnostic_type_count": 2,
+                      "individual_test_count": 2,
+                      "diagnostic_configs": [
+                          {
+                              "id": "9d7caad0-9def-4f1b-8047-b14a0b2bc03a",
+                              "diagnostic_family": "[\"biochemistry\"]",
+                              "test_name": "9cfe8383-2210-450b-b85a-c33adada1b28",
+                              "gender": "Both",
+                              "description": "description",
+                              "result_type": "positive/negative",
+                              "status": null,
+                              "minimum_range": "5",
+                              "maximum_range": "8",
+                              "sample": "9d7b368a-e9b1-459f-93f1-6b1aabb8069e",
+                              "vial": "9d7b0ed0-493a-4c7a-84de-5e4e6698c464",
+                              "unit": "9ce1fe7c-dbda-4f47-94ca-450ab0b1768e",
+                              "test_preparation": "test_preparation",
+                              "organization_id": "9bc5eb78-74d2-45f4-a677-05d07dca6a63",
+                              "done_by_id": "9bc6382c-bb73-4c7d-9409-677fe560485d",
+                              "created_at": "2024-11-14T12:34:33.000000Z",
+                              "updated_at": "2024-11-14T12:34:33.000000Z"
+                          },
+                          {
+                              "id": "9d7caad0-a163-4f8a-a68e-ec89e384dc41",
+                              "diagnostic_family": "[\"microbiology\"]",
+                              "test_name": "9cfe8383-2e8e-411f-8466-3e64ff9a2e2e",
+                              "gender": "M",
+                              "description": "description",
+                              "result_type": "file",
+                              "status": null,
+                              "minimum_range": "4",
+                              "maximum_range": "7",
+                              "sample": "9d7b380f-cdc9-4d03-b879-5d859b06ccb9",
+                              "vial": "9d7b0ed0-4b54-4410-8308-84219f5f8168",
+                              "unit": "9ce1fe7c-e0e3-4be7-a879-597237a866dc",
+                              "test_preparation": "test_preparation",
+                              "organization_id": "9bc5eb78-74d2-45f4-a677-05d07dca6a63",
+                              "done_by_id": "9bc6382c-bb73-4c7d-9409-677fe560485d",
+                              "created_at": "2024-11-14T12:34:33.000000Z",
+                              "updated_at": "2024-11-14T12:34:33.000000Z"
+                          }
+                      ]
+                  }
+              }
+          }

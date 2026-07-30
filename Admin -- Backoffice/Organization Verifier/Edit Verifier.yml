@@ -1,0 +1,32 @@
+info:
+  name: Edit Verifier
+  type: http
+  seq: 5
+
+http:
+  method: PUT
+  url: "{{base_url}}/admin/verifier/:id"
+  params:
+    - name: id
+      value: 9bc8076e-7d5e-43f1-8a5b-afdefa683cbc
+      type: path
+  body:
+    type: json
+    data: |-
+      {
+          "admin_id": "9bb5d79e-6707-4cdc-8c9c-9310940eb247",
+          "organization_type_id":"1",
+          "country_id":"9bb5e95c-833f-41b0-ac8e-2efb5bccfd55",
+          "state_id":"9bb5e9a2-7184-4b81-9725-4a1561d506b1",
+          "description":"Hello the Ultimate verifier.",
+          "status":"active"
+      }
+  auth:
+    type: bearer
+    token: "{{token}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

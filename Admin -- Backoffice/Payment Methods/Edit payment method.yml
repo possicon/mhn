@@ -1,0 +1,110 @@
+info:
+  name: Edit payment method
+  type: http
+  seq: 7
+
+http:
+  method: PATCH
+  url: "{{base_url}}/admin/paymentMethod/:id"
+  params:
+    - name: id
+      value: 9bc5787b-5a68-4a4a-9181-042dc0f12ecb
+      type: path
+  body:
+    type: json
+    data: "{\r
+
+      \    \"collection_type\": [\"Bank Transfer\", \"POS\", \"Card\"],\r
+
+      \    \"country_id\": \"9bb76bef-d804-4b6c-9711-452aea125be9\"\r
+
+      }\r\n"
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+examples:
+  - name: Edit payment method
+    request:
+      url: "{{base_url}}/admin/paymentMethod/:id"
+      method: PATCH
+      params:
+        - name: id
+          value: 9bc2aaeb-c0d2-461c-85bd-42151bcf0bee
+          type: path
+      body:
+        type: json
+        data: "{\r
+
+          \    \"collection_type\": [\"Bank Transfer\", \"POS\", \"Card\"],\r
+
+          \    \"country_id\": \"9b9faee3-2ab6-4c13-8120-167e66a8ff18\"\r
+
+          }\r\n"
+    response:
+      status: 201
+      statusText: Created
+      headers:
+        - name: Date
+          value: Tue, 09 Apr 2024 08:13:51 GMT
+        - name: Server
+          value: Apache/2.4.54 (Win64) OpenSSL/1.1.1q mod_fcgid/2.3.10-dev
+        - name: X-Powered-By
+          value: PHP/8.2.16
+        - name: Cache-Control
+          value: no-cache, private
+        - name: X-RateLimit-Limit
+          value: "60"
+        - name: X-RateLimit-Remaining
+          value: "58"
+        - name: Access-Control-Allow-Origin
+          value: "*"
+        - name: Vary
+          value: Authorization
+        - name: Keep-Alive
+          value: timeout=5, max=100
+        - name: Connection
+          value: Keep-Alive
+        - name: Transfer-Encoding
+          value: chunked
+        - name: Content-Type
+          value: application/json
+      body:
+        type: json
+        data: |-
+          {
+              "success": true,
+              "code": 0,
+              "locale": "en",
+              "message": "Payment method updated successfully",
+              "data": {
+                  "data": {
+                      "id": "9bc2aaeb-c0d2-461c-85bd-42151bcf0bee",
+                      "country_id": "9b9faee3-2ab6-4c13-8120-167e66a8ff18",
+                      "country": "Nigeria",
+                      "status": "active",
+                      "collection_type": [
+                          "Bank Transfer",
+                          "POS",
+                          "Card"
+                      ],
+                      "payment_provider": [
+                          "Paystack",
+                          "Interswitch",
+                          "Monieppoint",
+                          "Flutterwave"
+                      ],
+                      "payment_provider_count": 4,
+                      "bank_account": [
+                          "GTB",
+                          "UBA",
+                          "ACCESS",
+                          "FIRST BANK"
+                      ]
+                  }
+              }
+          }

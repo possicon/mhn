@@ -1,0 +1,98 @@
+info:
+  name: vialList
+  type: http
+  seq: 3
+
+http:
+  method: GET
+  url: "{{base_url}}/user/organization/vialList"
+  headers:
+    - name: Accept
+      value: application/json
+  auth:
+    type: bearer
+    token: 78|IJJwsPNGwfjrHdMvXfMgKzfYaTOw56YXrF1VLHE8b494a4af
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+examples:
+  - name: vialList
+    request:
+      url: "{{base_url}}/user/organization/vialList"
+      method: GET
+      headers:
+        - name: Accept
+          value: application/json
+    response:
+      status: 200
+      statusText: OK
+      headers:
+        - name: Date
+          value: Wed, 13 Nov 2024 17:01:39 GMT
+        - name: Server
+          value: Apache/2.4.54 (Win64) OpenSSL/1.1.1d mod_fcgid/2.3.10-dev
+        - name: X-Powered-By
+          value: PHP/8.2.17
+        - name: Cache-Control
+          value: no-cache, private
+        - name: X-RateLimit-Limit
+          value: "60"
+        - name: X-RateLimit-Remaining
+          value: "59"
+        - name: Access-Control-Allow-Origin
+          value: "*"
+        - name: Vary
+          value: Authorization
+        - name: Keep-Alive
+          value: timeout=5, max=100
+        - name: Connection
+          value: Keep-Alive
+        - name: Transfer-Encoding
+          value: chunked
+        - name: Content-Type
+          value: application/json
+      body:
+        type: json
+        data: |-
+          {
+              "success": true,
+              "code": 0,
+              "locale": "en",
+              "message": "success",
+              "data": {
+                  "items": [
+                      {
+                          "id": "9ce1ea13-a1c0-4ee1-8c90-51c9e5cbb978",
+                          "name": "string"
+                      },
+                      {
+                          "id": "9ce1eebc-ba9f-40a9-8f70-868795541c84",
+                          "name": "strings"
+                      },
+                      {
+                          "id": "9ce1f326-de9f-422c-854a-961d75cb7912",
+                          "name": "discharge"
+                      },
+                      {
+                          "id": "9ce1f326-e158-4097-9c6b-366f62743ae7",
+                          "name": "hospital"
+                      },
+                      {
+                          "id": "9ce1f326-e479-4b2f-add1-5856794f36fd",
+                          "name": "hospital registration"
+                      },
+                      {
+                          "id": "9ce1f326-e9f0-4532-914e-c4536f45b0f0",
+                          "name": "hospital1"
+                      },
+                      {
+                          "id": "9d7b05f2-2d97-4b79-9c0c-3e1d91ed37bd",
+                          "name": "Wheaton Clear and Amber Ampule"
+                      }
+                  ]
+              }
+          }

@@ -1,0 +1,164 @@
+info:
+  name: index
+  type: http
+  seq: 2
+
+http:
+  method: GET
+  url: "{{base_url}}/user/service/patient/:id"
+  headers:
+    - name: Accept
+      value: application/json
+  params:
+    - name: id
+      value: 9c111152-abe1-4490-ab04-c066445133a7
+      type: path
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+examples:
+  - name: index
+    request:
+      url: "{{base_url}}/user/service/patient/:id"
+      method: GET
+      headers:
+        - name: Accept
+          value: application/json
+      params:
+        - name: id
+          value: 9c111152-abe1-4490-ab04-c066445133a7
+          type: path
+    response:
+      status: 200
+      statusText: OK
+      headers:
+        - name: Date
+          value: Sun, 23 Jun 2024 01:09:13 GMT
+        - name: Server
+          value: Apache/2.4.54 (Win64) OpenSSL/1.1.1q mod_fcgid/2.3.10-dev
+        - name: X-Powered-By
+          value: PHP/8.2.16
+        - name: Cache-Control
+          value: no-cache, private
+        - name: X-RateLimit-Limit
+          value: "60"
+        - name: X-RateLimit-Remaining
+          value: "59"
+        - name: Access-Control-Allow-Origin
+          value: "*"
+        - name: Vary
+          value: Authorization
+        - name: Keep-Alive
+          value: timeout=5, max=100
+        - name: Connection
+          value: Keep-Alive
+        - name: Transfer-Encoding
+          value: chunked
+        - name: Content-Type
+          value: application/json
+      body:
+        type: json
+        data: |-
+          {
+              "success": true,
+              "code": 0,
+              "locale": "en",
+              "message": "success",
+              "data": {
+                  "items": [
+                      {
+                          "id": "9c5a0786-967d-4880-baa9-5ed88d3b01de",
+                          "service_id": "9be982a5-4bda-4d19-8af3-a345ab0f98f0",
+                          "quantity": "2.00",
+                          "notes": "optional",
+                          "amount": "20000.00",
+                          "nurse_or_doctor": {
+                              "id": "9bc6382c-bb73-4c7d-9409-677fe560485d",
+                              "first_name": "General",
+                              "middle_name": "Prince",
+                              "last_name": "Emmanuel",
+                              "gender": "male",
+                              "status": "Active",
+                              "phone": "0802323232323",
+                              "email": "contactus@mhn.ng",
+                              "username": null,
+                              "email_verified_at": null,
+                              "type": "owner",
+                              "country_id": "9b9faee3-6aaa-4050-bd6c-98a43e674250",
+                              "branch_id": null,
+                              "organization_id": "9bc5eb78-74d2-45f4-a677-05d07dca6a63",
+                              "company_id": null,
+                              "reset_token": null,
+                              "token_time": null,
+                              "created_at": "2024-04-10T13:41:22.000000Z",
+                              "updated_at": "2024-04-11T19:11:50.000000Z",
+                              "deleted_at": null
+                          },
+                          "payment_status": "Not Paid",
+                          "service_status": "pending",
+                          "patient_id": "9c111152-abe1-4490-ab04-c066445133a7",
+                          "created_at": "2024-06-23T01:07:52.000000Z",
+                          "updated_at": "2024-06-23T01:07:52.000000Z",
+                          "service": {
+                              "id": "9be982a5-4bda-4d19-8af3-a345ab0f98f0",
+                              "name": "Hospital Resistration",
+                              "type": "general",
+                              "status": "active",
+                              "description": "Hospital Resistration description",
+                              "created_at": "2024-04-28T02:43:35.000000Z",
+                              "updated_at": "2024-04-28T02:43:35.000000Z",
+                              "category": null
+                          }
+                      },
+                      {
+                          "id": "9c5a0786-aa91-4b10-aefb-802c688f5292",
+                          "service_id": "9be982a5-4bda-4d19-8af3-a345ab0f98f0",
+                          "quantity": "3.00",
+                          "notes": null,
+                          "amount": "30000.00",
+                          "nurse_or_doctor": {
+                              "id": "9bc6382c-bb73-4c7d-9409-677fe560485d",
+                              "first_name": "General",
+                              "middle_name": "Prince",
+                              "last_name": "Emmanuel",
+                              "gender": "male",
+                              "status": "Active",
+                              "phone": "0802323232323",
+                              "email": "contactus@mhn.ng",
+                              "username": null,
+                              "email_verified_at": null,
+                              "type": "owner",
+                              "country_id": "9b9faee3-6aaa-4050-bd6c-98a43e674250",
+                              "branch_id": null,
+                              "organization_id": "9bc5eb78-74d2-45f4-a677-05d07dca6a63",
+                              "company_id": null,
+                              "reset_token": null,
+                              "token_time": null,
+                              "created_at": "2024-04-10T13:41:22.000000Z",
+                              "updated_at": "2024-04-11T19:11:50.000000Z",
+                              "deleted_at": null
+                          },
+                          "payment_status": "Not Paid",
+                          "service_status": "pending",
+                          "patient_id": "9c111152-abe1-4490-ab04-c066445133a7",
+                          "created_at": "2024-06-23T01:07:52.000000Z",
+                          "updated_at": "2024-06-23T01:07:52.000000Z",
+                          "service": {
+                              "id": "9be982a5-4bda-4d19-8af3-a345ab0f98f0",
+                              "name": "Hospital Resistration",
+                              "type": "general",
+                              "status": "active",
+                              "description": "Hospital Resistration description",
+                              "created_at": "2024-04-28T02:43:35.000000Z",
+                              "updated_at": "2024-04-28T02:43:35.000000Z",
+                              "category": null
+                          }
+                      }
+                  ]
+              }
+          }

@@ -1,0 +1,7 @@
+info:
+  name: functional assessment
+  type: folder
+  seq: 25
+
+request:
+  auth: inherit

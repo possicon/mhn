@@ -1,0 +1,22 @@
+info:
+  name: cancel
+  type: http
+  seq: 14
+
+http:
+  method: POST
+  url: "{{base_url}}/user/lab/:xray/cancel"
+  headers:
+    - name: Accept
+      value: application/json
+  params:
+    - name: xray
+      value: a243ba7a-db8e-4d7b-a761-7d087cadd3f2
+      type: path
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

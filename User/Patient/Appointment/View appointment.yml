@@ -1,0 +1,161 @@
+info:
+  name: View appointment
+  type: http
+  seq: 4
+
+http:
+  method: GET
+  url: "{{base_url}}/user/patients/:patientId/appointment/:appointmentId"
+  headers:
+    - name: Accept
+      value: application/json
+  params:
+    - name: patientId
+      value: 9ea8d8a4-2cdd-4e08-baaf-a2d7048f8a32
+      type: path
+    - name: appointmentId
+      value: 9eca42a4-a572-411e-a2e3-10227e0f2bc7
+      type: path
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+examples:
+  - name: View appointment
+    request:
+      url: "{{base_url}}/user/patients/:patientId/appointment/:appointmentId"
+      method: GET
+      headers:
+        - name: Accept
+          value: application/json
+      params:
+        - name: patientId
+          value: 9ea8d8a4-2cdd-4e08-baaf-a2d7048f8a32
+          type: path
+        - name: appointmentId
+          value: 9eb91989-9ad5-43bd-980a-d9318b4649c8
+          type: path
+    response:
+      status: 200
+      statusText: OK
+      headers:
+        - name: Date
+          value: Wed, 07 May 2025 00:15:09 GMT
+        - name: Server
+          value: Apache/2.4.54 (Win64) OpenSSL/1.1.1d mod_fcgid/2.3.10-dev
+        - name: X-Powered-By
+          value: PHP/8.2.17
+        - name: Cache-Control
+          value: no-cache, private
+        - name: X-RateLimit-Limit
+          value: "60"
+        - name: X-RateLimit-Remaining
+          value: "59"
+        - name: Access-Control-Allow-Origin
+          value: "*"
+        - name: Vary
+          value: Authorization
+        - name: Keep-Alive
+          value: timeout=5, max=100
+        - name: Connection
+          value: Keep-Alive
+        - name: Transfer-Encoding
+          value: chunked
+        - name: Content-Type
+          value: application/json
+      body:
+        type: json
+        data: |-
+          {
+              "success": true,
+              "code": 0,
+              "locale": "en",
+              "message": "Appointment fetched",
+              "data": {
+                  "item": {
+                      "id": "9eb91989-9ad5-43bd-980a-d9318b4649c8",
+                      "purpose_of_visit": {
+                          "id": "9cfe8382-d6e2-4519-93a8-2337a40aada6",
+                          "name": "General Checkup",
+                          "service_type": "prescription",
+                          "created_at": "2024-09-12T18:30:20.000000Z",
+                          "updated_at": "2024-12-21T16:03:38.000000Z",
+                          "organization_id": null,
+                          "description": "Hospital Resistration description",
+                          "category": "general",
+                          "status": "active",
+                          "medicine_type": null
+                      },
+                      "mode_of_appointment": "telemedicine",
+                      "type_of_appointment": "schedule",
+                      "payment_type": "hmo",
+                      "has_free_consultation": 0,
+                      "consultation_fee": "14043.00",
+                      "consultation_type": "Family Planing",
+                      "name": "Reliance",
+                      "policy_number": "DDPEIO3J",
+                      "plan": "gold",
+                      "appointment_date": "2024/06/29",
+                      "tele_medicine_url": "http://www.telemedicine.com",
+                      "model_id": "9ea8d8a4-2cdd-4e08-baaf-a2d7048f8a32",
+                      "model_type": "App\\Models\\Patient",
+                      "visit_date": "2025-04-20 00:00:00",
+                      "has_locked_doctor": 1,
+                      "assigned_doctor": "9bc6382c-bb73-4c7d-9409-677fe560485d",
+                      "status": "scheduled",
+                      "fee_status": null,
+                      "is_cancelled": 0,
+                      "cancelled_by": null,
+                      "assisted_by": null,
+                      "organization_id": "9bc5eb78-74d2-45f4-a677-05d07dca6a63",
+                      "queue_no": 2,
+                      "created_at": "2025-04-20T19:45:45.000000Z",
+                      "updated_at": "2025-05-02T21:06:37.000000Z",
+                      "for_antenatal": 0,
+                      "for_physiotherapy": 1,
+                      "end_date": "2025-05-02 00:00:00",
+                      "consultation_status": "completed",
+                      "mode_of_payment": "hmo",
+                      "hmo_id": "9bbbac52-edd1-4aa7-8254-c29c14fa6249",
+                      "company_id": null,
+                      "bank_name": null,
+                      "billId": "9eb9198d-db88-410b-892b-521d2917d1ec",
+                      "admission_status": "admitted",
+                      "model": {
+                          "id": "9ea8d8a4-2cdd-4e08-baaf-a2d7048f8a32",
+                          "created_by_organization_id": "9bc5eb78-74d2-45f4-a677-05d07dca6a63",
+                          "patient_sequence": "MHN_USA791167867",
+                          "title": "Mr",
+                          "first_name": "Emma1",
+                          "last_name": "Prince1",
+                          "middle_name": "Ogbuagu1",
+                          "dob": "2022-02-02",
+                          "gender": "male",
+                          "occupation": "Engineer",
+                          "nin": "79183109118",
+                          "martial_status": "single",
+                          "tribe": "Igbo",
+                          "religion": "Christianity",
+                          "created_at": "2025-04-12T17:51:03.000000Z",
+                          "updated_at": "2025-04-12T17:51:03.000000Z",
+                          "preferred_language": "9bfad77f-9532-493c-88b9-6b99ebe55b8b",
+                          "status": "in-patient",
+                          "city_id": "9ba1338d-f1ca-487b-ae34-471ddc6a7bc2",
+                          "state_id": "9ba01c32-186f-4ce1-84a5-0ee8884d02de",
+                          "country_id": "9b9faee3-6aaa-4050-bd6c-98a43e674250",
+                          "address": "31 Onitsha Rd",
+                          "email_address": "lovebirds@mhn.com",
+                          "additional_mobile": "09087653421",
+                          "primary_mobile": "08023456789",
+                          "deleted_at": null,
+                          "user_id": "9ea8d8a4-2f05-4b97-a309-52a7b40b4764",
+                          "file_number": "98530903",
+                          "media": []
+                      }
+                  }
+              }
+          }

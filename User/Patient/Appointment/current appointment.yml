@@ -1,0 +1,105 @@
+info:
+  name: current appointment
+  type: http
+  seq: 16
+
+http:
+  method: POST
+  url: "{{base_url}}/user/patients/:patient/currentAppointment"
+  headers:
+    - name: Accept
+      value: application/json
+  params:
+    - name: patient
+      value: 9ea8d8a4-2cdd-4e08-baaf-a2d7048f8a32
+      type: path
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+examples:
+  - name: current appointment
+    request:
+      url: "{{base_url}}/user/patients/:patient/currentAppointment"
+      method: POST
+      headers:
+        - name: Accept
+          value: application/json
+      params:
+        - name: patient
+          value: 9c111152-abe1-4490-ab04-c066445133a7
+          type: path
+    response:
+      status: 200
+      statusText: OK
+      headers:
+        - name: Date
+          value: Tue, 01 Oct 2024 08:59:39 GMT
+        - name: Server
+          value: Apache/2.4.54 (Win64) OpenSSL/1.1.1d mod_fcgid/2.3.10-dev
+        - name: X-Powered-By
+          value: PHP/8.2.17
+        - name: Cache-Control
+          value: no-cache, private
+        - name: X-RateLimit-Limit
+          value: "60"
+        - name: X-RateLimit-Remaining
+          value: "59"
+        - name: Access-Control-Allow-Origin
+          value: "*"
+        - name: Vary
+          value: Authorization
+        - name: Keep-Alive
+          value: timeout=5, max=100
+        - name: Connection
+          value: Keep-Alive
+        - name: Transfer-Encoding
+          value: chunked
+        - name: Content-Type
+          value: application/json
+      body:
+        type: json
+        data: |-
+          {
+              "success": true,
+              "code": 0,
+              "locale": "en",
+              "message": "success",
+              "data": {
+                  "item": {
+                      "id": "9d167445-bd3e-405f-913a-e99c91aa5f8c",
+                      "purpose_of_visit": "9cfe8382-d6e2-4519-93a8-2337a40aada6",
+                      "mode_of_appointment": "telemedicine",
+                      "type_of_appointment": "schedule",
+                      "payment_type": "hmo",
+                      "has_free_consultation": 0,
+                      "consultation_fee": "14043.00",
+                      "name": "Reliance",
+                      "policy_number": "DDPEIO3J",
+                      "plan": "Gold",
+                      "appointment_date": "2024/06/29",
+                      "tele_medicine_url": "http://www.telemedicine.com",
+                      "model_id": "9c111152-abe1-4490-ab04-c066445133a7",
+                      "model_type": "App\\Models\\Patient",
+                      "visit_date": "2024-09-24 00:00:00",
+                      "has_locked_doctor": 0,
+                      "assigned_doctor": null,
+                      "status": "scheduled",
+                      "fee_status": null,
+                      "is_cancelled": 0,
+                      "cancelled_by": null,
+                      "assisted_by": null,
+                      "organization_id": "9bc5eb78-74d2-45f4-a677-05d07dca6a63",
+                      "queue_no": null,
+                      "created_at": "2024-09-24T17:07:35.000000Z",
+                      "updated_at": "2024-09-24T17:07:35.000000Z",
+                      "for_antenatal": 0,
+                      "for_physiotherapy": 1,
+                      "end_date": null
+                  }
+              }
+          }

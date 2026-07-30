@@ -1,0 +1,1832 @@
+info:
+  name: Import county csv
+  type: http
+  seq: 7
+
+http:
+  method: POST
+  url: "{{base_url}}/admin/country/import"
+  headers:
+    - name: Accept
+      value: multipart/form-data
+  body:
+    type: multipart-form
+    data:
+      - name: file
+        type: file
+        value:
+          - vxH2Xa0ZX/country_sample.csv
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+examples:
+  - name: Import region csv Copy
+    request:
+      url: "{{base_url}}/admin/country/import"
+      method: POST
+      headers:
+        - name: Accept
+          value: multipart/form-data
+      body:
+        type: multipart-form
+        data:
+          - name: file
+            type: file
+            value:
+              - /C:/Users/MY PC/Downloads/countries (1).csv
+    response:
+      status: 200
+      statusText: OK
+      headers:
+        - name: Date
+          value: Fri, 22 Mar 2024 09:56:01 GMT
+        - name: Server
+          value: Apache/2.4.54 (Win64) OpenSSL/1.1.1q mod_fcgid/2.3.10-dev
+        - name: X-Powered-By
+          value: PHP/8.2.16
+        - name: Cache-Control
+          value: no-cache, private
+        - name: X-RateLimit-Limit
+          value: "60"
+        - name: X-RateLimit-Remaining
+          value: "59"
+        - name: Access-Control-Allow-Origin
+          value: "*"
+        - name: Vary
+          value: Authorization
+        - name: Keep-Alive
+          value: timeout=5, max=100
+        - name: Connection
+          value: Keep-Alive
+        - name: Transfer-Encoding
+          value: chunked
+        - name: Content-Type
+          value: application/json
+      body:
+        type: json
+        data: |-
+          {
+              "success": true,
+              "code": 0,
+              "locale": "en",
+              "message": "CSV file import process has been completed successfully.",
+              "data": {
+                  "saved_rows": [
+                      {
+                          "name": "Afghanistan",
+                          "currency_symbol": "AFN",
+                          "currency_name": "Afghan afghani",
+                          "region_id": "9b9ecc53-48de-4e4d-8147-65cc79090128",
+                          "id": "9b9faee2-9ca2-41d0-962c-f7f60ef04bdb"
+                      },
+                      {
+                          "name": "Aland Islands",
+                          "currency_symbol": "EUR",
+                          "currency_name": "Euro",
+                          "region_id": "9b9ecc53-49e9-443f-9bc0-84a9c27d1652",
+                          "id": "9b9faee2-9ee1-41e9-bc9b-3ece02c702bf"
+                      },
+                      {
+                          "name": "Albania",
+                          "currency_symbol": "ALL",
+                          "currency_name": "Albanian lek",
+                          "region_id": "9b9ecc53-49e9-443f-9bc0-84a9c27d1652",
+                          "id": "9b9faee2-a096-437f-8597-f31142b0bd51"
+                      },
+                      {
+                          "name": "Algeria",
+                          "currency_symbol": "DZD",
+                          "currency_name": "Algerian dinar",
+                          "region_id": "9b9ecc53-4276-4e13-bda6-461083ecb376",
+                          "id": "9b9faee2-a19d-4d99-8756-2f4afcd8e79d"
+                      },
+                      {
+                          "name": "American Samoa",
+                          "currency_symbol": "USD",
+                          "currency_name": "US Dollar",
+                          "region_id": "9b9ecc53-4acd-477c-8368-6493a1f9d98c",
+                          "id": "9b9faee2-a2a4-4bcc-a758-53dfee793de6"
+                      },
+                      {
+                          "name": "Andorra",
+                          "currency_symbol": "EUR",
+                          "currency_name": "Euro",
+                          "region_id": "9b9ecc53-49e9-443f-9bc0-84a9c27d1652",
+                          "id": "9b9faee2-a3a4-4ded-91f8-c3c6703e4116"
+                      },
+                      {
+                          "name": "Angola",
+                          "currency_symbol": "AOA",
+                          "currency_name": "Angolan kwanza",
+                          "region_id": "9b9ecc53-4276-4e13-bda6-461083ecb376",
+                          "id": "9b9faee2-a4ae-49df-84cd-7936667536cb"
+                      },
+                      {
+                          "name": "Anguilla",
+                          "currency_symbol": "XCD",
+                          "currency_name": "East Caribbean dollar",
+                          "region_id": "9b9ecc53-4727-43a1-bf0e-9e05de7c568a",
+                          "id": "9b9faee2-a69a-43ce-854f-13b6ba8b6003"
+                      },
+                      {
+                          "name": "Antarctica",
+                          "currency_symbol": "AAD",
+                          "currency_name": "Antarctican dollar",
+                          "region_id": "9b9ecc53-4c2d-43e2-a1f2-5d8fbb30bb46",
+                          "id": "9b9faee2-a7f8-4108-b52d-9eb3376ddb4f"
+                      },
+                      {
+                          "name": "Antigua and Barbuda",
+                          "currency_symbol": "XCD",
+                          "currency_name": "Eastern Caribbean dollar",
+                          "region_id": "9b9ecc53-4727-43a1-bf0e-9e05de7c568a",
+                          "id": "9b9faee2-a915-4b18-9ee6-9e7fa9f5cf64"
+                      },
+                      {
+                          "name": "Argentina",
+                          "currency_symbol": "ARS",
+                          "currency_name": "Argentine peso",
+                          "region_id": "9b9ecc53-4727-43a1-bf0e-9e05de7c568a",
+                          "id": "9b9faee2-aa25-47e7-af72-e1a37e1d8e31"
+                      },
+                      {
+                          "name": "Armenia",
+                          "currency_symbol": "AMD",
+                          "currency_name": "Armenian dram",
+                          "region_id": "9b9ecc53-48de-4e4d-8147-65cc79090128",
+                          "id": "9b9faee2-ab2a-4e4d-919d-a0a1251a3e51"
+                      },
+                      {
+                          "name": "Aruba",
+                          "currency_symbol": "AWG",
+                          "currency_name": "Aruban florin",
+                          "region_id": "9b9ecc53-4727-43a1-bf0e-9e05de7c568a",
+                          "id": "9b9faee2-ad1d-4f98-aa50-03477000cfc9"
+                      },
+                      {
+                          "name": "Australia",
+                          "currency_symbol": "AUD",
+                          "currency_name": "Australian dollar",
+                          "region_id": "9b9ecc53-4acd-477c-8368-6493a1f9d98c",
+                          "id": "9b9faee2-ae3c-4b8d-9008-311b1ec63276"
+                      },
+                      {
+                          "name": "Austria",
+                          "currency_symbol": "EUR",
+                          "currency_name": "Euro",
+                          "region_id": "9b9ecc53-49e9-443f-9bc0-84a9c27d1652",
+                          "id": "9b9faee2-af45-40db-be97-54553460b20c"
+                      },
+                      {
+                          "name": "Azerbaijan",
+                          "currency_symbol": "AZN",
+                          "currency_name": "Azerbaijani manat",
+                          "region_id": "9b9ecc53-48de-4e4d-8147-65cc79090128",
+                          "id": "9b9faee2-b04f-479b-9969-de8d4d45523e"
+                      },
+                      {
+                          "name": "Bahrain",
+                          "currency_symbol": "BHD",
+                          "currency_name": "Bahraini dinar",
+                          "region_id": "9b9ecc53-48de-4e4d-8147-65cc79090128",
+                          "id": "9b9faee2-b152-43ee-b9b2-cdc32722d170"
+                      },
+                      {
+                          "name": "Bangladesh",
+                          "currency_symbol": "BDT",
+                          "currency_name": "Bangladeshi taka",
+                          "region_id": "9b9ecc53-48de-4e4d-8147-65cc79090128",
+                          "id": "9b9faee2-b2e9-4033-bf57-d000bb45d6f5"
+                      },
+                      {
+                          "name": "Barbados",
+                          "currency_symbol": "BBD",
+                          "currency_name": "Barbadian dollar",
+                          "region_id": "9b9ecc53-4727-43a1-bf0e-9e05de7c568a",
+                          "id": "9b9faee2-b428-4bf9-88d0-cfbb3f186793"
+                      },
+                      {
+                          "name": "Belarus",
+                          "currency_symbol": "BYN",
+                          "currency_name": "Belarusian ruble",
+                          "region_id": "9b9ecc53-49e9-443f-9bc0-84a9c27d1652",
+                          "id": "9b9faee2-b541-43d4-b967-b89b159f50a3"
+                      },
+                      {
+                          "name": "Belgium",
+                          "currency_symbol": "EUR",
+                          "currency_name": "Euro",
+                          "region_id": "9b9ecc53-49e9-443f-9bc0-84a9c27d1652",
+                          "id": "9b9faee2-b64b-4aa1-b7ba-ab75b4b25b5c"
+                      },
+                      {
+                          "name": "Belize",
+                          "currency_symbol": "BZD",
+                          "currency_name": "Belize dollar",
+                          "region_id": "9b9ecc53-4727-43a1-bf0e-9e05de7c568a",
+                          "id": "9b9faee2-b750-4b8f-98d7-7b993cecc21a"
+                      },
+                      {
+                          "name": "Benin",
+                          "currency_symbol": "XOF",
+                          "currency_name": "West African CFA franc",
+                          "region_id": "9b9ecc53-4276-4e13-bda6-461083ecb376",
+                          "id": "9b9faee2-b863-4879-865c-d37d6ed0ffd1"
+                      },
+                      {
+                          "name": "Bermuda",
+                          "currency_symbol": "BMD",
+                          "currency_name": "Bermudian dollar",
+                          "region_id": "9b9ecc53-4727-43a1-bf0e-9e05de7c568a",
+                          "id": "9b9faee2-ba2b-4bf9-9a14-29c1df0e1e19"
+                      },
+                      {
+                          "name": "Bhutan",
+                          "currency_symbol": "BTN",
+                          "currency_name": "Bhutanese ngultrum",
+                          "region_id": "9b9ecc53-48de-4e4d-8147-65cc79090128",
+                          "id": "9b9faee2-bb3e-4e69-a684-5f52ec93df19"
+                      },
+                      {
+                          "name": "Bolivia",
+                          "currency_symbol": "BOB",
+                          "currency_name": "Bolivian boliviano",
+                          "region_id": "9b9ecc53-4727-43a1-bf0e-9e05de7c568a",
+                          "id": "9b9faee2-bc43-4266-960c-737490205cb0"
+                      },
+                      {
+                          "name": "Bonaire, Sint Eustatius and Saba",
+                          "currency_symbol": "USD",
+                          "currency_name": "United States dollar",
+                          "region_id": "9b9ecc53-4727-43a1-bf0e-9e05de7c568a",
+                          "id": "9b9faee2-bd44-44c6-8743-f6a46e28fb51"
+                      },
+                      {
+                          "name": "Bosnia and Herzegovina",
+                          "currency_symbol": "BAM",
+                          "currency_name": "Bosnia and Herzegovina convertible mark",
+                          "region_id": "9b9ecc53-49e9-443f-9bc0-84a9c27d1652",
+                          "id": "9b9faee2-be40-4196-903a-52ace08254be"
+                      },
+                      {
+                          "name": "Botswana",
+                          "currency_symbol": "BWP",
+                          "currency_name": "Botswana pula",
+                          "region_id": "9b9ecc53-4276-4e13-bda6-461083ecb376",
+                          "id": "9b9faee2-bf0e-45f5-8625-623eec8b98d2"
+                      },
+                      {
+                          "name": "Bouvet Island",
+                          "currency_symbol": "NOK",
+                          "currency_name": "Norwegian Krone",
+                          "region_id": "9b9ecc53-4276-4e13-bda6-461083ecb376",
+                          "id": "9b9faee2-c0a2-47d8-97c3-fa532c0de5f9"
+                      },
+                      {
+                          "name": "Brazil",
+                          "currency_symbol": "BRL",
+                          "currency_name": "Brazilian real",
+                          "region_id": "9b9ecc53-4727-43a1-bf0e-9e05de7c568a",
+                          "id": "9b9faee2-c153-4bdd-9698-4c7cffca94a3"
+                      },
+                      {
+                          "name": "British Indian Ocean Territory",
+                          "currency_symbol": "USD",
+                          "currency_name": "United States dollar",
+                          "region_id": "9b9ecc53-4276-4e13-bda6-461083ecb376",
+                          "id": "9b9faee2-c1f0-4c76-a42f-ca24ac96a43a"
+                      },
+                      {
+                          "name": "Brunei",
+                          "currency_symbol": "BND",
+                          "currency_name": "Brunei dollar",
+                          "region_id": "9b9ecc53-48de-4e4d-8147-65cc79090128",
+                          "id": "9b9faee2-c290-4070-b511-1c379582f5d8"
+                      },
+                      {
+                          "name": "Bulgaria",
+                          "currency_symbol": "BGN",
+                          "currency_name": "Bulgarian lev",
+                          "region_id": "9b9ecc53-49e9-443f-9bc0-84a9c27d1652",
+                          "id": "9b9faee2-c32a-48ad-ac1e-9af6d357a33f"
+                      },
+                      {
+                          "name": "Burkina Faso",
+                          "currency_symbol": "XOF",
+                          "currency_name": "West African CFA franc",
+                          "region_id": "9b9ecc53-4276-4e13-bda6-461083ecb376",
+                          "id": "9b9faee2-c3c3-449f-8193-1d1d354d2155"
+                      },
+                      {
+                          "name": "Burundi",
+                          "currency_symbol": "BIF",
+                          "currency_name": "Burundian franc",
+                          "region_id": "9b9ecc53-4276-4e13-bda6-461083ecb376",
+                          "id": "9b9faee2-c459-4f35-b213-2c1632a6f380"
+                      },
+                      {
+                          "name": "Cambodia",
+                          "currency_symbol": "KHR",
+                          "currency_name": "Cambodian riel",
+                          "region_id": "9b9ecc53-48de-4e4d-8147-65cc79090128",
+                          "id": "9b9faee2-c531-4af4-90d6-708107e33155"
+                      },
+                      {
+                          "name": "Cameroon",
+                          "currency_symbol": "XAF",
+                          "currency_name": "Central African CFA franc",
+                          "region_id": "9b9ecc53-4276-4e13-bda6-461083ecb376",
+                          "id": "9b9faee2-c6ae-4e74-afb6-2c8e33f8f60a"
+                      },
+                      {
+                          "name": "Canada",
+                          "currency_symbol": "CAD",
+                          "currency_name": "Canadian dollar",
+                          "region_id": "9b9ecc53-4727-43a1-bf0e-9e05de7c568a",
+                          "id": "9b9faee2-c7c5-4f3f-951a-1ca8d5befc24"
+                      },
+                      {
+                          "name": "Cape Verde",
+                          "currency_symbol": "CVE",
+                          "currency_name": "Cape Verdean escudo",
+                          "region_id": "9b9ecc53-4276-4e13-bda6-461083ecb376",
+                          "id": "9b9faee2-c86c-48db-8db3-5cec2f805564"
+                      },
+                      {
+                          "name": "Cayman Islands",
+                          "currency_symbol": "KYD",
+                          "currency_name": "Cayman Islands dollar",
+                          "region_id": "9b9ecc53-4727-43a1-bf0e-9e05de7c568a",
+                          "id": "9b9faee2-c90b-4a71-9a25-2ae5d2828c9c"
+                      },
+                      {
+                          "name": "Central African Republic",
+                          "currency_symbol": "XAF",
+                          "currency_name": "Central African CFA franc",
+                          "region_id": "9b9ecc53-4276-4e13-bda6-461083ecb376",
+                          "id": "9b9faee2-c9a3-4a20-96d5-4f616c07cd4c"
+                      },
+                      {
+                          "name": "Chad",
+                          "currency_symbol": "XAF",
+                          "currency_name": "Central African CFA franc",
+                          "region_id": "9b9ecc53-4276-4e13-bda6-461083ecb376",
+                          "id": "9b9faee2-ca3a-409f-a686-bc765b3b6466"
+                      },
+                      {
+                          "name": "Chile",
+                          "currency_symbol": "CLP",
+                          "currency_name": "Chilean peso",
+                          "region_id": "9b9ecc53-4727-43a1-bf0e-9e05de7c568a",
+                          "id": "9b9faee2-cb17-45e6-8819-49c02c0612ef"
+                      },
+                      {
+                          "name": "China",
+                          "currency_symbol": "CNY",
+                          "currency_name": "Chinese yuan",
+                          "region_id": "9b9ecc53-48de-4e4d-8147-65cc79090128",
+                          "id": "9b9faee2-cbcc-43bc-adbf-ee7827b3fb3e"
+                      },
+                      {
+                          "name": "Christmas Island",
+                          "currency_symbol": "AUD",
+                          "currency_name": "Australian dollar",
+                          "region_id": "9b9ecc53-4acd-477c-8368-6493a1f9d98c",
+                          "id": "9b9faee2-cd2c-4025-b7ae-103058e94293"
+                      },
+                      {
+                          "name": "Cocos (Keeling) Islands",
+                          "currency_symbol": "AUD",
+                          "currency_name": "Australian dollar",
+                          "region_id": "9b9ecc53-4acd-477c-8368-6493a1f9d98c",
+                          "id": "9b9faee2-ce0c-4b10-af9f-e1a74de726be"
+                      },
+                      {
+                          "name": "Colombia",
+                          "currency_symbol": "COP",
+                          "currency_name": "Colombian peso",
+                          "region_id": "9b9ecc53-4727-43a1-bf0e-9e05de7c568a",
+                          "id": "9b9faee2-ceaf-45b6-931c-9c13c036d1ca"
+                      },
+                      {
+                          "name": "Comoros",
+                          "currency_symbol": "KMF",
+                          "currency_name": "Comorian franc",
+                          "region_id": "9b9ecc53-4276-4e13-bda6-461083ecb376",
+                          "id": "9b9faee2-cf4d-4e64-8941-75200d9a4076"
+                      },
+                      {
+                          "name": "Congo",
+                          "currency_symbol": "XAF",
+                          "currency_name": "Central African CFA franc",
+                          "region_id": "9b9ecc53-4276-4e13-bda6-461083ecb376",
+                          "id": "9b9faee2-cfe4-45ba-81ad-7220df0e3636"
+                      },
+                      {
+                          "name": "Cook Islands",
+                          "currency_symbol": "NZD",
+                          "currency_name": "Cook Islands dollar",
+                          "region_id": "9b9ecc53-4acd-477c-8368-6493a1f9d98c",
+                          "id": "9b9faee2-d07e-4b89-90be-087b4cdad9da"
+                      },
+                      {
+                          "name": "Costa Rica",
+                          "currency_symbol": "CRC",
+                          "currency_name": "Costa Rican colón",
+                          "region_id": "9b9ecc53-4727-43a1-bf0e-9e05de7c568a",
+                          "id": "9b9faee2-d180-4487-beca-7df5452dfe01"
+                      },
+                      {
+                          "name": "Cote D'Ivoire (Ivory Coast)",
+                          "currency_symbol": "XOF",
+                          "currency_name": "West African CFA franc",
+                          "region_id": "9b9ecc53-4276-4e13-bda6-461083ecb376",
+                          "id": "9b9faee2-d243-44d2-80dc-ca138ecc7fe0"
+                      },
+                      {
+                          "name": "Croatia",
+                          "currency_symbol": "HRK",
+                          "currency_name": "Croatian kuna",
+                          "region_id": "9b9ecc53-49e9-443f-9bc0-84a9c27d1652",
+                          "id": "9b9faee2-d39f-43ba-aa41-a76eb2c7f40f"
+                      },
+                      {
+                          "name": "Cuba",
+                          "currency_symbol": "CUP",
+                          "currency_name": "Cuban peso",
+                          "region_id": "9b9ecc53-4727-43a1-bf0e-9e05de7c568a",
+                          "id": "9b9faee2-d48b-455e-8da2-c7a658582172"
+                      },
+                      {
+                          "name": "Curaçao",
+                          "currency_symbol": "ANG",
+                          "currency_name": "Netherlands Antillean guilder",
+                          "region_id": "9b9ecc53-4727-43a1-bf0e-9e05de7c568a",
+                          "id": "9b9faee2-d55e-48ad-a977-2c60dc9af085"
+                      },
+                      {
+                          "name": "Cyprus",
+                          "currency_symbol": "EUR",
+                          "currency_name": "Euro",
+                          "region_id": "9b9ecc53-49e9-443f-9bc0-84a9c27d1652",
+                          "id": "9b9faee2-d61d-41f3-80e4-a5da630de2f5"
+                      },
+                      {
+                          "name": "Czech Republic",
+                          "currency_symbol": "CZK",
+                          "currency_name": "Czech koruna",
+                          "region_id": "9b9ecc53-49e9-443f-9bc0-84a9c27d1652",
+                          "id": "9b9faee2-d6d5-4a5d-ac6f-a9ae1e48594e"
+                      },
+                      {
+                          "name": "Democratic Republic of the Congo",
+                          "currency_symbol": "CDF",
+                          "currency_name": "Congolese Franc",
+                          "region_id": "9b9ecc53-4276-4e13-bda6-461083ecb376",
+                          "id": "9b9faee2-d7dd-4127-81e4-b0633418cfe2"
+                      },
+                      {
+                          "name": "Denmark",
+                          "currency_symbol": "DKK",
+                          "currency_name": "Danish krone",
+                          "region_id": "9b9ecc53-49e9-443f-9bc0-84a9c27d1652",
+                          "id": "9b9faee2-d8c5-4454-945f-ca2aa1399e4e"
+                      },
+                      {
+                          "name": "Djibouti",
+                          "currency_symbol": "DJF",
+                          "currency_name": "Djiboutian franc",
+                          "region_id": "9b9ecc53-4276-4e13-bda6-461083ecb376",
+                          "id": "9b9faee2-da64-40fe-95e0-5b525aae88b1"
+                      },
+                      {
+                          "name": "Dominica",
+                          "currency_symbol": "XCD",
+                          "currency_name": "Eastern Caribbean dollar",
+                          "region_id": "9b9ecc53-4727-43a1-bf0e-9e05de7c568a",
+                          "id": "9b9faee2-db2c-4d80-a66d-c0516469a8bb"
+                      },
+                      {
+                          "name": "Dominican Republic",
+                          "currency_symbol": "DOP",
+                          "currency_name": "Dominican peso",
+                          "region_id": "9b9ecc53-4727-43a1-bf0e-9e05de7c568a",
+                          "id": "9b9faee2-dbcb-4b16-85e6-95e06b9df141"
+                      },
+                      {
+                          "name": "Ecuador",
+                          "currency_symbol": "USD",
+                          "currency_name": "United States dollar",
+                          "region_id": "9b9ecc53-4727-43a1-bf0e-9e05de7c568a",
+                          "id": "9b9faee2-dc67-4332-964c-e301f2b8b06a"
+                      },
+                      {
+                          "name": "Egypt",
+                          "currency_symbol": "EGP",
+                          "currency_name": "Egyptian pound",
+                          "region_id": "9b9ecc53-4276-4e13-bda6-461083ecb376",
+                          "id": "9b9faee2-dd02-4ae5-945c-0a57977b0ae0"
+                      },
+                      {
+                          "name": "El Salvador",
+                          "currency_symbol": "USD",
+                          "currency_name": "United States dollar",
+                          "region_id": "9b9ecc53-4727-43a1-bf0e-9e05de7c568a",
+                          "id": "9b9faee2-ddf5-45b3-95b2-80d0d64d6d62"
+                      },
+                      {
+                          "name": "Equatorial Guinea",
+                          "currency_symbol": "XAF",
+                          "currency_name": "Central African CFA franc",
+                          "region_id": "9b9ecc53-4276-4e13-bda6-461083ecb376",
+                          "id": "9b9faee2-de99-4796-85e2-d0dfe3b58c45"
+                      },
+                      {
+                          "name": "Eritrea",
+                          "currency_symbol": "ERN",
+                          "currency_name": "Eritrean nakfa",
+                          "region_id": "9b9ecc53-4276-4e13-bda6-461083ecb376",
+                          "id": "9b9faee2-df36-4bdd-be33-47d62cbee64b"
+                      },
+                      {
+                          "name": "Estonia",
+                          "currency_symbol": "EUR",
+                          "currency_name": "Euro",
+                          "region_id": "9b9ecc53-49e9-443f-9bc0-84a9c27d1652",
+                          "id": "9b9faee2-e086-4699-b7fe-d688b0785c09"
+                      },
+                      {
+                          "name": "Eswatini",
+                          "currency_symbol": "SZL",
+                          "currency_name": "Lilangeni",
+                          "region_id": "9b9ecc53-4276-4e13-bda6-461083ecb376",
+                          "id": "9b9faee2-e196-47dd-8004-24d933e47b90"
+                      },
+                      {
+                          "name": "Ethiopia",
+                          "currency_symbol": "ETB",
+                          "currency_name": "Ethiopian birr",
+                          "region_id": "9b9ecc53-4276-4e13-bda6-461083ecb376",
+                          "id": "9b9faee2-e23b-4cd9-9dd4-99cd5eaca804"
+                      },
+                      {
+                          "name": "Falkland Islands",
+                          "currency_symbol": "FKP",
+                          "currency_name": "Falkland Islands pound",
+                          "region_id": "9b9ecc53-4727-43a1-bf0e-9e05de7c568a",
+                          "id": "9b9faee2-e2db-4031-937e-a3d775ab24da"
+                      },
+                      {
+                          "name": "Faroe Islands",
+                          "currency_symbol": "DKK",
+                          "currency_name": "Danish krone",
+                          "region_id": "9b9ecc53-49e9-443f-9bc0-84a9c27d1652",
+                          "id": "9b9faee2-e3b1-4339-aef9-ac4f6ede3469"
+                      },
+                      {
+                          "name": "Fiji Islands",
+                          "currency_symbol": "FJD",
+                          "currency_name": "Fijian dollar",
+                          "region_id": "9b9ecc53-4acd-477c-8368-6493a1f9d98c",
+                          "id": "9b9faee2-e455-401a-90a8-166738ff10d4"
+                      },
+                      {
+                          "name": "Finland",
+                          "currency_symbol": "EUR",
+                          "currency_name": "Euro",
+                          "region_id": "9b9ecc53-49e9-443f-9bc0-84a9c27d1652",
+                          "id": "9b9faee2-e4f3-4e98-b55a-f71dcb49b483"
+                      },
+                      {
+                          "name": "France",
+                          "currency_symbol": "EUR",
+                          "currency_name": "Euro",
+                          "region_id": "9b9ecc53-49e9-443f-9bc0-84a9c27d1652",
+                          "id": "9b9faee2-e588-4cb2-9906-6f48db393852"
+                      },
+                      {
+                          "name": "French Guiana",
+                          "currency_symbol": "EUR",
+                          "currency_name": "Euro",
+                          "region_id": "9b9ecc53-4727-43a1-bf0e-9e05de7c568a",
+                          "id": "9b9faee2-e61f-4f85-9bb6-04ab39006471"
+                      },
+                      {
+                          "name": "French Polynesia",
+                          "currency_symbol": "XPF",
+                          "currency_name": "CFP franc",
+                          "region_id": "9b9ecc53-4acd-477c-8368-6493a1f9d98c",
+                          "id": "9b9faee2-e796-4b3f-a108-a56660a157ea"
+                      },
+                      {
+                          "name": "French Southern Territories",
+                          "currency_symbol": "EUR",
+                          "currency_name": "Euro",
+                          "region_id": "9b9ecc53-4276-4e13-bda6-461083ecb376",
+                          "id": "9b9faee2-e848-4af8-9efb-d79b2a3beab3"
+                      },
+                      {
+                          "name": "Gabon",
+                          "currency_symbol": "XAF",
+                          "currency_name": "Central African CFA franc",
+                          "region_id": "9b9ecc53-4276-4e13-bda6-461083ecb376",
+                          "id": "9b9faee2-e8e4-4dd5-bf01-bf2b60168c56"
+                      },
+                      {
+                          "name": "Gambia The",
+                          "currency_symbol": "GMD",
+                          "currency_name": "Gambian dalasi",
+                          "region_id": "9b9ecc53-4276-4e13-bda6-461083ecb376",
+                          "id": "9b9faee2-e9cf-4b1c-a636-55636123a5f0"
+                      },
+                      {
+                          "name": "Georgia",
+                          "currency_symbol": "GEL",
+                          "currency_name": "Georgian lari",
+                          "region_id": "9b9ecc53-48de-4e4d-8147-65cc79090128",
+                          "id": "9b9faee2-ea7b-4635-a7b4-b24448fd933a"
+                      },
+                      {
+                          "name": "Germany",
+                          "currency_symbol": "EUR",
+                          "currency_name": "Euro",
+                          "region_id": "9b9ecc53-49e9-443f-9bc0-84a9c27d1652",
+                          "id": "9b9faee2-eb16-4fa3-aa6d-dec4a6025d81"
+                      },
+                      {
+                          "name": "Ghana",
+                          "currency_symbol": "GHS",
+                          "currency_name": "Ghanaian cedi",
+                          "region_id": "9b9ecc53-4276-4e13-bda6-461083ecb376",
+                          "id": "9b9faee2-ebaf-4a0d-b0ad-63c3f260d6ff"
+                      },
+                      {
+                          "name": "Gibraltar",
+                          "currency_symbol": "GIP",
+                          "currency_name": "Gibraltar pound",
+                          "region_id": "9b9ecc53-49e9-443f-9bc0-84a9c27d1652",
+                          "id": "9b9faee2-ec48-42e8-8aac-4847a611d1c9"
+                      },
+                      {
+                          "name": "Greece",
+                          "currency_symbol": "EUR",
+                          "currency_name": "Euro",
+                          "region_id": "9b9ecc53-49e9-443f-9bc0-84a9c27d1652",
+                          "id": "9b9faee2-eda9-4d89-8bd0-3f33a98b60d4"
+                      },
+                      {
+                          "name": "Greenland",
+                          "currency_symbol": "DKK",
+                          "currency_name": "Danish krone",
+                          "region_id": "9b9ecc53-4727-43a1-bf0e-9e05de7c568a",
+                          "id": "9b9faee2-ee94-4aa7-b615-fbe45fd3573d"
+                      },
+                      {
+                          "name": "Grenada",
+                          "currency_symbol": "XCD",
+                          "currency_name": "Eastern Caribbean dollar",
+                          "region_id": "9b9ecc53-4727-43a1-bf0e-9e05de7c568a",
+                          "id": "9b9faee2-ef3a-4711-90ba-cfb6653a714d"
+                      },
+                      {
+                          "name": "Guadeloupe",
+                          "currency_symbol": "EUR",
+                          "currency_name": "Euro",
+                          "region_id": "9b9ecc53-4727-43a1-bf0e-9e05de7c568a",
+                          "id": "9b9faee2-f003-4ef6-919c-cb80e549d0c3"
+                      },
+                      {
+                          "name": "Guam",
+                          "currency_symbol": "USD",
+                          "currency_name": "US Dollar",
+                          "region_id": "9b9ecc53-4acd-477c-8368-6493a1f9d98c",
+                          "id": "9b9faee2-f0ac-421a-a772-2ece573eae6b"
+                      },
+                      {
+                          "name": "Guatemala",
+                          "currency_symbol": "GTQ",
+                          "currency_name": "Guatemalan quetzal",
+                          "region_id": "9b9ecc53-4727-43a1-bf0e-9e05de7c568a",
+                          "id": "9b9faee2-f148-4bd7-b347-492be8543c2f"
+                      },
+                      {
+                          "name": "Guernsey and Alderney",
+                          "currency_symbol": "GBP",
+                          "currency_name": "British pound",
+                          "region_id": "9b9ecc53-49e9-443f-9bc0-84a9c27d1652",
+                          "id": "9b9faee2-f1e2-43f3-99fa-6b40138eb12a"
+                      },
+                      {
+                          "name": "Guinea",
+                          "currency_symbol": "GNF",
+                          "currency_name": "Guinean franc",
+                          "region_id": "9b9ecc53-4276-4e13-bda6-461083ecb376",
+                          "id": "9b9faee2-f27b-4bd1-a5ce-cb2f3c1b053a"
+                      },
+                      {
+                          "name": "Guinea-Bissau",
+                          "currency_symbol": "XOF",
+                          "currency_name": "West African CFA franc",
+                          "region_id": "9b9ecc53-4276-4e13-bda6-461083ecb376",
+                          "id": "9b9faee2-f317-413b-91e7-b2ca9998eb3c"
+                      },
+                      {
+                          "name": "Guyana",
+                          "currency_symbol": "GYD",
+                          "currency_name": "Guyanese dollar",
+                          "region_id": "9b9ecc53-4727-43a1-bf0e-9e05de7c568a",
+                          "id": "9b9faee2-f4c5-4ce8-8c56-0499b9e18218"
+                      },
+                      {
+                          "name": "Haiti",
+                          "currency_symbol": "HTG",
+                          "currency_name": "Haitian gourde",
+                          "region_id": "9b9ecc53-4727-43a1-bf0e-9e05de7c568a",
+                          "id": "9b9faee2-f575-4f4a-bbb3-a37d554e9182"
+                      },
+                      {
+                          "name": "Heard Island and McDonald Islands",
+                          "currency_symbol": "AUD",
+                          "currency_name": "Australian dollar",
+                          "region_id": "9b9ecc53-4727-43a1-bf0e-9e05de7c568a",
+                          "id": "9b9faee2-f8a9-4f2c-8f35-9a3b3705f035"
+                      },
+                      {
+                          "name": "Honduras",
+                          "currency_symbol": "HNL",
+                          "currency_name": "Honduran lempira",
+                          "region_id": "9b9ecc53-4727-43a1-bf0e-9e05de7c568a",
+                          "id": "9b9faee2-f94f-443b-a36c-5ace1b38db32"
+                      },
+                      {
+                          "name": "Hong Kong S.A.R.",
+                          "currency_symbol": "HKD",
+                          "currency_name": "Hong Kong dollar",
+                          "region_id": "9b9ecc53-48de-4e4d-8147-65cc79090128",
+                          "id": "9b9faee2-fa8a-4fb2-90a0-0b9a8389690b"
+                      },
+                      {
+                          "name": "Hungary",
+                          "currency_symbol": "HUF",
+                          "currency_name": "Hungarian forint",
+                          "region_id": "9b9ecc53-49e9-443f-9bc0-84a9c27d1652",
+                          "id": "9b9faee2-fba5-4c4b-85ae-322d35a4839d"
+                      },
+                      {
+                          "name": "Iceland",
+                          "currency_symbol": "ISK",
+                          "currency_name": "Icelandic króna",
+                          "region_id": "9b9ecc53-49e9-443f-9bc0-84a9c27d1652",
+                          "id": "9b9faee2-fc6b-40ae-bfa6-b7c55d1a37ba"
+                      },
+                      {
+                          "name": "India",
+                          "currency_symbol": "INR",
+                          "currency_name": "Indian rupee",
+                          "region_id": "9b9ecc53-48de-4e4d-8147-65cc79090128",
+                          "id": "9b9faee2-fd10-406b-9fa8-cd4b4cd30df4"
+                      },
+                      {
+                          "name": "Indonesia",
+                          "currency_symbol": "IDR",
+                          "currency_name": "Indonesian rupiah",
+                          "region_id": "9b9ecc53-48de-4e4d-8147-65cc79090128",
+                          "id": "9b9faee2-fdab-4a34-96b7-b4c11a04188d"
+                      },
+                      {
+                          "name": "Iran",
+                          "currency_symbol": "IRR",
+                          "currency_name": "Iranian rial",
+                          "region_id": "9b9ecc53-48de-4e4d-8147-65cc79090128",
+                          "id": "9b9faee2-fe41-414b-92c2-16cc77d848cd"
+                      },
+                      {
+                          "name": "Iraq",
+                          "currency_symbol": "IQD",
+                          "currency_name": "Iraqi dinar",
+                          "region_id": "9b9ecc53-48de-4e4d-8147-65cc79090128",
+                          "id": "9b9faee2-fedb-47f6-b255-4230d5de3991"
+                      },
+                      {
+                          "name": "Ireland",
+                          "currency_symbol": "EUR",
+                          "currency_name": "Euro",
+                          "region_id": "9b9ecc53-49e9-443f-9bc0-84a9c27d1652",
+                          "id": "9b9faee2-ff72-4314-9a10-203d7ee8c4e1"
+                      },
+                      {
+                          "name": "Israel",
+                          "currency_symbol": "ILS",
+                          "currency_name": "Israeli new shekel",
+                          "region_id": "9b9ecc53-48de-4e4d-8147-65cc79090128",
+                          "id": "9b9faee3-000b-438b-8c5c-fb98c89d701d"
+                      },
+                      {
+                          "name": "Italy",
+                          "currency_symbol": "EUR",
+                          "currency_name": "Euro",
+                          "region_id": "9b9ecc53-49e9-443f-9bc0-84a9c27d1652",
+                          "id": "9b9faee3-0180-485c-bf29-fa3675d29813"
+                      },
+                      {
+                          "name": "Jamaica",
+                          "currency_symbol": "JMD",
+                          "currency_name": "Jamaican dollar",
+                          "region_id": "9b9ecc53-4727-43a1-bf0e-9e05de7c568a",
+                          "id": "9b9faee3-0262-4a61-86ce-8f3e01f17478"
+                      },
+                      {
+                          "name": "Japan",
+                          "currency_symbol": "JPY",
+                          "currency_name": "Japanese yen",
+                          "region_id": "9b9ecc53-48de-4e4d-8147-65cc79090128",
+                          "id": "9b9faee3-0322-4840-9040-6ec86808b6a6"
+                      },
+                      {
+                          "name": "Jersey",
+                          "currency_symbol": "GBP",
+                          "currency_name": "British pound",
+                          "region_id": "9b9ecc53-49e9-443f-9bc0-84a9c27d1652",
+                          "id": "9b9faee3-03be-4acf-8e61-acffd2741fbb"
+                      },
+                      {
+                          "name": "Jordan",
+                          "currency_symbol": "JOD",
+                          "currency_name": "Jordanian dinar",
+                          "region_id": "9b9ecc53-48de-4e4d-8147-65cc79090128",
+                          "id": "9b9faee3-0464-43fb-814a-90669d4169bd"
+                      },
+                      {
+                          "name": "Kazakhstan",
+                          "currency_symbol": "KZT",
+                          "currency_name": "Kazakhstani tenge",
+                          "region_id": "9b9ecc53-48de-4e4d-8147-65cc79090128",
+                          "id": "9b9faee3-0505-4106-b521-c0ae3628bfcb"
+                      },
+                      {
+                          "name": "Kenya",
+                          "currency_symbol": "KES",
+                          "currency_name": "Kenyan shilling",
+                          "region_id": "9b9ecc53-4276-4e13-bda6-461083ecb376",
+                          "id": "9b9faee3-05a0-441c-875e-84cbfa0e0d25"
+                      },
+                      {
+                          "name": "Kiribati",
+                          "currency_symbol": "AUD",
+                          "currency_name": "Australian dollar",
+                          "region_id": "9b9ecc53-4acd-477c-8368-6493a1f9d98c",
+                          "id": "9b9faee3-0655-47df-97b3-3ed8cea184ff"
+                      },
+                      {
+                          "name": "Kosovo",
+                          "currency_symbol": "EUR",
+                          "currency_name": "Euro",
+                          "region_id": "9b9ecc53-49e9-443f-9bc0-84a9c27d1652",
+                          "id": "9b9faee3-07b4-4bda-a5cb-d0914bb69c07"
+                      },
+                      {
+                          "name": "Kuwait",
+                          "currency_symbol": "KWD",
+                          "currency_name": "Kuwaiti dinar",
+                          "region_id": "9b9ecc53-48de-4e4d-8147-65cc79090128",
+                          "id": "9b9faee3-08c2-4c7d-a843-e51379f8b5b0"
+                      },
+                      {
+                          "name": "Kyrgyzstan",
+                          "currency_symbol": "KGS",
+                          "currency_name": "Kyrgyzstani som",
+                          "region_id": "9b9ecc53-48de-4e4d-8147-65cc79090128",
+                          "id": "9b9faee3-0973-46bc-ba21-799d453ec512"
+                      },
+                      {
+                          "name": "Laos",
+                          "currency_symbol": "LAK",
+                          "currency_name": "Lao kip",
+                          "region_id": "9b9ecc53-48de-4e4d-8147-65cc79090128",
+                          "id": "9b9faee3-0a10-498a-8361-039d96e54846"
+                      },
+                      {
+                          "name": "Latvia",
+                          "currency_symbol": "EUR",
+                          "currency_name": "Euro",
+                          "region_id": "9b9ecc53-49e9-443f-9bc0-84a9c27d1652",
+                          "id": "9b9faee3-0ab2-494b-95c1-57f72a02f2fd"
+                      },
+                      {
+                          "name": "Lebanon",
+                          "currency_symbol": "LBP",
+                          "currency_name": "Lebanese pound",
+                          "region_id": "9b9ecc53-48de-4e4d-8147-65cc79090128",
+                          "id": "9b9faee3-0b4c-4ba8-be30-6eee71c71a84"
+                      },
+                      {
+                          "name": "Lesotho",
+                          "currency_symbol": "LSL",
+                          "currency_name": "Lesotho loti",
+                          "region_id": "9b9ecc53-4276-4e13-bda6-461083ecb376",
+                          "id": "9b9faee3-0be8-44b1-aef2-bd4a4a722321"
+                      },
+                      {
+                          "name": "Liberia",
+                          "currency_symbol": "LRD",
+                          "currency_name": "Liberian dollar",
+                          "region_id": "9b9ecc53-4276-4e13-bda6-461083ecb376",
+                          "id": "9b9faee3-0c83-439d-a997-1167aa425348"
+                      },
+                      {
+                          "name": "Libya",
+                          "currency_symbol": "LYD",
+                          "currency_name": "Libyan dinar",
+                          "region_id": "9b9ecc53-4276-4e13-bda6-461083ecb376",
+                          "id": "9b9faee3-0d1c-4f85-b23e-9e074fca5f39"
+                      },
+                      {
+                          "name": "Liechtenstein",
+                          "currency_symbol": "CHF",
+                          "currency_name": "Swiss franc",
+                          "region_id": "9b9ecc53-49e9-443f-9bc0-84a9c27d1652",
+                          "id": "9b9faee3-0ef4-44cf-a763-b1412f1d96c3"
+                      },
+                      {
+                          "name": "Lithuania",
+                          "currency_symbol": "EUR",
+                          "currency_name": "Euro",
+                          "region_id": "9b9ecc53-49e9-443f-9bc0-84a9c27d1652",
+                          "id": "9b9faee3-0fa4-4c6b-934b-69a1487f5dd7"
+                      },
+                      {
+                          "name": "Luxembourg",
+                          "currency_symbol": "EUR",
+                          "currency_name": "Euro",
+                          "region_id": "9b9ecc53-49e9-443f-9bc0-84a9c27d1652",
+                          "id": "9b9faee3-1054-486d-8764-61ab9e7b584c"
+                      },
+                      {
+                          "name": "Macau S.A.R.",
+                          "currency_symbol": "MOP",
+                          "currency_name": "Macanese pataca",
+                          "region_id": "9b9ecc53-48de-4e4d-8147-65cc79090128",
+                          "id": "9b9faee3-10fc-4729-be2c-1f69614a0574"
+                      },
+                      {
+                          "name": "Madagascar",
+                          "currency_symbol": "MGA",
+                          "currency_name": "Malagasy ariary",
+                          "region_id": "9b9ecc53-4276-4e13-bda6-461083ecb376",
+                          "id": "9b9faee3-119c-4da8-94e4-aacef8e5a210"
+                      },
+                      {
+                          "name": "Malawi",
+                          "currency_symbol": "MWK",
+                          "currency_name": "Malawian kwacha",
+                          "region_id": "9b9ecc53-4276-4e13-bda6-461083ecb376",
+                          "id": "9b9faee3-1237-45a0-a203-af31ff9f6951"
+                      },
+                      {
+                          "name": "Malaysia",
+                          "currency_symbol": "MYR",
+                          "currency_name": "Malaysian ringgit",
+                          "region_id": "9b9ecc53-48de-4e4d-8147-65cc79090128",
+                          "id": "9b9faee3-12d3-4270-96dd-d7bb93004505"
+                      },
+                      {
+                          "name": "Maldives",
+                          "currency_symbol": "MVR",
+                          "currency_name": "Maldivian rufiyaa",
+                          "region_id": "9b9ecc53-48de-4e4d-8147-65cc79090128",
+                          "id": "9b9faee3-136c-4541-b1e7-0760122a2be3"
+                      },
+                      {
+                          "name": "Mali",
+                          "currency_symbol": "XOF",
+                          "currency_name": "West African CFA franc",
+                          "region_id": "9b9ecc53-4276-4e13-bda6-461083ecb376",
+                          "id": "9b9faee3-1515-41bd-a8a8-b4f8d8bd3774"
+                      },
+                      {
+                          "name": "Malta",
+                          "currency_symbol": "EUR",
+                          "currency_name": "Euro",
+                          "region_id": "9b9ecc53-49e9-443f-9bc0-84a9c27d1652",
+                          "id": "9b9faee3-15e2-45c0-bb6f-8073975987d6"
+                      },
+                      {
+                          "name": "Man (Isle of)",
+                          "currency_symbol": "GBP",
+                          "currency_name": "British pound",
+                          "region_id": "9b9ecc53-49e9-443f-9bc0-84a9c27d1652",
+                          "id": "9b9faee3-1682-418c-9035-51ccabc6684e"
+                      },
+                      {
+                          "name": "Marshall Islands",
+                          "currency_symbol": "USD",
+                          "currency_name": "United States dollar",
+                          "region_id": "9b9ecc53-4acd-477c-8368-6493a1f9d98c",
+                          "id": "9b9faee3-1729-4ab2-a342-ffa48b24ada0"
+                      },
+                      {
+                          "name": "Martinique",
+                          "currency_symbol": "EUR",
+                          "currency_name": "Euro",
+                          "region_id": "9b9ecc53-4727-43a1-bf0e-9e05de7c568a",
+                          "id": "9b9faee3-17c5-4eb5-a452-2a8713783631"
+                      },
+                      {
+                          "name": "Mauritania",
+                          "currency_symbol": "MRO",
+                          "currency_name": "Mauritanian ouguiya",
+                          "region_id": "9b9ecc53-4276-4e13-bda6-461083ecb376",
+                          "id": "9b9faee3-185f-47ba-a1c9-d04027a8d849"
+                      },
+                      {
+                          "name": "Mauritius",
+                          "currency_symbol": "MUR",
+                          "currency_name": "Mauritian rupee",
+                          "region_id": "9b9ecc53-4276-4e13-bda6-461083ecb376",
+                          "id": "9b9faee3-196c-4df8-ab0c-b68ad9718cca"
+                      },
+                      {
+                          "name": "Mayotte",
+                          "currency_symbol": "EUR",
+                          "currency_name": "Euro",
+                          "region_id": "9b9ecc53-4276-4e13-bda6-461083ecb376",
+                          "id": "9b9faee3-1a0c-4d4e-81c3-99c69c016619"
+                      },
+                      {
+                          "name": "Mexico",
+                          "currency_symbol": "MXN",
+                          "currency_name": "Mexican peso",
+                          "region_id": "9b9ecc53-4727-43a1-bf0e-9e05de7c568a",
+                          "id": "9b9faee3-1be1-4f34-b4c9-9e29358a40cd"
+                      },
+                      {
+                          "name": "Micronesia",
+                          "currency_symbol": "USD",
+                          "currency_name": "United States dollar",
+                          "region_id": "9b9ecc53-4acd-477c-8368-6493a1f9d98c",
+                          "id": "9b9faee3-1cd5-4d9c-b5a4-3b88686256ee"
+                      },
+                      {
+                          "name": "Moldova",
+                          "currency_symbol": "MDL",
+                          "currency_name": "Moldovan leu",
+                          "region_id": "9b9ecc53-49e9-443f-9bc0-84a9c27d1652",
+                          "id": "9b9faee3-1db8-4d1e-87c2-0e8c50734001"
+                      },
+                      {
+                          "name": "Monaco",
+                          "currency_symbol": "EUR",
+                          "currency_name": "Euro",
+                          "region_id": "9b9ecc53-49e9-443f-9bc0-84a9c27d1652",
+                          "id": "9b9faee3-1e96-4f26-b169-b3016af2c386"
+                      },
+                      {
+                          "name": "Mongolia",
+                          "currency_symbol": "MNT",
+                          "currency_name": "Mongolian tögrög",
+                          "region_id": "9b9ecc53-48de-4e4d-8147-65cc79090128",
+                          "id": "9b9faee3-1f70-44b5-aa38-b039d302edac"
+                      },
+                      {
+                          "name": "Montenegro",
+                          "currency_symbol": "EUR",
+                          "currency_name": "Euro",
+                          "region_id": "9b9ecc53-49e9-443f-9bc0-84a9c27d1652",
+                          "id": "9b9faee3-2045-49f7-bb4b-cde5ff8fdfbb"
+                      },
+                      {
+                          "name": "Montserrat",
+                          "currency_symbol": "XCD",
+                          "currency_name": "Eastern Caribbean dollar",
+                          "region_id": "9b9ecc53-4727-43a1-bf0e-9e05de7c568a",
+                          "id": "9b9faee3-21a2-4467-abae-d8531505cc2e"
+                      },
+                      {
+                          "name": "Morocco",
+                          "currency_symbol": "MAD",
+                          "currency_name": "Moroccan dirham",
+                          "region_id": "9b9ecc53-4276-4e13-bda6-461083ecb376",
+                          "id": "9b9faee3-22c0-412b-8acf-2782ed1149a3"
+                      },
+                      {
+                          "name": "Mozambique",
+                          "currency_symbol": "MZN",
+                          "currency_name": "Mozambican metical",
+                          "region_id": "9b9ecc53-4276-4e13-bda6-461083ecb376",
+                          "id": "9b9faee3-236e-4ec6-8830-893b0ce81f1f"
+                      },
+                      {
+                          "name": "Myanmar",
+                          "currency_symbol": "MMK",
+                          "currency_name": "Burmese kyat",
+                          "region_id": "9b9ecc53-48de-4e4d-8147-65cc79090128",
+                          "id": "9b9faee3-240d-427d-b36b-6790765306c4"
+                      },
+                      {
+                          "name": "Namibia",
+                          "currency_symbol": "NAD",
+                          "currency_name": "Namibian dollar",
+                          "region_id": "9b9ecc53-4276-4e13-bda6-461083ecb376",
+                          "id": "9b9faee3-24ab-4e00-9dbd-6f00e0aea942"
+                      },
+                      {
+                          "name": "Nauru",
+                          "currency_symbol": "AUD",
+                          "currency_name": "Australian dollar",
+                          "region_id": "9b9ecc53-4acd-477c-8368-6493a1f9d98c",
+                          "id": "9b9faee3-254a-46e1-8cf4-fcb97b87d9f2"
+                      },
+                      {
+                          "name": "Nepal",
+                          "currency_symbol": "NPR",
+                          "currency_name": "Nepalese rupee",
+                          "region_id": "9b9ecc53-48de-4e4d-8147-65cc79090128",
+                          "id": "9b9faee3-25e5-49c1-a278-cfc6e717845b"
+                      },
+                      {
+                          "name": "Netherlands",
+                          "currency_symbol": "EUR",
+                          "currency_name": "Euro",
+                          "region_id": "9b9ecc53-49e9-443f-9bc0-84a9c27d1652",
+                          "id": "9b9faee3-2681-4b40-a1ab-da63eda68463"
+                      },
+                      {
+                          "name": "New Caledonia",
+                          "currency_symbol": "XPF",
+                          "currency_name": "CFP franc",
+                          "region_id": "9b9ecc53-4acd-477c-8368-6493a1f9d98c",
+                          "id": "9b9faee3-2723-4fbf-82eb-6802d815b231"
+                      },
+                      {
+                          "name": "New Zealand",
+                          "currency_symbol": "NZD",
+                          "currency_name": "New Zealand dollar",
+                          "region_id": "9b9ecc53-4acd-477c-8368-6493a1f9d98c",
+                          "id": "9b9faee3-28cb-40a1-9829-61f40cd220f8"
+                      },
+                      {
+                          "name": "Nicaragua",
+                          "currency_symbol": "NIO",
+                          "currency_name": "Nicaraguan córdoba",
+                          "region_id": "9b9ecc53-4727-43a1-bf0e-9e05de7c568a",
+                          "id": "9b9faee3-297a-4f1b-bbb9-d52b246f6bb4"
+                      },
+                      {
+                          "name": "Niger",
+                          "currency_symbol": "XOF",
+                          "currency_name": "West African CFA franc",
+                          "region_id": "9b9ecc53-4276-4e13-bda6-461083ecb376",
+                          "id": "9b9faee3-2a18-4434-a07a-3f44d7f8000e"
+                      },
+                      {
+                          "name": "Nigeria",
+                          "currency_symbol": "NGN",
+                          "currency_name": "Nigerian naira",
+                          "region_id": "9b9ecc53-4276-4e13-bda6-461083ecb376",
+                          "id": "9b9faee3-2ab6-4c13-8120-167e66a8ff18"
+                      },
+                      {
+                          "name": "Niue",
+                          "currency_symbol": "NZD",
+                          "currency_name": "New Zealand dollar",
+                          "region_id": "9b9ecc53-4acd-477c-8368-6493a1f9d98c",
+                          "id": "9b9faee3-2b52-48b3-9fe2-6d961173a105"
+                      },
+                      {
+                          "name": "Norfolk Island",
+                          "currency_symbol": "AUD",
+                          "currency_name": "Australian dollar",
+                          "region_id": "9b9ecc53-4acd-477c-8368-6493a1f9d98c",
+                          "id": "9b9faee3-2bec-4043-ac50-ca2b421d4ea9"
+                      },
+                      {
+                          "name": "North Korea",
+                          "currency_symbol": "KPW",
+                          "currency_name": "North Korean Won",
+                          "region_id": "9b9ecc53-48de-4e4d-8147-65cc79090128",
+                          "id": "9b9faee3-2c85-44c4-8ad3-6947a777b8dd"
+                      },
+                      {
+                          "name": "North Macedonia",
+                          "currency_symbol": "MKD",
+                          "currency_name": "Denar",
+                          "region_id": "9b9ecc53-49e9-443f-9bc0-84a9c27d1652",
+                          "id": "9b9faee3-2d21-4909-9da6-5b49d2a25cab"
+                      },
+                      {
+                          "name": "Northern Mariana Islands",
+                          "currency_symbol": "USD",
+                          "currency_name": "United States dollar",
+                          "region_id": "9b9ecc53-4acd-477c-8368-6493a1f9d98c",
+                          "id": "9b9faee3-2eb0-42db-a084-4c24128b5bda"
+                      },
+                      {
+                          "name": "Norway",
+                          "currency_symbol": "NOK",
+                          "currency_name": "Norwegian krone",
+                          "region_id": "9b9ecc53-49e9-443f-9bc0-84a9c27d1652",
+                          "id": "9b9faee3-2fb9-462c-b104-cf88c555cfea"
+                      },
+                      {
+                          "name": "Oman",
+                          "currency_symbol": "OMR",
+                          "currency_name": "Omani rial",
+                          "region_id": "9b9ecc53-48de-4e4d-8147-65cc79090128",
+                          "id": "9b9faee3-306a-4faa-8acb-0cf335b6fbbd"
+                      },
+                      {
+                          "name": "Pakistan",
+                          "currency_symbol": "PKR",
+                          "currency_name": "Pakistani rupee",
+                          "region_id": "9b9ecc53-48de-4e4d-8147-65cc79090128",
+                          "id": "9b9faee3-3128-480b-8ed0-4d4e43451e5a"
+                      },
+                      {
+                          "name": "Palau",
+                          "currency_symbol": "USD",
+                          "currency_name": "United States dollar",
+                          "region_id": "9b9ecc53-4acd-477c-8368-6493a1f9d98c",
+                          "id": "9b9faee3-31cf-4949-9b7b-108dcce4057b"
+                      },
+                      {
+                          "name": "Palestinian Territory Occupied",
+                          "currency_symbol": "ILS",
+                          "currency_name": "Israeli new shekel",
+                          "region_id": "9b9ecc53-48de-4e4d-8147-65cc79090128",
+                          "id": "9b9faee3-326c-4fcd-9bc8-2e04b5b12103"
+                      },
+                      {
+                          "name": "Panama",
+                          "currency_symbol": "PAB",
+                          "currency_name": "Panamanian balboa",
+                          "region_id": "9b9ecc53-4727-43a1-bf0e-9e05de7c568a",
+                          "id": "9b9faee3-3318-4412-a1c1-1c06533ee900"
+                      },
+                      {
+                          "name": "Papua New Guinea",
+                          "currency_symbol": "PGK",
+                          "currency_name": "Papua New Guinean kina",
+                          "region_id": "9b9ecc53-4acd-477c-8368-6493a1f9d98c",
+                          "id": "9b9faee3-33d8-44ab-91a5-8e131a8f0efb"
+                      },
+                      {
+                          "name": "Paraguay",
+                          "currency_symbol": "PYG",
+                          "currency_name": "Paraguayan guarani",
+                          "region_id": "9b9ecc53-4727-43a1-bf0e-9e05de7c568a",
+                          "id": "9b9faee3-3556-44bf-b8a3-c1f758836e13"
+                      },
+                      {
+                          "name": "Peru",
+                          "currency_symbol": "PEN",
+                          "currency_name": "Peruvian sol",
+                          "region_id": "9b9ecc53-4727-43a1-bf0e-9e05de7c568a",
+                          "id": "9b9faee3-3651-4b8e-b344-80cb70514632"
+                      },
+                      {
+                          "name": "Philippines",
+                          "currency_symbol": "PHP",
+                          "currency_name": "Philippine peso",
+                          "region_id": "9b9ecc53-48de-4e4d-8147-65cc79090128",
+                          "id": "9b9faee3-36e6-4b6e-a3b1-ee9421c1ddbb"
+                      },
+                      {
+                          "name": "Pitcairn Island",
+                          "currency_symbol": "NZD",
+                          "currency_name": "New Zealand dollar",
+                          "region_id": "9b9ecc53-4acd-477c-8368-6493a1f9d98c",
+                          "id": "9b9faee3-377e-4c6f-8c07-b19e8fcc182d"
+                      },
+                      {
+                          "name": "Poland",
+                          "currency_symbol": "PLN",
+                          "currency_name": "Polish złoty",
+                          "region_id": "9b9ecc53-49e9-443f-9bc0-84a9c27d1652",
+                          "id": "9b9faee3-380d-4e88-90bf-fd945189c28f"
+                      },
+                      {
+                          "name": "Portugal",
+                          "currency_symbol": "EUR",
+                          "currency_name": "Euro",
+                          "region_id": "9b9ecc53-49e9-443f-9bc0-84a9c27d1652",
+                          "id": "9b9faee3-389a-438b-bee7-cff96a8bc77c"
+                      },
+                      {
+                          "name": "Puerto Rico",
+                          "currency_symbol": "USD",
+                          "currency_name": "United States dollar",
+                          "region_id": "9b9ecc53-4727-43a1-bf0e-9e05de7c568a",
+                          "id": "9b9faee3-3925-4865-88f3-2e3e9c114d89"
+                      },
+                      {
+                          "name": "Qatar",
+                          "currency_symbol": "QAR",
+                          "currency_name": "Qatari riyal",
+                          "region_id": "9b9ecc53-48de-4e4d-8147-65cc79090128",
+                          "id": "9b9faee3-39ad-4b03-af05-a29bddc9f0ab"
+                      },
+                      {
+                          "name": "Reunion",
+                          "currency_symbol": "EUR",
+                          "currency_name": "Euro",
+                          "region_id": "9b9ecc53-4276-4e13-bda6-461083ecb376",
+                          "id": "9b9faee3-3a88-4777-9723-08b41b9946e4"
+                      },
+                      {
+                          "name": "Romania",
+                          "currency_symbol": "RON",
+                          "currency_name": "Romanian leu",
+                          "region_id": "9b9ecc53-49e9-443f-9bc0-84a9c27d1652",
+                          "id": "9b9faee3-3c16-448d-87a3-d77d2a721f25"
+                      },
+                      {
+                          "name": "Russia",
+                          "currency_symbol": "RUB",
+                          "currency_name": "Russian ruble",
+                          "region_id": "9b9ecc53-49e9-443f-9bc0-84a9c27d1652",
+                          "id": "9b9faee3-3cdb-4fd0-87b2-6148f2266e11"
+                      },
+                      {
+                          "name": "Rwanda",
+                          "currency_symbol": "RWF",
+                          "currency_name": "Rwandan franc",
+                          "region_id": "9b9ecc53-4276-4e13-bda6-461083ecb376",
+                          "id": "9b9faee3-3d6d-4006-a003-323f80b9813d"
+                      },
+                      {
+                          "name": "Saint Helena",
+                          "currency_symbol": "SHP",
+                          "currency_name": "Saint Helena pound",
+                          "region_id": "9b9ecc53-4276-4e13-bda6-461083ecb376",
+                          "id": "9b9faee3-3e08-419c-8652-fc03980c7384"
+                      },
+                      {
+                          "name": "Saint Kitts and Nevis",
+                          "currency_symbol": "XCD",
+                          "currency_name": "Eastern Caribbean dollar",
+                          "region_id": "9b9ecc53-4727-43a1-bf0e-9e05de7c568a",
+                          "id": "9b9faee3-3e91-455d-8e5c-1f9bf5456547"
+                      },
+                      {
+                          "name": "Saint Lucia",
+                          "currency_symbol": "XCD",
+                          "currency_name": "Eastern Caribbean dollar",
+                          "region_id": "9b9ecc53-4727-43a1-bf0e-9e05de7c568a",
+                          "id": "9b9faee3-3f1d-40e1-8a69-ab3af2f532bc"
+                      },
+                      {
+                          "name": "Saint Pierre and Miquelon",
+                          "currency_symbol": "EUR",
+                          "currency_name": "Euro",
+                          "region_id": "9b9ecc53-4727-43a1-bf0e-9e05de7c568a",
+                          "id": "9b9faee3-3fa6-4c71-b0aa-5469dc79794a"
+                      },
+                      {
+                          "name": "Saint Vincent and the Grenadines",
+                          "currency_symbol": "XCD",
+                          "currency_name": "Eastern Caribbean dollar",
+                          "region_id": "9b9ecc53-4727-43a1-bf0e-9e05de7c568a",
+                          "id": "9b9faee3-408b-429b-abf0-a47a9ea0c8f3"
+                      },
+                      {
+                          "name": "Saint-Barthelemy",
+                          "currency_symbol": "EUR",
+                          "currency_name": "Euro",
+                          "region_id": "9b9ecc53-4727-43a1-bf0e-9e05de7c568a",
+                          "id": "9b9faee3-413a-42d4-abf4-9a27932b9523"
+                      },
+                      {
+                          "name": "Saint-Martin (French part)",
+                          "currency_symbol": "EUR",
+                          "currency_name": "Euro",
+                          "region_id": "9b9ecc53-4727-43a1-bf0e-9e05de7c568a",
+                          "id": "9b9faee3-42bf-4423-820e-cd07db8c1b20"
+                      },
+                      {
+                          "name": "Samoa",
+                          "currency_symbol": "WST",
+                          "currency_name": "Samoan tālā",
+                          "region_id": "9b9ecc53-4acd-477c-8368-6493a1f9d98c",
+                          "id": "9b9faee3-4361-4f90-b346-9d97cfcb8dae"
+                      },
+                      {
+                          "name": "San Marino",
+                          "currency_symbol": "EUR",
+                          "currency_name": "Euro",
+                          "region_id": "9b9ecc53-49e9-443f-9bc0-84a9c27d1652",
+                          "id": "9b9faee3-43f2-4d31-8fc8-0a029adca776"
+                      },
+                      {
+                          "name": "Sao Tome and Principe",
+                          "currency_symbol": "STD",
+                          "currency_name": "Dobra",
+                          "region_id": "9b9ecc53-4276-4e13-bda6-461083ecb376",
+                          "id": "9b9faee3-4487-4b18-abab-6e6ec13e44bf"
+                      },
+                      {
+                          "name": "Saudi Arabia",
+                          "currency_symbol": "SAR",
+                          "currency_name": "Saudi riyal",
+                          "region_id": "9b9ecc53-48de-4e4d-8147-65cc79090128",
+                          "id": "9b9faee3-450f-4504-bcba-4e35651359ae"
+                      },
+                      {
+                          "name": "Senegal",
+                          "currency_symbol": "XOF",
+                          "currency_name": "West African CFA franc",
+                          "region_id": "9b9ecc53-4276-4e13-bda6-461083ecb376",
+                          "id": "9b9faee3-459e-4033-bf00-79c01c0f90af"
+                      },
+                      {
+                          "name": "Serbia",
+                          "currency_symbol": "RSD",
+                          "currency_name": "Serbian dinar",
+                          "region_id": "9b9ecc53-49e9-443f-9bc0-84a9c27d1652",
+                          "id": "9b9faee3-466f-44af-87f8-6132ff8d309a"
+                      },
+                      {
+                          "name": "Seychelles",
+                          "currency_symbol": "SCR",
+                          "currency_name": "Seychellois rupee",
+                          "region_id": "9b9ecc53-4276-4e13-bda6-461083ecb376",
+                          "id": "9b9faee3-470f-4550-a97b-1360a6389835"
+                      },
+                      {
+                          "name": "Sierra Leone",
+                          "currency_symbol": "SLL",
+                          "currency_name": "Sierra Leonean leone",
+                          "region_id": "9b9ecc53-4276-4e13-bda6-461083ecb376",
+                          "id": "9b9faee3-47a2-41be-aadb-c529ab5e4731"
+                      },
+                      {
+                          "name": "Singapore",
+                          "currency_symbol": "SGD",
+                          "currency_name": "Singapore dollar",
+                          "region_id": "9b9ecc53-48de-4e4d-8147-65cc79090128",
+                          "id": "9b9faee3-4944-404e-841f-4943beea406b"
+                      },
+                      {
+                          "name": "Sint Maarten (Dutch part)",
+                          "currency_symbol": "ANG",
+                          "currency_name": "Netherlands Antillean guilder",
+                          "region_id": "9b9ecc53-4727-43a1-bf0e-9e05de7c568a",
+                          "id": "9b9faee3-49f4-4c0c-8e8a-fc6159ee70c0"
+                      },
+                      {
+                          "name": "Slovakia",
+                          "currency_symbol": "EUR",
+                          "currency_name": "Euro",
+                          "region_id": "9b9ecc53-49e9-443f-9bc0-84a9c27d1652",
+                          "id": "9b9faee3-4a89-42a2-bbe8-25c785bd866c"
+                      },
+                      {
+                          "name": "Slovenia",
+                          "currency_symbol": "EUR",
+                          "currency_name": "Euro",
+                          "region_id": "9b9ecc53-49e9-443f-9bc0-84a9c27d1652",
+                          "id": "9b9faee3-4b20-4a72-980e-04036e79b197"
+                      },
+                      {
+                          "name": "Solomon Islands",
+                          "currency_symbol": "SBD",
+                          "currency_name": "Solomon Islands dollar",
+                          "region_id": "9b9ecc53-4acd-477c-8368-6493a1f9d98c",
+                          "id": "9b9faee3-4bb3-4c30-84ce-f8ae822650a1"
+                      },
+                      {
+                          "name": "Somalia",
+                          "currency_symbol": "SOS",
+                          "currency_name": "Somali shilling",
+                          "region_id": "9b9ecc53-4276-4e13-bda6-461083ecb376",
+                          "id": "9b9faee3-4c76-4786-b43e-882680b158bb"
+                      },
+                      {
+                          "name": "South Africa",
+                          "currency_symbol": "ZAR",
+                          "currency_name": "South African rand",
+                          "region_id": "9b9ecc53-4276-4e13-bda6-461083ecb376",
+                          "id": "9b9faee3-4d30-4d58-bd51-184f88df82eb"
+                      },
+                      {
+                          "name": "South Georgia",
+                          "currency_symbol": "GBP",
+                          "currency_name": "British pound",
+                          "region_id": "9b9ecc53-4727-43a1-bf0e-9e05de7c568a",
+                          "id": "9b9faee3-4dec-4fef-9fd8-bd55b995e971"
+                      },
+                      {
+                          "name": "South Korea",
+                          "currency_symbol": "KRW",
+                          "currency_name": "Won",
+                          "region_id": "9b9ecc53-48de-4e4d-8147-65cc79090128",
+                          "id": "9b9faee3-4f3e-41e8-b3b6-69816c73a68a"
+                      },
+                      {
+                          "name": "South Sudan",
+                          "currency_symbol": "SSP",
+                          "currency_name": "South Sudanese pound",
+                          "region_id": "9b9ecc53-4276-4e13-bda6-461083ecb376",
+                          "id": "9b9faee3-505b-497c-8e94-0a0ae4a02266"
+                      },
+                      {
+                          "name": "Spain",
+                          "currency_symbol": "EUR",
+                          "currency_name": "Euro",
+                          "region_id": "9b9ecc53-49e9-443f-9bc0-84a9c27d1652",
+                          "id": "9b9faee3-5141-4b74-98c2-73ecbb63d415"
+                      },
+                      {
+                          "name": "Sri Lanka",
+                          "currency_symbol": "LKR",
+                          "currency_name": "Sri Lankan rupee",
+                          "region_id": "9b9ecc53-48de-4e4d-8147-65cc79090128",
+                          "id": "9b9faee3-521b-4cc0-a631-480af864bf34"
+                      },
+                      {
+                          "name": "Sudan",
+                          "currency_symbol": "SDG",
+                          "currency_name": "Sudanese pound",
+                          "region_id": "9b9ecc53-4276-4e13-bda6-461083ecb376",
+                          "id": "9b9faee3-539e-40d5-bb01-6adea3a95fe2"
+                      },
+                      {
+                          "name": "Suriname",
+                          "currency_symbol": "SRD",
+                          "currency_name": "Surinamese dollar",
+                          "region_id": "9b9ecc53-4727-43a1-bf0e-9e05de7c568a",
+                          "id": "9b9faee3-547c-433e-a739-f2f54e0b6e93"
+                      },
+                      {
+                          "name": "Svalbard and Jan Mayen Islands",
+                          "currency_symbol": "NOK",
+                          "currency_name": "Norwegian Krone",
+                          "region_id": "9b9ecc53-49e9-443f-9bc0-84a9c27d1652",
+                          "id": "9b9faee3-55ed-46b3-b565-100f1b3351e2"
+                      },
+                      {
+                          "name": "Sweden",
+                          "currency_symbol": "SEK",
+                          "currency_name": "Swedish krona",
+                          "region_id": "9b9ecc53-49e9-443f-9bc0-84a9c27d1652",
+                          "id": "9b9faee3-5713-45d0-a35e-b0e8a355ab10"
+                      },
+                      {
+                          "name": "Switzerland",
+                          "currency_symbol": "CHF",
+                          "currency_name": "Swiss franc",
+                          "region_id": "9b9ecc53-49e9-443f-9bc0-84a9c27d1652",
+                          "id": "9b9faee3-57b3-4df1-9956-02950b247cd0"
+                      },
+                      {
+                          "name": "Syria",
+                          "currency_symbol": "SYP",
+                          "currency_name": "Syrian pound",
+                          "region_id": "9b9ecc53-48de-4e4d-8147-65cc79090128",
+                          "id": "9b9faee3-5846-4b57-8642-448ac90e5973"
+                      },
+                      {
+                          "name": "Taiwan",
+                          "currency_symbol": "TWD",
+                          "currency_name": "New Taiwan dollar",
+                          "region_id": "9b9ecc53-48de-4e4d-8147-65cc79090128",
+                          "id": "9b9faee3-599d-47e2-9776-1188b0c6ba93"
+                      },
+                      {
+                          "name": "Tajikistan",
+                          "currency_symbol": "TJS",
+                          "currency_name": "Tajikistani somoni",
+                          "region_id": "9b9ecc53-48de-4e4d-8147-65cc79090128",
+                          "id": "9b9faee3-5abf-4bc8-abcc-10a95ed316f9"
+                      },
+                      {
+                          "name": "Tanzania",
+                          "currency_symbol": "TZS",
+                          "currency_name": "Tanzanian shilling",
+                          "region_id": "9b9ecc53-4276-4e13-bda6-461083ecb376",
+                          "id": "9b9faee3-5c62-4e85-8735-5c7a8d3ea932"
+                      },
+                      {
+                          "name": "Thailand",
+                          "currency_symbol": "THB",
+                          "currency_name": "Thai baht",
+                          "region_id": "9b9ecc53-48de-4e4d-8147-65cc79090128",
+                          "id": "9b9faee3-5d7b-468d-aed9-a83c0108122d"
+                      },
+                      {
+                          "name": "The Bahamas",
+                          "currency_symbol": "BSD",
+                          "currency_name": "Bahamian dollar",
+                          "region_id": "9b9ecc53-4727-43a1-bf0e-9e05de7c568a",
+                          "id": "9b9faee3-5e21-4475-b410-ae5da928128a"
+                      },
+                      {
+                          "name": "Timor-Leste",
+                          "currency_symbol": "USD",
+                          "currency_name": "United States dollar",
+                          "region_id": "9b9ecc53-48de-4e4d-8147-65cc79090128",
+                          "id": "9b9faee3-5ee3-4803-aebe-3121646a3baa"
+                      },
+                      {
+                          "name": "Togo",
+                          "currency_symbol": "XOF",
+                          "currency_name": "West African CFA franc",
+                          "region_id": "9b9ecc53-4276-4e13-bda6-461083ecb376",
+                          "id": "9b9faee3-5f86-4e17-bc02-d43b107add26"
+                      },
+                      {
+                          "name": "Tokelau",
+                          "currency_symbol": "NZD",
+                          "currency_name": "New Zealand dollar",
+                          "region_id": "9b9ecc53-4acd-477c-8368-6493a1f9d98c",
+                          "id": "9b9faee3-6016-410a-a98a-1555866515d8"
+                      },
+                      {
+                          "name": "Tonga",
+                          "currency_symbol": "TOP",
+                          "currency_name": "Tongan paʻanga",
+                          "region_id": "9b9ecc53-4acd-477c-8368-6493a1f9d98c",
+                          "id": "9b9faee3-60a2-4ea6-8d5c-6ec8f9101687"
+                      },
+                      {
+                          "name": "Trinidad and Tobago",
+                          "currency_symbol": "TTD",
+                          "currency_name": "Trinidad and Tobago dollar",
+                          "region_id": "9b9ecc53-4727-43a1-bf0e-9e05de7c568a",
+                          "id": "9b9faee3-612e-49ee-ad51-4cada2e600b8"
+                      },
+                      {
+                          "name": "Tunisia",
+                          "currency_symbol": "TND",
+                          "currency_name": "Tunisian dinar",
+                          "region_id": "9b9ecc53-4276-4e13-bda6-461083ecb376",
+                          "id": "9b9faee3-61ba-4c7b-9032-e9474c1fb514"
+                      },
+                      {
+                          "name": "Turkey",
+                          "currency_symbol": "TRY",
+                          "currency_name": "Turkish lira",
+                          "region_id": "9b9ecc53-48de-4e4d-8147-65cc79090128",
+                          "id": "9b9faee3-632e-49d7-b585-9615bfd8f3ff"
+                      },
+                      {
+                          "name": "Turkmenistan",
+                          "currency_symbol": "TMT",
+                          "currency_name": "Turkmenistan manat",
+                          "region_id": "9b9ecc53-48de-4e4d-8147-65cc79090128",
+                          "id": "9b9faee3-63dc-449b-8f02-6f69e5551b0f"
+                      },
+                      {
+                          "name": "Turks and Caicos Islands",
+                          "currency_symbol": "USD",
+                          "currency_name": "United States dollar",
+                          "region_id": "9b9ecc53-4727-43a1-bf0e-9e05de7c568a",
+                          "id": "9b9faee3-6472-4252-8f76-dd9732bc04b2"
+                      },
+                      {
+                          "name": "Tuvalu",
+                          "currency_symbol": "AUD",
+                          "currency_name": "Australian dollar",
+                          "region_id": "9b9ecc53-4acd-477c-8368-6493a1f9d98c",
+                          "id": "9b9faee3-6584-4168-a0f2-f0264c91466e"
+                      },
+                      {
+                          "name": "Uganda",
+                          "currency_symbol": "UGX",
+                          "currency_name": "Ugandan shilling",
+                          "region_id": "9b9ecc53-4276-4e13-bda6-461083ecb376",
+                          "id": "9b9faee3-6699-4bc8-8f89-7156b2a0768f"
+                      },
+                      {
+                          "name": "Ukraine",
+                          "currency_symbol": "UAH",
+                          "currency_name": "Ukrainian hryvnia",
+                          "region_id": "9b9ecc53-49e9-443f-9bc0-84a9c27d1652",
+                          "id": "9b9faee3-67a2-4b94-9296-44f750f3ba1c"
+                      },
+                      {
+                          "name": "United Arab Emirates",
+                          "currency_symbol": "AED",
+                          "currency_name": "United Arab Emirates dirham",
+                          "region_id": "9b9ecc53-48de-4e4d-8147-65cc79090128",
+                          "id": "9b9faee3-687a-4a53-9fe1-6b6a8cc5f107"
+                      },
+                      {
+                          "name": "United Kingdom",
+                          "currency_symbol": "GBP",
+                          "currency_name": "British pound",
+                          "region_id": "9b9ecc53-49e9-443f-9bc0-84a9c27d1652",
+                          "id": "9b9faee3-69f1-447b-a61e-56f4b7c4049a"
+                      },
+                      {
+                          "name": "United States",
+                          "currency_symbol": "USD",
+                          "currency_name": "United States dollar",
+                          "region_id": "9b9ecc53-4727-43a1-bf0e-9e05de7c568a",
+                          "id": "9b9faee3-6aaa-4050-bd6c-98a43e674250"
+                      },
+                      {
+                          "name": "United States Minor Outlying Islands",
+                          "currency_symbol": "USD",
+                          "currency_name": "United States dollar",
+                          "region_id": "9b9ecc53-4727-43a1-bf0e-9e05de7c568a",
+                          "id": "9b9faee3-6b91-49d5-9aff-0a51da6b41b9"
+                      },
+                      {
+                          "name": "Uruguay",
+                          "currency_symbol": "UYU",
+                          "currency_name": "Uruguayan peso",
+                          "region_id": "9b9ecc53-4727-43a1-bf0e-9e05de7c568a",
+                          "id": "9b9faee3-6c54-4342-809f-595a8ae11f68"
+                      },
+                      {
+                          "name": "Uzbekistan",
+                          "currency_symbol": "UZS",
+                          "currency_name": "Uzbekistani soʻm",
+                          "region_id": "9b9ecc53-48de-4e4d-8147-65cc79090128",
+                          "id": "9b9faee3-6ceb-46e0-98a9-d21eab8aa6bf"
+                      },
+                      {
+                          "name": "Vanuatu",
+                          "currency_symbol": "VUV",
+                          "currency_name": "Vanuatu vatu",
+                          "region_id": "9b9ecc53-4acd-477c-8368-6493a1f9d98c",
+                          "id": "9b9faee3-6d7d-40b4-aacc-e3a838d69cc5"
+                      },
+                      {
+                          "name": "Vatican City State (Holy See)",
+                          "currency_symbol": "EUR",
+                          "currency_name": "Euro",
+                          "region_id": "9b9ecc53-49e9-443f-9bc0-84a9c27d1652",
+                          "id": "9b9faee3-6e09-4891-ba62-1742548bb19f"
+                      },
+                      {
+                          "name": "Venezuela",
+                          "currency_symbol": "VES",
+                          "currency_name": "Bolívar",
+                          "region_id": "9b9ecc53-4727-43a1-bf0e-9e05de7c568a",
+                          "id": "9b9faee3-6e93-44f5-90f0-b183a4981ec0"
+                      },
+                      {
+                          "name": "Vietnam",
+                          "currency_symbol": "VND",
+                          "currency_name": "Vietnamese đồng",
+                          "region_id": "9b9ecc53-48de-4e4d-8147-65cc79090128",
+                          "id": "9b9faee3-701b-4d9d-83ef-8577572e4e5a"
+                      },
+                      {
+                          "name": "Virgin Islands (British)",
+                          "currency_symbol": "USD",
+                          "currency_name": "United States dollar",
+                          "region_id": "9b9ecc53-4727-43a1-bf0e-9e05de7c568a",
+                          "id": "9b9faee3-70c7-4aa1-9096-311f7f416dee"
+                      },
+                      {
+                          "name": "Virgin Islands (US)",
+                          "currency_symbol": "USD",
+                          "currency_name": "United States dollar",
+                          "region_id": "9b9ecc53-4727-43a1-bf0e-9e05de7c568a",
+                          "id": "9b9faee3-718a-488c-ab94-c824f6a0b8a9"
+                      },
+                      {
+                          "name": "Wallis and Futuna Islands",
+                          "currency_symbol": "XPF",
+                          "currency_name": "CFP franc",
+                          "region_id": "9b9ecc53-4acd-477c-8368-6493a1f9d98c",
+                          "id": "9b9faee3-72ab-436c-b4e3-178339961480"
+                      },
+                      {
+                          "name": "Western Sahara",
+                          "currency_symbol": "MAD",
+                          "currency_name": "Moroccan Dirham",
+                          "region_id": "9b9ecc53-4276-4e13-bda6-461083ecb376",
+                          "id": "9b9faee3-73bb-4792-b066-95c43c4ac9d6"
+                      },
+                      {
+                          "name": "Yemen",
+                          "currency_symbol": "YER",
+                          "currency_name": "Yemeni rial",
+                          "region_id": "9b9ecc53-48de-4e4d-8147-65cc79090128",
+                          "id": "9b9faee3-74aa-41d7-8b3d-6d1da9bfd3fa"
+                      },
+                      {
+                          "name": "Zambia",
+                          "currency_symbol": "ZMW",
+                          "currency_name": "Zambian kwacha",
+                          "region_id": "9b9ecc53-4276-4e13-bda6-461083ecb376",
+                          "id": "9b9faee3-7558-4a1e-ade2-ab9c498d3029"
+                      },
+                      {
+                          "name": "Zimbabwe",
+                          "currency_symbol": "ZWL",
+                          "currency_name": "Zimbabwe Dollar",
+                          "region_id": "9b9ecc53-4276-4e13-bda6-461083ecb376",
+                          "id": "9b9faee3-76f4-4aca-94ad-275aa8b0b0ee"
+                      }
+                  ]
+              }
+          }

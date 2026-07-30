@@ -1,0 +1,167 @@
+info:
+  name: Get Single Plan
+  type: http
+  seq: 2
+
+http:
+  method: GET
+  url: "{{base_url}}/admin/plan/:planId"
+  params:
+    - name: planId
+      value: 16a141d2-a239-45e7-9994-cf2869222b7c
+      type: path
+  auth:
+    type: bearer
+    token: "{{adminToken}}"
+
+runtime:
+  scripts:
+    - type: after-response
+      code: |-
+        test("Successfully searched plans", function () {
+            expect(res.getStatus()).to.be.oneOf([200, 201]);
+        });
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+examples:
+  - name: Get Single Plan
+    request:
+      url: "{{base_url}}/admin/plan/:planId"
+      method: GET
+      params:
+        - name: planId
+          value: 9bd14759-b6a1-477e-82ac-ee9e20394ad1
+          type: path
+    response:
+      status: 200
+      statusText: OK
+      headers:
+        - name: Date
+          value: Tue, 16 Apr 2024 02:09:30 GMT
+        - name: Server
+          value: Apache/2.4.54 (Win64) OpenSSL/1.1.1q mod_fcgid/2.3.10-dev
+        - name: X-Powered-By
+          value: PHP/8.2.16
+        - name: Cache-Control
+          value: no-cache, private
+        - name: X-RateLimit-Limit
+          value: "60"
+        - name: X-RateLimit-Remaining
+          value: "59"
+        - name: Access-Control-Allow-Origin
+          value: "*"
+        - name: Vary
+          value: Authorization
+        - name: Keep-Alive
+          value: timeout=5, max=100
+        - name: Connection
+          value: Keep-Alive
+        - name: Transfer-Encoding
+          value: chunked
+        - name: Content-Type
+          value: application/json
+      body:
+        type: json
+        data: |-
+          {
+              "success": true,
+              "code": 0,
+              "locale": "en",
+              "message": "Plan fetched successfully",
+              "data": {
+                  "item": {
+                      "id": "9bd14759-b6a1-477e-82ac-ee9e20394ad1",
+                      "name": "Plan ABC",
+                      "type": "Temporary",
+                      "description": "This amazing plan gives you an awesome description.",
+                      "start_date": "2024-01-01",
+                      "end_date": "2024-05-05",
+                      "active": true,
+                      "number_of_branches": 2,
+                      "number_of_users": 3,
+                      "telemedicine": false,
+                      "hmo": false,
+                      "number_of_storage": "1TB",
+                      "pricing_per_user": 10,
+                      "plan_by_locations": [
+                          {
+                              "id": "9bd14dfe-87ee-46b6-8444-45caffea662b",
+                              "plan_id": "9bd14759-b6a1-477e-82ac-ee9e20394ad1",
+                              "country_id": "9b9faee2-ebaf-4a0d-b0ad-63c3f260d6ff",
+                              "amount_monthly": "10000",
+                              "amount_quarterly": "25000",
+                              "amount_yearly": "50000",
+                              "has_trial": true,
+                              "trial_period": 60,
+                              "sms_credit": "50",
+                              "cancellation_period": 30,
+                              "support_type": 1,
+                              "refund_eligibility": false,
+                              "active": true,
+                              "created_at": "2024-04-16T01:56:29.000000Z",
+                              "updated_at": "2024-04-16T01:56:29.000000Z",
+                              "country": {
+                                  "id": "9b9faee2-ebaf-4a0d-b0ad-63c3f260d6ff",
+                                  "name": "Ghana",
+                                  "region_id": "9b9ecc53-4276-4e13-bda6-461083ecb376",
+                                  "currency_name": "Ghanaian cedi",
+                                  "currency_symbol": "GHS",
+                                  "active": true,
+                                  "flag": null
+                              }
+                          },
+                          {
+                              "id": "9bd1518c-14a5-41ab-9ddb-875c4158a7f4",
+                              "plan_id": "9bd14759-b6a1-477e-82ac-ee9e20394ad1",
+                              "country_id": "9b9faee3-2ab6-4c13-8120-167e66a8ff18",
+                              "amount_monthly": "15000",
+                              "amount_quarterly": "25000",
+                              "amount_yearly": "40000",
+                              "has_trial": true,
+                              "trial_period": 60,
+                              "sms_credit": "50",
+                              "cancellation_period": 30,
+                              "support_type": 1,
+                              "refund_eligibility": false,
+                              "active": true,
+                              "created_at": "2024-04-16T02:06:26.000000Z",
+                              "updated_at": "2024-04-16T02:06:26.000000Z",
+                              "country": {
+                                  "id": "9b9faee3-2ab6-4c13-8120-167e66a8ff18",
+                                  "name": "Nigeria",
+                                  "region_id": "9b9ecc53-4276-4e13-bda6-461083ecb376",
+                                  "currency_name": "Nigerian naira",
+                                  "currency_symbol": "NGN",
+                                  "active": true,
+                                  "flag": null
+                              }
+                          }
+                      ],
+                      "organization_types": [
+                          {
+                              "id": 1,
+                              "name": "Hospitals & Health Centers",
+                              "active": true,
+                              "pivot": {
+                                  "plan_id": "9bd14759-b6a1-477e-82ac-ee9e20394ad1",
+                                  "organization_type_id": 1
+                              }
+                          },
+                          {
+                              "id": 2,
+                              "name": "Pharmacy",
+                              "active": true,
+                              "pivot": {
+                                  "plan_id": "9bd14759-b6a1-477e-82ac-ee9e20394ad1",
+                                  "organization_type_id": 2
+                              }
+                          }
+                      ]
+                  }
+              }
+          }

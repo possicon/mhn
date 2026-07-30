@@ -1,0 +1,181 @@
+info:
+  name: GetHmoPricing
+  type: http
+  seq: 23
+
+http:
+  method: POST
+  url: "{{base_url}}/user/organization/getHmoPricing"
+  headers:
+    - name: Accept
+      value: application/json
+  body:
+    type: json
+    data: "{\r
+
+      \r
+
+      \    \"hmo_id\":\"9bbbac52-edd1-4aa7-8254-c29c14fa6249\",\r
+
+      \    \"service_item_id\":\"9cfe8382-d6e2-4519-93a8-2337a40aada6\",\r
+
+      \    \"plan_name\":\"diamond\"\r
+
+      \r
+
+      }"
+  auth:
+    type: bearer
+    token: 64|wekxmT6fEC7W1savxR3VWd2fcLOu9fkY2pdTExtBe40532c7
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+examples:
+  - name: GetHmoPricing
+    request:
+      url: "{{base_url}}/user/organization/getHmoPricing"
+      method: POST
+      headers:
+        - name: Accept
+          value: application/json
+      body:
+        type: json
+        data: "{\r
+
+          \r
+
+          \    \"hmo_id\":\"9bbbac52-edd1-4aa7-8254-c29c14fa6249\",\r
+
+          \    \"service_id\":\"9be98c6c-2cc2-4c63-ab92-20497d6298e0\",\r
+
+          \    \"plan_name\":\"Silver Premium\"\r
+
+          \r
+
+          }"
+    response:
+      status: 200
+      statusText: OK
+      headers:
+        - name: Date
+          value: Mon, 13 May 2024 20:28:33 GMT
+        - name: Server
+          value: Apache/2.4.54 (Win64) OpenSSL/1.1.1q mod_fcgid/2.3.10-dev
+        - name: X-Powered-By
+          value: PHP/8.2.16
+        - name: Cache-Control
+          value: no-cache, private
+        - name: X-RateLimit-Limit
+          value: "60"
+        - name: X-RateLimit-Remaining
+          value: "58"
+        - name: Access-Control-Allow-Origin
+          value: "*"
+        - name: Vary
+          value: Authorization
+        - name: Keep-Alive
+          value: timeout=5, max=100
+        - name: Connection
+          value: Keep-Alive
+        - name: Transfer-Encoding
+          value: chunked
+        - name: Content-Type
+          value: application/json
+      body:
+        type: json
+        data: |-
+          {
+              "success": true,
+              "code": 0,
+              "locale": "en",
+              "message": "Fetched HMOs pricing fetch successfully",
+              "data": {
+                  "item": {
+                      "id": "9c09265f-c5b2-44e6-bf6f-2f42ba1d60eb",
+                      "hmo_service_id": "9c09265f-c2ac-42bb-84e7-a3929da1d51f",
+                      "coverage_type": "zero",
+                      "category": "patient_only",
+                      "amount": "3000.00",
+                      "percent": "5.00",
+                      "status": "active",
+                      "created_at": "2024-05-13T20:12:04.000000Z",
+                      "updated_at": "2024-05-13T20:12:04.000000Z"
+                  }
+              }
+          }
+  - name: GetHmoPricing
+    request:
+      url: "{{base_url}}/user/organization/getHmoPricing"
+      method: POST
+      headers:
+        - name: Accept
+          value: application/json
+      body:
+        type: json
+        data: "{\r
+
+          \r
+
+          \    \"hmo_id\":\"9bbbac52-edd1-4aa7-8254-c29c14fa6249\",\r
+
+          \    \"service_id\":\"9be98c6c-2cc2-4c63-ab92-20497d6298e0\",\r
+
+          \    \"plan_name\":\"Diamond\"\r
+
+          \r
+
+          }"
+    response:
+      status: 200
+      statusText: OK
+      headers:
+        - name: Date
+          value: Fri, 05 Jul 2024 23:26:12 GMT
+        - name: Server
+          value: Apache/2.4.54 (Win64) OpenSSL/1.1.1q mod_fcgid/2.3.10-dev
+        - name: X-Powered-By
+          value: PHP/8.2.16
+        - name: Cache-Control
+          value: no-cache, private
+        - name: X-RateLimit-Limit
+          value: "60"
+        - name: X-RateLimit-Remaining
+          value: "59"
+        - name: Access-Control-Allow-Origin
+          value: "*"
+        - name: Vary
+          value: Authorization
+        - name: Keep-Alive
+          value: timeout=5, max=100
+        - name: Connection
+          value: Keep-Alive
+        - name: Transfer-Encoding
+          value: chunked
+        - name: Content-Type
+          value: application/json
+      body:
+        type: json
+        data: |-
+          {
+              "success": true,
+              "code": 0,
+              "locale": "en",
+              "message": "Fetched HMOs pricing fetch successfully",
+              "data": {
+                  "item": {
+                      "id": "9c3c9dfc-c6fd-44f8-85eb-c7c14a89b8e7",
+                      "hmo_service_id": "9c3c9dfc-28a1-47d4-a575-99f67b3ec4ef",
+                      "coverage_type": "zero",
+                      "category": "patient_only",
+                      "percent": "5.00",
+                      "status": "active",
+                      "created_at": "2024-06-08T10:13:45.000000Z",
+                      "updated_at": "2024-06-08T10:13:45.000000Z",
+                      "discountedAmount": 9500
+                  }
+              }
+          }

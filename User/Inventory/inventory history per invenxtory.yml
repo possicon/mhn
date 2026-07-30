@@ -1,0 +1,132 @@
+info:
+  name: inventory history per invenxtory
+  type: http
+  seq: 10
+
+http:
+  method: GET
+  url: "{{base_url}}/user/organization/inventory/:inventory/history"
+  params:
+    - name: inventory
+      value: 9d1e8ec9-75fe-4324-8a87-cbb1a2a4face
+      type: path
+  auth:
+    type: bearer
+    token: 64|wekxmT6fEC7W1savxR3VWd2fcLOu9fkY2pdTExtBe40532c7
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+examples:
+  - name: inventory history per invenxtory
+    request:
+      url: "{{base_url}}/user/organization/inventory/:inventory/history"
+      method: GET
+      params:
+        - name: inventory
+          value: 9d1e8ec9-75fe-4324-8a87-cbb1a2a4face
+          type: path
+    response:
+      status: 200
+      statusText: OK
+      headers:
+        - name: Date
+          value: Fri, 18 Oct 2024 21:11:14 GMT
+        - name: Server
+          value: Apache/2.4.54 (Win64) OpenSSL/1.1.1d mod_fcgid/2.3.10-dev
+        - name: X-Powered-By
+          value: PHP/8.2.17
+        - name: Cache-Control
+          value: no-cache, private
+        - name: X-RateLimit-Limit
+          value: "60"
+        - name: X-RateLimit-Remaining
+          value: "59"
+        - name: Access-Control-Allow-Origin
+          value: "*"
+        - name: Vary
+          value: Authorization
+        - name: Keep-Alive
+          value: timeout=5, max=100
+        - name: Connection
+          value: Keep-Alive
+        - name: Transfer-Encoding
+          value: chunked
+        - name: Content-Type
+          value: application/json
+      body:
+        type: json
+        data: |-
+          {
+              "success": true,
+              "code": 0,
+              "locale": "en",
+              "message": "Inventory change history retrieved successfully",
+              "data": {
+                  "items": [
+                      {
+                          "field": "re_order_level",
+                          "old_value": "50.00",
+                          "new_value": "50",
+                          "change_type": "re_order_level_change",
+                          "changed_at": "2024-10-17T12:24:35.000000Z",
+                          "changed_by_first_name": "General",
+                          "changed_by_last_name": "Emmanuel",
+                          "user_role": "owner"
+                      },
+                      {
+                          "field": "re_order_level",
+                          "old_value": "50.00",
+                          "new_value": "50",
+                          "change_type": "re_order_level_change",
+                          "changed_at": "2024-10-17T12:21:16.000000Z",
+                          "changed_by_first_name": "General",
+                          "changed_by_last_name": "Emmanuel",
+                          "user_role": "owner"
+                      },
+                      {
+                          "field": "category",
+                          "old_value": null,
+                          "new_value": "string",
+                          "change_type": "category_change",
+                          "changed_at": "2024-10-17T12:19:49.000000Z",
+                          "changed_by_first_name": "General",
+                          "changed_by_last_name": "Emmanuel",
+                          "user_role": "owner"
+                      },
+                      {
+                          "field": "quantity",
+                          "old_value": "100",
+                          "new_value": "20",
+                          "change_type": "quantity_removed",
+                          "changed_at": "2024-10-17T12:19:49.000000Z",
+                          "changed_by_first_name": "General",
+                          "changed_by_last_name": "Emmanuel",
+                          "user_role": "owner"
+                      },
+                      {
+                          "field": "re_order_level",
+                          "old_value": null,
+                          "new_value": "50",
+                          "change_type": "re_order_level_change",
+                          "changed_at": "2024-10-17T12:19:49.000000Z",
+                          "changed_by_first_name": "General",
+                          "changed_by_last_name": "Emmanuel",
+                          "user_role": "owner"
+                      },
+                      {
+                          "field": "description",
+                          "old_value": null,
+                          "new_value": "string",
+                          "change_type": "description_change",
+                          "changed_at": "2024-10-17T12:19:49.000000Z",
+                          "changed_by_first_name": "General",
+                          "changed_by_last_name": "Emmanuel",
+                          "user_role": "owner"
+                      }
+                  ]
+              }
+          }

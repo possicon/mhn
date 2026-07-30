@@ -1,0 +1,20 @@
+info:
+  name: Create Org Type
+  type: http
+  seq: 5
+
+http:
+  method: POST
+  url: "{{base_url}}/admin/organization/create-org-type"
+  body:
+    type: json
+    data: "{\r\n    \"name\": \"Pharmacy\"\r\n}"
+  auth:
+    type: bearer
+    token: "{{token}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

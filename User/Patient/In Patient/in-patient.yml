@@ -1,0 +1,207 @@
+info:
+  name: in-patient
+  type: http
+  seq: 1
+
+http:
+  method: GET
+  url: "{{base_url}}/user/in-patient"
+  headers:
+    - name: Accept
+      value: application/json
+  params:
+    - name: search
+      value: select ward
+      type: query
+      disabled: true
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+examples:
+  - name: in-patient
+    request:
+      url: "{{base_url}}/user/in-patient"
+      method: GET
+      headers:
+        - name: Accept
+          value: application/json
+      params:
+        - name: search
+          value: select ward
+          type: query
+          disabled: true
+    response:
+      status: 200
+      statusText: OK
+      headers:
+        - name: Date
+          value: Sat, 03 May 2025 11:46:41 GMT
+        - name: Server
+          value: Apache/2.4.54 (Win64) OpenSSL/1.1.1d mod_fcgid/2.3.10-dev
+        - name: X-Powered-By
+          value: PHP/8.2.17
+        - name: Cache-Control
+          value: no-cache, private
+        - name: X-RateLimit-Limit
+          value: "60"
+        - name: X-RateLimit-Remaining
+          value: "59"
+        - name: Access-Control-Allow-Origin
+          value: "*"
+        - name: Vary
+          value: Authorization
+        - name: Keep-Alive
+          value: timeout=5, max=100
+        - name: Connection
+          value: Keep-Alive
+        - name: Transfer-Encoding
+          value: chunked
+        - name: Content-Type
+          value: application/json
+      body:
+        type: json
+        data: |-
+          {
+              "success": true,
+              "code": 0,
+              "locale": "en",
+              "message": "success",
+              "data": {
+                  "data": [
+                      {
+                          "id": "9ed1422d-abfa-454c-b684-aa183f0881c7",
+                          "ward": null,
+                          "bed_number": "9ed15641-c3d4-43e3-89d2-6a1f139f1f24",
+                          "room": "9ed14332-68b3-4100-b63a-5ab9f83aa176",
+                          "requested_by": "9bc6382c-bb73-4c7d-9409-677fe560485d",
+                          "admission_status": "admitted",
+                          "created_at": "2025-05-02T19:59:16.000000Z",
+                          "bed_object": {
+                              "id": "9ed15641-c3d4-43e3-89d2-6a1f139f1f24",
+                              "description": "this is not compuslory",
+                              "status": "available",
+                              "created_at": "2025-05-02T20:55:25.000000Z",
+                              "updated_at": "2025-05-02T21:06:36.000000Z",
+                              "organization_id": "9bc5eb78-74d2-45f4-a677-05d07dca6a63",
+                              "room_id": "9ed14332-68b3-4100-b63a-5ab9f83aa176",
+                              "service_item_id": "9ed15641-c019-4a71-9868-52a4bfadc3a7",
+                              "ward": {
+                                  "id": "9ec6b535-2386-4918-9043-8c24faf4278e",
+                                  "name": "private",
+                                  "description": "ward with private rooms",
+                                  "created_at": "2025-04-27T14:06:48.000000Z",
+                                  "updated_at": "2025-04-27T14:06:48.000000Z",
+                                  "organization_id": "9bc5eb78-74d2-45f4-a677-05d07dca6a63",
+                                  "laravel_through_key": "9ed14332-68b3-4100-b63a-5ab9f83aa176"
+                              },
+                              "room": {
+                                  "id": "9ed14332-68b3-4100-b63a-5ab9f83aa176",
+                                  "name": "P&C",
+                                  "type": "private",
+                                  "description": "room description",
+                                  "created_at": "2025-05-02T20:02:07.000000Z",
+                                  "updated_at": "2025-05-02T20:02:07.000000Z",
+                                  "ward_id": "9ec6b535-2386-4918-9043-8c24faf4278e",
+                                  "organization_id": "9bc5eb78-74d2-45f4-a677-05d07dca6a63"
+                              },
+                              "service_item": {
+                                  "id": "9ed15641-c019-4a71-9868-52a4bfadc3a7",
+                                  "name": "2CP",
+                                  "service_type": "bed",
+                                  "created_at": "2025-05-02T20:55:25.000000Z",
+                                  "updated_at": "2025-05-02T20:55:25.000000Z",
+                                  "organization_id": "9bc5eb78-74d2-45f4-a677-05d07dca6a63",
+                                  "description": "this is not compuslory",
+                                  "category": "ward",
+                                  "status": "active",
+                                  "medicine_type": null
+                              }
+                          },
+                          "patient": {
+                              "id": "9ea8d8a4-2cdd-4e08-baaf-a2d7048f8a32",
+                              "patient_sequence": "MHN_USA791167867",
+                              "gender": "male",
+                              "first_name": "Emma1",
+                              "last_name": "Prince1",
+                              "middle_name": null,
+                              "media": []
+                          },
+                          "service_id": "9cfe8382-d6e2-4519-93a8-2337a40aada6",
+                          "service_name": "General Checkup",
+                          "service_category": "general",
+                          "appointment_id": "9eca42a4-a572-411e-a2e3-10227e0f2bc7"
+                      },
+                      {
+                          "id": "9ecb1a21-f60f-4099-9fbc-765f514feae5",
+                          "ward": null,
+                          "bed_number": "9ec83fef-0311-422b-b257-4d84e71d85d7",
+                          "room": "9ec6ba34-ed06-44ca-8bed-3ac00cf304ae",
+                          "requested_by": "9bc6382c-bb73-4c7d-9409-677fe560485d",
+                          "admission_status": "awaiting admission",
+                          "created_at": "2025-04-29T18:32:19.000000Z",
+                          "bed_object": {
+                              "id": "9ec83fef-0311-422b-b257-4d84e71d85d7",
+                              "description": "this is not compuslory",
+                              "status": "occupied",
+                              "created_at": "2025-04-28T08:30:32.000000Z",
+                              "updated_at": "2025-05-02T19:59:16.000000Z",
+                              "organization_id": "9bc5eb78-74d2-45f4-a677-05d07dca6a63",
+                              "room_id": "9ec6ba34-ed06-44ca-8bed-3ac00cf304ae",
+                              "service_item_id": "9ec83fee-fd79-4752-94a3-0c5f331d6d62",
+                              "ward": {
+                                  "id": "9ec6b535-2386-4918-9043-8c24faf4278e",
+                                  "name": "private",
+                                  "description": "ward with private rooms",
+                                  "created_at": "2025-04-27T14:06:48.000000Z",
+                                  "updated_at": "2025-04-27T14:06:48.000000Z",
+                                  "organization_id": "9bc5eb78-74d2-45f4-a677-05d07dca6a63",
+                                  "laravel_through_key": "9ec6ba34-ed06-44ca-8bed-3ac00cf304ae"
+                              },
+                              "room": {
+                                  "id": "9ec6ba34-ed06-44ca-8bed-3ac00cf304ae",
+                                  "name": "iuc",
+                                  "type": "private",
+                                  "description": "room description",
+                                  "created_at": "2025-04-27T14:20:47.000000Z",
+                                  "updated_at": "2025-04-27T14:20:47.000000Z",
+                                  "ward_id": "9ec6b535-2386-4918-9043-8c24faf4278e",
+                                  "organization_id": "9bc5eb78-74d2-45f4-a677-05d07dca6a63"
+                              },
+                              "service_item": {
+                                  "id": "9ec83fee-fd79-4752-94a3-0c5f331d6d62",
+                                  "name": "2A",
+                                  "service_type": "bed",
+                                  "created_at": "2025-04-28T08:30:32.000000Z",
+                                  "updated_at": "2025-04-28T08:30:32.000000Z",
+                                  "organization_id": "9bc5eb78-74d2-45f4-a677-05d07dca6a63",
+                                  "description": "this is not compuslory",
+                                  "category": "ward",
+                                  "status": "active",
+                                  "medicine_type": null
+                              }
+                          },
+                          "patient": {
+                              "id": "9ea8d8a4-2cdd-4e08-baaf-a2d7048f8a32",
+                              "patient_sequence": "MHN_USA791167867",
+                              "gender": "male",
+                              "first_name": "Emma1",
+                              "last_name": "Prince1",
+                              "middle_name": null,
+                              "media": []
+                          },
+                          "service_id": "9cfe8382-d6e2-4519-93a8-2337a40aada6",
+                          "service_name": "General Checkup",
+                          "service_category": "general",
+                          "appointment_id": "9eca42a4-a572-411e-a2e3-10227e0f2bc7"
+                      }
+                  ],
+                  "total": 2,
+                  "current_page": 1,
+                  "page_size": 20
+              }
+          }

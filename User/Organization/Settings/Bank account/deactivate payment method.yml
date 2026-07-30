@@ -1,0 +1,83 @@
+info:
+  name: deactivate payment method
+  type: http
+  seq: 8
+
+http:
+  method: POST
+  url: "{{base_url}}/user/organization/settings/payment_methods/banks/deactivate"
+  headers:
+    - name: Accept
+      value: application/json
+  body:
+    type: json
+    data: "{\r
+
+      \    \"payment_method_id\":\"9bc29a56-f303-4594-b79e-25418f0cd969\",\r
+
+      \    \"method\":\"cash\"\r
+
+      }"
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+examples:
+  - name: deactivate payment method
+    request:
+      url: "{{base_url}}/user/organization/settings/payment_methods/banks/deactivate"
+      method: POST
+      headers:
+        - name: Accept
+          value: application/json
+      body:
+        type: json
+        data: "{\r
+
+          \    \"payment_method_id\":\"9bc29a56-f303-4594-b79e-25418f0cd969\",\r
+
+          \    \"method\":\"cash\"\r
+
+          }"
+    response:
+      status: 200
+      statusText: OK
+      headers:
+        - name: Date
+          value: Fri, 10 May 2024 16:06:08 GMT
+        - name: Server
+          value: Apache/2.4.54 (Win64) OpenSSL/1.1.1q mod_fcgid/2.3.10-dev
+        - name: X-Powered-By
+          value: PHP/8.2.16
+        - name: Cache-Control
+          value: no-cache, private
+        - name: X-RateLimit-Limit
+          value: "60"
+        - name: X-RateLimit-Remaining
+          value: "58"
+        - name: Access-Control-Allow-Origin
+          value: "*"
+        - name: Vary
+          value: Authorization
+        - name: Keep-Alive
+          value: timeout=5, max=100
+        - name: Connection
+          value: Keep-Alive
+        - name: Transfer-Encoding
+          value: chunked
+        - name: Content-Type
+          value: application/json
+      body:
+        type: json
+        data: |-
+          {
+              "success": true,
+              "code": 0,
+              "locale": "en",
+              "message": "You have successfully deactivated payment method",
+              "data": null
+          }

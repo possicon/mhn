@@ -1,0 +1,1074 @@
+info:
+  name: in stock list
+  type: http
+  seq: 1
+
+http:
+  method: GET
+  url: "{{base_url}}/user/organization/inventory?search=Paracetamol"
+  headers:
+    - name: Accept
+      value: application/json
+  params:
+    - name: search
+      value: Paracetamol
+      type: query
+  auth:
+    type: bearer
+    token: 64|wekxmT6fEC7W1savxR3VWd2fcLOu9fkY2pdTExtBe40532c7
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+examples:
+  - name: list
+    request:
+      url: "{{base_url}}/user/organization/inventory"
+      method: GET
+      headers:
+        - name: Accept
+          value: application/json
+    response:
+      status: 200
+      statusText: OK
+      headers:
+        - name: Date
+          value: Sat, 28 Sep 2024 18:14:18 GMT
+        - name: Server
+          value: Apache/2.4.54 (Win64) OpenSSL/1.1.1d mod_fcgid/2.3.10-dev
+        - name: X-Powered-By
+          value: PHP/8.2.17
+        - name: Cache-Control
+          value: no-cache, private
+        - name: X-RateLimit-Limit
+          value: "60"
+        - name: X-RateLimit-Remaining
+          value: "59"
+        - name: Access-Control-Allow-Origin
+          value: "*"
+        - name: Vary
+          value: Authorization
+        - name: Keep-Alive
+          value: timeout=5, max=100
+        - name: Connection
+          value: Keep-Alive
+        - name: Transfer-Encoding
+          value: chunked
+        - name: Content-Type
+          value: application/json
+      body:
+        type: json
+        data: |-
+          {
+              "success": true,
+              "code": 0,
+              "locale": "en",
+              "message": "success",
+              "data": {
+                  "data": [
+                      {
+                          "id": "9d1e8ec9-5183-4385-93ed-6edf15604348",
+                          "service_id": "9d1e8558-166f-4c14-ba08-7a3b5b635422",
+                          "quantity_in_stock": "100",
+                          "is_in_stock": 1,
+                          "organization_id": "9bc5eb78-74d2-45f4-a677-05d07dca6a63",
+                          "created_at": "2024-09-28T17:48:21.000000Z",
+                          "updated_at": "2024-09-28T17:48:21.000000Z",
+                          "service": {
+                              "id": "9d1e8558-166f-4c14-ba08-7a3b5b635422",
+                              "name": "Paracetamol",
+                              "service_type": "medicines",
+                              "created_at": "2024-09-28T17:21:57.000000Z",
+                              "updated_at": "2024-09-28T17:21:57.000000Z",
+                              "organization_id": null,
+                              "description": null,
+                              "category": null,
+                              "status": "active"
+                          }
+                      },
+                      {
+                          "id": "9d1e8ec9-54a7-429f-9736-17421c285061",
+                          "service_id": "9d1e8558-e587-4d5d-bcfa-8996cdb06b68",
+                          "quantity_in_stock": "100",
+                          "is_in_stock": 1,
+                          "organization_id": "9bc5eb78-74d2-45f4-a677-05d07dca6a63",
+                          "created_at": "2024-09-28T17:48:21.000000Z",
+                          "updated_at": "2024-09-28T17:48:21.000000Z",
+                          "service": {
+                              "id": "9d1e8558-e587-4d5d-bcfa-8996cdb06b68",
+                              "name": "Ibuprofen",
+                              "service_type": "medicines",
+                              "created_at": "2024-09-28T17:21:57.000000Z",
+                              "updated_at": "2024-09-28T17:21:57.000000Z",
+                              "organization_id": null,
+                              "description": null,
+                              "category": null,
+                              "status": "active"
+                          }
+                      },
+                      {
+                          "id": "9d1e8ec9-5572-455e-8d29-a0f70f5a9ec7",
+                          "service_id": "9d1e8558-e695-41dc-8a46-57e6fc0766f2",
+                          "quantity_in_stock": "100",
+                          "is_in_stock": 1,
+                          "organization_id": "9bc5eb78-74d2-45f4-a677-05d07dca6a63",
+                          "created_at": "2024-09-28T17:48:21.000000Z",
+                          "updated_at": "2024-09-28T17:48:21.000000Z",
+                          "service": {
+                              "id": "9d1e8558-e695-41dc-8a46-57e6fc0766f2",
+                              "name": "Aspirin",
+                              "service_type": "medicines",
+                              "created_at": "2024-09-28T17:21:57.000000Z",
+                              "updated_at": "2024-09-28T17:21:57.000000Z",
+                              "organization_id": null,
+                              "description": null,
+                              "category": null,
+                              "status": "active"
+                          }
+                      },
+                      {
+                          "id": "9d1e8ec9-561d-49ac-b1d9-102a95939e20",
+                          "service_id": "9d1e8558-e789-4a4b-8c19-a9ed3bbbc573",
+                          "quantity_in_stock": "100",
+                          "is_in_stock": 1,
+                          "organization_id": "9bc5eb78-74d2-45f4-a677-05d07dca6a63",
+                          "created_at": "2024-09-28T17:48:21.000000Z",
+                          "updated_at": "2024-09-28T17:48:21.000000Z",
+                          "service": {
+                              "id": "9d1e8558-e789-4a4b-8c19-a9ed3bbbc573",
+                              "name": "Amoxicillin",
+                              "service_type": "medicines",
+                              "created_at": "2024-09-28T17:21:57.000000Z",
+                              "updated_at": "2024-09-28T17:21:57.000000Z",
+                              "organization_id": null,
+                              "description": null,
+                              "category": null,
+                              "status": "active"
+                          }
+                      },
+                      {
+                          "id": "9d1e8ec9-56dd-4a2a-8943-e5635b5f9b8e",
+                          "service_id": "9d1e8558-e8b4-4180-bfaf-0e3defb8014d",
+                          "quantity_in_stock": "100",
+                          "is_in_stock": 1,
+                          "organization_id": "9bc5eb78-74d2-45f4-a677-05d07dca6a63",
+                          "created_at": "2024-09-28T17:48:21.000000Z",
+                          "updated_at": "2024-09-28T17:48:21.000000Z",
+                          "service": {
+                              "id": "9d1e8558-e8b4-4180-bfaf-0e3defb8014d",
+                              "name": "Ceftriaxone",
+                              "service_type": "medicines",
+                              "created_at": "2024-09-28T17:21:57.000000Z",
+                              "updated_at": "2024-09-28T17:21:57.000000Z",
+                              "organization_id": null,
+                              "description": null,
+                              "category": null,
+                              "status": "active"
+                          }
+                      },
+                      {
+                          "id": "9d1e8ec9-5798-4e02-9bfd-9881a64e0786",
+                          "service_id": "9d1e8558-e9d9-4f55-9b33-1b7f418cf17c",
+                          "quantity_in_stock": "100",
+                          "is_in_stock": 1,
+                          "organization_id": "9bc5eb78-74d2-45f4-a677-05d07dca6a63",
+                          "created_at": "2024-09-28T17:48:21.000000Z",
+                          "updated_at": "2024-09-28T17:48:21.000000Z",
+                          "service": {
+                              "id": "9d1e8558-e9d9-4f55-9b33-1b7f418cf17c",
+                              "name": "Metronidazole",
+                              "service_type": "medicines",
+                              "created_at": "2024-09-28T17:21:57.000000Z",
+                              "updated_at": "2024-09-28T17:21:57.000000Z",
+                              "organization_id": null,
+                              "description": null,
+                              "category": null,
+                              "status": "active"
+                          }
+                      },
+                      {
+                          "id": "9d1e8ec9-584d-49ec-a1a1-db59c9856e83",
+                          "service_id": "9d1e8558-eaf2-4762-97bf-03f52f0bd166",
+                          "quantity_in_stock": "100",
+                          "is_in_stock": 1,
+                          "organization_id": "9bc5eb78-74d2-45f4-a677-05d07dca6a63",
+                          "created_at": "2024-09-28T17:48:21.000000Z",
+                          "updated_at": "2024-09-28T17:48:21.000000Z",
+                          "service": {
+                              "id": "9d1e8558-eaf2-4762-97bf-03f52f0bd166",
+                              "name": "Omeprazole",
+                              "service_type": "medicines",
+                              "created_at": "2024-09-28T17:21:57.000000Z",
+                              "updated_at": "2024-09-28T17:21:57.000000Z",
+                              "organization_id": null,
+                              "description": null,
+                              "category": null,
+                              "status": "active"
+                          }
+                      },
+                      {
+                          "id": "9d1e8ec9-590d-4bd2-a01c-84a4701056c7",
+                          "service_id": "9d1e8558-ec0f-47d2-9bbe-078c4b309f34",
+                          "quantity_in_stock": "100",
+                          "is_in_stock": 1,
+                          "organization_id": "9bc5eb78-74d2-45f4-a677-05d07dca6a63",
+                          "created_at": "2024-09-28T17:48:21.000000Z",
+                          "updated_at": "2024-09-28T17:48:21.000000Z",
+                          "service": {
+                              "id": "9d1e8558-ec0f-47d2-9bbe-078c4b309f34",
+                              "name": "Ciprofloxacin",
+                              "service_type": "medicines",
+                              "created_at": "2024-09-28T17:21:57.000000Z",
+                              "updated_at": "2024-09-28T17:21:57.000000Z",
+                              "organization_id": null,
+                              "description": null,
+                              "category": null,
+                              "status": "active"
+                          }
+                      },
+                      {
+                          "id": "9d1e8ec9-5a23-4f46-adaf-2ab7b61a05d2",
+                          "service_id": "9d1e8558-ed33-42cb-89e0-1bc4fc44433b",
+                          "quantity_in_stock": "100",
+                          "is_in_stock": 1,
+                          "organization_id": "9bc5eb78-74d2-45f4-a677-05d07dca6a63",
+                          "created_at": "2024-09-28T17:48:21.000000Z",
+                          "updated_at": "2024-09-28T17:48:21.000000Z",
+                          "service": {
+                              "id": "9d1e8558-ed33-42cb-89e0-1bc4fc44433b",
+                              "name": "Hydrocortisone",
+                              "service_type": "medicines",
+                              "created_at": "2024-09-28T17:21:57.000000Z",
+                              "updated_at": "2024-09-28T17:21:57.000000Z",
+                              "organization_id": null,
+                              "description": null,
+                              "category": null,
+                              "status": "active"
+                          }
+                      },
+                      {
+                          "id": "9d1e8ec9-5b3c-4a16-970f-d98a6db905f8",
+                          "service_id": "9d1e8558-ee13-4767-8b50-bf00d408a94d",
+                          "quantity_in_stock": "100",
+                          "is_in_stock": 1,
+                          "organization_id": "9bc5eb78-74d2-45f4-a677-05d07dca6a63",
+                          "created_at": "2024-09-28T17:48:21.000000Z",
+                          "updated_at": "2024-09-28T17:48:21.000000Z",
+                          "service": {
+                              "id": "9d1e8558-ee13-4767-8b50-bf00d408a94d",
+                              "name": "Diazepam",
+                              "service_type": "medicines",
+                              "created_at": "2024-09-28T17:21:57.000000Z",
+                              "updated_at": "2024-09-28T17:21:57.000000Z",
+                              "organization_id": null,
+                              "description": null,
+                              "category": null,
+                              "status": "active"
+                          }
+                      },
+                      {
+                          "id": "9d1e8ec9-5be0-4034-b1e3-c1b2a407e305",
+                          "service_id": "9d1e8558-ef2e-4ba1-8d1c-046377f40016",
+                          "quantity_in_stock": "100",
+                          "is_in_stock": 1,
+                          "organization_id": "9bc5eb78-74d2-45f4-a677-05d07dca6a63",
+                          "created_at": "2024-09-28T17:48:21.000000Z",
+                          "updated_at": "2024-09-28T17:48:21.000000Z",
+                          "service": {
+                              "id": "9d1e8558-ef2e-4ba1-8d1c-046377f40016",
+                              "name": "Furosemide",
+                              "service_type": "medicines",
+                              "created_at": "2024-09-28T17:21:57.000000Z",
+                              "updated_at": "2024-09-28T17:21:57.000000Z",
+                              "organization_id": null,
+                              "description": null,
+                              "category": null,
+                              "status": "active"
+                          }
+                      },
+                      {
+                          "id": "9d1e8ec9-5c85-4607-b953-7197e43ee335",
+                          "service_id": "9d1e8558-f055-4a02-a5b5-cb4138492963",
+                          "quantity_in_stock": "100",
+                          "is_in_stock": 1,
+                          "organization_id": "9bc5eb78-74d2-45f4-a677-05d07dca6a63",
+                          "created_at": "2024-09-28T17:48:21.000000Z",
+                          "updated_at": "2024-09-28T17:48:21.000000Z",
+                          "service": {
+                              "id": "9d1e8558-f055-4a02-a5b5-cb4138492963",
+                              "name": "Amlodipine",
+                              "service_type": "medicines",
+                              "created_at": "2024-09-28T17:21:57.000000Z",
+                              "updated_at": "2024-09-28T17:21:57.000000Z",
+                              "organization_id": null,
+                              "description": null,
+                              "category": null,
+                              "status": "active"
+                          }
+                      },
+                      {
+                          "id": "9d1e8ec9-5d27-48c3-989b-2c58267b266a",
+                          "service_id": "9d1e8558-f16f-48c2-9250-76939cde588f",
+                          "quantity_in_stock": "100",
+                          "is_in_stock": 1,
+                          "organization_id": "9bc5eb78-74d2-45f4-a677-05d07dca6a63",
+                          "created_at": "2024-09-28T17:48:21.000000Z",
+                          "updated_at": "2024-09-28T17:48:21.000000Z",
+                          "service": {
+                              "id": "9d1e8558-f16f-48c2-9250-76939cde588f",
+                              "name": "Metformin",
+                              "service_type": "medicines",
+                              "created_at": "2024-09-28T17:21:57.000000Z",
+                              "updated_at": "2024-09-28T17:21:57.000000Z",
+                              "organization_id": null,
+                              "description": null,
+                              "category": null,
+                              "status": "active"
+                          }
+                      },
+                      {
+                          "id": "9d1e8ec9-5dc8-4ec7-bf95-a91f37236e8c",
+                          "service_id": "9d1e8558-f28e-412d-9bb3-541553a22bee",
+                          "quantity_in_stock": "100",
+                          "is_in_stock": 1,
+                          "organization_id": "9bc5eb78-74d2-45f4-a677-05d07dca6a63",
+                          "created_at": "2024-09-28T17:48:21.000000Z",
+                          "updated_at": "2024-09-28T17:48:21.000000Z",
+                          "service": {
+                              "id": "9d1e8558-f28e-412d-9bb3-541553a22bee",
+                              "name": "Insulin",
+                              "service_type": "medicines",
+                              "created_at": "2024-09-28T17:21:57.000000Z",
+                              "updated_at": "2024-09-28T17:21:57.000000Z",
+                              "organization_id": null,
+                              "description": null,
+                              "category": null,
+                              "status": "active"
+                          }
+                      },
+                      {
+                          "id": "9d1e8ec9-5e69-4bdb-8d42-bca7855ebe2e",
+                          "service_id": "9d1e8558-f37e-43a3-bfb8-59d843ed06dd",
+                          "quantity_in_stock": "100",
+                          "is_in_stock": 1,
+                          "organization_id": "9bc5eb78-74d2-45f4-a677-05d07dca6a63",
+                          "created_at": "2024-09-28T17:48:21.000000Z",
+                          "updated_at": "2024-09-28T17:48:21.000000Z",
+                          "service": {
+                              "id": "9d1e8558-f37e-43a3-bfb8-59d843ed06dd",
+                              "name": "Salbutamol",
+                              "service_type": "medicines",
+                              "created_at": "2024-09-28T17:21:57.000000Z",
+                              "updated_at": "2024-09-28T17:21:57.000000Z",
+                              "organization_id": null,
+                              "description": null,
+                              "category": null,
+                              "status": "active"
+                          }
+                      },
+                      {
+                          "id": "9d1e8ec9-5f1b-42a8-bb83-c42e2ed5aaef",
+                          "service_id": "9d1e8558-f468-48cc-bac5-0b7ee361ef23",
+                          "quantity_in_stock": "100",
+                          "is_in_stock": 1,
+                          "organization_id": "9bc5eb78-74d2-45f4-a677-05d07dca6a63",
+                          "created_at": "2024-09-28T17:48:21.000000Z",
+                          "updated_at": "2024-09-28T17:48:21.000000Z",
+                          "service": {
+                              "id": "9d1e8558-f468-48cc-bac5-0b7ee361ef23",
+                              "name": "Heparin",
+                              "service_type": "medicines",
+                              "created_at": "2024-09-28T17:21:57.000000Z",
+                              "updated_at": "2024-09-28T17:21:57.000000Z",
+                              "organization_id": null,
+                              "description": null,
+                              "category": null,
+                              "status": "active"
+                          }
+                      },
+                      {
+                          "id": "9d1e8ec9-5fd1-483e-987c-311686abf693",
+                          "service_id": "9d1e8558-f555-4eea-9ff3-5a921c8a6a61",
+                          "quantity_in_stock": "100",
+                          "is_in_stock": 1,
+                          "organization_id": "9bc5eb78-74d2-45f4-a677-05d07dca6a63",
+                          "created_at": "2024-09-28T17:48:21.000000Z",
+                          "updated_at": "2024-09-28T17:48:21.000000Z",
+                          "service": {
+                              "id": "9d1e8558-f555-4eea-9ff3-5a921c8a6a61",
+                              "name": "Warfarin",
+                              "service_type": "medicines",
+                              "created_at": "2024-09-28T17:21:57.000000Z",
+                              "updated_at": "2024-09-28T17:21:57.000000Z",
+                              "organization_id": null,
+                              "description": null,
+                              "category": null,
+                              "status": "active"
+                          }
+                      },
+                      {
+                          "id": "9d1e8ec9-60ff-44fe-88da-35e1243683e6",
+                          "service_id": "9d1e8558-f60e-4d6b-92c5-aeb2e2916cc4",
+                          "quantity_in_stock": "100",
+                          "is_in_stock": 1,
+                          "organization_id": "9bc5eb78-74d2-45f4-a677-05d07dca6a63",
+                          "created_at": "2024-09-28T17:48:21.000000Z",
+                          "updated_at": "2024-09-28T17:48:21.000000Z",
+                          "service": {
+                              "id": "9d1e8558-f60e-4d6b-92c5-aeb2e2916cc4",
+                              "name": "Morphine",
+                              "service_type": "medicines",
+                              "created_at": "2024-09-28T17:21:57.000000Z",
+                              "updated_at": "2024-09-28T17:21:57.000000Z",
+                              "organization_id": null,
+                              "description": null,
+                              "category": null,
+                              "status": "active"
+                          }
+                      },
+                      {
+                          "id": "9d1e8ec9-61c5-484d-9f9c-0e02c4564b59",
+                          "service_id": "9d1e8558-f6c8-4785-80a6-da0800083070",
+                          "quantity_in_stock": "100",
+                          "is_in_stock": 1,
+                          "organization_id": "9bc5eb78-74d2-45f4-a677-05d07dca6a63",
+                          "created_at": "2024-09-28T17:48:21.000000Z",
+                          "updated_at": "2024-09-28T17:48:21.000000Z",
+                          "service": {
+                              "id": "9d1e8558-f6c8-4785-80a6-da0800083070",
+                              "name": "Lisinopril",
+                              "service_type": "medicines",
+                              "created_at": "2024-09-28T17:21:57.000000Z",
+                              "updated_at": "2024-09-28T17:21:57.000000Z",
+                              "organization_id": null,
+                              "description": null,
+                              "category": null,
+                              "status": "active"
+                          }
+                      },
+                      {
+                          "id": "9d1e8ec9-6266-4823-8e60-1e2b24b0c831",
+                          "service_id": "9d1e8558-f778-4648-8e04-29e681c6a440",
+                          "quantity_in_stock": "100",
+                          "is_in_stock": 1,
+                          "organization_id": "9bc5eb78-74d2-45f4-a677-05d07dca6a63",
+                          "created_at": "2024-09-28T17:48:21.000000Z",
+                          "updated_at": "2024-09-28T17:48:21.000000Z",
+                          "service": {
+                              "id": "9d1e8558-f778-4648-8e04-29e681c6a440",
+                              "name": "Metoprolol",
+                              "service_type": "medicines",
+                              "created_at": "2024-09-28T17:21:57.000000Z",
+                              "updated_at": "2024-09-28T17:21:57.000000Z",
+                              "organization_id": null,
+                              "description": null,
+                              "category": null,
+                              "status": "active"
+                          }
+                      },
+                      {
+                          "id": "9d1e8ec9-6309-4288-b127-c1393789f5e2",
+                          "service_id": "9d1e8558-f80e-4f1e-b65d-3ecee8a082bc",
+                          "quantity_in_stock": "100",
+                          "is_in_stock": 1,
+                          "organization_id": "9bc5eb78-74d2-45f4-a677-05d07dca6a63",
+                          "created_at": "2024-09-28T17:48:21.000000Z",
+                          "updated_at": "2024-09-28T17:48:21.000000Z",
+                          "service": {
+                              "id": "9d1e8558-f80e-4f1e-b65d-3ecee8a082bc",
+                              "name": "Atorvastatin",
+                              "service_type": "medicines",
+                              "created_at": "2024-09-28T17:21:57.000000Z",
+                              "updated_at": "2024-09-28T17:21:57.000000Z",
+                              "organization_id": null,
+                              "description": null,
+                              "category": null,
+                              "status": "active"
+                          }
+                      },
+                      {
+                          "id": "9d1e8ec9-63a8-4253-94e1-27977d6f0e4f",
+                          "service_id": "9d1e8558-f8a7-42a7-89ba-4b12b0edc63c",
+                          "quantity_in_stock": "100",
+                          "is_in_stock": 1,
+                          "organization_id": "9bc5eb78-74d2-45f4-a677-05d07dca6a63",
+                          "created_at": "2024-09-28T17:48:21.000000Z",
+                          "updated_at": "2024-09-28T17:48:21.000000Z",
+                          "service": {
+                              "id": "9d1e8558-f8a7-42a7-89ba-4b12b0edc63c",
+                              "name": "Clopidogrel",
+                              "service_type": "medicines",
+                              "created_at": "2024-09-28T17:21:57.000000Z",
+                              "updated_at": "2024-09-28T17:21:57.000000Z",
+                              "organization_id": null,
+                              "description": null,
+                              "category": null,
+                              "status": "active"
+                          }
+                      },
+                      {
+                          "id": "9d1e8ec9-6444-4ef3-8dad-bec6197c2cf3",
+                          "service_id": "9d1e8558-f938-4175-8cda-d5331e19c0e1",
+                          "quantity_in_stock": "100",
+                          "is_in_stock": 1,
+                          "organization_id": "9bc5eb78-74d2-45f4-a677-05d07dca6a63",
+                          "created_at": "2024-09-28T17:48:21.000000Z",
+                          "updated_at": "2024-09-28T17:48:21.000000Z",
+                          "service": {
+                              "id": "9d1e8558-f938-4175-8cda-d5331e19c0e1",
+                              "name": "Prednisolone",
+                              "service_type": "medicines",
+                              "created_at": "2024-09-28T17:21:57.000000Z",
+                              "updated_at": "2024-09-28T17:21:57.000000Z",
+                              "organization_id": null,
+                              "description": null,
+                              "category": null,
+                              "status": "active"
+                          }
+                      },
+                      {
+                          "id": "9d1e8ec9-64e7-4fa0-8f1a-8f04b2315920",
+                          "service_id": "9d1e8558-f9c9-4311-ae95-a19cbb8a5176",
+                          "quantity_in_stock": "100",
+                          "is_in_stock": 1,
+                          "organization_id": "9bc5eb78-74d2-45f4-a677-05d07dca6a63",
+                          "created_at": "2024-09-28T17:48:21.000000Z",
+                          "updated_at": "2024-09-28T17:48:21.000000Z",
+                          "service": {
+                              "id": "9d1e8558-f9c9-4311-ae95-a19cbb8a5176",
+                              "name": "Levothyroxine",
+                              "service_type": "medicines",
+                              "created_at": "2024-09-28T17:21:57.000000Z",
+                              "updated_at": "2024-09-28T17:21:57.000000Z",
+                              "organization_id": null,
+                              "description": null,
+                              "category": null,
+                              "status": "active"
+                          }
+                      },
+                      {
+                          "id": "9d1e8ec9-658f-4c5e-85de-f171adad701e",
+                          "service_id": "9d1e8558-fa5a-46c8-b4b5-b6fdd8ea2187",
+                          "quantity_in_stock": "100",
+                          "is_in_stock": 1,
+                          "organization_id": "9bc5eb78-74d2-45f4-a677-05d07dca6a63",
+                          "created_at": "2024-09-28T17:48:21.000000Z",
+                          "updated_at": "2024-09-28T17:48:21.000000Z",
+                          "service": {
+                              "id": "9d1e8558-fa5a-46c8-b4b5-b6fdd8ea2187",
+                              "name": "Ranitidine",
+                              "service_type": "medicines",
+                              "created_at": "2024-09-28T17:21:57.000000Z",
+                              "updated_at": "2024-09-28T17:21:57.000000Z",
+                              "organization_id": null,
+                              "description": null,
+                              "category": null,
+                              "status": "active"
+                          }
+                      },
+                      {
+                          "id": "9d1e8ec9-6655-48e2-bbc7-3348fc8cc522",
+                          "service_id": "9d1e8558-fb2e-441b-9464-4440d98a0f84",
+                          "quantity_in_stock": "100",
+                          "is_in_stock": 1,
+                          "organization_id": "9bc5eb78-74d2-45f4-a677-05d07dca6a63",
+                          "created_at": "2024-09-28T17:48:21.000000Z",
+                          "updated_at": "2024-09-28T17:48:21.000000Z",
+                          "service": {
+                              "id": "9d1e8558-fb2e-441b-9464-4440d98a0f84",
+                              "name": "Doxycycline",
+                              "service_type": "medicines",
+                              "created_at": "2024-09-28T17:21:57.000000Z",
+                              "updated_at": "2024-09-28T17:21:57.000000Z",
+                              "organization_id": null,
+                              "description": null,
+                              "category": null,
+                              "status": "active"
+                          }
+                      },
+                      {
+                          "id": "9d1e8ec9-6754-4d76-a122-a08e5e62691f",
+                          "service_id": "9d1e8558-fbd0-4eaf-acda-4a02aa9ab81e",
+                          "quantity_in_stock": "100",
+                          "is_in_stock": 1,
+                          "organization_id": "9bc5eb78-74d2-45f4-a677-05d07dca6a63",
+                          "created_at": "2024-09-28T17:48:21.000000Z",
+                          "updated_at": "2024-09-28T17:48:21.000000Z",
+                          "service": {
+                              "id": "9d1e8558-fbd0-4eaf-acda-4a02aa9ab81e",
+                              "name": "Azithromycin",
+                              "service_type": "medicines",
+                              "created_at": "2024-09-28T17:21:57.000000Z",
+                              "updated_at": "2024-09-28T17:21:57.000000Z",
+                              "organization_id": null,
+                              "description": null,
+                              "category": null,
+                              "status": "active"
+                          }
+                      },
+                      {
+                          "id": "9d1e8ec9-6801-44a8-a122-0fc5c837743d",
+                          "service_id": "9d1e8558-fc6b-46d3-aac0-e648a8275035",
+                          "quantity_in_stock": "100",
+                          "is_in_stock": 1,
+                          "organization_id": "9bc5eb78-74d2-45f4-a677-05d07dca6a63",
+                          "created_at": "2024-09-28T17:48:21.000000Z",
+                          "updated_at": "2024-09-28T17:48:21.000000Z",
+                          "service": {
+                              "id": "9d1e8558-fc6b-46d3-aac0-e648a8275035",
+                              "name": "Tramadol",
+                              "service_type": "medicines",
+                              "created_at": "2024-09-28T17:21:57.000000Z",
+                              "updated_at": "2024-09-28T17:21:57.000000Z",
+                              "organization_id": null,
+                              "description": null,
+                              "category": null,
+                              "status": "active"
+                          }
+                      },
+                      {
+                          "id": "9d1e8ec9-68a7-4b5a-b4d5-3accd9c38ba7",
+                          "service_id": "9d1e8558-fcfb-4618-8748-80861139420c",
+                          "quantity_in_stock": "100",
+                          "is_in_stock": 1,
+                          "organization_id": "9bc5eb78-74d2-45f4-a677-05d07dca6a63",
+                          "created_at": "2024-09-28T17:48:21.000000Z",
+                          "updated_at": "2024-09-28T17:48:21.000000Z",
+                          "service": {
+                              "id": "9d1e8558-fcfb-4618-8748-80861139420c",
+                              "name": "Simvastatin",
+                              "service_type": "medicines",
+                              "created_at": "2024-09-28T17:21:57.000000Z",
+                              "updated_at": "2024-09-28T17:21:57.000000Z",
+                              "organization_id": null,
+                              "description": null,
+                              "category": null,
+                              "status": "active"
+                          }
+                      },
+                      {
+                          "id": "9d1e8ec9-6949-4c01-af7a-88c55c529121",
+                          "service_id": "9d1e8558-fd8a-4847-b65e-26149d879693",
+                          "quantity_in_stock": "100",
+                          "is_in_stock": 1,
+                          "organization_id": "9bc5eb78-74d2-45f4-a677-05d07dca6a63",
+                          "created_at": "2024-09-28T17:48:21.000000Z",
+                          "updated_at": "2024-09-28T17:48:21.000000Z",
+                          "service": {
+                              "id": "9d1e8558-fd8a-4847-b65e-26149d879693",
+                              "name": "Losartan",
+                              "service_type": "medicines",
+                              "created_at": "2024-09-28T17:21:57.000000Z",
+                              "updated_at": "2024-09-28T17:21:57.000000Z",
+                              "organization_id": null,
+                              "description": null,
+                              "category": null,
+                              "status": "active"
+                          }
+                      },
+                      {
+                          "id": "9d1e8ec9-69ee-4b6b-b2e5-20e8a8d8d056",
+                          "service_id": "9d1e8558-fe1b-42ee-b7ee-8f8704b80750",
+                          "quantity_in_stock": "100",
+                          "is_in_stock": 1,
+                          "organization_id": "9bc5eb78-74d2-45f4-a677-05d07dca6a63",
+                          "created_at": "2024-09-28T17:48:21.000000Z",
+                          "updated_at": "2024-09-28T17:48:21.000000Z",
+                          "service": {
+                              "id": "9d1e8558-fe1b-42ee-b7ee-8f8704b80750",
+                              "name": "Carbamazepine",
+                              "service_type": "medicines",
+                              "created_at": "2024-09-28T17:21:57.000000Z",
+                              "updated_at": "2024-09-28T17:21:57.000000Z",
+                              "organization_id": null,
+                              "description": null,
+                              "category": null,
+                              "status": "active"
+                          }
+                      },
+                      {
+                          "id": "9d1e8ec9-6a90-4a08-a41e-d69d5b432100",
+                          "service_id": "9d1e8558-feab-4b6a-8a40-78aec5fb051c",
+                          "quantity_in_stock": "100",
+                          "is_in_stock": 1,
+                          "organization_id": "9bc5eb78-74d2-45f4-a677-05d07dca6a63",
+                          "created_at": "2024-09-28T17:48:21.000000Z",
+                          "updated_at": "2024-09-28T17:48:21.000000Z",
+                          "service": {
+                              "id": "9d1e8558-feab-4b6a-8a40-78aec5fb051c",
+                              "name": "Clindamycin",
+                              "service_type": "medicines",
+                              "created_at": "2024-09-28T17:21:57.000000Z",
+                              "updated_at": "2024-09-28T17:21:57.000000Z",
+                              "organization_id": null,
+                              "description": null,
+                              "category": null,
+                              "status": "active"
+                          }
+                      },
+                      {
+                          "id": "9d1e8ec9-6b3a-4366-8b04-6a3aaab10790",
+                          "service_id": "9d1e8558-ff38-4f67-b208-d327598a446b",
+                          "quantity_in_stock": "100",
+                          "is_in_stock": 1,
+                          "organization_id": "9bc5eb78-74d2-45f4-a677-05d07dca6a63",
+                          "created_at": "2024-09-28T17:48:21.000000Z",
+                          "updated_at": "2024-09-28T17:48:21.000000Z",
+                          "service": {
+                              "id": "9d1e8558-ff38-4f67-b208-d327598a446b",
+                              "name": "Pantoprazole",
+                              "service_type": "medicines",
+                              "created_at": "2024-09-28T17:21:57.000000Z",
+                              "updated_at": "2024-09-28T17:21:57.000000Z",
+                              "organization_id": null,
+                              "description": null,
+                              "category": null,
+                              "status": "active"
+                          }
+                      },
+                      {
+                          "id": "9d1e8ec9-6bf0-489e-8c6b-b879f1cf96a9",
+                          "service_id": "9d1e8558-ffc3-46c0-a20f-6264b391b2c9",
+                          "quantity_in_stock": "100",
+                          "is_in_stock": 1,
+                          "organization_id": "9bc5eb78-74d2-45f4-a677-05d07dca6a63",
+                          "created_at": "2024-09-28T17:48:21.000000Z",
+                          "updated_at": "2024-09-28T17:48:21.000000Z",
+                          "service": {
+                              "id": "9d1e8558-ffc3-46c0-a20f-6264b391b2c9",
+                              "name": "Gabapentin",
+                              "service_type": "medicines",
+                              "created_at": "2024-09-28T17:21:57.000000Z",
+                              "updated_at": "2024-09-28T17:21:57.000000Z",
+                              "organization_id": null,
+                              "description": null,
+                              "category": null,
+                              "status": "active"
+                          }
+                      },
+                      {
+                          "id": "9d1e8ec9-6caa-4b38-9e72-a79b5b980e7f",
+                          "service_id": "9d1e8559-004f-4648-bd66-ed01ddb3d965",
+                          "quantity_in_stock": "100",
+                          "is_in_stock": 1,
+                          "organization_id": "9bc5eb78-74d2-45f4-a677-05d07dca6a63",
+                          "created_at": "2024-09-28T17:48:21.000000Z",
+                          "updated_at": "2024-09-28T17:48:21.000000Z",
+                          "service": {
+                              "id": "9d1e8559-004f-4648-bd66-ed01ddb3d965",
+                              "name": "Enalapril",
+                              "service_type": "medicines",
+                              "created_at": "2024-09-28T17:21:57.000000Z",
+                              "updated_at": "2024-09-28T17:21:57.000000Z",
+                              "organization_id": null,
+                              "description": null,
+                              "category": null,
+                              "status": "active"
+                          }
+                      },
+                      {
+                          "id": "9d1e8ec9-6d6d-43d5-8619-ef5f1f904bba",
+                          "service_id": "9d1e8559-00e2-466b-a691-5dad16be2337",
+                          "quantity_in_stock": "100",
+                          "is_in_stock": 1,
+                          "organization_id": "9bc5eb78-74d2-45f4-a677-05d07dca6a63",
+                          "created_at": "2024-09-28T17:48:21.000000Z",
+                          "updated_at": "2024-09-28T17:48:21.000000Z",
+                          "service": {
+                              "id": "9d1e8559-00e2-466b-a691-5dad16be2337",
+                              "name": "Esomeprazole",
+                              "service_type": "medicines",
+                              "created_at": "2024-09-28T17:21:57.000000Z",
+                              "updated_at": "2024-09-28T17:21:57.000000Z",
+                              "organization_id": null,
+                              "description": null,
+                              "category": null,
+                              "status": "active"
+                          }
+                      },
+                      {
+                          "id": "9d1e8ec9-6e2b-4696-aa52-27c3666f5714",
+                          "service_id": "9d1e8559-019b-43b0-badd-b4f85a110b99",
+                          "quantity_in_stock": "100",
+                          "is_in_stock": 1,
+                          "organization_id": "9bc5eb78-74d2-45f4-a677-05d07dca6a63",
+                          "created_at": "2024-09-28T17:48:21.000000Z",
+                          "updated_at": "2024-09-28T17:48:21.000000Z",
+                          "service": {
+                              "id": "9d1e8559-019b-43b0-badd-b4f85a110b99",
+                              "name": "Diclofenac",
+                              "service_type": "medicines",
+                              "created_at": "2024-09-28T17:21:57.000000Z",
+                              "updated_at": "2024-09-28T17:21:57.000000Z",
+                              "organization_id": null,
+                              "description": null,
+                              "category": null,
+                              "status": "active"
+                          }
+                      },
+                      {
+                          "id": "9d1e8ec9-6edd-41c5-b2e3-f5b6c5541a60",
+                          "service_id": "9d1e8559-022d-4bd8-9b6c-6eeb687bd41e",
+                          "quantity_in_stock": "100",
+                          "is_in_stock": 1,
+                          "organization_id": "9bc5eb78-74d2-45f4-a677-05d07dca6a63",
+                          "created_at": "2024-09-28T17:48:21.000000Z",
+                          "updated_at": "2024-09-28T17:48:21.000000Z",
+                          "service": {
+                              "id": "9d1e8559-022d-4bd8-9b6c-6eeb687bd41e",
+                              "name": "Chlorpheniramine",
+                              "service_type": "medicines",
+                              "created_at": "2024-09-28T17:21:57.000000Z",
+                              "updated_at": "2024-09-28T17:21:57.000000Z",
+                              "organization_id": null,
+                              "description": null,
+                              "category": null,
+                              "status": "active"
+                          }
+                      },
+                      {
+                          "id": "9d1e8ec9-6f8b-453c-bd0f-8d00dc91add0",
+                          "service_id": "9d1e8559-02bb-4dcf-9f0b-edebec2db0f2",
+                          "quantity_in_stock": "100",
+                          "is_in_stock": 1,
+                          "organization_id": "9bc5eb78-74d2-45f4-a677-05d07dca6a63",
+                          "created_at": "2024-09-28T17:48:21.000000Z",
+                          "updated_at": "2024-09-28T17:48:21.000000Z",
+                          "service": {
+                              "id": "9d1e8559-02bb-4dcf-9f0b-edebec2db0f2",
+                              "name": "Nitroglycerin",
+                              "service_type": "medicines",
+                              "created_at": "2024-09-28T17:21:57.000000Z",
+                              "updated_at": "2024-09-28T17:21:57.000000Z",
+                              "organization_id": null,
+                              "description": null,
+                              "category": null,
+                              "status": "active"
+                          }
+                      },
+                      {
+                          "id": "9d1e8ec9-7035-452c-b9bc-ec20f7f7b0a0",
+                          "service_id": "9d1e8559-0348-45c2-bc65-b09d62a82b06",
+                          "quantity_in_stock": "100",
+                          "is_in_stock": 1,
+                          "organization_id": "9bc5eb78-74d2-45f4-a677-05d07dca6a63",
+                          "created_at": "2024-09-28T17:48:21.000000Z",
+                          "updated_at": "2024-09-28T17:48:21.000000Z",
+                          "service": {
+                              "id": "9d1e8559-0348-45c2-bc65-b09d62a82b06",
+                              "name": "Alprazolam",
+                              "service_type": "medicines",
+                              "created_at": "2024-09-28T17:21:57.000000Z",
+                              "updated_at": "2024-09-28T17:21:57.000000Z",
+                              "organization_id": null,
+                              "description": null,
+                              "category": null,
+                              "status": "active"
+                          }
+                      },
+                      {
+                          "id": "9d1e8ec9-70db-42a3-8cd7-3b4453e5b71f",
+                          "service_id": "9d1e8559-03d4-4576-84ae-f4345c83e29f",
+                          "quantity_in_stock": "100",
+                          "is_in_stock": 1,
+                          "organization_id": "9bc5eb78-74d2-45f4-a677-05d07dca6a63",
+                          "created_at": "2024-09-28T17:48:21.000000Z",
+                          "updated_at": "2024-09-28T17:48:21.000000Z",
+                          "service": {
+                              "id": "9d1e8559-03d4-4576-84ae-f4345c83e29f",
+                              "name": "Nifedipine",
+                              "service_type": "medicines",
+                              "created_at": "2024-09-28T17:21:57.000000Z",
+                              "updated_at": "2024-09-28T17:21:57.000000Z",
+                              "organization_id": null,
+                              "description": null,
+                              "category": null,
+                              "status": "active"
+                          }
+                      },
+                      {
+                          "id": "9d1e8ec9-7181-42db-a922-728c892e4497",
+                          "service_id": "9d1e8559-0461-4e64-98f6-f4e96e1b5151",
+                          "quantity_in_stock": "100",
+                          "is_in_stock": 1,
+                          "organization_id": "9bc5eb78-74d2-45f4-a677-05d07dca6a63",
+                          "created_at": "2024-09-28T17:48:21.000000Z",
+                          "updated_at": "2024-09-28T17:48:21.000000Z",
+                          "service": {
+                              "id": "9d1e8559-0461-4e64-98f6-f4e96e1b5151",
+                              "name": "Citalopram",
+                              "service_type": "medicines",
+                              "created_at": "2024-09-28T17:21:57.000000Z",
+                              "updated_at": "2024-09-28T17:21:57.000000Z",
+                              "organization_id": null,
+                              "description": null,
+                              "category": null,
+                              "status": "active"
+                          }
+                      },
+                      {
+                          "id": "9d1e8ec9-722a-4f8b-9130-514a189ae75a",
+                          "service_id": "9d1e8559-04f1-40fa-b500-70c08b1c8ead",
+                          "quantity_in_stock": "100",
+                          "is_in_stock": 1,
+                          "organization_id": "9bc5eb78-74d2-45f4-a677-05d07dca6a63",
+                          "created_at": "2024-09-28T17:48:21.000000Z",
+                          "updated_at": "2024-09-28T17:48:21.000000Z",
+                          "service": {
+                              "id": "9d1e8559-04f1-40fa-b500-70c08b1c8ead",
+                              "name": "Levofloxacin",
+                              "service_type": "medicines",
+                              "created_at": "2024-09-28T17:21:57.000000Z",
+                              "updated_at": "2024-09-28T17:21:57.000000Z",
+                              "organization_id": null,
+                              "description": null,
+                              "category": null,
+                              "status": "active"
+                          }
+                      },
+                      {
+                          "id": "9d1e8ec9-72d4-4246-96cd-782a44cee26a",
+                          "service_id": "9d1e8559-0580-481b-a10e-2df1172dc5e8",
+                          "quantity_in_stock": "100",
+                          "is_in_stock": 1,
+                          "organization_id": "9bc5eb78-74d2-45f4-a677-05d07dca6a63",
+                          "created_at": "2024-09-28T17:48:21.000000Z",
+                          "updated_at": "2024-09-28T17:48:21.000000Z",
+                          "service": {
+                              "id": "9d1e8559-0580-481b-a10e-2df1172dc5e8",
+                              "name": "Fluconazole",
+                              "service_type": "medicines",
+                              "created_at": "2024-09-28T17:21:57.000000Z",
+                              "updated_at": "2024-09-28T17:21:57.000000Z",
+                              "organization_id": null,
+                              "description": null,
+                              "category": null,
+                              "status": "active"
+                          }
+                      },
+                      {
+                          "id": "9d1e8ec9-7374-4853-b3bf-a9314754d1a5",
+                          "service_id": "9d1e8559-060f-468a-9406-59b808e1f2d9",
+                          "quantity_in_stock": "100",
+                          "is_in_stock": 1,
+                          "organization_id": "9bc5eb78-74d2-45f4-a677-05d07dca6a63",
+                          "created_at": "2024-09-28T17:48:21.000000Z",
+                          "updated_at": "2024-09-28T17:48:21.000000Z",
+                          "service": {
+                              "id": "9d1e8559-060f-468a-9406-59b808e1f2d9",
+                              "name": "Phenobarbital",
+                              "service_type": "medicines",
+                              "created_at": "2024-09-28T17:21:57.000000Z",
+                              "updated_at": "2024-09-28T17:21:57.000000Z",
+                              "organization_id": null,
+                              "description": null,
+                              "category": null,
+                              "status": "active"
+                          }
+                      },
+                      {
+                          "id": "9d1e8ec9-7415-4cbb-9ebe-1d2ea5168b57",
+                          "service_id": "9d1e8559-069d-4d01-b563-c4883cfb61c4",
+                          "quantity_in_stock": "100",
+                          "is_in_stock": 1,
+                          "organization_id": "9bc5eb78-74d2-45f4-a677-05d07dca6a63",
+                          "created_at": "2024-09-28T17:48:21.000000Z",
+                          "updated_at": "2024-09-28T17:48:21.000000Z",
+                          "service": {
+                              "id": "9d1e8559-069d-4d01-b563-c4883cfb61c4",
+                              "name": "Loperamide",
+                              "service_type": "medicines",
+                              "created_at": "2024-09-28T17:21:57.000000Z",
+                              "updated_at": "2024-09-28T17:21:57.000000Z",
+                              "organization_id": null,
+                              "description": null,
+                              "category": null,
+                              "status": "active"
+                          }
+                      },
+                      {
+                          "id": "9d1e8ec9-74b8-462d-9c09-f92a84570a3b",
+                          "service_id": "9d1e8559-0728-4456-aede-35db4938ccea",
+                          "quantity_in_stock": "100",
+                          "is_in_stock": 1,
+                          "organization_id": "9bc5eb78-74d2-45f4-a677-05d07dca6a63",
+                          "created_at": "2024-09-28T17:48:21.000000Z",
+                          "updated_at": "2024-09-28T17:48:21.000000Z",
+                          "service": {
+                              "id": "9d1e8559-0728-4456-aede-35db4938ccea",
+                              "name": "Clozapine",
+                              "service_type": "medicines",
+                              "created_at": "2024-09-28T17:21:57.000000Z",
+                              "updated_at": "2024-09-28T17:21:57.000000Z",
+                              "organization_id": null,
+                              "description": null,
+                              "category": null,
+                              "status": "active"
+                          }
+                      },
+                      {
+                          "id": "9d1e8ec9-755d-4f4b-aa1b-dd171d2e7b10",
+                          "service_id": "9d1e8559-07d2-4a9c-b5b4-56dc45c88e8c",
+                          "quantity_in_stock": "100",
+                          "is_in_stock": 1,
+                          "organization_id": "9bc5eb78-74d2-45f4-a677-05d07dca6a63",
+                          "created_at": "2024-09-28T17:48:21.000000Z",
+                          "updated_at": "2024-09-28T17:48:21.000000Z",
+                          "service": {
+                              "id": "9d1e8559-07d2-4a9c-b5b4-56dc45c88e8c",
+                              "name": "Haloperidol",
+                              "service_type": "medicines",
+                              "created_at": "2024-09-28T17:21:57.000000Z",
+                              "updated_at": "2024-09-28T17:21:57.000000Z",
+                              "organization_id": null,
+                              "description": null,
+                              "category": null,
+                              "status": "active"
+                          }
+                      },
+                      {
+                          "id": "9d1e8ec9-75fe-4324-8a87-cbb1a2a4face",
+                          "service_id": "9d1e8559-088a-42d3-9b17-8586d859f14a",
+                          "quantity_in_stock": "100",
+                          "is_in_stock": 1,
+                          "organization_id": "9bc5eb78-74d2-45f4-a677-05d07dca6a63",
+                          "created_at": "2024-09-28T17:48:21.000000Z",
+                          "updated_at": "2024-09-28T17:48:21.000000Z",
+                          "service": {
+                              "id": "9d1e8559-088a-42d3-9b17-8586d859f14a",
+                              "name": "Tetracycline",
+                              "service_type": "medicines",
+                              "created_at": "2024-09-28T17:21:57.000000Z",
+                              "updated_at": "2024-09-28T17:21:57.000000Z",
+                              "organization_id": null,
+                              "description": null,
+                              "category": null,
+                              "status": "active"
+                          }
+                      },
+                      {
+                          "id": "9d1e8ec9-769f-4967-88b6-109910f91d18",
+                          "service_id": "9d1e8559-091d-4a18-8b4b-bb7d281e68f5",
+                          "quantity_in_stock": "100",
+                          "is_in_stock": 1,
+                          "organization_id": "9bc5eb78-74d2-45f4-a677-05d07dca6a63",
+                          "created_at": "2024-09-28T17:48:21.000000Z",
+                          "updated_at": "2024-09-28T17:48:21.000000Z",
+                          "service": {
+                              "id": "9d1e8559-091d-4a18-8b4b-bb7d281e68f5",
+                              "name": "Propranolol",
+                              "service_type": "medicines",
+                              "created_at": "2024-09-28T17:21:57.000000Z",
+                              "updated_at": "2024-09-28T17:21:57.000000Z",
+                              "organization_id": null,
+                              "description": null,
+                              "category": null,
+                              "status": "active"
+                          }
+                      }
+                  ]
+              }
+          }

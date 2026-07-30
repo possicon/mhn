@@ -1,0 +1,79 @@
+info:
+  name: Accept Organization
+  type: http
+  seq: 7
+
+http:
+  method: PATCH
+  url: "{{base_url}}/admin/organization/:id/accept"
+  headers:
+    - name: Accept
+      value: application/json
+  params:
+    - name: id
+      value: 9db7e33f-f9a3-4f2f-ab68-e22c43a00f95
+      type: path
+  body:
+    type: json
+    data: ""
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+examples:
+  - name: Accept Organization
+    request:
+      url: "{{base_url}}/admin/organization/:id/accept"
+      method: PATCH
+      headers:
+        - name: Accept
+          value: application/json
+      params:
+        - name: id
+          value: 9db7e33f-f9a3-4f2f-ab68-e22c43a00f95
+          type: path
+      body:
+        type: json
+        data: ""
+    response:
+      status: 200
+      statusText: OK
+      headers:
+        - name: Date
+          value: Fri, 13 Dec 2024 23:34:16 GMT
+        - name: Server
+          value: Apache/2.4.54 (Win64) OpenSSL/1.1.1d mod_fcgid/2.3.10-dev
+        - name: X-Powered-By
+          value: PHP/8.2.17
+        - name: Cache-Control
+          value: no-cache, private
+        - name: X-RateLimit-Limit
+          value: "60"
+        - name: X-RateLimit-Remaining
+          value: "58"
+        - name: Access-Control-Allow-Origin
+          value: "*"
+        - name: Vary
+          value: Authorization
+        - name: Keep-Alive
+          value: timeout=5, max=100
+        - name: Connection
+          value: Keep-Alive
+        - name: Transfer-Encoding
+          value: chunked
+        - name: Content-Type
+          value: application/json
+      body:
+        type: json
+        data: |-
+          {
+              "success": true,
+              "code": 0,
+              "locale": "en",
+              "message": "Application status approved successfully",
+              "data": null
+          }

@@ -1,0 +1,7 @@
+info:
+  name: theatre services
+  type: folder
+  seq: 40
+
+request:
+  auth: inherit

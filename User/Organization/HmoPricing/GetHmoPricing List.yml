@@ -1,0 +1,1052 @@
+info:
+  name: GetHmoPricing List
+  type: http
+  seq: 24
+
+http:
+  method: POST
+  url: "{{base_url}}/user/organization/getHmoPricingList"
+  headers:
+    - name: Accept
+      value: application/json
+  body:
+    type: json
+    data: "{\r
+
+      \r
+
+      \    \"hmo_id\":\"9bbbac52-edd1-4aa7-8254-c29c14fa6249\",\r
+
+      \    \"plan_name\":\"gold\"\r
+
+      \r
+
+      }"
+  auth:
+    type: bearer
+    token: 64|wekxmT6fEC7W1savxR3VWd2fcLOu9fkY2pdTExtBe40532c7
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+examples:
+  - name: GetHmoPricing Copy
+    request:
+      url: "{{base_url}}/user/organization/getHmoPricingList"
+      method: POST
+      headers:
+        - name: Accept
+          value: application/json
+      body:
+        type: json
+        data: "{\r
+
+          \r
+
+          \    \"hmo_id\":\"9bbbac52-edd1-4aa7-8254-c29c14fa6249\",\r
+
+          \    \"plan_name\":\"diamond\"\r
+
+          \r
+
+          }"
+    response:
+      status: 200
+      statusText: OK
+      headers:
+        - name: Date
+          value: Mon, 02 Sep 2024 20:04:14 GMT
+        - name: Server
+          value: Apache/2.4.54 (Win64) OpenSSL/1.1.1q mod_fcgid/2.3.10-dev
+        - name: X-Powered-By
+          value: PHP/8.2.16
+        - name: Cache-Control
+          value: no-cache, private
+        - name: X-RateLimit-Limit
+          value: "60"
+        - name: X-RateLimit-Remaining
+          value: "59"
+        - name: Access-Control-Allow-Origin
+          value: "*"
+        - name: Vary
+          value: Authorization
+        - name: Keep-Alive
+          value: timeout=5, max=100
+        - name: Connection
+          value: Keep-Alive
+        - name: Transfer-Encoding
+          value: chunked
+        - name: Content-Type
+          value: application/json
+      body:
+        type: json
+        data: |-
+          {
+              "success": true,
+              "code": 0,
+              "locale": "en",
+              "message": "Fetched HMOs pricing fetch successfully",
+              "data": {
+                  "items": [
+                      {
+                          "id": "9cd3c798-708c-4d52-93d5-7f5a018bf735",
+                          "hmo_id": "9bbbac52-edd1-4aa7-8254-c29c14fa6249",
+                          "plan_name": "Diamond",
+                          "organization_id": "9bc5eb78-74d2-45f4-a677-05d07dca6a63",
+                          "service_item_id": "9cd37172-7cf4-4d10-9a51-9d5d6898fd96",
+                          "created_at": "2024-08-22T13:40:06.000000Z",
+                          "updated_at": "2024-08-22T13:40:06.000000Z",
+                          "service_items": {
+                              "id": "9cd37172-7cf4-4d10-9a51-9d5d6898fd96",
+                              "name": "General Checkup",
+                              "service_type": "General",
+                              "created_at": "2024-08-22T09:39:13.000000Z",
+                              "updated_at": "2024-08-22T09:39:13.000000Z"
+                          },
+                          "organization_service_items": {
+                              "id": "9cd4b19f-5735-46e2-beb9-e1bf6e7d548a",
+                              "service_item_id": "9cd37172-7cf4-4d10-9a51-9d5d6898fd96",
+                              "hmo_id": "9bbbac52-edd1-4aa7-8254-c29c14fa6249",
+                              "organization_id": "9bc5eb78-74d2-45f4-a677-05d07dca6a63",
+                              "care_type": "primary care",
+                              "amount": "1000.00",
+                              "status": "active",
+                              "created_at": "2024-08-23T00:34:30.000000Z",
+                              "updated_at": "2024-08-23T00:34:30.000000Z"
+                          },
+                          "hmo_service_pricings": [
+                              {
+                                  "id": "9cd3c798-7c3f-442a-a548-4f9347790063",
+                                  "hmo_service_id": "9cd3c798-708c-4d52-93d5-7f5a018bf735",
+                                  "coverage_type": "zero",
+                                  "percent": "0.00",
+                                  "status": "active",
+                                  "created_at": "2024-08-22T13:40:06.000000Z",
+                                  "updated_at": "2024-08-23T09:31:20.000000Z"
+                              }
+                          ]
+                      },
+                      {
+                          "id": "9cd56ebd-16de-4b0f-90bf-615dc93fc23f",
+                          "hmo_id": "9bbbac52-edd1-4aa7-8254-c29c14fa6249",
+                          "plan_name": "diamond",
+                          "organization_id": "9bc5eb78-74d2-45f4-a677-05d07dca6a63",
+                          "service_item_id": "9cd37172-82f5-43d3-a31f-e093e49b90bb",
+                          "created_at": "2024-08-23T09:23:18.000000Z",
+                          "updated_at": "2024-08-23T09:23:18.000000Z",
+                          "service_items": {
+                              "id": "9cd37172-82f5-43d3-a31f-e093e49b90bb",
+                              "name": "Health Screening",
+                              "service_type": "General",
+                              "created_at": "2024-08-22T09:39:13.000000Z",
+                              "updated_at": "2024-08-22T09:39:13.000000Z"
+                          },
+                          "organization_service_items": {
+                              "id": "9cd4b19f-5d3a-4153-b2b1-df96e573812c",
+                              "service_item_id": "9cd37172-82f5-43d3-a31f-e093e49b90bb",
+                              "hmo_id": "9bbbac52-edd1-4aa7-8254-c29c14fa6249",
+                              "organization_id": "9bc5eb78-74d2-45f4-a677-05d07dca6a63",
+                              "care_type": "secondary care",
+                              "amount": "2000.00",
+                              "status": "active",
+                              "created_at": "2024-08-23T00:34:30.000000Z",
+                              "updated_at": "2024-08-23T00:34:30.000000Z"
+                          },
+                          "hmo_service_pricings": [
+                              {
+                                  "id": "9cd570f2-e398-4cb2-b286-dcbcfc739717",
+                                  "hmo_service_id": "9cd56ebd-16de-4b0f-90bf-615dc93fc23f",
+                                  "coverage_type": "zero",
+                                  "percent": "0.00",
+                                  "status": "active",
+                                  "created_at": "2024-08-23T09:29:29.000000Z",
+                                  "updated_at": "2024-08-23T09:31:20.000000Z"
+                              }
+                          ]
+                      },
+                      {
+                          "id": "9cd56ebd-1e82-4d6c-b4f0-2adb5eb9dc6e",
+                          "hmo_id": "9bbbac52-edd1-4aa7-8254-c29c14fa6249",
+                          "plan_name": "diamond",
+                          "organization_id": "9bc5eb78-74d2-45f4-a677-05d07dca6a63",
+                          "service_item_id": "9cd37172-83d0-44cb-88ed-ea6642ddd300",
+                          "created_at": "2024-08-23T09:23:18.000000Z",
+                          "updated_at": "2024-08-23T09:23:18.000000Z",
+                          "service_items": {
+                              "id": "9cd37172-83d0-44cb-88ed-ea6642ddd300",
+                              "name": "Annual Physical Exam",
+                              "service_type": "General",
+                              "created_at": "2024-08-22T09:39:13.000000Z",
+                              "updated_at": "2024-08-22T09:39:13.000000Z"
+                          },
+                          "organization_service_items": {
+                              "id": "9cd4b19f-6027-4f2d-957a-71b3a4b1ab1f",
+                              "service_item_id": "9cd37172-83d0-44cb-88ed-ea6642ddd300",
+                              "hmo_id": "9bbbac52-edd1-4aa7-8254-c29c14fa6249",
+                              "organization_id": "9bc5eb78-74d2-45f4-a677-05d07dca6a63",
+                              "care_type": "secondary care",
+                              "amount": "2400.00",
+                              "status": "active",
+                              "created_at": "2024-08-23T00:34:30.000000Z",
+                              "updated_at": "2024-08-23T00:46:18.000000Z"
+                          },
+                          "hmo_service_pricings": [
+                              {
+                                  "id": "9cd570f2-e9b2-47a1-b09e-f9f1d2d7fee4",
+                                  "hmo_service_id": "9cd56ebd-1e82-4d6c-b4f0-2adb5eb9dc6e",
+                                  "coverage_type": "zero",
+                                  "percent": "0.00",
+                                  "status": "active",
+                                  "created_at": "2024-08-23T09:29:29.000000Z",
+                                  "updated_at": "2024-08-23T09:31:20.000000Z"
+                              }
+                          ]
+                      },
+                      {
+                          "id": "9cd4301a-0a1b-474d-b1a9-da99cee24032",
+                          "hmo_id": "9bbbac52-edd1-4aa7-8254-c29c14fa6249",
+                          "plan_name": "Diamond",
+                          "organization_id": "9bc5eb78-74d2-45f4-a677-05d07dca6a63",
+                          "service_item_id": "9cd37172-847e-435e-b3ab-af416c514d09",
+                          "created_at": "2024-08-22T18:32:20.000000Z",
+                          "updated_at": "2024-08-22T18:32:20.000000Z",
+                          "service_items": {
+                              "id": "9cd37172-847e-435e-b3ab-af416c514d09",
+                              "name": "Blood Pressure Monitoring",
+                              "service_type": "General",
+                              "created_at": "2024-08-22T09:39:13.000000Z",
+                              "updated_at": "2024-08-22T09:39:13.000000Z"
+                          },
+                          "organization_service_items": {
+                              "id": "9cd42f1b-b7e0-4534-9fb8-4277b189c751",
+                              "service_item_id": "9cd37172-847e-435e-b3ab-af416c514d09",
+                              "hmo_id": "9bbbac52-edd1-4aa7-8254-c29c14fa6249",
+                              "organization_id": "9bc5eb78-74d2-45f4-a677-05d07dca6a63",
+                              "care_type": "secondary care",
+                              "amount": "1500.00",
+                              "status": "active",
+                              "created_at": "2024-08-22T18:29:33.000000Z",
+                              "updated_at": "2024-08-23T00:34:30.000000Z"
+                          },
+                          "hmo_service_pricings": [
+                              {
+                                  "id": "9cd4301a-0fd7-4ac8-8fad-a4b543a44a2d",
+                                  "hmo_service_id": "9cd4301a-0a1b-474d-b1a9-da99cee24032",
+                                  "coverage_type": "full",
+                                  "percent": "100.00",
+                                  "status": "active",
+                                  "created_at": "2024-08-22T18:32:20.000000Z",
+                                  "updated_at": "2024-08-23T09:31:20.000000Z"
+                              }
+                          ]
+                      },
+                      {
+                          "id": "9cd4301a-1045-4c5e-b1d7-0a94e4b373ea",
+                          "hmo_id": "9bbbac52-edd1-4aa7-8254-c29c14fa6249",
+                          "plan_name": "Diamond",
+                          "organization_id": "9bc5eb78-74d2-45f4-a677-05d07dca6a63",
+                          "service_item_id": "9cd37172-8551-43e5-9b24-e2854fb1eb42",
+                          "created_at": "2024-08-22T18:32:20.000000Z",
+                          "updated_at": "2024-08-22T18:32:20.000000Z",
+                          "service_items": {
+                              "id": "9cd37172-8551-43e5-9b24-e2854fb1eb42",
+                              "name": "Vaccination",
+                              "service_type": "General",
+                              "created_at": "2024-08-22T09:39:13.000000Z",
+                              "updated_at": "2024-08-22T09:39:13.000000Z"
+                          },
+                          "organization_service_items": {
+                              "id": "9cd42f54-6132-4f2d-8b68-bb3d9bb29435",
+                              "service_item_id": "9cd37172-8551-43e5-9b24-e2854fb1eb42",
+                              "hmo_id": "9bbbac52-edd1-4aa7-8254-c29c14fa6249",
+                              "organization_id": "9bc5eb78-74d2-45f4-a677-05d07dca6a63",
+                              "care_type": "primary care",
+                              "amount": "3000.00",
+                              "status": "active",
+                              "created_at": "2024-08-22T18:30:10.000000Z",
+                              "updated_at": "2024-08-23T00:34:30.000000Z"
+                          },
+                          "hmo_service_pricings": [
+                              {
+                                  "id": "9cd4301a-11df-48dd-94dd-0831867eabc4",
+                                  "hmo_service_id": "9cd4301a-1045-4c5e-b1d7-0a94e4b373ea",
+                                  "coverage_type": "full",
+                                  "percent": "100.00",
+                                  "status": "active",
+                                  "created_at": "2024-08-22T18:32:20.000000Z",
+                                  "updated_at": "2024-08-23T09:31:20.000000Z"
+                              }
+                          ]
+                      },
+                      {
+                          "id": "9cd3c798-7fad-4f3f-aab2-47f5b3ab6d15",
+                          "hmo_id": "9bbbac52-edd1-4aa7-8254-c29c14fa6249",
+                          "plan_name": "Diamond",
+                          "organization_id": "9bc5eb78-74d2-45f4-a677-05d07dca6a63",
+                          "service_item_id": "9cd37172-85e7-4b43-a4de-cd8a806874bb",
+                          "created_at": "2024-08-22T13:40:06.000000Z",
+                          "updated_at": "2024-08-22T13:40:06.000000Z",
+                          "service_items": {
+                              "id": "9cd37172-85e7-4b43-a4de-cd8a806874bb",
+                              "name": "Allergy Testing",
+                              "service_type": "General",
+                              "created_at": "2024-08-22T09:39:13.000000Z",
+                              "updated_at": "2024-08-22T09:39:13.000000Z"
+                          },
+                          "organization_service_items": {
+                              "id": "9cd42f8a-18b5-4e12-9cc3-8d6de05ee797",
+                              "service_item_id": "9cd37172-85e7-4b43-a4de-cd8a806874bb",
+                              "hmo_id": "9bbbac52-edd1-4aa7-8254-c29c14fa6249",
+                              "organization_id": "9bc5eb78-74d2-45f4-a677-05d07dca6a63",
+                              "care_type": "primary care",
+                              "amount": "45090.00",
+                              "status": "active",
+                              "created_at": "2024-08-22T18:30:45.000000Z",
+                              "updated_at": "2024-08-23T00:46:18.000000Z"
+                          },
+                          "hmo_service_pricings": [
+                              {
+                                  "id": "9cd3c798-809d-47b8-bcce-93e4a4cc283a",
+                                  "hmo_service_id": "9cd3c798-7fad-4f3f-aab2-47f5b3ab6d15",
+                                  "coverage_type": "full",
+                                  "percent": "100.00",
+                                  "status": "active",
+                                  "created_at": "2024-08-22T13:40:06.000000Z",
+                                  "updated_at": "2024-08-23T09:31:20.000000Z"
+                              }
+                          ]
+                      },
+                      {
+                          "id": "9cd4301a-12ad-4956-813a-c8c9f346c6c4",
+                          "hmo_id": "9bbbac52-edd1-4aa7-8254-c29c14fa6249",
+                          "plan_name": "Diamond",
+                          "organization_id": "9bc5eb78-74d2-45f4-a677-05d07dca6a63",
+                          "service_item_id": "9cd37172-865f-4be0-bf9d-fc9c9201b77b",
+                          "created_at": "2024-08-22T18:32:20.000000Z",
+                          "updated_at": "2024-08-22T18:32:20.000000Z",
+                          "service_items": {
+                              "id": "9cd37172-865f-4be0-bf9d-fc9c9201b77b",
+                              "name": "Diabetes Management",
+                              "service_type": "General",
+                              "created_at": "2024-08-22T09:39:13.000000Z",
+                              "updated_at": "2024-08-22T09:39:13.000000Z"
+                          },
+                          "organization_service_items": {
+                              "id": "9cd43013-aeb3-43f6-808b-ba0f2e8ff70c",
+                              "service_item_id": "9cd37172-865f-4be0-bf9d-fc9c9201b77b",
+                              "hmo_id": "9bbbac52-edd1-4aa7-8254-c29c14fa6249",
+                              "organization_id": "9bc5eb78-74d2-45f4-a677-05d07dca6a63",
+                              "care_type": "secondary care",
+                              "amount": "7000.00",
+                              "status": "active",
+                              "created_at": "2024-08-22T18:32:15.000000Z",
+                              "updated_at": "2024-08-23T00:43:59.000000Z"
+                          },
+                          "hmo_service_pricings": [
+                              {
+                                  "id": "9cd4301a-13bf-4075-9b07-3edd6ed51981",
+                                  "hmo_service_id": "9cd4301a-12ad-4956-813a-c8c9f346c6c4",
+                                  "coverage_type": "partial",
+                                  "percent": "70.00",
+                                  "status": "active",
+                                  "created_at": "2024-08-22T18:32:20.000000Z",
+                                  "updated_at": "2024-08-23T09:31:20.000000Z"
+                              }
+                          ]
+                      },
+                      {
+                          "id": "9cd56ebd-4726-4380-8c5d-77bbc833f4fe",
+                          "hmo_id": "9bbbac52-edd1-4aa7-8254-c29c14fa6249",
+                          "plan_name": "diamond",
+                          "organization_id": "9bc5eb78-74d2-45f4-a677-05d07dca6a63",
+                          "service_item_id": "9cd37172-86ed-4033-947a-20639d80e305",
+                          "created_at": "2024-08-23T09:23:18.000000Z",
+                          "updated_at": "2024-08-23T09:23:18.000000Z",
+                          "service_items": {
+                              "id": "9cd37172-86ed-4033-947a-20639d80e305",
+                              "name": "Preventive Care",
+                              "service_type": "General",
+                              "created_at": "2024-08-22T09:39:13.000000Z",
+                              "updated_at": "2024-08-22T09:39:13.000000Z"
+                          },
+                          "organization_service_items": {
+                              "id": "9cd4b503-ef01-4432-847f-e36c23d25e8f",
+                              "service_item_id": "9cd37172-86ed-4033-947a-20639d80e305",
+                              "hmo_id": "9bbbac52-edd1-4aa7-8254-c29c14fa6249",
+                              "organization_id": "9bc5eb78-74d2-45f4-a677-05d07dca6a63",
+                              "care_type": "primary care",
+                              "amount": "9000.00",
+                              "status": "active",
+                              "created_at": "2024-08-23T00:43:59.000000Z",
+                              "updated_at": "2024-08-23T00:43:59.000000Z"
+                          },
+                          "hmo_service_pricings": [
+                              {
+                                  "id": "9cd5719c-11c4-4dd7-93ce-3019848b355c",
+                                  "hmo_service_id": "9cd56ebd-4726-4380-8c5d-77bbc833f4fe",
+                                  "coverage_type": "partial",
+                                  "percent": "90.00",
+                                  "status": "active",
+                                  "created_at": "2024-08-23T09:31:20.000000Z",
+                                  "updated_at": "2024-08-23T09:31:20.000000Z"
+                              }
+                          ]
+                      },
+                      {
+                          "id": "9cd56ebd-4dd4-486e-9557-d00e8f11d9e2",
+                          "hmo_id": "9bbbac52-edd1-4aa7-8254-c29c14fa6249",
+                          "plan_name": "diamond",
+                          "organization_id": "9bc5eb78-74d2-45f4-a677-05d07dca6a63",
+                          "service_item_id": "9cd37172-87c3-4f8c-ac31-eb56b341b6eb",
+                          "created_at": "2024-08-23T09:23:18.000000Z",
+                          "updated_at": "2024-08-23T09:23:18.000000Z",
+                          "service_items": {
+                              "id": "9cd37172-87c3-4f8c-ac31-eb56b341b6eb",
+                              "name": "Weight Management",
+                              "service_type": "General",
+                              "created_at": "2024-08-22T09:39:13.000000Z",
+                              "updated_at": "2024-08-22T09:39:13.000000Z"
+                          },
+                          "organization_service_items": {
+                              "id": "9cd4b503-f2c5-4910-8d32-9a6a7c315f9e",
+                              "service_item_id": "9cd37172-87c3-4f8c-ac31-eb56b341b6eb",
+                              "hmo_id": "9bbbac52-edd1-4aa7-8254-c29c14fa6249",
+                              "organization_id": "9bc5eb78-74d2-45f4-a677-05d07dca6a63",
+                              "care_type": "primary care",
+                              "amount": "37899.00",
+                              "status": "active",
+                              "created_at": "2024-08-23T00:43:59.000000Z",
+                              "updated_at": "2024-08-23T00:43:59.000000Z"
+                          },
+                          "hmo_service_pricings": [
+                              {
+                                  "id": "9cd5719c-18f8-43e3-af38-535375c2394e",
+                                  "hmo_service_id": "9cd56ebd-4dd4-486e-9557-d00e8f11d9e2",
+                                  "coverage_type": "partial",
+                                  "percent": "37.90",
+                                  "status": "active",
+                                  "created_at": "2024-08-23T09:31:20.000000Z",
+                                  "updated_at": "2024-08-23T09:31:20.000000Z"
+                              }
+                          ]
+                      },
+                      {
+                          "id": "9cd56ebd-5225-4e4a-bb54-12ff4d6f4372",
+                          "hmo_id": "9bbbac52-edd1-4aa7-8254-c29c14fa6249",
+                          "plan_name": "diamond",
+                          "organization_id": "9bc5eb78-74d2-45f4-a677-05d07dca6a63",
+                          "service_item_id": "9cd37172-8a4b-49d0-96c0-e3fb976f809f",
+                          "created_at": "2024-08-23T09:23:18.000000Z",
+                          "updated_at": "2024-08-23T09:23:18.000000Z",
+                          "service_items": {
+                              "id": "9cd37172-8a4b-49d0-96c0-e3fb976f809f",
+                              "name": "Family Medicine",
+                              "service_type": "General",
+                              "created_at": "2024-08-22T09:39:13.000000Z",
+                              "updated_at": "2024-08-22T09:39:13.000000Z"
+                          },
+                          "organization_service_items": {
+                              "id": "9cd4b503-f635-4372-831b-b559d8eb08e5",
+                              "service_item_id": "9cd37172-8a4b-49d0-96c0-e3fb976f809f",
+                              "hmo_id": "9bbbac52-edd1-4aa7-8254-c29c14fa6249",
+                              "organization_id": "9bc5eb78-74d2-45f4-a677-05d07dca6a63",
+                              "care_type": "secondary care",
+                              "amount": "2800.00",
+                              "status": "active",
+                              "created_at": "2024-08-23T00:43:59.000000Z",
+                              "updated_at": "2024-08-23T00:46:18.000000Z"
+                          },
+                          "hmo_service_pricings": [
+                              {
+                                  "id": "9cd5719c-1f1f-4b41-8df2-93958e8f8c9a",
+                                  "hmo_service_id": "9cd56ebd-5225-4e4a-bb54-12ff4d6f4372",
+                                  "coverage_type": "partial",
+                                  "percent": "28.00",
+                                  "status": "active",
+                                  "created_at": "2024-08-23T09:31:20.000000Z",
+                                  "updated_at": "2024-08-23T09:31:20.000000Z"
+                              }
+                          ]
+                      },
+                      {
+                          "id": "9cd4c2f1-4e73-423c-a781-3920d1192216",
+                          "hmo_id": "9bbbac52-edd1-4aa7-8254-c29c14fa6249",
+                          "plan_name": "diamond",
+                          "organization_id": "9bc5eb78-74d2-45f4-a677-05d07dca6a63",
+                          "service_item_id": "9cd37172-8c5f-4653-99b1-bdfdf368fe7f",
+                          "created_at": "2024-08-23T01:22:55.000000Z",
+                          "updated_at": "2024-08-23T01:22:55.000000Z",
+                          "service_items": {
+                              "id": "9cd37172-8c5f-4653-99b1-bdfdf368fe7f",
+                              "name": "Urinalysis",
+                              "service_type": "Clinical Lab",
+                              "created_at": "2024-08-22T09:39:13.000000Z",
+                              "updated_at": "2024-08-22T09:39:13.000000Z"
+                          },
+                          "organization_service_items": null,
+                          "hmo_service_pricings": [
+                              {
+                                  "id": "9cd4c2f1-88e8-4601-b321-e9cd4c9560bd",
+                                  "hmo_service_id": "9cd4c2f1-4e73-423c-a781-3920d1192216",
+                                  "coverage_type": "partial",
+                                  "percent": "50.00",
+                                  "status": "active",
+                                  "created_at": "2024-08-23T01:22:56.000000Z",
+                                  "updated_at": "2024-08-23T01:22:56.000000Z"
+                              }
+                          ]
+                      },
+                      {
+                          "id": "9cd3c798-81af-4168-84a9-d4ce0200d498",
+                          "hmo_id": "9bbbac52-edd1-4aa7-8254-c29c14fa6249",
+                          "plan_name": "Diamond",
+                          "organization_id": "9bc5eb78-74d2-45f4-a677-05d07dca6a63",
+                          "service_item_id": "9cd37172-8d87-42e1-822a-1ef5b1a35b85",
+                          "created_at": "2024-08-22T13:40:06.000000Z",
+                          "updated_at": "2024-08-22T13:40:06.000000Z",
+                          "service_items": {
+                              "id": "9cd37172-8d87-42e1-822a-1ef5b1a35b85",
+                              "name": "Basic Metabolic Panel",
+                              "service_type": "Clinical Lab",
+                              "created_at": "2024-08-22T09:39:13.000000Z",
+                              "updated_at": "2024-08-22T09:39:13.000000Z"
+                          },
+                          "organization_service_items": null,
+                          "hmo_service_pricings": [
+                              {
+                                  "id": "9cd3c798-82b6-4400-b4c7-d13f052bbf61",
+                                  "hmo_service_id": "9cd3c798-81af-4168-84a9-d4ce0200d498",
+                                  "coverage_type": "partial",
+                                  "percent": "0.00",
+                                  "status": "active",
+                                  "created_at": "2024-08-22T13:40:06.000000Z",
+                                  "updated_at": "2024-08-22T13:40:06.000000Z"
+                              }
+                          ]
+                      },
+                      {
+                          "id": "9cd4c4db-5746-4072-aa45-9fc836b1c3c5",
+                          "hmo_id": "9bbbac52-edd1-4aa7-8254-c29c14fa6249",
+                          "plan_name": "diamond",
+                          "organization_id": "9bc5eb78-74d2-45f4-a677-05d07dca6a63",
+                          "service_item_id": "9cd37172-939e-4fa3-a2bc-4ea51856d230",
+                          "created_at": "2024-08-23T01:28:17.000000Z",
+                          "updated_at": "2024-08-23T01:28:17.000000Z",
+                          "service_items": {
+                              "id": "9cd37172-939e-4fa3-a2bc-4ea51856d230",
+                              "name": "Kidney Function Test",
+                              "service_type": "Clinical Lab",
+                              "created_at": "2024-08-22T09:39:13.000000Z",
+                              "updated_at": "2024-08-22T09:39:13.000000Z"
+                          },
+                          "organization_service_items": null,
+                          "hmo_service_pricings": [
+                              {
+                                  "id": "9cd4c4db-68c4-4941-b207-e4d4c093c99d",
+                                  "hmo_service_id": "9cd4c4db-5746-4072-aa45-9fc836b1c3c5",
+                                  "coverage_type": "partial",
+                                  "percent": "50.00",
+                                  "status": "active",
+                                  "created_at": "2024-08-23T01:28:17.000000Z",
+                                  "updated_at": "2024-08-23T01:28:17.000000Z"
+                              }
+                          ]
+                      },
+                      {
+                          "id": "9cd4c582-76fd-4ecb-a046-e5e9558d6aa5",
+                          "hmo_id": "9bbbac52-edd1-4aa7-8254-c29c14fa6249",
+                          "plan_name": "diamond",
+                          "organization_id": "9bc5eb78-74d2-45f4-a677-05d07dca6a63",
+                          "service_item_id": "9cd37172-94d6-4ce2-a778-c52d0a5876a3",
+                          "created_at": "2024-08-23T01:30:06.000000Z",
+                          "updated_at": "2024-08-23T01:30:06.000000Z",
+                          "service_items": {
+                              "id": "9cd37172-94d6-4ce2-a778-c52d0a5876a3",
+                              "name": "Antibiotics",
+                              "service_type": "Prescription",
+                              "created_at": "2024-08-22T09:39:13.000000Z",
+                              "updated_at": "2024-08-22T09:39:13.000000Z"
+                          },
+                          "organization_service_items": null,
+                          "hmo_service_pricings": [
+                              {
+                                  "id": "9cd4c582-86e8-471e-8c40-72955ca9e4c7",
+                                  "hmo_service_id": "9cd4c582-76fd-4ecb-a046-e5e9558d6aa5",
+                                  "coverage_type": "partial",
+                                  "percent": "50.00",
+                                  "status": "active",
+                                  "created_at": "2024-08-23T01:30:06.000000Z",
+                                  "updated_at": "2024-08-23T01:30:06.000000Z"
+                              }
+                          ]
+                      },
+                      {
+                          "id": "9cd4cb10-469d-4f8c-b53e-bd5fa4572491",
+                          "hmo_id": "9bbbac52-edd1-4aa7-8254-c29c14fa6249",
+                          "plan_name": "diamond",
+                          "organization_id": "9bc5eb78-74d2-45f4-a677-05d07dca6a63",
+                          "service_item_id": "9cd37172-9677-4080-8f28-2cf050e38228",
+                          "created_at": "2024-08-23T01:45:38.000000Z",
+                          "updated_at": "2024-08-23T01:45:38.000000Z",
+                          "service_items": {
+                              "id": "9cd37172-9677-4080-8f28-2cf050e38228",
+                              "name": "Pain Relievers",
+                              "service_type": "Prescription",
+                              "created_at": "2024-08-22T09:39:13.000000Z",
+                              "updated_at": "2024-08-22T09:39:13.000000Z"
+                          },
+                          "organization_service_items": {
+                              "id": "9cd4f396-fc0c-4544-86c4-ca0883c37ee6",
+                              "service_item_id": "9cd37172-9677-4080-8f28-2cf050e38228",
+                              "hmo_id": "9bbc08fc-7f98-4b54-bc89-75ac11300de5",
+                              "organization_id": "9bc5eb78-74d2-45f4-a677-05d07dca6a63",
+                              "care_type": "primary care",
+                              "amount": "2500.00",
+                              "status": "active",
+                              "created_at": "2024-08-23T03:38:57.000000Z",
+                              "updated_at": "2024-08-23T04:03:40.000000Z"
+                          },
+                          "hmo_service_pricings": [
+                              {
+                                  "id": "9cd4cb10-58f8-4f03-8363-e4c810f2ac65",
+                                  "hmo_service_id": "9cd4cb10-469d-4f8c-b53e-bd5fa4572491",
+                                  "coverage_type": "partial",
+                                  "percent": "88.00",
+                                  "status": "active",
+                                  "created_at": "2024-08-23T01:45:38.000000Z",
+                                  "updated_at": "2024-08-23T08:58:19.000000Z"
+                              }
+                          ]
+                      },
+                      {
+                          "id": "9cd4290c-e861-4ad7-a36d-80f86e96af9d",
+                          "hmo_id": "9bbbac52-edd1-4aa7-8254-c29c14fa6249",
+                          "plan_name": "Diamond",
+                          "organization_id": "9bc5eb78-74d2-45f4-a677-05d07dca6a63",
+                          "service_item_id": "9cd37172-9888-405c-882e-f1019c013f7b",
+                          "created_at": "2024-08-22T18:12:37.000000Z",
+                          "updated_at": "2024-08-22T18:12:37.000000Z",
+                          "service_items": {
+                              "id": "9cd37172-9888-405c-882e-f1019c013f7b",
+                              "name": "Antihistamines",
+                              "service_type": "Prescription",
+                              "created_at": "2024-08-22T09:39:13.000000Z",
+                              "updated_at": "2024-08-22T09:39:13.000000Z"
+                          },
+                          "organization_service_items": {
+                              "id": "9cd428c4-b94f-401b-a0b1-b8977deabc8e",
+                              "service_item_id": "9cd37172-9888-405c-882e-f1019c013f7b",
+                              "hmo_id": "9bbbac52-edd1-4aa7-8254-c29c14fa6249",
+                              "organization_id": "9bc5eb78-74d2-45f4-a677-05d07dca6a63",
+                              "care_type": "Primary Care",
+                              "amount": "10000.00",
+                              "status": "active",
+                              "created_at": "2024-08-22T18:11:49.000000Z",
+                              "updated_at": "2024-08-22T18:11:49.000000Z"
+                          },
+                          "hmo_service_pricings": [
+                              {
+                                  "id": "9cd4290c-e9c7-48cd-b277-bb1190762f28",
+                                  "hmo_service_id": "9cd4290c-e861-4ad7-a36d-80f86e96af9d",
+                                  "coverage_type": "full",
+                                  "percent": "2.07",
+                                  "status": "active",
+                                  "created_at": "2024-08-22T18:12:37.000000Z",
+                                  "updated_at": "2024-08-22T18:12:37.000000Z"
+                              }
+                          ]
+                      },
+                      {
+                          "id": "9cd4270b-6cdd-42b5-bdbf-2dc8b41cf33d",
+                          "hmo_id": "9bbbac52-edd1-4aa7-8254-c29c14fa6249",
+                          "plan_name": "Diamond",
+                          "organization_id": "9bc5eb78-74d2-45f4-a677-05d07dca6a63",
+                          "service_item_id": "9cd37172-9b57-4e8f-a840-ec0588f26e2a",
+                          "created_at": "2024-08-22T18:07:00.000000Z",
+                          "updated_at": "2024-08-22T18:07:00.000000Z",
+                          "service_items": {
+                              "id": "9cd37172-9b57-4e8f-a840-ec0588f26e2a",
+                              "name": "Diuretics",
+                              "service_type": "Prescription",
+                              "created_at": "2024-08-22T09:39:13.000000Z",
+                              "updated_at": "2024-08-22T09:39:13.000000Z"
+                          },
+                          "organization_service_items": {
+                              "id": "9cd42702-d38a-4fa1-9106-a076770e770f",
+                              "service_item_id": "9cd37172-9b57-4e8f-a840-ec0588f26e2a",
+                              "hmo_id": "9bbbac52-edd1-4aa7-8254-c29c14fa6249",
+                              "organization_id": "9bc5eb78-74d2-45f4-a677-05d07dca6a63",
+                              "care_type": "Primary Care",
+                              "amount": "5050.00",
+                              "status": "active",
+                              "created_at": "2024-08-22T18:06:54.000000Z",
+                              "updated_at": "2024-08-22T18:06:54.000000Z"
+                          },
+                          "hmo_service_pricings": [
+                              {
+                                  "id": "9cd4270b-6e04-40b4-bdce-498d56b8342b",
+                                  "hmo_service_id": "9cd4270b-6cdd-42b5-bdbf-2dc8b41cf33d",
+                                  "coverage_type": "partial",
+                                  "percent": "9.90",
+                                  "status": "active",
+                                  "created_at": "2024-08-22T18:07:00.000000Z",
+                                  "updated_at": "2024-08-22T18:07:00.000000Z"
+                              }
+                          ]
+                      },
+                      {
+                          "id": "9cd4e6e5-316d-40e9-aff1-b7e30c00f179",
+                          "hmo_id": "9bbbac52-edd1-4aa7-8254-c29c14fa6249",
+                          "plan_name": "diamond",
+                          "organization_id": "9bc5eb78-74d2-45f4-a677-05d07dca6a63",
+                          "service_item_id": "9cd37172-9c56-406b-95e3-935a0f650e84",
+                          "created_at": "2024-08-23T03:03:27.000000Z",
+                          "updated_at": "2024-08-23T03:03:27.000000Z",
+                          "service_items": {
+                              "id": "9cd37172-9c56-406b-95e3-935a0f650e84",
+                              "name": "Statins",
+                              "service_type": "Prescription",
+                              "created_at": "2024-08-22T09:39:13.000000Z",
+                              "updated_at": "2024-08-22T09:39:13.000000Z"
+                          },
+                          "organization_service_items": {
+                              "id": "9cd4e6a1-dbe1-48a8-8af0-267bb60a8437",
+                              "service_item_id": "9cd37172-9c56-406b-95e3-935a0f650e84",
+                              "hmo_id": "9bbc08fc-7f98-4b54-bc89-75ac11300de5",
+                              "organization_id": "9bc5eb78-74d2-45f4-a677-05d07dca6a63",
+                              "care_type": "primary care",
+                              "amount": "2100.00",
+                              "status": "active",
+                              "created_at": "2024-08-23T03:02:43.000000Z",
+                              "updated_at": "2024-08-23T03:02:43.000000Z"
+                          },
+                          "hmo_service_pricings": [
+                              {
+                                  "id": "9cd4e6e5-416e-4139-919d-5873b655077c",
+                                  "hmo_service_id": "9cd4e6e5-316d-40e9-aff1-b7e30c00f179",
+                                  "coverage_type": "partial",
+                                  "percent": "19.00",
+                                  "status": "active",
+                                  "created_at": "2024-08-23T03:03:27.000000Z",
+                                  "updated_at": "2024-08-23T03:14:34.000000Z"
+                              }
+                          ]
+                      },
+                      {
+                          "id": "9cd4270b-6b2a-4aee-be22-fbd5eda35132",
+                          "hmo_id": "9bbbac52-edd1-4aa7-8254-c29c14fa6249",
+                          "plan_name": "Diamond",
+                          "organization_id": "9bc5eb78-74d2-45f4-a677-05d07dca6a63",
+                          "service_item_id": "9cd37172-9d7a-4571-901a-78d8d708574b",
+                          "created_at": "2024-08-22T18:07:00.000000Z",
+                          "updated_at": "2024-08-22T18:07:00.000000Z",
+                          "service_items": {
+                              "id": "9cd37172-9d7a-4571-901a-78d8d708574b",
+                              "name": "Blood Pressure Medications",
+                              "service_type": "Prescription",
+                              "created_at": "2024-08-22T09:39:13.000000Z",
+                              "updated_at": "2024-08-22T09:39:13.000000Z"
+                          },
+                          "organization_service_items": {
+                              "id": "9cd4267b-13b0-4c35-ae67-da07ed9fa383",
+                              "service_item_id": "9cd37172-9d7a-4571-901a-78d8d708574b",
+                              "hmo_id": "9bbbac52-edd1-4aa7-8254-c29c14fa6249",
+                              "organization_id": "9bc5eb78-74d2-45f4-a677-05d07dca6a63",
+                              "care_type": "Secondary Care",
+                              "amount": "5050.00",
+                              "status": "active",
+                              "created_at": "2024-08-22T18:05:26.000000Z",
+                              "updated_at": "2024-08-22T18:05:26.000000Z"
+                          },
+                          "hmo_service_pricings": [
+                              {
+                                  "id": "9cd4270b-6c5b-414d-9916-fa346b68faae",
+                                  "hmo_service_id": "9cd4270b-6b2a-4aee-be22-fbd5eda35132",
+                                  "coverage_type": "full",
+                                  "percent": "4.10",
+                                  "status": "active",
+                                  "created_at": "2024-08-22T18:07:00.000000Z",
+                                  "updated_at": "2024-08-22T18:07:00.000000Z"
+                              }
+                          ]
+                      },
+                      {
+                          "id": "9cd4270b-64ee-40c9-943d-5db588a8ec54",
+                          "hmo_id": "9bbbac52-edd1-4aa7-8254-c29c14fa6249",
+                          "plan_name": "Diamond",
+                          "organization_id": "9bc5eb78-74d2-45f4-a677-05d07dca6a63",
+                          "service_item_id": "9cd37172-9e3c-44de-aff1-1ef5e6ab1572",
+                          "created_at": "2024-08-22T18:07:00.000000Z",
+                          "updated_at": "2024-08-22T18:07:00.000000Z",
+                          "service_items": {
+                              "id": "9cd37172-9e3c-44de-aff1-1ef5e6ab1572",
+                              "name": "Insulin",
+                              "service_type": "Prescription",
+                              "created_at": "2024-08-22T09:39:13.000000Z",
+                              "updated_at": "2024-08-22T09:39:13.000000Z"
+                          },
+                          "organization_service_items": {
+                              "id": "9cd41dd5-4261-4c69-a86f-0cede240c303",
+                              "service_item_id": "9cd37172-9e3c-44de-aff1-1ef5e6ab1572",
+                              "hmo_id": "9bbbac52-edd1-4aa7-8254-c29c14fa6249",
+                              "organization_id": "9bc5eb78-74d2-45f4-a677-05d07dca6a63",
+                              "care_type": "Secondary Care",
+                              "amount": "5050.00",
+                              "status": "active",
+                              "created_at": "2024-08-22T17:41:15.000000Z",
+                              "updated_at": "2024-08-22T17:45:31.000000Z"
+                          },
+                          "hmo_service_pricings": [
+                              {
+                                  "id": "9cd4270b-6a8b-451e-a359-822f67bf40a3",
+                                  "hmo_service_id": "9cd4270b-64ee-40c9-943d-5db588a8ec54",
+                                  "coverage_type": "zero",
+                                  "percent": "9.90",
+                                  "status": "active",
+                                  "created_at": "2024-08-22T18:07:00.000000Z",
+                                  "updated_at": "2024-08-22T18:07:00.000000Z"
+                              }
+                          ]
+                      },
+                      {
+                          "id": "9cd3cd83-7f0f-4cd6-81d2-55728f11ca4c",
+                          "hmo_id": "9bbbac52-edd1-4aa7-8254-c29c14fa6249",
+                          "plan_name": "Diamond",
+                          "organization_id": "9bc5eb78-74d2-45f4-a677-05d07dca6a63",
+                          "service_item_id": "9cd37172-a491-4f4c-88d9-d2c946c3382f",
+                          "created_at": "2024-08-22T13:56:39.000000Z",
+                          "updated_at": "2024-08-22T13:56:39.000000Z",
+                          "service_items": {
+                              "id": "9cd37172-a491-4f4c-88d9-d2c946c3382f",
+                              "name": "Spirometry",
+                              "service_type": "Procedures",
+                              "created_at": "2024-08-22T09:39:13.000000Z",
+                              "updated_at": "2024-08-22T09:39:13.000000Z"
+                          },
+                          "organization_service_items": null,
+                          "hmo_service_pricings": [
+                              {
+                                  "id": "9cd3cd83-88eb-4ada-b367-4816c71aae99",
+                                  "hmo_service_id": "9cd3cd83-7f0f-4cd6-81d2-55728f11ca4c",
+                                  "coverage_type": "zero",
+                                  "percent": "5.00",
+                                  "status": "active",
+                                  "created_at": "2024-08-22T13:56:39.000000Z",
+                                  "updated_at": "2024-08-22T13:56:39.000000Z"
+                              }
+                          ]
+                      },
+                      {
+                          "id": "9cd3cd83-8c62-4fa5-8a29-973f81262ec0",
+                          "hmo_id": "9bbbac52-edd1-4aa7-8254-c29c14fa6249",
+                          "plan_name": "Diamond",
+                          "organization_id": "9bc5eb78-74d2-45f4-a677-05d07dca6a63",
+                          "service_item_id": "9cd37172-a557-4fbf-a7ee-cd2a4123edbf",
+                          "created_at": "2024-08-22T13:56:39.000000Z",
+                          "updated_at": "2024-08-22T13:56:39.000000Z",
+                          "service_items": {
+                              "id": "9cd37172-a557-4fbf-a7ee-cd2a4123edbf",
+                              "name": "Dermatological Procedure",
+                              "service_type": "Procedures",
+                              "created_at": "2024-08-22T09:39:13.000000Z",
+                              "updated_at": "2024-08-22T09:39:13.000000Z"
+                          },
+                          "organization_service_items": null,
+                          "hmo_service_pricings": [
+                              {
+                                  "id": "9cd3cd83-8dbb-40ee-ad44-e3eb52fffaf1",
+                                  "hmo_service_id": "9cd3cd83-8c62-4fa5-8a29-973f81262ec0",
+                                  "coverage_type": "full",
+                                  "percent": "20.00",
+                                  "status": "active",
+                                  "created_at": "2024-08-22T13:56:39.000000Z",
+                                  "updated_at": "2024-08-22T13:56:39.000000Z"
+                              }
+                          ]
+                      },
+                      {
+                          "id": "9cd3cd83-9036-4882-b925-8cbdbb4b8482",
+                          "hmo_id": "9bbbac52-edd1-4aa7-8254-c29c14fa6249",
+                          "plan_name": "Diamond",
+                          "organization_id": "9bc5eb78-74d2-45f4-a677-05d07dca6a63",
+                          "service_item_id": "9cd37172-a61c-4091-a826-ccb0c4f583f4",
+                          "created_at": "2024-08-22T13:56:39.000000Z",
+                          "updated_at": "2024-08-22T13:56:39.000000Z",
+                          "service_items": {
+                              "id": "9cd37172-a61c-4091-a826-ccb0c4f583f4",
+                              "name": "Minor Surgical Procedure",
+                              "service_type": "Procedures",
+                              "created_at": "2024-08-22T09:39:13.000000Z",
+                              "updated_at": "2024-08-22T09:39:13.000000Z"
+                          },
+                          "organization_service_items": null,
+                          "hmo_service_pricings": [
+                              {
+                                  "id": "9cd3cd83-9128-4b07-a8d4-60f598ccdc03",
+                                  "hmo_service_id": "9cd3cd83-9036-4882-b925-8cbdbb4b8482",
+                                  "coverage_type": "partial",
+                                  "percent": "0.00",
+                                  "status": "active",
+                                  "created_at": "2024-08-22T13:56:39.000000Z",
+                                  "updated_at": "2024-08-22T13:56:39.000000Z"
+                              }
+                          ]
+                      },
+                      {
+                          "id": "9cd4290c-ea72-48fc-8fc5-9970f358d5d7",
+                          "hmo_id": "9bbbac52-edd1-4aa7-8254-c29c14fa6249",
+                          "plan_name": "Diamond",
+                          "organization_id": "9bc5eb78-74d2-45f4-a677-05d07dca6a63",
+                          "service_item_id": "9cd37172-b24b-4ba4-8409-790a1d841695",
+                          "created_at": "2024-08-22T18:12:37.000000Z",
+                          "updated_at": "2024-08-22T18:12:37.000000Z",
+                          "service_items": {
+                              "id": "9cd37172-b24b-4ba4-8409-790a1d841695",
+                              "name": "Obstetric Ultrasound",
+                              "service_type": "Ultrasounds",
+                              "created_at": "2024-08-22T09:39:13.000000Z",
+                              "updated_at": "2024-08-22T09:39:13.000000Z"
+                          },
+                          "organization_service_items": {
+                              "id": "9cd428fa-e410-4388-b2d0-310c63431e72",
+                              "service_item_id": "9cd37172-b24b-4ba4-8409-790a1d841695",
+                              "hmo_id": "9bbbac52-edd1-4aa7-8254-c29c14fa6249",
+                              "organization_id": "9bc5eb78-74d2-45f4-a677-05d07dca6a63",
+                              "care_type": "Primary Care",
+                              "amount": "11000.00",
+                              "status": "active",
+                              "created_at": "2024-08-22T18:12:25.000000Z",
+                              "updated_at": "2024-08-22T18:12:25.000000Z"
+                          },
+                          "hmo_service_pricings": [
+                              {
+                                  "id": "9cd4290c-ec20-4ebd-bc77-fe85c78836aa",
+                                  "hmo_service_id": "9cd4290c-ea72-48fc-8fc5-9970f358d5d7",
+                                  "coverage_type": "partial",
+                                  "percent": "4.55",
+                                  "status": "active",
+                                  "created_at": "2024-08-22T18:12:37.000000Z",
+                                  "updated_at": "2024-08-22T18:12:37.000000Z"
+                              }
+                          ]
+                      },
+                      {
+                          "id": "9cd42e4c-7beb-45d5-9f81-858d6372aa2e",
+                          "hmo_id": "9bbbac52-edd1-4aa7-8254-c29c14fa6249",
+                          "plan_name": "Diamond",
+                          "organization_id": "9bc5eb78-74d2-45f4-a677-05d07dca6a63",
+                          "service_item_id": "9cd37172-b6a4-4ed2-bce9-2d16432aba18",
+                          "created_at": "2024-08-22T18:27:17.000000Z",
+                          "updated_at": "2024-08-22T18:27:17.000000Z",
+                          "service_items": {
+                              "id": "9cd37172-b6a4-4ed2-bce9-2d16432aba18",
+                              "name": "Cardiac Ultrasound",
+                              "service_type": "Ultrasounds",
+                              "created_at": "2024-08-22T09:39:13.000000Z",
+                              "updated_at": "2024-08-22T09:39:13.000000Z"
+                          },
+                          "organization_service_items": {
+                              "id": "9cd42e32-3c58-48bb-87a9-0a17b479bcee",
+                              "service_item_id": "9cd37172-b6a4-4ed2-bce9-2d16432aba18",
+                              "hmo_id": "9bbbac52-edd1-4aa7-8254-c29c14fa6249",
+                              "organization_id": "9bc5eb78-74d2-45f4-a677-05d07dca6a63",
+                              "care_type": "Primary Care",
+                              "amount": "1590.00",
+                              "status": "active",
+                              "created_at": "2024-08-22T18:27:00.000000Z",
+                              "updated_at": "2024-08-22T18:27:00.000000Z"
+                          },
+                          "hmo_service_pricings": [
+                              {
+                                  "id": "9cd42e4c-7d37-431a-b6f8-4eb6d60cd898",
+                                  "hmo_service_id": "9cd42e4c-7beb-45d5-9f81-858d6372aa2e",
+                                  "coverage_type": "partial",
+                                  "percent": "31.45",
+                                  "status": "active",
+                                  "created_at": "2024-08-22T18:27:17.000000Z",
+                                  "updated_at": "2024-08-22T18:27:17.000000Z"
+                              }
+                          ]
+                      },
+                      {
+                          "id": "9cd42e4c-79eb-4e53-8b73-749065cbfe79",
+                          "hmo_id": "9bbbac52-edd1-4aa7-8254-c29c14fa6249",
+                          "plan_name": "Diamond",
+                          "organization_id": "9bc5eb78-74d2-45f4-a677-05d07dca6a63",
+                          "service_item_id": "9cd37172-b78b-475f-a959-ee559951bbe1",
+                          "created_at": "2024-08-22T18:27:17.000000Z",
+                          "updated_at": "2024-08-22T18:27:17.000000Z",
+                          "service_items": {
+                              "id": "9cd37172-b78b-475f-a959-ee559951bbe1",
+                              "name": "Musculoskeletal Ultrasound",
+                              "service_type": "Ultrasounds",
+                              "created_at": "2024-08-22T09:39:13.000000Z",
+                              "updated_at": "2024-08-22T09:39:13.000000Z"
+                          },
+                          "organization_service_items": {
+                              "id": "9cd42dfe-ed96-46fb-a676-697e3ade16e8",
+                              "service_item_id": "9cd37172-b78b-475f-a959-ee559951bbe1",
+                              "hmo_id": "9bbbac52-edd1-4aa7-8254-c29c14fa6249",
+                              "organization_id": "9bc5eb78-74d2-45f4-a677-05d07dca6a63",
+                              "care_type": "Primary Care",
+                              "amount": "1500.00",
+                              "status": "active",
+                              "created_at": "2024-08-22T18:26:26.000000Z",
+                              "updated_at": "2024-08-22T18:26:26.000000Z"
+                          },
+                          "hmo_service_pricings": [
+                              {
+                                  "id": "9cd42e4c-7b56-449a-bd8d-9f4e369ec877",
+                                  "hmo_service_id": "9cd42e4c-79eb-4e53-8b73-749065cbfe79",
+                                  "coverage_type": "full",
+                                  "percent": "13.80",
+                                  "status": "active",
+                                  "created_at": "2024-08-22T18:27:17.000000Z",
+                                  "updated_at": "2024-08-22T18:27:17.000000Z"
+                              }
+                          ]
+                      },
+                      {
+                          "id": "9cd42e4c-6f29-4092-8111-0303d1e62907",
+                          "hmo_id": "9bbbac52-edd1-4aa7-8254-c29c14fa6249",
+                          "plan_name": "Diamond",
+                          "organization_id": "9bc5eb78-74d2-45f4-a677-05d07dca6a63",
+                          "service_item_id": "9cd37172-b85a-4479-832f-bd6f78ffdc43",
+                          "created_at": "2024-08-22T18:27:17.000000Z",
+                          "updated_at": "2024-08-22T18:27:17.000000Z",
+                          "service_items": {
+                              "id": "9cd37172-b85a-4479-832f-bd6f78ffdc43",
+                              "name": "Pediatric Ultrasound",
+                              "service_type": "Ultrasounds",
+                              "created_at": "2024-08-22T09:39:13.000000Z",
+                              "updated_at": "2024-08-22T09:39:13.000000Z"
+                          },
+                          "organization_service_items": {
+                              "id": "9cd42dda-5108-4c18-88b1-4d682a7fcae0",
+                              "service_item_id": "9cd37172-b85a-4479-832f-bd6f78ffdc43",
+                              "hmo_id": "9bbbac52-edd1-4aa7-8254-c29c14fa6249",
+                              "organization_id": "9bc5eb78-74d2-45f4-a677-05d07dca6a63",
+                              "care_type": "Primary Care",
+                              "amount": "11500.00",
+                              "status": "active",
+                              "created_at": "2024-08-22T18:26:02.000000Z",
+                              "updated_at": "2024-08-22T18:26:02.000000Z"
+                          },
+                          "hmo_service_pricings": [
+                              {
+                                  "id": "9cd42e4c-792b-4cfc-a44e-4f3404e70518",
+                                  "hmo_service_id": "9cd42e4c-6f29-4092-8111-0303d1e62907",
+                                  "coverage_type": "zero",
+                                  "percent": "4.35",
+                                  "status": "active",
+                                  "created_at": "2024-08-22T18:27:17.000000Z",
+                                  "updated_at": "2024-08-22T18:27:17.000000Z"
+                              }
+                          ]
+                      }
+                  ]
+              }
+          }

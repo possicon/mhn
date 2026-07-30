@@ -1,0 +1,33 @@
+info:
+  name: Create Admin
+  type: http
+  seq: 2
+
+http:
+  method: POST
+  url: "{{base_url}}/admin/auth/create-admin"
+  headers:
+    - name: Accept
+      value: application/vnd.api+json
+    - name: Content-Type
+      value: application/vnd.api+json
+  body:
+    type: json
+    data: |-
+      {
+          "first_name":"Lekan",
+          "last_name":"Banwo",
+          "email":"admin@mhn.com",
+          "gender":"male",
+          "country_id":"161",
+          "phone":"242424",
+          "password":"computer",
+          "callbackUrl":"http://mhn.test/backoffice"
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

@@ -1,0 +1,92 @@
+info:
+  name: listMessages
+  type: http
+  seq: 3
+
+http:
+  method: GET
+  url: "{{base_url}}/admin/customer_support/:id/message"
+  params:
+    - name: id
+      value: 9bfe6949-d88e-48ee-bc00-c17ee16d4fdf
+      type: path
+  auth:
+    type: bearer
+    token: 67|KhEx2m1UJvpc170dceaZNAJP3r5W58EogCwrqarKa471857c
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+examples:
+  - name: listMessages
+    request:
+      url: "{{base_url}}/admin/customer_support/:id/message"
+      method: GET
+      params:
+        - name: id
+          value: 9bfe6949-d88e-48ee-bc00-c17ee16d4fdf
+          type: path
+    response:
+      status: 200
+      statusText: OK
+      headers:
+        - name: Date
+          value: Fri, 10 May 2024 23:49:36 GMT
+        - name: Server
+          value: Apache/2.4.54 (Win64) OpenSSL/1.1.1q mod_fcgid/2.3.10-dev
+        - name: X-Powered-By
+          value: PHP/8.2.16
+        - name: Cache-Control
+          value: no-cache, private
+        - name: X-RateLimit-Limit
+          value: "60"
+        - name: X-RateLimit-Remaining
+          value: "59"
+        - name: Access-Control-Allow-Origin
+          value: "*"
+        - name: Vary
+          value: Authorization
+        - name: Keep-Alive
+          value: timeout=5, max=100
+        - name: Connection
+          value: Keep-Alive
+        - name: Transfer-Encoding
+          value: chunked
+        - name: Content-Type
+          value: application/json
+      body:
+        type: json
+        data: |-
+          {
+              "success": true,
+              "code": 0,
+              "locale": "en",
+              "message": "OK",
+              "data": {
+                  "items": [
+                      {
+                          "id": "9c0369ea-8beb-4313-a0c0-361c51fdddb0",
+                          "customer_support_id": "9bfe6949-d88e-48ee-bc00-c17ee16d4fdf",
+                          "organization_id": "9bc5eb78-74d2-45f4-a677-05d07dca6a63",
+                          "messageable_id": "9b9dc055-0c72-460f-9b90-eeda5a248bf5",
+                          "messageable_type": "App\\Models\\Admin",
+                          "message": "You will be attended soonest",
+                          "created_at": "2024-05-10T23:45:58.000000Z",
+                          "updated_at": "2024-05-10T23:45:58.000000Z"
+                      },
+                      {
+                          "id": "9c0364dd-9e8f-4a86-a1f8-ba74bc44866b",
+                          "customer_support_id": "9bfe6949-d88e-48ee-bc00-c17ee16d4fdf",
+                          "organization_id": "9bc5eb78-74d2-45f4-a677-05d07dca6a63",
+                          "messageable_id": "9bc6382c-bb73-4c7d-9409-677fe560485d",
+                          "messageable_type": "App\\Models\\User",
+                          "message": "I am setting up hmo module",
+                          "created_at": "2024-05-10T23:31:51.000000Z",
+                          "updated_at": "2024-05-10T23:31:51.000000Z"
+                      }
+                  ]
+              }
+          }

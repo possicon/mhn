@@ -1,0 +1,81 @@
+info:
+  name: Bulk Cancel Appointment
+  type: http
+  seq: 8
+
+http:
+  method: POST
+  url: "{{base_url}}/user/appointments/bulk-cancel"
+  headers:
+    - name: Accept
+      value: application/json
+  body:
+    type: json
+    data: |-
+      {
+          "appointment_ids" : [
+              "a14427af-e505-4c40-a7ad-6c2bcbf8ff75"
+          ]
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+examples:
+  - name: cancel appointments
+    request:
+      url: "{{base_url}}/user/appointments/bulk-cancel"
+      method: POST
+      headers:
+        - name: Accept
+          value: application/json
+      body:
+        type: json
+        data: |-
+          {
+              "appointment_ids" : [
+                  "a14427af-e505-4c40-a7ad-6c2bcbf8ff75"
+              ]
+          }
+    response:
+      status: 200
+      statusText: OK
+      headers:
+        - name: Server
+          value: nginx/1.24.0 (Ubuntu)
+        - name: Content-Type
+          value: application/json
+        - name: Transfer-Encoding
+          value: chunked
+        - name: Connection
+          value: keep-alive
+        - name: Cache-Control
+          value: no-cache, private
+        - name: Date
+          value: Tue, 09 Jun 2026 18:58:54 GMT
+        - name: X-RateLimit-Limit
+          value: "60"
+        - name: X-RateLimit-Remaining
+          value: "59"
+        - name: Vary
+          value: Origin
+        - name: X-Frame-Options
+          value: SAMEORIGIN
+        - name: X-XSS-Protection
+          value: 1; mode=block
+        - name: X-Content-Type-Options
+          value: nosniff
+      body:
+        type: json
+        data: |-
+          {
+              "success": true,
+              "code": 0,
+              "locale": "en",
+              "message": "Appointment cancelled",
+              "data": null
+          }

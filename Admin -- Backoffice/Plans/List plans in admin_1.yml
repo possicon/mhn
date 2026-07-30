@@ -1,0 +1,32 @@
+info:
+  name: List plans in admin_1
+  type: http
+  seq: 15
+
+http:
+  method: GET
+  url: "{{base_url}}/admin/plan?skip=0&take=50"
+  params:
+    - name: skip
+      value: "0"
+      type: query
+    - name: take
+      value: "50"
+      type: query
+  auth:
+    type: bearer
+    token: "{{adminToken}}"
+
+runtime:
+  scripts:
+    - type: after-response
+      code: |-
+        test("Successfully retrived plans", function () {
+            expect(res.getStatus()).to.be.oneOf([200, 201]);
+        });
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

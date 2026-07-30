@@ -1,0 +1,26 @@
+info:
+  name: download sample
+  type: http
+  seq: 8
+
+http:
+  method: POST
+  url: "{{base_url}}/admin/region/sample"
+  body:
+    type: text
+    data: "{\r
+
+      \  \"name\": \"Asia\",\r
+
+      \  \"code\": \"ASI\",\r
+
+      \  \"description\":\"This is Asia\"\r
+
+      }"
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

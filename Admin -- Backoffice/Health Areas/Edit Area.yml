@@ -1,0 +1,36 @@
+info:
+  name: Edit Area
+  type: http
+  seq: 6
+
+http:
+  method: POST
+  url: "{{base_url}}/admin/health-area/edit"
+  body:
+    type: json
+    data: "{\r
+
+      \    \"id\": \"9b30fbb3-1aa2-4476-a1f5-c41d42a906f7\",\r
+
+      \    \"name\": \"Patient Management\",\r
+
+      \    \"description\": \"Some description\",\r
+
+      \    \"organizations\": [\r
+
+      \        1,\r
+
+      \        2,\r
+
+      \        3\r
+
+      \    ]\r
+
+      }"
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

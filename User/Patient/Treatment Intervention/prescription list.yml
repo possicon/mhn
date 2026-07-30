@@ -1,0 +1,192 @@
+info:
+  name: prescription list
+  type: http
+  seq: 13
+
+http:
+  method: GET
+  url: "{{base_url}}/user/patients/:id/treatment_intervention/prescription"
+  headers:
+    - name: Accept
+      value: application/json
+  params:
+    - name: id
+      value: 9c111152-abe1-4490-ab04-c066445133a7
+      type: path
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+examples:
+  - name: prescription list
+    request:
+      url: "{{base_url}}/user/patients/:id/treatment_intervention/prescription"
+      method: GET
+      headers:
+        - name: Accept
+          value: application/json
+      params:
+        - name: id
+          value: 9c111152-abe1-4490-ab04-c066445133a7
+          type: path
+    response:
+      status: 200
+      statusText: OK
+      headers:
+        - name: Date
+          value: Mon, 22 Jul 2024 06:28:00 GMT
+        - name: Server
+          value: Apache/2.4.54 (Win64) OpenSSL/1.1.1q mod_fcgid/2.3.10-dev
+        - name: X-Powered-By
+          value: PHP/8.2.16
+        - name: Cache-Control
+          value: no-cache, private
+        - name: X-RateLimit-Limit
+          value: "60"
+        - name: X-RateLimit-Remaining
+          value: "59"
+        - name: Access-Control-Allow-Origin
+          value: "*"
+        - name: Vary
+          value: Authorization
+        - name: Keep-Alive
+          value: timeout=5, max=100
+        - name: Connection
+          value: Keep-Alive
+        - name: Transfer-Encoding
+          value: chunked
+        - name: Content-Type
+          value: application/json
+      body:
+        type: json
+        data: |-
+          {
+              "success": true,
+              "code": 0,
+              "locale": "en",
+              "message": "success",
+              "data": {
+                  "item": {
+                      "id": "9c94d004-9383-4c60-b2ac-51243440e160",
+                      "patient_id": "9c111152-abe1-4490-ab04-c066445133a7",
+                      "visit_date": "2024-07-22 00:00:00",
+                      "treatment_plan": "treatment and refer",
+                      "refer_to": null,
+                      "procedures": null,
+                      "programs": null,
+                      "admission": null,
+                      "prescription": 1,
+                      "followup": null,
+                      "prenatal_care": null,
+                      "hospital_id": null,
+                      "reasons_for_refer": null,
+                      "additional_note": null,
+                      "trimester": null,
+                      "number_of_examination": null,
+                      "prenatal_care_frequency": null,
+                      "prenatal_care_note": null,
+                      "followup_occurrence": null,
+                      "followup_note": null,
+                      "followup_start_date": null,
+                      "followup_end_date": null,
+                      "followup_time": null,
+                      "followup_doctor_id": null,
+                      "repeat_followup": 0,
+                      "prescription_ids": [
+                          "9c94d004-7e2f-45d4-8e26-98bfc16628ed",
+                          "9c94d004-90a8-45fb-97ff-5ac1b32b4e77",
+                          "9c94d004-91fa-4f15-9b49-13521c50c5b1"
+                      ],
+                      "wards": null,
+                      "bed_number": null,
+                      "instruction_for_wards": null,
+                      "program_id": null,
+                      "procedure_id": null,
+                      "requested_by": {
+                          "id": "9bc6382c-bb73-4c7d-9409-677fe560485d",
+                          "first_name": "General",
+                          "middle_name": "Prince",
+                          "last_name": "Emmanuel",
+                          "gender": "male",
+                          "status": "Active",
+                          "phone": "0802323232323",
+                          "email": "contactus@mhn.ng",
+                          "username": null,
+                          "email_verified_at": null,
+                          "type": "owner",
+                          "country_id": "9b9faee3-6aaa-4050-bd6c-98a43e674250",
+                          "branch_id": null,
+                          "organization_id": "9bc5eb78-74d2-45f4-a677-05d07dca6a63",
+                          "company_id": null,
+                          "reset_token": null,
+                          "token_time": null,
+                          "created_at": "2024-04-10T13:41:22.000000Z",
+                          "updated_at": "2024-04-11T19:11:50.000000Z",
+                          "deleted_at": null
+                      },
+                      "created_at": "2024-07-22T06:26:30.000000Z",
+                      "updated_at": "2024-07-22T06:26:30.000000Z",
+                      "admission_status": "awaiting admission",
+                      "patientPrescription": [
+                          {
+                              "id": "9c94d004-7e2f-45d4-8e26-98bfc16628ed",
+                              "patient_id": "9c111152-abe1-4490-ab04-c066445133a7",
+                              "visit_date": "2024-07-22 00:00:00",
+                              "medicine_type": "Pill",
+                              "medicine_name": "Paracetamol",
+                              "dosage": "One Tab",
+                              "frequency": "Daily",
+                              "period": "Morning and evening",
+                              "amount": "1000.00",
+                              "start_date": "08-02-2024",
+                              "end_date": "15-02-2024",
+                              "pharmacy": "default",
+                              "prescription": null,
+                              "status": "pending",
+                              "created_at": "2024-07-22T06:26:30.000000Z",
+                              "updated_at": "2024-07-22T06:26:30.000000Z"
+                          },
+                          {
+                              "id": "9c94d004-90a8-45fb-97ff-5ac1b32b4e77",
+                              "patient_id": "9c111152-abe1-4490-ab04-c066445133a7",
+                              "visit_date": "2024-07-22 00:00:00",
+                              "medicine_type": "Injection",
+                              "medicine_name": "Chlroquire",
+                              "dosage": "One Injection",
+                              "frequency": "Twice daily",
+                              "period": "Evening",
+                              "amount": "900.00",
+                              "start_date": "10-03-2024",
+                              "end_date": "13-03-2024",
+                              "pharmacy": "default",
+                              "prescription": null,
+                              "status": "pending",
+                              "created_at": "2024-07-22T06:26:30.000000Z",
+                              "updated_at": "2024-07-22T06:26:30.000000Z"
+                          },
+                          {
+                              "id": "9c94d004-91fa-4f15-9b49-13521c50c5b1",
+                              "patient_id": "9c111152-abe1-4490-ab04-c066445133a7",
+                              "visit_date": "2024-07-22 00:00:00",
+                              "medicine_type": "Pill",
+                              "medicine_name": "Vitamin C",
+                              "dosage": "Two Tabs",
+                              "frequency": "Daily",
+                              "period": "Morning",
+                              "amount": "700.00",
+                              "start_date": "15-04-2024",
+                              "end_date": "15-05-2024",
+                              "pharmacy": "default",
+                              "prescription": null,
+                              "status": "pending",
+                              "created_at": "2024-07-22T06:26:30.000000Z",
+                              "updated_at": "2024-07-22T06:26:30.000000Z"
+                          }
+                      ]
+                  }
+              }
+          }

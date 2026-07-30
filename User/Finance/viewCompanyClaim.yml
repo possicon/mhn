@@ -1,0 +1,367 @@
+info:
+  name: viewCompanyClaim
+  type: http
+  seq: 11
+
+http:
+  method: GET
+  url: "{{base_url}}/user/organization/viewCompanyClaim/:companyClaims"
+  headers:
+    - name: Accept
+      value: application/json
+  params:
+    - name: companyClaims
+      value: 9d4d22e5-91b2-476d-8b53-14783de0c46f
+      type: path
+  auth:
+    type: bearer
+    token: 64|wekxmT6fEC7W1savxR3VWd2fcLOu9fkY2pdTExtBe40532c7
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+examples:
+  - name: viewCompanyClaim
+    request:
+      url: "{{base_url}}/user/organization/viewCompanyClaim/:companyClaims"
+      method: GET
+      headers:
+        - name: Accept
+          value: application/json
+      params:
+        - name: companyClaims
+          value: 9d407cf4-fd51-4963-887e-b5c5b976941c
+          type: path
+    response:
+      status: 200
+      statusText: OK
+      headers:
+        - name: Date
+          value: Sun, 09 Mar 2025 16:59:56 GMT
+        - name: Server
+          value: Apache/2.4.54 (Win64) OpenSSL/1.1.1d mod_fcgid/2.3.10-dev
+        - name: X-Powered-By
+          value: PHP/8.2.17
+        - name: Cache-Control
+          value: no-cache, private
+        - name: X-RateLimit-Limit
+          value: "60"
+        - name: X-RateLimit-Remaining
+          value: "58"
+        - name: Access-Control-Allow-Origin
+          value: "*"
+        - name: Vary
+          value: Authorization
+        - name: Keep-Alive
+          value: timeout=5, max=100
+        - name: Connection
+          value: Keep-Alive
+        - name: Transfer-Encoding
+          value: chunked
+        - name: Content-Type
+          value: application/json
+      body:
+        type: json
+        data: |-
+          {
+              "success": true,
+              "code": 0,
+              "locale": "en",
+              "message": "Success",
+              "data": {
+                  "values": [
+                      {
+                          "9bf2e6d3-08c3-4826-b389-f0bebcca9fa9": {
+                              "claim": {
+                                  "id": "9d407cf4-fd51-4963-887e-b5c5b976941c",
+                                  "company_id": "9bf4a55d-7f00-4a05-8ddf-7064aa43a016",
+                                  "from": "2024-10-01",
+                                  "to": "2024-10-15",
+                                  "created_at": "2024-10-15T14:36:38.000000Z",
+                                  "updated_at": "2024-10-15T14:36:38.000000Z",
+                                  "invoice_ids": "[\"9d3e8b9b-faf4-4301-a9fb-b2de1d5782c1\"]",
+                                  "organization_id": "9bc5eb78-74d2-45f4-a677-05d07dca6a63"
+                              },
+                              "patient_id": "9bf2e6d3-08c3-4826-b389-f0bebcca9fa9",
+                              "patient_first_name": "John",
+                              "patient_last_name": "Doe",
+                              "patient_sequence": "MHN_USAi2dCTNS",
+                              "company_name": "Uemmaco&sons Ltd Nig",
+                              "total_amount": 81900,
+                              "total_billed_to_patient": 1600,
+                              "total_hmo_coverage": 0,
+                              "service_count": 2,
+                              "services": {
+                                  "clinical lab": [
+                                      {
+                                          "id": "9d16730b-44c2-4900-b0c9-69451240487c",
+                                          "patient_id": "9bf2e6d3-08c3-4826-b389-f0bebcca9fa9",
+                                          "service_id": "9cfe8382-f887-486e-9644-04a1642fa621",
+                                          "hmo_id": null,
+                                          "company_id": "9bf4a55d-7f00-4a05-8ddf-7064aa43a016",
+                                          "organization_id": "9bc5eb78-74d2-45f4-a677-05d07dca6a63",
+                                          "hmo_policy_number": null,
+                                          "amount": "1000.00",
+                                          "payment_date": "20-02-2024",
+                                          "mode": "company",
+                                          "transaction_id": "ELJLG9042DKJ",
+                                          "status": "billed",
+                                          "description": null,
+                                          "bank_name": "",
+                                          "created_at": "2024-09-24T17:04:09.000000Z",
+                                          "updated_at": "2024-10-14T15:25:57.000000Z",
+                                          "appointment_id": "9d167445-bd3e-405f-913a-e99c91aa5f8c",
+                                          "coverage_percent": "15.00",
+                                          "plan": "gold",
+                                          "coverage_type": "partial",
+                                          "billable_amount": "400.00",
+                                          "requires_authorization": 1,
+                                          "authorization_code": null,
+                                          "authorization_officer": null,
+                                          "coverage_amount": null,
+                                          "quantity": null,
+                                          "fee_status": "unpaid",
+                                          "deleted_at": null,
+                                          "in_invoice": 1,
+                                          "care_type": null,
+                                          "service": {
+                                              "id": "9cfe8382-f887-486e-9644-04a1642fa621",
+                                              "name": "Liver Function Test",
+                                              "service_type": "clinical lab",
+                                              "created_at": "2024-09-12T19:30:20.000000Z",
+                                              "updated_at": "2024-09-12T19:30:20.000000Z",
+                                              "organization_id": null,
+                                              "description": null,
+                                              "category": null,
+                                              "status": "active"
+                                          },
+                                          "company": {
+                                              "id": "9bf4a55d-7f00-4a05-8ddf-7064aa43a016",
+                                              "company_name": "Uemmaco&sons Ltd Nig",
+                                              "organization_id": "9bc5eb78-74d2-45f4-a677-05d07dca6a63",
+                                              "address": "Ikoyi",
+                                              "city_id": "9ba1338d-b0b7-4b3c-b191-576470d3223c",
+                                              "state_id": "9ba01c32-0a3c-4faa-852a-491d640d989f",
+                                              "company_email": "uemmacogu@goodyl.com",
+                                              "company_phone": "08035253353",
+                                              "status": "inactive",
+                                              "created_at": "2024-05-03T15:34:46.000000Z",
+                                              "updated_at": "2024-05-03T15:34:46.000000Z"
+                                          },
+                                          "prescription_medicine": [],
+                                          "diagnostic_test": null,
+                                          "xray": {
+                                              "id": "9c616a8f-1545-4cc8-a442-0a476c4e451b",
+                                              "patient_id": "9c111152-abe1-4490-ab04-c066445133a7",
+                                              "visit_date": "2024-11-03 00:00:00",
+                                              "created_at": "2024-11-01T17:15:35.000000Z",
+                                              "updated_at": "2024-11-07T06:35:07.000000Z",
+                                              "laboratory": "mhn network",
+                                              "payment_status": "payment status",
+                                              "progress_status": "in_progress",
+                                              "requested_by": {
+                                                  "id": "9bc6382c-bb73-4c7d-9409-677fe560485d",
+                                                  "first_name": "General",
+                                                  "middle_name": "Prince",
+                                                  "last_name": "Emmanuel",
+                                                  "gender": "male",
+                                                  "status": "Active",
+                                                  "phone": "0802323232323",
+                                                  "email": "contactus@mhn.ng",
+                                                  "username": null,
+                                                  "email_verified_at": null,
+                                                  "type": "owner",
+                                                  "country_id": "9b9faee3-6aaa-4050-bd6c-98a43e674250",
+                                                  "branch_id": null,
+                                                  "organization_id": "9bc5eb78-74d2-45f4-a677-05d07dca6a63",
+                                                  "company_id": null,
+                                                  "reset_token": null,
+                                                  "token_time": null,
+                                                  "created_at": "2024-04-10T13:41:22.000000Z",
+                                                  "updated_at": "2024-04-11T19:11:50.000000Z",
+                                                  "deleted_at": null
+                                              },
+                                              "tests": "[\"9cfe8383-2e8e-411f-8466-3e64ff9a2e2e\"]",
+                                              "note": "note",
+                                              "appointment_id": "9d167445-bd3e-405f-913a-e99c91aa5f8c",
+                                              "organization_id": "9bc5eb78-74d2-45f4-a677-05d07dca6a63",
+                                              "category": "X-rays",
+                                              "sub_category": "[\"CT-Scan\",\"MRI\"]",
+                                              "report_note": null,
+                                              "message": null,
+                                              "cluster_number": "",
+                                              "billIds": null,
+                                              "patient": {
+                                                  "id": "9c111152-abe1-4490-ab04-c066445133a7",
+                                                  "created_by_organization_id": null,
+                                                  "patient_sequence": "MHN_USAi2dTkjg",
+                                                  "title": "Miss",
+                                                  "first_name": "Goodness",
+                                                  "last_name": "Ebubechukwu",
+                                                  "middle_name": "Ogbuagu",
+                                                  "dob": "2022-02-02",
+                                                  "gender": "female",
+                                                  "occupation": "Engineer",
+                                                  "nin": "79183109178",
+                                                  "martial_status": "single",
+                                                  "tribe": "Igbo",
+                                                  "religion": "Christianity",
+                                                  "created_at": "2024-05-17T18:39:50.000000Z",
+                                                  "updated_at": "2024-09-24T23:51:49.000000Z",
+                                                  "preferred_language": "9bfad77f-9532-493c-88b9-6b99ebe55b8b",
+                                                  "status": "out-patient",
+                                                  "city_id": "9ba1338d-f1ca-487b-ae34-471ddc6a7bc2",
+                                                  "state_id": "9ba01c32-186f-4ce1-84a5-0ee8884d02de",
+                                                  "country_id": "9b9faee2-b2e9-4033-bf57-d000bb45d6f5",
+                                                  "address": "31 Onitsha Rd",
+                                                  "email_address": "contactlove@mhn.com",
+                                                  "additional_mobile": "09087653421",
+                                                  "primary_mobile": "08023456789",
+                                                  "deleted_at": null,
+                                                  "user_id": "9c111152-c552-43a7-a1b1-0fc8e1226ad6",
+                                                  "file_number": "68792308"
+                                              }
+                                          }
+                                      }
+                                  ],
+                                  "general": [
+                                      {
+                                          "id": "9d18f314-8187-46b2-a116-54a056b1e935",
+                                          "patient_id": "9bf2e6d3-08c3-4826-b389-f0bebcca9fa9",
+                                          "service_id": "9cfeab80-4d97-4ce8-8cd4-755e3fc9ea0d",
+                                          "hmo_id": null,
+                                          "company_id": "9bf4a55d-7f00-4a05-8ddf-7064aa43a016",
+                                          "organization_id": "9bc5eb78-74d2-45f4-a677-05d07dca6a63",
+                                          "hmo_policy_number": null,
+                                          "amount": "80900.00",
+                                          "payment_date": "20-02-2024",
+                                          "mode": "company",
+                                          "transaction_id": "ELJLG9042DKJ",
+                                          "status": "billed",
+                                          "description": null,
+                                          "bank_name": null,
+                                          "created_at": "2024-09-25T22:53:49.000000Z",
+                                          "updated_at": "2024-10-14T15:25:57.000000Z",
+                                          "appointment_id": "9d167445-bd3e-405f-913a-e99c91aa5f8c",
+                                          "coverage_percent": "0.02",
+                                          "plan": "gold",
+                                          "coverage_type": "partial",
+                                          "billable_amount": "1200.00",
+                                          "requires_authorization": 1,
+                                          "authorization_code": null,
+                                          "authorization_officer": null,
+                                          "coverage_amount": null,
+                                          "quantity": null,
+                                          "fee_status": "unpaid",
+                                          "deleted_at": null,
+                                          "in_invoice": 1,
+                                          "care_type": "primary care",
+                                          "service": {
+                                              "id": "9cfeab80-4d97-4ce8-8cd4-755e3fc9ea0d",
+                                              "name": "admit patient",
+                                              "service_type": "general",
+                                              "created_at": "2024-09-12T21:22:09.000000Z",
+                                              "updated_at": "2024-09-12T21:22:09.000000Z",
+                                              "organization_id": "9bc5eb78-74d2-45f4-a677-05d07dca6a63",
+                                              "description": "Hospital Resistration description",
+                                              "category": "general",
+                                              "status": "active"
+                                          },
+                                          "company": {
+                                              "id": "9bf4a55d-7f00-4a05-8ddf-7064aa43a016",
+                                              "company_name": "Uemmaco&sons Ltd Nig",
+                                              "organization_id": "9bc5eb78-74d2-45f4-a677-05d07dca6a63",
+                                              "address": "Ikoyi",
+                                              "city_id": "9ba1338d-b0b7-4b3c-b191-576470d3223c",
+                                              "state_id": "9ba01c32-0a3c-4faa-852a-491d640d989f",
+                                              "company_email": "uemmacogu@goodyl.com",
+                                              "company_phone": "08035253353",
+                                              "status": "inactive",
+                                              "created_at": "2024-05-03T15:34:46.000000Z",
+                                              "updated_at": "2024-05-03T15:34:46.000000Z"
+                                          },
+                                          "prescription_medicine": [],
+                                          "diagnostic_test": null,
+                                          "xray": {
+                                              "id": "9c616a8f-1545-4cc8-a442-0a476c4e451b",
+                                              "patient_id": "9c111152-abe1-4490-ab04-c066445133a7",
+                                              "visit_date": "2024-11-03 00:00:00",
+                                              "created_at": "2024-11-01T17:15:35.000000Z",
+                                              "updated_at": "2024-11-07T06:35:07.000000Z",
+                                              "laboratory": "mhn network",
+                                              "payment_status": "payment status",
+                                              "progress_status": "in_progress",
+                                              "requested_by": {
+                                                  "id": "9bc6382c-bb73-4c7d-9409-677fe560485d",
+                                                  "first_name": "General",
+                                                  "middle_name": "Prince",
+                                                  "last_name": "Emmanuel",
+                                                  "gender": "male",
+                                                  "status": "Active",
+                                                  "phone": "0802323232323",
+                                                  "email": "contactus@mhn.ng",
+                                                  "username": null,
+                                                  "email_verified_at": null,
+                                                  "type": "owner",
+                                                  "country_id": "9b9faee3-6aaa-4050-bd6c-98a43e674250",
+                                                  "branch_id": null,
+                                                  "organization_id": "9bc5eb78-74d2-45f4-a677-05d07dca6a63",
+                                                  "company_id": null,
+                                                  "reset_token": null,
+                                                  "token_time": null,
+                                                  "created_at": "2024-04-10T13:41:22.000000Z",
+                                                  "updated_at": "2024-04-11T19:11:50.000000Z",
+                                                  "deleted_at": null
+                                              },
+                                              "tests": "[\"9cfe8383-2e8e-411f-8466-3e64ff9a2e2e\"]",
+                                              "note": "note",
+                                              "appointment_id": "9d167445-bd3e-405f-913a-e99c91aa5f8c",
+                                              "organization_id": "9bc5eb78-74d2-45f4-a677-05d07dca6a63",
+                                              "category": "X-rays",
+                                              "sub_category": "[\"CT-Scan\",\"MRI\"]",
+                                              "report_note": null,
+                                              "message": null,
+                                              "cluster_number": "",
+                                              "billIds": null,
+                                              "patient": {
+                                                  "id": "9c111152-abe1-4490-ab04-c066445133a7",
+                                                  "created_by_organization_id": null,
+                                                  "patient_sequence": "MHN_USAi2dTkjg",
+                                                  "title": "Miss",
+                                                  "first_name": "Goodness",
+                                                  "last_name": "Ebubechukwu",
+                                                  "middle_name": "Ogbuagu",
+                                                  "dob": "2022-02-02",
+                                                  "gender": "female",
+                                                  "occupation": "Engineer",
+                                                  "nin": "79183109178",
+                                                  "martial_status": "single",
+                                                  "tribe": "Igbo",
+                                                  "religion": "Christianity",
+                                                  "created_at": "2024-05-17T18:39:50.000000Z",
+                                                  "updated_at": "2024-09-24T23:51:49.000000Z",
+                                                  "preferred_language": "9bfad77f-9532-493c-88b9-6b99ebe55b8b",
+                                                  "status": "out-patient",
+                                                  "city_id": "9ba1338d-f1ca-487b-ae34-471ddc6a7bc2",
+                                                  "state_id": "9ba01c32-186f-4ce1-84a5-0ee8884d02de",
+                                                  "country_id": "9b9faee2-b2e9-4033-bf57-d000bb45d6f5",
+                                                  "address": "31 Onitsha Rd",
+                                                  "email_address": "contactlove@mhn.com",
+                                                  "additional_mobile": "09087653421",
+                                                  "primary_mobile": "08023456789",
+                                                  "deleted_at": null,
+                                                  "user_id": "9c111152-c552-43a7-a1b1-0fc8e1226ad6",
+                                                  "file_number": "68792308"
+                                              }
+                                          }
+                                      }
+                                  ]
+                              }
+                          }
+                      }
+                  ]
+              }
+          }

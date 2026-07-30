@@ -1,0 +1,94 @@
+info:
+  name: Activate or deactivate plan
+  type: http
+  seq: 5
+
+http:
+  method: POST
+  url: "{{base_url}}/admin/plan/:planId/toggleStatus"
+  params:
+    - name: planId
+      value: 9bb79ec9-8378-4ea0-ac68-d78b6dc50516
+      type: path
+  auth:
+    type: bearer
+    token: "{{token}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+examples:
+  - name: Activate or deactivate plan
+    request:
+      url: "{{base_url}}/admin/plan/:planId/toggleStatus"
+      method: POST
+      params:
+        - name: planId
+          value: 1a1a1a1a-1a1a-1a1a-1a1a-1a1a1a1a1a11
+          type: path
+    response:
+      status: 200
+      statusText: OK
+      headers:
+        - name: Date
+          value: Mon, 25 Mar 2024 15:12:14 GMT
+        - name: Server
+          value: Apache/2.4.54 (Win64) OpenSSL/1.1.1q mod_fcgid/2.3.10-dev
+        - name: X-Powered-By
+          value: PHP/8.2.16
+        - name: Cache-Control
+          value: no-cache, private
+        - name: X-RateLimit-Limit
+          value: "60"
+        - name: X-RateLimit-Remaining
+          value: "59"
+        - name: Access-Control-Allow-Origin
+          value: "*"
+        - name: Vary
+          value: Authorization
+        - name: Keep-Alive
+          value: timeout=5, max=100
+        - name: Connection
+          value: Keep-Alive
+        - name: Transfer-Encoding
+          value: chunked
+        - name: Content-Type
+          value: application/json
+      body:
+        type: json
+        data: |-
+          {
+              "success": true,
+              "code": 0,
+              "locale": "en",
+              "message": "Plan activated successfully.",
+              "data": {
+                  "plan": {
+                      "id": "1a1a1a1a-1a1a-1a1a-1a1a-1a1a1a1a1a11",
+                      "name": "Test plan 1",
+                      "organization_type_id": 1,
+                      "description": null,
+                      "type": "Permanent",
+                      "start_date": null,
+                      "end_date": null,
+                      "active": true,
+                      "number_of_departments": 27,
+                      "number_of_doctors": 27,
+                      "number_of_pharmacy_users": 32,
+                      "number_of_store_users": 27,
+                      "number_of_wards": 6,
+                      "number_of_ward_users": 22,
+                      "number_of_clinical_lab_users": 33,
+                      "number_of_xray_lab_users": 13,
+                      "number_of_doctor_assistants": 7,
+                      "number_of_account_admin": 28,
+                      "number_of_cashiers": 6,
+                      "number_of_billing_users": 21,
+                      "number_of_hospital_admin": 11,
+                      "number_of_hr_users": 16
+                  }
+              }
+          }

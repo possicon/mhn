@@ -1,0 +1,692 @@
+info:
+  name: patient prescription
+  type: http
+  seq: 3
+
+http:
+  method: GET
+  url: "{{base_url}}/user/patients/:patient_sequence/appointments/:appointmentId/prescription?search=Paracetamol"
+  headers:
+    - name: Accept
+      value: application/json
+  params:
+    - name: search
+      value: Paracetamol
+      type: query
+    - name: patient_sequence
+      value: MHN_USA791167269
+      type: path
+    - name: appointmentId
+      value: a14427af-e505-4c40-a7ad-6c2bcbf8ff75
+      type: path
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+examples:
+  - name: index
+    request:
+      url: "{{base_url}}/user/patients/:patient_sequence/prescription"
+      method: GET
+      headers:
+        - name: Accept
+          value: application/json
+      params:
+        - name: patient_sequence
+          value: MHN_USAJruDLRv
+          type: path
+    response:
+      status: 200
+      statusText: OK
+      headers:
+        - name: Date
+          value: Fri, 31 May 2024 04:10:29 GMT
+        - name: Server
+          value: Apache/2.4.54 (Win64) OpenSSL/1.1.1q mod_fcgid/2.3.10-dev
+        - name: X-Powered-By
+          value: PHP/8.2.16
+        - name: Cache-Control
+          value: no-cache, private
+        - name: X-RateLimit-Limit
+          value: "60"
+        - name: X-RateLimit-Remaining
+          value: "59"
+        - name: Access-Control-Allow-Origin
+          value: "*"
+        - name: Vary
+          value: Authorization
+        - name: Keep-Alive
+          value: timeout=5, max=100
+        - name: Connection
+          value: Keep-Alive
+        - name: Transfer-Encoding
+          value: chunked
+        - name: Content-Type
+          value: application/json
+      body:
+        type: json
+        data: |-
+          {
+              "success": true,
+              "code": 0,
+              "locale": "en",
+              "message": "success",
+              "data": {
+                  "items": [
+                      {
+                          "id": "9c2b586b-6198-4192-be0e-1c2b2513d204",
+                          "patient_sequence": "MHN_USAJruDLRv",
+                          "patient_name": "Emma Prince",
+                          "purpose": "symptoms",
+                          "referral_type": "walk-in",
+                          "organization_id": null,
+                          "dispense_method": "delivery",
+                          "category": "one-off",
+                          "frequency": null,
+                          "address": "Mangoro, Ikeja",
+                          "city_id": "9ba1338e-25c5-4bfb-97bd-1e5610cba1bf",
+                          "state_id": "9ba01c32-0f63-4c89-8401-81ce51c51e98",
+                          "country_id": "9b9faee2-9ca2-41d0-962c-f7f60ef04bdb",
+                          "prescription_total_amount": "14069.00",
+                          "prescription_medicine_ids": "[\"9c2bd885-3561-4dde-a711-3cc527ed7028\", \"9c2bd885-3d3b-4d72-9e3f-26e6004427cf\"]",
+                          "visit_date": "2024-05-30 00:00:00",
+                          "created_at": "2024-05-30T20:10:09.000000Z",
+                          "updated_at": "2024-05-30T20:10:09.000000Z",
+                          "medicine_count": 2,
+                          "payment": []
+                      },
+                      {
+                          "id": "9c2b5a02-e157-4d2f-b5d1-573a60210721",
+                          "patient_sequence": "MHN_USAJruDLRv",
+                          "patient_name": "Emma Prince",
+                          "purpose": "symptoms",
+                          "referral_type": "organization",
+                          "organization_id": "9bd69b2b-2ebe-4e48-8cea-e24e2d42c743",
+                          "dispense_method": "delivery",
+                          "category": "recurring",
+                          "frequency": "Monthly",
+                          "address": "Mangoro, Ikeja",
+                          "city_id": "9ba1338e-25c5-4bfb-97bd-1e5610cba1bf",
+                          "state_id": "9ba01c32-0f63-4c89-8401-81ce51c51e98",
+                          "country_id": "9b9faee2-9ca2-41d0-962c-f7f60ef04bdb",
+                          "prescription_total_amount": "6000.00",
+                          "prescription_medicine_ids": "[\"9c2bd885-3561-4dde-a711-3cc527ed7028\", \"9c2bd885-3d3b-4d72-9e3f-26e6004427cf\"]",
+                          "visit_date": "2024-05-30 00:00:00",
+                          "created_at": "2024-05-30T20:14:36.000000Z",
+                          "updated_at": "2024-05-30T20:14:36.000000Z",
+                          "medicine_count": 2,
+                          "payment": []
+                      },
+                      {
+                          "id": "9c2bcdff-4b96-432c-a875-e05b68633477",
+                          "patient_sequence": "MHN_USAJruDLRv",
+                          "patient_name": "Emma Prince",
+                          "purpose": "symptoms",
+                          "referral_type": "organization",
+                          "organization_id": "9bd69b2b-2ebe-4e48-8cea-e24e2d42c743",
+                          "dispense_method": "delivery",
+                          "category": "recurring",
+                          "frequency": "Monthly",
+                          "address": "Mangoro, Ikeja",
+                          "city_id": "9ba1338e-25c5-4bfb-97bd-1e5610cba1bf",
+                          "state_id": "9ba01c32-0f63-4c89-8401-81ce51c51e98",
+                          "country_id": "9b9faee2-9ca2-41d0-962c-f7f60ef04bdb",
+                          "prescription_total_amount": "5350.00",
+                          "prescription_medicine_ids": "[\"9c2bd885-3561-4dde-a711-3cc527ed7028\", \"9c2bd885-3d3b-4d72-9e3f-26e6004427cf\"]",
+                          "visit_date": "2024-05-30 00:00:00",
+                          "created_at": "2024-05-31T01:38:55.000000Z",
+                          "updated_at": "2024-05-31T02:08:21.000000Z",
+                          "medicine_count": 2,
+                          "payment": [
+                              {
+                                  "id": "9c2bf239-385c-41a0-aacc-c22c2bb6939e",
+                                  "type": "private",
+                                  "method": "card",
+                                  "amount": "5350.00",
+                                  "bank_details": null,
+                                  "hmo_name": null,
+                                  "policy_number": null,
+                                  "coverage": null,
+                                  "bill_id": null,
+                                  "prescription_id": "9c2bcdff-4b96-432c-a875-e05b68633477",
+                                  "created_at": "2024-05-31T03:20:13.000000Z",
+                                  "updated_at": "2024-05-31T03:20:13.000000Z",
+                                  "status": null
+                              },
+                              {
+                                  "id": "9c2bf470-d789-41b0-9b94-070b487548b2",
+                                  "type": "private",
+                                  "method": "bank transfer",
+                                  "amount": "5350.00",
+                                  "bank_details": "MHN - 0112121212 Zenith Bank",
+                                  "hmo_name": null,
+                                  "policy_number": null,
+                                  "coverage": null,
+                                  "bill_id": null,
+                                  "prescription_id": "9c2bcdff-4b96-432c-a875-e05b68633477",
+                                  "created_at": "2024-05-31T03:26:25.000000Z",
+                                  "updated_at": "2024-05-31T03:26:25.000000Z",
+                                  "status": null
+                              },
+                              {
+                                  "id": "9c2bf4f0-03a1-4d79-902b-8b3be3b42add",
+                                  "type": "private",
+                                  "method": "card",
+                                  "amount": "5350.00",
+                                  "bank_details": null,
+                                  "hmo_name": null,
+                                  "policy_number": null,
+                                  "coverage": null,
+                                  "bill_id": null,
+                                  "prescription_id": "9c2bcdff-4b96-432c-a875-e05b68633477",
+                                  "created_at": "2024-05-31T03:27:48.000000Z",
+                                  "updated_at": "2024-05-31T03:27:48.000000Z",
+                                  "status": null
+                              },
+                              {
+                                  "id": "9c2bf538-3cc4-4e42-ac22-97424721a15c",
+                                  "type": "private",
+                                  "method": "hmo",
+                                  "amount": "5350.00",
+                                  "bank_details": null,
+                                  "hmo_name": null,
+                                  "policy_number": null,
+                                  "coverage": null,
+                                  "bill_id": null,
+                                  "prescription_id": "9c2bcdff-4b96-432c-a875-e05b68633477",
+                                  "created_at": "2024-05-31T03:28:36.000000Z",
+                                  "updated_at": "2024-05-31T03:28:36.000000Z",
+                                  "status": null
+                              },
+                              {
+                                  "id": "9c2bf66b-97a1-4159-970d-a8ed7890809d",
+                                  "type": "hmo",
+                                  "method": "card",
+                                  "amount": "5350.00",
+                                  "bank_details": null,
+                                  "hmo_name": "Relaince",
+                                  "policy_number": "FJLRO2892R",
+                                  "coverage": "zero",
+                                  "bill_id": null,
+                                  "prescription_id": "9c2bcdff-4b96-432c-a875-e05b68633477",
+                                  "created_at": "2024-05-31T03:31:57.000000Z",
+                                  "updated_at": "2024-05-31T03:31:57.000000Z",
+                                  "status": null
+                              }
+                          ]
+                      }
+                  ]
+              }
+          }
+  - name: patient prescription
+    request:
+      url: "{{base_url}}/user/patients/:patient_sequence/prescription"
+      method: GET
+      headers:
+        - name: Accept
+          value: application/json
+      params:
+        - name: patient_sequence
+          value: MHN_USAJruDLRv
+          type: path
+    response:
+      status: 200
+      statusText: OK
+      headers:
+        - name: Date
+          value: Sat, 29 Jun 2024 21:55:23 GMT
+        - name: Server
+          value: Apache/2.4.54 (Win64) OpenSSL/1.1.1q mod_fcgid/2.3.10-dev
+        - name: X-Powered-By
+          value: PHP/8.2.16
+        - name: Cache-Control
+          value: no-cache, private
+        - name: X-RateLimit-Limit
+          value: "60"
+        - name: X-RateLimit-Remaining
+          value: "59"
+        - name: Access-Control-Allow-Origin
+          value: "*"
+        - name: Vary
+          value: Authorization
+        - name: Keep-Alive
+          value: timeout=5, max=100
+        - name: Connection
+          value: Keep-Alive
+        - name: Transfer-Encoding
+          value: chunked
+        - name: Content-Type
+          value: application/json
+      body:
+        type: json
+        data: |-
+          {
+              "success": true,
+              "code": 0,
+              "locale": "en",
+              "message": "success",
+              "data": {
+                  "items": [
+                      {
+                          "id": "9c5cf631-d0e6-4b95-9323-aa094493e70f",
+                          "prescription_id": "9c5cf5d5-a3e3-4854-abc2-d2c8daf65153",
+                          "medicine_type": "Pil",
+                          "medicine_name": "Paraetamol",
+                          "medicine_dosage": "one tab",
+                          "medicine_frequency": "daily",
+                          "medicine_period": "Morning",
+                          "medicine_start_date": "2023-10-09",
+                          "medicine_end_date": "2024-02-02",
+                          "medicine_amount": "1300.00",
+                          "created_at": "2024-06-24T12:06:53.000000Z",
+                          "updated_at": "2024-06-24T12:06:53.000000Z"
+                      },
+                      {
+                          "id": "9c5cf631-d550-499c-a143-b998cf13cf1b",
+                          "prescription_id": "9c5cf5d5-a3e3-4854-abc2-d2c8daf65153",
+                          "medicine_type": "Injetion",
+                          "medicine_name": "Injetion",
+                          "medicine_dosage": "3 tab",
+                          "medicine_frequency": "thrice daily",
+                          "medicine_period": "Morning and evening",
+                          "medicine_start_date": "2024-05-05",
+                          "medicine_end_date": "2024-05-12",
+                          "medicine_amount": "4050.00",
+                          "created_at": "2024-06-24T12:06:53.000000Z",
+                          "updated_at": "2024-06-24T12:06:53.000000Z"
+                      }
+                  ]
+              }
+          }
+  - name: patient prescription
+    request:
+      url: "{{base_url}}/user/patients/:patient_sequence/prescription"
+      method: GET
+      headers:
+        - name: Accept
+          value: application/json
+      params:
+        - name: patient_sequence
+          value: MHN_USAJruDLRv
+          type: path
+    response:
+      status: 200
+      statusText: OK
+      headers:
+        - name: Date
+          value: Fri, 01 Nov 2024 08:28:44 GMT
+        - name: Server
+          value: Apache/2.4.54 (Win64) OpenSSL/1.1.1d mod_fcgid/2.3.10-dev
+        - name: X-Powered-By
+          value: PHP/8.2.17
+        - name: Cache-Control
+          value: no-cache, private
+        - name: X-RateLimit-Limit
+          value: "60"
+        - name: X-RateLimit-Remaining
+          value: "58"
+        - name: Access-Control-Allow-Origin
+          value: "*"
+        - name: Vary
+          value: Authorization
+        - name: Keep-Alive
+          value: timeout=5, max=100
+        - name: Connection
+          value: Keep-Alive
+        - name: Transfer-Encoding
+          value: chunked
+        - name: Content-Type
+          value: application/json
+      body:
+        type: json
+        data: |-
+          {
+              "success": true,
+              "code": 0,
+              "locale": "en",
+              "message": "success",
+              "data": {
+                  "items": [
+                      {
+                          "id": "9d575861-9ea3-4097-b217-f309e59ffaf9",
+                          "prescription_id": "9d573455-75ec-4dbc-8d0e-c55952655154",
+                          "medicine_type": "Pil",
+                          "medicine_name": "9d1e8559-060f-468a-9406-59b808e1f2d9",
+                          "medicine_dosage": "one tab",
+                          "medicine_frequency": "daily",
+                          "medicine_period": "Morning",
+                          "medicine_start_date": "2023-10-09",
+                          "medicine_end_date": "2024-02-02",
+                          "medicine_amount": "1300.00",
+                          "created_at": "2024-10-26T23:18:25.000000Z",
+                          "updated_at": "2024-10-26T23:18:25.000000Z",
+                          "appointment_id": "9d166f7e-2b46-492e-ae7b-58390a55e7d0",
+                          "quantity": 2,
+                          "service": {
+                              "id": "9d1e8559-060f-468a-9406-59b808e1f2d9",
+                              "name": "Phenobarbital"
+                          },
+                          "prescription": {
+                              "id": "9d573455-75ec-4dbc-8d0e-c55952655154",
+                              "patient_sequence": "MHN_USAJruDLRv",
+                              "patient_name": "Emma Prince",
+                              "purpose": "symptoms",
+                              "referral_type": "organization",
+                              "organization_id": "9bc5eb78-74d2-45f4-a677-05d07dca6a63",
+                              "dispense_method": "delivery",
+                              "category": "recurring",
+                              "frequency": "Monthly",
+                              "address": "Mangoro, Ikeja",
+                              "city_id": "9ba1338e-25c5-4bfb-97bd-1e5610cba1bf",
+                              "state_id": "9ba01c32-0f63-4c89-8401-81ce51c51e98",
+                              "country_id": "9b9faee2-9ca2-41d0-962c-f7f60ef04bdb",
+                              "prescription_total_amount": "5350.00",
+                              "prescription_medicine_ids": "[\"9d575861-9ea3-4097-b217-f309e59ffaf9\", \"9d575861-a0f1-4039-aff7-e1bbc7c9d0c2\"]",
+                              "visit_date": "2024-10-26 00:00:00",
+                              "created_at": "2024-10-26T21:37:37.000000Z",
+                              "updated_at": "2024-10-26T23:18:25.000000Z",
+                              "appointment_id": "9d166f7e-2b46-492e-ae7b-58390a55e7d0",
+                              "progress_status": "pending",
+                              "requested_by": {
+                                  "id": "9bc6382c-bb73-4c7d-9409-677fe560485d",
+                                  "first_name": "General",
+                                  "last_name": "Emmanuel"
+                              },
+                              "requested_date": "2024-10-26 21:37:35",
+                              "dispensed_by": null,
+                              "dispensed_date": null,
+                              "status": "requested",
+                              "prescription_number": null,
+                              "referred_organization_id": "9bd69b2b-2ebe-4e48-8cea-e24e2d42c743",
+                              "dispense_note": null,
+                              "completion_note": null,
+                              "payment": []
+                          }
+                      },
+                      {
+                          "id": "9d575861-a0f1-4039-aff7-e1bbc7c9d0c2",
+                          "prescription_id": "9d573455-75ec-4dbc-8d0e-c55952655154",
+                          "medicine_type": "Injetion",
+                          "medicine_name": "9d1e8559-07d2-4a9c-b5b4-56dc45c88e8c",
+                          "medicine_dosage": "3 tab",
+                          "medicine_frequency": "thrice daily",
+                          "medicine_period": "Morning and evening",
+                          "medicine_start_date": "2024-05-05",
+                          "medicine_end_date": "2024-05-12",
+                          "medicine_amount": "4050.00",
+                          "created_at": "2024-10-26T23:18:25.000000Z",
+                          "updated_at": "2024-10-26T23:18:25.000000Z",
+                          "appointment_id": "9d166f7e-2b46-492e-ae7b-58390a55e7d0",
+                          "quantity": 1,
+                          "service": {
+                              "id": "9d1e8559-07d2-4a9c-b5b4-56dc45c88e8c",
+                              "name": "Haloperidol"
+                          },
+                          "prescription": {
+                              "id": "9d573455-75ec-4dbc-8d0e-c55952655154",
+                              "patient_sequence": "MHN_USAJruDLRv",
+                              "patient_name": "Emma Prince",
+                              "purpose": "symptoms",
+                              "referral_type": "organization",
+                              "organization_id": "9bc5eb78-74d2-45f4-a677-05d07dca6a63",
+                              "dispense_method": "delivery",
+                              "category": "recurring",
+                              "frequency": "Monthly",
+                              "address": "Mangoro, Ikeja",
+                              "city_id": "9ba1338e-25c5-4bfb-97bd-1e5610cba1bf",
+                              "state_id": "9ba01c32-0f63-4c89-8401-81ce51c51e98",
+                              "country_id": "9b9faee2-9ca2-41d0-962c-f7f60ef04bdb",
+                              "prescription_total_amount": "5350.00",
+                              "prescription_medicine_ids": "[\"9d575861-9ea3-4097-b217-f309e59ffaf9\", \"9d575861-a0f1-4039-aff7-e1bbc7c9d0c2\"]",
+                              "visit_date": "2024-10-26 00:00:00",
+                              "created_at": "2024-10-26T21:37:37.000000Z",
+                              "updated_at": "2024-10-26T23:18:25.000000Z",
+                              "appointment_id": "9d166f7e-2b46-492e-ae7b-58390a55e7d0",
+                              "progress_status": "pending",
+                              "requested_by": {
+                                  "id": "9bc6382c-bb73-4c7d-9409-677fe560485d",
+                                  "first_name": "General",
+                                  "last_name": "Emmanuel"
+                              },
+                              "requested_date": "2024-10-26 21:37:35",
+                              "dispensed_by": null,
+                              "dispensed_date": null,
+                              "status": "requested",
+                              "prescription_number": null,
+                              "referred_organization_id": "9bd69b2b-2ebe-4e48-8cea-e24e2d42c743",
+                              "dispense_note": null,
+                              "completion_note": null,
+                              "payment": []
+                          }
+                      },
+                      {
+                          "id": "9d57585a-6b58-42b7-a3c6-06198aa5ec14",
+                          "prescription_id": "9d573455-75ec-4dbc-8d0e-c55952655154",
+                          "medicine_type": "Pil",
+                          "medicine_name": "9d1e8559-060f-468a-9406-59b808e1f2d9",
+                          "medicine_dosage": "one tab",
+                          "medicine_frequency": "daily",
+                          "medicine_period": "Morning",
+                          "medicine_start_date": "2023-10-09",
+                          "medicine_end_date": "2024-02-02",
+                          "medicine_amount": "1300.00",
+                          "created_at": "2024-10-26T23:18:20.000000Z",
+                          "updated_at": "2024-10-26T23:18:20.000000Z",
+                          "appointment_id": "9d166f7e-2b46-492e-ae7b-58390a55e7d0",
+                          "quantity": 2,
+                          "service": {
+                              "id": "9d1e8559-060f-468a-9406-59b808e1f2d9",
+                              "name": "Phenobarbital"
+                          },
+                          "prescription": {
+                              "id": "9d573455-75ec-4dbc-8d0e-c55952655154",
+                              "patient_sequence": "MHN_USAJruDLRv",
+                              "patient_name": "Emma Prince",
+                              "purpose": "symptoms",
+                              "referral_type": "organization",
+                              "organization_id": "9bc5eb78-74d2-45f4-a677-05d07dca6a63",
+                              "dispense_method": "delivery",
+                              "category": "recurring",
+                              "frequency": "Monthly",
+                              "address": "Mangoro, Ikeja",
+                              "city_id": "9ba1338e-25c5-4bfb-97bd-1e5610cba1bf",
+                              "state_id": "9ba01c32-0f63-4c89-8401-81ce51c51e98",
+                              "country_id": "9b9faee2-9ca2-41d0-962c-f7f60ef04bdb",
+                              "prescription_total_amount": "5350.00",
+                              "prescription_medicine_ids": "[\"9d575861-9ea3-4097-b217-f309e59ffaf9\", \"9d575861-a0f1-4039-aff7-e1bbc7c9d0c2\"]",
+                              "visit_date": "2024-10-26 00:00:00",
+                              "created_at": "2024-10-26T21:37:37.000000Z",
+                              "updated_at": "2024-10-26T23:18:25.000000Z",
+                              "appointment_id": "9d166f7e-2b46-492e-ae7b-58390a55e7d0",
+                              "progress_status": "pending",
+                              "requested_by": {
+                                  "id": "9bc6382c-bb73-4c7d-9409-677fe560485d",
+                                  "first_name": "General",
+                                  "last_name": "Emmanuel"
+                              },
+                              "requested_date": "2024-10-26 21:37:35",
+                              "dispensed_by": null,
+                              "dispensed_date": null,
+                              "status": "requested",
+                              "prescription_number": null,
+                              "referred_organization_id": "9bd69b2b-2ebe-4e48-8cea-e24e2d42c743",
+                              "dispense_note": null,
+                              "completion_note": null,
+                              "payment": []
+                          }
+                      },
+                      {
+                          "id": "9d57585a-6da7-468a-b1f0-81d7cde1e345",
+                          "prescription_id": "9d573455-75ec-4dbc-8d0e-c55952655154",
+                          "medicine_type": "Injetion",
+                          "medicine_name": "9d1e8559-07d2-4a9c-b5b4-56dc45c88e8c",
+                          "medicine_dosage": "3 tab",
+                          "medicine_frequency": "thrice daily",
+                          "medicine_period": "Morning and evening",
+                          "medicine_start_date": "2024-05-05",
+                          "medicine_end_date": "2024-05-12",
+                          "medicine_amount": "4050.00",
+                          "created_at": "2024-10-26T23:18:20.000000Z",
+                          "updated_at": "2024-10-26T23:18:20.000000Z",
+                          "appointment_id": "9d166f7e-2b46-492e-ae7b-58390a55e7d0",
+                          "quantity": 1,
+                          "service": {
+                              "id": "9d1e8559-07d2-4a9c-b5b4-56dc45c88e8c",
+                              "name": "Haloperidol"
+                          },
+                          "prescription": {
+                              "id": "9d573455-75ec-4dbc-8d0e-c55952655154",
+                              "patient_sequence": "MHN_USAJruDLRv",
+                              "patient_name": "Emma Prince",
+                              "purpose": "symptoms",
+                              "referral_type": "organization",
+                              "organization_id": "9bc5eb78-74d2-45f4-a677-05d07dca6a63",
+                              "dispense_method": "delivery",
+                              "category": "recurring",
+                              "frequency": "Monthly",
+                              "address": "Mangoro, Ikeja",
+                              "city_id": "9ba1338e-25c5-4bfb-97bd-1e5610cba1bf",
+                              "state_id": "9ba01c32-0f63-4c89-8401-81ce51c51e98",
+                              "country_id": "9b9faee2-9ca2-41d0-962c-f7f60ef04bdb",
+                              "prescription_total_amount": "5350.00",
+                              "prescription_medicine_ids": "[\"9d575861-9ea3-4097-b217-f309e59ffaf9\", \"9d575861-a0f1-4039-aff7-e1bbc7c9d0c2\"]",
+                              "visit_date": "2024-10-26 00:00:00",
+                              "created_at": "2024-10-26T21:37:37.000000Z",
+                              "updated_at": "2024-10-26T23:18:25.000000Z",
+                              "appointment_id": "9d166f7e-2b46-492e-ae7b-58390a55e7d0",
+                              "progress_status": "pending",
+                              "requested_by": {
+                                  "id": "9bc6382c-bb73-4c7d-9409-677fe560485d",
+                                  "first_name": "General",
+                                  "last_name": "Emmanuel"
+                              },
+                              "requested_date": "2024-10-26 21:37:35",
+                              "dispensed_by": null,
+                              "dispensed_date": null,
+                              "status": "requested",
+                              "prescription_number": null,
+                              "referred_organization_id": "9bd69b2b-2ebe-4e48-8cea-e24e2d42c743",
+                              "dispense_note": null,
+                              "completion_note": null,
+                              "payment": []
+                          }
+                      },
+                      {
+                          "id": "9d573f85-cbac-40cb-9c25-aa1fdc1d94d9",
+                          "prescription_id": "9d573455-75ec-4dbc-8d0e-c55952655154",
+                          "medicine_type": "Pil",
+                          "medicine_name": "9d1e8559-060f-468a-9406-59b808e1f2d9",
+                          "medicine_dosage": "one tab",
+                          "medicine_frequency": "daily",
+                          "medicine_period": "Morning",
+                          "medicine_start_date": "2023-10-09",
+                          "medicine_end_date": "2024-02-02",
+                          "medicine_amount": "1300.00",
+                          "created_at": "2024-10-26T22:08:54.000000Z",
+                          "updated_at": "2024-10-26T22:08:54.000000Z",
+                          "appointment_id": "9d166f7e-2b46-492e-ae7b-58390a55e7d0",
+                          "quantity": 2,
+                          "service": {
+                              "id": "9d1e8559-060f-468a-9406-59b808e1f2d9",
+                              "name": "Phenobarbital"
+                          },
+                          "prescription": {
+                              "id": "9d573455-75ec-4dbc-8d0e-c55952655154",
+                              "patient_sequence": "MHN_USAJruDLRv",
+                              "patient_name": "Emma Prince",
+                              "purpose": "symptoms",
+                              "referral_type": "organization",
+                              "organization_id": "9bc5eb78-74d2-45f4-a677-05d07dca6a63",
+                              "dispense_method": "delivery",
+                              "category": "recurring",
+                              "frequency": "Monthly",
+                              "address": "Mangoro, Ikeja",
+                              "city_id": "9ba1338e-25c5-4bfb-97bd-1e5610cba1bf",
+                              "state_id": "9ba01c32-0f63-4c89-8401-81ce51c51e98",
+                              "country_id": "9b9faee2-9ca2-41d0-962c-f7f60ef04bdb",
+                              "prescription_total_amount": "5350.00",
+                              "prescription_medicine_ids": "[\"9d575861-9ea3-4097-b217-f309e59ffaf9\", \"9d575861-a0f1-4039-aff7-e1bbc7c9d0c2\"]",
+                              "visit_date": "2024-10-26 00:00:00",
+                              "created_at": "2024-10-26T21:37:37.000000Z",
+                              "updated_at": "2024-10-26T23:18:25.000000Z",
+                              "appointment_id": "9d166f7e-2b46-492e-ae7b-58390a55e7d0",
+                              "progress_status": "pending",
+                              "requested_by": {
+                                  "id": "9bc6382c-bb73-4c7d-9409-677fe560485d",
+                                  "first_name": "General",
+                                  "last_name": "Emmanuel"
+                              },
+                              "requested_date": "2024-10-26 21:37:35",
+                              "dispensed_by": null,
+                              "dispensed_date": null,
+                              "status": "requested",
+                              "prescription_number": null,
+                              "referred_organization_id": "9bd69b2b-2ebe-4e48-8cea-e24e2d42c743",
+                              "dispense_note": null,
+                              "completion_note": null,
+                              "payment": []
+                          }
+                      },
+                      {
+                          "id": "9d573f85-cefb-4e70-ad43-b3094a18261f",
+                          "prescription_id": "9d573455-75ec-4dbc-8d0e-c55952655154",
+                          "medicine_type": "Injetion",
+                          "medicine_name": "9d1e8559-07d2-4a9c-b5b4-56dc45c88e8c",
+                          "medicine_dosage": "3 tab",
+                          "medicine_frequency": "thrice daily",
+                          "medicine_period": "Morning and evening",
+                          "medicine_start_date": "2024-05-05",
+                          "medicine_end_date": "2024-05-12",
+                          "medicine_amount": "4050.00",
+                          "created_at": "2024-10-26T22:08:54.000000Z",
+                          "updated_at": "2024-10-26T22:08:54.000000Z",
+                          "appointment_id": "9d166f7e-2b46-492e-ae7b-58390a55e7d0",
+                          "quantity": 1,
+                          "service": {
+                              "id": "9d1e8559-07d2-4a9c-b5b4-56dc45c88e8c",
+                              "name": "Haloperidol"
+                          },
+                          "prescription": {
+                              "id": "9d573455-75ec-4dbc-8d0e-c55952655154",
+                              "patient_sequence": "MHN_USAJruDLRv",
+                              "patient_name": "Emma Prince",
+                              "purpose": "symptoms",
+                              "referral_type": "organization",
+                              "organization_id": "9bc5eb78-74d2-45f4-a677-05d07dca6a63",
+                              "dispense_method": "delivery",
+                              "category": "recurring",
+                              "frequency": "Monthly",
+                              "address": "Mangoro, Ikeja",
+                              "city_id": "9ba1338e-25c5-4bfb-97bd-1e5610cba1bf",
+                              "state_id": "9ba01c32-0f63-4c89-8401-81ce51c51e98",
+                              "country_id": "9b9faee2-9ca2-41d0-962c-f7f60ef04bdb",
+                              "prescription_total_amount": "5350.00",
+                              "prescription_medicine_ids": "[\"9d575861-9ea3-4097-b217-f309e59ffaf9\", \"9d575861-a0f1-4039-aff7-e1bbc7c9d0c2\"]",
+                              "visit_date": "2024-10-26 00:00:00",
+                              "created_at": "2024-10-26T21:37:37.000000Z",
+                              "updated_at": "2024-10-26T23:18:25.000000Z",
+                              "appointment_id": "9d166f7e-2b46-492e-ae7b-58390a55e7d0",
+                              "progress_status": "pending",
+                              "requested_by": {
+                                  "id": "9bc6382c-bb73-4c7d-9409-677fe560485d",
+                                  "first_name": "General",
+                                  "last_name": "Emmanuel"
+                              },
+                              "requested_date": "2024-10-26 21:37:35",
+                              "dispensed_by": null,
+                              "dispensed_date": null,
+                              "status": "requested",
+                              "prescription_number": null,
+                              "referred_organization_id": "9bd69b2b-2ebe-4e48-8cea-e24e2d42c743",
+                              "dispense_note": null,
+                              "completion_note": null,
+                              "payment": []
+                          }
+                      }
+                  ]
+              }
+          }

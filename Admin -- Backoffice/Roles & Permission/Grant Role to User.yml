@@ -1,0 +1,31 @@
+info:
+  name: Grant Role to User
+  type: http
+  seq: 9
+
+http:
+  method: POST
+  url: "{{base_url}}/admin/roles/grant"
+  headers:
+    - name: Accept
+      value: application/json
+    - name: Content-Type
+      value: application/x-www-form-urlencoded
+      disabled: true
+    - name: ""
+      value: ""
+      disabled: true
+  body:
+    type: json
+    data: |-
+      {
+          "role_id": "2",
+          "user_id": "9bb85bf5-30b8-47e5-8e73-f2a190dd1da9"
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

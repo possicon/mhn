@@ -1,0 +1,166 @@
+info:
+  name: Update
+  type: http
+  seq: 10
+
+http:
+  method: PATCH
+  url: "{{base_url}}/user/organization/bills/:id"
+  headers:
+    - name: Accept
+      value: application/json
+  params:
+    - name: id
+      value: 9d0e918e-146d-458e-b913-fd1a06fe802c
+      type: path
+  body:
+    type: json
+    data: "{\r
+
+      \    \"patient_id\":\"9bf2e6d3-08c3-4826-b389-f0bebcca9fa9\",\r
+
+      \    \"service_id\":\"9cfe8382-f887-486e-9644-04a1642fa621\",\r
+
+      \    \"mode\":\"company\", //bank_transfer,card,hmo,company,mobile_money\r
+
+      \    \"hmo_id\":\"9bbbac52-edd1-4aa7-8254-c29c14fa6249\",\r
+
+      \    \"hmo_policy_number\":\"KJMMFDKJ83D\",\r
+
+      \    \"coverage_type\":\"zero\",\r
+
+      \    \"payment_date\":\"20-02-2024\",\r
+
+      \    \"status\":\"pending\",\r
+
+      \    \"transaction_id\":\"ELJLG9042DKJ\",\r
+
+      \    \"bank_name\":\"GTB\",\r
+
+      \    \"company_id\":\"9bf4a55d-7f00-4a05-8ddf-7064aa43a016\",\r
+
+      \    \"plan_id\":\"9d0becab-70ad-41d7-94d4-6c4f9a486d9f\"\r
+
+      \r
+
+      }"
+  auth:
+    type: bearer
+    token: 64|wekxmT6fEC7W1savxR3VWd2fcLOu9fkY2pdTExtBe40532c7
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+examples:
+  - name: Update
+    request:
+      url: "{{base_url}}/user/organization/bills/:id"
+      method: PATCH
+      headers:
+        - name: Accept
+          value: application/json
+      params:
+        - name: id
+          value: 9bf66acf-1483-47dc-8656-21cf26894bfb
+          type: path
+      body:
+        type: json
+        data: "{\r
+
+          \    \"patient_id\":\"9bf2e6d3-08c3-4826-b389-f0bebcca9fa9\",\r
+
+          \    \"service_id\":\"9be98ca9-20f0-4913-8700-0bf23a6316b9\",\r
+
+          \    \"mode\":\"bank_transfer\", //bank_transfer,card,hmo,company,mobile_money\r
+
+          \    \"hmo_id\":\"9bbbac52-edd1-4aa7-8254-c29c14fa6249\",\r
+
+          \    \"hmo_policy_number\":\"KJMMFDKJ83D\",\r
+
+          \    \"coverage_type\":\"zero\",\r
+
+          \    \"payment_date\":\"20-02-2024\",\r
+
+          \    \"amount\":1500,\r
+
+          \    \"status\":\"pending\",\r
+
+          \    \"transaction_id\":\"ELJLG9042DKJ\",\r
+
+          \    \"bank_name\":\"GTB\",\r
+
+          \    \"company_id\":\"9bf4a55d-7f00-4a05-8ddf-7064aa43a016\"\r
+
+          \r
+
+          }"
+    response:
+      status: 200
+      statusText: OK
+      headers:
+        - name: Date
+          value: Sat, 04 May 2024 16:46:20 GMT
+        - name: Server
+          value: Apache/2.4.54 (Win64) OpenSSL/1.1.1q mod_fcgid/2.3.10-dev
+        - name: X-Powered-By
+          value: PHP/8.2.16
+        - name: Cache-Control
+          value: no-cache, private
+        - name: X-RateLimit-Limit
+          value: "60"
+        - name: X-RateLimit-Remaining
+          value: "58"
+        - name: Access-Control-Allow-Origin
+          value: "*"
+        - name: Vary
+          value: Authorization
+        - name: Keep-Alive
+          value: timeout=5, max=100
+        - name: Connection
+          value: Keep-Alive
+        - name: Transfer-Encoding
+          value: chunked
+        - name: Content-Type
+          value: application/json
+      body:
+        type: json
+        data: |-
+          {
+              "success": true,
+              "code": 0,
+              "locale": "en",
+              "message": "Bill updated",
+              "data": {
+                  "item": {
+                      "id": "9bf66acf-1483-47dc-8656-21cf26894bfb",
+                      "patient_id": "9bf2e6d3-08c3-4826-b389-f0bebcca9fa9",
+                      "service_id": "9be98ca9-20f0-4913-8700-0bf23a6316b9",
+                      "hmo_id": "9bbbac52-edd1-4aa7-8254-c29c14fa6249",
+                      "company_id": "9bf4a55d-7f00-4a05-8ddf-7064aa43a016",
+                      "organization_id": "9bc5eb78-74d2-45f4-a677-05d07dca6a63",
+                      "hmo_policy_number": "KJMMFDKJ83D",
+                      "coverage_type": "zero",
+                      "amount": 1500,
+                      "payment_date": "20-02-2024",
+                      "mode": "bank_transfer",
+                      "transaction_id": "ELJLG9042DKJ",
+                      "status": "pending",
+                      "description": null,
+                      "bank_name": "GTB",
+                      "created_at": "2024-05-04T12:42:42.000000Z",
+                      "updated_at": "2024-05-04T16:46:20.000000Z",
+                      "service": {
+                          "id": "9be98ca9-20f0-4913-8700-0bf23a6316b9",
+                          "name": "Lab consultation",
+                          "type": "lab",
+                          "status": "active",
+                          "description": "Hospital Resistration description",
+                          "created_at": "2024-04-28T03:11:35.000000Z",
+                          "updated_at": "2024-04-28T03:11:35.000000Z"
+                      }
+                  }
+              }
+          }

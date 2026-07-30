@@ -1,0 +1,160 @@
+info:
+  name: view Result
+  type: http
+  seq: 17
+
+http:
+  method: GET
+  url: "{{base_url}}/user/lab/:xray/viewResult"
+  headers:
+    - name: Accept
+      value: application/json
+  params:
+    - name: xray
+      value: 9c616a84-9eee-4613-9440-95933a538847
+      type: path
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+examples:
+  - name: view result
+    request:
+      url: "{{base_url}}/user/lab/:xray/viewResult"
+      method: GET
+      headers:
+        - name: Accept
+          value: application/json
+      params:
+        - name: xray
+          value: 9c616a84-9eee-4613-9440-95933a538847
+          type: path
+      body:
+        type: multipart-form
+        data:
+          - name: attach_docs
+            type: text
+            value: "1"
+          - name: message
+            type: text
+            value: We are yet to do the heart scan
+          - name: status
+            type: text
+            value: incomplete
+          - name: report_note
+            type: text
+            value: "{{$randomWords}}"
+          - name: files[0]
+            type: file
+            value:
+              - DnqEOQeqX/q2 Report - Emmanuel Ogbuagu.pdf
+          - name: files[1]
+            type: file
+            value:
+              - NGgLRUCyM/EmmanuelOgbuaguCV.pdf
+    response:
+      status: 200
+      statusText: OK
+      headers:
+        - name: Date
+          value: Tue, 05 Nov 2024 08:41:48 GMT
+        - name: Server
+          value: Apache/2.4.54 (Win64) OpenSSL/1.1.1d mod_fcgid/2.3.10-dev
+        - name: X-Powered-By
+          value: PHP/8.2.17
+        - name: Cache-Control
+          value: no-cache, private
+        - name: X-RateLimit-Limit
+          value: "60"
+        - name: X-RateLimit-Remaining
+          value: "59"
+        - name: Access-Control-Allow-Origin
+          value: "*"
+        - name: Vary
+          value: Authorization
+        - name: Keep-Alive
+          value: timeout=5, max=100
+        - name: Connection
+          value: Keep-Alive
+        - name: Transfer-Encoding
+          value: chunked
+        - name: Content-Type
+          value: application/json
+      body:
+        type: json
+        data: |-
+          {
+              "success": true,
+              "code": 0,
+              "locale": "en",
+              "message": "X-ray result details retrieved successfully",
+              "data": {
+                  "xray_id": "9c616a84-9eee-4613-9440-95933a538847",
+                  "patient_id": "9c111152-abe1-4490-ab04-c066445133a7",
+                  "report_note": "blue Land Dynamic cohesive",
+                  "message": "We are yet to do the heart scan",
+                  "status": null,
+                  "uploaded_files": [
+                      {
+                          "url": "http://127.0.0.1:8000/storage/104/q2-Report---Emmanuel-Ogbuagu.pdf",
+                          "name": "q2 Report - Emmanuel Ogbuagu",
+                          "type": "application/pdf",
+                          "size": 212005,
+                          "uploaded_at": "2024-11-05 08:13:23"
+                      },
+                      {
+                          "url": "http://127.0.0.1:8000/storage/105/EmmanuelOgbuaguCV.pdf",
+                          "name": "EmmanuelOgbuaguCV",
+                          "type": "application/pdf",
+                          "size": 251071,
+                          "uploaded_at": "2024-11-05 08:13:24"
+                      },
+                      {
+                          "url": "http://127.0.0.1:8000/storage/106/q2-Report---Emmanuel-Ogbuagu.pdf",
+                          "name": "q2 Report - Emmanuel Ogbuagu",
+                          "type": "application/pdf",
+                          "size": 212005,
+                          "uploaded_at": "2024-11-05 08:22:18"
+                      },
+                      {
+                          "url": "http://127.0.0.1:8000/storage/107/EmmanuelOgbuaguCV.pdf",
+                          "name": "EmmanuelOgbuaguCV",
+                          "type": "application/pdf",
+                          "size": 251071,
+                          "uploaded_at": "2024-11-05 08:22:18"
+                      },
+                      {
+                          "url": "http://127.0.0.1:8000/storage/108/q2-Report---Emmanuel-Ogbuagu.pdf",
+                          "name": "q2 Report - Emmanuel Ogbuagu",
+                          "type": "application/pdf",
+                          "size": 212005,
+                          "uploaded_at": "2024-11-05 08:37:51"
+                      },
+                      {
+                          "url": "http://127.0.0.1:8000/storage/109/EmmanuelOgbuaguCV.pdf",
+                          "name": "EmmanuelOgbuaguCV",
+                          "type": "application/pdf",
+                          "size": 251071,
+                          "uploaded_at": "2024-11-05 08:37:51"
+                      },
+                      {
+                          "url": "http://127.0.0.1:8000/storage/110/q2-Report---Emmanuel-Ogbuagu.pdf",
+                          "name": "q2 Report - Emmanuel Ogbuagu",
+                          "type": "application/pdf",
+                          "size": 212005,
+                          "uploaded_at": "2024-11-05 08:39:56"
+                      },
+                      {
+                          "url": "http://127.0.0.1:8000/storage/111/EmmanuelOgbuaguCV.pdf",
+                          "name": "EmmanuelOgbuaguCV",
+                          "type": "application/pdf",
+                          "size": 251071,
+                          "uploaded_at": "2024-11-05 08:39:56"
+                      }
+                  ]
+              }
+          }

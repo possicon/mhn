@@ -1,0 +1,84 @@
+info:
+  name: View a Single Organization
+  type: http
+  seq: 6
+
+http:
+  method: GET
+  url: "{{base_url}}/admin/organization/:id"
+  params:
+    - name: id
+      value: 9bc5eb78-74d2-45f4-a677-05d07dca6a63
+      type: path
+  body:
+    type: json
+    data: ""
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+examples:
+  - name: View a Single Organization
+    request:
+      url: "{{base_url}}/admin/organization/:id"
+      method: GET
+      params:
+        - name: id
+          value: 9bc5eb78-74d2-45f4-a677-05d07dca6a63
+          type: path
+      body:
+        type: json
+        data: ""
+    response:
+      status: 200
+      statusText: OK
+      headers:
+        - name: Date
+          value: Fri, 13 Dec 2024 22:47:26 GMT
+        - name: Server
+          value: Apache/2.4.54 (Win64) OpenSSL/1.1.1d mod_fcgid/2.3.10-dev
+        - name: X-Powered-By
+          value: PHP/8.2.17
+        - name: Cache-Control
+          value: no-cache, private
+        - name: X-RateLimit-Limit
+          value: "60"
+        - name: X-RateLimit-Remaining
+          value: "59"
+        - name: Access-Control-Allow-Origin
+          value: "*"
+        - name: Vary
+          value: Authorization
+        - name: Keep-Alive
+          value: timeout=5, max=100
+        - name: Connection
+          value: Keep-Alive
+        - name: Transfer-Encoding
+          value: chunked
+        - name: Content-Type
+          value: application/json
+      body:
+        type: json
+        data: |-
+          {
+              "success": true,
+              "code": 0,
+              "locale": "en",
+              "message": "Fetched organizations successfully",
+              "data": {
+                  "organizations": {
+                      "id": "9bc5eb78-74d2-45f4-a677-05d07dca6a63",
+                      "name": "MHN",
+                      "region": "Africa",
+                      "country": "United States",
+                      "orgType": "Hospitals & Health Centers",
+                      "email": "pinnacles@pinnacle.com",
+                      "status": "Org Onboarded",
+                      "invited_status": false
+                  }
+              }
+          }

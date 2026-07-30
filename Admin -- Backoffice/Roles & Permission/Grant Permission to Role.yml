@@ -1,0 +1,32 @@
+info:
+  name: Grant Permission to Role
+  type: http
+  seq: 8
+
+http:
+  method: PUT
+  url: "{{base_url}}/admin/roles/1/permissions"
+  headers:
+    - name: Accept
+      value: application/json
+    - name: Content-Type
+      value: application/x-www-form-urlencoded
+      disabled: true
+    - name: ""
+      value: ""
+      disabled: true
+  body:
+    type: json
+    data: |-
+      {
+          "permissions":[1]
+      }
+  auth:
+    type: bearer
+    token: "{{token}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

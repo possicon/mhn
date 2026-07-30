@@ -1,0 +1,105 @@
+info:
+  name: Add New Organization
+  type: http
+  seq: 2
+
+http:
+  method: POST
+  url: "{{base_url}}/generic/organization/create-organization"
+  headers:
+    - name: Accept
+      value: application/json
+  body:
+    type: json
+    data: "{\r
+
+      \    \"email\":\"possicon@icloud.com\",\r
+
+      \    \"name\": \"Ikorodu  NG\",\r
+
+      \    \"interested_plan_id\":\"9bb5e95c-833f-41b0-ac8e-2efb5bccfd55\",\r
+
+      \    \"country_id\":\"9bb5e95c-833f-41b0-ac8e-2efb5bccfd55\",\r
+
+      \    \"plan_frequency\":\"monthly\", //monthly, quarterly or yearly\r
+
+      \    \"organization_type_id\":\"1\",\r
+
+      \    \"redirect_url\":\"https://mhn.com\", //  url to complete their registration\r
+
+      \    \"activation_url\":\"https://mhn.com/activation-page\"\r
+
+      }"
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+examples:
+  - name: Add New Organization
+    request:
+      url: "{{base_url}}/generic/organization/create-organization"
+      method: POST
+      headers:
+        - name: Accept
+          value: application/json
+      body:
+        type: json
+        data: "{\r
+
+          \    \"email\":\"moyoqr1@mhn.ng\",\r
+
+          \    \"name\": \"MHN NG\",\r
+
+          \    \"interested_plan_id\":\"9bd21ab6-24de-4a8f-91da-a16d95939fd3\",\r
+
+          \    \"country_id\":\"9b9faee3-6aaa-4050-bd6c-98a43e674250\",\r
+
+          \    \"plan_frequency\":\"monthly\", //monthly, quarterly or yearly\r
+
+          \    \"organization_type_id\":\"1\",\r
+
+          \    \"redirect_url\":\"https://mhn.com\", //  url to complete their registration\r
+
+          \    \"redirect_activation_url\":\"https://mhn.com/activation-page\"\r
+
+          }"
+    response:
+      status: 201
+      statusText: Created
+      headers:
+        - name: Date
+          value: Wed, 17 Apr 2024 15:43:15 GMT
+        - name: Server
+          value: Apache/2.4.54 (Win64) OpenSSL/1.1.1q mod_fcgid/2.3.10-dev
+        - name: X-Powered-By
+          value: PHP/8.2.16
+        - name: Cache-Control
+          value: no-cache, private
+        - name: X-RateLimit-Limit
+          value: "60"
+        - name: X-RateLimit-Remaining
+          value: "58"
+        - name: Access-Control-Allow-Origin
+          value: "*"
+        - name: Keep-Alive
+          value: timeout=5, max=100
+        - name: Connection
+          value: Keep-Alive
+        - name: Transfer-Encoding
+          value: chunked
+        - name: Content-Type
+          value: application/json
+      body:
+        type: json
+        data: |-
+          {
+              "success": true,
+              "code": 0,
+              "locale": "en",
+              "message": "Thank you for signing up. A link has been sent to mo*****@mhn.ng",
+              "data": null
+          }

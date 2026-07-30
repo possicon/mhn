@@ -1,0 +1,81 @@
+info:
+  name: Import state csv
+  type: http
+  seq: 7
+
+http:
+  method: POST
+  url: "{{base_url}}/admin/state/import"
+  headers:
+    - name: Accept
+      value: multipart/form-data
+  body:
+    type: multipart-form
+    data:
+      - name: file
+        type: file
+        value:
+          - 4Nu36rPa2/state_import_sample.csv
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+examples:
+  - name: Import state csv
+    request:
+      url: "{{base_url}}/admin/state/import"
+      method: POST
+      headers:
+        - name: Accept
+          value: multipart/form-data
+      body:
+        type: multipart-form
+        data:
+          - name: file
+            type: file
+            value:
+              - 4Nu36rPa2/state_import_sample.csv
+    response:
+      status: 200
+      statusText: OK
+      headers:
+        - name: Date
+          value: Sun, 29 Jun 2025 17:59:39 GMT
+        - name: Server
+          value: Apache/2.4.54 (Win64) OpenSSL/1.1.1d mod_fcgid/2.3.10-dev
+        - name: X-Powered-By
+          value: PHP/8.2.17
+        - name: Cache-Control
+          value: no-cache, private
+        - name: X-RateLimit-Limit
+          value: "60"
+        - name: X-RateLimit-Remaining
+          value: "59"
+        - name: Access-Control-Allow-Origin
+          value: "*"
+        - name: Vary
+          value: Authorization
+        - name: Keep-Alive
+          value: timeout=5, max=100
+        - name: Connection
+          value: Keep-Alive
+        - name: Transfer-Encoding
+          value: chunked
+        - name: Content-Type
+          value: application/json
+      body:
+        type: json
+        data: |-
+          {
+              "success": true,
+              "code": 0,
+              "locale": "en",
+              "message": "Bulk upload of states has started.",
+              "data": {
+                  "batch_id": "9f45c47c-7fbb-480f-bc14-9b6ecd8f4a17"
+              }
+          }

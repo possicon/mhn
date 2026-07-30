@@ -1,0 +1,200 @@
+info:
+  name: Add New Health Provider
+  type: http
+  seq: 1
+
+http:
+  method: POST
+  url: "{{base_url}}/admin/hmo/add-new-health-provider"
+  headers:
+    - name: Accept
+      value: application/json
+  body:
+    type: multipart-form
+    data:
+      - name: health_provider
+        type: text
+        value: Reliance
+      - name: type
+        type: text
+        value: public
+      - name: contact_name
+        type: text
+        value: Moyo
+      - name: contact_email_address
+        type: text
+        value: moyo@reliance.com
+      - name: contact_phone_number
+        type: text
+        value: "09023456789"
+      - name: status
+        type: text
+        value: active
+        disabled: true
+      - name: country_id
+        type: text
+        value: "161"
+      - name: role_id
+        type: text
+        value: "2"
+      - name: proof_of_documents[0]
+        type: file
+        value:
+          - /Users/possicon/Desktop/Screenshot 2026-04-06 at 07.06.06.png
+      - name: proof_of_documents[1]
+        type: file
+        value:
+          - /Users/possicon/Desktop/Screenshot 2026-04-03 at 23.54.27.png
+      - name: description
+        type: text
+        value: Reliance
+  auth:
+    type: bearer
+    token: "{{adminToken}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+examples:
+  - name: Add New Health Provider
+    request:
+      url: "{{base_url}}/admin/hmo/add-new-health-provider"
+      method: POST
+      body:
+        type: multipart-form
+        data:
+          - name: health_provider
+            type: text
+            value: Relainces
+          - name: type
+            type: text
+            value: public
+          - name: contact_name
+            type: text
+            value: Moyo
+          - name: contact_email_address
+            type: text
+            value: moyo@reliance.com
+          - name: contact_phone_number
+            type: text
+            value: "09023456789"
+          - name: status
+            type: text
+            value: active
+          - name: country_id
+            type: text
+            value: 9b9faee2-a2a4-4bcc-a758-53dfee793de6
+          - name: role_id
+            type: text
+            value: "2"
+          - name: proof_of_documents[0]
+            type: file
+            value:
+              - /C:/Users/MY PC/Downloads/Chibuikem.pdf
+          - name: proof_of_documents[1]
+            type: file
+            value:
+              - /C:/Users/MY PC/Downloads/Emmanuel - Software Developer.pdf
+          - name: description
+            type: text
+            value: ""
+    response:
+      status: 201
+      statusText: Created
+      headers:
+        - name: Date
+          value: Fri, 05 Apr 2024 08:40:27 GMT
+        - name: Server
+          value: Apache/2.4.54 (Win64) OpenSSL/1.1.1q mod_fcgid/2.3.10-dev
+        - name: X-Powered-By
+          value: PHP/8.2.16
+        - name: Cache-Control
+          value: no-cache, private
+        - name: X-RateLimit-Limit
+          value: "60"
+        - name: X-RateLimit-Remaining
+          value: "59"
+        - name: Access-Control-Allow-Origin
+          value: "*"
+        - name: Vary
+          value: Authorization
+        - name: Keep-Alive
+          value: timeout=5, max=100
+        - name: Connection
+          value: Keep-Alive
+        - name: Transfer-Encoding
+          value: chunked
+        - name: Content-Type
+          value: application/json
+      body:
+        type: json
+        data: |-
+          {
+              "success": true,
+              "code": 0,
+              "locale": "en",
+              "message": "HMO added successfully",
+              "data": {
+                  "hmo": {
+                      "id": "9bbbbda4-2dbe-4239-8003-740c2b316479",
+                      "health_provider": "Relainces",
+                      "type": "public",
+                      "contact_name": "Moyo",
+                      "contact_email_address": "moyo@reliance.com",
+                      "contact_phone_number": "09023456789",
+                      "status": "active",
+                      "description": null,
+                      "country": {
+                          "id": "9b9faee2-a2a4-4bcc-a758-53dfee793de6",
+                          "name": "American Samoa",
+                          "region_id": "9b9ecc53-4acd-477c-8368-6493a1f9d98c",
+                          "currency_name": "US Dollar",
+                          "currency_symbol": "USD",
+                          "active": true,
+                          "flag": null
+                      },
+                      "no_of_location": 0,
+                      "role": [
+                          {
+                              "id": 2,
+                              "name": "Hospital Admin",
+                              "guard_name": "user",
+                              "created_at": "2024-03-31T16:52:41.000000Z",
+                              "updated_at": "2024-03-31T16:52:41.000000Z",
+                              "pivot": {
+                                  "model_type": "App\\Models\\V1\\Admin\\Hmo",
+                                  "model_uuid": "9bbbbda4-2dbe-4239-8003-740c2b316479",
+                                  "role_id": 2
+                              }
+                          }
+                      ],
+                      "proof_of_documents": {
+                          "ae90b463-8672-49b5-bd2b-f798a8f0bbfc": {
+                              "name": "Chibuikem",
+                              "file_name": "Chibuikem.pdf",
+                              "uuid": "ae90b463-8672-49b5-bd2b-f798a8f0bbfc",
+                              "preview_url": "",
+                              "original_url": "http://localhost/storage/20/Chibuikem.pdf",
+                              "order": 1,
+                              "custom_properties": [],
+                              "extension": "pdf",
+                              "size": 52467
+                          },
+                          "d80ab425-9d1c-469d-bc1f-68439bca122a": {
+                              "name": "Emmanuel - Software Developer",
+                              "file_name": "Emmanuel---Software-Developer.pdf",
+                              "uuid": "d80ab425-9d1c-469d-bc1f-68439bca122a",
+                              "preview_url": "",
+                              "original_url": "http://localhost/storage/21/Emmanuel---Software-Developer.pdf",
+                              "order": 2,
+                              "custom_properties": [],
+                              "extension": "pdf",
+                              "size": 118441
+                          }
+                      }
+                  }
+              }
+          }

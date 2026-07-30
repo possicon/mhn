@@ -1,0 +1,76 @@
+info:
+  name: sms credits logs
+  type: http
+  seq: 3
+
+http:
+  method: GET
+  url: "{{base_url}}/user/organization/sms/credit"
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+examples:
+  - name: New Request
+    request:
+      url: "{{base_url}}/user/organization/sms/credit"
+      method: GET
+    response:
+      status: 200
+      statusText: OK
+      headers:
+        - name: Date
+          value: Fri, 10 May 2024 11:56:12 GMT
+        - name: Server
+          value: Apache/2.4.54 (Win64) OpenSSL/1.1.1q mod_fcgid/2.3.10-dev
+        - name: X-Powered-By
+          value: PHP/8.2.16
+        - name: Cache-Control
+          value: no-cache, private
+        - name: X-RateLimit-Limit
+          value: "60"
+        - name: X-RateLimit-Remaining
+          value: "59"
+        - name: Access-Control-Allow-Origin
+          value: "*"
+        - name: Vary
+          value: Authorization
+        - name: Keep-Alive
+          value: timeout=5, max=100
+        - name: Connection
+          value: Keep-Alive
+        - name: Transfer-Encoding
+          value: chunked
+        - name: Content-Type
+          value: application/json
+      body:
+        type: json
+        data: |-
+          {
+              "success": true,
+              "code": 0,
+              "locale": "en",
+              "message": "Fetched sms credits successfully",
+              "data": {
+                  "items": [
+                      {
+                          "id": "9c026ba8-bd1b-4e6a-9692-8b0792652503",
+                          "organization_id": "9bc5eb78-74d2-45f4-a677-05d07dca6a63",
+                          "sms_pricing_id": "9c02483f-cae6-4158-8eea-49563dd03d56",
+                          "created_at": "2024-05-10T11:55:00.000000Z",
+                          "updated_at": "2024-05-10T11:55:00.000000Z",
+                          "sms_pricing": {
+                              "id": "9c02483f-cae6-4158-8eea-49563dd03d56",
+                              "number_of_credits": "150.00",
+                              "amount": "6000.00",
+                              "created_at": "2024-05-10T10:16:00.000000Z",
+                              "updated_at": "2024-05-10T10:16:00.000000Z"
+                          }
+                      }
+                  ]
+              }
+          }

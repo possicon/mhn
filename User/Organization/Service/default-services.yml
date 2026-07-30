@@ -1,0 +1,721 @@
+info:
+  name: default-services
+  type: http
+  seq: 6
+
+http:
+  method: GET
+  url: "{{base_url}}/user/organization/default-services"
+  headers:
+    - name: Accept
+      value: application/json
+  auth:
+    type: bearer
+    token: 78|IJJwsPNGwfjrHdMvXfMgKzfYaTOw56YXrF1VLHE8b494a4af
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+examples:
+  - name: default-services
+    request:
+      url: "{{base_url}}/user/organization/default-services"
+      method: GET
+      headers:
+        - name: Accept
+          value: application/json
+    response:
+      status: 200
+      statusText: OK
+      headers:
+        - name: Date
+          value: Thu, 22 Aug 2024 09:25:46 GMT
+        - name: Server
+          value: Apache/2.4.54 (Win64) OpenSSL/1.1.1q mod_fcgid/2.3.10-dev
+        - name: X-Powered-By
+          value: PHP/8.2.16
+        - name: Cache-Control
+          value: no-cache, private
+        - name: X-RateLimit-Limit
+          value: "60"
+        - name: X-RateLimit-Remaining
+          value: "59"
+        - name: Access-Control-Allow-Origin
+          value: "*"
+        - name: Vary
+          value: Authorization
+        - name: Keep-Alive
+          value: timeout=5, max=100
+        - name: Connection
+          value: Keep-Alive
+        - name: Transfer-Encoding
+          value: chunked
+        - name: Content-Type
+          value: application/json
+      body:
+        type: json
+        data: |-
+          {
+              "success": true,
+              "code": 0,
+              "locale": "en",
+              "message": "success",
+              "data": {
+                  "services": [
+                      {
+                          "id": "9be982a5-4bda-4d19-8af3-a345ab0f98f0",
+                          "name": "Hospital Resistration",
+                          "type": "general",
+                          "status": "active",
+                          "description": "Hospital Resistration description",
+                          "created_at": "2024-04-28T02:43:35.000000Z",
+                          "updated_at": "2024-08-22T09:17:13.000000Z",
+                          "organization_id": null,
+                          "amount": "80035.00",
+                          "private_pricing": null,
+                          "category": null,
+                          "latest_service_log": {
+                              "id": "9cd36993-bfc9-4939-8088-554b6a051b86",
+                              "service_id": "9be982a5-4bda-4d19-8af3-a345ab0f98f0",
+                              "changed_by": {
+                                  "id": "9bc6382c-bb73-4c7d-9409-677fe560485d",
+                                  "first_name": "General",
+                                  "middle_name": "Prince",
+                                  "last_name": "Emmanuel",
+                                  "gender": "male",
+                                  "status": "Active",
+                                  "phone": "0802323232323",
+                                  "email": "contactus@mhn.ng",
+                                  "username": null,
+                                  "email_verified_at": null,
+                                  "type": "owner",
+                                  "country_id": "9b9faee3-6aaa-4050-bd6c-98a43e674250",
+                                  "branch_id": null,
+                                  "organization_id": "9bc5eb78-74d2-45f4-a677-05d07dca6a63",
+                                  "company_id": null,
+                                  "reset_token": null,
+                                  "token_time": null,
+                                  "created_at": "2024-04-10T13:41:22.000000Z",
+                                  "updated_at": "2024-04-11T19:11:50.000000Z",
+                                  "deleted_at": null
+                              },
+                              "old_amount": "0.00",
+                              "new_amount": "80035.00",
+                              "created_at": "2024-08-22T09:17:13.000000Z",
+                              "updated_at": "2024-08-22T09:17:13.000000Z"
+                          }
+                      },
+                      {
+                          "id": "9be982d0-5b4d-4475-b4a4-8a31201be5e5",
+                          "name": "Lab Resistration",
+                          "type": "lab",
+                          "status": "active",
+                          "description": "Lab Resistration description",
+                          "created_at": "2024-04-28T02:44:03.000000Z",
+                          "updated_at": "2024-04-28T02:44:03.000000Z",
+                          "organization_id": null,
+                          "amount": "0.00",
+                          "private_pricing": null,
+                          "category": null,
+                          "latest_service_log": null
+                      },
+                      {
+                          "id": "9be98316-f582-4517-a492-282cab1af015",
+                          "name": "Prescription",
+                          "type": "prescription",
+                          "status": "active",
+                          "description": "Prescription description",
+                          "created_at": "2024-04-28T02:44:50.000000Z",
+                          "updated_at": "2024-04-28T02:44:50.000000Z",
+                          "organization_id": null,
+                          "amount": "0.00",
+                          "private_pricing": null,
+                          "category": null,
+                          "latest_service_log": null
+                      },
+                      {
+                          "id": "9be98c6c-2cc2-4c63-ab92-20497d6298e0",
+                          "name": "Hospital consultation",
+                          "type": "general",
+                          "status": "active",
+                          "description": "Hospital Resistration description",
+                          "created_at": "2024-04-28T03:10:55.000000Z",
+                          "updated_at": "2024-04-28T03:10:55.000000Z",
+                          "organization_id": null,
+                          "amount": "0.00",
+                          "private_pricing": null,
+                          "category": null,
+                          "latest_service_log": null
+                      },
+                      {
+                          "id": "9be98ca9-20f0-4913-8700-0bf23a6316b9",
+                          "name": "Lab consultation",
+                          "type": "lab",
+                          "status": "active",
+                          "description": "Hospital Resistration description",
+                          "created_at": "2024-04-28T03:11:35.000000Z",
+                          "updated_at": "2024-04-28T03:11:35.000000Z",
+                          "organization_id": null,
+                          "amount": "0.00",
+                          "private_pricing": null,
+                          "category": null,
+                          "latest_service_log": null
+                      },
+                      {
+                          "id": "9be98cd7-b15a-4f57-9a33-66d00451c994",
+                          "name": "Lab test",
+                          "type": "lab",
+                          "status": "active",
+                          "description": "Hospital Resistration description",
+                          "created_at": "2024-04-28T03:12:06.000000Z",
+                          "updated_at": "2024-04-28T03:12:06.000000Z",
+                          "organization_id": null,
+                          "amount": "0.00",
+                          "private_pricing": null,
+                          "category": null,
+                          "latest_service_log": null
+                      },
+                      {
+                          "id": "9c48be94-567e-44a4-8d67-ebe258aa8876",
+                          "name": "Hospital",
+                          "type": "general",
+                          "status": "active",
+                          "description": "Hospital Resistration description",
+                          "created_at": "2024-06-14T10:54:49.000000Z",
+                          "updated_at": "2024-06-14T10:54:49.000000Z",
+                          "organization_id": null,
+                          "amount": "0.00",
+                          "private_pricing": null,
+                          "category": null,
+                          "latest_service_log": null
+                      }
+                  ]
+              }
+          }
+  - name: default-services
+    request:
+      url: "{{base_url}}/user/organization/default-services"
+      method: GET
+      headers:
+        - name: Accept
+          value: application/json
+    response:
+      status: 200
+      statusText: OK
+      headers:
+        - name: Date
+          value: Mon, 02 Dec 2024 16:23:06 GMT
+        - name: Server
+          value: Apache/2.4.54 (Win64) OpenSSL/1.1.1d mod_fcgid/2.3.10-dev
+        - name: X-Powered-By
+          value: PHP/8.2.17
+        - name: Cache-Control
+          value: no-cache, private
+        - name: X-RateLimit-Limit
+          value: "60"
+        - name: X-RateLimit-Remaining
+          value: "59"
+        - name: Access-Control-Allow-Origin
+          value: "*"
+        - name: Vary
+          value: Authorization
+        - name: Keep-Alive
+          value: timeout=5, max=100
+        - name: Connection
+          value: Keep-Alive
+        - name: Transfer-Encoding
+          value: chunked
+        - name: Content-Type
+          value: application/json
+      body:
+        type: json
+        data: |-
+          {
+              "success": true,
+              "code": 0,
+              "locale": "en",
+              "message": "Success",
+              "data": {
+                  "services": [
+                      {
+                          "id": "9cfe8382-d6e2-4519-93a8-2337a40aada6",
+                          "name": "General Checkup",
+                          "service_type": "general",
+                          "created_at": "2024-09-12T19:30:20.000000Z",
+                          "updated_at": "2024-09-14T10:34:34.000000Z",
+                          "organization_id": null,
+                          "description": "ddg",
+                          "category": "general",
+                          "status": "active",
+                          "latest_service_log": {
+                              "id": "9d01c9e0-1695-40f8-a300-10fbffc8ff31",
+                              "service_id": "9cfe8382-d6e2-4519-93a8-2337a40aada6",
+                              "changed_by": {
+                                  "id": "9bc6382c-bb73-4c7d-9409-677fe560485d",
+                                  "first_name": "General",
+                                  "middle_name": "Prince",
+                                  "last_name": "Emmanuel",
+                                  "gender": "male",
+                                  "status": "Active",
+                                  "phone": "0802323232323",
+                                  "email": "contactus@mhn.ng",
+                                  "username": null,
+                                  "email_verified_at": null,
+                                  "type": "owner",
+                                  "country_id": "9b9faee3-6aaa-4050-bd6c-98a43e674250",
+                                  "branch_id": null,
+                                  "organization_id": "9bc5eb78-74d2-45f4-a677-05d07dca6a63",
+                                  "company_id": null,
+                                  "reset_token": null,
+                                  "token_time": null,
+                                  "created_at": "2024-04-10T13:41:22.000000Z",
+                                  "updated_at": "2024-04-11T19:11:50.000000Z",
+                                  "deleted_at": null
+                              },
+                              "old_amount": "10000.00",
+                              "new_amount": "43768.00",
+                              "created_at": "2024-09-14T10:34:34.000000Z",
+                              "updated_at": "2024-09-14T10:34:34.000000Z"
+                          }
+                      },
+                      {
+                          "id": "9cfe8382-e00e-4771-8587-0af7056865cb",
+                          "name": "Health Screening",
+                          "service_type": "general",
+                          "created_at": "2024-09-12T19:30:20.000000Z",
+                          "updated_at": "2024-09-13T07:51:08.000000Z",
+                          "organization_id": null,
+                          "description": "dgdgd",
+                          "category": null,
+                          "status": "active",
+                          "latest_service_log": {
+                              "id": "9d01c9e0-1d86-4cdc-8e7e-32c43ec8cbc9",
+                              "service_id": "9cfe8382-e00e-4771-8587-0af7056865cb",
+                              "changed_by": {
+                                  "id": "9bc6382c-bb73-4c7d-9409-677fe560485d",
+                                  "first_name": "General",
+                                  "middle_name": "Prince",
+                                  "last_name": "Emmanuel",
+                                  "gender": "male",
+                                  "status": "Active",
+                                  "phone": "0802323232323",
+                                  "email": "contactus@mhn.ng",
+                                  "username": null,
+                                  "email_verified_at": null,
+                                  "type": "owner",
+                                  "country_id": "9b9faee3-6aaa-4050-bd6c-98a43e674250",
+                                  "branch_id": null,
+                                  "organization_id": "9bc5eb78-74d2-45f4-a677-05d07dca6a63",
+                                  "company_id": null,
+                                  "reset_token": null,
+                                  "token_time": null,
+                                  "created_at": "2024-04-10T13:41:22.000000Z",
+                                  "updated_at": "2024-04-11T19:11:50.000000Z",
+                                  "deleted_at": null
+                              },
+                              "old_amount": "7668.00",
+                              "new_amount": "7668.00",
+                              "created_at": "2024-09-14T10:34:34.000000Z",
+                              "updated_at": "2024-09-14T10:34:34.000000Z"
+                          }
+                      },
+                      {
+                          "id": "9cfe8382-e184-41e9-9838-9a0b047b6b31",
+                          "name": "Annual Physical Exam",
+                          "service_type": "general",
+                          "created_at": "2024-09-12T19:30:20.000000Z",
+                          "updated_at": "2024-09-13T07:51:08.000000Z",
+                          "organization_id": null,
+                          "description": "dlgdgd",
+                          "category": null,
+                          "status": "active",
+                          "latest_service_log": {
+                              "id": "9d01c9e0-234d-4952-9ebc-a04d304f5b3f",
+                              "service_id": "9cfe8382-e184-41e9-9838-9a0b047b6b31",
+                              "changed_by": {
+                                  "id": "9bc6382c-bb73-4c7d-9409-677fe560485d",
+                                  "first_name": "General",
+                                  "middle_name": "Prince",
+                                  "last_name": "Emmanuel",
+                                  "gender": "male",
+                                  "status": "Active",
+                                  "phone": "0802323232323",
+                                  "email": "contactus@mhn.ng",
+                                  "username": null,
+                                  "email_verified_at": null,
+                                  "type": "owner",
+                                  "country_id": "9b9faee3-6aaa-4050-bd6c-98a43e674250",
+                                  "branch_id": null,
+                                  "organization_id": "9bc5eb78-74d2-45f4-a677-05d07dca6a63",
+                                  "company_id": null,
+                                  "reset_token": null,
+                                  "token_time": null,
+                                  "created_at": "2024-04-10T13:41:22.000000Z",
+                                  "updated_at": "2024-04-11T19:11:50.000000Z",
+                                  "deleted_at": null
+                              },
+                              "old_amount": "4576.00",
+                              "new_amount": "4576.00",
+                              "created_at": "2024-09-14T10:34:34.000000Z",
+                              "updated_at": "2024-09-14T10:34:34.000000Z"
+                          }
+                      },
+                      {
+                          "id": "9cfe8382-e2dd-41f5-86e7-7dbf3335aafb",
+                          "name": "Blood Pressure Monitoring",
+                          "service_type": "general",
+                          "created_at": "2024-09-12T19:30:20.000000Z",
+                          "updated_at": "2024-09-13T07:42:12.000000Z",
+                          "organization_id": null,
+                          "description": "",
+                          "category": null,
+                          "status": "active",
+                          "latest_service_log": {
+                              "id": "9d01c9e0-294d-4b07-b2fb-0e20d409502a",
+                              "service_id": "9cfe8382-e2dd-41f5-86e7-7dbf3335aafb",
+                              "changed_by": {
+                                  "id": "9bc6382c-bb73-4c7d-9409-677fe560485d",
+                                  "first_name": "General",
+                                  "middle_name": "Prince",
+                                  "last_name": "Emmanuel",
+                                  "gender": "male",
+                                  "status": "Active",
+                                  "phone": "0802323232323",
+                                  "email": "contactus@mhn.ng",
+                                  "username": null,
+                                  "email_verified_at": null,
+                                  "type": "owner",
+                                  "country_id": "9b9faee3-6aaa-4050-bd6c-98a43e674250",
+                                  "branch_id": null,
+                                  "organization_id": "9bc5eb78-74d2-45f4-a677-05d07dca6a63",
+                                  "company_id": null,
+                                  "reset_token": null,
+                                  "token_time": null,
+                                  "created_at": "2024-04-10T13:41:22.000000Z",
+                                  "updated_at": "2024-04-11T19:11:50.000000Z",
+                                  "deleted_at": null
+                              },
+                              "old_amount": "35657.00",
+                              "new_amount": "35657.00",
+                              "created_at": "2024-09-14T10:34:34.000000Z",
+                              "updated_at": "2024-09-14T10:34:34.000000Z"
+                          }
+                      },
+                      {
+                          "id": "9cfe8382-e464-401c-bc2f-449b3b06548f",
+                          "name": "Vaccination",
+                          "service_type": "general",
+                          "created_at": "2024-09-12T19:30:20.000000Z",
+                          "updated_at": "2024-09-13T07:42:12.000000Z",
+                          "organization_id": null,
+                          "description": "",
+                          "category": null,
+                          "status": "active",
+                          "latest_service_log": {
+                              "id": "9d01c9e0-2ed5-412f-b124-4adbe341a201",
+                              "service_id": "9cfe8382-e464-401c-bc2f-449b3b06548f",
+                              "changed_by": {
+                                  "id": "9bc6382c-bb73-4c7d-9409-677fe560485d",
+                                  "first_name": "General",
+                                  "middle_name": "Prince",
+                                  "last_name": "Emmanuel",
+                                  "gender": "male",
+                                  "status": "Active",
+                                  "phone": "0802323232323",
+                                  "email": "contactus@mhn.ng",
+                                  "username": null,
+                                  "email_verified_at": null,
+                                  "type": "owner",
+                                  "country_id": "9b9faee3-6aaa-4050-bd6c-98a43e674250",
+                                  "branch_id": null,
+                                  "organization_id": "9bc5eb78-74d2-45f4-a677-05d07dca6a63",
+                                  "company_id": null,
+                                  "reset_token": null,
+                                  "token_time": null,
+                                  "created_at": "2024-04-10T13:41:22.000000Z",
+                                  "updated_at": "2024-04-11T19:11:50.000000Z",
+                                  "deleted_at": null
+                              },
+                              "old_amount": "3467.00",
+                              "new_amount": "3467.00",
+                              "created_at": "2024-09-14T10:34:34.000000Z",
+                              "updated_at": "2024-09-14T10:34:34.000000Z"
+                          }
+                      },
+                      {
+                          "id": "9cfe8382-e60c-4ce8-9981-ab2e64dea7e2",
+                          "name": "Allergy Testing",
+                          "service_type": "general",
+                          "created_at": "2024-09-12T19:30:20.000000Z",
+                          "updated_at": "2024-09-13T07:42:12.000000Z",
+                          "organization_id": null,
+                          "description": "",
+                          "category": null,
+                          "status": "active",
+                          "latest_service_log": {
+                              "id": "9d01c9e0-3569-4b87-933a-a4a49a58ec35",
+                              "service_id": "9cfe8382-e60c-4ce8-9981-ab2e64dea7e2",
+                              "changed_by": {
+                                  "id": "9bc6382c-bb73-4c7d-9409-677fe560485d",
+                                  "first_name": "General",
+                                  "middle_name": "Prince",
+                                  "last_name": "Emmanuel",
+                                  "gender": "male",
+                                  "status": "Active",
+                                  "phone": "0802323232323",
+                                  "email": "contactus@mhn.ng",
+                                  "username": null,
+                                  "email_verified_at": null,
+                                  "type": "owner",
+                                  "country_id": "9b9faee3-6aaa-4050-bd6c-98a43e674250",
+                                  "branch_id": null,
+                                  "organization_id": "9bc5eb78-74d2-45f4-a677-05d07dca6a63",
+                                  "company_id": null,
+                                  "reset_token": null,
+                                  "token_time": null,
+                                  "created_at": "2024-04-10T13:41:22.000000Z",
+                                  "updated_at": "2024-04-11T19:11:50.000000Z",
+                                  "deleted_at": null
+                              },
+                              "old_amount": "2307.00",
+                              "new_amount": "2307.00",
+                              "created_at": "2024-09-14T10:34:34.000000Z",
+                              "updated_at": "2024-09-14T10:34:34.000000Z"
+                          }
+                      },
+                      {
+                          "id": "9cfe8382-e760-44ee-a48f-8264f77a4433",
+                          "name": "Diabetes Management",
+                          "service_type": "general",
+                          "created_at": "2024-09-12T19:30:20.000000Z",
+                          "updated_at": "2024-09-13T07:42:12.000000Z",
+                          "organization_id": null,
+                          "description": "",
+                          "category": null,
+                          "status": "active",
+                          "latest_service_log": {
+                              "id": "9d01c9e0-3bd4-4be4-b860-f4a744c49d82",
+                              "service_id": "9cfe8382-e760-44ee-a48f-8264f77a4433",
+                              "changed_by": {
+                                  "id": "9bc6382c-bb73-4c7d-9409-677fe560485d",
+                                  "first_name": "General",
+                                  "middle_name": "Prince",
+                                  "last_name": "Emmanuel",
+                                  "gender": "male",
+                                  "status": "Active",
+                                  "phone": "0802323232323",
+                                  "email": "contactus@mhn.ng",
+                                  "username": null,
+                                  "email_verified_at": null,
+                                  "type": "owner",
+                                  "country_id": "9b9faee3-6aaa-4050-bd6c-98a43e674250",
+                                  "branch_id": null,
+                                  "organization_id": "9bc5eb78-74d2-45f4-a677-05d07dca6a63",
+                                  "company_id": null,
+                                  "reset_token": null,
+                                  "token_time": null,
+                                  "created_at": "2024-04-10T13:41:22.000000Z",
+                                  "updated_at": "2024-04-11T19:11:50.000000Z",
+                                  "deleted_at": null
+                              },
+                              "old_amount": "6490.00",
+                              "new_amount": "6490.00",
+                              "created_at": "2024-09-14T10:34:34.000000Z",
+                              "updated_at": "2024-09-14T10:34:34.000000Z"
+                          }
+                      },
+                      {
+                          "id": "9cfe8382-e8d5-426c-b13a-b9f86f2fc272",
+                          "name": "Preventive Care",
+                          "service_type": "general",
+                          "created_at": "2024-09-12T19:30:20.000000Z",
+                          "updated_at": "2024-09-13T07:42:12.000000Z",
+                          "organization_id": null,
+                          "description": "",
+                          "category": null,
+                          "status": "active",
+                          "latest_service_log": {
+                              "id": "9d01c9e0-41ef-46bd-847a-019413afbfc6",
+                              "service_id": "9cfe8382-e8d5-426c-b13a-b9f86f2fc272",
+                              "changed_by": {
+                                  "id": "9bc6382c-bb73-4c7d-9409-677fe560485d",
+                                  "first_name": "General",
+                                  "middle_name": "Prince",
+                                  "last_name": "Emmanuel",
+                                  "gender": "male",
+                                  "status": "Active",
+                                  "phone": "0802323232323",
+                                  "email": "contactus@mhn.ng",
+                                  "username": null,
+                                  "email_verified_at": null,
+                                  "type": "owner",
+                                  "country_id": "9b9faee3-6aaa-4050-bd6c-98a43e674250",
+                                  "branch_id": null,
+                                  "organization_id": "9bc5eb78-74d2-45f4-a677-05d07dca6a63",
+                                  "company_id": null,
+                                  "reset_token": null,
+                                  "token_time": null,
+                                  "created_at": "2024-04-10T13:41:22.000000Z",
+                                  "updated_at": "2024-04-11T19:11:50.000000Z",
+                                  "deleted_at": null
+                              },
+                              "old_amount": "600.00",
+                              "new_amount": "600.00",
+                              "created_at": "2024-09-14T10:34:34.000000Z",
+                              "updated_at": "2024-09-14T10:34:34.000000Z"
+                          }
+                      },
+                      {
+                          "id": "9cfe8382-ea58-4c51-b82c-a33bc78b58ea",
+                          "name": "Weight Management",
+                          "service_type": "general",
+                          "created_at": "2024-09-12T19:30:20.000000Z",
+                          "updated_at": "2024-09-13T07:42:12.000000Z",
+                          "organization_id": null,
+                          "description": "",
+                          "category": null,
+                          "status": "active",
+                          "latest_service_log": {
+                              "id": "9d01c9e0-46a3-40bf-a9dd-31fc075dfafe",
+                              "service_id": "9cfe8382-ea58-4c51-b82c-a33bc78b58ea",
+                              "changed_by": {
+                                  "id": "9bc6382c-bb73-4c7d-9409-677fe560485d",
+                                  "first_name": "General",
+                                  "middle_name": "Prince",
+                                  "last_name": "Emmanuel",
+                                  "gender": "male",
+                                  "status": "Active",
+                                  "phone": "0802323232323",
+                                  "email": "contactus@mhn.ng",
+                                  "username": null,
+                                  "email_verified_at": null,
+                                  "type": "owner",
+                                  "country_id": "9b9faee3-6aaa-4050-bd6c-98a43e674250",
+                                  "branch_id": null,
+                                  "organization_id": "9bc5eb78-74d2-45f4-a677-05d07dca6a63",
+                                  "company_id": null,
+                                  "reset_token": null,
+                                  "token_time": null,
+                                  "created_at": "2024-04-10T13:41:22.000000Z",
+                                  "updated_at": "2024-04-11T19:11:50.000000Z",
+                                  "deleted_at": null
+                              },
+                              "old_amount": "5435.00",
+                              "new_amount": "5435.00",
+                              "created_at": "2024-09-14T10:34:34.000000Z",
+                              "updated_at": "2024-09-14T10:34:34.000000Z"
+                          }
+                      },
+                      {
+                          "id": "9cfe8382-eb65-414a-8a78-5c9a9a93d6a1",
+                          "name": "Family Medicine",
+                          "service_type": "general",
+                          "created_at": "2024-09-12T19:30:20.000000Z",
+                          "updated_at": "2024-09-13T07:42:12.000000Z",
+                          "organization_id": null,
+                          "description": "",
+                          "category": null,
+                          "status": "active",
+                          "latest_service_log": {
+                              "id": "9d01c9e0-4c35-4b13-8bd6-308a9cc3dba7",
+                              "service_id": "9cfe8382-eb65-414a-8a78-5c9a9a93d6a1",
+                              "changed_by": {
+                                  "id": "9bc6382c-bb73-4c7d-9409-677fe560485d",
+                                  "first_name": "General",
+                                  "middle_name": "Prince",
+                                  "last_name": "Emmanuel",
+                                  "gender": "male",
+                                  "status": "Active",
+                                  "phone": "0802323232323",
+                                  "email": "contactus@mhn.ng",
+                                  "username": null,
+                                  "email_verified_at": null,
+                                  "type": "owner",
+                                  "country_id": "9b9faee3-6aaa-4050-bd6c-98a43e674250",
+                                  "branch_id": null,
+                                  "organization_id": "9bc5eb78-74d2-45f4-a677-05d07dca6a63",
+                                  "company_id": null,
+                                  "reset_token": null,
+                                  "token_time": null,
+                                  "created_at": "2024-04-10T13:41:22.000000Z",
+                                  "updated_at": "2024-04-11T19:11:50.000000Z",
+                                  "deleted_at": null
+                              },
+                              "old_amount": "9053.00",
+                              "new_amount": "9053.00",
+                              "created_at": "2024-09-14T10:34:34.000000Z",
+                              "updated_at": "2024-09-14T10:34:34.000000Z"
+                          }
+                      },
+                      {
+                          "id": "9cfe8382-ec92-40c4-aeec-1d55f6c89d1c",
+                          "name": "Complete Blood Count (CBC)",
+                          "service_type": "clinical lab",
+                          "created_at": "2024-09-12T19:30:20.000000Z",
+                          "updated_at": "2024-09-12T19:30:20.000000Z",
+                          "organization_id": null,
+                          "description": null,
+                          "category": null,
+                          "status": "active",
+                          "latest_service_log": null
+                      },
+                      {
+                          "id": "9cfe8382-edd1-4365-9214-d8a6249ce125",
+                          "name": "Urinalysis",
+                          "service_type": "clinical lab",
+                          "created_at": "2024-09-12T19:30:20.000000Z",
+                          "updated_at": "2024-09-12T19:30:20.000000Z",
+                          "organization_id": null,
+                          "description": null,
+                          "category": null,
+                          "status": "active",
+                          "latest_service_log": null
+                      },
+                      {
+                          "id": "9cfe8382-ef39-4683-b5a5-2d41436175e8",
+                          "name": "Basic Metabolic Panel",
+                          "service_type": "clinical lab",
+                          "created_at": "2024-09-12T19:30:20.000000Z",
+                          "updated_at": "2024-09-12T19:30:20.000000Z",
+                          "organization_id": null,
+                          "description": null,
+                          "category": null,
+                          "status": "active",
+                          "latest_service_log": null
+                      },
+                      {
+                          "id": "9cfe8382-f07b-4cbd-b9ba-670efd3706fa",
+                          "name": "Lipid Panel",
+                          "service_type": "clinical lab",
+                          "created_at": "2024-09-12T19:30:20.000000Z",
+                          "updated_at": "2024-09-12T19:30:20.000000Z",
+                          "organization_id": null,
+                          "description": null,
+                          "category": null,
+                          "status": "active",
+                          "latest_service_log": null
+                      },
+                      {
+                          "id": "9cfe8382-f1f0-48b2-a051-7624b549327f",
+                          "name": "Thyroid Function Test",
+                          "service_type": "clinical lab",
+                          "created_at": "2024-09-12T19:30:20.000000Z",
+                          "updated_at": "2024-09-12T19:30:20.000000Z",
+                          "organization_id": null,
+                          "description": null,
+                          "category": null,
+                          "status": "active",
+                          "latest_service_log": null
+                      }
+                  ],
+                  "meta": {
+                      "current_page": 1,
+                      "last_page": 12,
+                      "per_page": 15,
+                      "total": 170
+                  }
+              }
+          }

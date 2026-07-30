@@ -1,0 +1,457 @@
+info:
+  name: inventoryHistoryByInventory
+  type: http
+  seq: 9
+
+http:
+  method: GET
+  url: "{{base_url}}/user/organization/inventoryHistoryByInventory?page=1&search=Tetracycline&take=60"
+  headers:
+    - name: Accept
+      value: application/json
+  params:
+    - name: page
+      value: "1"
+      type: query
+    - name: search
+      value: Tetracycline
+      type: query
+    - name: take
+      value: "60"
+      type: query
+  auth:
+    type: bearer
+    token: 64|wekxmT6fEC7W1savxR3VWd2fcLOu9fkY2pdTExtBe40532c7
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+examples:
+  - name: inventoryHistoryByInventory
+    request:
+      url: "{{base_url}}/user/organization/inventoryHistoryByInventory?page=1&search=Tetracycline&take=60"
+      method: GET
+      headers:
+        - name: Accept
+          value: application/json
+      params:
+        - name: page
+          value: "1"
+          type: query
+        - name: search
+          value: Tetracycline
+          type: query
+        - name: take
+          value: "60"
+          type: query
+    response:
+      status: 200
+      statusText: OK
+      headers:
+        - name: Date
+          value: Sun, 20 Oct 2024 23:37:42 GMT
+        - name: Server
+          value: Apache/2.4.54 (Win64) OpenSSL/1.1.1d mod_fcgid/2.3.10-dev
+        - name: X-Powered-By
+          value: PHP/8.2.17
+        - name: Cache-Control
+          value: no-cache, private
+        - name: X-RateLimit-Limit
+          value: "60"
+        - name: X-RateLimit-Remaining
+          value: "59"
+        - name: Access-Control-Allow-Origin
+          value: "*"
+        - name: Vary
+          value: Authorization
+        - name: Keep-Alive
+          value: timeout=5, max=100
+        - name: Connection
+          value: Keep-Alive
+        - name: Transfer-Encoding
+          value: chunked
+        - name: Content-Type
+          value: application/json
+      body:
+        type: json
+        data: |-
+          {
+              "success": true,
+              "code": 0,
+              "locale": "en",
+              "message": "success",
+              "data": {
+                  "data": [
+                      {
+                          "id": "9d1e8ec9-5183-4385-93ed-6edf15604348",
+                          "service_name": "Paracetamol",
+                          "inventory_number": null,
+                          "last_modified": "2024-10-17 18:30:00",
+                          "category": null
+                      },
+                      {
+                          "id": "9d1e8ec9-54a7-429f-9736-17421c285061",
+                          "service_name": "Ibuprofen",
+                          "inventory_number": null,
+                          "last_modified": "2024-10-17 18:30:00",
+                          "category": null
+                      },
+                      {
+                          "id": "9d1e8ec9-5572-455e-8d29-a0f70f5a9ec7",
+                          "service_name": "Aspirin",
+                          "inventory_number": null,
+                          "last_modified": "2024-10-17 18:30:00",
+                          "category": null
+                      },
+                      {
+                          "id": "9d1e8ec9-561d-49ac-b1d9-102a95939e20",
+                          "service_name": "Amoxicillin",
+                          "inventory_number": null,
+                          "last_modified": "2024-10-17 18:30:00",
+                          "category": null
+                      },
+                      {
+                          "id": "9d1e8ec9-56dd-4a2a-8943-e5635b5f9b8e",
+                          "service_name": "Ceftriaxone",
+                          "inventory_number": null,
+                          "last_modified": "2024-10-17 18:30:00",
+                          "category": null
+                      },
+                      {
+                          "id": "9d1e8ec9-5798-4e02-9bfd-9881a64e0786",
+                          "service_name": "Metronidazole",
+                          "inventory_number": null,
+                          "last_modified": "2024-10-17 18:30:00",
+                          "category": null
+                      },
+                      {
+                          "id": "9d1e8ec9-584d-49ec-a1a1-db59c9856e83",
+                          "service_name": "Omeprazole",
+                          "inventory_number": null,
+                          "last_modified": "2024-10-17 18:30:00",
+                          "category": null
+                      },
+                      {
+                          "id": "9d1e8ec9-590d-4bd2-a01c-84a4701056c7",
+                          "service_name": "Ciprofloxacin",
+                          "inventory_number": null,
+                          "last_modified": "2024-10-17 18:30:00",
+                          "category": null
+                      },
+                      {
+                          "id": "9d1e8ec9-5a23-4f46-adaf-2ab7b61a05d2",
+                          "service_name": "Hydrocortisone",
+                          "inventory_number": null,
+                          "last_modified": "2024-10-17 18:30:00",
+                          "category": null
+                      },
+                      {
+                          "id": "9d1e8ec9-5b3c-4a16-970f-d98a6db905f8",
+                          "service_name": "Diazepam",
+                          "inventory_number": null,
+                          "last_modified": "2024-10-17 18:30:00",
+                          "category": null
+                      },
+                      {
+                          "id": "9d1e8ec9-5be0-4034-b1e3-c1b2a407e305",
+                          "service_name": "Furosemide",
+                          "inventory_number": null,
+                          "last_modified": "2024-10-17 18:30:00",
+                          "category": null
+                      },
+                      {
+                          "id": "9d1e8ec9-5c85-4607-b953-7197e43ee335",
+                          "service_name": "Amlodipine",
+                          "inventory_number": null,
+                          "last_modified": "2024-10-17 18:30:00",
+                          "category": null
+                      },
+                      {
+                          "id": "9d1e8ec9-5d27-48c3-989b-2c58267b266a",
+                          "service_name": "Metformin",
+                          "inventory_number": null,
+                          "last_modified": "2024-10-17 18:30:00",
+                          "category": null
+                      },
+                      {
+                          "id": "9d1e8ec9-5dc8-4ec7-bf95-a91f37236e8c",
+                          "service_name": "Insulin",
+                          "inventory_number": null,
+                          "last_modified": "2024-10-17 18:30:00",
+                          "category": null
+                      },
+                      {
+                          "id": "9d1e8ec9-5e69-4bdb-8d42-bca7855ebe2e",
+                          "service_name": "Salbutamol",
+                          "inventory_number": null,
+                          "last_modified": "2024-10-17 18:30:00",
+                          "category": null
+                      },
+                      {
+                          "id": "9d1e8ec9-5f1b-42a8-bb83-c42e2ed5aaef",
+                          "service_name": "Heparin",
+                          "inventory_number": null,
+                          "last_modified": "2024-10-17 18:30:00",
+                          "category": null
+                      },
+                      {
+                          "id": "9d1e8ec9-5fd1-483e-987c-311686abf693",
+                          "service_name": "Warfarin",
+                          "inventory_number": null,
+                          "last_modified": "2024-10-17 18:30:00",
+                          "category": null
+                      },
+                      {
+                          "id": "9d1e8ec9-60ff-44fe-88da-35e1243683e6",
+                          "service_name": "Morphine",
+                          "inventory_number": null,
+                          "last_modified": "2024-10-17 18:30:00",
+                          "category": null
+                      },
+                      {
+                          "id": "9d1e8ec9-61c5-484d-9f9c-0e02c4564b59",
+                          "service_name": "Lisinopril",
+                          "inventory_number": null,
+                          "last_modified": "2024-10-17 18:30:00",
+                          "category": null
+                      },
+                      {
+                          "id": "9d1e8ec9-6266-4823-8e60-1e2b24b0c831",
+                          "service_name": "Metoprolol",
+                          "inventory_number": null,
+                          "last_modified": "2024-10-17 18:30:00",
+                          "category": null
+                      },
+                      {
+                          "id": "9d1e8ec9-6309-4288-b127-c1393789f5e2",
+                          "service_name": "Atorvastatin",
+                          "inventory_number": null,
+                          "last_modified": "2024-10-17 18:30:00",
+                          "category": null
+                      },
+                      {
+                          "id": "9d1e8ec9-63a8-4253-94e1-27977d6f0e4f",
+                          "service_name": "Clopidogrel",
+                          "inventory_number": null,
+                          "last_modified": "2024-10-17 18:30:00",
+                          "category": null
+                      },
+                      {
+                          "id": "9d1e8ec9-6444-4ef3-8dad-bec6197c2cf3",
+                          "service_name": "Prednisolone",
+                          "inventory_number": null,
+                          "last_modified": "2024-10-17 18:30:00",
+                          "category": null
+                      },
+                      {
+                          "id": "9d1e8ec9-64e7-4fa0-8f1a-8f04b2315920",
+                          "service_name": "Levothyroxine",
+                          "inventory_number": null,
+                          "last_modified": "2024-10-17 18:30:00",
+                          "category": null
+                      },
+                      {
+                          "id": "9d1e8ec9-658f-4c5e-85de-f171adad701e",
+                          "service_name": "Ranitidine",
+                          "inventory_number": null,
+                          "last_modified": "2024-10-17 18:30:00",
+                          "category": null
+                      },
+                      {
+                          "id": "9d1e8ec9-6655-48e2-bbc7-3348fc8cc522",
+                          "service_name": "Doxycycline",
+                          "inventory_number": null,
+                          "last_modified": "2024-10-17 18:30:00",
+                          "category": null
+                      },
+                      {
+                          "id": "9d1e8ec9-6754-4d76-a122-a08e5e62691f",
+                          "service_name": "Azithromycin",
+                          "inventory_number": null,
+                          "last_modified": "2024-10-17 18:30:00",
+                          "category": null
+                      },
+                      {
+                          "id": "9d1e8ec9-6801-44a8-a122-0fc5c837743d",
+                          "service_name": "Tramadol",
+                          "inventory_number": null,
+                          "last_modified": "2024-10-17 18:30:00",
+                          "category": null
+                      },
+                      {
+                          "id": "9d1e8ec9-68a7-4b5a-b4d5-3accd9c38ba7",
+                          "service_name": "Simvastatin",
+                          "inventory_number": null,
+                          "last_modified": "2024-10-17 18:30:00",
+                          "category": null
+                      },
+                      {
+                          "id": "9d1e8ec9-6949-4c01-af7a-88c55c529121",
+                          "service_name": "Losartan",
+                          "inventory_number": null,
+                          "last_modified": "2024-10-17 18:30:00",
+                          "category": null
+                      },
+                      {
+                          "id": "9d1e8ec9-69ee-4b6b-b2e5-20e8a8d8d056",
+                          "service_name": "Carbamazepine",
+                          "inventory_number": null,
+                          "last_modified": "2024-10-17 18:30:00",
+                          "category": null
+                      },
+                      {
+                          "id": "9d1e8ec9-6a90-4a08-a41e-d69d5b432100",
+                          "service_name": "Clindamycin",
+                          "inventory_number": null,
+                          "last_modified": "2024-10-17 18:30:00",
+                          "category": null
+                      },
+                      {
+                          "id": "9d1e8ec9-6b3a-4366-8b04-6a3aaab10790",
+                          "service_name": "Pantoprazole",
+                          "inventory_number": null,
+                          "last_modified": "2024-10-17 18:30:00",
+                          "category": null
+                      },
+                      {
+                          "id": "9d1e8ec9-6bf0-489e-8c6b-b879f1cf96a9",
+                          "service_name": "Gabapentin",
+                          "inventory_number": null,
+                          "last_modified": "2024-10-17 18:30:00",
+                          "category": null
+                      },
+                      {
+                          "id": "9d1e8ec9-6caa-4b38-9e72-a79b5b980e7f",
+                          "service_name": "Enalapril",
+                          "inventory_number": null,
+                          "last_modified": "2024-10-17 18:30:00",
+                          "category": null
+                      },
+                      {
+                          "id": "9d1e8ec9-6d6d-43d5-8619-ef5f1f904bba",
+                          "service_name": "Esomeprazole",
+                          "inventory_number": null,
+                          "last_modified": "2024-10-17 18:30:00",
+                          "category": null
+                      },
+                      {
+                          "id": "9d1e8ec9-6e2b-4696-aa52-27c3666f5714",
+                          "service_name": "Diclofenac",
+                          "inventory_number": null,
+                          "last_modified": "2024-10-17 18:30:00",
+                          "category": null
+                      },
+                      {
+                          "id": "9d1e8ec9-6edd-41c5-b2e3-f5b6c5541a60",
+                          "service_name": "Chlorpheniramine",
+                          "inventory_number": null,
+                          "last_modified": "2024-10-17 18:30:00",
+                          "category": null
+                      },
+                      {
+                          "id": "9d1e8ec9-6f8b-453c-bd0f-8d00dc91add0",
+                          "service_name": "Nitroglycerin",
+                          "inventory_number": null,
+                          "last_modified": "2024-10-17 18:30:00",
+                          "category": null
+                      },
+                      {
+                          "id": "9d1e8ec9-7035-452c-b9bc-ec20f7f7b0a0",
+                          "service_name": "Alprazolam",
+                          "inventory_number": null,
+                          "last_modified": "2024-10-17 18:30:00",
+                          "category": null
+                      },
+                      {
+                          "id": "9d1e8ec9-70db-42a3-8cd7-3b4453e5b71f",
+                          "service_name": "Nifedipine",
+                          "inventory_number": null,
+                          "last_modified": "2024-10-17 18:30:00",
+                          "category": null
+                      },
+                      {
+                          "id": "9d1e8ec9-7181-42db-a922-728c892e4497",
+                          "service_name": "Citalopram",
+                          "inventory_number": null,
+                          "last_modified": "2024-10-17 18:30:00",
+                          "category": null
+                      },
+                      {
+                          "id": "9d1e8ec9-722a-4f8b-9130-514a189ae75a",
+                          "service_name": "Levofloxacin",
+                          "inventory_number": null,
+                          "last_modified": "2024-10-17 18:30:00",
+                          "category": null
+                      },
+                      {
+                          "id": "9d1e8ec9-72d4-4246-96cd-782a44cee26a",
+                          "service_name": "Fluconazole",
+                          "inventory_number": null,
+                          "last_modified": "2024-10-17 18:30:00",
+                          "category": null
+                      },
+                      {
+                          "id": "9d1e8ec9-7374-4853-b3bf-a9314754d1a5",
+                          "service_name": "Phenobarbital",
+                          "inventory_number": null,
+                          "last_modified": "2024-10-17 18:30:00",
+                          "category": null
+                      },
+                      {
+                          "id": "9d1e8ec9-7415-4cbb-9ebe-1d2ea5168b57",
+                          "service_name": "Loperamide",
+                          "inventory_number": null,
+                          "last_modified": "2024-10-17 18:30:00",
+                          "category": null
+                      },
+                      {
+                          "id": "9d1e8ec9-74b8-462d-9c09-f92a84570a3b",
+                          "service_name": "Clozapine",
+                          "inventory_number": null,
+                          "last_modified": "2024-10-17 18:30:00",
+                          "category": null
+                      },
+                      {
+                          "id": "9d1e8ec9-755d-4f4b-aa1b-dd171d2e7b10",
+                          "service_name": "Haloperidol",
+                          "inventory_number": null,
+                          "last_modified": "2024-10-17 18:30:00",
+                          "category": null
+                      },
+                      {
+                          "id": "9d1e8ec9-75fe-4324-8a87-cbb1a2a4face",
+                          "service_name": "Tetracycline",
+                          "inventory_number": null,
+                          "last_modified": "2024-10-17 18:30:00",
+                          "category": "string"
+                      },
+                      {
+                          "id": "9d1e8ec9-769f-4967-88b6-109910f91d18",
+                          "service_name": "Propranolol",
+                          "inventory_number": null,
+                          "last_modified": "2024-10-17 18:30:00",
+                          "category": "string"
+                      },
+                      {
+                          "id": "9d445c8d-6e98-4667-8207-44f0bc39fbf8",
+                          "service_name": "Health Screening",
+                          "inventory_number": "TC00001",
+                          "last_modified": "2024-10-17 18:30:00",
+                          "category": "string"
+                      },
+                      {
+                          "id": "9d44d661-44af-4505-beea-269fbf0ae7ff",
+                          "service_name": "General Checkup",
+                          "inventory_number": "TC00002",
+                          "last_modified": "2024-10-17 18:30:00",
+                          "category": "string"
+                      }
+                  ],
+                  "total_records": 52,
+                  "current_page": 1,
+                  "page_size": 60
+              }
+          }

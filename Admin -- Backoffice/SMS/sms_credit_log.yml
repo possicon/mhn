@@ -1,0 +1,115 @@
+info:
+  name: sms_credit_log
+  type: http
+  seq: 9
+
+http:
+  method: GET
+  url: "{{base_url}}/admin/sms_credit_log"
+  body:
+    type: text
+    data: ""
+  auth:
+    type: bearer
+    token: "{{adminToken}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+examples:
+  - name: New Request
+    request:
+      url: "{{base_url}}/admin/sms_credit_log"
+      method: GET
+      body:
+        type: text
+        data: |-
+          {
+              "name": "Reporting",
+              "img": "url",
+              "description": "This helps you to manage your hospital Emergency seamlessly."
+          }
+    response:
+      status: 200
+      statusText: OK
+      headers:
+        - name: Date
+          value: Wed, 14 May 2025 13:34:35 GMT
+        - name: Server
+          value: Apache/2.4.54 (Win64) OpenSSL/1.1.1d mod_fcgid/2.3.10-dev
+        - name: X-Powered-By
+          value: PHP/8.2.17
+        - name: Cache-Control
+          value: no-cache, private
+        - name: X-RateLimit-Limit
+          value: "60"
+        - name: X-RateLimit-Remaining
+          value: "58"
+        - name: Access-Control-Allow-Origin
+          value: "*"
+        - name: Vary
+          value: Authorization
+        - name: Keep-Alive
+          value: timeout=5, max=100
+        - name: Connection
+          value: Keep-Alive
+        - name: Transfer-Encoding
+          value: chunked
+        - name: Content-Type
+          value: application/json
+      body:
+        type: json
+        data: |-
+          {
+              "success": true,
+              "code": 0,
+              "locale": "en",
+              "message": "Fetched sms credits successfully",
+              "data": {
+                  "items": [
+                      {
+                          "id": "1sfh-nns93",
+                          "organization_id": "9bc5eb78-74d2-45f4-a677-05d07dca6a63",
+                          "sms_pricing_id": "9c02483f-cc6f-4196-b2d6-db8f3d39aca3",
+                          "remaining_sms_credit": null,
+                          "used": 0,
+                          "created_at": "2024-05-10T10:55:00.000000Z",
+                          "updated_at": "2024-05-10T10:55:00.000000Z",
+                          "sms_pricing": {
+                              "id": "9c02483f-cc6f-4196-b2d6-db8f3d39aca3",
+                              "number_of_credits": "250.00",
+                              "amount": "7000.00",
+                              "created_at": "2024-05-10T09:16:00.000000Z",
+                              "updated_at": "2024-05-10T09:16:00.000000Z"
+                          },
+                          "organization": {
+                              "id": "9bc5eb78-74d2-45f4-a677-05d07dca6a63",
+                              "name": "MHN"
+                          }
+                      },
+                      {
+                          "id": "9ea3433a-6e4f-4e74-969c-1e63d4c8c35a",
+                          "organization_id": "1a1a1a1a-1a1a-1a1a-1a1a-1a1a1a1a1a14",
+                          "sms_pricing_id": "9c02483f-cae6-4158-8eea-49563dd03d56",
+                          "remaining_sms_credit": 149,
+                          "used": 0,
+                          "created_at": "2025-04-09T22:14:07.000000Z",
+                          "updated_at": "2025-04-09T23:24:56.000000Z",
+                          "sms_pricing": {
+                              "id": "9c02483f-cae6-4158-8eea-49563dd03d56",
+                              "number_of_credits": "150.00",
+                              "amount": "6000.00",
+                              "created_at": "2024-05-10T09:16:00.000000Z",
+                              "updated_at": "2024-05-10T09:16:00.000000Z"
+                          },
+                          "organization": {
+                              "id": "1a1a1a1a-1a1a-1a1a-1a1a-1a1a1a1a1a14",
+                              "name": "Another Test Organization"
+                          }
+                      }
+                  ]
+              }
+          }

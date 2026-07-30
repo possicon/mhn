@@ -1,0 +1,84 @@
+info:
+  name: show hmo plan
+  type: http
+  seq: 21
+
+http:
+  method: GET
+  url: "{{base_url}}/user/hmoPlan/:id"
+  headers:
+    - name: Accept
+      value: application/json
+  params:
+    - name: id
+      value: 9cd3c6cf-f9c2-4f91-a3d0-5db0e9f8bddb
+      type: path
+  auth:
+    type: bearer
+    token: 72|m81Yss7Vhbc9guHIPGX3i2qlN9xiX3060QgEzqzg8f02a8fb
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+examples:
+  - name: unique-plan-names Copy
+    request:
+      url: "{{base_url}}/user/hmoPlan/:id"
+      method: GET
+      headers:
+        - name: Accept
+          value: application/json
+      params:
+        - name: id
+          value: 9cd3c6cf-f9c2-4f91-a3d0-5db0e9f8bddb
+          type: path
+    response:
+      status: 200
+      statusText: OK
+      headers:
+        - name: Date
+          value: Tue, 27 Aug 2024 22:17:04 GMT
+        - name: Server
+          value: Apache/2.4.54 (Win64) OpenSSL/1.1.1q mod_fcgid/2.3.10-dev
+        - name: X-Powered-By
+          value: PHP/8.2.16
+        - name: Cache-Control
+          value: no-cache, private
+        - name: X-RateLimit-Limit
+          value: "60"
+        - name: X-RateLimit-Remaining
+          value: "59"
+        - name: Access-Control-Allow-Origin
+          value: "*"
+        - name: Vary
+          value: Authorization
+        - name: Keep-Alive
+          value: timeout=5, max=100
+        - name: Connection
+          value: Keep-Alive
+        - name: Transfer-Encoding
+          value: chunked
+        - name: Content-Type
+          value: application/json
+      body:
+        type: json
+        data: |-
+          {
+              "success": true,
+              "code": 0,
+              "locale": "en",
+              "message": "success",
+              "data": {
+                  "data": {
+                      "id": "9cd3c6cf-f9c2-4f91-a3d0-5db0e9f8bddb",
+                      "hmo_id": "9bbbac52-edd1-4aa7-8254-c29c14fa6249",
+                      "plan": "diamond",
+                      "status": "active",
+                      "created_at": "2024-08-22T13:37:55.000000Z",
+                      "updated_at": "2024-08-22T13:37:55.000000Z"
+                  }
+              }
+          }

@@ -1,0 +1,73 @@
+info:
+  name: Delete record
+  type: http
+  seq: 6
+
+http:
+  method: DELETE
+  url: "{{base_url}}/admin/paymentMethod/:id"
+  headers:
+    - name: Accept
+      value: application/json
+  params:
+    - name: id
+      value: 9bc5787b-5a68-4a4a-9181-042dc0f12ecb
+      type: path
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+examples:
+  - name: Delete record
+    request:
+      url: "{{base_url}}/admin/paymentMethod/:id"
+      method: DELETE
+      headers:
+        - name: Accept
+          value: application/json
+      params:
+        - name: id
+          value: 9bc2bf69-9306-4d0d-b797-0cb500abbd6b
+          type: path
+    response:
+      status: 200
+      statusText: OK
+      headers:
+        - name: Date
+          value: Tue, 09 Apr 2024 06:49:40 GMT
+        - name: Server
+          value: Apache/2.4.54 (Win64) OpenSSL/1.1.1q mod_fcgid/2.3.10-dev
+        - name: X-Powered-By
+          value: PHP/8.2.16
+        - name: Cache-Control
+          value: no-cache, private
+        - name: X-RateLimit-Limit
+          value: "60"
+        - name: X-RateLimit-Remaining
+          value: "59"
+        - name: Access-Control-Allow-Origin
+          value: "*"
+        - name: Vary
+          value: Authorization
+        - name: Keep-Alive
+          value: timeout=5, max=100
+        - name: Connection
+          value: Keep-Alive
+        - name: Transfer-Encoding
+          value: chunked
+        - name: Content-Type
+          value: application/json
+      body:
+        type: json
+        data: |-
+          {
+              "success": true,
+              "code": 0,
+              "locale": "en",
+              "message": "Payment method deleted successfully.",
+              "data": null
+          }

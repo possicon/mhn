@@ -1,0 +1,300 @@
+info:
+  name: ViewAHmoPricig
+  type: http
+  seq: 6
+
+http:
+  method: GET
+  url: "{{base_url}}/user/organization/hmoPricing/:id"
+  headers:
+    - name: Accept
+      value: application/json
+  params:
+    - name: id
+      value: 9cff9713-8f22-40c2-af38-65ea5dd009e1
+      type: path
+  auth:
+    type: bearer
+    token: 47|UmN9H6pr616bS7AzWWQMh3CtvONQIutQp8ISQUwwd269fcf2
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+examples:
+  - name: ViewAHmoPricig
+    request:
+      url: "{{base_url}}/user/organization/hmoPricing/:id"
+      method: GET
+      headers:
+        - name: Accept
+          value: application/json
+      params:
+        - name: id
+          value: 9cd43d37-d8fc-4393-b30c-c7817013228b
+          type: path
+    response:
+      status: 200
+      statusText: OK
+      headers:
+        - name: Date
+          value: Thu, 22 Aug 2024 20:11:17 GMT
+        - name: Server
+          value: Apache/2.4.54 (Win64) OpenSSL/1.1.1q mod_fcgid/2.3.10-dev
+        - name: X-Powered-By
+          value: PHP/8.2.16
+        - name: Cache-Control
+          value: no-cache, private
+        - name: X-RateLimit-Limit
+          value: "60"
+        - name: X-RateLimit-Remaining
+          value: "59"
+        - name: Access-Control-Allow-Origin
+          value: "*"
+        - name: Vary
+          value: Authorization
+        - name: Keep-Alive
+          value: timeout=5, max=100
+        - name: Connection
+          value: Keep-Alive
+        - name: Transfer-Encoding
+          value: chunked
+        - name: Content-Type
+          value: application/json
+      body:
+        type: json
+        data: |-
+          {
+              "success": true,
+              "code": 0,
+              "locale": "en",
+              "message": "You have successfully fetched hmo pricing",
+              "data": {
+                  "data": {
+                      "hmo_name": "Relaince",
+                      "plan_name": "Diamond",
+                      "service_types": {
+                          "general": {
+                              "count": 5,
+                              "services": [
+                                  {
+                                      "coverage_type": "zero",
+                                      "amount": null,
+                                      "percent": "5.00",
+                                      "id": "9cd3c798-7c3f-442a-a548-4f9347790063",
+                                      "service_name": "General Checkup"
+                                  },
+                                  {
+                                      "coverage_type": "zero",
+                                      "amount": "2100.00",
+                                      "percent": "31.43",
+                                      "id": "9cd4301a-0fd7-4ac8-8fad-a4b543a44a2d",
+                                      "service_name": "Blood Pressure Monitoring"
+                                  },
+                                  {
+                                      "coverage_type": "zero",
+                                      "amount": "2100.00",
+                                      "percent": "31.43",
+                                      "id": "9cd43401-1d54-4b07-8e2c-96e65ab778ac",
+                                      "service_name": "Blood Pressure Monitoring"
+                                  },
+                                  {
+                                      "coverage_type": "zero",
+                                      "amount": "2100.00",
+                                      "percent": "31.43",
+                                      "id": "9cd434f6-7333-4f30-b0a6-c0e149f794d4",
+                                      "service_name": "Blood Pressure Monitoring"
+                                  },
+                                  {
+                                      "coverage_type": "zero",
+                                      "amount": "2100.00",
+                                      "percent": "23.81",
+                                      "id": "9cd43d37-d2be-4ff8-af26-0644d9086e3d",
+                                      "service_name": "Blood Pressure Monitoring"
+                                  },
+                                  {
+                                      "coverage_type": "full",
+                                      "amount": "1910.00",
+                                      "percent": "10.84",
+                                      "id": "9cd4301a-11df-48dd-94dd-0831867eabc4",
+                                      "service_name": "Vaccination"
+                                  },
+                                  {
+                                      "coverage_type": "full",
+                                      "amount": "1910.00",
+                                      "percent": "10.84",
+                                      "id": "9cd43401-1f38-41fc-b1e3-00672e3f376d",
+                                      "service_name": "Vaccination"
+                                  },
+                                  {
+                                      "coverage_type": "full",
+                                      "amount": "1910.00",
+                                      "percent": "10.84",
+                                      "id": "9cd434f6-74b7-4c32-a94b-b187c59868e8",
+                                      "service_name": "Vaccination"
+                                  },
+                                  {
+                                      "coverage_type": "full",
+                                      "amount": "1910.00",
+                                      "percent": "9.86",
+                                      "id": "9cd43d37-d7fa-4267-a22a-1229df1cfeb0",
+                                      "service_name": "Vaccination"
+                                  },
+                                  {
+                                      "coverage_type": "full",
+                                      "amount": "2100.00",
+                                      "percent": "20.00",
+                                      "id": "9cd3c798-809d-47b8-bcce-93e4a4cc283a",
+                                      "service_name": "Allergy Testing"
+                                  },
+                                  {
+                                      "coverage_type": "partial",
+                                      "amount": "2100.00",
+                                      "percent": "23.81",
+                                      "id": "9cd4301a-13bf-4075-9b07-3edd6ed51981",
+                                      "service_name": "Diabetes Management"
+                                  },
+                                  {
+                                      "coverage_type": "partial",
+                                      "amount": "2100.00",
+                                      "percent": "23.81",
+                                      "id": "9cd43401-2095-4286-a4d4-e7da139adbe4",
+                                      "service_name": "Diabetes Management"
+                                  },
+                                  {
+                                      "coverage_type": "partial",
+                                      "amount": "2100.00",
+                                      "percent": "23.81",
+                                      "id": "9cd434f6-7606-49f7-9b33-d0990dc77ba0",
+                                      "service_name": "Diabetes Management"
+                                  },
+                                  {
+                                      "coverage_type": "partial",
+                                      "amount": "2100.00",
+                                      "percent": "23.81",
+                                      "id": "9cd43d37-dc8e-4229-9858-b6f3104520c7",
+                                      "service_name": "Diabetes Management"
+                                  }
+                              ]
+                          },
+                          "procedures": {
+                              "count": 4,
+                              "services": [
+                                  {
+                                      "coverage_type": "zero",
+                                      "amount": "8000.00",
+                                      "percent": "6.25",
+                                      "id": "9cd4290c-e780-4e33-ac7c-0164edabf7aa",
+                                      "service_name": "Biopsy"
+                                  },
+                                  {
+                                      "coverage_type": "zero",
+                                      "amount": null,
+                                      "percent": "5.00",
+                                      "id": "9cd3cd83-88eb-4ada-b367-4816c71aae99",
+                                      "service_name": "Spirometry"
+                                  },
+                                  {
+                                      "coverage_type": "full",
+                                      "amount": null,
+                                      "percent": "20.00",
+                                      "id": "9cd3cd83-8dbb-40ee-ad44-e3eb52fffaf1",
+                                      "service_name": "Dermatological Procedure"
+                                  },
+                                  {
+                                      "coverage_type": "partial",
+                                      "amount": null,
+                                      "percent": "0.00",
+                                      "id": "9cd3cd83-9128-4b07-a8d4-60f598ccdc03",
+                                      "service_name": "Minor Surgical Procedure"
+                                  }
+                              ]
+                          },
+                          "prescription": {
+                              "count": 4,
+                              "services": [
+                                  {
+                                      "coverage_type": "full",
+                                      "amount": "10000.00",
+                                      "percent": "2.07",
+                                      "id": "9cd4290c-e9c7-48cd-b277-bb1190762f28",
+                                      "service_name": "Antihistamines"
+                                  },
+                                  {
+                                      "coverage_type": "partial",
+                                      "amount": "5050.00",
+                                      "percent": "9.90",
+                                      "id": "9cd4270b-6e04-40b4-bdce-498d56b8342b",
+                                      "service_name": "Diuretics"
+                                  },
+                                  {
+                                      "coverage_type": "full",
+                                      "amount": "5050.00",
+                                      "percent": "4.10",
+                                      "id": "9cd4270b-6c5b-414d-9916-fa346b68faae",
+                                      "service_name": "Blood Pressure Medications"
+                                  },
+                                  {
+                                      "coverage_type": "zero",
+                                      "amount": "5050.00",
+                                      "percent": "9.90",
+                                      "id": "9cd4270b-6a8b-451e-a359-822f67bf40a3",
+                                      "service_name": "Insulin"
+                                  }
+                              ]
+                          },
+                          "clinical lab": {
+                              "count": 1,
+                              "services": [
+                                  {
+                                      "coverage_type": "partial",
+                                      "amount": null,
+                                      "percent": "0.00",
+                                      "id": "9cd3c798-82b6-4400-b4c7-d13f052bbf61",
+                                      "service_name": "Basic Metabolic Panel"
+                                  }
+                              ]
+                          },
+                          "x-ray lab": {
+                              "count": 0,
+                              "services": []
+                          },
+                          "ultraSounds": {
+                              "count": 4,
+                              "services": [
+                                  {
+                                      "coverage_type": "partial",
+                                      "amount": "11000.00",
+                                      "percent": "4.55",
+                                      "id": "9cd4290c-ec20-4ebd-bc77-fe85c78836aa",
+                                      "service_name": "Obstetric Ultrasound"
+                                  },
+                                  {
+                                      "coverage_type": "partial",
+                                      "amount": "1590.00",
+                                      "percent": "31.45",
+                                      "id": "9cd42e4c-7d37-431a-b6f8-4eb6d60cd898",
+                                      "service_name": "Cardiac Ultrasound"
+                                  },
+                                  {
+                                      "coverage_type": "full",
+                                      "amount": "1500.00",
+                                      "percent": "13.80",
+                                      "id": "9cd42e4c-7b56-449a-bd8d-9f4e369ec877",
+                                      "service_name": "Musculoskeletal Ultrasound"
+                                  },
+                                  {
+                                      "coverage_type": "zero",
+                                      "amount": "11500.00",
+                                      "percent": "4.35",
+                                      "id": "9cd42e4c-792b-4cfc-a44e-4f3404e70518",
+                                      "service_name": "Pediatric Ultrasound"
+                                  }
+                              ]
+                          }
+                      }
+                  }
+              }
+          }

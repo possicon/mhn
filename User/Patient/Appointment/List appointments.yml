@@ -1,0 +1,220 @@
+info:
+  name: List appointments
+  type: http
+  seq: 2
+
+http:
+  method: GET
+  url: "{{base_url}}/user/patients/:patientId/appointments?page=1&take=5"
+  headers:
+    - name: Accept
+      value: application/json
+  params:
+    - name: search
+      value: MHN_USAi2dTkjg
+      type: query
+      disabled: true
+    - name: page
+      value: "1"
+      type: query
+    - name: take
+      value: "5"
+      type: query
+    - name: patientId
+      value: 9c111152-abe1-4490-ab04-c066445133a7
+      type: path
+  auth:
+    type: bearer
+    token: "{{token}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+examples:
+  - name: List appointments
+    request:
+      url: "{{base_url}}/user/patients/:patientId/appointments"
+      method: GET
+      headers:
+        - name: Accept
+          value: application/json
+      params:
+        - name: patientId
+          value: 9c111152-abe1-4490-ab04-c066445133a7
+          type: path
+    response:
+      status: 200
+      statusText: OK
+      headers:
+        - name: Date
+          value: Mon, 27 May 2024 11:07:25 GMT
+        - name: Server
+          value: Apache/2.4.54 (Win64) OpenSSL/1.1.1q mod_fcgid/2.3.10-dev
+        - name: X-Powered-By
+          value: PHP/8.2.16
+        - name: Cache-Control
+          value: no-cache, private
+        - name: X-RateLimit-Limit
+          value: "60"
+        - name: X-RateLimit-Remaining
+          value: "59"
+        - name: Access-Control-Allow-Origin
+          value: "*"
+        - name: Vary
+          value: Authorization
+        - name: Keep-Alive
+          value: timeout=5, max=100
+        - name: Connection
+          value: Keep-Alive
+        - name: Transfer-Encoding
+          value: chunked
+        - name: Content-Type
+          value: application/json
+      body:
+        type: json
+        data: |-
+          {
+              "success": true,
+              "code": 0,
+              "locale": "en",
+              "message": "You have successfully  fetch all appointments",
+              "data": {
+                  "data": [
+                      {
+                          "id": "9c14a654-52e2-4628-abde-1f91daf57cbb",
+                          "purpose_of_visit": {
+                              "id": "9be982a5-4bda-4d19-8af3-a345ab0f98f0",
+                              "name": "Hospital Resistration"
+                          },
+                          "mode_of_appointment": "telemedicine",
+                          "type_of_appointment": "schedule",
+                          "payment_type": "private",
+                          "has_free_consultation": 0,
+                          "consultation_fee": "58560.00",
+                          "name": null,
+                          "policy_name": null,
+                          "plan": null,
+                          "appointment_date": "2024/06/29",
+                          "tele_medicine_url": "http://www.telemedicine.com",
+                          "model_id": "9c111152-abe1-4490-ab04-c066445133a7",
+                          "model_type": "App\\Models\\Patient",
+                          "visit_date": "2024-05-19 00:00:00",
+                          "created_at": "2024-05-19T13:23:58.000000Z",
+                          "updated_at": "2024-05-19T13:23:58.000000Z",
+                          "status": null,
+                          "patient": {
+                              "id": "9c111152-abe1-4490-ab04-c066445133a7",
+                              "first_name": "Goodness",
+                              "last_name": "Ebubechukwu",
+                              "middle_name": "Ogbuagu",
+                              "patient_sequence": "MHN_USAi2dTkjg",
+                              "media": {
+                                  "4809614b-e475-4169-b4fe-23d17c548289": {
+                                      "name": "IMG-20231127-WA0007",
+                                      "file_name": "IMG-20231127-WA0007.jpg",
+                                      "uuid": "4809614b-e475-4169-b4fe-23d17c548289",
+                                      "preview_url": "",
+                                      "original_url": "http://127.0.0.1:8000/storage/88/IMG-20231127-WA0007.jpg",
+                                      "order": 3,
+                                      "custom_properties": [],
+                                      "extension": "jpg",
+                                      "size": 45808
+                                  }
+                              }
+                          }
+                      },
+                      {
+                          "id": "9c14a42d-ce8a-40f4-bc02-7ddd72f9fb3a",
+                          "purpose_of_visit": {
+                              "id": "9be982a5-4bda-4d19-8af3-a345ab0f98f0",
+                              "name": "Hospital Resistration"
+                          },
+                          "mode_of_appointment": "telemedicine",
+                          "type_of_appointment": "immediate",
+                          "payment_type": "private",
+                          "has_free_consultation": 0,
+                          "consultation_fee": "58560.00",
+                          "name": null,
+                          "policy_name": null,
+                          "plan": null,
+                          "appointment_date": null,
+                          "tele_medicine_url": "http://www.telemedicine.com",
+                          "model_id": "9c111152-abe1-4490-ab04-c066445133a7",
+                          "model_type": "App\\Models\\Patient",
+                          "visit_date": "2024-05-19 00:00:00",
+                          "created_at": "2024-05-19T13:17:57.000000Z",
+                          "updated_at": "2024-05-19T13:17:57.000000Z",
+                          "status": null,
+                          "patient": {
+                              "id": "9c111152-abe1-4490-ab04-c066445133a7",
+                              "first_name": "Goodness",
+                              "last_name": "Ebubechukwu",
+                              "middle_name": "Ogbuagu",
+                              "patient_sequence": "MHN_USAi2dTkjg",
+                              "media": {
+                                  "4809614b-e475-4169-b4fe-23d17c548289": {
+                                      "name": "IMG-20231127-WA0007",
+                                      "file_name": "IMG-20231127-WA0007.jpg",
+                                      "uuid": "4809614b-e475-4169-b4fe-23d17c548289",
+                                      "preview_url": "",
+                                      "original_url": "http://127.0.0.1:8000/storage/88/IMG-20231127-WA0007.jpg",
+                                      "order": 3,
+                                      "custom_properties": [],
+                                      "extension": "jpg",
+                                      "size": 45808
+                                  }
+                              }
+                          }
+                      },
+                      {
+                          "id": "9c14a174-b24b-425c-a5a8-3aa29b1b253d",
+                          "purpose_of_visit": {
+                              "id": "9be982a5-4bda-4d19-8af3-a345ab0f98f0",
+                              "name": "Hospital Resistration"
+                          },
+                          "mode_of_appointment": "walk-in",
+                          "type_of_appointment": "immediate",
+                          "payment_type": "private",
+                          "has_free_consultation": 0,
+                          "consultation_fee": "58560.00",
+                          "name": null,
+                          "policy_name": null,
+                          "plan": null,
+                          "appointment_date": null,
+                          "tele_medicine_url": null,
+                          "model_id": "9c111152-abe1-4490-ab04-c066445133a7",
+                          "model_type": "App\\Models\\Patient",
+                          "visit_date": "2024-05-19 00:00:00",
+                          "created_at": "2024-05-19T13:10:20.000000Z",
+                          "updated_at": "2024-05-19T13:10:20.000000Z",
+                          "status": null,
+                          "patient": {
+                              "id": "9c111152-abe1-4490-ab04-c066445133a7",
+                              "first_name": "Goodness",
+                              "last_name": "Ebubechukwu",
+                              "middle_name": "Ogbuagu",
+                              "patient_sequence": "MHN_USAi2dTkjg",
+                              "media": {
+                                  "4809614b-e475-4169-b4fe-23d17c548289": {
+                                      "name": "IMG-20231127-WA0007",
+                                      "file_name": "IMG-20231127-WA0007.jpg",
+                                      "uuid": "4809614b-e475-4169-b4fe-23d17c548289",
+                                      "preview_url": "",
+                                      "original_url": "http://127.0.0.1:8000/storage/88/IMG-20231127-WA0007.jpg",
+                                      "order": 3,
+                                      "custom_properties": [],
+                                      "extension": "jpg",
+                                      "size": 45808
+                                  }
+                              }
+                          }
+                      }
+                  ],
+                  "total": 3,
+                  "currentPage": 1,
+                  "perPage": 20
+              }
+          }

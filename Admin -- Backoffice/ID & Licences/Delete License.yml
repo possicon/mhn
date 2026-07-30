@@ -1,0 +1,24 @@
+info:
+  name: Delete License
+  type: http
+  seq: 5
+
+http:
+  method: POST
+  url: "{{base_url}}/admin/licence/delete"
+  body:
+    type: json
+    data: "{\r
+
+      \  \"action\":\"delete\",\r
+
+      \  \"ids\": [\"9badf839-17ff-47fe-a73c-8ee8dd8d0b2c\", \"9badf677-709c-43c4-b441-c73e5be78f15\"]\r
+
+      }"
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

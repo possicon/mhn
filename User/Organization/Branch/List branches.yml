@@ -1,0 +1,122 @@
+info:
+  name: List branches
+  type: http
+  seq: 4
+
+http:
+  method: GET
+  url: "{{base_url}}/user/organization/branch"
+  params:
+    - name: filter
+      value: Apapa
+      type: query
+      disabled: true
+  auth:
+    type: bearer
+    token: "{{token}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+examples:
+  - name: List branches
+    request:
+      url: "{{base_url}}/user/organization/branch"
+      method: GET
+      params:
+        - name: filter
+          value: Apapa
+          type: query
+          disabled: true
+    response:
+      status: 200
+      statusText: OK
+      headers:
+        - name: Date
+          value: Mon, 02 Dec 2024 14:46:11 GMT
+        - name: Server
+          value: Apache/2.4.54 (Win64) OpenSSL/1.1.1d mod_fcgid/2.3.10-dev
+        - name: X-Powered-By
+          value: PHP/8.2.17
+        - name: Cache-Control
+          value: no-cache, private
+        - name: X-RateLimit-Limit
+          value: "60"
+        - name: X-RateLimit-Remaining
+          value: "59"
+        - name: Access-Control-Allow-Origin
+          value: "*"
+        - name: Vary
+          value: Authorization
+        - name: Keep-Alive
+          value: timeout=5, max=100
+        - name: Connection
+          value: Keep-Alive
+        - name: Transfer-Encoding
+          value: chunked
+        - name: Content-Type
+          value: application/json
+      body:
+        type: json
+        data: |-
+          {
+              "success": true,
+              "code": 0,
+              "locale": "en",
+              "message": "You have successfully fetched all branches connected to this Organization",
+              "data": {
+                  "data": [
+                      {
+                          "id": "9be1f262-1550-41cb-934f-381ad7cb955c",
+                          "organization_id": "9bc5eb78-74d2-45f4-a677-05d07dca6a63",
+                          "name": "Apapa",
+                          "address": "Ikorodu oga",
+                          "administrator": "Emmanuel",
+                          "state_id": "9ba01c32-5e94-41e7-be72-74ed08af5f5a",
+                          "city_id": "9ba13391-4cf9-4acc-8b31-abc54ebfc784",
+                          "status": "active",
+                          "description": "Ops manager at Ikorodu General Hospital",
+                          "tag": "Branch",
+                          "date_created": "2024-04-24T08:29:24.000000Z",
+                          "plan": "Plan A1"
+                      },
+                      {
+                          "id": "9be812a7-3b18-44d5-8f74-29b09a72036a",
+                          "organization_id": "9bc5eb78-74d2-45f4-a677-05d07dca6a63",
+                          "name": "Agege",
+                          "address": "Ikorodu oga",
+                          "administrator": "Emmanuel",
+                          "state_id": "9ba01c32-5e94-41e7-be72-74ed08af5f5a",
+                          "city_id": "9ba13391-4cf9-4acc-8b31-abc54ebfc784",
+                          "status": "active",
+                          "description": "Ops manager at Ikorodu General Hospital",
+                          "tag": "HQ",
+                          "date_created": "2024-04-27T09:34:36.000000Z",
+                          "plan": null
+                      },
+                      {
+                          "id": "9be81b54-dd56-4ed2-b237-7f6b712ca34b",
+                          "organization_id": "9bc5eb78-74d2-45f4-a677-05d07dca6a63",
+                          "name": "Aba",
+                          "address": "Ikorodu oga",
+                          "administrator": "Emmanuel",
+                          "state_id": "9ba01c32-5e94-41e7-be72-74ed08af5f5a",
+                          "city_id": "9ba13391-4cf9-4acc-8b31-abc54ebfc784",
+                          "status": "active",
+                          "description": "Ops manager at Ikorodu General Hospital",
+                          "tag": "Branch",
+                          "date_created": "2024-04-27T09:58:52.000000Z",
+                          "plan": null
+                      }
+                  ],
+                  "meta": {
+                      "current_page": 1,
+                      "last_page": 1,
+                      "per_page": 15,
+                      "total": 3
+                  }
+              }
+          }

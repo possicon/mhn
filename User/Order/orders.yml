@@ -1,0 +1,220 @@
+info:
+  name: orders
+  type: http
+  seq: 3
+
+http:
+  method: GET
+  url: "{{base_url}}/user/organization/orders?search=Health"
+  headers:
+    - name: Accept
+      value: application/json
+  params:
+    - name: search
+      value: Health
+      type: query
+  auth:
+    type: bearer
+    token: 64|wekxmT6fEC7W1savxR3VWd2fcLOu9fkY2pdTExtBe40532c7
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+examples:
+  - name: orders
+    request:
+      url: "{{base_url}}/user/organization/orders"
+      method: GET
+      headers:
+        - name: Accept
+          value: application/json
+    response:
+      status: 200
+      statusText: OK
+      headers:
+        - name: Date
+          value: Wed, 23 Oct 2024 16:18:01 GMT
+        - name: Server
+          value: Apache/2.4.54 (Win64) OpenSSL/1.1.1d mod_fcgid/2.3.10-dev
+        - name: X-Powered-By
+          value: PHP/8.2.17
+        - name: Cache-Control
+          value: no-cache, private
+        - name: X-RateLimit-Limit
+          value: "60"
+        - name: X-RateLimit-Remaining
+          value: "58"
+        - name: Access-Control-Allow-Origin
+          value: "*"
+        - name: Vary
+          value: Authorization
+        - name: Keep-Alive
+          value: timeout=5, max=100
+        - name: Connection
+          value: Keep-Alive
+        - name: Transfer-Encoding
+          value: chunked
+        - name: Content-Type
+          value: application/json
+      body:
+        type: json
+        data: |-
+          {
+              "success": true,
+              "code": 0,
+              "locale": "en",
+              "message": "success",
+              "data": {
+                  "data": [
+                      {
+                          "order_number": "#O00011",
+                          "created_at": "2024-10-23T16:07:06.000000Z",
+                          "status": "pending",
+                          "category": "string",
+                          "quantity": "20.00",
+                          "item_name": "Propranolol",
+                          "supplied_date": null,
+                          "requested_by_name": "General Emmanuel",
+                          "supplied_by_name": null
+                      },
+                      {
+                          "order_number": "#O00010",
+                          "created_at": "2024-10-23T16:05:14.000000Z",
+                          "status": "pending",
+                          "category": "string",
+                          "quantity": "24.00",
+                          "item_name": "Propranolol",
+                          "supplied_date": null,
+                          "requested_by_name": "General Emmanuel",
+                          "supplied_by_name": null
+                      },
+                      {
+                          "order_number": "#O00009",
+                          "created_at": "2024-10-23T15:47:25.000000Z",
+                          "status": "completed",
+                          "category": "string",
+                          "quantity": "2.00",
+                          "item_name": "Propranolol",
+                          "supplied_date": "2024-10-23 15:47:25",
+                          "requested_by_name": "General Emmanuel",
+                          "supplied_by_name": "General Emmanuel"
+                      },
+                      {
+                          "order_number": "#O00009",
+                          "created_at": "2024-10-23T15:47:25.000000Z",
+                          "status": "completed",
+                          "category": "string",
+                          "quantity": "2.00",
+                          "item_name": "Health Screening",
+                          "supplied_date": "2024-10-23 15:47:25",
+                          "requested_by_name": "General Emmanuel",
+                          "supplied_by_name": "General Emmanuel"
+                      },
+                      {
+                          "order_number": "#O00008",
+                          "created_at": "2024-10-23T15:45:23.000000Z",
+                          "status": "completed",
+                          "category": "string",
+                          "quantity": "20.00",
+                          "item_name": "Propranolol",
+                          "supplied_date": "2024-10-23 15:45:23",
+                          "requested_by_name": "General Emmanuel",
+                          "supplied_by_name": "General Emmanuel"
+                      },
+                      {
+                          "order_number": "#O00008",
+                          "created_at": "2024-10-23T15:45:23.000000Z",
+                          "status": "completed",
+                          "category": "string",
+                          "quantity": "25.00",
+                          "item_name": "Health Screening",
+                          "supplied_date": "2024-10-23 15:45:23",
+                          "requested_by_name": "General Emmanuel",
+                          "supplied_by_name": "General Emmanuel"
+                      },
+                      {
+                          "order_number": "#O00007",
+                          "created_at": "2024-10-23T15:20:48.000000Z",
+                          "status": "completed",
+                          "category": "string",
+                          "quantity": "20.00",
+                          "item_name": "Propranolol",
+                          "supplied_date": "2024-10-23 15:20:48",
+                          "requested_by_name": "General Emmanuel",
+                          "supplied_by_name": "General Emmanuel"
+                      },
+                      {
+                          "order_number": "#O00007",
+                          "created_at": "2024-10-23T15:20:48.000000Z",
+                          "status": "completed",
+                          "category": "string",
+                          "quantity": "25.00",
+                          "item_name": "Health Screening",
+                          "supplied_date": "2024-10-23 15:20:48",
+                          "requested_by_name": "General Emmanuel",
+                          "supplied_by_name": "General Emmanuel"
+                      },
+                      {
+                          "order_number": "#O00006",
+                          "created_at": "2024-10-23T15:10:40.000000Z",
+                          "status": "completed",
+                          "category": "string",
+                          "quantity": "20.00",
+                          "item_name": "Propranolol",
+                          "supplied_date": "2024-10-23 15:10:40",
+                          "requested_by_name": "General Emmanuel",
+                          "supplied_by_name": "General Emmanuel"
+                      },
+                      {
+                          "order_number": "#O00006",
+                          "created_at": "2024-10-23T15:10:40.000000Z",
+                          "status": "completed",
+                          "category": "string",
+                          "quantity": "25.00",
+                          "item_name": "Health Screening",
+                          "supplied_date": "2024-10-23 15:10:40",
+                          "requested_by_name": "General Emmanuel",
+                          "supplied_by_name": "General Emmanuel"
+                      },
+                      {
+                          "order_number": "#O00005",
+                          "created_at": "2024-10-23T14:55:34.000000Z",
+                          "status": "completed",
+                          "category": "string",
+                          "quantity": "20.00",
+                          "item_name": "Propranolol",
+                          "supplied_date": "2024-10-23 14:55:34",
+                          "requested_by_name": "General Emmanuel",
+                          "supplied_by_name": "General Emmanuel"
+                      },
+                      {
+                          "order_number": "#O00005",
+                          "created_at": "2024-10-23T14:55:34.000000Z",
+                          "status": "completed",
+                          "category": "string",
+                          "quantity": "25.00",
+                          "item_name": "Health Screening",
+                          "supplied_date": "2024-10-23 14:55:34",
+                          "requested_by_name": "General Emmanuel",
+                          "supplied_by_name": "General Emmanuel"
+                      },
+                      {
+                          "order_number": "#O00003",
+                          "created_at": "2024-10-23T14:49:28.000000Z",
+                          "status": "pending",
+                          "category": "string",
+                          "quantity": "20.00",
+                          "item_name": "Ibuprofen",
+                          "supplied_date": null,
+                          "requested_by_name": "General Emmanuel",
+                          "supplied_by_name": null
+                      }
+                  ],
+                  "total_records": 13,
+                  "current_page": 1,
+                  "page_size": 20
+              }
+          }

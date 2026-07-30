@@ -1,0 +1,111 @@
+info:
+  name: update
+  type: http
+  seq: 3
+
+http:
+  method: PATCH
+  url: "{{base_url}}/admin/settings/sms/:id"
+  headers:
+    - name: Accept
+      value: application/json
+  params:
+    - name: id
+      value: 9ee51687-1970-46d4-afe9-2443dbf7ddc5
+      type: path
+  body:
+    type: json
+    data: "{\r
+
+      \    \"account_notification\":true,\r
+
+      \    \"account_credentials\":1,\r
+
+      \    \"password_reset\":false,\r
+
+      \    \"account_setup_signup\":0,\r
+
+      \    \"account_registration\":true,\r
+
+      \    \"account_suspension\":false,\r
+
+      \    \"account_deletion\":1\r
+
+      }"
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+examples:
+  - name: update
+    request:
+      url: "{{base_url}}/admin/settings/sms/:id"
+      method: PATCH
+      headers:
+        - name: Accept
+          value: application/json
+      params:
+        - name: id
+          value: 9ee51687-1970-46d4-afe9-2443dbf7ddc5
+          type: path
+      body:
+        type: json
+        data: "{\r
+
+          \    \"account_notification\":true,\r
+
+          \    \"account_credentials\":1,\r
+
+          \    \"password_reset\":false,\r
+
+          \    \"account_setup_signup\":0,\r
+
+          \    \"account_registration\":true,\r
+
+          \    \"account_suspension\":false,\r
+
+          \    \"account_deletion\":1\r
+
+          }"
+    response:
+      status: 200
+      statusText: OK
+      headers:
+        - name: Date
+          value: Mon, 12 May 2025 16:35:22 GMT
+        - name: Server
+          value: Apache/2.4.54 (Win64) OpenSSL/1.1.1d mod_fcgid/2.3.10-dev
+        - name: X-Powered-By
+          value: PHP/8.2.17
+        - name: Cache-Control
+          value: no-cache, private
+        - name: X-RateLimit-Limit
+          value: "60"
+        - name: X-RateLimit-Remaining
+          value: "58"
+        - name: Access-Control-Allow-Origin
+          value: "*"
+        - name: Vary
+          value: Authorization
+        - name: Keep-Alive
+          value: timeout=5, max=100
+        - name: Connection
+          value: Keep-Alive
+        - name: Transfer-Encoding
+          value: chunked
+        - name: Content-Type
+          value: application/json
+      body:
+        type: json
+        data: |-
+          {
+              "success": true,
+              "code": 0,
+              "locale": "en",
+              "message": "You have successfully updated sms configuration",
+              "data": null
+          }

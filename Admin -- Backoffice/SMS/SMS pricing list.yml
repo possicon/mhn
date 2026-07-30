@@ -1,0 +1,110 @@
+info:
+  name: SMS pricing list
+  type: http
+  seq: 8
+
+http:
+  method: GET
+  url: "{{base_url}}/admin/smsPricing"
+  body:
+    type: text
+    data: ""
+  auth:
+    type: bearer
+    token: "{{adminToken}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+examples:
+  - name: New Request
+    request:
+      url: "{{base_url}}/admin/smsPricing"
+      method: GET
+      body:
+        type: text
+        data: |-
+          {
+              "name": "Reporting",
+              "img": "url",
+              "description": "This helps you to manage your hospital Emergency seamlessly."
+          }
+    response:
+      status: 200
+      statusText: OK
+      headers:
+        - name: Date
+          value: Wed, 14 May 2025 13:30:17 GMT
+        - name: Server
+          value: Apache/2.4.54 (Win64) OpenSSL/1.1.1d mod_fcgid/2.3.10-dev
+        - name: X-Powered-By
+          value: PHP/8.2.17
+        - name: Cache-Control
+          value: no-cache, private
+        - name: X-RateLimit-Limit
+          value: "60"
+        - name: X-RateLimit-Remaining
+          value: "59"
+        - name: Access-Control-Allow-Origin
+          value: "*"
+        - name: Vary
+          value: Authorization
+        - name: Keep-Alive
+          value: timeout=5, max=100
+        - name: Connection
+          value: Keep-Alive
+        - name: Transfer-Encoding
+          value: chunked
+        - name: Content-Type
+          value: application/json
+      body:
+        type: json
+        data: |-
+          {
+              "success": true,
+              "code": 0,
+              "locale": "en",
+              "message": "Fetched sms credits successfully",
+              "data": {
+                  "items": [
+                      {
+                          "id": "9c02483f-c219-4f31-b576-0f63784a7413",
+                          "number_of_credits": "100.00",
+                          "amount": "5000.00",
+                          "created_at": "2024-05-10T09:16:00.000000Z",
+                          "updated_at": "2024-05-10T09:16:00.000000Z"
+                      },
+                      {
+                          "id": "9c02483f-cae6-4158-8eea-49563dd03d56",
+                          "number_of_credits": "150.00",
+                          "amount": "6000.00",
+                          "created_at": "2024-05-10T09:16:00.000000Z",
+                          "updated_at": "2024-05-10T09:16:00.000000Z"
+                      },
+                      {
+                          "id": "9c02483f-cc6f-4196-b2d6-db8f3d39aca3",
+                          "number_of_credits": "250.00",
+                          "amount": "7000.00",
+                          "created_at": "2024-05-10T09:16:00.000000Z",
+                          "updated_at": "2024-05-10T09:16:00.000000Z"
+                      },
+                      {
+                          "id": "9c02483f-cd69-4e4b-9ed3-abd5dce98f8a",
+                          "number_of_credits": "300.00",
+                          "amount": "8000.00",
+                          "created_at": "2024-05-10T09:16:00.000000Z",
+                          "updated_at": "2024-05-10T09:16:00.000000Z"
+                      },
+                      {
+                          "id": "9c02483f-ce50-44e8-b37d-73141add30dc",
+                          "number_of_credits": "400.00",
+                          "amount": "9000.00",
+                          "created_at": "2024-05-10T09:16:00.000000Z",
+                          "updated_at": "2024-05-10T09:16:00.000000Z"
+                      }
+                  ]
+              }
+          }

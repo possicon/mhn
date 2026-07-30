@@ -1,0 +1,169 @@
+info:
+  name: consultation appointments
+  type: http
+  seq: 12
+
+http:
+  method: GET
+  url: "{{base_url}}/user/patients/consultation_appointments/past"
+  headers:
+    - name: Accept
+      value: application/json
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+examples:
+  - name: consultation appointments
+    request:
+      url: "{{base_url}}/user/patients/consultation_appointments/past"
+      method: GET
+      headers:
+        - name: Accept
+          value: application/json
+    response:
+      status: 200
+      statusText: OK
+      headers:
+        - name: Date
+          value: Mon, 01 Jul 2024 07:50:53 GMT
+        - name: Server
+          value: Apache/2.4.54 (Win64) OpenSSL/1.1.1q mod_fcgid/2.3.10-dev
+        - name: X-Powered-By
+          value: PHP/8.2.16
+        - name: Cache-Control
+          value: no-cache, private
+        - name: X-RateLimit-Limit
+          value: "60"
+        - name: X-RateLimit-Remaining
+          value: "58"
+        - name: Access-Control-Allow-Origin
+          value: "*"
+        - name: Vary
+          value: Authorization
+        - name: Keep-Alive
+          value: timeout=5, max=100
+        - name: Connection
+          value: Keep-Alive
+        - name: Transfer-Encoding
+          value: chunked
+        - name: Content-Type
+          value: application/json
+      body:
+        type: json
+        data: |-
+          {
+              "success": true,
+              "code": 0,
+              "locale": "en",
+              "message": "You have successfully  fetch previous appointments",
+              "data": {
+                  "data": [
+                      {
+                          "id": "9c2ad259-8614-4771-8b62-5d3f43142175",
+                          "purpose_of_visit": {
+                              "id": "9be982a5-4bda-4d19-8af3-a345ab0f98f0",
+                              "name": "Hospital Resistration"
+                          },
+                          "mode_of_appointment": "telemedicine",
+                          "type_of_appointment": "schedule",
+                          "payment_type": "hmo",
+                          "has_free_consultation": 0,
+                          "consultation_fee": "58560.00",
+                          "name": "Hospital Resistration",
+                          "policy_number": null,
+                          "plan": "Gold",
+                          "appointment_date": "2024/06/29",
+                          "tele_medicine_url": "http://www.telemedicine.com",
+                          "model_id": "9c111152-abe1-4490-ab04-c066445133a7",
+                          "model_type": "App\\Models\\Patient",
+                          "visit_date": "2024-05-30 00:00:00",
+                          "has_locked_doctor": 0,
+                          "assigned_doctor": {
+                              "id": null,
+                              "first_name": "N/A",
+                              "last_name": "N/A",
+                              "middle_name": "N/A"
+                          },
+                          "status": "scheduled",
+                          "fee_status": null,
+                          "is_cancelled": 0,
+                          "cancelled_by": null,
+                          "assisted_by": null,
+                          "queue_no": null,
+                          "created_at": "2024-05-30T13:55:16.000000Z",
+                          "updated_at": "2024-05-30T13:55:16.000000Z",
+                          "for_antenatal": 0,
+                          "for_physiotherapy": 0,
+                          "first_name": "Goodness",
+                          "last_name": "Ebubechukwu",
+                          "middle_name": "Ogbuagu",
+                          "patient_sequence": "MHN_USAi2dTkjg",
+                          "patient": {
+                              "id": "9c111152-abe1-4490-ab04-c066445133a7",
+                              "first_name": "Goodness",
+                              "last_name": "Ebubechukwu",
+                              "middle_name": "Ogbuagu",
+                              "patient_sequence": "MHN_USAi2dTkjg",
+                              "profile_picture": "http://127.0.0.1:8000/storage/91/IMG-20231127-WA0007.jpg"
+                          }
+                      },
+                      {
+                          "id": "9c289f5c-8014-4cdd-b948-7f1666ae2731",
+                          "purpose_of_visit": {
+                              "id": "9be982a5-4bda-4d19-8af3-a345ab0f98f0",
+                              "name": "Hospital Resistration"
+                          },
+                          "mode_of_appointment": "telemedicine",
+                          "type_of_appointment": "immediate",
+                          "payment_type": "hmo",
+                          "has_free_consultation": 0,
+                          "consultation_fee": "58560.00",
+                          "name": "Hospital Resistration",
+                          "policy_number": null,
+                          "plan": "Gold",
+                          "appointment_date": "2024/06/27",
+                          "tele_medicine_url": "http://www.telemedicine.com",
+                          "model_id": "9c111152-abe1-4490-ab04-c066445133a7",
+                          "model_type": "App\\Models\\Patient",
+                          "visit_date": "2024-05-29 00:00:00",
+                          "has_locked_doctor": 0,
+                          "assigned_doctor": {
+                              "id": "9bd2a84d-9c79-49ad-a99e-8f2c634ea288",
+                              "first_name": "Moyo",
+                              "last_name": "Emmanuel",
+                              "middle_name": "Prince"
+                          },
+                          "status": "scheduled",
+                          "fee_status": null,
+                          "is_cancelled": 0,
+                          "cancelled_by": null,
+                          "assisted_by": "9bc6382c-bb73-4c7d-9409-677fe560485d",
+                          "queue_no": 1,
+                          "created_at": "2024-05-29T11:41:02.000000Z",
+                          "updated_at": "2024-05-30T12:49:02.000000Z",
+                          "for_antenatal": 0,
+                          "for_physiotherapy": 0,
+                          "first_name": "Goodness",
+                          "last_name": "Ebubechukwu",
+                          "middle_name": "Ogbuagu",
+                          "patient_sequence": "MHN_USAi2dTkjg",
+                          "patient": {
+                              "id": "9c111152-abe1-4490-ab04-c066445133a7",
+                              "first_name": "Goodness",
+                              "last_name": "Ebubechukwu",
+                              "middle_name": "Ogbuagu",
+                              "patient_sequence": "MHN_USAi2dTkjg",
+                              "profile_picture": "http://127.0.0.1:8000/storage/91/IMG-20231127-WA0007.jpg"
+                          }
+                      }
+                  ],
+                  "total": 2,
+                  "currentPage": 1,
+                  "perPage": 20
+              }
+          }

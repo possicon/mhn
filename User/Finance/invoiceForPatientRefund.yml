@@ -1,0 +1,355 @@
+info:
+  name: invoiceForPatientRefund
+  type: http
+  seq: 4
+
+http:
+  method: GET
+  url: "{{base_url}}/user/organization/invoice/:invoice/refund"
+  params:
+    - name: invoice
+      value: 9d2e677d-b894-459c-aed9-32aa9cf42873
+      type: path
+  auth:
+    type: bearer
+    token: 64|wekxmT6fEC7W1savxR3VWd2fcLOu9fkY2pdTExtBe40532c7
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+examples:
+  - name: invoiceForPatientRefund
+    request:
+      url: "{{base_url}}/user/organization/invoice/:invoice/refund"
+      method: GET
+      params:
+        - name: invoice
+          value: 9d2e677d-b894-459c-aed9-32aa9cf42873
+          type: path
+    response:
+      status: 200
+      statusText: OK
+      headers:
+        - name: Date
+          value: Sat, 12 Oct 2024 22:37:15 GMT
+        - name: Server
+          value: Apache/2.4.54 (Win64) OpenSSL/1.1.1d mod_fcgid/2.3.10-dev
+        - name: X-Powered-By
+          value: PHP/8.2.17
+        - name: Cache-Control
+          value: no-cache, private
+        - name: X-RateLimit-Limit
+          value: "60"
+        - name: X-RateLimit-Remaining
+          value: "59"
+        - name: Access-Control-Allow-Origin
+          value: "*"
+        - name: Vary
+          value: Authorization
+        - name: Keep-Alive
+          value: timeout=5, max=100
+        - name: Connection
+          value: Keep-Alive
+        - name: Transfer-Encoding
+          value: chunked
+        - name: Content-Type
+          value: application/json
+      body:
+        type: json
+        data: |-
+          {
+              "success": true,
+              "code": 0,
+              "locale": "en",
+              "message": "success",
+              "data": {
+                  "invoice": {
+                      "id": "9d2e677d-b894-459c-aed9-32aa9cf42873",
+                      "total_services_amount": "80900.00",
+                      "total_services_amount_to_pay": "86967.50",
+                      "total_services_vat": "6067.50",
+                      "total_services_coverage": "0.00",
+                      "mode": "hmo",
+                      "bill_ids": "[\"9d219818-3fc1-4fb4-aa61-f6bbaad9946c\"]",
+                      "created_at": "2024-10-06T14:51:43.000000Z",
+                      "updated_at": "2024-10-12T21:35:05.000000Z",
+                      "amount_paid": "0.00",
+                      "notes": "notes",
+                      "receipt_no": "jfksjfi3u59",
+                      "payment_method": "deposit",
+                      "appointment_id": "9d19a29a-761c-4a44-8c3c-8e5bb7510df1",
+                      "patient_id": "9bf2e6d3-08c3-4826-b389-f0bebcca9fa9",
+                      "invoice_number": null,
+                      "payment_status": "completed"
+                  },
+                  "bills": [
+                      {
+                          "id": "9d219818-3fc1-4fb4-aa61-f6bbaad9946c",
+                          "patient_id": "9c22ec62-cfa4-476c-8921-a924a32f20d7",
+                          "service_id": "9d1e8559-07d2-4a9c-b5b4-56dc45c88e8c",
+                          "hmo_id": "9bbbac52-edd1-4aa7-8254-c29c14fa6249",
+                          "company_id": null,
+                          "organization_id": "9bc5eb78-74d2-45f4-a677-05d07dca6a63",
+                          "hmo_policy_number": "FJLRO2892R",
+                          "amount": "80900.00",
+                          "payment_date": "2024-10-12",
+                          "mode": "hmo",
+                          "transaction_id": null,
+                          "status": "billed",
+                          "description": null,
+                          "bank_name": null,
+                          "created_at": "2024-09-30T06:01:52.000000Z",
+                          "updated_at": "2024-10-12T21:35:05.000000Z",
+                          "appointment_id": "9d166f7e-2b46-492e-ae7b-58390a55e7d0",
+                          "coverage_percent": "100.00",
+                          "plan": "Gold",
+                          "coverage_type": "full",
+                          "billable_amount": "0.00",
+                          "requires_authorization": 1,
+                          "authorization_code": "hfj68vhg",
+                          "authorization_officer": "Emmanuel Ogbuagu",
+                          "coverage_amount": null,
+                          "quantity": null,
+                          "fee_status": "paid",
+                          "deleted_at": null,
+                          "in_invoice": 0,
+                          "service": {
+                              "id": "9d1e8559-07d2-4a9c-b5b4-56dc45c88e8c",
+                              "name": "Haloperidol",
+                              "service_type": "medicines",
+                              "created_at": "2024-09-28T17:21:57.000000Z",
+                              "updated_at": "2024-09-28T17:21:57.000000Z",
+                              "organization_id": null,
+                              "description": null,
+                              "category": null,
+                              "status": "active"
+                          },
+                          "prescription_medicine": [
+                              {
+                                  "id": "9d222674-deeb-41fa-aa72-5d23d1fcc1d7",
+                                  "prescription_id": "9d20700f-162e-4956-91a1-aeddcfdbe391",
+                                  "medicine_type": "Pil",
+                                  "medicine_name": "9d1e8559-060f-468a-9406-59b808e1f2d9",
+                                  "medicine_dosage": "one tab",
+                                  "medicine_frequency": "daily",
+                                  "medicine_period": "Morning",
+                                  "medicine_start_date": "2023-10-09",
+                                  "medicine_end_date": "2024-02-02",
+                                  "medicine_amount": "1300.00",
+                                  "created_at": "2024-09-30T12:39:56.000000Z",
+                                  "updated_at": "2024-09-30T12:39:56.000000Z",
+                                  "appointment_id": "9d166f7e-2b46-492e-ae7b-58390a55e7d0",
+                                  "quantity": null
+                              },
+                              {
+                                  "id": "9d222675-93b6-49ce-b467-b640a23ef8c4",
+                                  "prescription_id": "9d20700f-162e-4956-91a1-aeddcfdbe391",
+                                  "medicine_type": "Injetion",
+                                  "medicine_name": "9d1e8559-07d2-4a9c-b5b4-56dc45c88e8c",
+                                  "medicine_dosage": "3 tab",
+                                  "medicine_frequency": "thrice daily",
+                                  "medicine_period": "Morning and evening",
+                                  "medicine_start_date": "2024-05-05",
+                                  "medicine_end_date": "2024-05-12",
+                                  "medicine_amount": "4050.00",
+                                  "created_at": "2024-09-30T12:39:56.000000Z",
+                                  "updated_at": "2024-09-30T12:39:56.000000Z",
+                                  "appointment_id": "9d166f7e-2b46-492e-ae7b-58390a55e7d0",
+                                  "quantity": null
+                              },
+                              {
+                                  "id": "9d222721-7a43-4c48-a458-2430960b702b",
+                                  "prescription_id": "9d20700f-162e-4956-91a1-aeddcfdbe391",
+                                  "medicine_type": "Pil",
+                                  "medicine_name": "9d1e8559-060f-468a-9406-59b808e1f2d9",
+                                  "medicine_dosage": "one tab",
+                                  "medicine_frequency": "daily",
+                                  "medicine_period": "Morning",
+                                  "medicine_start_date": "2023-10-09",
+                                  "medicine_end_date": "2024-02-02",
+                                  "medicine_amount": "1300.00",
+                                  "created_at": "2024-09-30T12:41:49.000000Z",
+                                  "updated_at": "2024-09-30T12:41:49.000000Z",
+                                  "appointment_id": "9d166f7e-2b46-492e-ae7b-58390a55e7d0",
+                                  "quantity": null
+                              },
+                              {
+                                  "id": "9d222721-7ca7-40b4-8ba4-416b350ff26b",
+                                  "prescription_id": "9d20700f-162e-4956-91a1-aeddcfdbe391",
+                                  "medicine_type": "Injetion",
+                                  "medicine_name": "9d1e8559-07d2-4a9c-b5b4-56dc45c88e8c",
+                                  "medicine_dosage": "3 tab",
+                                  "medicine_frequency": "thrice daily",
+                                  "medicine_period": "Morning and evening",
+                                  "medicine_start_date": "2024-05-05",
+                                  "medicine_end_date": "2024-05-12",
+                                  "medicine_amount": "4050.00",
+                                  "created_at": "2024-09-30T12:41:49.000000Z",
+                                  "updated_at": "2024-09-30T12:41:49.000000Z",
+                                  "appointment_id": "9d166f7e-2b46-492e-ae7b-58390a55e7d0",
+                                  "quantity": null
+                              },
+                              {
+                                  "id": "9d248ef4-324e-489d-9c46-3ad50718b73b",
+                                  "prescription_id": "9d20700f-162e-4956-91a1-aeddcfdbe391",
+                                  "medicine_type": "Pil",
+                                  "medicine_name": "9d1e8559-060f-468a-9406-59b808e1f2d9",
+                                  "medicine_dosage": "one tab",
+                                  "medicine_frequency": "daily",
+                                  "medicine_period": "Morning",
+                                  "medicine_start_date": "2023-10-09",
+                                  "medicine_end_date": "2024-02-02",
+                                  "medicine_amount": "1300.00",
+                                  "created_at": "2024-10-01T17:23:47.000000Z",
+                                  "updated_at": "2024-10-01T17:23:47.000000Z",
+                                  "appointment_id": "9d166f7e-2b46-492e-ae7b-58390a55e7d0",
+                                  "quantity": 2
+                              },
+                              {
+                                  "id": "9d248ef4-3483-4209-9ead-d205cc6c0346",
+                                  "prescription_id": "9d20700f-162e-4956-91a1-aeddcfdbe391",
+                                  "medicine_type": "Injetion",
+                                  "medicine_name": "9d1e8559-07d2-4a9c-b5b4-56dc45c88e8c",
+                                  "medicine_dosage": "3 tab",
+                                  "medicine_frequency": "thrice daily",
+                                  "medicine_period": "Morning and evening",
+                                  "medicine_start_date": "2024-05-05",
+                                  "medicine_end_date": "2024-05-12",
+                                  "medicine_amount": "4050.00",
+                                  "created_at": "2024-10-01T17:23:47.000000Z",
+                                  "updated_at": "2024-10-01T17:23:47.000000Z",
+                                  "appointment_id": "9d166f7e-2b46-492e-ae7b-58390a55e7d0",
+                                  "quantity": 1
+                              }
+                          ],
+                          "diagnostic_test": {
+                              "id": "9c1a4472-3070-4a0e-8371-5acb64c65636",
+                              "patient_id": "9c111152-abe1-4490-ab04-c066445133a7",
+                              "visit_date": "2024-05-22 00:00:00",
+                              "type": "A",
+                              "general_name": "P",
+                              "tests": "[\"L\"]",
+                              "created_at": "2024-05-22T08:25:14.000000Z",
+                              "updated_at": "2024-05-22T08:25:14.000000Z",
+                              "laboratory": null,
+                              "payment_status": null,
+                              "progress_status": "completed",
+                              "requested_by": null,
+                              "appointment_id": "9d166f7e-2b46-492e-ae7b-58390a55e7d0",
+                              "patient": {
+                                  "id": "9c111152-abe1-4490-ab04-c066445133a7",
+                                  "created_by_organization_id": null,
+                                  "patient_sequence": "MHN_USAi2dTkjg",
+                                  "title": "Miss",
+                                  "first_name": "Goodness",
+                                  "last_name": "Ebubechukwu",
+                                  "middle_name": "Ogbuagu",
+                                  "dob": "2022-02-02",
+                                  "gender": "female",
+                                  "occupation": "Engineer",
+                                  "nin": "79183109178",
+                                  "martial_status": "single",
+                                  "tribe": "Igbo",
+                                  "religion": "Christianity",
+                                  "created_at": "2024-05-17T18:39:50.000000Z",
+                                  "updated_at": "2024-09-24T23:51:49.000000Z",
+                                  "preferred_language": "9bfad77f-9532-493c-88b9-6b99ebe55b8b",
+                                  "status": "out-patient",
+                                  "city_id": "9ba1338d-f1ca-487b-ae34-471ddc6a7bc2",
+                                  "state_id": "9ba01c32-186f-4ce1-84a5-0ee8884d02de",
+                                  "country_id": "9b9faee2-b2e9-4033-bf57-d000bb45d6f5",
+                                  "address": "31 Onitsha Rd",
+                                  "email_address": "contactlove@mhn.com",
+                                  "additional_mobile": "09087653421",
+                                  "primary_mobile": "08023456789",
+                                  "deleted_at": null,
+                                  "user_id": "9c111152-c552-43a7-a1b1-0fc8e1226ad6",
+                                  "file_number": "68792308"
+                              }
+                          },
+                          "ultra_sound": {
+                              "id": "9c6144aa-bd80-4540-90ab-fc25e5979765",
+                              "patient_id": "9c111152-abe1-4490-ab04-c066445133a7",
+                              "visit_date": "2024-06-26 00:00:00",
+                              "laboratory": "default",
+                              "payment_status": "payment status",
+                              "progress_status": "completed",
+                              "requested_by": {
+                                  "id": "9bc6382c-bb73-4c7d-9409-677fe560485d",
+                                  "first_name": "General",
+                                  "middle_name": "Prince",
+                                  "last_name": "Emmanuel",
+                                  "gender": "male",
+                                  "status": "Active",
+                                  "phone": "0802323232323",
+                                  "email": "contactus@mhn.ng",
+                                  "username": null,
+                                  "email_verified_at": null,
+                                  "type": "owner",
+                                  "country_id": "9b9faee3-6aaa-4050-bd6c-98a43e674250",
+                                  "branch_id": null,
+                                  "organization_id": "9bc5eb78-74d2-45f4-a677-05d07dca6a63",
+                                  "company_id": null,
+                                  "reset_token": null,
+                                  "token_time": null,
+                                  "created_at": "2024-04-10T13:41:22.000000Z",
+                                  "updated_at": "2024-04-11T19:11:50.000000Z",
+                                  "deleted_at": null
+                              },
+                              "test": "[\"Caner\"]",
+                              "note": "Treat as urgent",
+                              "created_at": "2024-06-26T15:29:38.000000Z",
+                              "updated_at": "2024-06-26T16:40:44.000000Z",
+                              "appointment_id": "9d166f7e-2b46-492e-ae7b-58390a55e7d0",
+                              "patient": {
+                                  "id": "9c111152-abe1-4490-ab04-c066445133a7",
+                                  "created_by_organization_id": null,
+                                  "patient_sequence": "MHN_USAi2dTkjg",
+                                  "title": "Miss",
+                                  "first_name": "Goodness",
+                                  "last_name": "Ebubechukwu",
+                                  "middle_name": "Ogbuagu",
+                                  "dob": "2022-02-02",
+                                  "gender": "female",
+                                  "occupation": "Engineer",
+                                  "nin": "79183109178",
+                                  "martial_status": "single",
+                                  "tribe": "Igbo",
+                                  "religion": "Christianity",
+                                  "created_at": "2024-05-17T18:39:50.000000Z",
+                                  "updated_at": "2024-09-24T23:51:49.000000Z",
+                                  "preferred_language": "9bfad77f-9532-493c-88b9-6b99ebe55b8b",
+                                  "status": "out-patient",
+                                  "city_id": "9ba1338d-f1ca-487b-ae34-471ddc6a7bc2",
+                                  "state_id": "9ba01c32-186f-4ce1-84a5-0ee8884d02de",
+                                  "country_id": "9b9faee2-b2e9-4033-bf57-d000bb45d6f5",
+                                  "address": "31 Onitsha Rd",
+                                  "email_address": "contactlove@mhn.com",
+                                  "additional_mobile": "09087653421",
+                                  "primary_mobile": "08023456789",
+                                  "deleted_at": null,
+                                  "user_id": "9c111152-c552-43a7-a1b1-0fc8e1226ad6",
+                                  "file_number": "68792308"
+                              }
+                          },
+                          "xray": null,
+                          "hmo_service": {
+                              "id": "kwd890j8-skkd2",
+                              "service_item_id": "9d1e8559-07d2-4a9c-b5b4-56dc45c88e8c",
+                              "hmo_id": "9bbbac52-edd1-4aa7-8254-c29c14fa6249",
+                              "organization_id": "9bc5eb78-74d2-45f4-a677-05d07dca6a63",
+                              "care_type": null,
+                              "amount": "80900.00",
+                              "status": "active",
+                              "created_at": "2024-09-19T19:27:15.000000Z",
+                              "updated_at": "2024-09-19T19:27:15.000000Z"
+                          }
+                      }
+                  ],
+                  "total_deposit": "600000.00",
+                  "total_refundable": "513032.50"
+              }
+          }

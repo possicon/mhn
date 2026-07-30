@@ -1,0 +1,154 @@
+info:
+  name: updateCompanyPricing
+  type: http
+  seq: 8
+
+http:
+  method: POST
+  url: "{{base_url}}/user/organization/updateCompanyPricing"
+  headers:
+    - name: Accept
+      value: application/json
+  body:
+    type: json
+    data: "{\r
+
+      \    \"company_id\":\"9bf4a55d-7f00-4a05-8ddf-7064aa43a016\",\r
+
+      \    \"plan_name\":\"silvers\",\r
+
+      \    \"service_item_id\":[\"9cfe8382-e2dd-41f5-86e7-7dbf3335aafb\"],\r
+
+      \     \"coverage_type\":[\"zero\"],\r
+
+      \    \"coverage_percent\":[\"880\"],\r
+
+      \    \"is_amount_in_percent\":0\r
+
+      }"
+  auth:
+    type: bearer
+    token: 78|IJJwsPNGwfjrHdMvXfMgKzfYaTOw56YXrF1VLHE8b494a4af
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+examples:
+  - name: updateCompanyPricing
+    request:
+      url: "{{base_url}}/user/organization/updateCompanyPricing"
+      method: POST
+      headers:
+        - name: Accept
+          value: application/json
+      body:
+        type: json
+        data: "{\r
+
+          \    \"company_id\":\"9bf4a55d-7f00-4a05-8ddf-7064aa43a016\",\r
+
+          \    \"plan_name\":\"gold\",\r
+
+          \    \"service_item_id\":[\"9cd37172-7cf4-4d10-9a51-9d5d6898fd96\"],\r
+
+          \     \"coverage_type\":[\"partial\"],\r
+
+          \    \"coverage_percent\":[\"880\"],\r
+
+          \    \"is_amount_in_percent\":0\r
+
+          }"
+    response:
+      status: 201
+      statusText: Created
+      headers:
+        - name: Date
+          value: Mon, 26 Aug 2024 10:48:28 GMT
+        - name: Server
+          value: Apache/2.4.54 (Win64) OpenSSL/1.1.1q mod_fcgid/2.3.10-dev
+        - name: X-Powered-By
+          value: PHP/8.2.16
+        - name: Cache-Control
+          value: no-cache, private
+        - name: X-RateLimit-Limit
+          value: "60"
+        - name: X-RateLimit-Remaining
+          value: "58"
+        - name: Access-Control-Allow-Origin
+          value: "*"
+        - name: Vary
+          value: Authorization
+        - name: Keep-Alive
+          value: timeout=5, max=100
+        - name: Connection
+          value: Keep-Alive
+        - name: Transfer-Encoding
+          value: chunked
+        - name: Content-Type
+          value: application/json
+      body:
+        type: json
+        data: |-
+          {
+              "success": true,
+              "code": 0,
+              "locale": "en",
+              "message": "You have successfully added a company pricing",
+              "data": {
+                  "data": {
+                      "company_name": "Uemmaco&sons Ltd Nig",
+                      "plan_name": "Gold",
+                      "service_types": {
+                          "general": {
+                              "count": 3,
+                              "services": [
+                                  {
+                                      "coverage_type": "partial",
+                                      "amount": "5000.00",
+                                      "percent": "17.60",
+                                      "id": "9cdb8a12-f6d8-490a-9ee6-2f1be77ff0ed",
+                                      "service_name": "General Checkup"
+                                  },
+                                  {
+                                      "coverage_type": "full",
+                                      "amount": "59000.00",
+                                      "percent": "0.40",
+                                      "id": "9cdb8a12-f93d-4335-9f91-0c70b3d5cee4",
+                                      "service_name": "Health Screening"
+                                  },
+                                  {
+                                      "coverage_type": "partial",
+                                      "amount": "15000.00",
+                                      "percent": "0.00",
+                                      "id": "9cdb8a12-faf2-4487-8a91-de84ebdbab7e",
+                                      "service_name": "Annual Physical Exam"
+                                  }
+                              ]
+                          },
+                          "procedures": {
+                              "count": 0,
+                              "services": []
+                          },
+                          "prescription": {
+                              "count": 0,
+                              "services": []
+                          },
+                          "clinical lab": {
+                              "count": 0,
+                              "services": []
+                          },
+                          "x-ray lab": {
+                              "count": 0,
+                              "services": []
+                          },
+                          "ultraSounds": {
+                              "count": 0,
+                              "services": []
+                          }
+                      }
+                  }
+              }
+          }

@@ -1,0 +1,128 @@
+info:
+  name: add
+  type: http
+  seq: 1
+
+http:
+  method: POST
+  url: "{{base_url}}/user/organization/sample"
+  headers:
+    - name: Accept
+      value: application/json
+  body:
+    type: json
+    data: "{\r
+
+      \    \"name\":\"urine\",\r
+
+      \    \"body_part\":\"groin\",\r
+
+      \    \"vials\":[\"9d7b0ed0-493a-4c7a-84de-5e4e6698c464\",\"9d7b0ed0-4b54-4410-8308-84219f5f8168\"],\r
+
+      \    \"status\":\"status\"\r
+
+      }"
+  auth:
+    type: bearer
+    token: 78|IJJwsPNGwfjrHdMvXfMgKzfYaTOw56YXrF1VLHE8b494a4af
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+examples:
+  - name: add
+    request:
+      url: "{{base_url}}/user/organization/sample"
+      method: POST
+      headers:
+        - name: Accept
+          value: application/json
+      body:
+        type: json
+        data: "{\r
+
+          \    \"name\":\"urine\",\r
+
+          \    \"body_part\":\"groin\",\r
+
+          \    \"vials\":[\"9d7b0ed0-493a-4c7a-84de-5e4e6698c464\",\"9d7b0ed0-4b54-4410-8308-84219f5f8168\"],\r
+
+          \    \"status\":\"status\"\r
+
+          }"
+    response:
+      status: 201
+      statusText: Created
+      headers:
+        - name: Date
+          value: Wed, 13 Nov 2024 17:48:19 GMT
+        - name: Server
+          value: Apache/2.4.54 (Win64) OpenSSL/1.1.1d mod_fcgid/2.3.10-dev
+        - name: X-Powered-By
+          value: PHP/8.2.17
+        - name: Cache-Control
+          value: no-cache, private
+        - name: X-RateLimit-Limit
+          value: "60"
+        - name: X-RateLimit-Remaining
+          value: "58"
+        - name: Access-Control-Allow-Origin
+          value: "*"
+        - name: Vary
+          value: Authorization
+        - name: Keep-Alive
+          value: timeout=5, max=100
+        - name: Connection
+          value: Keep-Alive
+        - name: Transfer-Encoding
+          value: chunked
+        - name: Content-Type
+          value: application/json
+      body:
+        type: json
+        data: |-
+          {
+              "success": true,
+              "code": 0,
+              "locale": "en",
+              "message": "Success.",
+              "data": {
+                  "sample": {
+                      "name": "urine",
+                      "body_part": "groin",
+                      "vials": [
+                          {
+                              "id": "9d7b0ed0-493a-4c7a-84de-5e4e6698c464",
+                              "name": "Product D",
+                              "category": "Books",
+                              "description": "Inspirational and informative",
+                              "status": "active",
+                              "organization_id": "9bc5eb78-74d2-45f4-a677-05d07dca6a63",
+                              "done_by_id": "9bc6382c-bb73-4c7d-9409-677fe560485d",
+                              "created_at": "2024-11-13T17:22:30.000000Z",
+                              "updated_at": "2024-11-13T17:22:30.000000Z"
+                          },
+                          {
+                              "id": "9d7b0ed0-4b54-4410-8308-84219f5f8168",
+                              "name": "Product E",
+                              "category": "Accessories",
+                              "description": "Trendy and durable",
+                              "status": "inactive",
+                              "organization_id": "9bc5eb78-74d2-45f4-a677-05d07dca6a63",
+                              "done_by_id": "9bc6382c-bb73-4c7d-9409-677fe560485d",
+                              "created_at": "2024-11-13T17:22:30.000000Z",
+                              "updated_at": "2024-11-13T17:22:30.000000Z"
+                          }
+                      ],
+                      "status": "status",
+                      "organization_id": "9bc5eb78-74d2-45f4-a677-05d07dca6a63",
+                      "done_by_id": "9bc6382c-bb73-4c7d-9409-677fe560485d",
+                      "id": "9d7b180c-9f79-43f9-a22a-3fe1aa5d06fa",
+                      "updated_at": "2024-11-13T17:48:20.000000Z",
+                      "created_at": "2024-11-13T17:48:20.000000Z"
+                  }
+              }
+          }

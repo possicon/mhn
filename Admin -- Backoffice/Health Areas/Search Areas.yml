@@ -1,0 +1,22 @@
+info:
+  name: Search Areas
+  type: http
+  seq: 8
+
+http:
+  method: POST
+  url: "{{base_url}}/admin/health-area/search"
+  body:
+    type: json
+    data: "{\r
+
+      \    \"name\": \"Management\"\r
+
+      }"
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

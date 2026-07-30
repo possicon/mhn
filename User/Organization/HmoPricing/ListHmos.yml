@@ -1,0 +1,295 @@
+info:
+  name: ListHmos
+  type: http
+  seq: 18
+
+http:
+  method: GET
+  url: "{{base_url}}/user/organization/hmos"
+  auth:
+    type: bearer
+    token: 64|wekxmT6fEC7W1savxR3VWd2fcLOu9fkY2pdTExtBe40532c7
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+examples:
+  - name: ListHmos
+    request:
+      url: "{{base_url}}/user/organization/hmos"
+      method: GET
+    response:
+      status: 200
+      statusText: OK
+      headers:
+        - name: Date
+          value: Sat, 04 May 2024 09:21:46 GMT
+        - name: Server
+          value: Apache/2.4.54 (Win64) OpenSSL/1.1.1q mod_fcgid/2.3.10-dev
+        - name: X-Powered-By
+          value: PHP/8.2.16
+        - name: Cache-Control
+          value: no-cache, private
+        - name: X-RateLimit-Limit
+          value: "60"
+        - name: X-RateLimit-Remaining
+          value: "59"
+        - name: Access-Control-Allow-Origin
+          value: "*"
+        - name: Vary
+          value: Authorization
+        - name: Keep-Alive
+          value: timeout=5, max=100
+        - name: Connection
+          value: Keep-Alive
+        - name: Transfer-Encoding
+          value: chunked
+        - name: Content-Type
+          value: application/json
+      body:
+        type: json
+        data: |-
+          {
+              "success": true,
+              "code": 0,
+              "locale": "en",
+              "message": "Fetched HMOs fetch successfully",
+              "data": {
+                  "hmos": [
+                      {
+                          "id": "9bbbac52-edd1-4aa7-8254-c29c14fa6249",
+                          "health_provider": "Relaince",
+                          "type": "public",
+                          "contact_name": "Moyo",
+                          "contact_email_address": "moyo@reliance.com",
+                          "contact_phone_number": "09023456789",
+                          "status": "active",
+                          "description": null,
+                          "country_id": "9b9faee2-a2a4-4bcc-a758-53dfee793de6",
+                          "created_at": "2024-04-05T07:52:03.000000Z",
+                          "updated_at": "2024-04-05T13:49:10.000000Z",
+                          "deleted_at": null
+                      },
+                      {
+                          "id": "9bbbbda4-2dbe-4239-8003-740c2b316479",
+                          "health_provider": "Relainces",
+                          "type": "public",
+                          "contact_name": "Moyo",
+                          "contact_email_address": "moyo@reliance.com",
+                          "contact_phone_number": "09023456789",
+                          "status": "active",
+                          "description": null,
+                          "country_id": "9b9faee2-a2a4-4bcc-a758-53dfee793de6",
+                          "created_at": "2024-04-05T08:40:28.000000Z",
+                          "updated_at": "2024-04-05T08:40:28.000000Z",
+                          "deleted_at": null
+                      },
+                      {
+                          "id": "9bbc06d3-af91-4924-bed9-7c23c3cce097",
+                          "health_provider": "Relainces 1",
+                          "type": "public",
+                          "contact_name": "Moyo",
+                          "contact_email_address": "moyo@reliance.com",
+                          "contact_phone_number": "09023456789",
+                          "status": "inactive",
+                          "description": null,
+                          "country_id": "9b9faee2-a2a4-4bcc-a758-53dfee793de6",
+                          "created_at": "2024-04-05T12:05:06.000000Z",
+                          "updated_at": "2024-04-05T12:05:06.000000Z",
+                          "deleted_at": null
+                      },
+                      {
+                          "id": "9bc45cf3-2894-43d4-9afe-3e8ac61e6fb5",
+                          "health_provider": "Relainces00",
+                          "type": "public",
+                          "contact_name": "Moyo",
+                          "contact_email_address": "moyo@reliance.com",
+                          "contact_phone_number": "09023456789",
+                          "status": "inactive",
+                          "description": null,
+                          "country_id": "9b9faee2-a2a4-4bcc-a758-53dfee793de6",
+                          "created_at": "2024-04-09T15:32:33.000000Z",
+                          "updated_at": "2024-04-09T15:32:33.000000Z",
+                          "deleted_at": null
+                      },
+                      {
+                          "id": "9bc5b9fd-76bf-4402-b57f-65efb7e53cb6",
+                          "health_provider": "MH",
+                          "type": "public",
+                          "contact_name": "Moyo",
+                          "contact_email_address": "moyo@reliance.com",
+                          "contact_phone_number": "09023456789",
+                          "status": "inactive",
+                          "description": null,
+                          "country_id": "9b9faee2-a2a4-4bcc-a758-53dfee793de6",
+                          "created_at": "2024-04-10T07:48:32.000000Z",
+                          "updated_at": "2024-04-10T07:48:32.000000Z",
+                          "deleted_at": null
+                      },
+                      {
+                          "id": "9bc5ba19-853f-4edc-9f84-0298ee1a1b6c",
+                          "health_provider": "Ypest",
+                          "type": "private",
+                          "contact_name": "Moyo",
+                          "contact_email_address": "moyo@reliance.com",
+                          "contact_phone_number": "09023456789",
+                          "status": "inactive",
+                          "description": "still optional",
+                          "country_id": "9b9faee2-a2a4-4bcc-a758-53dfee793de6",
+                          "created_at": "2024-04-10T07:48:50.000000Z",
+                          "updated_at": "2024-04-10T07:56:28.000000Z",
+                          "deleted_at": null
+                      }
+                  ]
+              }
+          }
+  - name: ListHmos
+    request:
+      url: "{{base_url}}/user/organization/hmos"
+      method: GET
+    response:
+      status: 200
+      statusText: OK
+      headers:
+        - name: Date
+          value: Sat, 06 Jul 2024 16:12:38 GMT
+        - name: Server
+          value: Apache/2.4.54 (Win64) OpenSSL/1.1.1q mod_fcgid/2.3.10-dev
+        - name: X-Powered-By
+          value: PHP/8.2.16
+        - name: Cache-Control
+          value: no-cache, private
+        - name: X-RateLimit-Limit
+          value: "60"
+        - name: X-RateLimit-Remaining
+          value: "59"
+        - name: Access-Control-Allow-Origin
+          value: "*"
+        - name: Vary
+          value: Authorization
+        - name: Keep-Alive
+          value: timeout=5, max=100
+        - name: Connection
+          value: Keep-Alive
+        - name: Transfer-Encoding
+          value: chunked
+        - name: Content-Type
+          value: application/json
+      body:
+        type: json
+        data: |-
+          {
+              "success": true,
+              "code": 0,
+              "locale": "en",
+              "message": "Fetched HMOs fetch successfully",
+              "data": {
+                  "hmos": [
+                      {
+                          "id": "9bbbac52-edd1-4aa7-8254-c29c14fa6249",
+                          "health_provider": "Relaince",
+                          "type": "public",
+                          "contact_name": "Moyo",
+                          "contact_email_address": "moyo@reliance.com",
+                          "contact_phone_number": "09023456789",
+                          "status": "active",
+                          "description": null,
+                          "country_id": "9b9faee2-a2a4-4bcc-a758-53dfee793de6",
+                          "created_at": "2024-04-05T07:52:03.000000Z",
+                          "updated_at": "2024-04-05T13:49:10.000000Z",
+                          "deleted_at": null,
+                          "billsPending": "2500.00",
+                          "billsCompleted": 0,
+                          "patientCount": 9
+                      },
+                      {
+                          "id": "9bbbbda4-2dbe-4239-8003-740c2b316479",
+                          "health_provider": "Relainces",
+                          "type": "public",
+                          "contact_name": "Moyo",
+                          "contact_email_address": "moyo@reliance.com",
+                          "contact_phone_number": "09023456789",
+                          "status": "active",
+                          "description": null,
+                          "country_id": "9b9faee2-a2a4-4bcc-a758-53dfee793de6",
+                          "created_at": "2024-04-05T08:40:28.000000Z",
+                          "updated_at": "2024-04-05T08:40:28.000000Z",
+                          "deleted_at": null,
+                          "billsPending": 0,
+                          "billsCompleted": 0,
+                          "patientCount": 0
+                      },
+                      {
+                          "id": "9bbc06d3-af91-4924-bed9-7c23c3cce097",
+                          "health_provider": "Relainces 1",
+                          "type": "public",
+                          "contact_name": "Moyo",
+                          "contact_email_address": "moyo@reliance.com",
+                          "contact_phone_number": "09023456789",
+                          "status": "inactive",
+                          "description": null,
+                          "country_id": "9b9faee2-a2a4-4bcc-a758-53dfee793de6",
+                          "created_at": "2024-04-05T12:05:06.000000Z",
+                          "updated_at": "2024-04-05T12:05:06.000000Z",
+                          "deleted_at": null,
+                          "billsPending": 0,
+                          "billsCompleted": 0,
+                          "patientCount": 0
+                      },
+                      {
+                          "id": "9bc45cf3-2894-43d4-9afe-3e8ac61e6fb5",
+                          "health_provider": "Relainces00",
+                          "type": "public",
+                          "contact_name": "Moyo",
+                          "contact_email_address": "moyo@reliance.com",
+                          "contact_phone_number": "09023456789",
+                          "status": "inactive",
+                          "description": null,
+                          "country_id": "9b9faee2-a2a4-4bcc-a758-53dfee793de6",
+                          "created_at": "2024-04-09T15:32:33.000000Z",
+                          "updated_at": "2024-04-09T15:32:33.000000Z",
+                          "deleted_at": null,
+                          "billsPending": 0,
+                          "billsCompleted": 0,
+                          "patientCount": 0
+                      },
+                      {
+                          "id": "9bc5b9fd-76bf-4402-b57f-65efb7e53cb6",
+                          "health_provider": "MH",
+                          "type": "public",
+                          "contact_name": "Moyo",
+                          "contact_email_address": "moyo@reliance.com",
+                          "contact_phone_number": "09023456789",
+                          "status": "inactive",
+                          "description": null,
+                          "country_id": "9b9faee2-a2a4-4bcc-a758-53dfee793de6",
+                          "created_at": "2024-04-10T07:48:32.000000Z",
+                          "updated_at": "2024-04-10T07:48:32.000000Z",
+                          "deleted_at": null,
+                          "billsPending": 0,
+                          "billsCompleted": 0,
+                          "patientCount": 0
+                      },
+                      {
+                          "id": "9bc5ba19-853f-4edc-9f84-0298ee1a1b6c",
+                          "health_provider": "Ypest",
+                          "type": "private",
+                          "contact_name": "Moyo",
+                          "contact_email_address": "moyo@reliance.com",
+                          "contact_phone_number": "09023456789",
+                          "status": "inactive",
+                          "description": "still optional",
+                          "country_id": "9b9faee2-a2a4-4bcc-a758-53dfee793de6",
+                          "created_at": "2024-04-10T07:48:50.000000Z",
+                          "updated_at": "2024-04-10T07:56:28.000000Z",
+                          "deleted_at": null,
+                          "billsPending": 0,
+                          "billsCompleted": 0,
+                          "patientCount": 0
+                      }
+                  ]
+              }
+          }

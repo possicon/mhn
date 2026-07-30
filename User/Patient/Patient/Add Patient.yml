@@ -1,0 +1,380 @@
+info:
+  name: Add Patient
+  type: http
+  seq: 2
+
+http:
+  method: POST
+  url: "{{base_url}}/user/patient"
+  headers:
+    - name: Accept
+      value: application/json
+  body:
+    type: multipart-form
+    data:
+      - name: title
+        type: text
+        value: Mr
+      - name: first_name
+        type: text
+        value: Emma
+      - name: last_name
+        type: text
+        value: Prince
+      - name: middle_name
+        type: text
+        value: Ogbuagu
+      - name: dob
+        type: text
+        value: 2022-02-02
+      - name: gender
+        type: text
+        value: male
+      - name: occupation
+        type: text
+        value: Engineer
+      - name: nin
+        type: text
+        value: "79183109191"
+      - name: martial_status
+        type: text
+        value: single
+      - name: religion
+        type: text
+        value: Christianity
+      - name: tribe
+        type: text
+        value: Igbo
+      - name: preferred_language
+        type: text
+        value: 9bfad77f-9532-493c-88b9-6b99ebe55b8b
+      - name: primary_mobile
+        type: text
+        value: "08000056789"
+      - name: additional_mobile
+        type: text
+        value: "09090053421"
+      - name: email_address
+        type: text
+        value: mylove@gmail.com
+      - name: address
+        type: text
+        value: 31 Onitsha Rd
+      - name: country_id
+        type: text
+        value: 9b9faee3-6aaa-4050-bd6c-98a43e674250
+      - name: state_id
+        type: text
+        value: 9ba01c32-186f-4ce1-84a5-0ee8884d02de
+      - name: city_id
+        type: text
+        value: 9ba1338d-f1ca-487b-ae34-471ddc6a7bc2
+      - name: profile_picture
+        type: file
+        value:
+          - 7dEy5sYhQ/close.png
+      - name: nof_fullName
+        type: text
+        value: David Prince
+      - name: nof_mobile
+        type: text
+        value: "08140067893"
+      - name: nof_relationship
+        type: text
+        value: brother
+      - name: nof_address
+        type: text
+        value: Lagos
+      - name: nof_country_id
+        type: text
+        value: 9b9faee2-b2e9-4033-bf57-d000bb45d6f5
+      - name: nof_state_id
+        type: text
+        value: 9ba01c32-186f-4ce1-84a5-0ee8884d02de
+      - name: nof_city_id
+        type: text
+        value: 9ba1338d-f1ca-487b-ae34-471ddc6a7bc2
+      - name: blood_group
+        type: text
+        value: A+
+      - name: msw
+        type: text
+        value: string
+      - name: genotype
+        type: text
+        value: AA
+      - name: rhd
+        type: text
+        value: rh+
+      - name: notes
+        type: text
+        value: strings
+      - name: ailments[0]
+        type: text
+        value: cancer
+      - name: ailments[1]
+        type: text
+        value: depression
+      - name: ailments[2]
+        type: text
+        value: headache
+      - name: password_redirect_url
+        type: text
+        value: http://mhn.ng/password
+      - name: status
+        type: text
+        value: in-patient
+      - name: file_number
+        type: text
+        value: "90530003"
+      - name: country_call_code
+        type: text
+        value: "234"
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+examples:
+  - name: Add Patient
+    request:
+      url: "{{base_url}}/user/patient"
+      method: POST
+      headers:
+        - name: Accept
+          value: application/json
+      body:
+        type: multipart-form
+        data:
+          - name: title
+            type: text
+            value: Mr
+          - name: first_name
+            type: text
+            value: Emma
+          - name: last_name
+            type: text
+            value: Prince
+          - name: middle_name
+            type: text
+            value: Ogbuagu
+          - name: dob
+            type: text
+            value: 2022-02-02
+          - name: gender
+            type: text
+            value: male
+          - name: occupation
+            type: text
+            value: Engineer
+          - name: nin
+            type: text
+            value: "79183109178"
+          - name: martial_status
+            type: text
+            value: single
+          - name: religion
+            type: text
+            value: Christianity
+          - name: tribe
+            type: text
+            value: Igbo
+          - name: preferred_language
+            type: text
+            value: 9bfad77f-9532-493c-88b9-6b99ebe55b8b
+          - name: primary_mobile
+            type: text
+            value: "08023456789"
+          - name: additional_mobile
+            type: text
+            value: "09087653421"
+          - name: email_address
+            type: text
+            value: goodyovee@mhn.com
+          - name: address
+            type: text
+            value: 31 Onitsha Rd
+          - name: country_id
+            type: text
+            value: 9b9faee2-b2e9-4033-bf57-d000bb45d6f5
+          - name: state_id
+            type: text
+            value: 9ba01c32-186f-4ce1-84a5-0ee8884d02de
+          - name: city_id
+            type: text
+            value: 9ba1338d-f1ca-487b-ae34-471ddc6a7bc2
+          - name: profile_picture
+            type: file
+            value:
+              - YsLAXebuS/IMG-20231127-WA0007.jpg
+          - name: nof_fullName
+            type: text
+            value: David Prince
+          - name: nof_mobile
+            type: text
+            value: "08143567893"
+          - name: nof_relationship
+            type: text
+            value: brother
+          - name: nof_address
+            type: text
+            value: Lagos
+          - name: nof_country_id
+            type: text
+            value: 9b9faee2-b2e9-4033-bf57-d000bb45d6f5
+          - name: nof_state_id
+            type: text
+            value: 9ba01c32-186f-4ce1-84a5-0ee8884d02de
+          - name: nof_city_id
+            type: text
+            value: 9ba1338d-f1ca-487b-ae34-471ddc6a7bc2
+          - name: blood_group
+            type: text
+            value: A+
+          - name: msw
+            type: text
+            value: string
+          - name: genotype
+            type: text
+            value: AA
+          - name: rhd
+            type: text
+            value: rh+
+          - name: notes
+            type: text
+            value: strings
+          - name: ailments[0]
+            type: text
+            value: cancer
+          - name: ailments[1]
+            type: text
+            value: depression
+          - name: ailments[2]
+            type: text
+            value: headache
+          - name: password_redirect_url
+            type: text
+            value: http://mhn.ng/password
+          - name: status
+            type: text
+            value: in-patient
+          - name: file_number
+            type: text
+            value: "98530903"
+    response:
+      status: 201
+      statusText: Created
+      headers:
+        - name: Date
+          value: Mon, 03 Jun 2024 10:23:34 GMT
+        - name: Server
+          value: Apache/2.4.54 (Win64) OpenSSL/1.1.1q mod_fcgid/2.3.10-dev
+        - name: X-Powered-By
+          value: PHP/8.2.16
+        - name: Cache-Control
+          value: no-cache, private
+        - name: X-RateLimit-Limit
+          value: "60"
+        - name: X-RateLimit-Remaining
+          value: "59"
+        - name: Access-Control-Allow-Origin
+          value: "*"
+        - name: Vary
+          value: Authorization
+        - name: Keep-Alive
+          value: timeout=5, max=100
+        - name: Connection
+          value: Keep-Alive
+        - name: Transfer-Encoding
+          value: chunked
+        - name: Content-Type
+          value: application/json
+      body:
+        type: json
+        data: |-
+          {
+              "success": true,
+              "code": 0,
+              "locale": "en",
+              "message": "Patient added",
+              "data": {
+                  "item": {
+                      "title": "Mr",
+                      "first_name": "Emma",
+                      "last_name": "Prince",
+                      "middle_name": "Ogbuagu",
+                      "dob": "2022-02-02",
+                      "gender": "male",
+                      "occupation": "Engineer",
+                      "nin": "79183109178",
+                      "martial_status": "single",
+                      "religion": "Christianity",
+                      "tribe": "Igbo",
+                      "preferred_language": "9bfad77f-9532-493c-88b9-6b99ebe55b8b",
+                      "primary_mobile": "08023456789",
+                      "additional_mobile": "09087653421",
+                      "email_address": "goodyovee@mhn.com",
+                      "address": "31 Onitsha Rd",
+                      "country_id": "9b9faee2-b2e9-4033-bf57-d000bb45d6f5",
+                      "state_id": "9ba01c32-186f-4ce1-84a5-0ee8884d02de",
+                      "city_id": "9ba1338d-f1ca-487b-ae34-471ddc6a7bc2",
+                      "status": "in-patient",
+                      "file_number": "98530903",
+                      "patient_sequence": "MHN_USAbSCjSmc",
+                      "id": "9c329294-0ca5-42c1-ade1-2f4f2c724c8c",
+                      "updated_at": "2024-06-03T10:23:35.000000Z",
+                      "created_at": "2024-06-03T10:23:34.000000Z",
+                      "user_id": "9c329295-8b14-4519-ac09-c91435ed6910",
+                      "age": 2,
+                      "media": [
+                          {
+                              "id": 90,
+                              "uuid": "f39129f8-7d61-471b-802e-74ee44738d22",
+                              "model_type": "App\\Models\\Patient",
+                              "model_id": "9c329294-0ca5-42c1-ade1-2f4f2c724c8c",
+                              "collection_name": "patient_picture",
+                              "name": "IMG-20231127-WA0007",
+                              "file_name": "IMG-20231127-WA0007.jpg",
+                              "mime_type": "image/jpeg",
+                              "disk": "public",
+                              "conversions_disk": "public",
+                              "size": 45808,
+                              "manipulations": [],
+                              "custom_properties": [],
+                              "generated_conversions": [],
+                              "responsive_images": [],
+                              "order_column": 1,
+                              "created_at": "2024-06-03T10:23:35.000000Z",
+                              "updated_at": "2024-06-03T10:23:35.000000Z",
+                              "original_url": "http://127.0.0.1:8000/storage/90/IMG-20231127-WA0007.jpg",
+                              "preview_url": ""
+                          }
+                      ],
+                      "country": {
+                          "id": "9b9faee2-b2e9-4033-bf57-d000bb45d6f5",
+                          "name": "Bangladesh",
+                          "region_id": "9b9ecc53-48de-4e4d-8147-65cc79090128",
+                          "currency_name": "Bangladeshi taka",
+                          "currency_symbol": "BDT",
+                          "active": true,
+                          "flag": null
+                      },
+                      "state": {
+                          "id": "9ba01c32-186f-4ce1-84a5-0ee8884d02de",
+                          "name": "Khost",
+                          "region_id": "9b9ecc53-48de-4e4d-8147-65cc79090128",
+                          "country_id": "9b9faee2-9ca2-41d0-962c-f7f60ef04bdb",
+                          "active": true
+                      },
+                      "city": {
+                          "id": "9ba1338d-f1ca-487b-ae34-471ddc6a7bc2",
+                          "name": "Lab-Sar",
+                          "state_id": "9ba01c32-0a3c-4faa-852a-491d640d989f",
+                          "active": true
+                      }
+                  }
+              }
+          }

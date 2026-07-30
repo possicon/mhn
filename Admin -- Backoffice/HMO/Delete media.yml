@@ -1,0 +1,22 @@
+info:
+  name: Delete media
+  type: http
+  seq: 12
+
+http:
+  method: DELETE
+  url: "{{base_url}}/admin/hmo/:hmo/media/:mediaId/delete"
+  params:
+    - name: hmo
+      value: 9bbbbda4-2dbe-4239-8003-740c2b316479
+      type: path
+    - name: mediaId
+      value: ae90b463-8672-49b5-bd2b-f798a8f0bbfc
+      type: path
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

@@ -1,0 +1,146 @@
+info:
+  name: add
+  type: http
+  seq: 1
+
+http:
+  method: POST
+  url: "{{base_url}}/user/patient/prescription"
+  headers:
+    - name: Accept
+      value: application/json
+  body:
+    type: json
+    data: "{\r
+
+      \    \"patient_sequence\":\"MHN_USAJruDLRv\",\r
+
+      \    \"purpose\":\"symptoms\",\r
+
+      \    \"referral_type\":\"organization\",\r
+
+      \    \"referred_organization_id\":\"9bd69b2b-2ebe-4e48-8cea-e24e2d42c743\",\r
+
+      \    \"dispense_method\":\"delivery\",\r
+
+      \    \"category\":\"recurring\",\r
+
+      \    \"frequency\":\"Monthly\",\r
+
+      \    \"address\":\"Mangoro, Ikeja\",\r
+
+      \    \"city_id\":\"9ba1338e-25c5-4bfb-97bd-1e5610cba1bf\",\r
+
+      \    \"state_id\":\"9ba01c32-0f63-4c89-8401-81ce51c51e98\",\r
+
+      \    \"country_id\":\"9b9faee2-9ca2-41d0-962c-f7f60ef04bdb\",\r
+
+      \    \"appointment_id\":\"9e6809b1-8a5e-4ffc-8b35-a86402ce4f4a\"\r
+
+      }"
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+examples:
+  - name: add
+    request:
+      url: "{{base_url}}/user/patient/prescription"
+      method: POST
+      headers:
+        - name: Accept
+          value: application/json
+      body:
+        type: json
+        data: "{\r
+
+          \    \"patient_sequence\":\"MHN_USAJruDLRv\",\r
+
+          \    \"purpose\":\"symptoms\",\r
+
+          \    \"referral_type\":\"organization\",\r
+
+          \    \"organization_id\":\"9bd69b2b-2ebe-4e48-8cea-e24e2d42c743\",\r
+
+          \    \"dispense_method\":\"delivery\",\r
+
+          \    \"category\":\"recurring\",\r
+
+          \    \"frequency\":\"Monthly\",\r
+
+          \    \"address\":\"Mangoro, Ikeja\",\r
+
+          \    \"city_id\":\"9ba1338e-25c5-4bfb-97bd-1e5610cba1bf\",\r
+
+          \    \"state_id\":\"9ba01c32-0f63-4c89-8401-81ce51c51e98\",\r
+
+          \    \"country_id\":\"9b9faee2-9ca2-41d0-962c-f7f60ef04bdb\",\r
+
+          \    \"appointment_id\":\"9d166f7e-2b46-492e-ae7b-58390a55e7d0\"\r
+
+          }"
+    response:
+      status: 201
+      statusText: Created
+      headers:
+        - name: Date
+          value: Sat, 26 Oct 2024 21:37:33 GMT
+        - name: Server
+          value: Apache/2.4.54 (Win64) OpenSSL/1.1.1d mod_fcgid/2.3.10-dev
+        - name: X-Powered-By
+          value: PHP/8.2.17
+        - name: Cache-Control
+          value: no-cache, private
+        - name: X-RateLimit-Limit
+          value: "60"
+        - name: X-RateLimit-Remaining
+          value: "59"
+        - name: Access-Control-Allow-Origin
+          value: "*"
+        - name: Vary
+          value: Authorization
+        - name: Keep-Alive
+          value: timeout=5, max=100
+        - name: Connection
+          value: Keep-Alive
+        - name: Transfer-Encoding
+          value: chunked
+        - name: Content-Type
+          value: application/json
+      body:
+        type: json
+        data: |-
+          {
+              "success": true,
+              "code": 0,
+              "locale": "en",
+              "message": "success",
+              "data": {
+                  "item": {
+                      "patient_sequence": "MHN_USAJruDLRv",
+                      "appointment_id": "9d166f7e-2b46-492e-ae7b-58390a55e7d0",
+                      "purpose": "symptoms",
+                      "referral_type": "organization",
+                      "organization_id": "9bc5eb78-74d2-45f4-a677-05d07dca6a63",
+                      "dispense_method": "delivery",
+                      "category": "recurring",
+                      "frequency": "Monthly",
+                      "address": "Mangoro, Ikeja",
+                      "city_id": "9ba1338e-25c5-4bfb-97bd-1e5610cba1bf",
+                      "state_id": "9ba01c32-0f63-4c89-8401-81ce51c51e98",
+                      "country_id": "9b9faee2-9ca2-41d0-962c-f7f60ef04bdb",
+                      "referred_organization_id": "9bd69b2b-2ebe-4e48-8cea-e24e2d42c743",
+                      "patient_name": "Emma Prince",
+                      "visit_date": "2024-10-26T00:00:00.000000Z",
+                      "requested_by": "9bc6382c-bb73-4c7d-9409-677fe560485d",
+                      "requested_date": "2024-10-26T21:37:35.942764Z",
+                      "id": "9d573455-75ec-4dbc-8d0e-c55952655154",
+                      "updated_at": "2024-10-26T21:37:37.000000Z",
+                      "created_at": "2024-10-26T21:37:37.000000Z"
+                  }
+              }
+          }

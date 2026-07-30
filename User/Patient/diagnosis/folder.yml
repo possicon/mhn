@@ -1,0 +1,7 @@
+info:
+  name: diagnosis
+  type: folder
+  seq: 29
+
+request:
+  auth: inherit

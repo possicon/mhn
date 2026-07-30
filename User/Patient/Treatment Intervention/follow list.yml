@@ -1,0 +1,132 @@
+info:
+  name: follow list
+  type: http
+  seq: 2
+
+http:
+  method: GET
+  url: "{{base_url}}/user/patients/:id/treatment_intervention/followup"
+  headers:
+    - name: Accept
+      value: application/json
+  params:
+    - name: id
+      value: 9c111152-abe1-4490-ab04-c066445133a7
+      type: path
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+examples:
+  - name: follow list
+    request:
+      url: "{{base_url}}/user/patients/:id/treatment_intervention/followup"
+      method: GET
+      headers:
+        - name: Accept
+          value: application/json
+      params:
+        - name: id
+          value: 9c111152-abe1-4490-ab04-c066445133a7
+          type: path
+    response:
+      status: 200
+      statusText: OK
+      headers:
+        - name: Date
+          value: Mon, 22 Jul 2024 06:04:00 GMT
+        - name: Server
+          value: Apache/2.4.54 (Win64) OpenSSL/1.1.1q mod_fcgid/2.3.10-dev
+        - name: X-Powered-By
+          value: PHP/8.2.16
+        - name: Cache-Control
+          value: no-cache, private
+        - name: X-RateLimit-Limit
+          value: "60"
+        - name: X-RateLimit-Remaining
+          value: "59"
+        - name: Access-Control-Allow-Origin
+          value: "*"
+        - name: Vary
+          value: Authorization
+        - name: Keep-Alive
+          value: timeout=5, max=100
+        - name: Connection
+          value: Keep-Alive
+        - name: Transfer-Encoding
+          value: chunked
+        - name: Content-Type
+          value: application/json
+      body:
+        type: json
+        data: |-
+          {
+              "success": true,
+              "code": 0,
+              "locale": "en",
+              "message": "success",
+              "data": {
+                  "item": {
+                      "id": "9c451e85-c679-4b43-9637-0b7f3b1979c0",
+                      "patient_id": "9c111152-abe1-4490-ab04-c066445133a7",
+                      "visit_date": "2024-06-12 00:00:00",
+                      "treatment_plan": "treatment and refer",
+                      "refer_to": null,
+                      "procedures": null,
+                      "programs": null,
+                      "admission": null,
+                      "prescription": null,
+                      "followup": 1,
+                      "prenatal_care": null,
+                      "hospital_id": null,
+                      "reasons_for_refer": null,
+                      "additional_note": null,
+                      "trimester": null,
+                      "number_of_examination": null,
+                      "prenatal_care_frequency": null,
+                      "prenatal_care_note": null,
+                      "followup_occurrence": "daily",
+                      "followup_note": "description",
+                      "followup_start_date": "2022-10-10",
+                      "followup_end_date": "2024-10-05",
+                      "followup_time": "22:07",
+                      "followup_doctor_id": null,
+                      "repeat_followup": 1,
+                      "prescription_ids": null,
+                      "wards": null,
+                      "bed_number": null,
+                      "instruction_for_wards": null,
+                      "program_id": null,
+                      "procedure_id": null,
+                      "requested_by": {
+                          "id": "9bc6382c-bb73-4c7d-9409-677fe560485d",
+                          "first_name": "General",
+                          "middle_name": "Prince",
+                          "last_name": "Emmanuel",
+                          "gender": "male",
+                          "status": "Active",
+                          "phone": "0802323232323",
+                          "email": "contactus@mhn.ng",
+                          "username": null,
+                          "email_verified_at": null,
+                          "type": "owner",
+                          "country_id": "9b9faee3-6aaa-4050-bd6c-98a43e674250",
+                          "branch_id": null,
+                          "organization_id": "9bc5eb78-74d2-45f4-a677-05d07dca6a63",
+                          "company_id": null,
+                          "reset_token": null,
+                          "token_time": null,
+                          "created_at": "2024-04-10T13:41:22.000000Z",
+                          "updated_at": "2024-04-11T19:11:50.000000Z",
+                          "deleted_at": null
+                      },
+                      "created_at": "2024-06-12T15:39:47.000000Z",
+                      "updated_at": "2024-06-12T15:39:47.000000Z",
+                      "admission_status": "awaiting admission"
+                  }
+              }
+          }

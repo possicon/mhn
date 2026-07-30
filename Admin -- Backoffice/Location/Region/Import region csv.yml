@@ -1,0 +1,124 @@
+info:
+  name: Import region csv
+  type: http
+  seq: 7
+
+http:
+  method: POST
+  url: "{{base_url}}/admin/region/import"
+  headers:
+    - name: Accept
+      value: multipart/form-data
+  body:
+    type: multipart-form
+    data:
+      - name: file
+        type: file
+        value:
+          - MDwo6woF0/region_sample.csv
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+examples:
+  - name: Import region csv
+    request:
+      url: "{{base_url}}/admin/region/import"
+      method: POST
+      headers:
+        - name: Accept
+          value: multipart/form-data
+      body:
+        type: multipart-form
+        data:
+          - name: file
+            type: file
+            value:
+              - /C:/Users/MY PC/Downloads/regions.csv
+    response:
+      status: 200
+      statusText: OK
+      headers:
+        - name: Date
+          value: Thu, 21 Mar 2024 23:22:31 GMT
+        - name: Server
+          value: Apache/2.4.54 (Win64) OpenSSL/1.1.1q mod_fcgid/2.3.10-dev
+        - name: X-Powered-By
+          value: PHP/8.2.16
+        - name: Cache-Control
+          value: no-cache, private
+        - name: X-RateLimit-Limit
+          value: "60"
+        - name: X-RateLimit-Remaining
+          value: "58"
+        - name: Access-Control-Allow-Origin
+          value: "*"
+        - name: Vary
+          value: Authorization
+        - name: Keep-Alive
+          value: timeout=5, max=100
+        - name: Connection
+          value: Keep-Alive
+        - name: Transfer-Encoding
+          value: chunked
+        - name: Content-Type
+          value: application/json
+      body:
+        type: json
+        data: |-
+          {
+              "success": true,
+              "code": 0,
+              "locale": "en",
+              "message": "CSV file import process has been completed successfully.",
+              "data": {
+                  "saved_rows": [
+                      {
+                          "name": "Africa",
+                          "code": null,
+                          "description": null,
+                          "id": "9b9ecc53-4276-4e13-bda6-461083ecb376",
+                          "active": true
+                      },
+                      {
+                          "name": "Americas",
+                          "code": null,
+                          "description": null,
+                          "id": "9b9ecc53-4727-43a1-bf0e-9e05de7c568a",
+                          "active": true
+                      },
+                      {
+                          "name": "Asia",
+                          "code": null,
+                          "description": null,
+                          "id": "9b9ecc53-48de-4e4d-8147-65cc79090128",
+                          "active": true
+                      },
+                      {
+                          "name": "Europe",
+                          "code": null,
+                          "description": null,
+                          "id": "9b9ecc53-49e9-443f-9bc0-84a9c27d1652",
+                          "active": true
+                      },
+                      {
+                          "name": "Oceania",
+                          "code": null,
+                          "description": null,
+                          "id": "9b9ecc53-4acd-477c-8368-6493a1f9d98c",
+                          "active": true
+                      },
+                      {
+                          "name": "Polar",
+                          "code": null,
+                          "description": null,
+                          "id": "9b9ecc53-4c2d-43e2-a1f2-5d8fbb30bb46",
+                          "active": true
+                      }
+                  ]
+              }
+          }

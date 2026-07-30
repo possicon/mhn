@@ -1,0 +1,662 @@
+info:
+  name: getHmoServiceItemHistory
+  type: http
+  seq: 16
+
+http:
+  method: POST
+  url: "{{base_url}}/user/organization/getHmoServiceItemHistory"
+  headers:
+    - name: Accept
+      value: application/json
+  body:
+    type: json
+    data: "{\r
+
+      \    \"hmo_id\":\"9bbbac52-edd1-4aa7-8254-c29c14fa6249\"\r
+
+      }"
+  auth:
+    type: bearer
+    token: 78|IJJwsPNGwfjrHdMvXfMgKzfYaTOw56YXrF1VLHE8b494a4af
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+examples:
+  - name: getHmoServiceItemHistory
+    request:
+      url: "{{base_url}}/user/organization/getHmoServiceItemHistory"
+      method: POST
+      headers:
+        - name: Accept
+          value: application/json
+      body:
+        type: json
+        data: "{\r
+
+          \    \"hmo_id\":\"9bbbac52-edd1-4aa7-8254-c29c14fa6249\"\r
+
+          }"
+    response:
+      status: 200
+      statusText: OK
+      headers:
+        - name: Date
+          value: Fri, 23 Aug 2024 10:47:29 GMT
+        - name: Server
+          value: Apache/2.4.54 (Win64) OpenSSL/1.1.1q mod_fcgid/2.3.10-dev
+        - name: X-Powered-By
+          value: PHP/8.2.16
+        - name: Cache-Control
+          value: no-cache, private
+        - name: X-RateLimit-Limit
+          value: "60"
+        - name: X-RateLimit-Remaining
+          value: "59"
+        - name: Access-Control-Allow-Origin
+          value: "*"
+        - name: Vary
+          value: Authorization
+        - name: Keep-Alive
+          value: timeout=5, max=100
+        - name: Connection
+          value: Keep-Alive
+        - name: Transfer-Encoding
+          value: chunked
+        - name: Content-Type
+          value: application/json
+      body:
+        type: json
+        data: |-
+          {
+              "success": true,
+              "code": 0,
+              "locale": "en",
+              "message": "Success",
+              "data": {
+                  "data": [
+                      {
+                          "id": "9cd41dd5-4261-4c69-a86f-0cede240c303",
+                          "service_item_id": "9cd37172-9e3c-44de-aff1-1ef5e6ab1572",
+                          "hmo_id": "9bbbac52-edd1-4aa7-8254-c29c14fa6249",
+                          "organization_id": "9bc5eb78-74d2-45f4-a677-05d07dca6a63",
+                          "care_type": "Secondary Care",
+                          "amount": "5050.00",
+                          "status": "active",
+                          "created_at": "2024-08-22T17:41:15.000000Z",
+                          "updated_at": "2024-08-22T17:45:31.000000Z",
+                          "service_item": {
+                              "id": "9cd37172-9e3c-44de-aff1-1ef5e6ab1572",
+                              "name": "Insulin",
+                              "service_type": "Prescription",
+                              "created_at": "2024-08-22T09:39:13.000000Z",
+                              "updated_at": "2024-08-22T09:39:13.000000Z"
+                          },
+                          "latest_service_item_log": {
+                              "id": "9cd41f5d-02a1-476e-8ca9-c6d0fe837f37",
+                              "organization_service_item_id": "9cd41dd5-4261-4c69-a86f-0cede240c303",
+                              "changed_by": {
+                                  "id": "9bc6382c-bb73-4c7d-9409-677fe560485d",
+                                  "first_name": "General",
+                                  "middle_name": "Prince",
+                                  "last_name": "Emmanuel",
+                                  "gender": "male",
+                                  "status": "Active",
+                                  "phone": "0802323232323",
+                                  "email": "contactus@mhn.ng",
+                                  "username": null,
+                                  "email_verified_at": null,
+                                  "type": "owner",
+                                  "country_id": "9b9faee3-6aaa-4050-bd6c-98a43e674250",
+                                  "branch_id": null,
+                                  "organization_id": "9bc5eb78-74d2-45f4-a677-05d07dca6a63",
+                                  "company_id": null,
+                                  "reset_token": null,
+                                  "token_time": null,
+                                  "created_at": "2024-04-10T13:41:22.000000Z",
+                                  "updated_at": "2024-04-11T19:11:50.000000Z",
+                                  "deleted_at": null
+                              },
+                              "old_amount": "5050.00",
+                              "new_amount": "5050.00",
+                              "old_care_type": "Primary Care",
+                              "new_care_type": "Secondary Care",
+                              "created_at": "2024-08-22T17:45:31.000000Z",
+                              "updated_at": "2024-08-22T17:45:31.000000Z"
+                          }
+                      },
+                      {
+                          "id": "9cd4267b-13b0-4c35-ae67-da07ed9fa383",
+                          "service_item_id": "9cd37172-9d7a-4571-901a-78d8d708574b",
+                          "hmo_id": "9bbbac52-edd1-4aa7-8254-c29c14fa6249",
+                          "organization_id": "9bc5eb78-74d2-45f4-a677-05d07dca6a63",
+                          "care_type": "Secondary Care",
+                          "amount": "5050.00",
+                          "status": "active",
+                          "created_at": "2024-08-22T18:05:26.000000Z",
+                          "updated_at": "2024-08-22T18:05:26.000000Z",
+                          "service_item": {
+                              "id": "9cd37172-9d7a-4571-901a-78d8d708574b",
+                              "name": "Blood Pressure Medications",
+                              "service_type": "Prescription",
+                              "created_at": "2024-08-22T09:39:13.000000Z",
+                              "updated_at": "2024-08-22T09:39:13.000000Z"
+                          },
+                          "latest_service_item_log": null
+                      },
+                      {
+                          "id": "9cd42702-d38a-4fa1-9106-a076770e770f",
+                          "service_item_id": "9cd37172-9b57-4e8f-a840-ec0588f26e2a",
+                          "hmo_id": "9bbbac52-edd1-4aa7-8254-c29c14fa6249",
+                          "organization_id": "9bc5eb78-74d2-45f4-a677-05d07dca6a63",
+                          "care_type": "Primary Care",
+                          "amount": "5050.00",
+                          "status": "active",
+                          "created_at": "2024-08-22T18:06:54.000000Z",
+                          "updated_at": "2024-08-22T18:06:54.000000Z",
+                          "service_item": {
+                              "id": "9cd37172-9b57-4e8f-a840-ec0588f26e2a",
+                              "name": "Diuretics",
+                              "service_type": "Prescription",
+                              "created_at": "2024-08-22T09:39:13.000000Z",
+                              "updated_at": "2024-08-22T09:39:13.000000Z"
+                          },
+                          "latest_service_item_log": null
+                      },
+                      {
+                          "id": "9cd42891-cab4-47a8-8d8a-1de882051f1c",
+                          "service_item_id": "9cd37172-9f9d-4091-830c-b04612d1e0f5",
+                          "hmo_id": "9bbbac52-edd1-4aa7-8254-c29c14fa6249",
+                          "organization_id": "9bc5eb78-74d2-45f4-a677-05d07dca6a63",
+                          "care_type": "Primary Care",
+                          "amount": "8000.00",
+                          "status": "active",
+                          "created_at": "2024-08-22T18:11:16.000000Z",
+                          "updated_at": "2024-08-22T18:11:16.000000Z",
+                          "service_item": {
+                              "id": "9cd37172-9f9d-4091-830c-b04612d1e0f5",
+                              "name": "Biopsy",
+                              "service_type": "Procedures",
+                              "created_at": "2024-08-22T09:39:13.000000Z",
+                              "updated_at": "2024-08-22T09:39:13.000000Z"
+                          },
+                          "latest_service_item_log": null
+                      },
+                      {
+                          "id": "9cd428c4-b94f-401b-a0b1-b8977deabc8e",
+                          "service_item_id": "9cd37172-9888-405c-882e-f1019c013f7b",
+                          "hmo_id": "9bbbac52-edd1-4aa7-8254-c29c14fa6249",
+                          "organization_id": "9bc5eb78-74d2-45f4-a677-05d07dca6a63",
+                          "care_type": "Primary Care",
+                          "amount": "10000.00",
+                          "status": "active",
+                          "created_at": "2024-08-22T18:11:49.000000Z",
+                          "updated_at": "2024-08-22T18:11:49.000000Z",
+                          "service_item": {
+                              "id": "9cd37172-9888-405c-882e-f1019c013f7b",
+                              "name": "Antihistamines",
+                              "service_type": "Prescription",
+                              "created_at": "2024-08-22T09:39:13.000000Z",
+                              "updated_at": "2024-08-22T09:39:13.000000Z"
+                          },
+                          "latest_service_item_log": null
+                      },
+                      {
+                          "id": "9cd428fa-e410-4388-b2d0-310c63431e72",
+                          "service_item_id": "9cd37172-b24b-4ba4-8409-790a1d841695",
+                          "hmo_id": "9bbbac52-edd1-4aa7-8254-c29c14fa6249",
+                          "organization_id": "9bc5eb78-74d2-45f4-a677-05d07dca6a63",
+                          "care_type": "Primary Care",
+                          "amount": "11000.00",
+                          "status": "active",
+                          "created_at": "2024-08-22T18:12:25.000000Z",
+                          "updated_at": "2024-08-22T18:12:25.000000Z",
+                          "service_item": {
+                              "id": "9cd37172-b24b-4ba4-8409-790a1d841695",
+                              "name": "Obstetric Ultrasound",
+                              "service_type": "Ultrasounds",
+                              "created_at": "2024-08-22T09:39:13.000000Z",
+                              "updated_at": "2024-08-22T09:39:13.000000Z"
+                          },
+                          "latest_service_item_log": null
+                      },
+                      {
+                          "id": "9cd42dda-5108-4c18-88b1-4d682a7fcae0",
+                          "service_item_id": "9cd37172-b85a-4479-832f-bd6f78ffdc43",
+                          "hmo_id": "9bbbac52-edd1-4aa7-8254-c29c14fa6249",
+                          "organization_id": "9bc5eb78-74d2-45f4-a677-05d07dca6a63",
+                          "care_type": "Primary Care",
+                          "amount": "11500.00",
+                          "status": "active",
+                          "created_at": "2024-08-22T18:26:02.000000Z",
+                          "updated_at": "2024-08-22T18:26:02.000000Z",
+                          "service_item": {
+                              "id": "9cd37172-b85a-4479-832f-bd6f78ffdc43",
+                              "name": "Pediatric Ultrasound",
+                              "service_type": "Ultrasounds",
+                              "created_at": "2024-08-22T09:39:13.000000Z",
+                              "updated_at": "2024-08-22T09:39:13.000000Z"
+                          },
+                          "latest_service_item_log": null
+                      },
+                      {
+                          "id": "9cd42dfe-ed96-46fb-a676-697e3ade16e8",
+                          "service_item_id": "9cd37172-b78b-475f-a959-ee559951bbe1",
+                          "hmo_id": "9bbbac52-edd1-4aa7-8254-c29c14fa6249",
+                          "organization_id": "9bc5eb78-74d2-45f4-a677-05d07dca6a63",
+                          "care_type": "Primary Care",
+                          "amount": "1500.00",
+                          "status": "active",
+                          "created_at": "2024-08-22T18:26:26.000000Z",
+                          "updated_at": "2024-08-22T18:26:26.000000Z",
+                          "service_item": {
+                              "id": "9cd37172-b78b-475f-a959-ee559951bbe1",
+                              "name": "Musculoskeletal Ultrasound",
+                              "service_type": "Ultrasounds",
+                              "created_at": "2024-08-22T09:39:13.000000Z",
+                              "updated_at": "2024-08-22T09:39:13.000000Z"
+                          },
+                          "latest_service_item_log": null
+                      },
+                      {
+                          "id": "9cd42e32-3c58-48bb-87a9-0a17b479bcee",
+                          "service_item_id": "9cd37172-b6a4-4ed2-bce9-2d16432aba18",
+                          "hmo_id": "9bbbac52-edd1-4aa7-8254-c29c14fa6249",
+                          "organization_id": "9bc5eb78-74d2-45f4-a677-05d07dca6a63",
+                          "care_type": "Primary Care",
+                          "amount": "1590.00",
+                          "status": "active",
+                          "created_at": "2024-08-22T18:27:00.000000Z",
+                          "updated_at": "2024-08-22T18:27:00.000000Z",
+                          "service_item": {
+                              "id": "9cd37172-b6a4-4ed2-bce9-2d16432aba18",
+                              "name": "Cardiac Ultrasound",
+                              "service_type": "Ultrasounds",
+                              "created_at": "2024-08-22T09:39:13.000000Z",
+                              "updated_at": "2024-08-22T09:39:13.000000Z"
+                          },
+                          "latest_service_item_log": null
+                      },
+                      {
+                          "id": "9cd42f1b-b7e0-4534-9fb8-4277b189c751",
+                          "service_item_id": "9cd37172-847e-435e-b3ab-af416c514d09",
+                          "hmo_id": "9bbbac52-edd1-4aa7-8254-c29c14fa6249",
+                          "organization_id": "9bc5eb78-74d2-45f4-a677-05d07dca6a63",
+                          "care_type": "secondary care",
+                          "amount": "1500.00",
+                          "status": "active",
+                          "created_at": "2024-08-22T18:29:33.000000Z",
+                          "updated_at": "2024-08-23T00:34:30.000000Z",
+                          "service_item": {
+                              "id": "9cd37172-847e-435e-b3ab-af416c514d09",
+                              "name": "Blood Pressure Monitoring",
+                              "service_type": "General",
+                              "created_at": "2024-08-22T09:39:13.000000Z",
+                              "updated_at": "2024-08-22T09:39:13.000000Z"
+                          },
+                          "latest_service_item_log": {
+                              "id": "9cd4b19f-644d-4f46-8b73-185b31da23d4",
+                              "organization_service_item_id": "9cd42f1b-b7e0-4534-9fb8-4277b189c751",
+                              "changed_by": {
+                                  "id": "9bc6382c-bb73-4c7d-9409-677fe560485d",
+                                  "first_name": "General",
+                                  "middle_name": "Prince",
+                                  "last_name": "Emmanuel",
+                                  "gender": "male",
+                                  "status": "Active",
+                                  "phone": "0802323232323",
+                                  "email": "contactus@mhn.ng",
+                                  "username": null,
+                                  "email_verified_at": null,
+                                  "type": "owner",
+                                  "country_id": "9b9faee3-6aaa-4050-bd6c-98a43e674250",
+                                  "branch_id": null,
+                                  "organization_id": "9bc5eb78-74d2-45f4-a677-05d07dca6a63",
+                                  "company_id": null,
+                                  "reset_token": null,
+                                  "token_time": null,
+                                  "created_at": "2024-04-10T13:41:22.000000Z",
+                                  "updated_at": "2024-04-11T19:11:50.000000Z",
+                                  "deleted_at": null
+                              },
+                              "old_amount": "2100.00",
+                              "new_amount": "1500.00",
+                              "old_care_type": "Primary Care",
+                              "new_care_type": "secondary care",
+                              "created_at": "2024-08-23T00:34:30.000000Z",
+                              "updated_at": "2024-08-23T00:34:30.000000Z"
+                          }
+                      },
+                      {
+                          "id": "9cd42f54-6132-4f2d-8b68-bb3d9bb29435",
+                          "service_item_id": "9cd37172-8551-43e5-9b24-e2854fb1eb42",
+                          "hmo_id": "9bbbac52-edd1-4aa7-8254-c29c14fa6249",
+                          "organization_id": "9bc5eb78-74d2-45f4-a677-05d07dca6a63",
+                          "care_type": "primary care",
+                          "amount": "3000.00",
+                          "status": "active",
+                          "created_at": "2024-08-22T18:30:10.000000Z",
+                          "updated_at": "2024-08-23T00:34:30.000000Z",
+                          "service_item": {
+                              "id": "9cd37172-8551-43e5-9b24-e2854fb1eb42",
+                              "name": "Vaccination",
+                              "service_type": "General",
+                              "created_at": "2024-08-22T09:39:13.000000Z",
+                              "updated_at": "2024-08-22T09:39:13.000000Z"
+                          },
+                          "latest_service_item_log": {
+                              "id": "9cd4b19f-68c4-4352-9d9c-eb07f825f55f",
+                              "organization_service_item_id": "9cd42f54-6132-4f2d-8b68-bb3d9bb29435",
+                              "changed_by": {
+                                  "id": "9bc6382c-bb73-4c7d-9409-677fe560485d",
+                                  "first_name": "General",
+                                  "middle_name": "Prince",
+                                  "last_name": "Emmanuel",
+                                  "gender": "male",
+                                  "status": "Active",
+                                  "phone": "0802323232323",
+                                  "email": "contactus@mhn.ng",
+                                  "username": null,
+                                  "email_verified_at": null,
+                                  "type": "owner",
+                                  "country_id": "9b9faee3-6aaa-4050-bd6c-98a43e674250",
+                                  "branch_id": null,
+                                  "organization_id": "9bc5eb78-74d2-45f4-a677-05d07dca6a63",
+                                  "company_id": null,
+                                  "reset_token": null,
+                                  "token_time": null,
+                                  "created_at": "2024-04-10T13:41:22.000000Z",
+                                  "updated_at": "2024-04-11T19:11:50.000000Z",
+                                  "deleted_at": null
+                              },
+                              "old_amount": "5456.00",
+                              "new_amount": "3000.00",
+                              "old_care_type": "primary care",
+                              "new_care_type": "primary care",
+                              "created_at": "2024-08-23T00:34:30.000000Z",
+                              "updated_at": "2024-08-23T00:34:30.000000Z"
+                          }
+                      },
+                      {
+                          "id": "9cd42f8a-18b5-4e12-9cc3-8d6de05ee797",
+                          "service_item_id": "9cd37172-85e7-4b43-a4de-cd8a806874bb",
+                          "hmo_id": "9bbbac52-edd1-4aa7-8254-c29c14fa6249",
+                          "organization_id": "9bc5eb78-74d2-45f4-a677-05d07dca6a63",
+                          "care_type": "primary care",
+                          "amount": "45090.00",
+                          "status": "active",
+                          "created_at": "2024-08-22T18:30:45.000000Z",
+                          "updated_at": "2024-08-23T00:46:18.000000Z",
+                          "service_item": {
+                              "id": "9cd37172-85e7-4b43-a4de-cd8a806874bb",
+                              "name": "Allergy Testing",
+                              "service_type": "General",
+                              "created_at": "2024-08-22T09:39:13.000000Z",
+                              "updated_at": "2024-08-22T09:39:13.000000Z"
+                          },
+                          "latest_service_item_log": {
+                              "id": "9cd4b5d8-f6d2-4152-b210-4013cede3ac6",
+                              "organization_service_item_id": "9cd42f8a-18b5-4e12-9cc3-8d6de05ee797",
+                              "changed_by": {
+                                  "id": "9bc6382c-bb73-4c7d-9409-677fe560485d",
+                                  "first_name": "General",
+                                  "middle_name": "Prince",
+                                  "last_name": "Emmanuel",
+                                  "gender": "male",
+                                  "status": "Active",
+                                  "phone": "0802323232323",
+                                  "email": "contactus@mhn.ng",
+                                  "username": null,
+                                  "email_verified_at": null,
+                                  "type": "owner",
+                                  "country_id": "9b9faee3-6aaa-4050-bd6c-98a43e674250",
+                                  "branch_id": null,
+                                  "organization_id": "9bc5eb78-74d2-45f4-a677-05d07dca6a63",
+                                  "company_id": null,
+                                  "reset_token": null,
+                                  "token_time": null,
+                                  "created_at": "2024-04-10T13:41:22.000000Z",
+                                  "updated_at": "2024-04-11T19:11:50.000000Z",
+                                  "deleted_at": null
+                              },
+                              "old_amount": "4500.00",
+                              "new_amount": "45090.00",
+                              "old_care_type": "primary care",
+                              "new_care_type": "primary care",
+                              "created_at": "2024-08-23T00:46:18.000000Z",
+                              "updated_at": "2024-08-23T00:46:18.000000Z"
+                          }
+                      },
+                      {
+                          "id": "9cd43013-aeb3-43f6-808b-ba0f2e8ff70c",
+                          "service_item_id": "9cd37172-865f-4be0-bf9d-fc9c9201b77b",
+                          "hmo_id": "9bbbac52-edd1-4aa7-8254-c29c14fa6249",
+                          "organization_id": "9bc5eb78-74d2-45f4-a677-05d07dca6a63",
+                          "care_type": "secondary care",
+                          "amount": "7000.00",
+                          "status": "active",
+                          "created_at": "2024-08-22T18:32:15.000000Z",
+                          "updated_at": "2024-08-23T00:43:59.000000Z",
+                          "service_item": {
+                              "id": "9cd37172-865f-4be0-bf9d-fc9c9201b77b",
+                              "name": "Diabetes Management",
+                              "service_type": "General",
+                              "created_at": "2024-08-22T09:39:13.000000Z",
+                              "updated_at": "2024-08-22T09:39:13.000000Z"
+                          },
+                          "latest_service_item_log": {
+                              "id": "9cd4b503-eb12-4e69-a40b-5652944432f6",
+                              "organization_service_item_id": "9cd43013-aeb3-43f6-808b-ba0f2e8ff70c",
+                              "changed_by": {
+                                  "id": "9bc6382c-bb73-4c7d-9409-677fe560485d",
+                                  "first_name": "General",
+                                  "middle_name": "Prince",
+                                  "last_name": "Emmanuel",
+                                  "gender": "male",
+                                  "status": "Active",
+                                  "phone": "0802323232323",
+                                  "email": "contactus@mhn.ng",
+                                  "username": null,
+                                  "email_verified_at": null,
+                                  "type": "owner",
+                                  "country_id": "9b9faee3-6aaa-4050-bd6c-98a43e674250",
+                                  "branch_id": null,
+                                  "organization_id": "9bc5eb78-74d2-45f4-a677-05d07dca6a63",
+                                  "company_id": null,
+                                  "reset_token": null,
+                                  "token_time": null,
+                                  "created_at": "2024-04-10T13:41:22.000000Z",
+                                  "updated_at": "2024-04-11T19:11:50.000000Z",
+                                  "deleted_at": null
+                              },
+                              "old_amount": "2100.00",
+                              "new_amount": "7000.00",
+                              "old_care_type": "Primary Care",
+                              "new_care_type": "secondary care",
+                              "created_at": "2024-08-23T00:43:59.000000Z",
+                              "updated_at": "2024-08-23T00:43:59.000000Z"
+                          }
+                      },
+                      {
+                          "id": "9cd4b19f-5735-46e2-beb9-e1bf6e7d548a",
+                          "service_item_id": "9cd37172-7cf4-4d10-9a51-9d5d6898fd96",
+                          "hmo_id": "9bbbac52-edd1-4aa7-8254-c29c14fa6249",
+                          "organization_id": "9bc5eb78-74d2-45f4-a677-05d07dca6a63",
+                          "care_type": "primary care",
+                          "amount": "1000.00",
+                          "status": "active",
+                          "created_at": "2024-08-23T00:34:30.000000Z",
+                          "updated_at": "2024-08-23T00:34:30.000000Z",
+                          "service_item": {
+                              "id": "9cd37172-7cf4-4d10-9a51-9d5d6898fd96",
+                              "name": "General Checkup",
+                              "service_type": "General",
+                              "created_at": "2024-08-22T09:39:13.000000Z",
+                              "updated_at": "2024-08-22T09:39:13.000000Z"
+                          },
+                          "latest_service_item_log": null
+                      },
+                      {
+                          "id": "9cd4b19f-5d3a-4153-b2b1-df96e573812c",
+                          "service_item_id": "9cd37172-82f5-43d3-a31f-e093e49b90bb",
+                          "hmo_id": "9bbbac52-edd1-4aa7-8254-c29c14fa6249",
+                          "organization_id": "9bc5eb78-74d2-45f4-a677-05d07dca6a63",
+                          "care_type": "secondary care",
+                          "amount": "2000.00",
+                          "status": "active",
+                          "created_at": "2024-08-23T00:34:30.000000Z",
+                          "updated_at": "2024-08-23T00:34:30.000000Z",
+                          "service_item": {
+                              "id": "9cd37172-82f5-43d3-a31f-e093e49b90bb",
+                              "name": "Health Screening",
+                              "service_type": "General",
+                              "created_at": "2024-08-22T09:39:13.000000Z",
+                              "updated_at": "2024-08-22T09:39:13.000000Z"
+                          },
+                          "latest_service_item_log": null
+                      },
+                      {
+                          "id": "9cd4b19f-6027-4f2d-957a-71b3a4b1ab1f",
+                          "service_item_id": "9cd37172-83d0-44cb-88ed-ea6642ddd300",
+                          "hmo_id": "9bbbac52-edd1-4aa7-8254-c29c14fa6249",
+                          "organization_id": "9bc5eb78-74d2-45f4-a677-05d07dca6a63",
+                          "care_type": "secondary care",
+                          "amount": "2400.00",
+                          "status": "active",
+                          "created_at": "2024-08-23T00:34:30.000000Z",
+                          "updated_at": "2024-08-23T00:46:18.000000Z",
+                          "service_item": {
+                              "id": "9cd37172-83d0-44cb-88ed-ea6642ddd300",
+                              "name": "Annual Physical Exam",
+                              "service_type": "General",
+                              "created_at": "2024-08-22T09:39:13.000000Z",
+                              "updated_at": "2024-08-22T09:39:13.000000Z"
+                          },
+                          "latest_service_item_log": {
+                              "id": "9cd4b5d8-efa0-4e79-aa40-d22b181cf01d",
+                              "organization_service_item_id": "9cd4b19f-6027-4f2d-957a-71b3a4b1ab1f",
+                              "changed_by": {
+                                  "id": "9bc6382c-bb73-4c7d-9409-677fe560485d",
+                                  "first_name": "General",
+                                  "middle_name": "Prince",
+                                  "last_name": "Emmanuel",
+                                  "gender": "male",
+                                  "status": "Active",
+                                  "phone": "0802323232323",
+                                  "email": "contactus@mhn.ng",
+                                  "username": null,
+                                  "email_verified_at": null,
+                                  "type": "owner",
+                                  "country_id": "9b9faee3-6aaa-4050-bd6c-98a43e674250",
+                                  "branch_id": null,
+                                  "organization_id": "9bc5eb78-74d2-45f4-a677-05d07dca6a63",
+                                  "company_id": null,
+                                  "reset_token": null,
+                                  "token_time": null,
+                                  "created_at": "2024-04-10T13:41:22.000000Z",
+                                  "updated_at": "2024-04-11T19:11:50.000000Z",
+                                  "deleted_at": null
+                              },
+                              "old_amount": "2400.00",
+                              "new_amount": "2400.00",
+                              "old_care_type": "primary care",
+                              "new_care_type": "secondary care",
+                              "created_at": "2024-08-23T00:46:18.000000Z",
+                              "updated_at": "2024-08-23T00:46:18.000000Z"
+                          }
+                      },
+                      {
+                          "id": "9cd4b503-ef01-4432-847f-e36c23d25e8f",
+                          "service_item_id": "9cd37172-86ed-4033-947a-20639d80e305",
+                          "hmo_id": "9bbbac52-edd1-4aa7-8254-c29c14fa6249",
+                          "organization_id": "9bc5eb78-74d2-45f4-a677-05d07dca6a63",
+                          "care_type": "primary care",
+                          "amount": "9000.00",
+                          "status": "active",
+                          "created_at": "2024-08-23T00:43:59.000000Z",
+                          "updated_at": "2024-08-23T00:43:59.000000Z",
+                          "service_item": {
+                              "id": "9cd37172-86ed-4033-947a-20639d80e305",
+                              "name": "Preventive Care",
+                              "service_type": "General",
+                              "created_at": "2024-08-22T09:39:13.000000Z",
+                              "updated_at": "2024-08-22T09:39:13.000000Z"
+                          },
+                          "latest_service_item_log": null
+                      },
+                      {
+                          "id": "9cd4b503-f2c5-4910-8d32-9a6a7c315f9e",
+                          "service_item_id": "9cd37172-87c3-4f8c-ac31-eb56b341b6eb",
+                          "hmo_id": "9bbbac52-edd1-4aa7-8254-c29c14fa6249",
+                          "organization_id": "9bc5eb78-74d2-45f4-a677-05d07dca6a63",
+                          "care_type": "primary care",
+                          "amount": "37899.00",
+                          "status": "active",
+                          "created_at": "2024-08-23T00:43:59.000000Z",
+                          "updated_at": "2024-08-23T00:43:59.000000Z",
+                          "service_item": {
+                              "id": "9cd37172-87c3-4f8c-ac31-eb56b341b6eb",
+                              "name": "Weight Management",
+                              "service_type": "General",
+                              "created_at": "2024-08-22T09:39:13.000000Z",
+                              "updated_at": "2024-08-22T09:39:13.000000Z"
+                          },
+                          "latest_service_item_log": null
+                      },
+                      {
+                          "id": "9cd4b503-f635-4372-831b-b559d8eb08e5",
+                          "service_item_id": "9cd37172-8a4b-49d0-96c0-e3fb976f809f",
+                          "hmo_id": "9bbbac52-edd1-4aa7-8254-c29c14fa6249",
+                          "organization_id": "9bc5eb78-74d2-45f4-a677-05d07dca6a63",
+                          "care_type": "secondary care",
+                          "amount": "2800.00",
+                          "status": "active",
+                          "created_at": "2024-08-23T00:43:59.000000Z",
+                          "updated_at": "2024-08-23T00:46:18.000000Z",
+                          "service_item": {
+                              "id": "9cd37172-8a4b-49d0-96c0-e3fb976f809f",
+                              "name": "Family Medicine",
+                              "service_type": "General",
+                              "created_at": "2024-08-22T09:39:13.000000Z",
+                              "updated_at": "2024-08-22T09:39:13.000000Z"
+                          },
+                          "latest_service_item_log": {
+                              "id": "9cd4b5d8-fda9-4f93-be34-3869de41f111",
+                              "organization_service_item_id": "9cd4b503-f635-4372-831b-b559d8eb08e5",
+                              "changed_by": {
+                                  "id": "9bc6382c-bb73-4c7d-9409-677fe560485d",
+                                  "first_name": "General",
+                                  "middle_name": "Prince",
+                                  "last_name": "Emmanuel",
+                                  "gender": "male",
+                                  "status": "Active",
+                                  "phone": "0802323232323",
+                                  "email": "contactus@mhn.ng",
+                                  "username": null,
+                                  "email_verified_at": null,
+                                  "type": "owner",
+                                  "country_id": "9b9faee3-6aaa-4050-bd6c-98a43e674250",
+                                  "branch_id": null,
+                                  "organization_id": "9bc5eb78-74d2-45f4-a677-05d07dca6a63",
+                                  "company_id": null,
+                                  "reset_token": null,
+                                  "token_time": null,
+                                  "created_at": "2024-04-10T13:41:22.000000Z",
+                                  "updated_at": "2024-04-11T19:11:50.000000Z",
+                                  "deleted_at": null
+                              },
+                              "old_amount": "5456.00",
+                              "new_amount": "2800.00",
+                              "old_care_type": "primary care",
+                              "new_care_type": "secondary care",
+                              "created_at": "2024-08-23T00:46:18.000000Z",
+                              "updated_at": "2024-08-23T00:46:18.000000Z"
+                          }
+                      }
+                  ]
+              }
+          }

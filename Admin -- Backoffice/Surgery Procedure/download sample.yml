@@ -1,0 +1,139 @@
+info:
+  name: download sample
+  type: http
+  seq: 3
+
+http:
+  method: POST
+  url: "{{base_url}}/admin/surgeryProcedure/download-sample"
+  headers:
+    - name: Accept
+      value: application/json
+    - name: Content-Type
+      value: application/json
+  body:
+    type: json
+    data: "{\r
+
+      \    \"surgery\":\"Neurosurgery\",\r
+
+      \    \"procedure\":\"Brain Tumor 9\"\r
+
+      }"
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+examples:
+  - name: New Request
+    request:
+      url: "{{base_url}}/admin/surgeryProcedure/download-sample"
+      method: POST
+      headers:
+        - name: Accept
+          value: application/json
+        - name: Content-Type
+          value: application/json
+      body:
+        type: json
+        data: "{\r
+
+          \    \"surgery\":\"Neurosurgery\",\r
+
+          \    \"procedure\":\"Brain Tumor 9\"\r
+
+          }"
+    response:
+      status: 200
+      statusText: OK
+      headers:
+        - name: Date
+          value: Tue, 16 Dec 2025 14:39:45 GMT
+        - name: Server
+          value: Apache/2.4.54 (Win64) OpenSSL/1.1.1d mod_fcgid/2.3.10-dev
+        - name: X-Powered-By
+          value: PHP/8.2.17
+        - name: Content-Disposition
+          value: attachment; filename=surgery_procedures_sample.csv
+        - name: Cache-Control
+          value: no-cache, private
+        - name: X-RateLimit-Limit
+          value: "60"
+        - name: X-RateLimit-Remaining
+          value: "58"
+        - name: Access-Control-Allow-Origin
+          value: "*"
+        - name: Vary
+          value: Authorization
+        - name: Keep-Alive
+          value: timeout=5, max=100
+        - name: Connection
+          value: Keep-Alive
+        - name: Transfer-Encoding
+          value: chunked
+        - name: Content-Type
+          value: text/csv; charset=UTF-8
+      body:
+        type: text
+        data: |
+          surgery,procedure
+          "Cardiothoracic Surgery","Coronary Artery Bypass Grafting (CABG)"
+          "Cardiothoracic Surgery","Heart Valve Repair/Replacement"
+          "Cardiothoracic Surgery","Lobectomy (Lung Removal)"
+          "Cardiothoracic Surgery","Pneumonectomy (Complete Lung Removal)"
+          "Cardiothoracic Surgery","Aortic Aneurysm Repair"
+          "Cardiothoracic Surgery","Thoracic Endovascular Aortic Repair (TEVAR)"
+          Neurosurgery,Craniotomy
+          Neurosurgery,"Spinal Fusion"
+          Neurosurgery,Laminectomy
+          Neurosurgery,"Brain Tumor Resection"
+          Neurosurgery,"Ventriculoperitoneal (VP) Shunt Placement"
+          Neurosurgery,Discectomy
+          "Orthopedic Surgery","Total Hip Replacement"
+          "Orthopedic Surgery","Total Knee Replacement"
+          "Orthopedic Surgery","""Arthroscopy (Shoulder, Knee, Ankle)"""
+          "Orthopedic Surgery","Spinal Fusion"
+          "Orthopedic Surgery","Fracture Repair"
+          "Orthopedic Surgery","Rotator Cuff Repair"
+          "Urological Surgery","Prostatectomy (Prostate Removal)"
+          "Urological Surgery","Nephrectomy (Kidney Removal)"
+          "Urological Surgery","Cystectomy (Bladder Removal)"
+          "Urological Surgery",Ureteroscopy
+          "Urological Surgery","TURP (Transurethral Resection of the Prostate)"
+          "Urological Surgery",Vasectomy
+          "Gynecological Surgery","Cesarean Section"
+          "Gynecological Surgery","Hysterectomy (Uterus Removal)"
+          "Gynecological Surgery","Oophorectomy (Ovary Removal)"
+          "Gynecological Surgery","Salpingectomy (Fallopian Tube Removal)"
+          "Gynecological Surgery","Myomectomy (Fibroid Removal)"
+          "Gynecological Surgery","Dilation and Curettage (D&C)"
+          "Plastic and Reconstructive Surgery","Breast Augmentation"
+          "Plastic and Reconstructive Surgery","Breast Reduction"
+          "Plastic and Reconstructive Surgery","Rhinoplasty (Nose Surgery)"
+          "Plastic and Reconstructive Surgery","Abdominoplasty (Tummy Tuck)"
+          "Plastic and Reconstructive Surgery",Liposuction
+          "Plastic and Reconstructive Surgery","Skin Grafting"
+          """ENT (Ear, Nose, Throat) Surgery""",Tonsillectomy
+          """ENT (Ear, Nose, Throat) Surgery""",Adenoidectomy
+          """ENT (Ear, Nose, Throat) Surgery""","Septoplasty (Nasal Septum Surgery)"
+          """ENT (Ear, Nose, Throat) Surgery""","Tympanoplasty (Eardrum Repair)"
+          """ENT (Ear, Nose, Throat) Surgery""","Sinus Surgery"
+          """ENT (Ear, Nose, Throat) Surgery""","Laryngectomy (Larynx Removal)"
+          "Vascular Surgery","Carotid Endarterectomy"
+          "Vascular Surgery","Aneurysm Repair"
+          "Vascular Surgery","Varicose Vein Surgery"
+          "Vascular Surgery",Angioplasty
+          "Vascular Surgery","Bypass Surgery"
+          "Vascular Surgery","Dialysis Access Creation"
+          "Ophthalmic Surgery","Cataract Surgery"
+          "Ophthalmic Surgery","LASIK (Laser Eye Surgery)"
+          "Ophthalmic Surgery","Glaucoma Surgery"
+          "Ophthalmic Surgery",Vitrectomy
+          "Ophthalmic Surgery","Retinal Detachment Repair"
+          "Ophthalmic Surgery","Corneal Transplant"
+          Neurosurgery,"Brain Tumor 9"
+          Neurosurgery,"Brain Tumor 2"

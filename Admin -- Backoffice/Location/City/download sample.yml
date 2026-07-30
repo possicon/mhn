@@ -1,0 +1,17 @@
+info:
+  name: download sample
+  type: http
+  seq: 9
+
+http:
+  method: POST
+  url: "{{base_url}}/admin/city/sample"
+  auth:
+    type: bearer
+    token: "{{adminToken}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

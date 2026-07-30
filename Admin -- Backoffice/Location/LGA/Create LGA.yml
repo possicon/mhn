@@ -1,0 +1,88 @@
+info:
+  name: Create LGA
+  type: http
+  seq: 1
+
+http:
+  method: POST
+  url: "{{base_url}}/admin/lga"
+  body:
+    type: json
+    data: "{\r
+
+      \  \"state_id\": \"9bb76c18-b1a6-4c81-9932-b8c3afc90c46\",\r
+
+      \  \"name\": \"Ikoyi\"\r
+
+      }"
+  auth:
+    type: bearer
+    token: "{{token}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+examples:
+  - name: Create LGA
+    request:
+      url: "{{base_url}}/admin/lga"
+      method: POST
+      body:
+        type: json
+        data: "{\r
+
+          \  \"state_id\": \"1a1a1a1a-1a1a-1a1a-1a1a-1a1a1a1a1a12\",\r
+
+          \  \"name\": \"Kubwa\"\r
+
+          }"
+    response:
+      status: 201
+      statusText: Created
+      headers:
+        - name: Date
+          value: Wed, 20 Mar 2024 19:23:55 GMT
+        - name: Server
+          value: Apache/2.4.54 (Win64) OpenSSL/1.1.1q PHP/8.1.10
+        - name: Vary
+          value: Authorization
+        - name: X-Powered-By
+          value: PHP/8.1.10
+        - name: Cache-Control
+          value: no-cache, private
+        - name: X-RateLimit-Limit
+          value: "60"
+        - name: X-RateLimit-Remaining
+          value: "58"
+        - name: Access-Control-Allow-Origin
+          value: "*"
+        - name: Keep-Alive
+          value: timeout=5, max=100
+        - name: Connection
+          value: Keep-Alive
+        - name: Transfer-Encoding
+          value: chunked
+        - name: Content-Type
+          value: application/json
+      body:
+        type: json
+        data: |-
+          {
+              "success": true,
+              "code": 0,
+              "locale": "en",
+              "message": "LGA created successfully",
+              "data": {
+                  "lga": {
+                      "id": "9b9c7403-c7ae-4393-b73e-f31606e17811",
+                      "name": "Kubwa",
+                      "state_id": "1a1a1a1a-1a1a-1a1a-1a1a-1a1a1a1a1a12",
+                      "active": null,
+                      "created_at": "2024-03-20T19:23:56.000000Z",
+                      "updated_at": "2024-03-20T19:23:56.000000Z"
+                  }
+              }
+          }

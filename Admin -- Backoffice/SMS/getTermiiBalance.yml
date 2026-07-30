@@ -1,0 +1,72 @@
+info:
+  name: getTermiiBalance
+  type: http
+  seq: 11
+
+http:
+  method: GET
+  url: "{{base_url}}/admin/getTermiiBalance"
+  body:
+    type: text
+    data: ""
+  auth:
+    type: bearer
+    token: "{{adminToken}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+examples:
+  - name: getTermiiBalance
+    request:
+      url: "{{base_url}}/admin/getTermiiBalance"
+      method: GET
+      body:
+        type: text
+        data: ""
+    response:
+      status: 200
+      statusText: OK
+      headers:
+        - name: Date
+          value: Fri, 16 May 2025 15:57:10 GMT
+        - name: Server
+          value: Apache/2.4.54 (Win64) OpenSSL/1.1.1d mod_fcgid/2.3.10-dev
+        - name: X-Powered-By
+          value: PHP/8.2.17
+        - name: Cache-Control
+          value: no-cache, private
+        - name: X-RateLimit-Limit
+          value: "60"
+        - name: X-RateLimit-Remaining
+          value: "59"
+        - name: Access-Control-Allow-Origin
+          value: "*"
+        - name: Vary
+          value: Authorization
+        - name: Keep-Alive
+          value: timeout=5, max=100
+        - name: Connection
+          value: Keep-Alive
+        - name: Transfer-Encoding
+          value: chunked
+        - name: Content-Type
+          value: application/json
+      body:
+        type: json
+        data: |-
+          {
+              "success": true,
+              "code": 0,
+              "locale": "en",
+              "message": "Termii balance fetched",
+              "data": {
+                  "application": "MHN",
+                  "balance": 1,
+                  "currency": "NGN",
+                  "user": "MHN"
+              }
+          }

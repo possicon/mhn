@@ -1,0 +1,17 @@
+info:
+  name: download
+  type: http
+  seq: 2
+
+http:
+  method: POST
+  url: "{{base_url}}/admin/icd10/download-sample"
+  auth:
+    type: bearer
+    token: 28|8FKFnxBjvmETHkkg7314HbSg3fpImZ1UOlrVFbrR32bd5b9b
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

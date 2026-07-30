@@ -1,0 +1,28 @@
+info:
+  name: Export plans
+  type: http
+  seq: 7
+
+http:
+  method: POST
+  url: "{{base_url}}/admin/plan/export"
+  body:
+    type: json
+    data: "{\r
+
+      \  \"type\": \"pdf\", //csv , excel or \"pdf\". \"csv\" is the default.\r
+
+      \  \"ids\": [\r
+
+      \    \"1a1a1a1a-1a1a-1a1a-1a1a-1a1a1a1a1a11\"\r
+
+      \  ] //ids can be null if you want all plans to be exported.\r
+
+      }"
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

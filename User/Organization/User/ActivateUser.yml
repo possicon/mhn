@@ -1,0 +1,126 @@
+info:
+  name: ActivateUser
+  type: http
+  seq: 6
+
+http:
+  method: POST
+  url: "{{base_url}}/user/activate-user?email=emmadev2%40gmail.com&expires=1747679168&id=9eef4da2-1592-4e7c-85dd-c9b563c13189&subdomain=emmanuel&signature=bf669189d33a9769b7416a6a93469a32e39fd970ca6cd6007304c445171b9341"
+  params:
+    - name: email
+      value: emmadev2%40gmail.com
+      type: query
+    - name: expires
+      value: "1747679168"
+      type: query
+    - name: id
+      value: 9eef4da2-1592-4e7c-85dd-c9b563c13189
+      type: query
+    - name: subdomain
+      value: emmanuel
+      type: query
+    - name: signature
+      value: bf669189d33a9769b7416a6a93469a32e39fd970ca6cd6007304c445171b9341
+      type: query
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+examples:
+  - name: New Request
+    request:
+      url: "{{base_url}}/user/activate-user?email=emmadev%40gmail.com&expires=1714377973&id=9be7f30a-b3a5-49c5-a437-f6c7145664e8&signature=c63197fa806f9cdde12480d1a9d19276c48381cbfd28c18751bab20762d4f800"
+      method: POST
+      params:
+        - name: email
+          value: emmadev%40gmail.com
+          type: query
+        - name: expires
+          value: "1714377973"
+          type: query
+        - name: id
+          value: 9be7f30a-b3a5-49c5-a437-f6c7145664e8
+          type: query
+        - name: signature
+          value: c63197fa806f9cdde12480d1a9d19276c48381cbfd28c18751bab20762d4f800
+          type: query
+    response:
+      status: 200
+      statusText: OK
+      headers:
+        - name: Date
+          value: Sat, 27 Apr 2024 08:30:34 GMT
+        - name: Server
+          value: Apache/2.4.54 (Win64) OpenSSL/1.1.1q mod_fcgid/2.3.10-dev
+        - name: X-Powered-By
+          value: PHP/8.2.16
+        - name: Cache-Control
+          value: no-cache, private
+        - name: X-RateLimit-Limit
+          value: "60"
+        - name: X-RateLimit-Remaining
+          value: "59"
+        - name: Access-Control-Allow-Origin
+          value: "*"
+        - name: Keep-Alive
+          value: timeout=5, max=100
+        - name: Connection
+          value: Keep-Alive
+        - name: Transfer-Encoding
+          value: chunked
+        - name: Content-Type
+          value: application/json
+      body:
+        type: json
+        data: |-
+          {
+              "success": true,
+              "code": 0,
+              "locale": "en",
+              "message": "Activation successful.",
+              "data": {
+                  "user": {
+                      "id": "9be7f30a-b3a5-49c5-a437-f6c7145664e8",
+                      "first_name": "Emma",
+                      "middle_name": null,
+                      "last_name": "Dev",
+                      "gender": "male",
+                      "status": "Active",
+                      "phone": "08043567890",
+                      "email": "emmadev@gmail.com",
+                      "username": null,
+                      "email_verified_at": "2024-04-27T08:30:35.000000Z",
+                      "type": "people",
+                      "country_id": null,
+                      "branch_id": null,
+                      "organization_id": "9bc5eb78-74d2-45f4-a677-05d07dca6a63",
+                      "reset_token": null,
+                      "token_time": null,
+                      "created_at": "2024-04-27T08:06:13.000000Z",
+                      "updated_at": "2024-04-27T08:30:35.000000Z",
+                      "deleted_at": null,
+                      "received_invites": [
+                          {
+                              "id": "9be7f30a-c0d6-427f-aeea-2adaab9827f9",
+                              "invited_by": "9bc6382c-bb73-4c7d-9409-677fe560485d",
+                              "invited_user": "9be7f30a-b3a5-49c5-a437-f6c7145664e8",
+                              "status": "accepted",
+                              "created_at": "2024-04-27T08:06:13.000000Z",
+                              "updated_at": "2024-04-27T08:30:35.000000Z"
+                          }
+                      ],
+                      "account": {
+                          "id": 33,
+                          "accountable_id": "9be7f30a-b3a5-49c5-a437-f6c7145664e8",
+                          "accountable_type": "App\\Models\\User",
+                          "status": "active",
+                          "created_at": "2024-04-27T08:06:13.000000Z",
+                          "updated_at": "2024-04-27T08:30:35.000000Z"
+                      }
+                  }
+              }
+          }

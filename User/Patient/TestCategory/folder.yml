@@ -1,0 +1,7 @@
+info:
+  name: TestCategory
+  type: folder
+  seq: 32
+
+request:
+  auth: inherit

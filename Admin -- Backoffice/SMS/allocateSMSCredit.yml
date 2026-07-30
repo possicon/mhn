@@ -1,0 +1,98 @@
+info:
+  name: allocateSMSCredit
+  type: http
+  seq: 12
+
+http:
+  method: POST
+  url: "{{base_url}}/admin/allocateSMSCredit/:id"
+  headers:
+    - name: Accept
+      value: application/json
+  params:
+    - name: id
+      value: 1sfh-nns93
+      type: path
+  body:
+    type: text
+    data: ""
+  auth:
+    type: bearer
+    token: "{{adminToken}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+examples:
+  - name: add sms princ
+    request:
+      url: "{{base_url}}/admin/allocateSMSCredit/:id"
+      method: POST
+      headers:
+        - name: Accept
+          value: application/json
+      params:
+        - name: id
+          value: 1sfh-nns93
+          type: path
+      body:
+        type: text
+        data: |-
+          {
+              "name": "Reporting",
+              "img": "url",
+              "description": "This helps you to manage your hospital Emergency seamlessly."
+          }
+    response:
+      status: 200
+      statusText: OK
+      headers:
+        - name: Date
+          value: Wed, 14 May 2025 14:48:10 GMT
+        - name: Server
+          value: Apache/2.4.54 (Win64) OpenSSL/1.1.1d mod_fcgid/2.3.10-dev
+        - name: X-Powered-By
+          value: PHP/8.2.17
+        - name: Cache-Control
+          value: no-cache, private
+        - name: X-RateLimit-Limit
+          value: "60"
+        - name: X-RateLimit-Remaining
+          value: "59"
+        - name: Access-Control-Allow-Origin
+          value: "*"
+        - name: Vary
+          value: Authorization
+        - name: Keep-Alive
+          value: timeout=5, max=100
+        - name: Connection
+          value: Keep-Alive
+        - name: Transfer-Encoding
+          value: chunked
+        - name: Content-Type
+          value: application/json
+      body:
+        type: json
+        data: |-
+          {
+              "success": true,
+              "code": 0,
+              "locale": "en",
+              "message": "Allocated",
+              "data": {
+                  "item": {
+                      "id": "1sfh-nns93",
+                      "organization_id": "9bc5eb78-74d2-45f4-a677-05d07dca6a63",
+                      "sms_pricing_id": "9c02483f-cc6f-4196-b2d6-db8f3d39aca3",
+                      "remaining_sms_credit": "10",
+                      "used": 0,
+                      "created_at": "2024-05-10T10:55:00.000000Z",
+                      "updated_at": "2025-05-14T14:48:10.000000Z",
+                      "status": "allocated",
+                      "requested_credit": null
+                  }
+              }
+          }

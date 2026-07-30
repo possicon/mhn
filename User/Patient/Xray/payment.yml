@@ -1,0 +1,29 @@
+info:
+  name: payment
+  type: http
+  seq: 9
+
+http:
+  method: POST
+  url: "{{base_url}}/user/xrays/payment"
+  headers:
+    - name: Accept
+      value: application/json
+  body:
+    type: json
+    data: "{\r
+
+      \    \"cluster_number\":\"#X00002\",\r
+
+      \    \"payment_type\":\"private\",\r
+
+      \    \"payment_method\":\"cash\"\r
+
+      }"
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

@@ -1,0 +1,118 @@
+info:
+  name: update profile
+  type: http
+  seq: 3
+
+http:
+  method: POST
+  url: "{{base_url}}/user/profile"
+  headers:
+    - name: Accept
+      value: application/json
+  body:
+    type: multipart-form
+    data:
+      - name: first_name
+        type: text
+        value: "{{$randomFirstName}}"
+      - name: middle_name
+        type: text
+        value: "{{$randomFirstName}}"
+      - name: last_name
+        type: text
+        value: "{{$randomLastName}}"
+      - name: profile_picture
+        type: file
+        value:
+          - /home/lawpavilion/Pictures/bird_2.jpg
+      - name: gender
+        type: text
+        value: male
+      - name: country_call_code
+        type: text
+        value: "+234"
+      - name: phone
+        type: text
+        value: "9037714162"
+      - name: username
+        type: text
+        value: "{{$randomUserName}}"
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+examples:
+  - name: update profile
+    request:
+      url: "{{base_url}}/user/profile"
+      method: POST
+      headers:
+        - name: Accept
+          value: application/json
+      body:
+        type: multipart-form
+        data:
+          - name: first_name
+            type: text
+            value: "{{$randomFirstName}}"
+          - name: middle_name
+            type: text
+            value: "{{$randomFirstName}}"
+          - name: last_name
+            type: text
+            value: "{{$randomLastName}}"
+          - name: profile_picture
+            type: file
+            value:
+              - /home/lawpavilion/Pictures/bird_2.jpg
+          - name: gender
+            type: text
+            value: male
+          - name: country_call_code
+            type: text
+            value: "+234"
+          - name: phone
+            type: text
+            value: "9037714162"
+          - name: username
+            type: text
+            value: "{{$randomUserName}}"
+    response:
+      status: 200
+      statusText: OK
+      headers:
+        - name: Server
+          value: nginx/1.24.0 (Ubuntu)
+        - name: Content-Type
+          value: application/json
+        - name: Transfer-Encoding
+          value: chunked
+        - name: Connection
+          value: keep-alive
+        - name: Cache-Control
+          value: no-cache, private
+        - name: Date
+          value: Fri, 17 Jul 2026 05:54:44 GMT
+        - name: X-RateLimit-Limit
+          value: "60"
+        - name: X-RateLimit-Remaining
+          value: "59"
+        - name: Vary
+          value: Origin
+        - name: X-Frame-Options
+          value: SAMEORIGIN
+        - name: X-XSS-Protection
+          value: 1; mode=block
+        - name: X-Content-Type-Options
+          value: nosniff
+      body:
+        type: json
+        data: |-
+          {
+              "status": true,
+              "message": "Profile Updated"
+          }

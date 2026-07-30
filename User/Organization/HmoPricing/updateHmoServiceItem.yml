@@ -1,0 +1,95 @@
+info:
+  name: updateHmoServiceItem
+  type: http
+  seq: 2
+
+http:
+  method: POST
+  url: "{{base_url}}/user/organization/updateHmoServiceItem"
+  headers:
+    - name: Accept
+      value: application/json
+  body:
+    type: json
+    data: "{\r
+
+      \    \"amount\":\"20141800\",\r
+
+      \    \"care_type\":\"secondary care\",\r
+
+      \    \"service_item_id\":\"9e96121d-f0e5-45d1-8d57-c59e7433c376\",\r
+
+      \    \"hmo_id\":\"9bbbac52-edd1-4aa7-8254-c29c14fa6249\",\r
+
+      \    \"use_private_pricing\":1\r
+
+      }"
+  auth:
+    type: bearer
+    token: 78|IJJwsPNGwfjrHdMvXfMgKzfYaTOw56YXrF1VLHE8b494a4af
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+examples:
+  - name: updateHmoServiceItem
+    request:
+      url: "{{base_url}}/user/organization/updateHmoServiceItem"
+      method: POST
+      headers:
+        - name: Accept
+          value: application/json
+      body:
+        type: json
+        data: "{\r
+
+          \    \"amount\":\"5050\",\r
+
+          \    \"care_type\":\"Primary Care\",\r
+
+          \    \"service_item_id\":\"9cd37172-9e3c-44de-aff1-1ef5e6ab1572\",\r
+
+          \    \"hmo_id\":\"9bbbac52-edd1-4aa7-8254-c29c14fa6249\"\r
+
+          }"
+    response:
+      status: 200
+      statusText: OK
+      headers:
+        - name: Date
+          value: Thu, 22 Aug 2024 17:41:36 GMT
+        - name: Server
+          value: Apache/2.4.54 (Win64) OpenSSL/1.1.1q mod_fcgid/2.3.10-dev
+        - name: X-Powered-By
+          value: PHP/8.2.16
+        - name: Cache-Control
+          value: no-cache, private
+        - name: X-RateLimit-Limit
+          value: "60"
+        - name: X-RateLimit-Remaining
+          value: "59"
+        - name: Access-Control-Allow-Origin
+          value: "*"
+        - name: Vary
+          value: Authorization
+        - name: Keep-Alive
+          value: timeout=5, max=100
+        - name: Connection
+          value: Keep-Alive
+        - name: Transfer-Encoding
+          value: chunked
+        - name: Content-Type
+          value: application/json
+      body:
+        type: json
+        data: |-
+          {
+              "success": true,
+              "code": 0,
+              "locale": "en",
+              "message": "Updated successfully",
+              "data": null
+          }

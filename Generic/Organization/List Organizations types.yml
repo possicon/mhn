@@ -1,0 +1,85 @@
+info:
+  name: List Organizations types
+  type: http
+  seq: 1
+
+http:
+  method: GET
+  url: "{{base_url}}/generic/organization-types"
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+examples:
+  - name: List Organizations types
+    request:
+      url: "{{base_url}}/generic/organization-types"
+      method: GET
+    response:
+      status: 200
+      statusText: OK
+      headers:
+        - name: Date
+          value: Tue, 16 Apr 2024 15:22:52 GMT
+        - name: Server
+          value: Apache/2.4.54 (Win64) OpenSSL/1.1.1q mod_fcgid/2.3.10-dev
+        - name: X-Powered-By
+          value: PHP/8.2.16
+        - name: Cache-Control
+          value: no-cache, private
+        - name: X-RateLimit-Limit
+          value: "60"
+        - name: X-RateLimit-Remaining
+          value: "59"
+        - name: Access-Control-Allow-Origin
+          value: "*"
+        - name: Keep-Alive
+          value: timeout=5, max=100
+        - name: Connection
+          value: Keep-Alive
+        - name: Transfer-Encoding
+          value: chunked
+        - name: Content-Type
+          value: application/json
+      body:
+        type: json
+        data: |-
+          {
+              "success": true,
+              "code": 0,
+              "locale": "en",
+              "message": "Organization types fetched successfully",
+              "data": {
+                  "items": [
+                      {
+                          "id": 1,
+                          "name": "Hospitals & Health Centers",
+                          "active": true
+                      },
+                      {
+                          "id": 2,
+                          "name": "Pharmacy",
+                          "active": true
+                      },
+                      {
+                          "id": 3,
+                          "name": "HMO",
+                          "active": true
+                      },
+                      {
+                          "id": 4,
+                          "name": "Laboratory",
+                          "active": true
+                      },
+                      {
+                          "id": 5,
+                          "name": "ENT",
+                          "active": true
+                      }
+                  ]
+              }
+          }

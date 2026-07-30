@@ -1,0 +1,280 @@
+info:
+  name: List all hmo locations
+  type: http
+  seq: 13
+
+http:
+  method: GET
+  url: "{{base_url}}/admin/hmo/locations"
+  headers:
+    - name: Accept
+      value: application/json
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+examples:
+  - name: List all hmo locations
+    request:
+      url: "{{base_url}}/admin/hmo/locations"
+      method: GET
+      headers:
+        - name: Accept
+          value: application/json
+    response:
+      status: 200
+      statusText: OK
+      headers:
+        - name: Date
+          value: Fri, 12 Apr 2024 09:35:57 GMT
+        - name: Server
+          value: Apache/2.4.54 (Win64) OpenSSL/1.1.1q mod_fcgid/2.3.10-dev
+        - name: X-Powered-By
+          value: PHP/8.2.16
+        - name: Cache-Control
+          value: no-cache, private
+        - name: X-RateLimit-Limit
+          value: "60"
+        - name: X-RateLimit-Remaining
+          value: "59"
+        - name: Access-Control-Allow-Origin
+          value: "*"
+        - name: Vary
+          value: Authorization
+        - name: Keep-Alive
+          value: timeout=5, max=100
+        - name: Connection
+          value: Keep-Alive
+        - name: Transfer-Encoding
+          value: chunked
+        - name: Content-Type
+          value: application/json
+      body:
+        type: json
+        data: |-
+          {
+              "success": true,
+              "code": 0,
+              "locale": "en",
+              "message": "Fetched hmo successfully",
+              "data": {
+                  "locations": [
+                      {
+                          "id": "9bbbb7fc-24e9-4911-8b5a-d7591ce9fe02",
+                          "hmo_id": "9bbbac52-edd1-4aa7-8254-c29c14fa6249",
+                          "country_id": "9b9faee2-b64b-4aa1-b7ba-ab75b4b25b5c",
+                          "state_id": "9ba01c32-0c65-4e71-9d2e-37dbb2105b19",
+                          "lga_id": "9bb09584-59f0-4d89-ab49-7ce3fd30b27a",
+                          "city_id": "9ba1338d-e13b-4311-9915-6c70414bb0c7",
+                          "address": "Mangoro Agege",
+                          "created_at": "2024-04-05T08:24:39.000000Z",
+                          "updated_at": "2024-04-05T09:28:42.000000Z",
+                          "hmo": {
+                              "id": "9bbbac52-edd1-4aa7-8254-c29c14fa6249",
+                              "health_provider": "Relaince",
+                              "type": "public",
+                              "contact_name": "Moyo",
+                              "contact_email_address": "moyo@reliance.com",
+                              "contact_phone_number": "09023456789",
+                              "status": "active",
+                              "description": null,
+                              "country_id": "9b9faee2-a2a4-4bcc-a758-53dfee793de6",
+                              "created_at": "2024-04-05T07:52:03.000000Z",
+                              "updated_at": "2024-04-05T13:49:10.000000Z",
+                              "deleted_at": null
+                          },
+                          "country": {
+                              "id": "9b9faee2-b64b-4aa1-b7ba-ab75b4b25b5c",
+                              "name": "Belgium",
+                              "region_id": "9b9ecc53-49e9-443f-9bc0-84a9c27d1652",
+                              "currency_name": "Euro",
+                              "currency_symbol": "EUR",
+                              "active": true,
+                              "flag": null
+                          },
+                          "state": {
+                              "id": "9ba01c32-0c65-4e71-9d2e-37dbb2105b19",
+                              "name": "Daykundi",
+                              "region_id": "9b9ecc53-48de-4e4d-8147-65cc79090128",
+                              "country_id": "9b9faee2-9ca2-41d0-962c-f7f60ef04bdb",
+                              "active": true
+                          },
+                          "lga": {
+                              "id": "9bb09584-59f0-4d89-ab49-7ce3fd30b27a",
+                              "name": "Qala i Naw",
+                              "state_id": "9ba01c32-0745-4ff7-bfe0-b7314748bc73",
+                              "active": true
+                          },
+                          "city": {
+                              "id": "9ba1338d-e13b-4311-9915-6c70414bb0c7",
+                              "name": "Pul-e Khumrī",
+                              "state_id": "9ba01c32-08e3-4292-b1ca-a6cd605a9321",
+                              "active": true
+                          }
+                      },
+                      {
+                          "id": "9bc5be77-49aa-401c-994f-03a0edad2af2",
+                          "hmo_id": "9bbbac52-edd1-4aa7-8254-c29c14fa6249",
+                          "country_id": "9b9faee2-a19d-4d99-8756-2f4afcd8e79d",
+                          "state_id": "9ba01c32-0a3c-4faa-852a-491d640d989f",
+                          "lga_id": "9bb09584-41ce-48f7-8eaa-f21bc215410a",
+                          "city_id": "9ba1338d-c01a-42ec-9688-53444a5527da",
+                          "address": "No 1109 Allen Avenue Ikeja",
+                          "created_at": "2024-04-10T08:01:03.000000Z",
+                          "updated_at": "2024-04-10T08:01:03.000000Z",
+                          "hmo": {
+                              "id": "9bbbac52-edd1-4aa7-8254-c29c14fa6249",
+                              "health_provider": "Relaince",
+                              "type": "public",
+                              "contact_name": "Moyo",
+                              "contact_email_address": "moyo@reliance.com",
+                              "contact_phone_number": "09023456789",
+                              "status": "active",
+                              "description": null,
+                              "country_id": "9b9faee2-a2a4-4bcc-a758-53dfee793de6",
+                              "created_at": "2024-04-05T07:52:03.000000Z",
+                              "updated_at": "2024-04-05T13:49:10.000000Z",
+                              "deleted_at": null
+                          },
+                          "country": {
+                              "id": "9b9faee2-a19d-4d99-8756-2f4afcd8e79d",
+                              "name": "Algeria",
+                              "region_id": "9b9ecc53-4276-4e13-bda6-461083ecb376",
+                              "currency_name": "Algerian dinar",
+                              "currency_symbol": "DZD",
+                              "active": true,
+                              "flag": null
+                          },
+                          "state": {
+                              "id": "9ba01c32-0a3c-4faa-852a-491d640d989f",
+                              "name": "Balkh",
+                              "region_id": "9b9ecc53-48de-4e4d-8147-65cc79090128",
+                              "country_id": "9b9faee2-9ca2-41d0-962c-f7f60ef04bdb",
+                              "active": true
+                          },
+                          "lga": {
+                              "id": "9bb09584-41ce-48f7-8eaa-f21bc215410a",
+                              "name": "Fayzabad",
+                              "state_id": "9ba01c32-043d-44d3-a326-43212fc59b11",
+                              "active": true
+                          },
+                          "city": {
+                              "id": "9ba1338d-c01a-42ec-9688-53444a5527da",
+                              "name": "Rāghistān",
+                              "state_id": "9ba01c32-043d-44d3-a326-43212fc59b11",
+                              "active": true
+                          }
+                      },
+                      {
+                          "id": "9bc5be81-51ff-47a7-b574-acdbd9432bf2",
+                          "hmo_id": "9bbbac52-edd1-4aa7-8254-c29c14fa6249",
+                          "country_id": "9b9faee2-a19d-4d99-8756-2f4afcd8e79d",
+                          "state_id": "9ba01c32-0a3c-4faa-852a-491d640d989f",
+                          "lga_id": "9bb09584-41ce-48f7-8eaa-f21bc215410a",
+                          "city_id": "9ba1338d-c01a-42ec-9688-53444a5527da",
+                          "address": "No 1109 Allen Avenue Ikeja",
+                          "created_at": "2024-04-10T08:01:10.000000Z",
+                          "updated_at": "2024-04-10T08:01:10.000000Z",
+                          "hmo": {
+                              "id": "9bbbac52-edd1-4aa7-8254-c29c14fa6249",
+                              "health_provider": "Relaince",
+                              "type": "public",
+                              "contact_name": "Moyo",
+                              "contact_email_address": "moyo@reliance.com",
+                              "contact_phone_number": "09023456789",
+                              "status": "active",
+                              "description": null,
+                              "country_id": "9b9faee2-a2a4-4bcc-a758-53dfee793de6",
+                              "created_at": "2024-04-05T07:52:03.000000Z",
+                              "updated_at": "2024-04-05T13:49:10.000000Z",
+                              "deleted_at": null
+                          },
+                          "country": {
+                              "id": "9b9faee2-a19d-4d99-8756-2f4afcd8e79d",
+                              "name": "Algeria",
+                              "region_id": "9b9ecc53-4276-4e13-bda6-461083ecb376",
+                              "currency_name": "Algerian dinar",
+                              "currency_symbol": "DZD",
+                              "active": true,
+                              "flag": null
+                          },
+                          "state": {
+                              "id": "9ba01c32-0a3c-4faa-852a-491d640d989f",
+                              "name": "Balkh",
+                              "region_id": "9b9ecc53-48de-4e4d-8147-65cc79090128",
+                              "country_id": "9b9faee2-9ca2-41d0-962c-f7f60ef04bdb",
+                              "active": true
+                          },
+                          "lga": {
+                              "id": "9bb09584-41ce-48f7-8eaa-f21bc215410a",
+                              "name": "Fayzabad",
+                              "state_id": "9ba01c32-043d-44d3-a326-43212fc59b11",
+                              "active": true
+                          },
+                          "city": {
+                              "id": "9ba1338d-c01a-42ec-9688-53444a5527da",
+                              "name": "Rāghistān",
+                              "state_id": "9ba01c32-043d-44d3-a326-43212fc59b11",
+                              "active": true
+                          }
+                      },
+                      {
+                          "id": "9bc5be89-a247-4c3b-a579-1b7fbe01ab39",
+                          "hmo_id": "9bbbac52-edd1-4aa7-8254-c29c14fa6249",
+                          "country_id": "9b9faee2-a19d-4d99-8756-2f4afcd8e79d",
+                          "state_id": "9ba01c32-0a3c-4faa-852a-491d640d989f",
+                          "lga_id": "9bb09584-41ce-48f7-8eaa-f21bc215410a",
+                          "city_id": "9ba1338d-c01a-42ec-9688-53444a5527da",
+                          "address": "No 1109 Allen Avenue Ikeja",
+                          "created_at": "2024-04-10T08:01:15.000000Z",
+                          "updated_at": "2024-04-10T08:01:15.000000Z",
+                          "hmo": {
+                              "id": "9bbbac52-edd1-4aa7-8254-c29c14fa6249",
+                              "health_provider": "Relaince",
+                              "type": "public",
+                              "contact_name": "Moyo",
+                              "contact_email_address": "moyo@reliance.com",
+                              "contact_phone_number": "09023456789",
+                              "status": "active",
+                              "description": null,
+                              "country_id": "9b9faee2-a2a4-4bcc-a758-53dfee793de6",
+                              "created_at": "2024-04-05T07:52:03.000000Z",
+                              "updated_at": "2024-04-05T13:49:10.000000Z",
+                              "deleted_at": null
+                          },
+                          "country": {
+                              "id": "9b9faee2-a19d-4d99-8756-2f4afcd8e79d",
+                              "name": "Algeria",
+                              "region_id": "9b9ecc53-4276-4e13-bda6-461083ecb376",
+                              "currency_name": "Algerian dinar",
+                              "currency_symbol": "DZD",
+                              "active": true,
+                              "flag": null
+                          },
+                          "state": {
+                              "id": "9ba01c32-0a3c-4faa-852a-491d640d989f",
+                              "name": "Balkh",
+                              "region_id": "9b9ecc53-48de-4e4d-8147-65cc79090128",
+                              "country_id": "9b9faee2-9ca2-41d0-962c-f7f60ef04bdb",
+                              "active": true
+                          },
+                          "lga": {
+                              "id": "9bb09584-41ce-48f7-8eaa-f21bc215410a",
+                              "name": "Fayzabad",
+                              "state_id": "9ba01c32-043d-44d3-a326-43212fc59b11",
+                              "active": true
+                          },
+                          "city": {
+                              "id": "9ba1338d-c01a-42ec-9688-53444a5527da",
+                              "name": "Rāghistān",
+                              "state_id": "9ba01c32-043d-44d3-a326-43212fc59b11",
+                              "active": true
+                          }
+                      }
+                  ]
+              }
+          }

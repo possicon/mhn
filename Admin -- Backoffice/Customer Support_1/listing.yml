@@ -1,0 +1,293 @@
+info:
+  name: listing
+  type: http
+  seq: 1
+
+http:
+  method: GET
+  url: "{{base_url}}/admin/customer_support"
+  headers:
+    - name: Accept
+      value: application/json
+  auth:
+    type: bearer
+    token: 67|KhEx2m1UJvpc170dceaZNAJP3r5W58EogCwrqarKa471857c
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+examples:
+  - name: listing
+    request:
+      url: "{{base_url}}/admin/customer_support"
+      method: GET
+      headers:
+        - name: Accept
+          value: application/json
+    response:
+      status: 200
+      statusText: OK
+      headers:
+        - name: Date
+          value: Fri, 10 May 2024 21:56:29 GMT
+        - name: Server
+          value: Apache/2.4.54 (Win64) OpenSSL/1.1.1q mod_fcgid/2.3.10-dev
+        - name: X-Powered-By
+          value: PHP/8.2.16
+        - name: Cache-Control
+          value: no-cache, private
+        - name: X-RateLimit-Limit
+          value: "60"
+        - name: X-RateLimit-Remaining
+          value: "59"
+        - name: Access-Control-Allow-Origin
+          value: "*"
+        - name: Vary
+          value: Authorization
+        - name: Keep-Alive
+          value: timeout=5, max=100
+        - name: Connection
+          value: Keep-Alive
+        - name: Transfer-Encoding
+          value: chunked
+        - name: Content-Type
+          value: application/json
+      body:
+        type: json
+        data: |-
+          {
+              "success": true,
+              "code": 0,
+              "locale": "en",
+              "message": "OK",
+              "data": {
+                  "items": [
+                      {
+                          "id": "9bfe6a20-798f-4ae0-9d00-ab12ea77b5bd",
+                          "category": "product",
+                          "support_type": "bug",
+                          "resolution": "resolved",
+                          "status": "reported",
+                          "priority": "low",
+                          "reporter_id": "9bf47377-5a56-449b-82f7-e55004cf13fa",
+                          "assigned_to": {
+                              "id": "9bb85f6e-cf03-432d-bc41-a01929212987",
+                              "first_name": "Goodness",
+                              "middle_name": null,
+                              "last_name": "Ohams",
+                              "gender": "female",
+                              "status": "Active",
+                              "phone": "09123456789",
+                              "email": "ikorodu@example.com",
+                              "username": null,
+                              "email_verified_at": null,
+                              "type": "owner",
+                              "country_id": "9b9faee2-b750-4b8f-98d7-7b993cecc21a",
+                              "branch_id": null,
+                              "organization_id": "1a1a1a1a-1a1a-1a1a-1a1a-1a1a1a1a1a14",
+                              "company_id": null,
+                              "reset_token": "713745",
+                              "token_time": "2024-04-11 11:43:38",
+                              "created_at": "2024-04-03T16:29:33.000000Z",
+                              "updated_at": "2024-04-11T10:43:38.000000Z",
+                              "deleted_at": null
+                          },
+                          "escalate_to": "9bc6382c-bb73-4c7d-9409-677fe560485d",
+                          "organization_id": "9bc5eb78-74d2-45f4-a677-05d07dca6a63",
+                          "created_at": "2024-05-08T12:07:25.000000Z",
+                          "updated_at": "2024-05-08T12:14:08.000000Z",
+                          "reporter": {
+                              "id": "9bf47377-5a56-449b-82f7-e55004cf13fa",
+                              "first_name": "COO",
+                              "middle_name": null,
+                              "last_name": null,
+                              "gender": null,
+                              "status": "Active",
+                              "phone": "09123458028",
+                              "email": "prince@yahoo.com",
+                              "username": null,
+                              "email_verified_at": null,
+                              "type": "owner",
+                              "country_id": null,
+                              "branch_id": null,
+                              "organization_id": null,
+                              "company_id": null,
+                              "reset_token": null,
+                              "token_time": null,
+                              "created_at": "2024-05-03T13:15:15.000000Z",
+                              "updated_at": "2024-05-03T13:15:15.000000Z",
+                              "deleted_at": null,
+                              "roles": [
+                                  {
+                                      "id": 7,
+                                      "name": "company",
+                                      "status": "active",
+                                      "guard_name": "user",
+                                      "created_at": "2024-05-03T13:15:15.000000Z",
+                                      "updated_at": "2024-05-03T13:15:15.000000Z",
+                                      "deleted_at": null,
+                                      "pivot": {
+                                          "model_type": "App\\Models\\User",
+                                          "model_uuid": "9bf47377-5a56-449b-82f7-e55004cf13fa",
+                                          "role_id": 7
+                                      }
+                                  }
+                              ]
+                          },
+                          "organization": {
+                              "id": "9bc5eb78-74d2-45f4-a677-05d07dca6a63",
+                              "name": "MHN",
+                              "domain": "pinnacles",
+                              "incoming_server": "https://google.com",
+                              "outgoing_server": "https://mhn.net",
+                              "email": "pinnacles@pinnacle.com",
+                              "invited": false,
+                              "country_id": "9b9faee3-6aaa-4050-bd6c-98a43e674250",
+                              "organization_type_id": 1,
+                              "region_id": "9b9ecc53-4276-4e13-bda6-461083ecb376",
+                              "interested_plan_id": "9bd21ab6-24de-4a8f-91da-a16d95939fd3",
+                              "plan_id": "9bd21ab6-24de-4a8f-91da-a16d95939fd3",
+                              "plan_frequency": "monthly",
+                              "description": null,
+                              "landmark": null,
+                              "status": "Org Onboarded",
+                              "step": "1",
+                              "active": true,
+                              "address": "Glover road, Ikoyis",
+                              "phone": "12345678",
+                              "state_id": "9ba01c32-4a17-4952-8f15-b4a212027e04",
+                              "city_id": "9ba1338d-f1ca-487b-ae34-471ddc6a7bc2",
+                              "grade_id": 1,
+                              "token_time": null,
+                              "domain_email": ""
+                          },
+                          "escalated_to": {
+                              "id": "9bc6382c-bb73-4c7d-9409-677fe560485d",
+                              "first_name": "General",
+                              "middle_name": "Prince",
+                              "last_name": "Emmanuel",
+                              "gender": "male",
+                              "status": "Active",
+                              "phone": "0802323232323",
+                              "email": "contactus@mhn.ng",
+                              "username": null,
+                              "email_verified_at": null,
+                              "type": "owner",
+                              "country_id": null,
+                              "branch_id": null,
+                              "organization_id": "9bc5eb78-74d2-45f4-a677-05d07dca6a63",
+                              "company_id": null,
+                              "reset_token": null,
+                              "token_time": null,
+                              "created_at": "2024-04-10T13:41:22.000000Z",
+                              "updated_at": "2024-04-11T19:11:50.000000Z",
+                              "deleted_at": null
+                          }
+                      },
+                      {
+                          "id": "9bfe6949-d88e-48ee-bc00-c17ee16d4fdf",
+                          "category": "product",
+                          "support_type": "bug",
+                          "resolution": "resolved",
+                          "status": "reported",
+                          "priority": "low",
+                          "reporter_id": "9bf47377-5a56-449b-82f7-e55004cf13fa",
+                          "assigned_to": {
+                              "id": "9bb85f6e-cf03-432d-bc41-a01929212987",
+                              "first_name": "Goodness",
+                              "middle_name": null,
+                              "last_name": "Ohams",
+                              "gender": "female",
+                              "status": "Active",
+                              "phone": "09123456789",
+                              "email": "ikorodu@example.com",
+                              "username": null,
+                              "email_verified_at": null,
+                              "type": "owner",
+                              "country_id": "9b9faee2-b750-4b8f-98d7-7b993cecc21a",
+                              "branch_id": null,
+                              "organization_id": "1a1a1a1a-1a1a-1a1a-1a1a-1a1a1a1a1a14",
+                              "company_id": null,
+                              "reset_token": "713745",
+                              "token_time": "2024-04-11 11:43:38",
+                              "created_at": "2024-04-03T16:29:33.000000Z",
+                              "updated_at": "2024-04-11T10:43:38.000000Z",
+                              "deleted_at": null
+                          },
+                          "escalate_to": null,
+                          "organization_id": "9bc5eb78-74d2-45f4-a677-05d07dca6a63",
+                          "created_at": "2024-05-08T12:05:04.000000Z",
+                          "updated_at": "2024-05-08T12:05:04.000000Z",
+                          "reporter": {
+                              "id": "9bf47377-5a56-449b-82f7-e55004cf13fa",
+                              "first_name": "COO",
+                              "middle_name": null,
+                              "last_name": null,
+                              "gender": null,
+                              "status": "Active",
+                              "phone": "09123458028",
+                              "email": "prince@yahoo.com",
+                              "username": null,
+                              "email_verified_at": null,
+                              "type": "owner",
+                              "country_id": null,
+                              "branch_id": null,
+                              "organization_id": null,
+                              "company_id": null,
+                              "reset_token": null,
+                              "token_time": null,
+                              "created_at": "2024-05-03T13:15:15.000000Z",
+                              "updated_at": "2024-05-03T13:15:15.000000Z",
+                              "deleted_at": null,
+                              "roles": [
+                                  {
+                                      "id": 7,
+                                      "name": "company",
+                                      "status": "active",
+                                      "guard_name": "user",
+                                      "created_at": "2024-05-03T13:15:15.000000Z",
+                                      "updated_at": "2024-05-03T13:15:15.000000Z",
+                                      "deleted_at": null,
+                                      "pivot": {
+                                          "model_type": "App\\Models\\User",
+                                          "model_uuid": "9bf47377-5a56-449b-82f7-e55004cf13fa",
+                                          "role_id": 7
+                                      }
+                                  }
+                              ]
+                          },
+                          "organization": {
+                              "id": "9bc5eb78-74d2-45f4-a677-05d07dca6a63",
+                              "name": "MHN",
+                              "domain": "pinnacles",
+                              "incoming_server": "https://google.com",
+                              "outgoing_server": "https://mhn.net",
+                              "email": "pinnacles@pinnacle.com",
+                              "invited": false,
+                              "country_id": "9b9faee3-6aaa-4050-bd6c-98a43e674250",
+                              "organization_type_id": 1,
+                              "region_id": "9b9ecc53-4276-4e13-bda6-461083ecb376",
+                              "interested_plan_id": "9bd21ab6-24de-4a8f-91da-a16d95939fd3",
+                              "plan_id": "9bd21ab6-24de-4a8f-91da-a16d95939fd3",
+                              "plan_frequency": "monthly",
+                              "description": null,
+                              "landmark": null,
+                              "status": "Org Onboarded",
+                              "step": "1",
+                              "active": true,
+                              "address": "Glover road, Ikoyis",
+                              "phone": "12345678",
+                              "state_id": "9ba01c32-4a17-4952-8f15-b4a212027e04",
+                              "city_id": "9ba1338d-f1ca-487b-ae34-471ddc6a7bc2",
+                              "grade_id": 1,
+                              "token_time": null,
+                              "domain_email": ""
+                          },
+                          "escalated_to": null
+                      }
+                  ]
+              }
+          }

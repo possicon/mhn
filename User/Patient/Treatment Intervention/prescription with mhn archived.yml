@@ -1,0 +1,113 @@
+info:
+  name: prescription with mhn archived
+  type: http
+  seq: 12
+
+http:
+  method: POST
+  url: "{{base_url}}/user/patient/treatment_intervention"
+  headers:
+    - name: Accept
+      value: application/json
+  body:
+    type: json
+    data: "{\r
+
+      \    \"treatment_plan\":\"treatment and refer\", //, treatment only , treatment and refer\r
+
+      \    \"patient_id\":\"9c111152-abe1-4490-ab04-c066445133a7\",\r
+
+      \    \"appointment_id\":\"9d166f7e-2b46-492e-ae7b-58390a55e7d0\",\r
+
+      \    \"followup\":0, //required if treatment is treatment only or treatment and refer\r
+
+      \    \"prescription\":1, //required if treatment is treatment only or treatment and refer\r
+
+      \    \"programs\":0, //required if treatment is treatment only or treatment and refer\r
+
+      \    \"admission\":0, //required if treatment is treatment only or treatment and refer\r
+
+      \    \"procedures\":0,\r
+
+      \    \"pharmacy\":\"mhn network\",\r
+
+      \    \"mhn_prescription\":\"9d1e8559-091d-4a18-8b4b-bb7d281e68f5\"\r
+
+      }"
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+examples:
+  - name: prescription with mhn
+    request:
+      url: "{{base_url}}/user/patient/treatment_intervention"
+      method: POST
+      headers:
+        - name: Accept
+          value: application/json
+      body:
+        type: json
+        data: "{\r
+
+          \    \"treatment_plan\":\"treatment and refer\", //, treatment only , treatment and refer\r
+
+          \    \"patient_id\":\"9c111152-abe1-4490-ab04-c066445133a7\",\r
+
+          \    \"followup\":0, //required if treatment is treatment only or treatment and refer\r
+
+          \    \"prescription\":1, //required if treatment is treatment only or treatment and refer\r
+
+          \    \"programs\":0, //required if treatment is treatment only or treatment and refer\r
+
+          \    \"admission\":0, //required if treatment is treatment only or treatment and refer\r
+
+          \    \"procedures\":0,\r
+
+          \    \"pharmacy\":\"mhn network\",\r
+
+          \    \"mhn_prescription\":\"enter prescription\"\r
+
+          }"
+    response:
+      status: 201
+      statusText: Created
+      headers:
+        - name: Date
+          value: Wed, 12 Jun 2024 09:40:01 GMT
+        - name: Server
+          value: Apache/2.4.54 (Win64) OpenSSL/1.1.1q mod_fcgid/2.3.10-dev
+        - name: X-Powered-By
+          value: PHP/8.2.16
+        - name: Cache-Control
+          value: no-cache, private
+        - name: X-RateLimit-Limit
+          value: "60"
+        - name: X-RateLimit-Remaining
+          value: "58"
+        - name: Access-Control-Allow-Origin
+          value: "*"
+        - name: Vary
+          value: Authorization
+        - name: Keep-Alive
+          value: timeout=5, max=100
+        - name: Connection
+          value: Keep-Alive
+        - name: Transfer-Encoding
+          value: chunked
+        - name: Content-Type
+          value: application/json
+      body:
+        type: json
+        data: |-
+          {
+              "success": true,
+              "code": 0,
+              "locale": "en",
+              "message": "You have successfully saved",
+              "data": null
+          }

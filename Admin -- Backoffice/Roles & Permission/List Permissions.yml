@@ -1,0 +1,83 @@
+info:
+  name: List Permissions
+  type: http
+  seq: 2
+
+http:
+  method: GET
+  url: "{{base_url}}/admin/permissions"
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+examples:
+  - name: List Permissions
+    request:
+      url: "{{base_url}}/admin/permissions"
+      method: GET
+    response:
+      status: 200
+      statusText: OK
+      headers:
+        - name: Server
+          value: nginx/1.24.0 (Ubuntu)
+        - name: Content-Type
+          value: application/json
+        - name: Transfer-Encoding
+          value: chunked
+        - name: Connection
+          value: keep-alive
+        - name: Cache-Control
+          value: no-cache, private
+        - name: Date
+          value: Tue, 24 Mar 2026 06:47:36 GMT
+        - name: X-RateLimit-Limit
+          value: "60"
+        - name: X-RateLimit-Remaining
+          value: "58"
+        - name: Vary
+          value: Origin
+        - name: X-Frame-Options
+          value: SAMEORIGIN
+        - name: X-XSS-Protection
+          value: 1; mode=block
+        - name: X-Content-Type-Options
+          value: nosniff
+      body:
+        type: json
+        data: |-
+          {
+              "success": true,
+              "code": 0,
+              "locale": "en",
+              "message": "Permissions fetched successfully",
+              "data": {
+                  "permissions": [
+                      {
+                          "id": 3,
+                          "name": "Delete Write",
+                          "users": null,
+                          "description": "Et error consequatur sit earum qui rem commodi et exercitationem. Praesentium laboriosam quibusdam consequatur voluptas quos laudantium. Voluptatem eius sed dolor vel enim ut magnam aperiam. Est soluta nobis."
+                      },
+                      {
+                          "id": 2,
+                          "name": "Delete admin",
+                          "users": null,
+                          "description": null
+                      },
+                      {
+                          "id": 1,
+                          "name": "Create",
+                          "users": null,
+                          "description": null
+                      }
+                  ],
+                  "take": 20,
+                  "page": 1,
+                  "total": 3
+              }
+          }

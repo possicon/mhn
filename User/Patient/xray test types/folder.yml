@@ -1,0 +1,7 @@
+info:
+  name: xray test types
+  type: folder
+  seq: 33
+
+request:
+  auth: inherit

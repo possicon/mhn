@@ -1,0 +1,104 @@
+info:
+  name: List
+  type: http
+  seq: 2
+
+http:
+  method: GET
+  url: "{{base_url}}/user/patients/:id/pregnancy?search=weekly&filter=weekly"
+  headers:
+    - name: Accept
+      value: application/json
+  params:
+    - name: search
+      value: weekly
+      type: query
+    - name: filter
+      value: weekly
+      type: query
+    - name: id
+      value: 9c22ec62-cfa4-476c-8921-a924a32f20d7
+      type: path
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+examples:
+  - name: List
+    request:
+      url: "{{base_url}}/user/patients/:id/pregnancy"
+      method: GET
+      headers:
+        - name: Accept
+          value: application/json
+      params:
+        - name: id
+          value: 9c22ec62-cfa4-476c-8921-a924a32f20d7
+          type: path
+    response:
+      status: 200
+      statusText: OK
+      headers:
+        - name: Date
+          value: Thu, 27 Jun 2024 12:17:18 GMT
+        - name: Server
+          value: Apache/2.4.54 (Win64) OpenSSL/1.1.1q mod_fcgid/2.3.10-dev
+        - name: X-Powered-By
+          value: PHP/8.2.16
+        - name: Cache-Control
+          value: no-cache, private
+        - name: X-RateLimit-Limit
+          value: "60"
+        - name: X-RateLimit-Remaining
+          value: "58"
+        - name: Access-Control-Allow-Origin
+          value: "*"
+        - name: Vary
+          value: Authorization
+        - name: Keep-Alive
+          value: timeout=5, max=100
+        - name: Connection
+          value: Keep-Alive
+        - name: Transfer-Encoding
+          value: chunked
+        - name: Content-Type
+          value: application/json
+      body:
+        type: json
+        data: |-
+          {
+              "success": true,
+              "code": 0,
+              "locale": "en",
+              "message": "Success",
+              "data": {
+                  "items": [
+                      {
+                          "id": "9c6302a5-22e8-40f3-bebc-61f546b505fd",
+                          "date_of_last_menstrual_period": "2022-10-20",
+                          "fetal_heart_rate": "20",
+                          "frequency_of_menstrual_period": "weekly",
+                          "height_measurement": "65",
+                          "patient_id": "9c22ec62-cfa4-476c-8921-a924a32f20d7",
+                          "visit_date": "2024-06-27 00:00:00",
+                          "created_at": "2024-06-27T12:16:40.000000Z",
+                          "updated_at": "2024-06-27T12:16:40.000000Z"
+                      },
+                      {
+                          "id": "9c355ed4-384f-44b2-a71e-e137da67e4ed",
+                          "date_of_last_menstrual_period": "2022-10-20",
+                          "fetal_heart_rate": "20",
+                          "frequency_of_menstrual_period": "weekly",
+                          "height_measurement": "65",
+                          "patient_id": "9c22ec62-cfa4-476c-8921-a924a32f20d7",
+                          "visit_date": "2024-06-04 00:00:00",
+                          "created_at": "2024-06-04T19:46:22.000000Z",
+                          "updated_at": "2024-06-04T19:46:22.000000Z"
+                      }
+                  ]
+              }
+          }

@@ -1,0 +1,113 @@
+info:
+  name: labor and delivery course
+  type: http
+  seq: 16
+
+http:
+  method: POST
+  url: "{{base_url}}/user/patient/labor_and_delivery_course"
+  headers:
+    - name: Accept
+      value: application/json
+  body:
+    type: json
+    data: "{\r
+
+      \    \"patient_procedure_id\":\"9c5b95a4-cf9e-4760-bce3-e3594f34ed64\",\r
+
+      \    \"onset_of_labor\":\"spontaneous\",\r
+
+      \    \"duration_of_labor\":\"first stage\",\r
+
+      \    \"pain_relief_methods_used\":[\"epidural\",\"spinal anesthesia\"],\r
+
+      \    \"interventions_used\":[\"forceps\",\"other\"]\r
+
+      }"
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+examples:
+  - name: labor and delivery course
+    request:
+      url: "{{base_url}}/user/patient/labor_and_delivery_course"
+      method: POST
+      headers:
+        - name: Accept
+          value: application/json
+      body:
+        type: json
+        data: "{\r
+
+          \    \"patient_procedure_id\":\"9c5b95a4-cf9e-4760-bce3-e3594f34ed64\",\r
+
+          \    \"onset_of_labor\":\"spontaneous\",\r
+
+          \    \"duration_of_labor\":\"first stage\",\r
+
+          \    \"pain_relief_methods_used\":[\"epidural\",\"spinal anesthesia\"],\r
+
+          \    \"interventions_used\":[\"forceps\",\"other\"]\r
+
+          }"
+    response:
+      status: 201
+      statusText: Created
+      headers:
+        - name: Date
+          value: Wed, 26 Jun 2024 19:07:39 GMT
+        - name: Server
+          value: Apache/2.4.54 (Win64) OpenSSL/1.1.1q mod_fcgid/2.3.10-dev
+        - name: X-Powered-By
+          value: PHP/8.2.16
+        - name: Cache-Control
+          value: no-cache, private
+        - name: X-RateLimit-Limit
+          value: "60"
+        - name: X-RateLimit-Remaining
+          value: "59"
+        - name: Access-Control-Allow-Origin
+          value: "*"
+        - name: Vary
+          value: Authorization
+        - name: Keep-Alive
+          value: timeout=5, max=100
+        - name: Connection
+          value: Keep-Alive
+        - name: Transfer-Encoding
+          value: chunked
+        - name: Content-Type
+          value: application/json
+      body:
+        type: json
+        data: |-
+          {
+              "success": true,
+              "code": 0,
+              "locale": "en",
+              "message": "success",
+              "data": {
+                  "item": {
+                      "taken_by": "9bc6382c-bb73-4c7d-9409-677fe560485d",
+                      "patient_procedure_id": "9c5b95a4-cf9e-4760-bce3-e3594f34ed64",
+                      "onset_of_labor": "spontaneous",
+                      "duration_of_labor": "first stage",
+                      "pain_relief_methods_used": [
+                          "epidural",
+                          "spinal anesthesia"
+                      ],
+                      "interventions_used": [
+                          "forceps",
+                          "other"
+                      ],
+                      "id": "9c6192a4-459e-4044-82de-ea754b3a7038",
+                      "updated_at": "2024-06-26T19:07:40.000000Z",
+                      "created_at": "2024-06-26T19:07:40.000000Z"
+                  }
+              }
+          }

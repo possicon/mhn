@@ -1,0 +1,33 @@
+info:
+  name: download sample
+  type: http
+  seq: 7
+
+http:
+  method: POST
+  url: "{{base_url}}/user/organization/sample_download"
+  headers:
+    - name: Accept
+      value: application/json
+  body:
+    type: text
+    data: "{\r
+
+      \    \"name\":\"urine\",\r
+
+      \    \"body_part\":\"leg\",\r
+
+      \    \"vials\":[\"9d7b0ed0-493a-4c7a-84de-5e4e6698c464\", \"9d7b0ed0-4b54-4410-8308-84219f5f8168\"],\r
+
+      \    \"status\":\"active\"\r
+
+      }"
+  auth:
+    type: bearer
+    token: 78|IJJwsPNGwfjrHdMvXfMgKzfYaTOw56YXrF1VLHE8b494a4af
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

@@ -1,0 +1,107 @@
+info:
+  name: update
+  type: http
+  seq: 3
+
+http:
+  method: PUT
+  url: "{{base_url}}/user/pregnancy/:pregnancy"
+  headers:
+    - name: Accept
+      value: application/json
+  params:
+    - name: pregnancy
+      value: 9c7d0125-45d7-4c3a-be24-f4e0a49f5bb2
+      type: path
+  body:
+    type: json
+    data: "{\r
+
+      \    \"date_of_last_menstrual_period\":\"2024-10-20\",\r
+
+      \    \"fetal_heart_rate\":\"25\",\r
+
+      \    \"fetal_movement\":\"none\",\r
+
+      \    \"height_measurement\":\"65\",\r
+
+      \    \"frequency_of_menstrual_period\":\"weekly\",\r
+
+      \    \"patient_id\":\"9c22ec62-cfa4-476c-8921-a924a32f20d7\"\r
+
+      }"
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+examples:
+  - name: New Request
+    request:
+      url: "{{base_url}}/user/pregnancy/:pregnancy"
+      method: PUT
+      headers:
+        - name: Accept
+          value: application/json
+      params:
+        - name: pregnancy
+          value: 9c7d0125-45d7-4c3a-be24-f4e0a49f5bb2
+          type: path
+      body:
+        type: json
+        data: "{\r
+
+          \    \"date_of_last_menstrual_period\":\"2024-10-20\",\r
+
+          \    \"fetal_heart_rate\":\"25\",\r
+
+          \    \"fetal_movement\":\"none\",\r
+
+          \    \"height_measurement\":\"65\",\r
+
+          \    \"frequency_of_menstrual_period\":\"weekly\",\r
+
+          \    \"patient_id\":\"9c22ec62-cfa4-476c-8921-a924a32f20d7\"\r
+
+          }"
+    response:
+      status: 200
+      statusText: OK
+      headers:
+        - name: Date
+          value: Sat, 21 Dec 2024 14:36:12 GMT
+        - name: Server
+          value: Apache/2.4.54 (Win64) OpenSSL/1.1.1d mod_fcgid/2.3.10-dev
+        - name: X-Powered-By
+          value: PHP/8.2.17
+        - name: Cache-Control
+          value: no-cache, private
+        - name: X-RateLimit-Limit
+          value: "60"
+        - name: X-RateLimit-Remaining
+          value: "58"
+        - name: Access-Control-Allow-Origin
+          value: "*"
+        - name: Vary
+          value: Authorization
+        - name: Keep-Alive
+          value: timeout=5, max=100
+        - name: Connection
+          value: Keep-Alive
+        - name: Transfer-Encoding
+          value: chunked
+        - name: Content-Type
+          value: application/json
+      body:
+        type: json
+        data: |-
+          {
+              "success": true,
+              "code": 0,
+              "locale": "en",
+              "message": "Successfully updated",
+              "data": null
+          }

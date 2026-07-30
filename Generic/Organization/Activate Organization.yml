@@ -1,0 +1,111 @@
+info:
+  name: Activate Organization
+  type: http
+  seq: 3
+
+http:
+  method: GET
+  url: "{{base_url}}/generic/organization/activate-organization?email=possicon%40gmail.com&expires=1713633571&org=9bd69b2b-2ebe-4e48-8cea-e24e2d42c743&signature=571f912db15d049958852df649ce5d89a1f0e2becc1666a9b15ff1fcbc38354e"
+  params:
+    - name: email
+      value: possicon%40gmail.com
+      type: query
+    - name: expires
+      value: "1713633571"
+      type: query
+    - name: org
+      value: 9bd69b2b-2ebe-4e48-8cea-e24e2d42c743
+      type: query
+    - name: signature
+      value: 571f912db15d049958852df649ce5d89a1f0e2becc1666a9b15ff1fcbc38354e
+      type: query
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+examples:
+  - name: Activate Organization
+    request:
+      url: "{{base_url}}/generic/organization/activate-organization?email=moyo%40mhn.ng&expires=1713457471&org=9bd2846c-d947-4894-8042-699fe026fdc6&signature=ddff5e8b5dd3d1a869b5cf90eea84c2171c9948fa2f4c3d9a12b633a28913208"
+      method: POST
+      params:
+        - name: email
+          value: moyo%40mhn.ng
+          type: query
+        - name: expires
+          value: "1713457471"
+          type: query
+        - name: org
+          value: 9bd2846c-d947-4894-8042-699fe026fdc6
+          type: query
+        - name: signature
+          value: ddff5e8b5dd3d1a869b5cf90eea84c2171c9948fa2f4c3d9a12b633a28913208
+          type: query
+    response:
+      status: 200
+      statusText: OK
+      headers:
+        - name: Date
+          value: Tue, 16 Apr 2024 16:29:17 GMT
+        - name: Server
+          value: Apache/2.4.54 (Win64) OpenSSL/1.1.1q mod_fcgid/2.3.10-dev
+        - name: X-Powered-By
+          value: PHP/8.2.16
+        - name: Cache-Control
+          value: no-cache, private
+        - name: X-RateLimit-Limit
+          value: "60"
+        - name: X-RateLimit-Remaining
+          value: "59"
+        - name: Access-Control-Allow-Origin
+          value: "*"
+        - name: Keep-Alive
+          value: timeout=5, max=100
+        - name: Connection
+          value: Keep-Alive
+        - name: Transfer-Encoding
+          value: chunked
+        - name: Content-Type
+          value: application/json
+      body:
+        type: json
+        data: |-
+          {
+              "success": true,
+              "code": 0,
+              "locale": "en",
+              "message": "Activation successful.",
+              "data": {
+                  "organization": {
+                      "id": "9bd2846c-d947-4894-8042-699fe026fdc6",
+                      "name": "MHN",
+                      "domain": null,
+                      "incoming_server": null,
+                      "outgoing_server": null,
+                      "email": "moyo@mhn.ng",
+                      "invited": false,
+                      "country_id": "9b9faee2-c7c5-4f3f-951a-1ca8d5befc24",
+                      "organization_type_id": null,
+                      "region_id": null,
+                      "interested_plan_id": "9bd21ab6-24de-4a8f-91da-a16d95939fd3",
+                      "plan_id": null,
+                      "plan_frequency": "monthly",
+                      "description": null,
+                      "landmark": null,
+                      "status": "Account Created",
+                      "step": "0",
+                      "active": true,
+                      "address": null,
+                      "phone": null,
+                      "state_id": null,
+                      "city_id": null,
+                      "grade_id": null,
+                      "token": null,
+                      "token_time": null
+                  }
+              }
+          }

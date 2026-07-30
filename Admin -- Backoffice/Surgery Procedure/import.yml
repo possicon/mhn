@@ -1,0 +1,99 @@
+info:
+  name: import
+  type: http
+  seq: 4
+
+http:
+  method: POST
+  url: "{{base_url}}/admin/surgeryProcedure/import"
+  headers:
+    - name: Accept
+      value: application/json
+    - name: Content-Type
+      value: application/json
+  body:
+    type: multipart-form
+    data:
+      - name: file
+        type: file
+        value:
+          - vJseR6746/surgery_procedures_sample.csv
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+examples:
+  - name: import
+    request:
+      url: "{{base_url}}/admin/surgeryProcedure/import"
+      method: POST
+      headers:
+        - name: Accept
+          value: application/json
+        - name: Content-Type
+          value: application/json
+      body:
+        type: multipart-form
+        data:
+          - name: file
+            type: file
+            value:
+              - vJseR6746/surgery_procedures_sample.csv
+    response:
+      status: 200
+      statusText: OK
+      headers:
+        - name: Date
+          value: Tue, 23 Dec 2025 08:25:06 GMT
+        - name: Server
+          value: Apache/2.4.54 (Win64) OpenSSL/1.1.1d mod_fcgid/2.3.10-dev
+        - name: X-Powered-By
+          value: PHP/8.2.17
+        - name: Cache-Control
+          value: no-cache, private
+        - name: X-RateLimit-Limit
+          value: "60"
+        - name: X-RateLimit-Remaining
+          value: "59"
+        - name: Access-Control-Allow-Origin
+          value: "*"
+        - name: Vary
+          value: Authorization
+        - name: Keep-Alive
+          value: timeout=5, max=100
+        - name: Connection
+          value: Keep-Alive
+        - name: Transfer-Encoding
+          value: chunked
+        - name: Content-Type
+          value: application/json
+      body:
+        type: json
+        data: |-
+          {
+              "success": true,
+              "code": 0,
+              "locale": "en",
+              "message": "CSV is being processed...",
+              "data": {
+                  "batch": {
+                      "item": {
+                          "id": "a0a90734-60ba-4a01-870d-4109e9397d9a",
+                          "name": "",
+                          "totalJobs": 0,
+                          "pendingJobs": 0,
+                          "processedJobs": 0,
+                          "progress": 0,
+                          "failedJobs": 0,
+                          "options": [],
+                          "createdAt": "2025-12-23T08:25:07.000000Z",
+                          "cancelledAt": null,
+                          "finishedAt": null
+                      }
+                  }
+              }
+          }

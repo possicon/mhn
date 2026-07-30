@@ -1,0 +1,7 @@
+info:
+  name: ID & Licences
+  type: folder
+  seq: 3
+
+request:
+  auth: inherit

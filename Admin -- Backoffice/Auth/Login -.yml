@@ -1,0 +1,43 @@
+info:
+  name: Login -
+  type: http
+  seq: 1
+
+http:
+  method: POST
+  url: "{{base_url}}/admin/auth/login"
+  headers:
+    - name: Accept
+      value: application/json
+    - name: Content-Type
+      value: application/json
+      disabled: true
+  body:
+    type: json
+    data: "{\r
+
+      \    \"email\": \"admin@mhn.com\",\r
+
+      \    // \"username\": \"\", // If user has username set, he can log in with it.\r
+
+      \    \"password\":\"computer\"\r
+
+      }"
+  auth: inherit
+
+runtime:
+  scripts:
+    - type: after-response
+      code: |-
+        const status = res.statusText
+        if (status === "OK") {
+            const token = res.getBody().data.token
+            console.log(token)
+            pm.collectionVariables.set("adminToken", token)
+        }
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

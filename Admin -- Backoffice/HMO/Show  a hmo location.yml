@@ -1,0 +1,79 @@
+info:
+  name: Show  a hmo location
+  type: http
+  seq: 5
+
+http:
+  method: GET
+  url: "{{base_url}}/admin/hmo-location/:hmo-location-id"
+  params:
+    - name: hmo-location-id
+      value: 9bbbb7fc-24e9-4911-8b5a-d7591ce9fe02
+      type: path
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+examples:
+  - name: Show  a hmo location
+    request:
+      url: "{{base_url}}/admin/hmo-location/:hmo-location-id"
+      method: GET
+      params:
+        - name: hmo-location-id
+          value: 9bbbb7fc-24e9-4911-8b5a-d7591ce9fe02
+          type: path
+    response:
+      status: 200
+      statusText: OK
+      headers:
+        - name: Date
+          value: Fri, 12 Apr 2024 09:36:51 GMT
+        - name: Server
+          value: Apache/2.4.54 (Win64) OpenSSL/1.1.1q mod_fcgid/2.3.10-dev
+        - name: X-Powered-By
+          value: PHP/8.2.16
+        - name: Cache-Control
+          value: no-cache, private
+        - name: X-RateLimit-Limit
+          value: "60"
+        - name: X-RateLimit-Remaining
+          value: "58"
+        - name: Access-Control-Allow-Origin
+          value: "*"
+        - name: Vary
+          value: Authorization
+        - name: Keep-Alive
+          value: timeout=5, max=100
+        - name: Connection
+          value: Keep-Alive
+        - name: Transfer-Encoding
+          value: chunked
+        - name: Content-Type
+          value: application/json
+      body:
+        type: json
+        data: |-
+          {
+              "success": true,
+              "code": 0,
+              "locale": "en",
+              "message": "Fetched hmo  location successfully",
+              "data": {
+                  "hmo-location": {
+                      "id": "9bbbb7fc-24e9-4911-8b5a-d7591ce9fe02",
+                      "hmo_id": "9bbbac52-edd1-4aa7-8254-c29c14fa6249",
+                      "country_id": "9b9faee2-b64b-4aa1-b7ba-ab75b4b25b5c",
+                      "state_id": "9ba01c32-0c65-4e71-9d2e-37dbb2105b19",
+                      "lga_id": "9bb09584-59f0-4d89-ab49-7ce3fd30b27a",
+                      "city_id": "9ba1338d-e13b-4311-9915-6c70414bb0c7",
+                      "address": "Mangoro Agege",
+                      "created_at": "2024-04-05T08:24:39.000000Z",
+                      "updated_at": "2024-04-05T09:28:42.000000Z"
+                  }
+              }
+          }

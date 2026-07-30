@@ -1,0 +1,77 @@
+info:
+  name: Toggle Status
+  type: http
+  seq: 6
+
+http:
+  method: POST
+  url: "{{base_url}}/admin/state/:stateId/toggleStatus"
+  params:
+    - name: stateId
+      value: 9ba01c32-043d-44d3-a326-43212fc59b11
+      type: path
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+examples:
+  - name: Toggle Status
+    request:
+      url: "{{base_url}}/admin/state/:stateId/toggleStatus"
+      method: POST
+      params:
+        - name: stateId
+          value: 1a1a1a1a-1a1a-1a1a-1a1a-1a1a1a1a1a11
+          type: path
+    response:
+      status: 200
+      statusText: OK
+      headers:
+        - name: Date
+          value: Thu, 21 Mar 2024 11:27:07 GMT
+        - name: Server
+          value: Apache/2.4.54 (Win64) OpenSSL/1.1.1q PHP/8.1.10
+        - name: Vary
+          value: Authorization
+        - name: X-Powered-By
+          value: PHP/8.1.10
+        - name: Cache-Control
+          value: no-cache, private
+        - name: X-RateLimit-Limit
+          value: "60"
+        - name: X-RateLimit-Remaining
+          value: "58"
+        - name: Access-Control-Allow-Origin
+          value: "*"
+        - name: Keep-Alive
+          value: timeout=5, max=99
+        - name: Connection
+          value: Keep-Alive
+        - name: Transfer-Encoding
+          value: chunked
+        - name: Content-Type
+          value: application/json
+      body:
+        type: json
+        data: |-
+          {
+              "success": true,
+              "code": 0,
+              "locale": "en",
+              "message": "State active successfully.",
+              "data": {
+                  "state": {
+                      "id": "1a1a1a1a-1a1a-1a1a-1a1a-1a1a1a1a1a11",
+                      "name": "Lagos",
+                      "region_id": "1a1a1a1a-1a1a-1a1a-1a1a-1a1a1a1a1a11",
+                      "country_id": "1a1a1a1a-1a1a-1a1a-1a1a-1a1a1a1a1a11",
+                      "active": true,
+                      "created_at": "2024-03-21T10:51:40.000000Z",
+                      "updated_at": "2024-03-21T11:27:08.000000Z"
+                  }
+              }
+          }

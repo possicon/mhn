@@ -1,0 +1,76 @@
+info:
+  name: ToggleStatus
+  type: http
+  seq: 14
+
+http:
+  method: POST
+  url: "{{base_url}}/admin/roles/:role/toggleStatus"
+  params:
+    - name: role
+      value: "7"
+      type: path
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+examples:
+  - name: ToggleStatus
+    request:
+      url: "{{base_url}}/admin/roles/:role/toggleStatus"
+      method: POST
+      params:
+        - name: role
+          value: "7"
+          type: path
+    response:
+      status: 200
+      statusText: OK
+      headers:
+        - name: Date
+          value: Thu, 19 Dec 2024 15:00:04 GMT
+        - name: Server
+          value: Apache/2.4.54 (Win64) OpenSSL/1.1.1d mod_fcgid/2.3.10-dev
+        - name: X-Powered-By
+          value: PHP/8.2.17
+        - name: Cache-Control
+          value: no-cache, private
+        - name: X-RateLimit-Limit
+          value: "60"
+        - name: X-RateLimit-Remaining
+          value: "58"
+        - name: Access-Control-Allow-Origin
+          value: "*"
+        - name: Vary
+          value: Authorization
+        - name: Keep-Alive
+          value: timeout=5, max=99
+        - name: Connection
+          value: Keep-Alive
+        - name: Transfer-Encoding
+          value: chunked
+        - name: Content-Type
+          value: application/json
+      body:
+        type: json
+        data: |-
+          {
+              "success": true,
+              "code": 0,
+              "locale": "en",
+              "message": "Role activated successfully.",
+              "data": {
+                  "role": {
+                      "id": 7,
+                      "name": "company",
+                      "people": 3,
+                      "module": 0,
+                      "permissions": 0,
+                      "status": "active"
+                  }
+              }
+          }

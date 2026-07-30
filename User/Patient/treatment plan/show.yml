@@ -1,0 +1,94 @@
+info:
+  name: show
+  type: http
+  seq: 3
+
+http:
+  method: GET
+  url: "{{base_url}}/user/treatment_plan/:id"
+  headers:
+    - name: Accept
+      value: application/json
+  params:
+    - name: id
+      value: 9c491c97-a8a1-405b-85da-2b2a605d9324
+      type: path
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+examples:
+  - name: show
+    request:
+      url: "{{base_url}}/user/treatment_plan/:id"
+      method: GET
+      headers:
+        - name: Accept
+          value: application/json
+      params:
+        - name: id
+          value: 9c491c97-a8a1-405b-85da-2b2a605d9324
+          type: path
+    response:
+      status: 200
+      statusText: OK
+      headers:
+        - name: Date
+          value: Fri, 14 Jun 2024 15:34:10 GMT
+        - name: Server
+          value: Apache/2.4.54 (Win64) OpenSSL/1.1.1q mod_fcgid/2.3.10-dev
+        - name: X-Powered-By
+          value: PHP/8.2.16
+        - name: Cache-Control
+          value: no-cache, private
+        - name: X-RateLimit-Limit
+          value: "60"
+        - name: X-RateLimit-Remaining
+          value: "59"
+        - name: Access-Control-Allow-Origin
+          value: "*"
+        - name: Vary
+          value: Authorization
+        - name: Keep-Alive
+          value: timeout=5, max=100
+        - name: Connection
+          value: Keep-Alive
+        - name: Transfer-Encoding
+          value: chunked
+        - name: Content-Type
+          value: application/json
+      body:
+        type: json
+        data: |-
+          {
+              "success": true,
+              "code": 0,
+              "locale": "en",
+              "message": "success",
+              "data": {
+                  "item": {
+                      "id": "9c491c97-a8a1-405b-85da-2b2a605d9324",
+                      "short_term_goals": "short_term_goals",
+                      "long_term_goals": "long_term_goals",
+                      "manual_therapy": "manual_therapy",
+                      "exercises": "exercises",
+                      "modalities": "modalities",
+                      "education": "education",
+                      "frequency_and_duration": "frequency_and_duration",
+                      "home_exercise_program": "home_exercise_program",
+                      "with_manual_therapy": 1,
+                      "with_exercises": 1,
+                      "with_modalities": 1,
+                      "with_education": 1,
+                      "with_home_exercise_program": 1,
+                      "patient_id": "9c22ec62-cfa4-476c-8921-a924a32f20d7",
+                      "visit_date": "2024-06-14 00:00:00",
+                      "created_at": "2024-06-14T15:17:42.000000Z",
+                      "updated_at": "2024-06-14T15:17:42.000000Z"
+                  }
+              }
+          }

@@ -1,0 +1,186 @@
+info:
+  name: list
+  type: http
+  seq: 1
+
+http:
+  method: GET
+  url: "{{base_url}}/user/organization/sms_credits"
+  headers:
+    - name: Accept
+      value: application/json
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+examples:
+  - name: list
+    request:
+      url: "{{base_url}}/user/organization/sms_credits"
+      method: GET
+      headers:
+        - name: Accept
+          value: application/json
+    response:
+      status: 200
+      statusText: OK
+      headers:
+        - name: Date
+          value: Fri, 10 May 2024 10:26:24 GMT
+        - name: Server
+          value: Apache/2.4.54 (Win64) OpenSSL/1.1.1q mod_fcgid/2.3.10-dev
+        - name: X-Powered-By
+          value: PHP/8.2.16
+        - name: Cache-Control
+          value: no-cache, private
+        - name: X-RateLimit-Limit
+          value: "60"
+        - name: X-RateLimit-Remaining
+          value: "59"
+        - name: Access-Control-Allow-Origin
+          value: "*"
+        - name: Vary
+          value: Authorization
+        - name: Keep-Alive
+          value: timeout=5, max=100
+        - name: Connection
+          value: Keep-Alive
+        - name: Transfer-Encoding
+          value: chunked
+        - name: Content-Type
+          value: application/json
+      body:
+        type: json
+        data: |-
+          {
+              "success": true,
+              "code": 0,
+              "locale": "en",
+              "message": "Fetched sms credits successfully",
+              "data": {
+                  "items": [
+                      {
+                          "id": "9c02483f-c219-4f31-b576-0f63784a7413",
+                          "number_of_credits": "100.00",
+                          "amount": "5000.00",
+                          "created_at": "2024-05-10T10:16:00.000000Z",
+                          "updated_at": "2024-05-10T10:16:00.000000Z"
+                      },
+                      {
+                          "id": "9c02483f-cae6-4158-8eea-49563dd03d56",
+                          "number_of_credits": "150.00",
+                          "amount": "6000.00",
+                          "created_at": "2024-05-10T10:16:00.000000Z",
+                          "updated_at": "2024-05-10T10:16:00.000000Z"
+                      },
+                      {
+                          "id": "9c02483f-cc6f-4196-b2d6-db8f3d39aca3",
+                          "number_of_credits": "250.00",
+                          "amount": "7000.00",
+                          "created_at": "2024-05-10T10:16:00.000000Z",
+                          "updated_at": "2024-05-10T10:16:00.000000Z"
+                      },
+                      {
+                          "id": "9c02483f-cd69-4e4b-9ed3-abd5dce98f8a",
+                          "number_of_credits": "300.00",
+                          "amount": "8000.00",
+                          "created_at": "2024-05-10T10:16:00.000000Z",
+                          "updated_at": "2024-05-10T10:16:00.000000Z"
+                      },
+                      {
+                          "id": "9c02483f-ce50-44e8-b37d-73141add30dc",
+                          "number_of_credits": "400.00",
+                          "amount": "9000.00",
+                          "created_at": "2024-05-10T10:16:00.000000Z",
+                          "updated_at": "2024-05-10T10:16:00.000000Z"
+                      }
+                  ]
+              }
+          }
+  - name: list
+    request:
+      url: "{{base_url}}/user/organization/sms_credits"
+      method: GET
+      headers:
+        - name: Accept
+          value: application/json
+    response:
+      status: 200
+      statusText: OK
+      headers:
+        - name: Server
+          value: nginx/1.24.0 (Ubuntu)
+        - name: Content-Type
+          value: application/json
+        - name: Transfer-Encoding
+          value: chunked
+        - name: Connection
+          value: keep-alive
+        - name: Cache-Control
+          value: no-cache, private
+        - name: Date
+          value: Thu, 05 Mar 2026 08:57:24 GMT
+        - name: X-RateLimit-Limit
+          value: "60"
+        - name: X-RateLimit-Remaining
+          value: "57"
+        - name: Vary
+          value: Origin
+        - name: X-Frame-Options
+          value: SAMEORIGIN
+        - name: X-XSS-Protection
+          value: 1; mode=block
+        - name: X-Content-Type-Options
+          value: nosniff
+      body:
+        type: json
+        data: |-
+          {
+              "success": true,
+              "code": 0,
+              "locale": "en",
+              "message": "Fetched sms credits successfully",
+              "data": {
+                  "items": [
+                      {
+                          "id": "a134bd93-f41d-43c8-9990-542549284b02",
+                          "number_of_credits": "100.00",
+                          "amount": "5000.00",
+                          "created_at": "2026-03-02T19:15:09.000000Z",
+                          "updated_at": "2026-03-02T19:15:09.000000Z"
+                      },
+                      {
+                          "id": "a134bd93-fc21-4c0f-b3d9-c43be766a0f6",
+                          "number_of_credits": "150.00",
+                          "amount": "6000.00",
+                          "created_at": "2026-03-02T19:15:09.000000Z",
+                          "updated_at": "2026-03-02T19:15:09.000000Z"
+                      },
+                      {
+                          "id": "a134bd94-042d-4ff8-a326-32f4c1e34004",
+                          "number_of_credits": "250.00",
+                          "amount": "7000.00",
+                          "created_at": "2026-03-02T19:15:09.000000Z",
+                          "updated_at": "2026-03-02T19:15:09.000000Z"
+                      },
+                      {
+                          "id": "a134bd94-0d64-4963-959f-b8fcc90ad2cf",
+                          "number_of_credits": "300.00",
+                          "amount": "8000.00",
+                          "created_at": "2026-03-02T19:15:09.000000Z",
+                          "updated_at": "2026-03-02T19:15:09.000000Z"
+                      },
+                      {
+                          "id": "a134bd94-15db-44b1-9d43-b55869726fc1",
+                          "number_of_credits": "400.00",
+                          "amount": "9000.00",
+                          "created_at": "2026-03-02T19:15:09.000000Z",
+                          "updated_at": "2026-03-02T19:15:09.000000Z"
+                      }
+                  ]
+              }
+          }

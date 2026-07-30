@@ -1,0 +1,105 @@
+info:
+  name: postpartum information
+  type: http
+  seq: 24
+
+http:
+  method: POST
+  url: "{{base_url}}/user/patient/postpartum_information"
+  headers:
+    - name: Accept
+      value: application/json
+  body:
+    type: json
+    data: "{\r
+
+      \    \"patient_procedure_id\":\"9c5b95a4-cf9e-4760-bce3-e3594f34ed64\",\r
+
+      \    \"maternal_condition_post_delivery\":\"maternal_condition_post_delivery\",\r
+
+      \    \"pain_relief_method_used\":[\"infection\",\"thrombosis\"],    \r
+
+      \    \"breastfeeding_initiation_and_support\":\"breastfeeding_initiation_and_support\"\r
+
+      }"
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+examples:
+  - name: postpartum information
+    request:
+      url: "{{base_url}}/user/patient/postpartum_information"
+      method: POST
+      headers:
+        - name: Accept
+          value: application/json
+      body:
+        type: json
+        data: "{\r
+
+          \    \"patient_procedure_id\":\"9c5b95a4-cf9e-4760-bce3-e3594f34ed64\",\r
+
+          \    \"maternal_condition_post_delivery\":\"maternal_condition_post_delivery\",\r
+
+          \    \"pain_relief_method_used\":[\"infection\",\"thrombosis\"],    \r
+
+          \    \"breastfeeding_initiation_and_support\":\"breastfeeding_initiation_and_support\"\r
+
+          }"
+    response:
+      status: 201
+      statusText: Created
+      headers:
+        - name: Date
+          value: Wed, 26 Jun 2024 23:15:37 GMT
+        - name: Server
+          value: Apache/2.4.54 (Win64) OpenSSL/1.1.1q mod_fcgid/2.3.10-dev
+        - name: X-Powered-By
+          value: PHP/8.2.16
+        - name: Cache-Control
+          value: no-cache, private
+        - name: X-RateLimit-Limit
+          value: "60"
+        - name: X-RateLimit-Remaining
+          value: "59"
+        - name: Access-Control-Allow-Origin
+          value: "*"
+        - name: Vary
+          value: Authorization
+        - name: Keep-Alive
+          value: timeout=5, max=100
+        - name: Connection
+          value: Keep-Alive
+        - name: Transfer-Encoding
+          value: chunked
+        - name: Content-Type
+          value: application/json
+      body:
+        type: json
+        data: |-
+          {
+              "success": true,
+              "code": 0,
+              "locale": "en",
+              "message": "success",
+              "data": {
+                  "item": {
+                      "patient_procedure_id": "9c5b95a4-cf9e-4760-bce3-e3594f34ed64",
+                      "maternal_condition_post_delivery": "maternal_condition_post_delivery",
+                      "breastfeeding_initiation_and_support": "breastfeeding_initiation_and_support",
+                      "pain_relief_method_used": [
+                          "infection",
+                          "thrombosis"
+                      ],
+                      "taken_by": "9bc6382c-bb73-4c7d-9409-677fe560485d",
+                      "id": "9c61eb52-5fea-42a2-85f7-d88375ecb878",
+                      "updated_at": "2024-06-26T23:15:38.000000Z",
+                      "created_at": "2024-06-26T23:15:38.000000Z"
+                  }
+              }
+          }

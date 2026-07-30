@@ -1,0 +1,763 @@
+info:
+  name: hmoServiceItem
+  type: http
+  seq: 7
+
+http:
+  method: GET
+  url: "{{base_url}}/user/organization/hmoServiceItem/:hmoId"
+  params:
+    - name: filter
+      value: General,Clinical Lab
+      type: query
+      disabled: true
+    - name: hmoId
+      value: 9bbbac52-edd1-4aa7-8254-c29c14fa6249
+      type: path
+  auth:
+    type: bearer
+    token: 78|IJJwsPNGwfjrHdMvXfMgKzfYaTOw56YXrF1VLHE8b494a4af
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+examples:
+  - name: hmoServiceItem
+    request:
+      url: "{{base_url}}/user/organization/hmoServiceItem/:hmoId"
+      method: GET
+      params:
+        - name: filter
+          value: General,Clinical Lab
+          type: query
+          disabled: true
+        - name: hmoId
+          value: 9bbbac52-edd1-4aa7-8254-c29c14fa6249
+          type: path
+    response:
+      status: 200
+      statusText: OK
+      headers:
+        - name: Date
+          value: Sun, 15 Sep 2024 23:15:25 GMT
+        - name: Server
+          value: Apache/2.4.54 (Win64) OpenSSL/1.1.1q mod_fcgid/2.3.10-dev
+        - name: X-Powered-By
+          value: PHP/8.2.16
+        - name: Cache-Control
+          value: no-cache, private
+        - name: X-RateLimit-Limit
+          value: "60"
+        - name: X-RateLimit-Remaining
+          value: "59"
+        - name: Access-Control-Allow-Origin
+          value: "*"
+        - name: Vary
+          value: Authorization
+        - name: Keep-Alive
+          value: timeout=5, max=100
+        - name: Connection
+          value: Keep-Alive
+        - name: Transfer-Encoding
+          value: chunked
+        - name: Content-Type
+          value: application/json
+      body:
+        type: json
+        data: |-
+          {
+              "success": true,
+              "code": 0,
+              "locale": "en",
+              "message": "Services fetched successfully.",
+              "data": {
+                  "services": [
+                      {
+                          "id": "9cfeab80-4d97-4ce8-8cd4-755e3fc9ea0d",
+                          "name": "admit patient",
+                          "type": "general",
+                          "status": null,
+                          "amount": null,
+                          "care_type": null
+                      },
+                      {
+                          "id": "9cfea692-10dd-46b5-a16b-c60917901d59",
+                          "name": "Discharge",
+                          "type": "general",
+                          "status": null,
+                          "amount": null,
+                          "care_type": null
+                      },
+                      {
+                          "id": "9cfe9d7c-5e1d-4940-903d-2168735d562e",
+                          "name": "Discharge patients",
+                          "type": "general",
+                          "status": null,
+                          "amount": null,
+                          "care_type": null
+                      },
+                      {
+                          "id": "9cfe8382-e2dd-41f5-86e7-7dbf3335aafb",
+                          "name": "Blood Pressure Monitoring",
+                          "type": "general",
+                          "status": "active",
+                          "amount": "2300.00",
+                          "care_type": "primary care"
+                      },
+                      {
+                          "id": "9cfe8382-e464-401c-bc2f-449b3b06548f",
+                          "name": "Vaccination",
+                          "type": "general",
+                          "status": "active",
+                          "amount": "2300.00",
+                          "care_type": "primary care"
+                      },
+                      {
+                          "id": "9cfe8382-e60c-4ce8-9981-ab2e64dea7e2",
+                          "name": "Allergy Testing",
+                          "type": "general",
+                          "status": "active",
+                          "amount": "2300.00",
+                          "care_type": "primary care"
+                      },
+                      {
+                          "id": "9cfe8382-e760-44ee-a48f-8264f77a4433",
+                          "name": "Diabetes Management",
+                          "type": "general",
+                          "status": "active",
+                          "amount": "2300.00",
+                          "care_type": "primary care"
+                      },
+                      {
+                          "id": "9cfe8382-e8d5-426c-b13a-b9f86f2fc272",
+                          "name": "Preventive Care",
+                          "type": "general",
+                          "status": "active",
+                          "amount": "2300.00",
+                          "care_type": "primary care"
+                      },
+                      {
+                          "id": "9cfe8382-ea58-4c51-b82c-a33bc78b58ea",
+                          "name": "Weight Management",
+                          "type": "general",
+                          "status": "active",
+                          "amount": "2300.00",
+                          "care_type": "primary care"
+                      },
+                      {
+                          "id": "9cfe8382-eb65-414a-8a78-5c9a9a93d6a1",
+                          "name": "Family Medicine",
+                          "type": "general",
+                          "status": "active",
+                          "amount": "2300.00",
+                          "care_type": "primary care"
+                      },
+                      {
+                          "id": "9cfe8382-ec92-40c4-aeec-1d55f6c89d1c",
+                          "name": "Complete Blood Count (CBC)",
+                          "type": "clinical lab",
+                          "status": null,
+                          "amount": null,
+                          "care_type": null
+                      },
+                      {
+                          "id": "9cfe8382-edd1-4365-9214-d8a6249ce125",
+                          "name": "Urinalysis",
+                          "type": "clinical lab",
+                          "status": null,
+                          "amount": null,
+                          "care_type": null
+                      },
+                      {
+                          "id": "9cfe8382-ef39-4683-b5a5-2d41436175e8",
+                          "name": "Basic Metabolic Panel",
+                          "type": "clinical lab",
+                          "status": "active",
+                          "amount": "2300.00",
+                          "care_type": "primary care"
+                      },
+                      {
+                          "id": "9cfe8382-f07b-4cbd-b9ba-670efd3706fa",
+                          "name": "Lipid Panel",
+                          "type": "clinical lab",
+                          "status": null,
+                          "amount": null,
+                          "care_type": null
+                      },
+                      {
+                          "id": "9cfe8382-f1f0-48b2-a051-7624b549327f",
+                          "name": "Thyroid Function Test",
+                          "type": "clinical lab",
+                          "status": null,
+                          "amount": null,
+                          "care_type": null
+                      },
+                      {
+                          "id": "9cfe8382-f32c-4112-89b2-085c1fac8577",
+                          "name": "Hematocrit",
+                          "type": "clinical lab",
+                          "status": null,
+                          "amount": null,
+                          "care_type": null
+                      },
+                      {
+                          "id": "9cfe8382-f4ab-4ca6-8203-2d3a3cfff805",
+                          "name": "Blood Glucose Test",
+                          "type": "clinical lab",
+                          "status": null,
+                          "amount": null,
+                          "care_type": null
+                      },
+                      {
+                          "id": "9cfe8382-f6fd-4306-999e-354516d4aa99",
+                          "name": "Electrolyte Panel",
+                          "type": "clinical lab",
+                          "status": null,
+                          "amount": null,
+                          "care_type": null
+                      },
+                      {
+                          "id": "9cfe8382-f887-486e-9644-04a1642fa621",
+                          "name": "Liver Function Test",
+                          "type": "clinical lab",
+                          "status": null,
+                          "amount": null,
+                          "care_type": null
+                      },
+                      {
+                          "id": "9cfe8382-fa6d-472a-8d65-9af0e9ab0ecd",
+                          "name": "Kidney Function Test",
+                          "type": "clinical lab",
+                          "status": null,
+                          "amount": null,
+                          "care_type": null
+                      },
+                      {
+                          "id": "9cfe8382-fc13-47b2-9d45-0c898b13e5bf",
+                          "name": "Antibiotics",
+                          "type": "prescription",
+                          "status": null,
+                          "amount": null,
+                          "care_type": null
+                      },
+                      {
+                          "id": "9cfe8382-fd99-499e-b980-edf13ff5f656",
+                          "name": "Pain Relievers",
+                          "type": "prescription",
+                          "status": null,
+                          "amount": null,
+                          "care_type": null
+                      },
+                      {
+                          "id": "9cfe8382-ff91-4ce4-9658-594b5ca63542",
+                          "name": "Antidepressants",
+                          "type": "prescription",
+                          "status": null,
+                          "amount": null,
+                          "care_type": null
+                      },
+                      {
+                          "id": "9cfe8383-013a-409d-bbb8-1e278da1fd3e",
+                          "name": "Antihistamines",
+                          "type": "prescription",
+                          "status": null,
+                          "amount": null,
+                          "care_type": null
+                      },
+                      {
+                          "id": "9cfe8383-02ce-4131-94e8-86bfa03f5e2c",
+                          "name": "Antivirals",
+                          "type": "prescription",
+                          "status": null,
+                          "amount": null,
+                          "care_type": null
+                      },
+                      {
+                          "id": "9cfe8383-0471-4a41-99ef-872c526dd9f2",
+                          "name": "Antifungals",
+                          "type": "prescription",
+                          "status": null,
+                          "amount": null,
+                          "care_type": null
+                      },
+                      {
+                          "id": "9cfe8383-061d-498c-b8b1-082bf666cbf9",
+                          "name": "Diuretics",
+                          "type": "prescription",
+                          "status": null,
+                          "amount": null,
+                          "care_type": null
+                      },
+                      {
+                          "id": "9cfe8383-07cb-4fb5-95af-78e0a41cada6",
+                          "name": "Statins",
+                          "type": "prescription",
+                          "status": null,
+                          "amount": null,
+                          "care_type": null
+                      },
+                      {
+                          "id": "9cfe8383-09b5-4bb6-9c7f-6ff22255b92e",
+                          "name": "Blood Pressure Medications",
+                          "type": "prescription",
+                          "status": null,
+                          "amount": null,
+                          "care_type": null
+                      },
+                      {
+                          "id": "9cfe8383-0b5e-4cdd-888b-8be11d5c1181",
+                          "name": "Insulin",
+                          "type": "prescription",
+                          "status": null,
+                          "amount": null,
+                          "care_type": null
+                      },
+                      {
+                          "id": "9cfe8383-0d11-43ef-b5f8-5d854c1d28f7",
+                          "name": "Surgical Consultation",
+                          "type": "procedures",
+                          "status": null,
+                          "amount": null,
+                          "care_type": null
+                      },
+                      {
+                          "id": "9cfe8383-0eb0-4e57-b7d0-e3d5c63f5248",
+                          "name": "Biopsy",
+                          "type": "procedures",
+                          "status": null,
+                          "amount": null,
+                          "care_type": null
+                      },
+                      {
+                          "id": "9cfe8383-103d-4092-a5b9-a7a52d42d1d2",
+                          "name": "Endoscopy",
+                          "type": "procedures",
+                          "status": null,
+                          "amount": null,
+                          "care_type": null
+                      },
+                      {
+                          "id": "9cfe8383-1200-40b4-b776-39b0e1955aa1",
+                          "name": "Colonoscopy",
+                          "type": "procedures",
+                          "status": null,
+                          "amount": null,
+                          "care_type": null
+                      },
+                      {
+                          "id": "9cfe8383-13d9-40d0-891b-5b2628ae36b3",
+                          "name": "Laparoscopy",
+                          "type": "procedures",
+                          "status": null,
+                          "amount": null,
+                          "care_type": null
+                      },
+                      {
+                          "id": "9cfe8383-158a-4b08-9963-252d5e1b6aa7",
+                          "name": "Ultrasound-guided Biopsy",
+                          "type": "procedures",
+                          "status": null,
+                          "amount": null,
+                          "care_type": null
+                      },
+                      {
+                          "id": "9cfe8383-1746-44a0-96fd-5778c290684e",
+                          "name": "Electrocardiogram (ECG)",
+                          "type": "procedures",
+                          "status": null,
+                          "amount": null,
+                          "care_type": null
+                      },
+                      {
+                          "id": "9cfe8383-1901-4927-bc58-de406fcf209a",
+                          "name": "Spirometry",
+                          "type": "procedures",
+                          "status": null,
+                          "amount": null,
+                          "care_type": null
+                      },
+                      {
+                          "id": "9cfe8383-1a7b-4ac6-856a-dcd311d9ffb4",
+                          "name": "Dermatological Procedure",
+                          "type": "procedures",
+                          "status": null,
+                          "amount": null,
+                          "care_type": null
+                      },
+                      {
+                          "id": "9cfe8383-1c26-435d-b1ad-0182f4eecdfb",
+                          "name": "Minor Surgical Procedure",
+                          "type": "procedures",
+                          "status": null,
+                          "amount": null,
+                          "care_type": null
+                      },
+                      {
+                          "id": "9cfe8383-1db9-4d6c-9653-c2e06208f35a",
+                          "name": "Chest X-Ray",
+                          "type": "x-ray lab",
+                          "status": null,
+                          "amount": null,
+                          "care_type": null
+                      },
+                      {
+                          "id": "9cfe8383-1f43-436a-8c6f-0b5b084b6010",
+                          "name": "Abdominal X-Ray",
+                          "type": "x-ray lab",
+                          "status": null,
+                          "amount": null,
+                          "care_type": null
+                      },
+                      {
+                          "id": "9cfe8383-209b-4d27-9d31-49fd8a203754",
+                          "name": "Pelvic X-Ray",
+                          "type": "x-ray lab",
+                          "status": null,
+                          "amount": null,
+                          "care_type": null
+                      },
+                      {
+                          "id": "9cfe8383-2210-450b-b85a-c33adada1b28",
+                          "name": "Extremity X-Ray",
+                          "type": "x-ray lab",
+                          "status": null,
+                          "amount": null,
+                          "care_type": null
+                      },
+                      {
+                          "id": "9cfe8383-2376-4e5d-b305-6a661a4a0c55",
+                          "name": "Spinal X-Ray",
+                          "type": "x-ray lab",
+                          "status": null,
+                          "amount": null,
+                          "care_type": null
+                      },
+                      {
+                          "id": "9cfe8383-24df-4029-8135-e735b0a27266",
+                          "name": "Dental X-Ray",
+                          "type": "x-ray lab",
+                          "status": null,
+                          "amount": null,
+                          "care_type": null
+                      },
+                      {
+                          "id": "9cfe8383-2614-48d1-b4e3-4740703f202e",
+                          "name": "Skull X-Ray",
+                          "type": "x-ray lab",
+                          "status": null,
+                          "amount": null,
+                          "care_type": null
+                      },
+                      {
+                          "id": "9cfe8383-2754-4c4d-adac-5050e971ca38",
+                          "name": "Bone X-Ray",
+                          "type": "x-ray lab",
+                          "status": null,
+                          "amount": null,
+                          "care_type": null
+                      },
+                      {
+                          "id": "9cfe8382-d6e2-4519-93a8-2337a40aada6",
+                          "name": "General Checkup",
+                          "type": "general",
+                          "status": "active",
+                          "amount": "2300.00",
+                          "care_type": "primary care"
+                      },
+                      {
+                          "id": "9cfe8383-2a5b-453a-9cd9-fded85a2ea03",
+                          "name": "Lung X-Ray",
+                          "type": "x-ray lab",
+                          "status": null,
+                          "amount": null,
+                          "care_type": null
+                      },
+                      {
+                          "id": "9cfe8383-2bc6-4fba-bca3-dcacd4912622",
+                          "name": "Abdominal Ultrasound",
+                          "type": "ultrasounds",
+                          "status": null,
+                          "amount": null,
+                          "care_type": null
+                      },
+                      {
+                          "id": "9cfe8383-2d27-4adb-927e-f7003228999c",
+                          "name": "Pelvic Ultrasound",
+                          "type": "ultrasounds",
+                          "status": null,
+                          "amount": null,
+                          "care_type": null
+                      },
+                      {
+                          "id": "9cfe8383-2e8e-411f-8466-3e64ff9a2e2e",
+                          "name": "Obstetric Ultrasound",
+                          "type": "ultrasounds",
+                          "status": null,
+                          "amount": null,
+                          "care_type": null
+                      },
+                      {
+                          "id": "9cfe8383-3012-4cd5-a8ec-c86d596cc172",
+                          "name": "Transvaginal Ultrasound",
+                          "type": "ultrasounds",
+                          "status": null,
+                          "amount": null,
+                          "care_type": null
+                      },
+                      {
+                          "id": "9cfe8383-3229-43d7-b49e-73d9aa433e95",
+                          "name": "Renal Ultrasound",
+                          "type": "ultrasounds",
+                          "status": null,
+                          "amount": null,
+                          "care_type": null
+                      },
+                      {
+                          "id": "9cfe8383-28cd-4e43-9f4d-abe5f6d449c1",
+                          "name": "Thoracic X-Ray",
+                          "type": "x-ray lab",
+                          "status": null,
+                          "amount": null,
+                          "care_type": null
+                      },
+                      {
+                          "id": "9cfe8383-356e-4229-b9a0-fcc24a5f1f8a",
+                          "name": "Breast Ultrasound",
+                          "type": "ultrasounds",
+                          "status": null,
+                          "amount": null,
+                          "care_type": null
+                      },
+                      {
+                          "id": "9cfe8383-3733-4d41-9768-70321c69c2da",
+                          "name": "Cardiac Ultrasound",
+                          "type": "ultrasounds",
+                          "status": null,
+                          "amount": null,
+                          "care_type": null
+                      },
+                      {
+                          "id": "9cfe8383-3902-45c3-8318-f3e98d6faf82",
+                          "name": "Musculoskeletal Ultrasound",
+                          "type": "ultrasounds",
+                          "status": null,
+                          "amount": null,
+                          "care_type": null
+                      },
+                      {
+                          "id": "9cfe8383-3ab3-4622-83bd-57f4aa33bd38",
+                          "name": "Pediatric Ultrasound",
+                          "type": "ultrasounds",
+                          "status": null,
+                          "amount": null,
+                          "care_type": null
+                      },
+                      {
+                          "id": "9cfe8382-e00e-4771-8587-0af7056865cb",
+                          "name": "Health Screening",
+                          "type": "general",
+                          "status": "active",
+                          "amount": "2300.00",
+                          "care_type": "primary care"
+                      },
+                      {
+                          "id": "9cfe8382-e184-41e9-9838-9a0b047b6b31",
+                          "name": "Annual Physical Exam",
+                          "type": "general",
+                          "status": "active",
+                          "amount": "2300.00",
+                          "care_type": "primary care"
+                      },
+                      {
+                          "id": "9cfe8383-33c3-48fd-9b38-b3b9a4f79f5f",
+                          "name": "Thyroid Ultrasound",
+                          "type": "ultrasounds",
+                          "status": null,
+                          "amount": null,
+                          "care_type": null
+                      }
+                  ]
+              }
+          }
+  - name: hmoServiceItem
+    request:
+      url: "{{base_url}}/user/organization/hmoServiceItem/:hmoId"
+      method: GET
+      params:
+        - name: filter
+          value: General,Clinical Lab
+          type: query
+          disabled: true
+        - name: hmoId
+          value: 9bbbac52-edd1-4aa7-8254-c29c14fa6249
+          type: path
+    response:
+      status: 200
+      statusText: OK
+      headers:
+        - name: Date
+          value: Mon, 02 Dec 2024 16:26:49 GMT
+        - name: Server
+          value: Apache/2.4.54 (Win64) OpenSSL/1.1.1d mod_fcgid/2.3.10-dev
+        - name: X-Powered-By
+          value: PHP/8.2.17
+        - name: Cache-Control
+          value: no-cache, private
+        - name: X-RateLimit-Limit
+          value: "60"
+        - name: X-RateLimit-Remaining
+          value: "59"
+        - name: Access-Control-Allow-Origin
+          value: "*"
+        - name: Vary
+          value: Authorization
+        - name: Keep-Alive
+          value: timeout=5, max=100
+        - name: Connection
+          value: Keep-Alive
+        - name: Transfer-Encoding
+          value: chunked
+        - name: Content-Type
+          value: application/json
+      body:
+        type: json
+        data: |-
+          {
+              "success": true,
+              "code": 0,
+              "locale": "en",
+              "message": "Services fetched successfully.",
+              "data": {
+                  "services": [
+                      {
+                          "id": "9d684a0d-0842-4e4f-a472-a4264f13a11e",
+                          "name": "Ciprofloxacin",
+                          "type": "pharmacy",
+                          "status": null,
+                          "amount": null,
+                          "care_type": null
+                      },
+                      {
+                          "id": "9d684a0d-114d-44fc-a0ce-321dbaf455b0",
+                          "name": "Salbutamol",
+                          "type": "pharmacy",
+                          "status": null,
+                          "amount": null,
+                          "care_type": null
+                      },
+                      {
+                          "id": "9d684a0d-0250-4e17-910f-e2d090abcae0",
+                          "name": "Amoxicillin",
+                          "type": "pharmacy",
+                          "status": null,
+                          "amount": null,
+                          "care_type": null
+                      },
+                      {
+                          "id": "9d684a0d-0964-40c6-8058-b9d2cff89c8f",
+                          "name": "Hydrocortisone",
+                          "type": "pharmacy",
+                          "status": null,
+                          "amount": null,
+                          "care_type": null
+                      },
+                      {
+                          "id": "9d684a0d-0a99-4a4f-8026-cd0b03496111",
+                          "name": "Diazepam",
+                          "type": "pharmacy",
+                          "status": null,
+                          "amount": null,
+                          "care_type": null
+                      },
+                      {
+                          "id": "9d684a0d-6db2-4b85-9920-d279733a595f",
+                          "name": "Pre-operative Consultation",
+                          "type": "consultation",
+                          "status": null,
+                          "amount": null,
+                          "care_type": null
+                      },
+                      {
+                          "id": "9d684a0d-0388-4193-a2c3-5b9f185f765a",
+                          "name": "Ceftriaxone",
+                          "type": "pharmacy",
+                          "status": null,
+                          "amount": null,
+                          "care_type": null
+                      },
+                      {
+                          "id": "9d684a0d-0d88-43d2-b905-e8f60e51035b",
+                          "name": "Amlodipine",
+                          "type": "pharmacy",
+                          "status": null,
+                          "amount": null,
+                          "care_type": null
+                      },
+                      {
+                          "id": "9d684a0d-06ba-435b-8442-8f49fe5d105c",
+                          "name": "Omeprazole",
+                          "type": "pharmacy",
+                          "status": null,
+                          "amount": null,
+                          "care_type": null
+                      },
+                      {
+                          "id": "9d684a0c-c358-4abd-af70-6070987b1066",
+                          "name": "Paracetamol",
+                          "type": "pharmacy",
+                          "status": null,
+                          "amount": null,
+                          "care_type": null
+                      },
+                      {
+                          "id": "9d684a0d-0bee-43ac-b916-52f1aa317ec6",
+                          "name": "Furosemide",
+                          "type": "pharmacy",
+                          "status": null,
+                          "amount": null,
+                          "care_type": null
+                      },
+                      {
+                          "id": "9d684a0d-0514-4b7c-ae10-58b0ee579eef",
+                          "name": "Metronidazole",
+                          "type": "pharmacy",
+                          "status": null,
+                          "amount": null,
+                          "care_type": null
+                      },
+                      {
+                          "id": "9d684a0d-100a-404c-b050-78506c4ceff3",
+                          "name": "Insulin",
+                          "type": "pharmacy",
+                          "status": null,
+                          "amount": null,
+                          "care_type": null
+                      },
+                      {
+                          "id": "9d684a0d-0ef1-4e67-9ae9-efc2de30b78e",
+                          "name": "Metformin",
+                          "type": "pharmacy",
+                          "status": null,
+                          "amount": null,
+                          "care_type": null
+                      },
+                      {
+                          "id": "9d684a0c-ff48-4cbd-8f98-99e48e86ae80",
+                          "name": "Ibuprofen",
+                          "type": "pharmacy",
+                          "status": null,
+                          "amount": null,
+                          "care_type": null
+                      }
+                  ],
+                  "meta": {
+                      "current_page": 1,
+                      "last_page": 12,
+                      "per_page": 15,
+                      "total": 173
+                  }
+              }
+          }

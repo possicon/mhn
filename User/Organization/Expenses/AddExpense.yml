@@ -1,0 +1,289 @@
+info:
+  name: AddExpense
+  type: http
+  seq: 2
+
+http:
+  method: POST
+  url: "{{base_url}}/user/organization/expense"
+  headers:
+    - name: Accept
+      value: application/json
+  body:
+    type: json
+    data: "{\r
+
+      \    \"patient_id\":\"9bf2e6d3-08c3-4826-b389-f0bebcca9fa9\",\r
+
+      \    \"type\":\"hmo\", //hmo or company\r
+
+      \    \"payment_date\":\"03-05-2024\",\r
+
+      \    \"status\":\"active\",\r
+
+      \    \"transactionId\":\"kshfk829ukw\",\r
+
+      \    \"service_id\":\"9cfe8382-d6e2-4519-93a8-2337a40aada6\",\r
+
+      \    \"hmo_id\":\"9bbbbda4-2dbe-4239-8003-740c2b316479\", //only needed when type is hmo\r
+
+      \    \"hmo_service_pricing_id\":\"9d07a3af-bf1b-44c2-94b9-51c0d7720862\", //only needed when type is hmo\r
+
+      \    \"company_id\":\"9bc5ba19-853f-4edc-9f84-0298ee1a1b6c\",//only needed when type is company\r
+
+      \    \"company_service_pricing_id\":\"9d15b324-4fc7-47b7-81fd-cd0399512ae2\"//only needed when type is company\r
+
+      }"
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+examples:
+  - name: AddExpense
+    request:
+      url: "{{base_url}}/user/organization/expense"
+      method: POST
+      headers:
+        - name: Accept
+          value: application/json
+      body:
+        type: json
+        data: "{\r
+
+          \    \"patient_id\":\"9bf2e6d3-08c3-4826-b389-f0bebcca9fa9\",\r
+
+          \    \"type\":\"hmo\", //hmo or company\r
+
+          \    \"payment_date\":\"03-05-2024\",\r
+
+          \    \"status\":\"active\",\r
+
+          \    \"service_id\":\"9be982a5-4bda-4d19-8af3-a345ab0f98f0\",\r
+
+          \    \"hmo_id\":\"9bbbbda4-2dbe-4239-8003-740c2b316479\", //only needed when type is hmo\r
+
+          \    \"hmo_service_pricing_id\":\"9bea707c-8f85-43af-b9f4-759b39b7823e\", //only needed when type is hmo\r
+
+          \    \"company_id\":\"9bc5ba19-853f-4edc-9f84-0298ee1a1b6c\",//only needed when type is company\r
+
+          \    \"company_service_pricing_id\":\"9bea89a8-c703-4feb-a033-7813bbebf5df\"//only needed when type is company\r
+
+          }"
+    response:
+      status: 201
+      statusText: Created
+      headers:
+        - name: Date
+          value: Fri, 03 May 2024 08:39:53 GMT
+        - name: Server
+          value: Apache/2.4.54 (Win64) OpenSSL/1.1.1q mod_fcgid/2.3.10-dev
+        - name: X-Powered-By
+          value: PHP/8.2.16
+        - name: Cache-Control
+          value: no-cache, private
+        - name: X-RateLimit-Limit
+          value: "60"
+        - name: X-RateLimit-Remaining
+          value: "59"
+        - name: Access-Control-Allow-Origin
+          value: "*"
+        - name: Vary
+          value: Authorization
+        - name: Keep-Alive
+          value: timeout=5, max=100
+        - name: Connection
+          value: Keep-Alive
+        - name: Transfer-Encoding
+          value: chunked
+        - name: Content-Type
+          value: application/json
+      body:
+        type: json
+        data: |-
+          {
+              "success": true,
+              "code": 0,
+              "locale": "en",
+              "message": "Expenses added",
+              "data": {
+                  "item": {
+                      "patient_id": "9bf2e6d3-08c3-4826-b389-f0bebcca9fa9",
+                      "type": "hmo",
+                      "service_id": "9be982a5-4bda-4d19-8af3-a345ab0f98f0",
+                      "payment_date": "03-05-2024",
+                      "status": "active",
+                      "hmo_id": "9bbbbda4-2dbe-4239-8003-740c2b316479",
+                      "hmo_service_pricing_id": "9bea707c-8f85-43af-b9f4-759b39b7823e",
+                      "id": "9bf410fd-fc25-4482-bf25-b4a8fd795320",
+                      "updated_at": "2024-05-03T08:39:54.000000Z",
+                      "created_at": "2024-05-03T08:39:54.000000Z"
+                  }
+              }
+          }
+  - name: AddExpense
+    request:
+      url: "{{base_url}}/user/organization/expense"
+      method: POST
+      headers:
+        - name: Accept
+          value: application/json
+      body:
+        type: json
+        data: "{\r
+
+          \    \"patient_id\":\"9bf2e6d3-08c3-4826-b389-f0bebcca9fa9\",\r
+
+          \    \"type\":\"company\", //hmo or company\r
+
+          \    \"payment_date\":\"03-05-2024\",\r
+
+          \    \"status\":\"active\",\r
+
+          \    \"service_id\":\"9be982a5-4bda-4d19-8af3-a345ab0f98f0\",\r
+
+          \    \"hmo_id\":\"9bbbbda4-2dbe-4239-8003-740c2b316479\", //only needed when type is hmo\r
+
+          \    \"hmo_service_pricing_id\":\"9bea707c-8f85-43af-b9f4-759b39b7823e\", //only needed when type is hmo\r
+
+          \    \"company_id\":\"9bc5ba19-853f-4edc-9f84-0298ee1a1b6c\",//only needed when type is company\r
+
+          \    \"company_service_pricing_id\":\"9bea89a8-c703-4feb-a033-7813bbebf5df\"//only needed when type is company\r
+
+          }"
+    response:
+      status: 201
+      statusText: Created
+      headers:
+        - name: Date
+          value: Fri, 03 May 2024 08:40:57 GMT
+        - name: Server
+          value: Apache/2.4.54 (Win64) OpenSSL/1.1.1q mod_fcgid/2.3.10-dev
+        - name: X-Powered-By
+          value: PHP/8.2.16
+        - name: Cache-Control
+          value: no-cache, private
+        - name: X-RateLimit-Limit
+          value: "60"
+        - name: X-RateLimit-Remaining
+          value: "59"
+        - name: Access-Control-Allow-Origin
+          value: "*"
+        - name: Vary
+          value: Authorization
+        - name: Keep-Alive
+          value: timeout=5, max=100
+        - name: Connection
+          value: Keep-Alive
+        - name: Transfer-Encoding
+          value: chunked
+        - name: Content-Type
+          value: application/json
+      body:
+        type: json
+        data: |-
+          {
+              "success": true,
+              "code": 0,
+              "locale": "en",
+              "message": "Expenses added",
+              "data": {
+                  "item": {
+                      "patient_id": "9bf2e6d3-08c3-4826-b389-f0bebcca9fa9",
+                      "type": "company",
+                      "service_id": "9be982a5-4bda-4d19-8af3-a345ab0f98f0",
+                      "payment_date": "03-05-2024",
+                      "status": "active",
+                      "company_id": "9bc5ba19-853f-4edc-9f84-0298ee1a1b6c",
+                      "company_service_pricing_id": "9bea89a8-c703-4feb-a033-7813bbebf5df",
+                      "id": "9bf4115f-12c7-40cc-ac46-0fabacecf295",
+                      "updated_at": "2024-05-03T08:40:57.000000Z",
+                      "created_at": "2024-05-03T08:40:57.000000Z"
+                  }
+              }
+          }
+  - name: AddExpense
+    request:
+      url: "{{base_url}}/user/organization/expense"
+      method: POST
+      headers:
+        - name: Accept
+          value: application/json
+      body:
+        type: json
+        data: "{\r
+
+          \    \"patient_id\":\"9bf2e6d3-08c3-4826-b389-f0bebcca9fa9\",\r
+
+          \    \"type\":\"company\", //hmo or company\r
+
+          \    \"payment_date\":\"03-05-2024\",\r
+
+          \    \"status\":\"active\",\r
+
+          \    \"service_id\":\"9be982a5-4bda-4d19-8af3-a345ab0f98f0\",\r
+
+          \    \"hmo_id\":\"9bbbbda4-2dbe-4239-8003-740c2b316479\", //only needed when type is hmo\r
+
+          \    \"hmo_service_pricing_id\":\"9bea707c-8f85-43af-b9f4-759b39b7823e\", //only needed when type is hmo\r
+
+          \    \"company_id\":\"9bc5ba19-853f-4edc-9f84-0298ee1a1b6c\",//only needed when type is company\r
+
+          \    \"company_service_pricing_id\":\"9bea89a8-c703-4feb-a033-7813bbebf5df\"//only needed when type is company\r
+
+          }"
+    response:
+      status: 201
+      statusText: Created
+      headers:
+        - name: Date
+          value: Fri, 03 May 2024 15:20:18 GMT
+        - name: Server
+          value: Apache/2.4.54 (Win64) OpenSSL/1.1.1q mod_fcgid/2.3.10-dev
+        - name: X-Powered-By
+          value: PHP/8.2.16
+        - name: Cache-Control
+          value: no-cache, private
+        - name: X-RateLimit-Limit
+          value: "60"
+        - name: X-RateLimit-Remaining
+          value: "59"
+        - name: Access-Control-Allow-Origin
+          value: "*"
+        - name: Vary
+          value: Authorization
+        - name: Keep-Alive
+          value: timeout=5, max=100
+        - name: Connection
+          value: Keep-Alive
+        - name: Transfer-Encoding
+          value: chunked
+        - name: Content-Type
+          value: application/json
+      body:
+        type: json
+        data: |-
+          {
+              "success": true,
+              "code": 0,
+              "locale": "en",
+              "message": "Expenses added",
+              "data": {
+                  "item": {
+                      "patient_id": "9bf2e6d3-08c3-4826-b389-f0bebcca9fa9",
+                      "type": "company",
+                      "service_id": "9be982a5-4bda-4d19-8af3-a345ab0f98f0",
+                      "payment_date": "03-05-2024",
+                      "status": "active",
+                      "company_id": "9bc5ba19-853f-4edc-9f84-0298ee1a1b6c",
+                      "company_service_pricing_id": "9bea89a8-c703-4feb-a033-7813bbebf5df",
+                      "organization_id": "9bc5eb78-74d2-45f4-a677-05d07dca6a63",
+                      "id": "9bf4a031-dd82-44c7-a6de-9cd3e75cc314",
+                      "updated_at": "2024-05-03T15:20:19.000000Z",
+                      "created_at": "2024-05-03T15:20:19.000000Z"
+                  }
+              }
+          }

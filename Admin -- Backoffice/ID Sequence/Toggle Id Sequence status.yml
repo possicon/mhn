@@ -1,0 +1,78 @@
+info:
+  name: Toggle Id Sequence status
+  type: http
+  seq: 6
+
+http:
+  method: POST
+  url: "{{base_url}}/admin/idSequence/:idSequence/toggleStatus"
+  params:
+    - name: idSequence
+      value: 9bbf097a-c1ef-47ad-ba40-27aea3559bac
+      type: path
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+examples:
+  - name: Toggle Id Sequence status
+    request:
+      url: "{{base_url}}/admin/idSequence/:idSequence/toggleStatus"
+      method: POST
+      params:
+        - name: idSequence
+          value: 9bbf097a-c1ef-47ad-ba40-27aea3559bac
+          type: path
+    response:
+      status: 200
+      statusText: OK
+      headers:
+        - name: Date
+          value: Sun, 07 Apr 2024 00:15:25 GMT
+        - name: Server
+          value: Apache/2.4.54 (Win64) OpenSSL/1.1.1q mod_fcgid/2.3.10-dev
+        - name: X-Powered-By
+          value: PHP/8.2.16
+        - name: Cache-Control
+          value: no-cache, private
+        - name: X-RateLimit-Limit
+          value: "60"
+        - name: X-RateLimit-Remaining
+          value: "57"
+        - name: Access-Control-Allow-Origin
+          value: "*"
+        - name: Vary
+          value: Authorization
+        - name: Keep-Alive
+          value: timeout=5, max=100
+        - name: Connection
+          value: Keep-Alive
+        - name: Transfer-Encoding
+          value: chunked
+        - name: Content-Type
+          value: application/json
+      body:
+        type: json
+        data: |-
+          {
+              "success": true,
+              "code": 0,
+              "locale": "en",
+              "message": "IdSequence deactivated successfully.",
+              "data": {
+                  "IdSequence": {
+                      "id": "9bbf097a-c1ef-47ad-ba40-27aea3559bac",
+                      "code": "MHN_NG",
+                      "country_id": "9b9faee2-aa25-47e7-af72-e1a37e1d8e31",
+                      "max_record": 500,
+                      "status": "inactive",
+                      "description": "optional",
+                      "created_at": "2024-04-07T00:00:01.000000Z",
+                      "updated_at": "2024-04-07T00:15:25.000000Z"
+                  }
+              }
+          }

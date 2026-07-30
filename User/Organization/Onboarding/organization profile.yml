@@ -1,0 +1,147 @@
+info:
+  name: organization profile
+  type: http
+  seq: 10
+
+http:
+  method: GET
+  url: "{{base_url}}/user/organization/onboarding"
+  auth:
+    type: bearer
+    token: 78|IJJwsPNGwfjrHdMvXfMgKzfYaTOw56YXrF1VLHE8b494a4af
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+examples:
+  - name: organization profile
+    request:
+      url: "{{base_url}}/user/organization/onboarding"
+      method: GET
+    response:
+      status: 200
+      statusText: OK
+      headers:
+        - name: Date
+          value: Sat, 06 Jul 2024 10:12:51 GMT
+        - name: Server
+          value: Apache/2.4.54 (Win64) OpenSSL/1.1.1q mod_fcgid/2.3.10-dev
+        - name: X-Powered-By
+          value: PHP/8.2.16
+        - name: Cache-Control
+          value: no-cache, private
+        - name: X-RateLimit-Limit
+          value: "60"
+        - name: X-RateLimit-Remaining
+          value: "58"
+        - name: Access-Control-Allow-Origin
+          value: "*"
+        - name: Vary
+          value: Authorization
+        - name: Keep-Alive
+          value: timeout=5, max=100
+        - name: Connection
+          value: Keep-Alive
+        - name: Transfer-Encoding
+          value: chunked
+        - name: Content-Type
+          value: application/json
+      body:
+        type: json
+        data: |-
+          {
+              "success": true,
+              "code": 0,
+              "locale": "en",
+              "message": "success",
+              "data": {
+                  "org": {
+                      "id": "9bc5eb78-74d2-45f4-a677-05d07dca6a63",
+                      "name": "MHN",
+                      "domain": "pinnacles",
+                      "incoming_server": "https://google.com",
+                      "outgoing_server": "https://mhn.net",
+                      "email": "pinnacles@pinnacle.com",
+                      "invited": false,
+                      "country_id": "9b9faee3-6aaa-4050-bd6c-98a43e674250",
+                      "organization_type_id": 1,
+                      "region_id": "9b9ecc53-4276-4e13-bda6-461083ecb376",
+                      "interested_plan_id": "9c0c8b10-3620-4653-90f0-8ee32c2cce49",
+                      "plan_id": "9c0c8b10-3620-4653-90f0-8ee32c2cce49",
+                      "plan_frequency": "yearly",
+                      "description": null,
+                      "landmark": null,
+                      "status": "Org Onboarded",
+                      "step": "1",
+                      "active": true,
+                      "address": "Glover road, Ikoyis",
+                      "phone": "12345678",
+                      "state_id": "9ba01c32-4a17-4952-8f15-b4a212027e04",
+                      "city_id": "9ba1338d-f1ca-487b-ae34-471ddc6a7bc2",
+                      "grade_id": 1,
+                      "token_time": null,
+                      "domain_email": "",
+                      "logo": "http://127.0.0.1:8000/storage/55/IMG-20231127-WA0007.jpg",
+                      "region": {
+                          "id": "9b9ecc53-4276-4e13-bda6-461083ecb376",
+                          "name": "Africa",
+                          "description": null,
+                          "code": null,
+                          "active": true
+                      },
+                      "country": {
+                          "id": "9b9faee3-6aaa-4050-bd6c-98a43e674250",
+                          "name": "United States",
+                          "region_id": "9b9ecc53-4727-43a1-bf0e-9e05de7c568a",
+                          "currency_name": "United States dollar",
+                          "currency_symbol": "USD",
+                          "active": true,
+                          "flag": null
+                      },
+                      "state": {
+                          "id": "9ba01c32-4a17-4952-8f15-b4a212027e04",
+                          "name": "Mallakastër District",
+                          "region_id": "9b9ecc53-49e9-443f-9bc0-84a9c27d1652",
+                          "country_id": "9b9faee2-a096-437f-8597-f31142b0bd51",
+                          "active": true
+                      },
+                      "city": {
+                          "id": "9ba1338d-f1ca-487b-ae34-471ddc6a7bc2",
+                          "name": "Lab-Sar",
+                          "state_id": "9ba01c32-0a3c-4faa-852a-491d640d989f",
+                          "active": true
+                      },
+                      "grade": {
+                          "id": 1,
+                          "name": "Specialty Hospital"
+                      },
+                      "media": [
+                          {
+                              "id": 55,
+                              "uuid": "378641c1-c095-4c3a-9d31-ba51b88fc472",
+                              "model_type": "App\\Models\\V1\\Organization",
+                              "model_id": "9bc5eb78-74d2-45f4-a677-05d07dca6a63",
+                              "collection_name": "logo",
+                              "name": "IMG-20231127-WA0007",
+                              "file_name": "IMG-20231127-WA0007.jpg",
+                              "mime_type": "image/jpeg",
+                              "disk": "public",
+                              "conversions_disk": "public",
+                              "size": 45808,
+                              "manipulations": [],
+                              "custom_properties": [],
+                              "generated_conversions": [],
+                              "responsive_images": [],
+                              "order_column": 9,
+                              "created_at": "2024-04-13T19:41:08.000000Z",
+                              "updated_at": "2024-04-13T19:41:08.000000Z",
+                              "original_url": "http://127.0.0.1:8000/storage/55/IMG-20231127-WA0007.jpg",
+                              "preview_url": ""
+                          }
+                      ]
+                  }
+              }
+          }

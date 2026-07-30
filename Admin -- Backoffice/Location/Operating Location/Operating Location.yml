@@ -1,0 +1,92 @@
+info:
+  name: Operating Location
+  type: http
+  seq: 1
+
+http:
+  method: GET
+  url: "{{base_url}}/admin/operating-location"
+  auth:
+    type: bearer
+    token: "{{token}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+examples:
+  - name: list operating location
+    request:
+      url: "{{base_url}}/admin/operating-location"
+      method: GET
+    response:
+      status: 200
+      statusText: OK
+      headers:
+        - name: Date
+          value: Mon, 25 Mar 2024 03:11:44 GMT
+        - name: Server
+          value: Apache/2.4.54 (Win64) OpenSSL/1.1.1q mod_fcgid/2.3.10-dev
+        - name: X-Powered-By
+          value: PHP/8.2.16
+        - name: Cache-Control
+          value: no-cache, private
+        - name: X-RateLimit-Limit
+          value: "60"
+        - name: X-RateLimit-Remaining
+          value: "58"
+        - name: Access-Control-Allow-Origin
+          value: "*"
+        - name: Vary
+          value: Authorization
+        - name: Keep-Alive
+          value: timeout=5, max=100
+        - name: Connection
+          value: Keep-Alive
+        - name: Transfer-Encoding
+          value: chunked
+        - name: Content-Type
+          value: application/json
+      body:
+        type: json
+        data: |-
+          {
+              "success": true,
+              "code": 0,
+              "locale": "en",
+              "message": "Successfully fetched operating locations",
+              "data": {
+                  "operatingLocations": [
+                      {
+                          "id": "9ba52538-15b9-474e-ad75-5b57deb84315",
+                          "country_id": "9b9faee2-9ca2-41d0-962c-f7f60ef04bdb",
+                          "created_at": "2024-03-25T03:06:04.000000Z",
+                          "updated_at": "2024-03-25T03:06:04.000000Z",
+                          "country": {
+                              "id": "9b9faee2-9ca2-41d0-962c-f7f60ef04bdb",
+                              "name": "Afghanistan",
+                              "region_id": "9b9ecc53-48de-4e4d-8147-65cc79090128",
+                              "currency_name": "Afghan afghani",
+                              "currency_symbol": "AFN",
+                              "active": true
+                          }
+                      },
+                      {
+                          "id": "9ba52692-b933-4370-8196-22bc060f9b50",
+                          "country_id": "9b9faee2-a3a4-4ded-91f8-c3c6703e4116",
+                          "created_at": "2024-03-25T03:09:50.000000Z",
+                          "updated_at": "2024-03-25T03:09:50.000000Z",
+                          "country": {
+                              "id": "9b9faee2-a3a4-4ded-91f8-c3c6703e4116",
+                              "name": "Andorra",
+                              "region_id": "9b9ecc53-49e9-443f-9bc0-84a9c27d1652",
+                              "currency_name": "Euro",
+                              "currency_symbol": "EUR",
+                              "active": true
+                          }
+                      }
+                  ]
+              }
+          }

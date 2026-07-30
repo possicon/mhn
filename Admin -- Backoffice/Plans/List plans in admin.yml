@@ -1,0 +1,512 @@
+info:
+  name: List plans in admin
+  type: http
+  seq: 1
+
+http:
+  method: GET
+  url: "{{base_url}}/admin/plan?filter=Plan B"
+  params:
+    - name: skip
+      value: "0"
+      type: query
+      disabled: true
+    - name: take
+      value: "50"
+      type: query
+      disabled: true
+    - name: search
+      value: Plan A
+      type: query
+      disabled: true
+    - name: filter
+      value: Plan B
+      type: query
+  auth: inherit
+
+runtime:
+  scripts:
+    - type: after-response
+      code: |-
+        test("Successfully retrived plans", function () {
+            expect(res.getStatus()).to.be.oneOf([200, 201]);
+        });
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+examples:
+  - name: List plans in admin
+    request:
+      url: "{{base_url}}/admin/plan?skip=0&take=50"
+      method: GET
+      params:
+        - name: skip
+          value: "0"
+          type: query
+        - name: take
+          value: "50"
+          type: query
+    response:
+      status: 200
+      statusText: OK
+      headers:
+        - name: Date
+          value: Wed, 27 Mar 2024 17:27:43 GMT
+        - name: Server
+          value: Apache/2.4.54 (Win64) OpenSSL/1.1.1q mod_fcgid/2.3.10-dev
+        - name: X-Powered-By
+          value: PHP/8.2.16
+        - name: Cache-Control
+          value: no-cache, private
+        - name: X-RateLimit-Limit
+          value: "60"
+        - name: X-RateLimit-Remaining
+          value: "59"
+        - name: Access-Control-Allow-Origin
+          value: "*"
+        - name: Vary
+          value: Authorization
+        - name: Keep-Alive
+          value: timeout=5, max=100
+        - name: Connection
+          value: Keep-Alive
+        - name: Transfer-Encoding
+          value: chunked
+        - name: Content-Type
+          value: application/json
+      body:
+        type: json
+        data: |-
+          {
+              "success": true,
+              "code": 0,
+              "locale": "en",
+              "message": "Plans fetched successfully",
+              "data": {
+                  "data": [
+                      {
+                          "id": "9ba9fac4-be23-4414-af12-9ad7bc7061bb",
+                          "name": "Plan A1",
+                          "countries": 0,
+                          "organization_type": {
+                              "withTimestamps": false
+                          },
+                          "type": "Temporary",
+                          "active": false
+                      },
+                      {
+                          "id": "9ba9f821-48e9-4c23-beaf-485bd0ff685f",
+                          "name": "Plan A",
+                          "countries": 0,
+                          "organization_type": {
+                              "withTimestamps": false
+                          },
+                          "type": "Temporary",
+                          "active": false
+                      },
+                      {
+                          "id": "9ba9f17e-86fc-4586-a8ee-22833ceaead4",
+                          "name": "Awesome Plalinppn",
+                          "countries": 0,
+                          "organization_type": {
+                              "withTimestamps": false
+                          },
+                          "type": "Temporary",
+                          "active": false
+                      },
+                      {
+                          "id": "9ba9c292-9d9c-4297-91e3-9257d287d666",
+                          "name": "Awesome Plalinpn",
+                          "countries": 0,
+                          "organization_type": {
+                              "withTimestamps": false
+                          },
+                          "type": "Temporary",
+                          "active": true
+                      },
+                      {
+                          "id": "9ba9bd73-0507-4521-858c-ed991ea5a1d9",
+                          "name": "Awesome Plalinn",
+                          "countries": 0,
+                          "organization_type": {
+                              "withTimestamps": false
+                          },
+                          "type": "Temporary",
+                          "active": true
+                      },
+                      {
+                          "id": "9ba9bd03-eb09-44e4-99cf-bed1d20bdb69",
+                          "name": "Awesome Plaln",
+                          "countries": 0,
+                          "organization_type": {
+                              "withTimestamps": false
+                          },
+                          "type": "Temporary",
+                          "active": true
+                      },
+                      {
+                          "id": "9ba7921d-a302-4b5a-b94d-6a6388df79b1",
+                          "name": "Awesome Plan",
+                          "countries": 0,
+                          "organization_type": {
+                              "withTimestamps": false
+                          },
+                          "type": "Temporary",
+                          "active": true
+                      },
+                      {
+                          "id": "1a1a1a1a-1a1a-1a1a-1a1a-1a1a1a1a1a11",
+                          "name": "Plan Name",
+                          "countries": 4,
+                          "organization_type": {
+                              "withTimestamps": false
+                          },
+                          "type": "Temporary",
+                          "active": false
+                      },
+                      {
+                          "id": "1a1a1a1a-1a1a-1a1a-1a1a-1a1a1a1a1a13",
+                          "name": "3rd Test plan",
+                          "countries": 1,
+                          "organization_type": {
+                              "withTimestamps": false
+                          },
+                          "type": "Temporary",
+                          "active": true
+                      }
+                  ],
+                  "total_pages": 1,
+                  "current_page": 1
+              }
+          }
+  - name: List plans in admin
+    request:
+      url: "{{base_url}}/admin/plan?skip=0&take=50"
+      method: GET
+      params:
+        - name: skip
+          value: "0"
+          type: query
+        - name: take
+          value: "50"
+          type: query
+    response:
+      status: 200
+      statusText: OK
+      headers:
+        - name: Date
+          value: Wed, 10 Apr 2024 09:22:01 GMT
+        - name: Server
+          value: Apache/2.4.54 (Win64) OpenSSL/1.1.1q mod_fcgid/2.3.10-dev
+        - name: X-Powered-By
+          value: PHP/8.2.16
+        - name: Cache-Control
+          value: no-cache, private
+        - name: X-RateLimit-Limit
+          value: "60"
+        - name: X-RateLimit-Remaining
+          value: "59"
+        - name: Access-Control-Allow-Origin
+          value: "*"
+        - name: Vary
+          value: Authorization
+        - name: Keep-Alive
+          value: timeout=5, max=100
+        - name: Connection
+          value: Keep-Alive
+        - name: Transfer-Encoding
+          value: chunked
+        - name: Content-Type
+          value: application/json
+      body:
+        type: json
+        data: |-
+          {
+              "success": true,
+              "code": 0,
+              "locale": "en",
+              "message": "Plans fetched successfully",
+              "data": {
+                  "data": [
+                      {
+                          "id": "9bb9eb0d-b4b9-41ad-8792-6bb991823293",
+                          "name": "Plan BH",
+                          "countries": 0,
+                          "countries_object": [],
+                          "organization_type": {
+                              "withTimestamps": false
+                          },
+                          "type": "Temporary",
+                          "active": true
+                      },
+                      {
+                          "id": "9bb9e8b1-e6de-4181-939c-444d678a13cd",
+                          "name": "Plan B",
+                          "countries": 0,
+                          "countries_object": [],
+                          "organization_type": {
+                              "withTimestamps": false
+                          },
+                          "type": "Temporary",
+                          "active": false
+                      },
+                      {
+                          "id": "9bb7c769-12a5-4b91-a064-c0b13016b254",
+                          "name": "Plan A90",
+                          "countries": 0,
+                          "countries_object": [],
+                          "organization_type": {
+                              "withTimestamps": false
+                          },
+                          "type": "Temporary",
+                          "active": false
+                      },
+                      {
+                          "id": "9bb7c651-d310-4cdb-85f7-f22e5f12a305",
+                          "name": "Plan A190",
+                          "countries": 0,
+                          "countries_object": [],
+                          "organization_type": {
+                              "withTimestamps": false
+                          },
+                          "type": "Temporary",
+                          "active": false
+                      },
+                      {
+                          "id": "9bb7c62c-66ee-4de9-98ef-ed9121b662e1",
+                          "name": "Plan A19",
+                          "countries": 0,
+                          "countries_object": [],
+                          "organization_type": {
+                              "withTimestamps": false
+                          },
+                          "type": "Temporary",
+                          "active": false
+                      },
+                      {
+                          "id": "9bb7c58c-1827-4206-8527-30afd2d11a12",
+                          "name": "Plan A15",
+                          "countries": 0,
+                          "countries_object": [],
+                          "organization_type": {
+                              "withTimestamps": false
+                          },
+                          "type": "Temporary",
+                          "active": false
+                      },
+                      {
+                          "id": "9bb7c01a-8e32-44e0-bf8c-1c2b8435b029",
+                          "name": "Plan A10",
+                          "countries": 0,
+                          "countries_object": [],
+                          "organization_type": {
+                              "withTimestamps": false
+                          },
+                          "type": "Temporary",
+                          "active": false
+                      },
+                      {
+                          "id": "9bb7bff9-6011-4ead-9a62-c29857d9777e",
+                          "name": "Plan A9",
+                          "countries": 0,
+                          "countries_object": [],
+                          "organization_type": {
+                              "withTimestamps": false
+                          },
+                          "type": "Temporary",
+                          "active": false
+                      },
+                      {
+                          "id": "9bb797ec-71d4-41cc-a925-ede56ca483c1",
+                          "name": "Plan A5",
+                          "countries": 0,
+                          "countries_object": [],
+                          "organization_type": {
+                              "withTimestamps": false
+                          },
+                          "type": "Temporary",
+                          "active": false
+                      },
+                      {
+                          "id": "9baa6a1f-a6ae-4a64-9330-aff8996c87f7",
+                          "name": "Plan At",
+                          "countries": 4,
+                          "countries_object": [
+                              {
+                                  "id": "9b9faee2-b64b-4aa1-b7ba-ab75b4b25b5c",
+                                  "name": "Belgium",
+                                  "region_id": "9b9ecc53-49e9-443f-9bc0-84a9c27d1652",
+                                  "currency_name": "Euro",
+                                  "currency_symbol": "EUR",
+                                  "active": true,
+                                  "flag": null,
+                                  "pivot": {
+                                      "plan_id": "9baa6a1f-a6ae-4a64-9330-aff8996c87f7",
+                                      "country_id": "9b9faee2-b64b-4aa1-b7ba-ab75b4b25b5c"
+                                  }
+                              },
+                              {
+                                  "id": "9b9faee2-d07e-4b89-90be-087b4cdad9da",
+                                  "name": "Cook Islands",
+                                  "region_id": "9b9ecc53-4acd-477c-8368-6493a1f9d98c",
+                                  "currency_name": "Cook Islands dollar",
+                                  "currency_symbol": "NZD",
+                                  "active": true,
+                                  "flag": null,
+                                  "pivot": {
+                                      "plan_id": "9baa6a1f-a6ae-4a64-9330-aff8996c87f7",
+                                      "country_id": "9b9faee2-d07e-4b89-90be-087b4cdad9da"
+                                  }
+                              },
+                              {
+                                  "id": "9b9faee2-dd02-4ae5-945c-0a57977b0ae0",
+                                  "name": "Egypt",
+                                  "region_id": "9b9ecc53-4276-4e13-bda6-461083ecb376",
+                                  "currency_name": "Egyptian pound",
+                                  "currency_symbol": "EGP",
+                                  "active": true,
+                                  "flag": null,
+                                  "pivot": {
+                                      "plan_id": "9baa6a1f-a6ae-4a64-9330-aff8996c87f7",
+                                      "country_id": "9b9faee2-dd02-4ae5-945c-0a57977b0ae0"
+                                  }
+                              },
+                              {
+                                  "id": "9b9faee2-c7c5-4f3f-951a-1ca8d5befc24",
+                                  "name": "Canada",
+                                  "region_id": "9b9ecc53-4727-43a1-bf0e-9e05de7c568a",
+                                  "currency_name": "Canadian dollar",
+                                  "currency_symbol": "CAD",
+                                  "active": true,
+                                  "flag": null,
+                                  "pivot": {
+                                      "plan_id": "9baa6a1f-a6ae-4a64-9330-aff8996c87f7",
+                                      "country_id": "9b9faee2-c7c5-4f3f-951a-1ca8d5befc24"
+                                  }
+                              }
+                          ],
+                          "organization_type": {
+                              "withTimestamps": false
+                          },
+                          "type": "Temporary",
+                          "active": false
+                      },
+                      {
+                          "id": "9baa6982-007e-4ee0-a8e7-5be6b84878da",
+                          "name": "Plan A@",
+                          "countries": 0,
+                          "countries_object": [],
+                          "organization_type": {
+                              "withTimestamps": false
+                          },
+                          "type": "Temporary",
+                          "active": false
+                      },
+                      {
+                          "id": "9ba9fac4-be23-4414-af12-9ad7bc7061bb",
+                          "name": "Plan A1",
+                          "countries": 0,
+                          "countries_object": [],
+                          "organization_type": {
+                              "withTimestamps": false
+                          },
+                          "type": "Temporary",
+                          "active": false
+                      },
+                      {
+                          "id": "9ba9f821-48e9-4c23-beaf-485bd0ff685f",
+                          "name": "Plan A",
+                          "countries": 0,
+                          "countries_object": [],
+                          "organization_type": {
+                              "withTimestamps": false
+                          },
+                          "type": "Temporary",
+                          "active": false
+                      },
+                      {
+                          "id": "9ba9f17e-86fc-4586-a8ee-22833ceaead4",
+                          "name": "Awesome Plalinppn",
+                          "countries": 0,
+                          "countries_object": [],
+                          "organization_type": {
+                              "withTimestamps": false
+                          },
+                          "type": "Temporary",
+                          "active": false
+                      },
+                      {
+                          "id": "9ba9c292-9d9c-4297-91e3-9257d287d666",
+                          "name": "Awesome Plalinpn",
+                          "countries": 0,
+                          "countries_object": [],
+                          "organization_type": {
+                              "withTimestamps": false
+                          },
+                          "type": "Temporary",
+                          "active": true
+                      },
+                      {
+                          "id": "9ba9bd73-0507-4521-858c-ed991ea5a1d9",
+                          "name": "Awesome Plalinn",
+                          "countries": 0,
+                          "countries_object": [],
+                          "organization_type": {
+                              "withTimestamps": false
+                          },
+                          "type": "Temporary",
+                          "active": true
+                      },
+                      {
+                          "id": "9ba9bd03-eb09-44e4-99cf-bed1d20bdb69",
+                          "name": "Awesome Plaln",
+                          "countries": 0,
+                          "countries_object": [],
+                          "organization_type": {
+                              "withTimestamps": false
+                          },
+                          "type": "Temporary",
+                          "active": true
+                      },
+                      {
+                          "id": "9ba7921d-a302-4b5a-b94d-6a6388df79b1",
+                          "name": "Awesome Plan",
+                          "countries": 0,
+                          "countries_object": [],
+                          "organization_type": {
+                              "withTimestamps": false
+                          },
+                          "type": "Temporary",
+                          "active": true
+                      },
+                      {
+                          "id": "1a1a1a1a-1a1a-1a1a-1a1a-1a1a1a1a1a11",
+                          "name": "Plan Name",
+                          "countries": 0,
+                          "countries_object": [],
+                          "organization_type": {
+                              "withTimestamps": false
+                          },
+                          "type": "Temporary",
+                          "active": false
+                      },
+                      {
+                          "id": "1a1a1a1a-1a1a-1a1a-1a1a-1a1a1a1a1a13",
+                          "name": "3rd Test plan",
+                          "countries": 0,
+                          "countries_object": [],
+                          "organization_type": {
+                              "withTimestamps": false
+                          },
+                          "type": "Temporary",
+                          "active": true
+                      }
+                  ],
+                  "total_pages": 1,
+                  "current_page": 1
+              }
+          }

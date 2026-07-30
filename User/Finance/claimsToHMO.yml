@@ -1,0 +1,443 @@
+info:
+  name: claimsToHMO
+  type: http
+  seq: 1
+
+http:
+  method: GET
+  url: "{{base_url}}/user/organization/claimsToHMO?search=Relaince"
+  headers:
+    - name: Accept
+      value: application/json
+  params:
+    - name: search
+      value: Relaince
+      type: query
+  auth:
+    type: bearer
+    token: "{{token}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+examples:
+  - name: claimsToHMO
+    request:
+      url: "{{base_url}}/user/organization/claimsToHMO?search=Relaince"
+      method: GET
+      headers:
+        - name: Accept
+          value: application/json
+      params:
+        - name: search
+          value: Relaince
+          type: query
+    response:
+      status: 200
+      statusText: OK
+      headers:
+        - name: Date
+          value: Mon, 14 Oct 2024 18:19:12 GMT
+        - name: Server
+          value: Apache/2.4.54 (Win64) OpenSSL/1.1.1d mod_fcgid/2.3.10-dev
+        - name: X-Powered-By
+          value: PHP/8.2.17
+        - name: Cache-Control
+          value: no-cache, private
+        - name: X-RateLimit-Limit
+          value: "60"
+        - name: X-RateLimit-Remaining
+          value: "58"
+        - name: Access-Control-Allow-Origin
+          value: "*"
+        - name: Vary
+          value: Authorization
+        - name: Keep-Alive
+          value: timeout=5, max=100
+        - name: Connection
+          value: Keep-Alive
+        - name: Transfer-Encoding
+          value: chunked
+        - name: Content-Type
+          value: application/json
+      body:
+        type: json
+        data: |-
+          {
+              "success": true,
+              "code": 0,
+              "locale": "en",
+              "message": "success",
+              "data": {
+                  "items": [
+                      {
+                          "id": "9d2e677d-b894-459c-aed9-32aa9cf42873",
+                          "total_services_amount": "80900.00",
+                          "total_services_amount_to_pay": "86967.50",
+                          "total_services_vat": "6067.50",
+                          "total_services_coverage": "0.00",
+                          "mode": "hmo",
+                          "bill_ids": "[\"9d219818-3fc1-4fb4-aa61-f6bbaad9946c\"]",
+                          "created_at": "2024-10-06T14:51:43.000000Z",
+                          "updated_at": "2024-10-14T18:02:07.000000Z",
+                          "amount_paid": "1000.00",
+                          "notes": "notes",
+                          "receipt_no": "jfksjfi3u59",
+                          "payment_method": "deposit",
+                          "appointment_id": "9d19a29a-761c-4a44-8c3c-8e5bb7510df1",
+                          "patient_id": "9bf2e6d3-08c3-4826-b389-f0bebcca9fa9",
+                          "invoice_number": null,
+                          "payment_status": "completed",
+                          "hmo_id": "9bbbac52-edd1-4aa7-8254-c29c14fa6249",
+                          "company_id": null,
+                          "organization_id": "9bc5eb78-74d2-45f4-a677-05d07dca6a63",
+                          "payment_date": "2024-10-14",
+                          "patient": {
+                              "id": "9bf2e6d3-08c3-4826-b389-f0bebcca9fa9",
+                              "patient_sequence": "MHN_USAi2dCTNS"
+                          },
+                          "hmo": {
+                              "id": "9bbbac52-edd1-4aa7-8254-c29c14fa6249",
+                              "health_provider": "Relaince"
+                          }
+                      },
+                      {
+                          "id": "9d249889-fdb4-4c10-b5e9-84717904a17b",
+                          "total_services_amount": "46768.00",
+                          "total_services_amount_to_pay": "50275.60",
+                          "total_services_vat": "3507.60",
+                          "total_services_coverage": "0.00",
+                          "mode": "hmo",
+                          "bill_ids": "[\"9d0e918e-146d-458e-b913-fd1a06fe802c\", \"9d0e9212-8350-4202-8967-f95718f4eedb\", \"9d0e924d-2f88-4e7b-914b-1aa6d638792e\", \"9d17ee5a-bf2d-4aab-9bfb-6e8cb49bbb43\"]",
+                          "created_at": "2024-10-01T17:50:35.000000Z",
+                          "updated_at": "2024-10-12T21:32:22.000000Z",
+                          "amount_paid": "0.00",
+                          "notes": "notes",
+                          "receipt_no": "jfksjfi3u59",
+                          "payment_method": "deposit",
+                          "appointment_id": "9d19a29a-761c-4a44-8c3c-8e5bb7510df1",
+                          "patient_id": "9bf2e6d3-08c3-4826-b389-f0bebcca9fa9",
+                          "invoice_number": null,
+                          "payment_status": "completed",
+                          "hmo_id": "9bc5b9fd-76bf-4402-b57f-65efb7e53cb6",
+                          "company_id": null,
+                          "organization_id": "9bc5eb78-74d2-45f4-a677-05d07dca6a63",
+                          "payment_date": null,
+                          "patient": {
+                              "id": "9bf2e6d3-08c3-4826-b389-f0bebcca9fa9",
+                              "patient_sequence": "MHN_USAi2dCTNS"
+                          },
+                          "hmo": {
+                              "id": "9bc5b9fd-76bf-4402-b57f-65efb7e53cb6",
+                              "health_provider": "MH"
+                          }
+                      }
+                  ]
+              }
+          }
+  - name: claimsToHMO
+    request:
+      url: "{{base_url}}/user/organization/claimsToHMO?search=Relaince"
+      method: GET
+      headers:
+        - name: Accept
+          value: application/json
+      params:
+        - name: search
+          value: Relaince
+          type: query
+    response:
+      status: 200
+      statusText: OK
+      headers:
+        - name: Date
+          value: Mon, 02 Dec 2024 16:03:18 GMT
+        - name: Server
+          value: Apache/2.4.54 (Win64) OpenSSL/1.1.1d mod_fcgid/2.3.10-dev
+        - name: X-Powered-By
+          value: PHP/8.2.17
+        - name: Cache-Control
+          value: no-cache, private
+        - name: X-RateLimit-Limit
+          value: "60"
+        - name: X-RateLimit-Remaining
+          value: "59"
+        - name: Access-Control-Allow-Origin
+          value: "*"
+        - name: Vary
+          value: Authorization
+        - name: Keep-Alive
+          value: timeout=5, max=100
+        - name: Connection
+          value: Keep-Alive
+        - name: Transfer-Encoding
+          value: chunked
+        - name: Content-Type
+          value: application/json
+      body:
+        type: json
+        data: |-
+          {
+              "success": true,
+              "code": 0,
+              "locale": "en",
+              "message": "success",
+              "data": {
+                  "items": [
+                      {
+                          "id": "9bbbac52-edd1-4aa7-8254-c29c14fa6249",
+                          "total_services_amount": "80900.00",
+                          "total_services_amount_to_pay": "86967.50",
+                          "total_services_vat": "6067.50",
+                          "total_services_coverage": "0.00",
+                          "mode": "hmo",
+                          "bill_ids": "[\"9d0e9233-343e-404e-ba63-28cf91c45749\"]",
+                          "created_at": "2024-04-05T07:52:03.000000Z",
+                          "updated_at": "2024-04-05T13:49:10.000000Z",
+                          "amount_paid": "0.00",
+                          "notes": "notes",
+                          "receipt_no": "jfksjfi3u59",
+                          "payment_method": "deposit",
+                          "appointment_id": "9d19a29a-761c-4a44-8c3c-8e5bb7510df1",
+                          "patient_id": "9bf2e6d3-08c3-4826-b389-f0bebcca9fa9",
+                          "invoice_number": null,
+                          "payment_status": "completed",
+                          "hmo_id": "9bbbac52-edd1-4aa7-8254-c29c14fa6249",
+                          "company_id": null,
+                          "organization_id": "9bc5eb78-74d2-45f4-a677-05d07dca6a63",
+                          "payment_date": "2024-10-21",
+                          "created_by_organization_id": null,
+                          "patient_sequence": "MHN_USAi2dCTNS",
+                          "title": "Mr",
+                          "first_name": "John",
+                          "last_name": "Doe",
+                          "middle_name": "Henry",
+                          "dob": "1990-05-15",
+                          "gender": "Male",
+                          "occupation": "Engineer",
+                          "nin": "12345678901",
+                          "martial_status": "Single",
+                          "tribe": "Yoruba",
+                          "religion": "Christianity",
+                          "preferred_language": null,
+                          "status": "active",
+                          "city_id": null,
+                          "state_id": null,
+                          "country_id": "9b9faee2-a2a4-4bcc-a758-53dfee793de6",
+                          "address": null,
+                          "email_address": null,
+                          "additional_mobile": null,
+                          "primary_mobile": null,
+                          "deleted_at": null,
+                          "user_id": null,
+                          "file_number": null,
+                          "health_provider": "Relaince",
+                          "type": "public",
+                          "contact_name": "Moyo",
+                          "contact_email_address": "moyo@reliance.com",
+                          "contact_phone_number": "09023456789",
+                          "description": null,
+                          "patient": {
+                              "id": "9bf2e6d3-08c3-4826-b389-f0bebcca9fa9",
+                              "patient_sequence": "MHN_USAi2dCTNS"
+                          },
+                          "hmo": {
+                              "id": "9bbbac52-edd1-4aa7-8254-c29c14fa6249",
+                              "health_provider": "Relaince"
+                          }
+                      },
+                      {
+                          "id": "9bbbac52-edd1-4aa7-8254-c29c14fa6249",
+                          "total_services_amount": "50000.00",
+                          "total_services_amount_to_pay": "48000.00",
+                          "total_services_vat": "2000.00",
+                          "total_services_coverage": "3000.00",
+                          "mode": "hmo",
+                          "bill_ids": "[\"9d0e9233-343e-404e-ba63-28cf91c45749\"]",
+                          "created_at": "2024-04-05T07:52:03.000000Z",
+                          "updated_at": "2024-04-05T13:49:10.000000Z",
+                          "amount_paid": null,
+                          "notes": null,
+                          "receipt_no": null,
+                          "payment_method": null,
+                          "appointment_id": "9d167445-bd3e-405f-913a-e99c91aa5f8c",
+                          "patient_id": "9c7adca5-7205-43b4-b60d-04ebb7769058",
+                          "invoice_number": null,
+                          "payment_status": "completed",
+                          "hmo_id": "9bbbac52-edd1-4aa7-8254-c29c14fa6249",
+                          "company_id": null,
+                          "organization_id": "9bc5eb78-74d2-45f4-a677-05d07dca6a63",
+                          "payment_date": null,
+                          "created_by_organization_id": "9bc5eb78-74d2-45f4-a677-05d07dca6a63",
+                          "patient_sequence": "MHN_USASuwRhjh",
+                          "title": "Mr",
+                          "first_name": "Emma1",
+                          "last_name": "Prince1",
+                          "middle_name": "Ogbuagu1",
+                          "dob": "2022-02-02",
+                          "gender": "male",
+                          "occupation": "Engineer",
+                          "nin": "79183109178",
+                          "martial_status": "single",
+                          "tribe": "Igbo",
+                          "religion": "Christianity",
+                          "preferred_language": "9bfad77f-9532-493c-88b9-6b99ebe55b8b",
+                          "status": "active",
+                          "city_id": "9ba1338d-f1ca-487b-ae34-471ddc6a7bc2",
+                          "state_id": "9ba01c32-186f-4ce1-84a5-0ee8884d02de",
+                          "country_id": "9b9faee2-a2a4-4bcc-a758-53dfee793de6",
+                          "address": "31 Onitsha Rd",
+                          "email_address": "lovebirds@mhn.com",
+                          "additional_mobile": "09087653421",
+                          "primary_mobile": "08023456789",
+                          "deleted_at": null,
+                          "user_id": "9c7adca5-79a9-4e10-af01-43690eb915da",
+                          "file_number": "98530903",
+                          "health_provider": "Relaince",
+                          "type": "public",
+                          "contact_name": "Moyo",
+                          "contact_email_address": "moyo@reliance.com",
+                          "contact_phone_number": "09023456789",
+                          "description": null,
+                          "patient": {
+                              "id": "9c7adca5-7205-43b4-b60d-04ebb7769058",
+                              "patient_sequence": "MHN_USASuwRhjh"
+                          },
+                          "hmo": {
+                              "id": "9bbbac52-edd1-4aa7-8254-c29c14fa6249",
+                              "health_provider": "Relaince"
+                          }
+                      },
+                      {
+                          "id": "9bbbac52-edd1-4aa7-8254-c29c14fa6249",
+                          "total_services_amount": "36212.00",
+                          "total_services_amount_to_pay": "31685.50",
+                          "total_services_vat": "2715.90",
+                          "total_services_coverage": "7242.40",
+                          "mode": "hmo",
+                          "bill_ids": "[\"9d3ee0e9-ff45-478e-9ec3-1bca391d4e8a\"]",
+                          "created_at": "2024-04-05T07:52:03.000000Z",
+                          "updated_at": "2024-04-05T13:49:10.000000Z",
+                          "amount_paid": null,
+                          "notes": null,
+                          "receipt_no": null,
+                          "payment_method": null,
+                          "appointment_id": "9d167445-bd3e-405f-913a-e99c91aa5f8c",
+                          "patient_id": "9c7adca5-7205-43b4-b60d-04ebb7769058",
+                          "invoice_number": "INV-00000003",
+                          "payment_status": "completed",
+                          "hmo_id": "9bbbac52-edd1-4aa7-8254-c29c14fa6249",
+                          "company_id": null,
+                          "organization_id": "9bc5eb78-74d2-45f4-a677-05d07dca6a63",
+                          "payment_date": "2024-10-06",
+                          "created_by_organization_id": "9bc5eb78-74d2-45f4-a677-05d07dca6a63",
+                          "patient_sequence": "MHN_USASuwRhjh",
+                          "title": "Mr",
+                          "first_name": "Emma1",
+                          "last_name": "Prince1",
+                          "middle_name": "Ogbuagu1",
+                          "dob": "2022-02-02",
+                          "gender": "male",
+                          "occupation": "Engineer",
+                          "nin": "79183109178",
+                          "martial_status": "single",
+                          "tribe": "Igbo",
+                          "religion": "Christianity",
+                          "preferred_language": "9bfad77f-9532-493c-88b9-6b99ebe55b8b",
+                          "status": "active",
+                          "city_id": "9ba1338d-f1ca-487b-ae34-471ddc6a7bc2",
+                          "state_id": "9ba01c32-186f-4ce1-84a5-0ee8884d02de",
+                          "country_id": "9b9faee2-a2a4-4bcc-a758-53dfee793de6",
+                          "address": "31 Onitsha Rd",
+                          "email_address": "lovebirds@mhn.com",
+                          "additional_mobile": "09087653421",
+                          "primary_mobile": "08023456789",
+                          "deleted_at": null,
+                          "user_id": "9c7adca5-79a9-4e10-af01-43690eb915da",
+                          "file_number": "98530903",
+                          "health_provider": "Relaince",
+                          "type": "public",
+                          "contact_name": "Moyo",
+                          "contact_email_address": "moyo@reliance.com",
+                          "contact_phone_number": "09023456789",
+                          "description": null,
+                          "patient": {
+                              "id": "9c7adca5-7205-43b4-b60d-04ebb7769058",
+                              "patient_sequence": "MHN_USASuwRhjh"
+                          },
+                          "hmo": {
+                              "id": "9bbbac52-edd1-4aa7-8254-c29c14fa6249",
+                              "health_provider": "Relaince"
+                          }
+                      },
+                      {
+                          "id": "9bbbac52-edd1-4aa7-8254-c29c14fa6249",
+                          "total_services_amount": "46768.00",
+                          "total_services_amount_to_pay": "50275.60",
+                          "total_services_vat": "3507.60",
+                          "total_services_coverage": "0.00",
+                          "mode": "hmo",
+                          "bill_ids": "[\"9d0e918e-146d-458e-b913-fd1a06fe802c\", \"9d0e9212-8350-4202-8967-f95718f4eedb\", \"9d0e924d-2f88-4e7b-914b-1aa6d638792e\", \"9d17ee5a-bf2d-4aab-9bfb-6e8cb49bbb43\"]",
+                          "created_at": "2024-04-05T07:52:03.000000Z",
+                          "updated_at": "2024-04-05T13:49:10.000000Z",
+                          "amount_paid": "0.00",
+                          "notes": "notes",
+                          "receipt_no": "jfksjfi3u59",
+                          "payment_method": "deposit",
+                          "appointment_id": "9d19a29a-761c-4a44-8c3c-8e5bb7510df1",
+                          "patient_id": "9bf2e6d3-08c3-4826-b389-f0bebcca9fa9",
+                          "invoice_number": null,
+                          "payment_status": "completed",
+                          "hmo_id": "9bbbac52-edd1-4aa7-8254-c29c14fa6249",
+                          "company_id": null,
+                          "organization_id": "9bc5eb78-74d2-45f4-a677-05d07dca6a63",
+                          "payment_date": "2024-10-05",
+                          "created_by_organization_id": null,
+                          "patient_sequence": "MHN_USAi2dCTNS",
+                          "title": "Mr",
+                          "first_name": "John",
+                          "last_name": "Doe",
+                          "middle_name": "Henry",
+                          "dob": "1990-05-15",
+                          "gender": "Male",
+                          "occupation": "Engineer",
+                          "nin": "12345678901",
+                          "martial_status": "Single",
+                          "tribe": "Yoruba",
+                          "religion": "Christianity",
+                          "preferred_language": null,
+                          "status": "active",
+                          "city_id": null,
+                          "state_id": null,
+                          "country_id": "9b9faee2-a2a4-4bcc-a758-53dfee793de6",
+                          "address": null,
+                          "email_address": null,
+                          "additional_mobile": null,
+                          "primary_mobile": null,
+                          "deleted_at": null,
+                          "user_id": null,
+                          "file_number": null,
+                          "health_provider": "Relaince",
+                          "type": "public",
+                          "contact_name": "Moyo",
+                          "contact_email_address": "moyo@reliance.com",
+                          "contact_phone_number": "09023456789",
+                          "description": null,
+                          "patient": {
+                              "id": "9bf2e6d3-08c3-4826-b389-f0bebcca9fa9",
+                              "patient_sequence": "MHN_USAi2dCTNS"
+                          },
+                          "hmo": {
+                              "id": "9bbbac52-edd1-4aa7-8254-c29c14fa6249",
+                              "health_provider": "Relaince"
+                          }
+                      }
+                  ],
+                  "take": 20,
+                  "page": 1,
+                  "total": 4
+              }
+          }

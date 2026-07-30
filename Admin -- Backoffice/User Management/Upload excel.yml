@@ -1,0 +1,98 @@
+info:
+  name: Upload excel
+  type: http
+  seq: 6
+
+http:
+  method: POST
+  url: "{{base_url}}/admin/user/bulk-upload"
+  headers:
+    - name: Accept
+      value: multipart/form-data
+    - name: Accept
+      value: application/json
+  body:
+    type: multipart-form
+    data:
+      - name: file
+        type: file
+        value:
+          - UTdkuV0IC/account_import_sample.xlsx
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+examples:
+  - name: Upload excel
+    request:
+      url: "{{base_url}}/admin/bulk-upload"
+      method: POST
+      headers:
+        - name: Accept
+          value: multipart/form-data
+      body:
+        type: multipart-form
+        data:
+          - name: file
+            type: file
+            value:
+              - /C:/Users/MY PC/Downloads/plans.xlsx
+            description: excel or csv
+    response:
+      status: 200
+      statusText: OK
+      headers:
+        - name: Date
+          value: Wed, 03 Apr 2024 16:29:26 GMT
+        - name: Server
+          value: Apache/2.4.54 (Win64) OpenSSL/1.1.1q mod_fcgid/2.3.10-dev
+        - name: X-Powered-By
+          value: PHP/8.2.16
+        - name: Cache-Control
+          value: no-cache, private
+        - name: X-RateLimit-Limit
+          value: "60"
+        - name: X-RateLimit-Remaining
+          value: "59"
+        - name: Access-Control-Allow-Origin
+          value: "*"
+        - name: Vary
+          value: Authorization
+        - name: Keep-Alive
+          value: timeout=5, max=100
+        - name: Connection
+          value: Keep-Alive
+        - name: Transfer-Encoding
+          value: chunked
+        - name: Content-Type
+          value: application/json
+      body:
+        type: json
+        data: |-
+          {
+              "success": true,
+              "code": 0,
+              "locale": "en",
+              "message": "File is being processed...",
+              "data": {
+                  "batch": {
+                      "item": {
+                          "id": "9bb85f64-675d-4fdd-8d39-136676db414f",
+                          "name": "",
+                          "totalJobs": 0,
+                          "pendingJobs": 0,
+                          "processedJobs": 0,
+                          "progress": 0,
+                          "failedJobs": 0,
+                          "options": [],
+                          "createdAt": "2024-04-03T16:29:27.000000Z",
+                          "cancelledAt": null,
+                          "finishedAt": null
+                      }
+                  }
+              }
+          }

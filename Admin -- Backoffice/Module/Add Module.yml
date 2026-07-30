@@ -1,0 +1,26 @@
+info:
+  name: Add Module
+  type: http
+  seq: 1
+
+http:
+  method: POST
+  url: "{{base_url}}/admin/module"
+  body:
+    type: json
+    data: |-
+      {
+          "name": "Extra Juice",
+          "img": "url",
+          "description": "This helps you to manage your hospital Emergency seamlessly.",
+          "organization_type_id":"1"
+      }
+  auth:
+    type: bearer
+    token: "{{token}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

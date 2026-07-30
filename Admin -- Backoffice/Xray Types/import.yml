@@ -1,0 +1,22 @@
+info:
+  name: import
+  type: http
+  seq: 4
+
+http:
+  method: POST
+  url: "{{base_url}}/admin/xrayTypes/import"
+  body:
+    type: multipart-form
+    data:
+      - name: file
+        type: file
+        value:
+          - srIUNvmIU/xray_types_sample.csv
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

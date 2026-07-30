@@ -1,0 +1,182 @@
+info:
+  name: List coverage types
+  type: http
+  seq: 1
+
+http:
+  method: POST
+  url: "{{base_url}}/user/organization/coverage_type"
+  headers:
+    - name: Accept
+      value: application/json
+  body:
+    type: json
+    data: "{\r
+
+      \    \"type\":\"company\", // hmo or company\r
+
+      \    \"hmo_service_id\":\"\", //only needed when type is hmo\r
+
+      \    \"company_service_id\":\"9bea89a8-c631-4389-9fc6-090499184ff6\" //only needed when type is company\r
+
+      }"
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+examples:
+  - name: List coverage types
+    request:
+      url: "{{base_url}}/user/organization/coverage_type"
+      method: POST
+      headers:
+        - name: Accept
+          value: application/json
+      body:
+        type: json
+        data: "{\r
+
+          \    \"type\":\"company\", // hmo or company\r
+
+          \    //\"hmo_service_id\":\"\",\r
+
+          \    \"company_service_id\":\"9bea89a8-c631-4389-9fc6-090499184ff6\"\r
+
+          }"
+    response:
+      status: 200
+      statusText: OK
+      headers:
+        - name: Date
+          value: Fri, 03 May 2024 01:09:13 GMT
+        - name: Server
+          value: Apache/2.4.54 (Win64) OpenSSL/1.1.1q mod_fcgid/2.3.10-dev
+        - name: X-Powered-By
+          value: PHP/8.2.16
+        - name: Cache-Control
+          value: no-cache, private
+        - name: X-RateLimit-Limit
+          value: "60"
+        - name: X-RateLimit-Remaining
+          value: "59"
+        - name: Access-Control-Allow-Origin
+          value: "*"
+        - name: Vary
+          value: Authorization
+        - name: Keep-Alive
+          value: timeout=5, max=100
+        - name: Connection
+          value: Keep-Alive
+        - name: Transfer-Encoding
+          value: chunked
+        - name: Content-Type
+          value: application/json
+      body:
+        type: json
+        data: |-
+          {
+              "success": true,
+              "code": 0,
+              "locale": "en",
+              "message": "Coverage list",
+              "data": {
+                  "items": [
+                      {
+                          "id": "9bea89a8-c703-4feb-a033-7813bbebf5df",
+                          "company_service_id": "9bea89a8-c631-4389-9fc6-090499184ff6",
+                          "coverage_type": "full",
+                          "category": "patient_only",
+                          "amount": "5000.00",
+                          "percent": "20.00",
+                          "status": "active",
+                          "created_at": "2024-04-28T14:59:01.000000Z",
+                          "updated_at": "2024-04-28T14:59:01.000000Z"
+                      },
+                      {
+                          "id": "9bea89a8-c8e5-4973-8990-95165503277e",
+                          "company_service_id": "9bea89a8-c631-4389-9fc6-090499184ff6",
+                          "coverage_type": "partial",
+                          "category": "patient_and_family",
+                          "amount": "10000.00",
+                          "percent": "0.00",
+                          "status": "active",
+                          "created_at": "2024-04-28T14:59:01.000000Z",
+                          "updated_at": "2024-04-28T14:59:01.000000Z"
+                      }
+                  ]
+              }
+          }
+  - name: List coverage types
+    request:
+      url: "{{base_url}}/user/organization/coverage_type"
+      method: POST
+      headers:
+        - name: Accept
+          value: application/json
+      body:
+        type: json
+        data: "{\r
+
+          \    \"type\":\"hmo\", // hmo or company\r
+
+          \    \"hmo_service_id\":\"9bea707c-8f3a-4aeb-870f-d942ca7e3a02\"\r
+
+          \    //\"company_service_id\":\"9bea89a8-c631-4389-9fc6-090499184ff6\"\r
+
+          }"
+    response:
+      status: 200
+      statusText: OK
+      headers:
+        - name: Date
+          value: Fri, 03 May 2024 01:13:22 GMT
+        - name: Server
+          value: Apache/2.4.54 (Win64) OpenSSL/1.1.1q mod_fcgid/2.3.10-dev
+        - name: X-Powered-By
+          value: PHP/8.2.16
+        - name: Cache-Control
+          value: no-cache, private
+        - name: X-RateLimit-Limit
+          value: "60"
+        - name: X-RateLimit-Remaining
+          value: "59"
+        - name: Access-Control-Allow-Origin
+          value: "*"
+        - name: Vary
+          value: Authorization
+        - name: Keep-Alive
+          value: timeout=5, max=100
+        - name: Connection
+          value: Keep-Alive
+        - name: Transfer-Encoding
+          value: chunked
+        - name: Content-Type
+          value: application/json
+      body:
+        type: json
+        data: |-
+          {
+              "success": true,
+              "code": 0,
+              "locale": "en",
+              "message": "Coverage list",
+              "data": {
+                  "items": [
+                      {
+                          "id": "9bea707c-8f85-43af-b9f4-759b39b7823e",
+                          "hmo_service_id": "9bea707c-8f3a-4aeb-870f-d942ca7e3a02",
+                          "coverage_type": "full",
+                          "category": "patient_only",
+                          "amount": "5000.00",
+                          "percent": "20.00",
+                          "status": "active",
+                          "created_at": "2024-04-28T13:48:38.000000Z",
+                          "updated_at": "2024-04-28T13:48:38.000000Z"
+                      }
+                  ]
+              }
+          }

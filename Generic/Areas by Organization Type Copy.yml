@@ -1,0 +1,22 @@
+info:
+  name: Areas by Organization Type Copy
+  type: http
+  seq: 4
+
+http:
+  method: GET
+  url: "{{base_url}}/generic/health-area/get"
+  body:
+    type: json
+    data: "{\r
+
+      \  \"organization_type_id\": 4\r
+
+      }"
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

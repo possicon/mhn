@@ -1,0 +1,24 @@
+info:
+  name: Reject Organization
+  type: http
+  seq: 8
+
+http:
+  method: PATCH
+  url: "{{base_url}}/admin/organization/:id/contact"
+  params:
+    - name: id
+      value: 9b81fd3c-392c-4570-8f85-7122fc32308d
+      type: path
+  body:
+    type: json
+    data: ""
+  auth:
+    type: bearer
+    token: "{{token}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

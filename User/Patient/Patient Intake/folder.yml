@@ -1,0 +1,7 @@
+info:
+  name: Patient Intake
+  type: folder
+  seq: 36
+
+request:
+  auth: inherit

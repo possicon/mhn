@@ -1,0 +1,27 @@
+info:
+  name: download sample
+  type: http
+  seq: 7
+
+http:
+  method: POST
+  url: "{{base_url}}/user/organization/unit/sample"
+  headers:
+    - name: Accept
+      value: application/json
+  body:
+    type: multipart-form
+    data:
+      - name: file
+        type: file
+        value:
+          - OpcrKpRzO/unit_measurements.csv
+  auth:
+    type: bearer
+    token: 78|IJJwsPNGwfjrHdMvXfMgKzfYaTOw56YXrF1VLHE8b494a4af
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
