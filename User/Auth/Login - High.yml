@@ -11,19 +11,14 @@ http:
       value: application/json
   body:
     type: json
-    data: "{\r
-
-      \    // \"email\": \"contactus@mhn.ng\",\r
-
-      \    \"email\": \"lekki@gmail.com\",\r
-
-      \    //\"username\": \"0802323232323\", // If user has username set, he can log in with it.\r
-
-      \    \"password\":\"Skim@007\"\r
-
-      \    // \"password\":\"moyoMhn@35\"\r
-
-      }"
+    data: |-
+      {
+          // "email": "contactus@mhn.ng",
+          "email": "toheebabiodun03@gmail.com",
+          //"username": "0802323232323", // If user has username set, he can log in with it.
+          "password":"password"
+          // "password":"moyoMhn@35"
+      }
   auth: inherit
 
 runtime:
@@ -34,7 +29,9 @@ runtime:
         if (status === "OK") {
             const token = res.getBody().data.token
             console.log(token)
-            pm.collectionVariables.set("local_token", token)
+          bru.setCollectionVar('local_token', token)
+          
+            
         }
 
 settings:

@@ -5,14 +5,10 @@ info:
 
 http:
   method: GET
-  url: "{{base_url}}/user/organization/xrayConfigList?paginate=true"
+  url: "{{base_url}}/user/organization/xrayConfigList"
   headers:
     - name: Accept
       value: application/json
-  params:
-    - name: paginate
-      value: "true"
-      type: query
   body:
     type: text
     data: "{\r

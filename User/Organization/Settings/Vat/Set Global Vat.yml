@@ -1,0 +1,77 @@
+info:
+  name: Set Global Vat
+  type: http
+  seq: 1
+
+http:
+  method: POST
+  url: "{{base_url}}/user/organization/settings/vat"
+  body:
+    type: json
+    data: |-
+      {
+        "service_vat" : true,
+        "hmo_vat" : true
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+examples:
+  - name: Set organization vat
+    request:
+      url: "{{base_url}}/user/organization/settings/vat"
+      method: POST
+      body:
+        type: json
+        data: |-
+          {
+            "service_vat" : true,
+            "hmo_vat" : true
+          }
+    response:
+      status: 200
+      statusText: OK
+      headers:
+        - name: server
+          value: nginx/1.24.0 (Ubuntu)
+        - name: content-type
+          value: application/json
+        - name: transfer-encoding
+          value: chunked
+        - name: connection
+          value: keep-alive
+        - name: cache-control
+          value: no-cache, private
+        - name: date
+          value: Tue, 04 Aug 2026 07:17:14 GMT
+        - name: x-ratelimit-limit
+          value: "60"
+        - name: x-ratelimit-remaining
+          value: "59"
+        - name: vary
+          value: Origin
+        - name: x-frame-options
+          value: SAMEORIGIN
+        - name: x-xss-protection
+          value: 1; mode=block
+        - name: x-content-type-options
+          value: nosniff
+      body:
+        type: json
+        data: |-
+          {
+            "message": "VAT settings updated successfully.",
+            "data": {
+              "id": 1,
+              "organization_id": "a134be07-5a37-4059-b549-37210fe65250",
+              "service_vat": true,
+              "hmo_vat": true,
+              "created_at": "2026-08-04T07:16:41.000000Z",
+              "updated_at": "2026-08-04T07:16:41.000000Z"
+            }
+          }

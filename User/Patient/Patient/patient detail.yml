@@ -8,7 +8,7 @@ http:
   url: "{{base_url}}/user/patient/:id"
   params:
     - name: id
-      value: 9c111152-abe1-4490-ab04-c066445133a7
+      value: a24f73d5-331c-4847-b41a-4196888d00ff
       type: path
   auth: inherit
 

@@ -11,11 +11,9 @@ http:
       value: application/json
   params:
     - name: patient_id
-      value: 9c7adca5-7205-43b4-b60d-04ebb7769058
+      value: a1386445-cc49-468b-b5b8-a1c161d2d279
       type: path
-  auth:
-    type: bearer
-    token: 64|wekxmT6fEC7W1savxR3VWd2fcLOu9fkY2pdTExtBe40532c7
+  auth: inherit
 
 settings:
   encodeUrl: true

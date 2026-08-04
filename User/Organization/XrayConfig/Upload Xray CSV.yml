@@ -1,0 +1,77 @@
+info:
+  name: Upload Xray CSV
+  type: http
+  seq: 3
+
+http:
+  method: POST
+  url: "{{base_url}}/user/organization/uploadXrayConfigCsv"
+  body:
+    type: multipart-form
+    data:
+      - name: file
+        type: file
+        value:
+          - /home/lawpavilion/Music/xray.csv
+        contentType: text/csv; charset=utf-8
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+examples:
+  - name: Upload Xray Bulk upload csv file
+    request:
+      url: "{{base_url}}/user/organization/uploadXrayConfigCsv"
+      method: POST
+      body:
+        type: multipart-form
+        data:
+          - name: file
+            type: file
+            value:
+              - /home/lawpavilion/Music/xray.csv
+            contentType: text/csv; charset=utf-8
+    response:
+      status: 200
+      statusText: OK
+      headers:
+        - name: server
+          value: nginx/1.24.0 (Ubuntu)
+        - name: content-type
+          value: application/json
+        - name: transfer-encoding
+          value: chunked
+        - name: connection
+          value: keep-alive
+        - name: cache-control
+          value: no-cache, private
+        - name: date
+          value: Tue, 04 Aug 2026 06:59:40 GMT
+        - name: x-ratelimit-limit
+          value: "60"
+        - name: x-ratelimit-remaining
+          value: "59"
+        - name: vary
+          value: Origin
+        - name: x-frame-options
+          value: SAMEORIGIN
+        - name: x-xss-protection
+          value: 1; mode=block
+        - name: x-content-type-options
+          value: nosniff
+      body:
+        type: json
+        data: |-
+          {
+            "success": true,
+            "code": 0,
+            "locale": "en",
+            "message": "CSV upload initiated, processing in background.",
+            "data": {
+              "batch_id": "a26b8510-9b44-44db-9e0f-db6b1f7d7f02"
+            }
+          }

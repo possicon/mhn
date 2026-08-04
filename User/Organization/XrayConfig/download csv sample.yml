@@ -1,0 +1,78 @@
+info:
+  name: download csv sample
+  type: http
+  seq: 2
+
+http:
+  method: POST
+  url: "{{base_url}}/user/organization/sample/downloadXrayConfigSample"
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+examples:
+  - name: Download csv sample
+    request:
+      url: "{{base_url}}/user/organization/sample/downloadXrayConfigSample"
+      method: POST
+    response:
+      status: 200
+      statusText: OK
+      headers:
+        - name: server
+          value: nginx/1.24.0 (Ubuntu)
+        - name: content-type
+          value: text/csv; charset=UTF-8
+        - name: transfer-encoding
+          value: chunked
+        - name: connection
+          value: keep-alive
+        - name: content-disposition
+          value: attachment; filename=lab_config_sample.csv
+        - name: cache-control
+          value: no-cache, private
+        - name: date
+          value: Tue, 04 Aug 2026 06:56:58 GMT
+        - name: x-ratelimit-limit
+          value: "60"
+        - name: x-ratelimit-remaining
+          value: "59"
+        - name: vary
+          value: Origin
+        - name: x-frame-options
+          value: SAMEORIGIN
+        - name: x-xss-protection
+          value: 1; mode=block
+        - name: x-content-type-options
+          value: nosniff
+      body:
+        type: text
+        data: |
+          category,sub_category,scan_name,gender,description,result_type
+          ultrasounds,"MRI or CT Scan","Abdominal Ultrasound","Male or Female",,
+          X-rays,"MRI or CT Scan","Abdominal X-Ray","Male or Female",,
+          X-rays,"MRI or CT Scan","Bone X-Ray","Male or Female",,
+          ultrasounds,"MRI or CT Scan","Breast Ultrasound","Male or Female",,
+          ultrasounds,"MRI or CT Scan","Cardiac Ultrasound","Male or Female",,
+          X-rays,"MRI or CT Scan","Chest X-Ray","Male or Female",,
+          X-rays,"MRI or CT Scan","Dental X-Ray","Male or Female",,
+          X-rays,"MRI or CT Scan","Extremity X-Ray","Male or Female",,
+          Ultrasounds,"MRI or CT Scan",Facilitator,"Male or Female",,
+          Ultrasounds,"MRI or CT Scan",haptic,"Male or Female",,
+          X-rays,"MRI or CT Scan","Lung X-Ray","Male or Female",,
+          ultrasounds,"MRI or CT Scan","Musculoskeletal Ultrasound","Male or Female",,
+          ultrasounds,"MRI or CT Scan","Obstetric Ultrasound","Male or Female",,
+          ultrasounds,"MRI or CT Scan","Pediatric Ultrasound","Male or Female",,
+          ultrasounds,"MRI or CT Scan","Pelvic Ultrasound","Male or Female",,
+          X-rays,"MRI or CT Scan","Pelvic X-Ray","Male or Female",,
+          ultrasounds,"MRI or CT Scan","Renal Ultrasound","Male or Female",,
+          X-rays,"MRI or CT Scan",Republic,"Male or Female",,
+          X-rays,"MRI or CT Scan","Skull X-Ray","Male or Female",,
+          X-rays,"MRI or CT Scan","Spinal X-Ray","Male or Female",,
+          X-rays,"MRI or CT Scan","Thoracic X-Ray","Male or Female",,
+          ultrasounds,"MRI or CT Scan","Thyroid Ultrasound","Male or Female",,
+          ultrasounds,"MRI or CT Scan","Transvaginal Ultrasound","Male or Female",,

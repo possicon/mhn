@@ -5,7 +5,7 @@ info:
 
 http:
   method: GET
-  url: "{{base_url}}/user/patient?page=1&take=50&search=MHN_USASuwRhjh&sort=first_name&direction=asc"
+  url: "{{base_url}}/user/patient?page=1&take=50"
   headers:
     - name: Accept
       value: application/json
@@ -16,18 +16,7 @@ http:
     - name: take
       value: "50"
       type: query
-    - name: search
-      value: MHN_USASuwRhjh
-      type: query
-    - name: sort
-      value: first_name
-      type: query
-    - name: direction
-      value: asc
-      type: query
-  auth:
-    type: bearer
-    token: "{{token}}"
+  auth: inherit
 
 settings:
   encodeUrl: true

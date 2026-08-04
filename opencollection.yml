@@ -2,6 +2,17 @@ opencollection: 1.0.0
 
 info:
   name: MHN API Endpoints
+config:
+  proxy:
+    inherit: true
+    config:
+      protocol: http
+      hostname: ""
+      port: ""
+      auth:
+        username: ""
+        password: ""
+      bypassProxy: ""
 
 request:
   auth:
@@ -11,9 +22,9 @@ request:
     - name: id
       value: "1"
     - name: base_url
-      value: http://api.mobilehealthnet.com/api/
+      value: http://mhn.test/api/v1
     - name: local_token
-      value: ""
+      value: 43|vMh6rq4ZGvNLYGw5CuCDQ4PVVibhX529FYKIW8Vw9c2306fe
     - name: adminToken
       value: ""
 

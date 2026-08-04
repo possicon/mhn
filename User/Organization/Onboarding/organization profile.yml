@@ -6,9 +6,7 @@ info:
 http:
   method: GET
   url: "{{base_url}}/user/organization/onboarding"
-  auth:
-    type: bearer
-    token: 78|IJJwsPNGwfjrHdMvXfMgKzfYaTOw56YXrF1VLHE8b494a4af
+  auth: inherit
 
 settings:
   encodeUrl: true
