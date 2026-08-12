@@ -23,10 +23,10 @@ http:
         value: male
       - name: email
         type: text
-        value: emmadev2@gmail.com
+        value: "{{$randomEmail}}"
       - name: role_id
         type: text
-        value: "2"
+        value: "23"
       - name: phone
         type: text
         value: "08043567890"
@@ -34,15 +34,12 @@ http:
         type: text
         value: http://mhn.net/page
       - name: profile_picture
-        type: file
-        value:
-          - veRni8gPW/IMG-20231127-WA0007.jpg
+        type: text
+        value: ""
       - name: country_call_code
         type: text
         value: "234"
-  auth:
-    type: bearer
-    token: 47|UmN9H6pr616bS7AzWWQMh3CtvONQIutQp8ISQUwwd269fcf2
+  auth: inherit
 
 settings:
   encodeUrl: true

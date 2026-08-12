@@ -24,7 +24,7 @@ request:
     - name: base_url
       value: http://mhn.test/api/v1
     - name: local_token
-      value: 43|vMh6rq4ZGvNLYGw5CuCDQ4PVVibhX529FYKIW8Vw9c2306fe
+      value: 52|Wzz2NHC2S2pq0t1nCH1rtdvzRmBoVqwzTZAk39dB6b5c2fe6
     - name: adminToken
       value: ""
 

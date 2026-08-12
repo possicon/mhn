@@ -8,7 +8,7 @@ http:
   url: "{{base_url}}/user/symptoms/:id"
   params:
     - name: id
-      value: 9c32ceaf-4fc5-4e4b-87c5-9328759370e1
+      value: a278911b-794d-44e6-831b-6548e55015ab
       type: path
   auth: inherit
 

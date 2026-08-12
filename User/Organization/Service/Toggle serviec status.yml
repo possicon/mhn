@@ -1,0 +1,83 @@
+info:
+  name: Toggle serviec status
+  type: http
+  seq: 32
+
+http:
+  method: PATCH
+  url: "{{base_url}}/user/organization/service/:id/toggle-status"
+  params:
+    - name: id
+      value: a26de92b-1709-497e-acae-d2987ada73f8
+      type: path
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+examples:
+  - name: change status
+    request:
+      url: "{{base_url}}/user/organization/service/:id/toggle-status"
+      method: PATCH
+      params:
+        - name: id
+          value: a26de92b-1709-497e-acae-d2987ada73f8
+          type: path
+    response:
+      status: 200
+      statusText: OK
+      headers:
+        - name: server
+          value: nginx/1.24.0 (Ubuntu)
+        - name: content-type
+          value: application/json
+        - name: transfer-encoding
+          value: chunked
+        - name: connection
+          value: keep-alive
+        - name: cache-control
+          value: no-cache, private
+        - name: date
+          value: Wed, 12 Aug 2026 16:56:01 GMT
+        - name: x-ratelimit-limit
+          value: "60"
+        - name: x-ratelimit-remaining
+          value: "57"
+        - name: vary
+          value: Origin
+        - name: x-frame-options
+          value: SAMEORIGIN
+        - name: x-xss-protection
+          value: 1; mode=block
+        - name: x-content-type-options
+          value: nosniff
+      body:
+        type: json
+        data: |-
+          {
+            "success": true,
+            "code": 0,
+            "locale": "en",
+            "message": "Service has been set to be inactive",
+            "data": {
+              "values": [
+                {
+                  "id": "a26de92b-1709-497e-acae-d2987ada73f8",
+                  "name": "Blood Group",
+                  "service_type": "clinical lab",
+                  "organization_id": null,
+                  "description": null,
+                  "category": "hematology ",
+                  "status": "inactive",
+                  "medicine_type": null,
+                  "amount": null,
+                  "created_at": "2026-08-05T11:31:10.000000Z",
+                  "updated_at": "2026-08-12T16:56:01.000000Z"
+                }
+              ]
+            }
+          }

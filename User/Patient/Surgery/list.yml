@@ -13,9 +13,7 @@ http:
     - name: surgery
       value: Neurosurgery
       type: path
-  auth:
-    type: bearer
-    token: 96|DfyKCUt7Nu01iH5zFVHIMFKDc0eF7b0wetkwuLUMc000a7c7
+  auth: inherit
 
 settings:
   encodeUrl: true

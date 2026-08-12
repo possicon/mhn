@@ -1,0 +1,77 @@
+info:
+  name: Import services to hmo
+  type: http
+  seq: 28
+
+http:
+  method: POST
+  url: "{{base_url}}/user/organization/hmo/importServices"
+  body:
+    type: json
+    data: |-
+      {
+              "hmo_id":"22d588e9-4f42-34f7-a734-707a8f7eb095",
+        "is_all" : true,
+        "services" : [""]
+
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+examples:
+  - name: import services to hmo
+    request:
+      url: "{{base_url}}/user/organization/hmo/importServices"
+      method: POST
+      body:
+        type: json
+        data: |-
+          {
+                  "hmo_id":"22d588e9-4f42-34f7-a734-707a8f7eb095",
+            "is_all" : true,
+            "services" : [""]
+
+          }
+    response:
+      status: 200
+      statusText: OK
+      headers:
+        - name: server
+          value: nginx/1.24.0 (Ubuntu)
+        - name: content-type
+          value: application/json
+        - name: transfer-encoding
+          value: chunked
+        - name: connection
+          value: keep-alive
+        - name: cache-control
+          value: no-cache, private
+        - name: date
+          value: Wed, 12 Aug 2026 18:13:10 GMT
+        - name: x-ratelimit-limit
+          value: "60"
+        - name: x-ratelimit-remaining
+          value: "59"
+        - name: vary
+          value: Origin
+        - name: x-frame-options
+          value: SAMEORIGIN
+        - name: x-xss-protection
+          value: 1; mode=block
+        - name: x-content-type-options
+          value: nosniff
+      body:
+        type: json
+        data: |-
+          {
+            "success": true,
+            "code": 0,
+            "locale": "en",
+            "message": "success",
+            "data": null
+          }

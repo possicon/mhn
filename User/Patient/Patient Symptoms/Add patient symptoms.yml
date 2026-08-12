@@ -11,25 +11,17 @@ http:
       value: application/json
   body:
     type: json
-    data: "{\r
-
-      \    \"body_parts\":[\"Head:Front/Side\",\"Neck:Front\"],\r
-
-      \    \"patient_id\":\"9c111152-abe1-4490-ab04-c066445133a7\",\r
-
-      \    \"symptoms\":[[\"Fever,Headache,High Cholesterol\"],[\"Fever\",\"Diabetes\"]],\r
-
-      \    \"occurrence\":[\"occasionally\",\"Daily\"],\r
-
-      \    \"note\":[\"Happens when i sleep too much without pillow\",\"I barely rest\"],\r
-
-      \    \"for_antenatal\":0,\r
-
-      \    \"primary\":\"icd10\"\r
-
-      \   // \"any_current_symptoms_or_concern\":[\"symptoms\",\"symptoms\"]\r
-
-      }"
+    data: |-
+      {
+          "body_parts":["Head:Front/Side","Neck:Front"],
+          "patient_id":"a134bd94-4206-44a3-8038-51e0328a3df0",
+          "symptoms":[["a2788e8c-8941-41cd-8bb0-26722846c41e"],["a2788e8c-9136-475b-92ac-c15e7699e24a"]],
+          "occurrence":["occasionally","Daily"],
+          "note":["Happens when i sleep too much without pillow","I barely rest"],
+          "for_antenatal":0,
+          "primary":["icd10"]
+         // "any_current_symptoms_or_concern":["symptoms","symptoms"]
+      }
   auth: inherit
 
 settings:

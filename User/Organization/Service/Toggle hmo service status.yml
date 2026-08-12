@@ -1,0 +1,87 @@
+info:
+  name: Toggle hmo service status
+  type: http
+  seq: 33
+
+http:
+  method: PATCH
+  url: "{{base_url}}/user/organization/hmoServiceItem/:hmoId/services/:serviceId/toggle-status"
+  params:
+    - name: hmoId
+      value: 22d588e9-4f42-34f7-a734-707a8f7eb095
+      type: path
+    - name: serviceId
+      value: a134bd8b-b2f0-410c-a15f-b006b89602ac
+      type: path
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+examples:
+  - name: change status
+    request:
+      url: "{{base_url}}/user/organization/hmoServiceItem/:hmoId/services/:serviceId/toggle-status"
+      method: PATCH
+      params:
+        - name: hmoId
+          value: 22d588e9-4f42-34f7-a734-707a8f7eb095
+          type: path
+        - name: serviceId
+          value: a134bd8b-b2f0-410c-a15f-b006b89602ac
+          type: path
+    response:
+      status: 200
+      statusText: OK
+      headers:
+        - name: server
+          value: nginx/1.24.0 (Ubuntu)
+        - name: content-type
+          value: application/json
+        - name: transfer-encoding
+          value: chunked
+        - name: connection
+          value: keep-alive
+        - name: cache-control
+          value: no-cache, private
+        - name: date
+          value: Wed, 12 Aug 2026 16:56:16 GMT
+        - name: x-ratelimit-limit
+          value: "60"
+        - name: x-ratelimit-remaining
+          value: "56"
+        - name: vary
+          value: Origin
+        - name: x-frame-options
+          value: SAMEORIGIN
+        - name: x-xss-protection
+          value: 1; mode=block
+        - name: x-content-type-options
+          value: nosniff
+      body:
+        type: json
+        data: |-
+          {
+            "success": true,
+            "code": 0,
+            "locale": "en",
+            "message": "Service has been set to be inactive",
+            "data": {
+              "values": [
+                {
+                  "id": "a161ee91-092c-4b14-91da-923adbaeb17c",
+                  "service_item_id": "a134bd8b-b2f0-410c-a15f-b006b89602ac",
+                  "hmo_id": "22d588e9-4f42-34f7-a734-707a8f7eb095",
+                  "organization_id": "a134be07-5a37-4059-b549-37210fe65250",
+                  "care_type": "primary care",
+                  "amount": "10000.00",
+                  "status": "inactive",
+                  "created_at": "2026-03-25T06:24:23.000000Z",
+                  "updated_at": "2026-08-12T16:56:16.000000Z"
+                }
+              ]
+            }
+          }
