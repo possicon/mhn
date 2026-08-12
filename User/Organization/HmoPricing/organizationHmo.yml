@@ -5,14 +5,8 @@ info:
 
 http:
   method: GET
-  url: "{{base_url}}/user/organization/organizationHmo?search=Ypest"
-  params:
-    - name: search
-      value: Ypest
-      type: query
-  auth:
-    type: bearer
-    token: 72|m81Yss7Vhbc9guHIPGX3i2qlN9xiX3060QgEzqzg8f02a8fb
+  url: "{{base_url}}/user/organization/organizationHmo?"
+  auth: inherit
 
 settings:
   encodeUrl: true

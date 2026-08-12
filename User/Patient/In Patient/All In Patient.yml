@@ -5,7 +5,7 @@ info:
 
 http:
   method: GET
-  url: "{{base_url}}/user/in-patient"
+  url: "{{base_url}}/user/all-in-patient"
   auth: inherit
 
 settings:

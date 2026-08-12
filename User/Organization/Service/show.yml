@@ -13,9 +13,7 @@ http:
     - name: id
       value: 9cfe8382-d6e2-4519-93a8-2337a40aada6
       type: path
-  auth:
-    type: bearer
-    token: 78|IJJwsPNGwfjrHdMvXfMgKzfYaTOw56YXrF1VLHE8b494a4af
+  auth: inherit
 
 settings:
   encodeUrl: true

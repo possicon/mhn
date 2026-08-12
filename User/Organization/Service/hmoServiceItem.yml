@@ -12,11 +12,9 @@ http:
       type: query
       disabled: true
     - name: hmoId
-      value: 9bbbac52-edd1-4aa7-8254-c29c14fa6249
+      value: 22d588e9-4f42-34f7-a734-707a8f7eb095
       type: path
-  auth:
-    type: bearer
-    token: 78|IJJwsPNGwfjrHdMvXfMgKzfYaTOw56YXrF1VLHE8b494a4af
+  auth: inherit
 
 settings:
   encodeUrl: true

@@ -5,7 +5,7 @@ info:
 
 http:
   method: GET
-  url: ""
+  url: "{{base_url}}/user/dashboard-count"
   auth: inherit
 
 settings:
