@@ -5,10 +5,12 @@ info:
 
 http:
   method: GET
-  url: "{{base_url}}/user/organization/healthManager/stats"
-  auth:
-    type: bearer
-    token: "{{token}}"
+  url: "{{base_url}}/user/organization/healthManager/stats?start_date=2026-03-02"
+  params:
+    - name: start_date
+      value: 2026-03-02
+      type: query
+  auth: inherit
 
 settings:
   encodeUrl: true

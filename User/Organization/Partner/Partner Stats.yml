@@ -1,0 +1,77 @@
+info:
+  name: Partner Stats
+  type: http
+  seq: 1
+
+http:
+  method: GET
+  url: "{{base_url}}/user/organization/partner/stats?start_date=2026-03-03&end_date2026-08-13"
+  params:
+    - name: start_date
+      value: 2026-03-03
+      type: query
+    - name: end_date2026-08-13
+      value: ""
+      type: query
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+examples:
+  - name: Stats
+    request:
+      url: "{{base_url}}/user/organization/partner/stats?start_date=2026-03-03&end_date2026-08-13"
+      method: GET
+      params:
+        - name: start_date
+          value: 2026-03-03
+          type: query
+        - name: end_date2026-08-13
+          value: ""
+          type: query
+    response:
+      status: 200
+      statusText: OK
+      headers:
+        - name: server
+          value: nginx/1.24.0 (Ubuntu)
+        - name: content-type
+          value: application/json
+        - name: transfer-encoding
+          value: chunked
+        - name: connection
+          value: keep-alive
+        - name: cache-control
+          value: no-cache, private
+        - name: date
+          value: Thu, 13 Aug 2026 06:03:43 GMT
+        - name: x-ratelimit-limit
+          value: "60"
+        - name: x-ratelimit-remaining
+          value: "57"
+        - name: vary
+          value: Origin
+        - name: x-frame-options
+          value: SAMEORIGIN
+        - name: x-xss-protection
+          value: 1; mode=block
+        - name: x-content-type-options
+          value: nosniff
+      body:
+        type: json
+        data: |-
+          {
+            "success": true,
+            "code": 0,
+            "locale": "en",
+            "message": "Partner statistics retrieved successfully.",
+            "data": {
+              "total_hmos": 2,
+              "active_hmos": "2",
+              "inactive_hmos": "0"
+            }
+          }

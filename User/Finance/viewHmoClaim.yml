@@ -11,7 +11,7 @@ http:
       value: application/json
   params:
     - name: hmoClaims
-      value: 9e69fd17-0a68-4790-995d-c5f3fd018f41
+      value: a2787dac-1aba-4283-bb86-5017d0b741b4
       type: path
   auth: inherit
 

@@ -6,9 +6,7 @@ info:
 http:
   method: GET
   url: "{{base_url}}/user/organization/owner/stats"
-  auth:
-    type: bearer
-    token: "{{token}}"
+  auth: inherit
 
 settings:
   encodeUrl: true
