@@ -5,13 +5,13 @@ info:
 
 http:
   method: GET
-  url: "{{base_url}}/user/organization/wards?search=private"
+  url: "{{base_url}}/user/organization/wards?start_date=2026-04-10"
   headers:
     - name: Accept
       value: application/json
   params:
-    - name: search
-      value: private
+    - name: start_date
+      value: 2026-04-10
       type: query
   auth: inherit
 

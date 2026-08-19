@@ -5,7 +5,11 @@ info:
 
 http:
   method: GET
-  url: "{{base_url}}/user/organization/service"
+  url: "{{base_url}}/user/organization/service?filter=ward_services"
+  params:
+    - name: filter
+      value: ward_services
+      type: query
   auth: inherit
 
 settings:

@@ -5,13 +5,13 @@ info:
 
 http:
   method: GET
-  url: "{{base_url}}/user/patients/:id/latestVitals"
+  url: "{{base_url}}/user/patients/:id/latestVitals/a14427af-e505-4c40-a7ad-6c2bcbf8ff75"
   headers:
     - name: Accept
       value: application/json
   params:
     - name: id
-      value: 9c111152-abe1-4490-ab04-c066445133a7
+      value: a134bd94-4206-44a3-8038-51e0328a3df0
       type: path
   auth: inherit
 

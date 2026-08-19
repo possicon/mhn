@@ -5,21 +5,19 @@ info:
 
 http:
   method: GET
-  url: "{{base_url}}/user/organization/group_bills?status=completed"
+  url: "{{base_url}}/user/organization/group_bills?start_date=2026-07-15"
   headers:
     - name: Accept
       value: application/json
   params:
+    - name: start_date
+      value: 2026-07-15
+      type: query
     - name: search
       value: MHN_USASuwRhjh
       type: query
       disabled: true
-    - name: status
-      value: completed
-      type: query
-  auth:
-    type: bearer
-    token: "{{token}}"
+  auth: inherit
 
 settings:
   encodeUrl: true

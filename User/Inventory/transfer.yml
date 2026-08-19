@@ -11,16 +11,12 @@ http:
       value: application/json
   body:
     type: json
-    data: "{\r
-
-      \    \"id\":[\"9d1e8ec9-769f-4967-88b6-109910f91d18\",\"9d445c8d-6e98-4667-8207-44f0bc39fbf8\"],\r
-
-      \    \"quantity\":[\"2\",\"2\"]\r
-
-      }"
-  auth:
-    type: bearer
-    token: 64|wekxmT6fEC7W1savxR3VWd2fcLOu9fkY2pdTExtBe40532c7
+    data: |-
+      {
+          "id":["a2536ec8-3da3-4d4b-8b19-985971e57e73"],
+          "quantity":["2"]
+      }
+  auth: inherit
 
 settings:
   encodeUrl: true

@@ -21,11 +21,9 @@ http:
       value: "5"
       type: query
     - name: patientId
-      value: 9c111152-abe1-4490-ab04-c066445133a7
+      value: a134bd94-4206-44a3-8038-51e0328a3df0
       type: path
-  auth:
-    type: bearer
-    token: "{{token}}"
+  auth: inherit
 
 settings:
   encodeUrl: true

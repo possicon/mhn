@@ -1,0 +1,258 @@
+info:
+  name: Doctors Patients
+  type: http
+  seq: 4
+
+http:
+  method: GET
+  url: "{{base_url}}/user/organization/reports/doctors/:doctordId/patients?admission=true"
+  params:
+    - name: admission
+      value: "true"
+      type: query
+    - name: doctordId
+      value: 9da47d70-23be-484d-ab7b-6adfc86b7282
+      type: path
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+examples:
+  - name: Doctors
+    request:
+      url: "{{base_url}}/user/organization/reports/doctors"
+      method: GET
+    response:
+      status: 200
+      statusText: OK
+      headers:
+        - name: server
+          value: nginx/1.24.0 (Ubuntu)
+        - name: content-type
+          value: application/json
+        - name: transfer-encoding
+          value: chunked
+        - name: connection
+          value: keep-alive
+        - name: cache-control
+          value: no-cache, private
+        - name: date
+          value: Tue, 18 Aug 2026 16:18:26 GMT
+        - name: x-ratelimit-limit
+          value: "60"
+        - name: x-ratelimit-remaining
+          value: "59"
+        - name: vary
+          value: Origin
+        - name: x-frame-options
+          value: SAMEORIGIN
+        - name: x-xss-protection
+          value: 1; mode=block
+        - name: x-content-type-options
+          value: nosniff
+      body:
+        type: json
+        data: |-
+          {
+            "success": true,
+            "code": 0,
+            "locale": "en",
+            "message": "Doctors Fetched",
+            "data": {
+              "current_page": 1,
+              "data": [
+                {
+                  "id": "9da47d70-23be-484d-ab7b-6adfc86b7282",
+                  "first_name": "Concepcion",
+                  "middle_name": null,
+                  "last_name": "Shittu",
+                  "gender": null,
+                  "phone": null,
+                  "email": "example3@gmail.com",
+                  "username": null,
+                  "email_verified_at": null,
+                  "type": "doctor",
+                  "organization_id": "a134be07-5a37-4059-b549-37210fe65250",
+                  "company_id": null,
+                  "reset_token": null,
+                  "token_time": null,
+                  "country_id": null,
+                  "branch_id": null,
+                  "status": "pending",
+                  "created_at": "2026-03-02T19:15:01.000000Z",
+                  "updated_at": "2026-03-02T19:15:01.000000Z",
+                  "deleted_at": null,
+                  "country_call_code": null
+                }
+              ],
+              "first_page_url": "http://mhn.test/api/v1/user/organization/reports/doctors?page=1",
+              "from": 1,
+              "last_page": 1,
+              "last_page_url": "http://mhn.test/api/v1/user/organization/reports/doctors?page=1",
+              "links": [
+                {
+                  "url": null,
+                  "label": "&laquo; Previous",
+                  "active": false
+                },
+                {
+                  "url": "http://mhn.test/api/v1/user/organization/reports/doctors?page=1",
+                  "label": "1",
+                  "active": true
+                },
+                {
+                  "url": null,
+                  "label": "Next &raquo;",
+                  "active": false
+                }
+              ],
+              "next_page_url": null,
+              "path": "http://mhn.test/api/v1/user/organization/reports/doctors",
+              "per_page": 10,
+              "prev_page_url": null,
+              "to": 1,
+              "total": 1
+            }
+          }
+  - name: Doctor's Patient
+    request:
+      url: "{{base_url}}/user/organization/reports/doctors/:doctordId/patients?admission=true"
+      method: GET
+      params:
+        - name: admission
+          value: "true"
+          type: query
+        - name: doctordId
+          value: 9da47d70-23be-484d-ab7b-6adfc86b7282
+          type: path
+    response:
+      status: 200
+      statusText: OK
+      headers:
+        - name: server
+          value: nginx/1.24.0 (Ubuntu)
+        - name: content-type
+          value: application/json
+        - name: transfer-encoding
+          value: chunked
+        - name: connection
+          value: keep-alive
+        - name: cache-control
+          value: no-cache, private
+        - name: date
+          value: Tue, 18 Aug 2026 16:23:49 GMT
+        - name: x-ratelimit-limit
+          value: "60"
+        - name: x-ratelimit-remaining
+          value: "58"
+        - name: vary
+          value: Origin
+        - name: x-frame-options
+          value: SAMEORIGIN
+        - name: x-xss-protection
+          value: 1; mode=block
+        - name: x-content-type-options
+          value: nosniff
+      body:
+        type: json
+        data: |-
+          {
+            "success": true,
+            "code": 0,
+            "locale": "en",
+            "message": "Doctor Patients Fetched",
+            "data": {
+              "current_page": 1,
+              "data": [
+                {
+                  "id": "a14427af-e505-4c40-a7ad-6c2bcbf8ff75",
+                  "purpose_of_visit": "a134bd87-d6ba-4706-912a-ab34e32217e6",
+                  "mode_of_appointment": "telemedicine",
+                  "type_of_appointment": "schedule",
+                  "payment_type": "private",
+                  "has_free_consultation": 0,
+                  "consultation_fee": "14043.00",
+                  "name": "Reliance",
+                  "policy_number": "DDPEIO3J",
+                  "plan": null,
+                  "appointment_date": "2026/06/08",
+                  "tele_medicine_url": "http://www.telemedicine.com",
+                  "model_id": "a134bd94-4206-44a3-8038-51e0328a3df0",
+                  "model_type": "App\\Models\\Patient",
+                  "visit_date": "2026-03-10 00:00:00",
+                  "has_locked_doctor": 0,
+                  "assigned_doctor": "9da47d70-23be-484d-ab7b-6adfc86b7282",
+                  "status": "cancelled",
+                  "fee_status": null,
+                  "is_cancelled": true,
+                  "cancelled_by": "a134bfd5-bb77-4c87-a0e0-ad7e2a793325",
+                  "assisted_by": null,
+                  "queue_no": null,
+                  "for_antenatal": 1,
+                  "for_physiotherapy": 0,
+                  "organization_id": "a134be07-5a37-4059-b549-37210fe65250",
+                  "end_date": "2026-07-23T23:00:00.000000Z",
+                  "consultation_type": "Family Planing",
+                  "consultation_status": "completed",
+                  "mode_of_payment": "transfer",
+                  "hmo_id": null,
+                  "company_id": null,
+                  "bank_name": "GTB",
+                  "billId": "a1443164-e069-4f5f-8129-e2f647f2920e",
+                  "created_at": "2026-03-26T11:09:16.000000Z",
+                  "updated_at": "2026-06-09T20:51:41.000000Z",
+                  "comment": null,
+                  "appointment_datetime": "2026-06-09 07:50:57",
+                  "started_at": null,
+                  "can_edit": false,
+                  "is_admitted": true,
+                  "patient": {
+                    "id": "a134bd94-4206-44a3-8038-51e0328a3df0",
+                    "title": "Mr",
+                    "first_name": "John",
+                    "last_name": "Doe"
+                  },
+                  "admission": {
+                    "id": "a1442957-1814-4a52-9754-7d5123f349e4",
+                    "admission_date": "2026-06-20 05:30:28",
+                    "appointment_id": "a14427af-e505-4c40-a7ad-6c2bcbf8ff75",
+                    "admission_duration": {
+                      "days": 59,
+                      "hours": 11
+                    }
+                  }
+                }
+              ],
+              "first_page_url": "http://mhn.test/api/v1/user/organization/reports/doctors/9da47d70-23be-484d-ab7b-6adfc86b7282/patients?page=1",
+              "from": 1,
+              "last_page": 1,
+              "last_page_url": "http://mhn.test/api/v1/user/organization/reports/doctors/9da47d70-23be-484d-ab7b-6adfc86b7282/patients?page=1",
+              "links": [
+                {
+                  "url": null,
+                  "label": "&laquo; Previous",
+                  "active": false
+                },
+                {
+                  "url": "http://mhn.test/api/v1/user/organization/reports/doctors/9da47d70-23be-484d-ab7b-6adfc86b7282/patients?page=1",
+                  "label": "1",
+                  "active": true
+                },
+                {
+                  "url": null,
+                  "label": "Next &raquo;",
+                  "active": false
+                }
+              ],
+              "next_page_url": null,
+              "path": "http://mhn.test/api/v1/user/organization/reports/doctors/9da47d70-23be-484d-ab7b-6adfc86b7282/patients",
+              "per_page": 10,
+              "prev_page_url": null,
+              "to": 1,
+              "total": 1
+            }
+          }

@@ -5,17 +5,11 @@ info:
 
 http:
   method: GET
-  url: "{{base_url}}/user/organization/inventory?search=Paracetamol"
+  url: "{{base_url}}/user/organization/inventory"
   headers:
     - name: Accept
       value: application/json
-  params:
-    - name: search
-      value: Paracetamol
-      type: query
-  auth:
-    type: bearer
-    token: 64|wekxmT6fEC7W1savxR3VWd2fcLOu9fkY2pdTExtBe40532c7
+  auth: inherit
 
 settings:
   encodeUrl: true

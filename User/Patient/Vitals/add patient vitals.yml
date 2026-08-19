@@ -11,41 +11,26 @@ http:
       value: application/json
   body:
     type: json
-    data: "{\r
-
-      \    \"height_in_feet\":\"65\",\r
-
-      \    \"height_in_inch\":\"50\",\r
-
-      \    \"patient_id\":\"9c111152-abe1-4490-ab04-c066445133a7\",\r
-
-      \    \"diastolic\":\"34\",\r
-
-      \    \"bmi\":\"90\",\r
-
-      \    \"weight\":\"250\",\r
-
-      \    \"temperature\":\"46\",\r
-
-      \    \"blood_pressure\":\"80\",\r
-
-      \    \"complaints\":\"High appetite for food\",\r
-
-      \    \"for_antenatal\":1,\r
-
-      \    \"respiratory_rate\":\"46\", // if for_antenatal is 1\r
-
-      \    \"pulse_in_bps\":\"67\", // if for_antenatal is 1\r
-
-      \    \"oxygen_saturation_level\":\"20\", // if for_antenatal is 1\r
-
-      \    \"fatal_heart_rate\":\"56\", // if for_antenatal is 1\r
-
-      \    \"random_blood_sugar\":\"75\", // if for_antenatal is 1\r
-
-      \    \"fasting_blood_sugar\":\"56\" // if for_antenatal is 1\r
-
-      }"
+    data: |-
+      {
+          "height_in_feet":"65",
+          "height_in_inch":"50",
+          "patient_id":"a134bd94-4206-44a3-8038-51e0328a3df0",
+          "diastolic":"34",
+          "bmi":"90",
+          "weight":"250",
+          "temperature":"46",
+          "blood_pressure":"80",
+          "complaints":"High appetite for food",
+          "for_antenatal":1,
+          "respiratory_rate":"46", // if for_antenatal is 1
+          "pulse_in_bps":"67", // if for_antenatal is 1
+          "oxygen_saturation_level":"20", // if for_antenatal is 1
+          "fetal_heart_rate":"56", // if for_antenatal is 1
+          "random_blood_sugar":"75", // if for_antenatal is 1
+          "fasting_blood_sugar":"56", // if for_antenatal is 1
+          "appointment_id" : "a14427af-e505-4c40-a7ad-6c2bcbf8ff75"
+      }
   auth: inherit
 
 settings:

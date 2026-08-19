@@ -1,0 +1,90 @@
+info:
+  name: Create new service item type
+  type: http
+  seq: 35
+
+http:
+  method: POST
+  url: "{{base_url}}/user/organization/service-types"
+  body:
+    type: json
+    data: |-
+      {
+        "name" : "{{$randomWord}}",
+        "service_type" : "ward_services",
+        "description" : "{{$randomLoremSentences}}",
+        "category" : "{{$randomWord}}",
+        "amount" : 2000
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+examples:
+  - name: create a new service type
+    request:
+      url: "{{base_url}}/user/organization/service-types"
+      method: POST
+      body:
+        type: json
+        data: |-
+          {
+            "name" : "{{$randomWord}}",
+            "service_type" : "ward_services",
+            "description" : "{{$randomLoremSentences}}",
+            "category" : "{{$randomWord}}",
+            "amount" : 2000
+          }
+    response:
+      status: 200
+      statusText: OK
+      headers:
+        - name: server
+          value: nginx/1.24.0 (Ubuntu)
+        - name: content-type
+          value: application/json
+        - name: transfer-encoding
+          value: chunked
+        - name: connection
+          value: keep-alive
+        - name: cache-control
+          value: no-cache, private
+        - name: date
+          value: Fri, 14 Aug 2026 06:27:58 GMT
+        - name: x-ratelimit-limit
+          value: "60"
+        - name: x-ratelimit-remaining
+          value: "58"
+        - name: vary
+          value: Origin
+        - name: x-frame-options
+          value: SAMEORIGIN
+        - name: x-xss-protection
+          value: 1; mode=block
+        - name: x-content-type-options
+          value: nosniff
+      body:
+        type: json
+        data: |-
+          {
+            "success": true,
+            "code": 0,
+            "locale": "en",
+            "message": "New Service Type Created",
+            "data": {
+              "item": {
+                "name": "panel",
+                "service_type": "ward_services",
+                "description": "Hic absorbeo tamdiu deleniti. Arbustum adsidue allatus vaco. Ademptio a vulticulus bardus acerbitas arcesso cado. Inflammatio bestia doloribus deripio cognatus conicio delectatio tantum culpo cervus. Usitas demergo cibus.",
+                "category": "hard drive",
+                "organization_id": "a134be07-5a37-4059-b549-37210fe65250",
+                "id": "a27f9797-647e-4425-beda-43b6769f5a95",
+                "updated_at": "2026-08-14T06:27:58.000000Z",
+                "created_at": "2026-08-14T06:27:58.000000Z"
+              }
+            }
+          }
