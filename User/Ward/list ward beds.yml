@@ -5,13 +5,10 @@ info:
 
 http:
   method: GET
-  url: "{{base_url}}/user/organization/wards/:id/beds?search=1A"
+  url: "{{base_url}}/user/organization/wards/:id/beds"
   params:
-    - name: search
-      value: 1A
-      type: query
     - name: id
-      value: 9ec6b535-2386-4918-9043-8c24faf4278e
+      value: a1384db3-7120-4122-b503-22c5475b47d4
       type: path
   auth: inherit
 
@@ -20,6 +17,7 @@ settings:
   timeout: 0
   followRedirects: true
   maxRedirects: 5
+  forwardAuthorizationHeader: true
 
 examples:
   - name: list ward beds

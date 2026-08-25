@@ -11,21 +11,15 @@ http:
       value: application/json
   body:
     type: json
-    data: "{\r
-
-      \    \"type\":[\"Test (Individual)\"],\r
-
-      \    \"laboratory\":\"mhn network\",\r
-
-      \    \"patient_id\":\"9c7adca5-7205-43b4-b60d-04ebb7769058\",\r
-
-      \    \"appointment_id\":\"9e668d48-f4a9-4b98-aa9e-b30e582ee9af\",\r
-
-      \    \"tests\":[\"9cfe8383-1f43-436a-8c6f-0b5b084b6010\",\"9cfe8383-209b-4d27-9d31-49fd8a203754\"],\r
-
-      \    \"type_id\":[\"9d7caad0-96ba-4b36-9a9e-a1b5a2b733ee\",\"9e4876dc-8146-4b98-8cef-572230521379\"]\r
-
-      }"
+    data: |-
+      {
+          "type":["Test (Individual)"],
+          "laboratory":"mhn network",
+          "patient_id":"a1386445-cc49-468b-b5b8-a1c161d2d279",
+          "appointment_id":"a1ffcdaf-cad4-4d59-9237-c40930913c22",
+          "tests":["a153f242-1015-49aa-b691-678875424ce9", "a153f242-1015-49aa-b691-678875424ce9"],
+          "type_id":["a26e6c55-b3a0-48c1-902f-a213df30a361", "a26e6c55-c27b-4a2b-81c8-ec4caf750b37"]
+      }
   auth: inherit
 
 settings:

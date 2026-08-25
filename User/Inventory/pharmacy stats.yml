@@ -9,15 +9,14 @@ http:
   headers:
     - name: Accept
       value: application/json
-  auth:
-    type: bearer
-    token: 64|wekxmT6fEC7W1savxR3VWd2fcLOu9fkY2pdTExtBe40532c7
+  auth: inherit
 
 settings:
   encodeUrl: true
   timeout: 0
   followRedirects: true
   maxRedirects: 5
+  forwardAuthorizationHeader: true
 
 examples:
   - name: stats Copy

@@ -5,11 +5,7 @@ info:
 
 http:
   method: GET
-  url: "{{base_url}}/user/diagnostic_tests?search=pending"
-  params:
-    - name: search
-      value: pending
-      type: query
+  url: "{{base_url}}/user/diagnostic_tests"
   auth: inherit
 
 settings:

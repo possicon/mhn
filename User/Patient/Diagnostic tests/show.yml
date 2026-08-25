@@ -8,7 +8,7 @@ http:
   url: "{{base_url}}/user/diagnostic_tests/:id"
   params:
     - name: id
-      value: 9d7e7d70-22a2-4f3f-904b-88240f50fe49
+      value: a28c9b45-4117-4a04-9006-8946bbd92eec
       type: path
   auth: inherit
 

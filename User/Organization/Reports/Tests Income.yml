@@ -5,11 +5,7 @@ info:
 
 http:
   method: GET
-  url: "{{base_url}}/user/organization/reports/tests/income?end_date=2026-04-04"
-  params:
-    - name: end_date
-      value: 2026-04-04
-      type: query
+  url: "{{base_url}}/user/organization/reports/tests/income"
   auth: inherit
 
 settings:

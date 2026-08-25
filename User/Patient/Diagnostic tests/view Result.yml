@@ -11,7 +11,7 @@ http:
       value: application/json
   params:
     - name: test
-      value: 9e6670db-781d-475f-9e9a-8ea78a76f4c3
+      value: a28c9b45-4117-4a04-9006-8946bbd92eec
       type: path
   auth: inherit
 
@@ -134,4 +134,111 @@ examples:
                       }
                   ]
               }
+          }
+  - name: Test Result
+    request:
+      url: "{{base_url}}/user/organization/test/:test/viewResult"
+      method: GET
+      headers:
+        - name: Accept
+          value: application/json
+      params:
+        - name: test
+          value: a28c9b45-4117-4a04-9006-8946bbd92eec
+          type: path
+    response:
+      status: 200
+      statusText: OK
+      headers:
+        - name: server
+          value: nginx/1.24.0 (Ubuntu)
+        - name: content-type
+          value: application/json
+        - name: transfer-encoding
+          value: chunked
+        - name: connection
+          value: keep-alive
+        - name: cache-control
+          value: no-cache, private
+        - name: date
+          value: Thu, 20 Aug 2026 17:59:20 GMT
+        - name: x-ratelimit-limit
+          value: "60"
+        - name: x-ratelimit-remaining
+          value: "58"
+        - name: vary
+          value: Origin
+        - name: x-frame-options
+          value: SAMEORIGIN
+        - name: x-xss-protection
+          value: 1; mode=block
+        - name: x-content-type-options
+          value: nosniff
+      body:
+        type: json
+        data: |-
+          {
+            "success": true,
+            "code": 0,
+            "locale": "en",
+            "message": "Test result details retrieved successfully",
+            "data": {
+              "test_id": "a28c9b45-4117-4a04-9006-8946bbd92eec",
+              "patient_id": "a1386445-cc49-468b-b5b8-a1c161d2d279",
+              "report_note": "Creator valens appono validus correptius videlicet cena crastinus. Tergiversatio vulticulus qui provident vis deleniti demonstro conicio vix. Clarus caterva decerno.",
+              "message": null,
+              "result": null,
+              "test_lists": [
+                {
+                  "id": 1,
+                  "uuid": "9abdea17-90cc-4157-95d7-6a85accbf83b",
+                  "test_id": "a28c9b45-4117-4a04-9006-8946bbd92eec",
+                  "test_name": {
+                    "id": "a26e6c55-b3a0-48c1-902f-a213df30a361",
+                    "diagnostic_family": "["hematology"]",
+                    "test_name": "a153f242-1015-49aa-b691-678875424ce9",
+                    "service": {
+                      "id": "a153f242-1015-49aa-b691-678875424ce9",
+                      "name": "Haemoglobin (Hb)"
+                    }
+                  },
+                  "type": "Test (Individual)",
+                  "progress_status": "complete",
+                  "general_name": "hematology",
+                  "type_id": "a26e6c55-b3a0-48c1-902f-a213df30a361",
+                  "result": {
+                    "growth": "Growth",
+                    "organism": "hyhyhy",
+                    "resultType": "microbiology",
+                    "sensitivity": "ghththh"
+                  },
+                  "test_name_id": "a153f242-1015-49aa-b691-678875424ce9"
+                },
+                {
+                  "id": 2,
+                  "uuid": "9673483b-37f4-42a2-a1b8-b6dbc3a18877",
+                  "test_id": "a28c9b45-4117-4a04-9006-8946bbd92eec",
+                  "test_name": {
+                    "id": "a26e6c55-d149-42fa-a26c-ebac883c3272",
+                    "diagnostic_family": "["hematology"]",
+                    "test_name": "a153f242-1991-421c-bc32-ce8fa8c5e209",
+                    "service": {
+                      "id": "a153f242-1991-421c-bc32-ce8fa8c5e209",
+                      "name": "PCV (Packed Cell Volume)"
+                    }
+                  },
+                  "type": "Test (Individual)",
+                  "progress_status": "pending",
+                  "general_name": "hematology",
+                  "type_id": "a26e6c55-d149-42fa-a26c-ebac883c3272",
+                  "result": null,
+                  "test_name_id": "a153f242-1991-421c-bc32-ce8fa8c5e209"
+                }
+              ],
+              "can_edit": true,
+              "status": "incomplete",
+              "uploaded_files": [],
+              "parent": [],
+              "phone_no": "08000056789"
+            }
           }

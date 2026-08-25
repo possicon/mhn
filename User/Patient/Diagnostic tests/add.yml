@@ -11,109 +11,30 @@ http:
       value: application/json
   body:
     type: json
-    data: "{\r
+    data: |+
+      {
+          "type":["Test (Individual)"],
+          "appointment_id":"a1ffcdaf-cad4-4d59-9237-c40930913c22",
+          "laboratory":"default",
+          "general_name":[
+              ["hematology"]
+          ],
+          "tests":[
+              [
+                  ["a153f242-1015-49aa-b691-678875424ce9","a153f242-1991-421c-bc32-ce8fa8c5e209"
+                  ]
+              ]
+          ],
+          "type_id":[
+              [
+                  ["a26e6c55-b3a0-48c1-902f-a213df30a361","a26e6c55-d149-42fa-a26c-ebac883c3272"
+                  ]
+              ]
+          ],
+          "patient_id":"a1386445-cc49-468b-b5b8-a1c161d2d279"
+      }
 
-      \    \"type\":[\"Test (Individual)\",\"Panels/Profiles (Combined Tests)\" ],\r
 
-      \    \"appointment_id\":\"9ec24216-b1ec-4b23-9fba-079a2cb54db4\",\r
-
-      \    \"laboratory\":\"default\",\r
-
-      \    \"general_name\":[\r
-
-      \        [\"hematology\",\"biochemistry\",\"microbiology\"], \r
-
-      \        [\"hematology\",\"biochemistry\",\"microbiology\"]\r
-
-      \    ],\r
-
-      \    \"tests\":[\r
-
-      \        [\r
-
-      \            [\"9cfe8383-1f43-436a-8c6f-0b5b084b6010\",\"9cfe8383-209b-4d27-9d31-49fd8a203754\",\"9cfe8383-1db9-4d6c-9653-c2e06208f35a\"\r
-
-      \            ],\r
-
-      \            [\"9cfe8383-1db9-4d6c-9653-c2e06208f35a\"],\r
-
-      \            [ \"9cfe8383-209b-4d27-9d31-49fd8a203754\",\r
-
-      \                \"9cfe8383-209b-4d27-9d31-49fd8a203754\",\r
-
-      \                \"9cfe8383-2210-450b-b85a-c33adada1b28\"\r
-
-      \            ]\r
-
-      \        ],\r
-
-      \        [\r
-
-      \            [\"9cfe8383-1f43-436a-8c6f-0b5b084b6010\",\"9cfe8383-209b-4d27-9d31-49fd8a203754\",\"9cfe8383-1db9-4d6c-9653-c2e06208f35a\"\r
-
-      \            ],\r
-
-      \            [\"9cfe8382-e184-41e9-9838-9a0b047b6b31\"],\r
-
-      \            [ \"9cfe8383-2e8e-411f-8466-3e64ff9a2e2e\",\r
-
-      \                \"9cfe8383-209b-4d27-9d31-49fd8a203754\",\r
-
-      \                \"9cfe8383-2210-450b-b85a-c33adada1b28\"\r
-
-      \            ]\r
-
-      \        ]\r
-
-      \    ],\r
-
-      \    \"type_id\":[\r
-
-      \        [\r
-
-      \            [\"9d7caad0-96ba-4b36-9a9e-a1b5a2b733ee\",\"9d7caad0-9aed-49b7-8341-30080ab0a90c\",\"9e4876dc-7734-4e0f-8f4f-6962f7d518d5\"\r
-
-      \            ],\r
-
-      \            [\"9d7cb6f0-de71-4618-b7ed-d21d242ee191\"],\r
-
-      \            [ \"9d7caad0-9aed-49b7-8341-30080ab0a90c\",\r
-
-      \                \"9e4876dc-8146-4b98-8cef-572230521379\",\r
-
-      \                \"9d7caad0-9def-4f1b-8047-b14a0b2bc03a\"\r
-
-      \            ]\r
-
-      \        ],\r
-
-      \        [\r
-
-      \            [\"9d7caad0-96ba-4b36-9a9e-a1b5a2b733ee\",\"9d7caad0-9aed-49b7-8341-30080ab0a90c\",\"9e4876dc-7734-4e0f-8f4f-6962f7d518d5\"\r
-
-      \            ],\r
-
-      \            [\"9d7cb6f0-de71-4618-b7ed-d21d242ee191\"],\r
-
-      \            [ \"9d7d232a-c478-4f3d-8b40-1478eb28ec87\",\r
-
-      \                \"9d7d232a-b9e2-4e4c-ad9b-950d1221923a\",\r
-
-      \                \"9d7d232a-bf3c-4113-9f44-2261c336f7ad\"\r
-
-      \            ]\r
-
-      \        ]\r
-
-      \    ],\r
-
-      \    \"patient_id\":\"9ea8d8a4-2cdd-4e08-baaf-a2d7048f8a32\"\r
-
-      }\r
-
-      \r
-
-      \r\n"
   auth: inherit
 
 settings:

@@ -14,15 +14,14 @@ http:
     - name: organizatioId
       value: 9bc5eb78-74d2-45f4-a677-05d07dca6a63
       type: path
-  auth:
-    type: bearer
-    token: "{{token}}"
+  auth: inherit
 
 settings:
   encodeUrl: true
   timeout: 0
   followRedirects: true
   maxRedirects: 5
+  forwardAuthorizationHeader: true
 
 examples:
   - name: List organization users

@@ -11,34 +11,30 @@ http:
       value: application/json
   params:
     - name: test
-      value: 9eca3b46-b4dc-4d24-9f9a-9231534a7508
+      value: a28c9b45-4117-4a04-9006-8946bbd92eec
       type: path
   body:
-    type: multipart-form
-    data:
-      - name: attach_docs
-        type: text
-        value: "1"
-      - name: message
-        type: text
-        value: We are yet to do the heart scan
-      - name: status
-        type: text
-        value: incomplete
-      - name: report_note
-        type: text
-        value: "{{$randomWords}}"
-      - name: files[0]
-        type: file
-        value:
-          - DnqEOQeqX/q2 Report - Emmanuel Ogbuagu.pdf
-      - name: files[1]
-        type: file
-        value:
-          - NGgLRUCyM/EmmanuelOgbuaguCV.pdf
-      - name: result
-        type: text
-        value: "{{$randomWords}}"
+    type: json
+    data: |-
+      {
+        "report_note" : "{{$randomLoremParagraph}}",
+        "send_sms" : 0,
+        "message" : "",
+        "status" : "incomplete",
+        "results" : [
+            {
+              "test_id"  : 1,
+              "note" : "{{$randomLoremParagraph}}",
+              "progress_status" : "complete",
+              "result" : {
+                "growth":"Growth",
+                "organism":"hyhyhy",
+                "sensitivity":"ghththh",
+               "resultType":"microbiology"
+              }
+            }
+        ]
+      }
   auth: inherit
 
 settings:
