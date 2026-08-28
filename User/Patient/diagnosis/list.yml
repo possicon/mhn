@@ -5,13 +5,16 @@ info:
 
 http:
   method: GET
-  url: "{{base_url}}/user/patient/:id/diagnosis"
+  url: "{{base_url}}/user/patient/:patient/consultations/:consultation/diagnoses"
   headers:
     - name: Accept
       value: application/json
   params:
-    - name: id
-      value: 9c22ec62-cfa4-476c-8921-a924a32f20d7
+    - name: consultation
+      value: a1744d3d-b3dc-46d0-9b98-ce8f31317ec0
+      type: path
+    - name: patient
+      value: a1386445-cc49-468b-b5b8-a1c161d2d279
       type: path
   auth: inherit
 
@@ -20,6 +23,7 @@ settings:
   timeout: 0
   followRedirects: true
   maxRedirects: 5
+  forwardAuthorizationHeader: true
 
 examples:
   - name: list

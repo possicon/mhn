@@ -1,16 +1,22 @@
 info:
-  name: Total Income By payment type
+  name: update profile picture
   type: http
-  seq: 11
+  seq: 4
 
 http:
-  method: GET
-  url: "{{base_url}}/user/organization/reports/income/payment-type"
-  params:
-    - name: service
-      value: a134bd89-eec6-4624-8e1b-4005a2946056
-      type: query
-      disabled: true
+  method: POST
+  url: "{{base_url}}/user/profile/picture"
+  headers:
+    - name: Accept
+      value: application/json
+  body:
+    type: multipart-form
+    data:
+      - name: profile_picture
+        type: file
+        value:
+          - /home/lawpavilion/Videos/sun_facts/sun.jpg
+        contentType: image/jpeg
   auth: inherit
 
 settings:
@@ -21,15 +27,21 @@ settings:
   forwardAuthorizationHeader: true
 
 examples:
-  - name: Income By Payment Type
+  - name: profile picture
     request:
-      url: "{{base_url}}/user/organization/reports/income/payment-type"
-      method: GET
-      params:
-        - name: service
-          value: a134bd89-eec6-4624-8e1b-4005a2946056
-          type: query
-          disabled: true
+      url: "{{base_url}}/user/profile/picture"
+      method: POST
+      headers:
+        - name: Accept
+          value: application/json
+      body:
+        type: multipart-form
+        data:
+          - name: profile_picture
+            type: file
+            value:
+              - /home/lawpavilion/Videos/sun_facts/sun.jpg
+            contentType: image/jpeg
     response:
       status: 200
       statusText: OK
@@ -45,11 +57,11 @@ examples:
         - name: cache-control
           value: no-cache, private
         - name: date
-          value: Wed, 19 Aug 2026 17:18:09 GMT
+          value: Tue, 25 Aug 2026 10:32:05 GMT
         - name: x-ratelimit-limit
           value: "60"
         - name: x-ratelimit-remaining
-          value: "58"
+          value: "56"
         - name: vary
           value: Origin
         - name: x-frame-options
@@ -62,17 +74,6 @@ examples:
         type: json
         data: |-
           {
-            "success": true,
-            "code": 0,
-            "locale": "en",
-            "message": "Total Income Fetched By Payment Type",
-            "data": {
-              "items": [
-                {
-                  "payment_type": "private",
-                  "total_income": "6400.00",
-                  "bill_count": 1
-                }
-              ]
-            }
+            "status": true,
+            "message": "Profile Picture Updated"
           }

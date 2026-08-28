@@ -13,15 +13,18 @@ http:
     type: json
     data: |-
       {
-          "body_parts":["Head:Front/Side","Neck:Front"],
-          "patient_id":"a134bd94-4206-44a3-8038-51e0328a3df0",
-          "symptoms":[["a2788e8c-8941-41cd-8bb0-26722846c41e"],["a2788e8c-9136-475b-92ac-c15e7699e24a"]],
-          "occurrence":["occasionally","Daily"],
-          "note":["Happens when i sleep too much without pillow","I barely rest"],
-          "for_antenatal":0,
-          "primary":["icd10"],
-          "appointment_id" : "a14427af-e505-4c40-a7ad-6c2bcbf8ff75"
-         // "any_current_symptoms_or_concern":["symptoms","symptoms"]
+         "patient_id":"a134bd94-4206-44a3-8038-51e0328a3df0",
+         "appointment_id" : "a14427af-e505-4c40-a7ad-6c2bcbf8ff75",
+         "primary": ["icd10"],
+          "body_parts" : [
+              {
+                "body_part" : "Head:Front/Side",
+                "any_current_symptoms_or_concern" : "symptoms",
+                "occurrence" : "Frequently",
+                "note" : "{{$randomWords}}",
+                "symptoms" : ["a2788e8c-8941-41cd-8bb0-26722846c41e", "a2788e8c-9136-475b-92ac-c15e7699e24a"]
+              }
+          ]
       }
   auth: inherit
 
@@ -30,9 +33,10 @@ settings:
   timeout: 0
   followRedirects: true
   maxRedirects: 5
+  forwardAuthorizationHeader: true
 
 examples:
-  - name: Add patient symptoms
+  - name: sample
     request:
       url: "{{base_url}}/user/patient/symptoms"
       method: POST
@@ -41,54 +45,56 @@ examples:
           value: application/json
       body:
         type: json
-        data: "{\r
-
-          \    \"body_parts\":[\"Head:Front/Side\",\"Neck:Front\"],\r
-
-          \    \"patient_id\":\"9c111152-abe1-4490-ab04-c066445133a7\",\r
-
-          \    \"symptoms\":[[\"Fever,Headache,High Cholesterol\"],[\"Fever\",\"Diabetes\"]],\r
-
-          \    \"occurrence\":[\"occasionally\",\"Daily\"],\r
-
-          \    \"note\":[\"Happens when i sleep too much without pillow\",\"I barely rest\"]\r
-
-          }"
+        data: |-
+          {
+             "patient_id":"a134bd94-4206-44a3-8038-51e0328a3df0",
+             "appointment_id" : "a14427af-e505-4c40-a7ad-6c2bcbf8ff75",
+             "primary": ["icd10"],
+              "body_parts" : [
+                  {
+                    "body_part" : "Head:Front/Side",
+                    "any_current_symptoms_or_concern" : "symptoms",
+                    "occurrence" : "Frequently",
+                    "note" : "{{$randomWords}}",
+                    "symptoms" : ["a2788e8c-8941-41cd-8bb0-26722846c41e", "a2788e8c-9136-475b-92ac-c15e7699e24a"]
+                  }
+              ]
+          }
     response:
       status: 201
       statusText: Created
       headers:
-        - name: Date
-          value: Mon, 20 May 2024 21:12:30 GMT
-        - name: Server
-          value: Apache/2.4.54 (Win64) OpenSSL/1.1.1q mod_fcgid/2.3.10-dev
-        - name: X-Powered-By
-          value: PHP/8.2.16
-        - name: Cache-Control
-          value: no-cache, private
-        - name: X-RateLimit-Limit
-          value: "60"
-        - name: X-RateLimit-Remaining
-          value: "59"
-        - name: Access-Control-Allow-Origin
-          value: "*"
-        - name: Vary
-          value: Authorization
-        - name: Keep-Alive
-          value: timeout=5, max=100
-        - name: Connection
-          value: Keep-Alive
-        - name: Transfer-Encoding
-          value: chunked
-        - name: Content-Type
+        - name: server
+          value: nginx/1.24.0 (Ubuntu)
+        - name: content-type
           value: application/json
+        - name: transfer-encoding
+          value: chunked
+        - name: connection
+          value: keep-alive
+        - name: cache-control
+          value: no-cache, private
+        - name: date
+          value: Wed, 26 Aug 2026 09:21:40 GMT
+        - name: x-ratelimit-limit
+          value: "60"
+        - name: x-ratelimit-remaining
+          value: "59"
+        - name: vary
+          value: Origin
+        - name: x-frame-options
+          value: SAMEORIGIN
+        - name: x-xss-protection
+          value: 1; mode=block
+        - name: x-content-type-options
+          value: nosniff
       body:
         type: json
         data: |-
           {
-              "success": true,
-              "code": 0,
-              "locale": "en",
-              "message": "You have successfully added symptoms",
-              "data": null
+            "success": true,
+            "code": 0,
+            "locale": "en",
+            "message": "You have successfully added symptoms",
+            "data": null
           }

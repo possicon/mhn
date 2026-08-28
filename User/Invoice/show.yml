@@ -11,33 +11,18 @@ http:
       value: application/json
   params:
     - name: invoice
-      value: 9d249889-fdb4-4c10-b5e9-84717904a17b
+      value: a26b96d1-d5f7-45cb-b3c4-4753bd916131
       type: path
   body:
     type: multipart-form
-    data:
-      - name: payment_method
-        type: text
-        value: bank transfer
-      - name: amount_paid
-        type: text
-        value: "7000"
-      - name: payment_slip
-        type: file
-        value:
-          - ZS4_xPKED/signature.png
-      - name: note
-        type: text
-        value: note
-  auth:
-    type: bearer
-    token: 64|wekxmT6fEC7W1savxR3VWd2fcLOu9fkY2pdTExtBe40532c7
+  auth: inherit
 
 settings:
   encodeUrl: true
   timeout: 0
   followRedirects: true
   maxRedirects: 5
+  forwardAuthorizationHeader: true
 
 examples:
   - name: show

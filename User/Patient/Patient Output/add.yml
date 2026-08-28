@@ -11,21 +11,16 @@ http:
       value: application/json
   body:
     type: json
-    data: "{\r
-
-      \    \"patient_id\":\"9c22ec62-cfa4-476c-8921-a924a32f20d7\",\r
-
-      \    \"urine\":\"59\",\r
-
-      \    \"stool\":\"65\",\r
-
-      \    \"drains\":\"85\",\r
-
-      \    \"emesis\":\"76\",\r
-
-      \    \"note\":\"note\"\r
-
-      }"
+    data: |-
+      {
+        "patient_id":"a134bd94-4206-44a3-8038-51e0328a3df0",
+          "urine":"59",
+          "stool":"65",
+          "drains":"85",
+          "emesis":"76",
+          "note":"note",
+        "inpatient_id" : "a1442957-1814-4a52-9754-7d5123f349e4"
+      }
   auth: inherit
 
 settings:
@@ -33,6 +28,7 @@ settings:
   timeout: 0
   followRedirects: true
   maxRedirects: 5
+  forwardAuthorizationHeader: true
 
 examples:
   - name: add
@@ -44,71 +40,66 @@ examples:
           value: application/json
       body:
         type: json
-        data: "{\r
-
-          \    \"patient_id\":\"9c22ec62-cfa4-476c-8921-a924a32f20d7\",\r
-
-          \    \"urine\":\"59\",\r
-
-          \    \"stool\":\"65\",\r
-
-          \    \"drains\":\"85\",\r
-
-          \    \"emesis\":\"76\",\r
-
-          \    \"note\":\"note\"\r
-
-          }"
+        data: |-
+          {
+            "patient_id":"a134bd94-4206-44a3-8038-51e0328a3df0",
+              "urine":"59",
+              "stool":"65",
+              "drains":"85",
+              "emesis":"76",
+              "note":"note",
+            "inpatient_id" : "a1442957-1814-4a52-9754-7d5123f349e4"
+          }
     response:
       status: 201
       statusText: Created
       headers:
-        - name: Date
-          value: Fri, 25 Apr 2025 14:09:11 GMT
-        - name: Server
-          value: Apache/2.4.54 (Win64) OpenSSL/1.1.1q mod_fcgid/2.3.10-dev
-        - name: X-Powered-By
-          value: PHP/8.2.16
-        - name: Cache-Control
-          value: no-cache, private
-        - name: X-RateLimit-Limit
-          value: "60"
-        - name: X-RateLimit-Remaining
-          value: "59"
-        - name: Access-Control-Allow-Origin
-          value: "*"
-        - name: Vary
-          value: Authorization
-        - name: Keep-Alive
-          value: timeout=5, max=100
-        - name: Connection
-          value: Keep-Alive
-        - name: Transfer-Encoding
-          value: chunked
-        - name: Content-Type
+        - name: server
+          value: nginx/1.24.0 (Ubuntu)
+        - name: content-type
           value: application/json
+        - name: transfer-encoding
+          value: chunked
+        - name: connection
+          value: keep-alive
+        - name: cache-control
+          value: no-cache, private
+        - name: date
+          value: Thu, 27 Aug 2026 13:13:13 GMT
+        - name: x-ratelimit-limit
+          value: "60"
+        - name: x-ratelimit-remaining
+          value: "59"
+        - name: vary
+          value: Origin
+        - name: x-frame-options
+          value: SAMEORIGIN
+        - name: x-xss-protection
+          value: 1; mode=block
+        - name: x-content-type-options
+          value: nosniff
       body:
         type: json
         data: |-
           {
-              "success": true,
-              "code": 0,
-              "locale": "en",
-              "message": "success",
-              "data": {
-                  "item": {
-                      "patient_id": "9c22ec62-cfa4-476c-8921-a924a32f20d7",
-                      "note": "note",
-                      "urine": "59",
-                      "stool": "65",
-                      "drains": "85",
-                      "emesis": "76",
-                      "taken_by": "9bc6382c-bb73-4c7d-9409-677fe560485d",
-                      "id": "9ec2b019-106d-408b-a77b-9a9e76863522",
-                      "updated_at": "2025-04-25T14:09:12.000000Z",
-                      "created_at": "2025-04-25T14:09:12.000000Z",
-                      "total_output": 285,
-                      "output_per_hour": 11.875
-                  }
+            "success": true,
+            "code": 0,
+            "locale": "en",
+            "message": "success",
+            "data": {
+              "item": {
+                "patient_id": "a134bd94-4206-44a3-8038-51e0328a3df0",
+                "note": "note",
+                "urine": "59",
+                "stool": "65",
+                "drains": "85",
+                "emesis": "76",
+                "inpatient_id": "a1442957-1814-4a52-9754-7d5123f349e4",
+                "taken_by": "a134bfd5-bb77-4c87-a0e0-ad7e2a793325",
+                "id": "a29a4f50-aa8e-4303-91bc-094416049914",
+                "updated_at": "2026-08-27T13:13:13.000000Z",
+                "created_at": "2026-08-27T13:13:13.000000Z",
+                "total_output": 285
               }
+            }
           }

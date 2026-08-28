@@ -11,19 +11,14 @@ http:
       value: application/json
   body:
     type: json
-    data: "{\r
-
-      \    \"middle_name\": \"Olalekan\",\r
-
-      \    \"last_name\": \"Shittu\",\r
-
-      \    \"gender\": \"male\", // or female\r
-
-      \    \"phone\": \"08096880957\",\r
-
-      \    \"email\":\"contact@ikoroduhp.com\"\r
-
-      }"
+    data: |-
+      {
+          "middle_name": "Olalekan",
+          "last_name": "Shittu",
+          "gender": "male", // or female
+          "phone": "08096880957",
+          "email":"contact@ikoroduhp.com"
+      }
   auth:
     type: bearer
     token: "{{token}}"
@@ -33,6 +28,7 @@ settings:
   timeout: 0
   followRedirects: true
   maxRedirects: 5
+  forwardAuthorizationHeader: true
 
 examples:
   - name: Update contact profile

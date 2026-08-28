@@ -37,6 +37,12 @@ http:
       - name: username
         type: text
         value: "{{$randomUserName}}"
+      - name: state_id
+        type: text
+        value: "1"
+      - name: city_id
+        type: text
+        value: "1"
   auth: inherit
 
 settings:
@@ -44,6 +50,7 @@ settings:
   timeout: 0
   followRedirects: true
   maxRedirects: 5
+  forwardAuthorizationHeader: true
 
 examples:
   - name: update profile

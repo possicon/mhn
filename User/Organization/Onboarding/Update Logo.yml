@@ -1,0 +1,130 @@
+info:
+  name: Update Logo
+  type: http
+  seq: 14
+
+http:
+  method: POST
+  url: "{{base_url}}/user/organization/onboarding/profile/logo"
+  body:
+    type: multipart-form
+    data:
+      - name: logo
+        type: file
+        value:
+          - /home/lawpavilion/Videos/sun_facts/light_sky.jpg
+        contentType: image/jpeg
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+  forwardAuthorizationHeader: false
+
+examples:
+  - name: update logo
+    request:
+      url: "{{base_url}}/user/organization/onboarding/profile/logo"
+      method: POST
+      body:
+        type: multipart-form
+        data:
+          - name: logo
+            type: file
+            value:
+              - /home/lawpavilion/Videos/sun_facts/light_sky.jpg
+            contentType: image/jpeg
+    response:
+      status: 200
+      statusText: OK
+      headers:
+        - name: server
+          value: nginx/1.24.0 (Ubuntu)
+        - name: content-type
+          value: application/json
+        - name: transfer-encoding
+          value: chunked
+        - name: connection
+          value: keep-alive
+        - name: cache-control
+          value: no-cache, private
+        - name: date
+          value: Tue, 25 Aug 2026 10:39:14 GMT
+        - name: x-ratelimit-limit
+          value: "60"
+        - name: x-ratelimit-remaining
+          value: "59"
+        - name: vary
+          value: Origin
+        - name: x-frame-options
+          value: SAMEORIGIN
+        - name: x-xss-protection
+          value: 1; mode=block
+        - name: x-content-type-options
+          value: nosniff
+      body:
+        type: json
+        data: |-
+          {
+            "success": true,
+            "code": 0,
+            "locale": "en",
+            "message": "success",
+            "data": {
+              "item": {
+                "id": "a134be07-5a37-4059-b549-37210fe65250",
+                "name": "Abhay",
+                "domain": null,
+                "email": "Fabian.Jacobi@gmail.com",
+                "incoming_server": null,
+                "outgoing_server": null,
+                "domain_email": null,
+                "invited": false,
+                "token_time": "2026-03-22 18:49:28",
+                "country_id": 161,
+                "organization_type_id": 1,
+                "region_id": 1,
+                "interested_plan_id": "79416c1b-5a0f-418e-8c09-5b6b0fe0d49b",
+                "plan_id": "79416c1b-5a0f-418e-8c09-5b6b0fe0d49b",
+                "plan_frequency": "monthly",
+                "description": null,
+                "landmark": null,
+                "status": "Onboarded",
+                "step": "1",
+                "active": false,
+                "address": "Obalende road, Ikoyis",
+                "phone": "12345678",
+                "state_id": 488,
+                "city_id": 1,
+                "grade_id": 1,
+                "has_exhausted_free_sms_credit": 1,
+                "free_sms_credit": 200,
+                "media": [
+                  {
+                    "id": 23,
+                    "uuid": "279a77e0-fe81-4fb4-85b1-f6145c2ed6a8",
+                    "model_type": "App\\Models\\V1\\Organization",
+                    "model_id": "a134be07-5a37-4059-b549-37210fe65250",
+                    "collection_name": "logo",
+                    "name": "light_sky",
+                    "file_name": "light_sky.jpg",
+                    "mime_type": "image/jpeg",
+                    "disk": "public",
+                    "conversions_disk": "public",
+                    "size": 165505,
+                    "manipulations": [],
+                    "custom_properties": [],
+                    "generated_conversions": [],
+                    "responsive_images": [],
+                    "order_column": 3,
+                    "created_at": "2026-08-25T10:39:14.000000Z",
+                    "updated_at": "2026-08-25T10:39:14.000000Z",
+                    "original_url": "http://mhn.test//storage/23/light_sky.jpg",
+                    "preview_url": ""
+                  }
+                ]
+              }
+            }
+          }
