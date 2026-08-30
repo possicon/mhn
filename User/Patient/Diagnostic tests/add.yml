@@ -21,7 +21,8 @@ http:
           ],
           "tests":[
               [
-                  ["a153f242-1015-49aa-b691-678875424ce9","a153f242-1991-421c-bc32-ce8fa8c5e209"
+                  ["a153f242-1015-49aa-b691-678875424ce9",
+                   "a153f242-1991-421c-bc32-ce8fa8c5e209"
                   ]
               ]
           ],
@@ -42,6 +43,7 @@ settings:
   timeout: 0
   followRedirects: true
   maxRedirects: 5
+  forwardAuthorizationHeader: true
 
 examples:
   - name: add

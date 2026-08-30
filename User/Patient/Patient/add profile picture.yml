@@ -1,0 +1,121 @@
+info:
+  name: add profile picture
+  type: http
+  seq: 11
+
+http:
+  method: POST
+  url: "{{base_url}}/user/patients/:id/profile-picture"
+  headers:
+    - name: Accept
+      value: application/json
+  params:
+    - name: id
+      value: a134bd94-4206-44a3-8038-51e0328a3df0
+      type: path
+  body:
+    type: multipart-form
+    data:
+      - name: profile_picture
+        type: file
+        value:
+          - /home/lawpavilion/Videos/sun_facts/light_sky.jpg
+        contentType: image/jpeg
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+  forwardAuthorizationHeader: true
+
+examples:
+  - name: add profile picture
+    request:
+      url: "{{base_url}}/user/patients/:id/profile-picture"
+      method: POST
+      headers:
+        - name: Accept
+          value: application/json
+      params:
+        - name: id
+          value: a134bd94-4206-44a3-8038-51e0328a3df0
+          type: path
+      body:
+        type: multipart-form
+        data:
+          - name: profile_picture
+            type: file
+            value:
+              - /home/lawpavilion/Videos/sun_facts/light_sky.jpg
+            contentType: image/jpeg
+    response:
+      status: 200
+      statusText: OK
+      headers:
+        - name: server
+          value: nginx/1.24.0 (Ubuntu)
+        - name: content-type
+          value: application/json
+        - name: transfer-encoding
+          value: chunked
+        - name: connection
+          value: keep-alive
+        - name: cache-control
+          value: no-cache, private
+        - name: date
+          value: Sun, 30 Aug 2026 15:28:12 GMT
+        - name: x-ratelimit-limit
+          value: "60"
+        - name: x-ratelimit-remaining
+          value: "58"
+        - name: vary
+          value: Origin
+        - name: x-frame-options
+          value: SAMEORIGIN
+        - name: x-xss-protection
+          value: 1; mode=block
+        - name: x-content-type-options
+          value: nosniff
+      body:
+        type: json
+        data: |-
+          {
+            "success": true,
+            "code": 0,
+            "locale": "en",
+            "message": "Patient Profile Picture Added",
+            "data": {
+              "item": {
+                "id": "a134bd94-4206-44a3-8038-51e0328a3df0",
+                "title": "Mr",
+                "first_name": "John",
+                "last_name": "Doe",
+                "middle_name": "Henry",
+                "dob": "1990-05-15",
+                "gender": "Male",
+                "occupation": "Engineer",
+                "nin": "12345678901",
+                "martial_status": "Single",
+                "tribe": "Yoruba",
+                "religion": "Christianity",
+                "preferred_language": "a134bd94-378f-4c1a-8add-3b16e23cb6e7",
+                "patient_sequence": "MHN_USA791167269",
+                "primary_mobile": null,
+                "additional_mobile": null,
+                "email_address": "email@gmail.com",
+                "address": null,
+                "country_id": null,
+                "state_id": null,
+                "city_id": null,
+                "status": null,
+                "user_id": "a229047b-1b79-4387-b7bf-d3cb72ed1ecf",
+                "file_number": null,
+                "created_by_organization_id": "",
+                "deleted_at": null,
+                "created_at": "2026-03-02T19:15:09.000000Z",
+                "updated_at": "2026-03-02T19:15:09.000000Z"
+              }
+            }
+          }

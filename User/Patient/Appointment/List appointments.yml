@@ -5,7 +5,7 @@ info:
 
 http:
   method: GET
-  url: "{{base_url}}/user/patients/:patientId/appointments?page=1&take=5"
+  url: "{{base_url}}/user/patients/:patientId/appointments"
   headers:
     - name: Accept
       value: application/json
@@ -14,12 +14,6 @@ http:
       value: MHN_USAi2dTkjg
       type: query
       disabled: true
-    - name: page
-      value: "1"
-      type: query
-    - name: take
-      value: "5"
-      type: query
     - name: patientId
       value: a134bd94-4206-44a3-8038-51e0328a3df0
       type: path
@@ -30,6 +24,7 @@ settings:
   timeout: 0
   followRedirects: true
   maxRedirects: 5
+  forwardAuthorizationHeader: true
 
 examples:
   - name: List appointments
