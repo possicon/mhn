@@ -5,7 +5,11 @@ info:
 
 http:
   method: GET
-  url: "{{base_url}}/user/diagnostic_tests"
+  url: "{{base_url}}/user/diagnostic_tests?search=incomle"
+  params:
+    - name: search
+      value: incomle
+      type: query
   auth: inherit
 
 settings:
@@ -13,6 +17,7 @@ settings:
   timeout: 0
   followRedirects: true
   maxRedirects: 5
+  forwardAuthorizationHeader: true
 
 examples:
   - name: test list

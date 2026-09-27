@@ -11,10 +11,10 @@ http:
       value: application/json
   params:
     - name: patientId
-      value: 9ea8d8a4-2cdd-4e08-baaf-a2d7048f8a32
+      value: a134bd94-4206-44a3-8038-51e0328a3df0
       type: path
     - name: appointmentId
-      value: 9eca42a4-a572-411e-a2e3-10227e0f2bc7
+      value: a14427af-e505-4c40-a7ad-6c2bcbf8ff75
       type: path
   auth: inherit
 
@@ -23,6 +23,7 @@ settings:
   timeout: 0
   followRedirects: true
   maxRedirects: 5
+  forwardAuthorizationHeader: true
 
 examples:
   - name: View appointment

@@ -1,0 +1,138 @@
+info:
+  name: patient consultation procedures
+  type: http
+  seq: 20
+
+http:
+  method: GET
+  url: "{{base_url}}/user/treatment_intervention/patients/:patient/consultations/:appointment/procedures"
+  headers:
+    - name: Accept
+      value: application/json
+  params:
+    - name: appointment
+      value: a14427af-e505-4c40-a7ad-6c2bcbf8ff75
+      type: path
+    - name: patient
+      value: a134bd94-4206-44a3-8038-51e0328a3df0
+      type: path
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+  forwardAuthorizationHeader: true
+
+examples:
+  - name: sample
+    request:
+      url: "{{base_url}}/user/treatment_intervention/patients/:patient/consultations/:appointment/procedures"
+      method: GET
+      headers:
+        - name: Accept
+          value: application/json
+      params:
+        - name: appointment
+          value: a14427af-e505-4c40-a7ad-6c2bcbf8ff75
+          type: path
+        - name: patient
+          value: a134bd94-4206-44a3-8038-51e0328a3df0
+          type: path
+    response:
+      status: 200
+      statusText: OK
+      headers:
+        - name: server
+          value: nginx/1.24.0 (Ubuntu)
+        - name: content-type
+          value: application/json
+        - name: transfer-encoding
+          value: chunked
+        - name: connection
+          value: keep-alive
+        - name: cache-control
+          value: no-cache, private
+        - name: date
+          value: Mon, 31 Aug 2026 15:43:55 GMT
+        - name: x-ratelimit-limit
+          value: "60"
+        - name: x-ratelimit-remaining
+          value: "58"
+        - name: vary
+          value: Origin
+        - name: x-frame-options
+          value: SAMEORIGIN
+        - name: x-xss-protection
+          value: 1; mode=block
+        - name: x-content-type-options
+          value: nosniff
+      body:
+        type: json
+        data: |-
+          {
+            "success": true,
+            "code": 0,
+            "locale": "en",
+            "message": "success",
+            "data": {
+              "items": [
+                {
+                  "id": "a1442957-1814-4a52-9754-7d5123f349e4",
+                  "patient_id": "a134bd94-4206-44a3-8038-51e0328a3df0",
+                  "visit_date": "2026-03-10 00:00:00",
+                  "treatment_plan": "treatment only",
+                  "refer_to": null,
+                  "procedures": 1,
+                  "programs": null,
+                  "admission": 1,
+                  "prescription": 1,
+                  "followup": null,
+                  "prenatal_care": null,
+                  "hospital_id": null,
+                  "reasons_for_refer": null,
+                  "additional_note": null,
+                  "trimester": null,
+                  "number_of_examination": null,
+                  "prenatal_care_frequency": null,
+                  "prenatal_care_note": null,
+                  "followup_occurrence": null,
+                  "followup_note": null,
+                  "followup_start_date": null,
+                  "followup_end_date": null,
+                  "followup_time": null,
+                  "followup_doctor_id": null,
+                  "repeat_followup": 0,
+                  "prescription_ids": ""a1442957-1674-4829-9e41-43980ae39dba"",
+                  "instruction_for_wards": null,
+                  "program_id": null,
+                  "procedure_id": null,
+                  "requested_by": {
+                    "id": "a134bfd5-bb77-4c87-a0e0-ad7e2a793325",
+                    "first_name": "Russel",
+                    "last_name": "Corkery",
+                    "email": "toheebabiodun03@gmail.com",
+                    "organization_id": "a134be07-5a37-4059-b549-37210fe65250"
+                  },
+                  "admission_status": "admitted",
+                  "appointment_id": "a14427af-e505-4c40-a7ad-6c2bcbf8ff75",
+                  "admission_date": "2026-06-20 05:30:28",
+                  "discharge_date": null,
+                  "created_at": "2026-03-10T11:13:54.000000Z",
+                  "updated_at": "2026-03-10T11:13:54.000000Z",
+                  "billId": null,
+                  "ward": null,
+                  "room": null,
+                  "bed_number": "a1385b16-20b8-4621-bf10-8988b86fcbe3",
+                  "bed_changed": 0,
+                  "bed_changed_at": null,
+                  "admission_duration": {
+                    "days": 72,
+                    "hours": 11
+                  },
+                  "procedure": null
+                }
+              ]
+            }
+          }

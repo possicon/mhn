@@ -11,30 +11,23 @@ http:
       value: application/json
   body:
     type: json
-    data: "{\r
-
-      \    \"company_id\":\"9bf4a55d-7f00-4a05-8ddf-7064aa43a016\",\r
-
-      \    \"plan_name\":\"gold\",\r
-
-      \    \"service_item_id\":[\"9cfe8382-d6e2-4519-93a8-2337a40aada6\",\"9cfe8382-e60c-4ce8-9981-ab2e64dea7e2\",\"9cfe8382-e2dd-41f5-86e7-7dbf3335aafb\"],\r
-
-      \    \"coverage_type\":[\"zero\",\"full\",\"partial\"],\r
-
-      \    \"coverage_percent\":[5.00,20.00,0.00],\r
-
-      \    \"is_amount_in_percent\":0\r
-
-      }"
-  auth:
-    type: bearer
-    token: 47|UmN9H6pr616bS7AzWWQMh3CtvONQIutQp8ISQUwwd269fcf2
+    data: |-
+      {
+          "company_id":"a1ef78dd-dbff-4b73-9c5a-b108b2e31e5e",
+          "plan_name":"gold",
+          "service_item_id":["a134bd87-de82-40a6-92bb-4d93f61461e8"],
+          "coverage_type":["partial"],
+          "coverage_percent":[50],
+          "is_amount_in_percent":1
+      }
+  auth: inherit
 
 settings:
   encodeUrl: true
   timeout: 0
   followRedirects: true
   maxRedirects: 5
+  forwardAuthorizationHeader: true
 
 examples:
   - name: AddCompayPricig

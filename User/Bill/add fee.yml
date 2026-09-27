@@ -11,32 +11,26 @@ http:
       value: application/json
   params:
     - name: id
-      value: 9e607dbb-342e-4f4f-89a4-c93a18d8e8ee
+      value: a1443165-2183-4e04-8f37-c04304fc7680
       type: path
   body:
     type: json
-    data: "{\r
-
-      \    \"amount\":3699,\r
-
-      \    \"care_type\":\"primary care\",\r
-
-      \    \"coverage_type\":\"partial\",\r
-
-      \    \"percent\":20,\r
-
-      \    \"is_amount_in_percent\":1\r
-
-      }"
-  auth:
-    type: bearer
-    token: "{{token}}"
+    data: |-
+      {
+          "amount":4000,
+          "care_type":"primary care",
+          "coverage_type":"partial",
+          "percent":50,
+          "is_amount_in_percent":1
+      }
+  auth: inherit
 
 settings:
   encodeUrl: true
   timeout: 0
   followRedirects: true
   maxRedirects: 5
+  forwardAuthorizationHeader: true
 
 examples:
   - name: add fee

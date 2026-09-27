@@ -1,20 +1,11 @@
 info:
-  name: Import services to hmo
+  name: admissions length by ward
   type: http
-  seq: 28
+  seq: 16
 
 http:
-  method: POST
-  url: "{{base_url}}/user/organization/hmo/importServices"
-  body:
-    type: json
-    data: |
-      {
-        "hmo_id":"a2620a0d-0089-4bdf-a047-969e2aef23f0",
-        "is_all" : false,
-        "services" : ["a134bd8b-bb4f-4a6e-bd14-710cf7f71082"]
-
-      }
+  method: GET
+  url: "{{base_url}}/user/organization/reports/admissions/average-length-of-stay-by-ward"
   auth: inherit
 
 settings:
@@ -22,22 +13,13 @@ settings:
   timeout: 0
   followRedirects: true
   maxRedirects: 5
-  forwardAuthorizationHeader: true
+  forwardAuthorizationHeader: false
 
 examples:
-  - name: import services to hmo
+  - name: avg length of admitted patient by ward
     request:
-      url: "{{base_url}}/user/organization/hmo/importServices"
-      method: POST
-      body:
-        type: json
-        data: |-
-          {
-                  "hmo_id":"22d588e9-4f42-34f7-a734-707a8f7eb095",
-            "is_all" : true,
-            "services" : [""]
-
-          }
+      url: "{{base_url}}/user/organization/reports/admissions/average-length-of-stay-by-ward"
+      method: GET
     response:
       status: 200
       statusText: OK
@@ -53,7 +35,7 @@ examples:
         - name: cache-control
           value: no-cache, private
         - name: date
-          value: Wed, 12 Aug 2026 18:13:10 GMT
+          value: Wed, 02 Sep 2026 16:49:43 GMT
         - name: x-ratelimit-limit
           value: "60"
         - name: x-ratelimit-remaining
@@ -73,6 +55,16 @@ examples:
             "success": true,
             "code": 0,
             "locale": "en",
-            "message": "success",
-            "data": null
+            "message": "Average Length of Stay by Ward Fetched",
+            "data": {
+              "items": [
+                {
+                  "ward_name": "South East III",
+                  "avg_length_of_stay": "61.0000",
+                  "can_edit": true,
+                  "is_admitted": false,
+                  "admission": null
+                }
+              ]
+            }
           }

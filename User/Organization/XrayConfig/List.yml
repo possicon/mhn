@@ -5,10 +5,14 @@ info:
 
 http:
   method: GET
-  url: "{{base_url}}/user/organization/xrayConfigList"
+  url: "{{base_url}}/user/organization/xrayConfigList?filter=ultrasounds"
   headers:
     - name: Accept
       value: application/json
+  params:
+    - name: filter
+      value: ultrasounds
+      type: query
   body:
     type: text
     data: "{\r
@@ -39,6 +43,7 @@ settings:
   timeout: 0
   followRedirects: true
   maxRedirects: 5
+  forwardAuthorizationHeader: true
 
 examples:
   - name: List

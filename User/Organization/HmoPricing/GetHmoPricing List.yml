@@ -11,26 +11,21 @@ http:
       value: application/json
   body:
     type: json
-    data: "{\r
+    data: |-
+      {
 
-      \r
+          "hmo_id":"a2620a0d-0089-4bdf-a047-969e2aef23f0",
+          "plan_name":"diamond"
 
-      \    \"hmo_id\":\"9bbbac52-edd1-4aa7-8254-c29c14fa6249\",\r
-
-      \    \"plan_name\":\"gold\"\r
-
-      \r
-
-      }"
-  auth:
-    type: bearer
-    token: 64|wekxmT6fEC7W1savxR3VWd2fcLOu9fkY2pdTExtBe40532c7
+      }
+  auth: inherit
 
 settings:
   encodeUrl: true
   timeout: 0
   followRedirects: true
   maxRedirects: 5
+  forwardAuthorizationHeader: true
 
 examples:
   - name: GetHmoPricing Copy

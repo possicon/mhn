@@ -5,10 +5,14 @@ info:
 
 http:
   method: GET
-  url: "{{base_url}}/user/organization/diagnostic/individual"
+  url: "{{base_url}}/user/organization/diagnostic/individual?is_paginated=false"
   headers:
     - name: Accept
       value: application/json
+  params:
+    - name: is_paginated
+      value: "false"
+      type: query
   auth: inherit
 
 settings:
@@ -16,6 +20,7 @@ settings:
   timeout: 0
   followRedirects: true
   maxRedirects: 5
+  forwardAuthorizationHeader: true
 
 examples:
   - name: list

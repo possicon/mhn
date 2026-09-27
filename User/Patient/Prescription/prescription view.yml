@@ -11,7 +11,7 @@ http:
       value: application/json
   params:
     - name: prescription
-      value: 9e6e21dc-8f98-45f7-8e67-35c86a6e998a
+      value: a1442957-1674-4829-9e41-43980ae39dba
       type: path
   auth: inherit
 
@@ -20,6 +20,7 @@ settings:
   timeout: 0
   followRedirects: true
   maxRedirects: 5
+  forwardAuthorizationHeader: true
 
 examples:
   - name: prescription view

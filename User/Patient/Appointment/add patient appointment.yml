@@ -11,56 +11,36 @@ http:
       value: application/json
   body:
     type: json
-    data: "{\r
-
-      \    \"purpose_of_visit\":\"Family Planing\",\r
-
-      \    \"mode_of_appointment\":\"telemedicine\", //walk-in , telemedicine\r
-
-      \    \"type_of_appointment\":\"schedule\",//immediate,schedule\r
-
-      \    \"has_free_consultation\":0,\r
-
-      \    \"for_antenatal\":0,\r
-
-      \    \"for_physiotherapy\":1,\r
-
-      \    \"payment_type\":\"hmo\", //private , hmo, company \r
-
-      \    \"mode\":\"hmo\", // bank_transfer,card,hmo,company,mobile_money\r
-
-      \    \"hmo_id\":\"9bbbac52-edd1-4aa7-8254-c29c14fa6249\",\r
-
-      \    \"hmo_policy_number\":\"KJMMFDKJ83D\",\r
-
-      \    \"patient_id\":\"9ea8d8a4-2cdd-4e08-baaf-a2d7048f8a32\",\r
-
-      \    \"consultation_fee\":\"14043\",\r
-
-      \    \"name\":\"Reliance\", //required if payment type is hmo or company\r
-
-      \    \"plan\":\"gold\", //required if payment type is hmo or company\r
-
-      \    \"policy_number\":\"DDPEIO3J\", //required if payment type is hmo or company\r
-
-      \    \"appointment_date\":\"2024/06/29\",\r
-
-      \    \"company_id\":\"9bf47377-572d-424e-8bb1-a1c09a0e2810\",\r
-
-      \    \"bank_name\":\"GTB\",\r
-
-      \    \"tele_medicine_url\":\"http://www.telemedicine.com\" // required if mode_of_appointment is telemedicine\r
-
-      }"
-  auth:
-    type: bearer
-    token: "{{token}}"
+    data: |-
+      {
+          "purpose_of_visit":"a134bd8b-bb4f-4a6e-bd14-710cf7f71082",
+          "mode_of_appointment":"telemedicine", //walk-in , telemedicine
+          "type_of_appointment":"schedule",//immediate,schedule
+          "has_free_consultation":0,
+          "for_antenatal":0,
+          "for_physiotherapy":1,
+          "payment_type":"hmo", //private , hmo, company 
+          "mode":"hmo", // bank_transfer,card,hmo,company,mobile_money
+          "hmo_id":"a2620a0d-0089-4bdf-a047-969e2aef23f0",
+          "hmo_policy_number":"KJMMFDKJ83D",
+          "patient_id":"a134bd94-4206-44a3-8038-51e0328a3df0",
+          "consultation_fee":"14043",
+          "name":"Reliance", //required if payment type is hmo or company
+          "plan":"diamond", //required if payment type is hmo or company
+          "policy_number":"DDPEIO3J", //required if payment type is hmo or company
+          "appointment_date":"2024/06/29",
+          "company_id":"9bf47377-572d-424e-8bb1-a1c09a0e2810",
+          "bank_name":"GTB",
+          "tele_medicine_url":"http://www.telemedicine.com" // required if mode_of_appointment is telemedicine
+      }
+  auth: inherit
 
 settings:
   encodeUrl: true
   timeout: 0
   followRedirects: true
   maxRedirects: 5
+  forwardAuthorizationHeader: true
 
 examples:
   - name: add patient

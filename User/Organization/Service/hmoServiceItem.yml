@@ -5,8 +5,11 @@ info:
 
 http:
   method: GET
-  url: "{{base_url}}/user/organization/hmoServiceItem/:hmoId"
+  url: "{{base_url}}/user/organization/hmoServiceItem/:hmoId?price_set=false"
   params:
+    - name: price_set
+      value: "false"
+      type: query
     - name: filter
       value: General,Clinical Lab
       type: query
@@ -21,6 +24,7 @@ settings:
   timeout: 0
   followRedirects: true
   maxRedirects: 5
+  forwardAuthorizationHeader: true
 
 examples:
   - name: hmoServiceItem

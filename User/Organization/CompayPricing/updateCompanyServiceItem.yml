@@ -11,23 +11,16 @@ http:
       value: application/json
   body:
     type: json
-    data: "{\r
+    data: |-
+      {
+          "amount":"6000",
+          "care_type":"primary care",
+          "service_item_id":"a134bd87-de82-40a6-92bb-4d93f61461e8",
+          "company_id":"a1ef78dd-dbff-4b73-9c5a-b108b2e31e5e",
+          "use_private_pricing":0
 
-      \    \"amount\":\"6000\",\r
 
-      \    \"care_type\":\"primary care\",\r
-
-      \    \"service_item_id\":\"a134bd8b-b2f0-410c-a15f-b006b89602ac\",\r
-
-      \    \"company_id\":\"a1ef78dd-dbff-4b73-9c5a-b108b2e31e5e\",\r
-
-      \    \"use_private_pricing\":0\r
-
-      \r
-
-      \r
-
-      }"
+      }
   auth: inherit
 
 settings:
@@ -35,6 +28,7 @@ settings:
   timeout: 0
   followRedirects: true
   maxRedirects: 5
+  forwardAuthorizationHeader: true
 
 examples:
   - name: updateCompanyServiceItem

@@ -14,23 +14,23 @@ http:
     data:
       - name: type
         type: text
-        value: general
+        value: consultation
       - name: hmo_id
         type: text
-        value: 9bbbac52-edd1-4aa7-8254-c29c14fa6249
+        value: a2620a0d-0089-4bdf-a047-969e2aef23f0
       - name: file
         type: file
         value:
-          - -X6ADLDNt/unit_measurements.csv
-  auth:
-    type: bearer
-    token: 78|IJJwsPNGwfjrHdMvXfMgKzfYaTOw56YXrF1VLHE8b494a4af
+          - /home/lawpavilion/Downloads/hmo_service_item_bulk_upload.csv
+        contentType: text/csv; charset=utf-8
+  auth: inherit
 
 settings:
   encodeUrl: true
   timeout: 0
   followRedirects: true
   maxRedirects: 5
+  forwardAuthorizationHeader: true
 
 examples:
   - name: bulkServiceItemUploadUpdate

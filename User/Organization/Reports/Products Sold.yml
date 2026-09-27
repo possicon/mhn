@@ -13,3 +13,60 @@ settings:
   timeout: 0
   followRedirects: true
   maxRedirects: 5
+  forwardAuthorizationHeader: true
+
+examples:
+  - name: example
+    request:
+      url: "{{base_url}}/user/organization/reports/products"
+      method: GET
+    response:
+      status: 200
+      statusText: OK
+      headers:
+        - name: server
+          value: nginx/1.24.0 (Ubuntu)
+        - name: content-type
+          value: application/json
+        - name: transfer-encoding
+          value: chunked
+        - name: connection
+          value: keep-alive
+        - name: cache-control
+          value: no-cache, private
+        - name: date
+          value: Mon, 31 Aug 2026 16:06:20 GMT
+        - name: x-ratelimit-limit
+          value: "60"
+        - name: x-ratelimit-remaining
+          value: "58"
+        - name: vary
+          value: Origin
+        - name: x-frame-options
+          value: SAMEORIGIN
+        - name: x-xss-protection
+          value: 1; mode=block
+        - name: x-content-type-options
+          value: nosniff
+      body:
+        type: json
+        data: |-
+          {
+            "success": true,
+            "code": 0,
+            "locale": "en",
+            "message": "Products Sold Fetched",
+            "data": {
+              "items": [
+                {
+                  "id": "a1442d62-9ec8-42a9-857a-5720f66bc5a5",
+                  "medicine_name": "a1f11a91-1c25-455f-b64f-b5bfeab05062",
+                  "medicine_amount": "3000.00",
+                  "service": {
+                    "id": "a1f11a91-1c25-455f-b64f-b5bfeab05062",
+                    "name": "Bed 1"
+                  }
+                }
+              ]
+            }
+          }

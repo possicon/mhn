@@ -5,146 +5,184 @@ info:
 
 http:
   method: GET
-  url: "{{base_url}}/user/organization/panelsList?families[0]=hematology&families[1]=biochemistry"
+  url: "{{base_url}}/user/organization/panelsList?family=microbiology"
   headers:
     - name: Accept
       value: application/json
   params:
-    - name: families[0]
-      value: hematology
+    - name: family
+      value: microbiology
       type: query
-    - name: families[1]
-      value: biochemistry
-      type: query
-  auth:
-    type: bearer
-    token: 78|IJJwsPNGwfjrHdMvXfMgKzfYaTOw56YXrF1VLHE8b494a4af
+  auth: inherit
 
 settings:
   encodeUrl: true
   timeout: 0
   followRedirects: true
   maxRedirects: 5
+  forwardAuthorizationHeader: true
 
 examples:
-  - name: panelsList
+  - name: panel lists
     request:
-      url: "{{base_url}}/user/organization/panelsList?families[0]=hematology&families[1]=biochemistry"
+      url: "{{base_url}}/user/organization/panelsList?family=microbiology"
       method: GET
       headers:
         - name: Accept
           value: application/json
       params:
-        - name: families[0]
-          value: hematology
-          type: query
-        - name: families[1]
-          value: biochemistry
+        - name: family
+          value: microbiology
           type: query
     response:
       status: 200
       statusText: OK
       headers:
-        - name: Date
-          value: Sat, 23 Nov 2024 09:32:13 GMT
-        - name: Server
-          value: Apache/2.4.54 (Win64) OpenSSL/1.1.1d mod_fcgid/2.3.10-dev
-        - name: X-Powered-By
-          value: PHP/8.2.17
-        - name: Cache-Control
-          value: no-cache, private
-        - name: X-RateLimit-Limit
-          value: "60"
-        - name: X-RateLimit-Remaining
-          value: "59"
-        - name: Access-Control-Allow-Origin
-          value: "*"
-        - name: Vary
-          value: Authorization
-        - name: Keep-Alive
-          value: timeout=5, max=100
-        - name: Connection
-          value: Keep-Alive
-        - name: Transfer-Encoding
-          value: chunked
-        - name: Content-Type
+        - name: server
+          value: nginx/1.24.0 (Ubuntu)
+        - name: content-type
           value: application/json
+        - name: transfer-encoding
+          value: chunked
+        - name: connection
+          value: keep-alive
+        - name: cache-control
+          value: no-cache, private
+        - name: date
+          value: Sun, 27 Sep 2026 12:38:17 GMT
+        - name: x-ratelimit-limit
+          value: "60"
+        - name: x-ratelimit-remaining
+          value: "56"
+        - name: vary
+          value: Origin
+        - name: x-frame-options
+          value: SAMEORIGIN
+        - name: x-xss-protection
+          value: 1; mode=block
+        - name: x-content-type-options
+          value: nosniff
       body:
         type: json
         data: |-
-          {
-              "success": true,
-              "code": 0,
-              "locale": "en",
-              "message": "success",
-              "data": {
-                  "biochemistry": [
-                      {
-                          "id": "9d7cb6f0-de71-4618-b7ed-d21d242ee191",
-                          "panel_name": "9cfe8382-e184-41e9-9838-9a0b047b6b31",
-                          "service": {
-                              "id": "9cfe8382-e184-41e9-9838-9a0b047b6b31",
-                              "name": "Annual Physical Exam"
-                          }
-                      },
-                      {
-                          "id": "9d7d232a-ad84-450c-b556-ad86ea9f211f",
-                          "panel_name": "9cfe8383-1db9-4d6c-9653-c2e06208f35a",
-                          "service": {
-                              "id": "9cfe8383-1db9-4d6c-9653-c2e06208f35a",
-                              "name": "Chest X-Ray"
-                          }
-                      },
-                      {
-                          "id": "9d7d232a-b419-4365-bcb8-bc272862ded7",
-                          "panel_name": "9cfe8383-1f43-436a-8c6f-0b5b084b6010",
-                          "service": {
-                              "id": "9cfe8383-1f43-436a-8c6f-0b5b084b6010",
-                              "name": "Abdominal X-Ray"
-                          }
-                      },
-                      {
-                          "id": "9d7d232a-bf3c-4113-9f44-2261c336f7ad",
-                          "panel_name": "9cfe8383-2210-450b-b85a-c33adada1b28",
-                          "service": {
-                              "id": "9cfe8383-2210-450b-b85a-c33adada1b28",
-                              "name": "Extremity X-Ray"
-                          }
-                      }
-                  ],
-                  "hematology": [
-                      {
-                          "id": "9d7cb6f0-de71-4618-b7ed-d21d242ee191",
-                          "panel_name": "9cfe8382-e184-41e9-9838-9a0b047b6b31",
-                          "service": {
-                              "id": "9cfe8382-e184-41e9-9838-9a0b047b6b31",
-                              "name": "Annual Physical Exam"
-                          }
-                      },
-                      {
-                          "id": "9d7d232a-ad84-450c-b556-ad86ea9f211f",
-                          "panel_name": "9cfe8383-1db9-4d6c-9653-c2e06208f35a",
-                          "service": {
-                              "id": "9cfe8383-1db9-4d6c-9653-c2e06208f35a",
-                              "name": "Chest X-Ray"
-                          }
-                      },
-                      {
-                          "id": "9d7d232a-b419-4365-bcb8-bc272862ded7",
-                          "panel_name": "9cfe8383-1f43-436a-8c6f-0b5b084b6010",
-                          "service": {
-                              "id": "9cfe8383-1f43-436a-8c6f-0b5b084b6010",
-                              "name": "Abdominal X-Ray"
-                          }
-                      },
-                      {
-                          "id": "9d7d232a-b9e2-4e4c-ad9b-950d1221923a",
-                          "panel_name": "9cfe8383-209b-4d27-9d31-49fd8a203754",
-                          "service": {
-                              "id": "9cfe8383-209b-4d27-9d31-49fd8a203754",
-                              "name": "Pelvic X-Ray"
-                          }
-                      }
-                  ]
+          [
+            {
+              "id": 1,
+              "panel_id": "01a0de65-545a-72b3-8b8f-2c65c8d6e46c",
+              "diagnostic_config_id": "01a0de83-d3b3-7202-b703-1949f0fb0ba0",
+              "is_active": 1,
+              "created_at": "2026-09-26T16:19:36.000000Z",
+              "updated_at": "2026-09-26T16:19:36.000000Z",
+              "diagnostic_config": {
+                "id": "01a0de83-d3b3-7202-b703-1949f0fb0ba0",
+                "test_name": "01a0de83-d36b-732b-98ba-0798561a8991",
+                "diagnostic_family": "[\"microbiology\"]",
+                "service": {
+                  "id": "01a0de83-d36b-732b-98ba-0798561a8991",
+                  "name": "Volume"
+                }
               }
-          }
+            },
+            {
+              "id": 2,
+              "panel_id": "01a0de65-545a-72b3-8b8f-2c65c8d6e46c",
+              "diagnostic_config_id": "01a0de83-d40e-72fc-b8ea-d8aef655c2af",
+              "is_active": 1,
+              "created_at": "2026-09-26T16:19:36.000000Z",
+              "updated_at": "2026-09-26T16:19:36.000000Z",
+              "diagnostic_config": {
+                "id": "01a0de83-d40e-72fc-b8ea-d8aef655c2af",
+                "test_name": "01a0de83-d3e8-7381-b76b-64973faa765b",
+                "diagnostic_family": "[\"microbiology\"]",
+                "service": {
+                  "id": "01a0de83-d3e8-7381-b76b-64973faa765b",
+                  "name": "Sperm Count"
+                }
+              }
+            },
+            {
+              "id": 3,
+              "panel_id": "01a0de65-545a-72b3-8b8f-2c65c8d6e46c",
+              "diagnostic_config_id": "01a0de83-d46f-722f-9ba8-0ff23a40f308",
+              "is_active": 1,
+              "created_at": "2026-09-26T16:19:36.000000Z",
+              "updated_at": "2026-09-26T16:19:36.000000Z",
+              "diagnostic_config": {
+                "id": "01a0de83-d46f-722f-9ba8-0ff23a40f308",
+                "test_name": "01a0de83-d446-73e2-a498-0d2ab752bfba",
+                "diagnostic_family": "[\"microbiology\"]",
+                "service": {
+                  "id": "01a0de83-d446-73e2-a498-0d2ab752bfba",
+                  "name": "Total Motility (PR+NP)"
+                }
+              }
+            },
+            {
+              "id": 4,
+              "panel_id": "01a0de65-545a-72b3-8b8f-2c65c8d6e46c",
+              "diagnostic_config_id": "01a0de83-d4c2-7252-b5e6-5fdbd870ba6c",
+              "is_active": 1,
+              "created_at": "2026-09-26T16:19:36.000000Z",
+              "updated_at": "2026-09-26T16:19:36.000000Z",
+              "diagnostic_config": {
+                "id": "01a0de83-d4c2-7252-b5e6-5fdbd870ba6c",
+                "test_name": "01a0de83-d4a0-73f9-b189-f29236cbb378",
+                "diagnostic_family": "[\"microbiology\"]",
+                "service": {
+                  "id": "01a0de83-d4a0-73f9-b189-f29236cbb378",
+                  "name": "Progressive Motility (PR)"
+                }
+              }
+            },
+            {
+              "id": 5,
+              "panel_id": "01a0de65-545a-72b3-8b8f-2c65c8d6e46c",
+              "diagnostic_config_id": "01a0de83-d513-73e9-a3af-9e7f8fe2c220",
+              "is_active": 1,
+              "created_at": "2026-09-26T16:19:36.000000Z",
+              "updated_at": "2026-09-26T16:19:36.000000Z",
+              "diagnostic_config": {
+                "id": "01a0de83-d513-73e9-a3af-9e7f8fe2c220",
+                "test_name": "01a0de83-d4ef-73b8-b633-fb105ecca492",
+                "diagnostic_family": "[\"microbiology\"]",
+                "service": {
+                  "id": "01a0de83-d4ef-73b8-b633-fb105ecca492",
+                  "name": "Morphology (Kruger)"
+                }
+              }
+            },
+            {
+              "id": 6,
+              "panel_id": "01a0de65-545a-72b3-8b8f-2c65c8d6e46c",
+              "diagnostic_config_id": "01a0de83-d562-729c-8b96-fad6c9215619",
+              "is_active": 1,
+              "created_at": "2026-09-26T16:19:36.000000Z",
+              "updated_at": "2026-09-26T16:19:36.000000Z",
+              "diagnostic_config": {
+                "id": "01a0de83-d562-729c-8b96-fad6c9215619",
+                "test_name": "01a0de83-d541-7031-b671-38e187d5ce23",
+                "diagnostic_family": "[\"biochemistry\"]",
+                "service": {
+                  "id": "01a0de83-d541-7031-b671-38e187d5ce23",
+                  "name": "pH"
+                }
+              }
+            },
+            {
+              "id": 7,
+              "panel_id": "01a0de65-545a-72b3-8b8f-2c65c8d6e46c",
+              "diagnostic_config_id": "01a0de83-d5b9-73ab-9d26-e02293c7963e",
+              "is_active": 1,
+              "created_at": "2026-09-26T16:19:37.000000Z",
+              "updated_at": "2026-09-26T16:19:37.000000Z",
+              "diagnostic_config": {
+                "id": "01a0de83-d5b9-73ab-9d26-e02293c7963e",
+                "test_name": "01a0de83-d597-714b-b6c0-759063408407",
+                "diagnostic_family": "[\"microbiology\"]",
+                "service": {
+                  "id": "01a0de83-d597-714b-b6c0-759063408407",
+                  "name": "Liquefaction Time"
+                }
+              }
+            }
+          ]

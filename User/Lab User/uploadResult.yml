@@ -37,6 +37,9 @@ http:
         value:
           - NGgLRUCyM/EmmanuelOgbuaguCV.pdf
         disabled: true
+      - name: send_sms
+        type: text
+        value: "0"
   auth: inherit
 
 settings:
@@ -44,6 +47,7 @@ settings:
   timeout: 0
   followRedirects: true
   maxRedirects: 5
+  forwardAuthorizationHeader: true
 
 examples:
   - name: uploadResult

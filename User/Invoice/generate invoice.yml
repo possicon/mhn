@@ -13,11 +13,11 @@ http:
     type: json
     data: |-
       {
-           "patient_id":"a1386445-cc49-468b-b5b8-a1c161d2d27",
+           "patient_id":"a1386445-cc49-468b-b5b8-a1c161d2d279",
            "bill_id": [
               "a1443165-2183-4e04-8f37-c04304fc7680"
            ],
-          "add_vat" : false
+          "add_vat" : true
       }
   auth: inherit
 
@@ -26,6 +26,7 @@ settings:
   timeout: 0
   followRedirects: true
   maxRedirects: 5
+  forwardAuthorizationHeader: true
 
 examples:
   - name: generate invoice

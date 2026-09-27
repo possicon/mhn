@@ -11,17 +11,16 @@ http:
       value: application/json
   params:
     - name: id
-      value: 9bf4a55d-7f00-4a05-8ddf-7064aa43a016
+      value: a1ef78dd-dbff-4b73-9c5a-b108b2e31e5e
       type: path
-  auth:
-    type: bearer
-    token: 78|IJJwsPNGwfjrHdMvXfMgKzfYaTOw56YXrF1VLHE8b494a4af
+  auth: inherit
 
 settings:
   encodeUrl: true
   timeout: 0
   followRedirects: true
   maxRedirects: 5
+  forwardAuthorizationHeader: true
 
 examples:
   - name: companyPlans

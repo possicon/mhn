@@ -8,30 +8,26 @@ http:
   url: "{{base_url}}/user/organization/inventory/:inventory"
   params:
     - name: inventory
-      value: 9d1e8ec9-75fe-4324-8a87-cbb1a2a4face
+      value: 01a0dc7d-731f-7263-bd84-610c1f9237d0
       type: path
   body:
     type: json
-    data: "{\r
-
-      \    \"category\": \"string\",\r
-
-      \    \"description\": \"string\",\r
-
-      \    \"quantity_in_stock\":\"20\",\r
-
-      \    \"re_order_level\" : \"50\"\r
-
-      }"
-  auth:
-    type: bearer
-    token: 64|wekxmT6fEC7W1savxR3VWd2fcLOu9fkY2pdTExtBe40532c7
+    data: |-
+      {
+        "name" : "Zinc Updated",
+          "category": "string",
+          "description": "string",
+          "quantity_in_stock":"20",
+          "re_order_level" : "50"
+      }
+  auth: inherit
 
 settings:
   encodeUrl: true
   timeout: 0
   followRedirects: true
   maxRedirects: 5
+  forwardAuthorizationHeader: true
 
 examples:
   - name: update

@@ -11,7 +11,7 @@ http:
       value: application/json
   params:
     - name: test
-      value: 9e6670db-781d-475f-9e9a-8ea78a76f4c3
+      value: a295c45b-1b09-4780-87ea-99a2cd833019
       type: path
   auth: inherit
 
@@ -20,6 +20,7 @@ settings:
   timeout: 0
   followRedirects: true
   maxRedirects: 5
+  forwardAuthorizationHeader: true
 
 examples:
   - name: start

@@ -5,23 +5,18 @@ info:
 
 http:
   method: GET
-  url: "{{base_url}}/user/organization/panels/profiles?filter=Annual Physical Exam"
+  url: "{{base_url}}/user/organization/panels/profiles"
   headers:
     - name: Accept
       value: application/json
-  params:
-    - name: filter
-      value: Annual Physical Exam
-      type: query
-  auth:
-    type: bearer
-    token: 78|IJJwsPNGwfjrHdMvXfMgKzfYaTOw56YXrF1VLHE8b494a4af
+  auth: inherit
 
 settings:
   encodeUrl: true
   timeout: 0
   followRedirects: true
   maxRedirects: 5
+  forwardAuthorizationHeader: true
 
 examples:
   - name: list

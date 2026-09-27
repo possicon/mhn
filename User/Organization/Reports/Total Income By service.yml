@@ -5,11 +5,7 @@ info:
 
 http:
   method: GET
-  url: "{{base_url}}/user/organization/reports/income/services?service=ward_services"
-  params:
-    - name: service
-      value: ward_services
-      type: query
+  url: "{{base_url}}/user/organization/reports/income/services"
   auth: inherit
 
 settings:
@@ -20,15 +16,10 @@ settings:
   forwardAuthorizationHeader: true
 
 examples:
-  - name: Total Income By service
+  - name: sample
     request:
-      url: "{{base_url}}/user/organization/reports/income"
+      url: "{{base_url}}/user/organization/reports/income/services"
       method: GET
-      params:
-        - name: service
-          value: a134bd89-eec6-4624-8e1b-4005a2946056
-          type: query
-          disabled: true
     response:
       status: 200
       statusText: OK
@@ -44,11 +35,11 @@ examples:
         - name: cache-control
           value: no-cache, private
         - name: date
-          value: Wed, 19 Aug 2026 04:38:10 GMT
+          value: Wed, 02 Sep 2026 17:17:34 GMT
         - name: x-ratelimit-limit
           value: "60"
         - name: x-ratelimit-remaining
-          value: "59"
+          value: "57"
         - name: vary
           value: Origin
         - name: x-frame-options
@@ -64,12 +55,11 @@ examples:
             "success": true,
             "code": 0,
             "locale": "en",
-            "message": "Total Income Fetched",
+            "message": "Total Income Fetched By Service",
             "data": {
               "items": [
                 {
-                  "service_name": "Paracetamol",
-                  "service_id": "a134bd89-eec6-4624-8e1b-4005a2946056",
+                  "service_type": "consultation",
                   "total_income": "6400.00",
                   "bill_count": 1
                 }

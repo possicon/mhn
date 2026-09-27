@@ -11,29 +11,19 @@ http:
       value: application/json
   body:
     type: json
-    data: "{\r
-
-      \    // \"service_id\":\"9cfe8382-e00e-4771-8587-0af7056865cb\",\r
-
-      \    \"category\":\"medicine\",\r
-
-      \    \"quantity_in_stock\":\"36\",\r
-
-      \    \"re_order_level\":\"50\",\r
-
-      \    // \"description\":\"string\"\r
-
-      \    \"name\":\"Aboniki \",\r
-
-      \    \"description\":\"paracetemol\",\r
-
-      \    \"amount\":0,\r
-
-      \    \"medicine_type\":\"Pill\",\r
-
-      \    \"service_type\":\"pharmacy\"\r
-
-      }"
+    data: |-
+      {
+          // "service_id":"9cfe8382-e00e-4771-8587-0af7056865cb",
+          "category":"medicine",
+          "quantity_in_stock":"100",
+          "re_order_level":"50",
+          // "description":"string"
+          "name":"Zinc",
+          "description":"paracetemol",
+          "amount":1000,
+          "medicine_type":"Tablet",
+          "service_type":"pharmacy"
+      }
   auth:
     type: bearer
     token: "{{local_token}}"
@@ -43,6 +33,7 @@ settings:
   timeout: 0
   followRedirects: true
   maxRedirects: 5
+  forwardAuthorizationHeader: true
 
 examples:
   - name: add product

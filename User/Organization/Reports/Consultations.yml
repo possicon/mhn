@@ -1,20 +1,11 @@
 info:
-  name: Import services to hmo
+  name: Consultations
   type: http
-  seq: 28
+  seq: 15
 
 http:
-  method: POST
-  url: "{{base_url}}/user/organization/hmo/importServices"
-  body:
-    type: json
-    data: |
-      {
-        "hmo_id":"a2620a0d-0089-4bdf-a047-969e2aef23f0",
-        "is_all" : false,
-        "services" : ["a134bd8b-bb4f-4a6e-bd14-710cf7f71082"]
-
-      }
+  method: GET
+  url: "{{base_url}}/user/organization/reports/consultations"
   auth: inherit
 
 settings:
@@ -22,22 +13,13 @@ settings:
   timeout: 0
   followRedirects: true
   maxRedirects: 5
-  forwardAuthorizationHeader: true
+  forwardAuthorizationHeader: false
 
 examples:
-  - name: import services to hmo
+  - name: example
     request:
-      url: "{{base_url}}/user/organization/hmo/importServices"
-      method: POST
-      body:
-        type: json
-        data: |-
-          {
-                  "hmo_id":"22d588e9-4f42-34f7-a734-707a8f7eb095",
-            "is_all" : true,
-            "services" : [""]
-
-          }
+      url: "{{base_url}}/user/organization/reports/consultations"
+      method: GET
     response:
       status: 200
       statusText: OK
@@ -53,11 +35,11 @@ examples:
         - name: cache-control
           value: no-cache, private
         - name: date
-          value: Wed, 12 Aug 2026 18:13:10 GMT
+          value: Tue, 01 Sep 2026 17:06:50 GMT
         - name: x-ratelimit-limit
           value: "60"
         - name: x-ratelimit-remaining
-          value: "59"
+          value: "58"
         - name: vary
           value: Origin
         - name: x-frame-options
@@ -73,6 +55,14 @@ examples:
             "success": true,
             "code": 0,
             "locale": "en",
-            "message": "success",
-            "data": null
+            "message": "Consultations Fetched",
+            "data": {
+              "items": [
+                {
+                  "consultation_type": "General Physical Examination",
+                  "no_of_consultations": 1,
+                  "total_consultations": "6400.00"
+                }
+              ]
+            }
           }

@@ -5,26 +5,28 @@ info:
 
 http:
   method: POST
-  url: "{{base_url}}/user/organization/getHmoServiceItemHistory"
+  url: "{{base_url}}/user/organization/getHmoServiceItemHistory?page=3"
   headers:
     - name: Accept
       value: application/json
+  params:
+    - name: page
+      value: "3"
+      type: query
   body:
     type: json
-    data: "{\r
-
-      \    \"hmo_id\":\"9bbbac52-edd1-4aa7-8254-c29c14fa6249\"\r
-
-      }"
-  auth:
-    type: bearer
-    token: 78|IJJwsPNGwfjrHdMvXfMgKzfYaTOw56YXrF1VLHE8b494a4af
+    data: |-
+      {
+          "hmo_id":"22d588e9-4f42-34f7-a734-707a8f7eb095"
+      }
+  auth: inherit
 
 settings:
   encodeUrl: true
   timeout: 0
   followRedirects: true
   maxRedirects: 5
+  forwardAuthorizationHeader: true
 
 examples:
   - name: getHmoServiceItemHistory

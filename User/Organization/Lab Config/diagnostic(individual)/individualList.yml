@@ -5,26 +5,22 @@ info:
 
 http:
   method: GET
-  url: "{{base_url}}/user/organization/individualList?families[0]=hematology&families[1]=biochemistry"
+  url: "{{base_url}}/user/organization/individualList?families[0]=biochemistry"
   headers:
     - name: Accept
       value: application/json
   params:
     - name: families[0]
-      value: hematology
-      type: query
-    - name: families[1]
       value: biochemistry
       type: query
-  auth:
-    type: bearer
-    token: 247|1FSCec9pz35VEhQ3wlXIpO44lFOxgCfHw7uvoy4z7eb8f4a9
+  auth: inherit
 
 settings:
   encodeUrl: true
   timeout: 0
   followRedirects: true
   maxRedirects: 5
+  forwardAuthorizationHeader: true
 
 examples:
   - name: individualList

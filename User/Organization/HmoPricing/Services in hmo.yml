@@ -1,0 +1,377 @@
+info:
+  name: Services in hmo
+  type: http
+  seq: 29
+
+http:
+  method: GET
+  url: "{{base_url}}/user/organization/hmoPricing/:hmo_id/services"
+  params:
+    - name: hmo_id
+      value: a2620a0d-0089-4bdf-a047-969e2aef23f0
+      type: path
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+  forwardAuthorizationHeader: false
+
+examples:
+  - name: example
+    request:
+      url: "{{base_url}}/user/organization/hmoPricing/:hmo_id/services"
+      method: GET
+      params:
+        - name: hmo_id
+          value: a2620a0d-0089-4bdf-a047-969e2aef23f0
+          type: path
+    response:
+      status: 200
+      statusText: OK
+      headers:
+        - name: server
+          value: nginx/1.24.0 (Ubuntu)
+        - name: content-type
+          value: application/json
+        - name: transfer-encoding
+          value: chunked
+        - name: connection
+          value: keep-alive
+        - name: cache-control
+          value: no-cache, private
+        - name: date
+          value: Sat, 12 Sep 2026 12:38:59 GMT
+        - name: x-ratelimit-limit
+          value: "60"
+        - name: x-ratelimit-remaining
+          value: "57"
+        - name: vary
+          value: Origin
+        - name: x-frame-options
+          value: SAMEORIGIN
+        - name: x-xss-protection
+          value: 1; mode=block
+        - name: x-content-type-options
+          value: nosniff
+      body:
+        type: json
+        data: |-
+          {
+            "success": true,
+            "code": 0,
+            "locale": "en",
+            "message": "Services fetched successfully.",
+            "data": {
+              "services": {
+                "current_page": 1,
+                "data": [
+                  {
+                    "id": "a282b23e-2dd3-44c6-888a-6ee226bc4185",
+                    "name": "laundry",
+                    "service_type": "ward_services",
+                    "organization_id": null,
+                    "description": null,
+                    "category": null,
+                    "status": "active",
+                    "medicine_type": null,
+                    "amount": null,
+                    "created_at": "2026-08-15T19:29:58.000000Z",
+                    "updated_at": "2026-08-15T19:29:58.000000Z",
+                    "pharmacy_type": null
+                  },
+                  {
+                    "id": "a282b23e-369d-4a9d-8e12-fd2523542216",
+                    "name": "errands",
+                    "service_type": "ward_services",
+                    "organization_id": null,
+                    "description": null,
+                    "category": null,
+                    "status": "active",
+                    "medicine_type": null,
+                    "amount": null,
+                    "created_at": "2026-08-15T19:29:58.000000Z",
+                    "updated_at": "2026-08-15T19:29:58.000000Z",
+                    "pharmacy_type": null
+                  },
+                  {
+                    "id": "a282b23c-8c8b-49be-af88-76690e07b11d",
+                    "name": "Abdominal X-Ray",
+                    "service_type": "X-rays",
+                    "organization_id": null,
+                    "description": null,
+                    "category": null,
+                    "status": "active",
+                    "medicine_type": null,
+                    "amount": null,
+                    "created_at": "2026-08-15T19:29:57.000000Z",
+                    "updated_at": "2026-08-15T19:29:57.000000Z",
+                    "pharmacy_type": null
+                  },
+                  {
+                    "id": "a282b23c-9d3b-49f3-9075-47a52ca00f2e",
+                    "name": "Pelvic X-Ray",
+                    "service_type": "X-rays",
+                    "organization_id": null,
+                    "description": null,
+                    "category": null,
+                    "status": "active",
+                    "medicine_type": null,
+                    "amount": null,
+                    "created_at": "2026-08-15T19:29:57.000000Z",
+                    "updated_at": "2026-08-15T19:29:57.000000Z",
+                    "pharmacy_type": null
+                  },
+                  {
+                    "id": "a282b23c-a65c-499e-9ec4-85e78923f2ba",
+                    "name": "Extremity X-Ray",
+                    "service_type": "X-rays",
+                    "organization_id": null,
+                    "description": null,
+                    "category": null,
+                    "status": "active",
+                    "medicine_type": null,
+                    "amount": null,
+                    "created_at": "2026-08-15T19:29:57.000000Z",
+                    "updated_at": "2026-08-15T19:29:57.000000Z",
+                    "pharmacy_type": null
+                  },
+                  {
+                    "id": "a282b23c-b138-45a6-8f5a-fa27affdd23a",
+                    "name": "Spinal X-Ray",
+                    "service_type": "X-rays",
+                    "organization_id": null,
+                    "description": null,
+                    "category": null,
+                    "status": "active",
+                    "medicine_type": null,
+                    "amount": null,
+                    "created_at": "2026-08-15T19:29:57.000000Z",
+                    "updated_at": "2026-08-15T19:29:57.000000Z",
+                    "pharmacy_type": null
+                  },
+                  {
+                    "id": "a282b23c-c840-45b0-896a-dca0d2a4ede2",
+                    "name": "Dental X-Ray",
+                    "service_type": "X-rays",
+                    "organization_id": null,
+                    "description": null,
+                    "category": null,
+                    "status": "active",
+                    "medicine_type": null,
+                    "amount": null,
+                    "created_at": "2026-08-15T19:29:57.000000Z",
+                    "updated_at": "2026-08-15T19:29:57.000000Z",
+                    "pharmacy_type": null
+                  },
+                  {
+                    "id": "a282b23c-d69a-4763-a178-753054cf38cd",
+                    "name": "Skull X-Ray",
+                    "service_type": "X-rays",
+                    "organization_id": null,
+                    "description": null,
+                    "category": null,
+                    "status": "active",
+                    "medicine_type": null,
+                    "amount": null,
+                    "created_at": "2026-08-15T19:29:57.000000Z",
+                    "updated_at": "2026-08-15T19:29:57.000000Z",
+                    "pharmacy_type": null
+                  },
+                  {
+                    "id": "a282b23c-e040-4583-b7e0-1f4511874d0b",
+                    "name": "Bone X-Ray",
+                    "service_type": "X-rays",
+                    "organization_id": null,
+                    "description": null,
+                    "category": null,
+                    "status": "active",
+                    "medicine_type": null,
+                    "amount": null,
+                    "created_at": "2026-08-15T19:29:57.000000Z",
+                    "updated_at": "2026-08-15T19:29:57.000000Z",
+                    "pharmacy_type": null
+                  },
+                  {
+                    "id": "a282b23c-ea75-46ff-bd61-03d99ea76bf1",
+                    "name": "Thoracic X-Ray",
+                    "service_type": "X-rays",
+                    "organization_id": null,
+                    "description": null,
+                    "category": null,
+                    "status": "active",
+                    "medicine_type": null,
+                    "amount": null,
+                    "created_at": "2026-08-15T19:29:57.000000Z",
+                    "updated_at": "2026-08-15T19:29:57.000000Z",
+                    "pharmacy_type": null
+                  },
+                  {
+                    "id": "a282b23c-f494-45d4-a6d0-8602faaf65e0",
+                    "name": "Lung X-Ray",
+                    "service_type": "X-rays",
+                    "organization_id": null,
+                    "description": null,
+                    "category": null,
+                    "status": "active",
+                    "medicine_type": null,
+                    "amount": null,
+                    "created_at": "2026-08-15T19:29:57.000000Z",
+                    "updated_at": "2026-08-15T19:29:57.000000Z",
+                    "pharmacy_type": null
+                  },
+                  {
+                    "id": "a28081da-c707-4691-8efe-42e094bcebb8",
+                    "name": "system",
+                    "service_type": "ward_services",
+                    "organization_id": "a134be07-5a37-4059-b549-37210fe65250",
+                    "description": "Candidus balbus cauda tertius copia acervus toties. Turbo tabella solitudo cum valens armarium decimus certe stultus.",
+                    "category": "pixel",
+                    "status": "active",
+                    "medicine_type": null,
+                    "amount": null,
+                    "created_at": "2026-08-14T17:23:01.000000Z",
+                    "updated_at": "2026-08-14T17:23:01.000000Z",
+                    "pharmacy_type": null
+                  },
+                  {
+                    "id": "a2808145-900c-48d3-8b5f-80359becc834",
+                    "name": "hard drive",
+                    "service_type": "ward_services",
+                    "organization_id": "a134be07-5a37-4059-b549-37210fe65250",
+                    "description": "Delectus minus defaeco facere synagoga bibo pauper calamitas suspendo. Cetera venustas enim aqua audentia caveo. Demergo vix vitium depopulo sono aequitas.",
+                    "category": "panel",
+                    "status": "active",
+                    "medicine_type": null,
+                    "amount": null,
+                    "created_at": "2026-08-14T17:21:23.000000Z",
+                    "updated_at": "2026-08-14T17:21:23.000000Z",
+                    "pharmacy_type": null
+                  },
+                  {
+                    "id": "a27f9797-647e-4425-beda-43b6769f5a95",
+                    "name": "panel",
+                    "service_type": "ward_services",
+                    "organization_id": "a134be07-5a37-4059-b549-37210fe65250",
+                    "description": "Hic absorbeo tamdiu deleniti. Arbustum adsidue allatus vaco. Ademptio a vulticulus bardus acerbitas arcesso cado. Inflammatio bestia doloribus deripio cognatus conicio delectatio tantum culpo cervus. Usitas demergo cibus.",
+                    "category": "hard drive",
+                    "status": "active",
+                    "medicine_type": null,
+                    "amount": null,
+                    "created_at": "2026-08-14T06:27:58.000000Z",
+                    "updated_at": "2026-08-14T06:27:58.000000Z",
+                    "pharmacy_type": null
+                  },
+                  {
+                    "id": "a26de92b-1709-497e-acae-d2987ada73f8",
+                    "name": "Blood Group",
+                    "service_type": "clinical lab",
+                    "organization_id": null,
+                    "description": null,
+                    "category": "hematology ",
+                    "status": "inactive",
+                    "medicine_type": null,
+                    "amount": null,
+                    "created_at": "2026-08-05T11:31:10.000000Z",
+                    "updated_at": "2026-08-12T16:56:01.000000Z",
+                    "pharmacy_type": null
+                  }
+                ],
+                "first_page_url": "http://mhn.test/api/v1/user/organization/hmoPricing/a2620a0d-0089-4bdf-a047-969e2aef23f0/services?page=1",
+                "from": 1,
+                "last_page": 28,
+                "last_page_url": "http://mhn.test/api/v1/user/organization/hmoPricing/a2620a0d-0089-4bdf-a047-969e2aef23f0/services?page=28",
+                "links": [
+                  {
+                    "url": null,
+                    "label": "&laquo; Previous",
+                    "active": false
+                  },
+                  {
+                    "url": "http://mhn.test/api/v1/user/organization/hmoPricing/a2620a0d-0089-4bdf-a047-969e2aef23f0/services?page=1",
+                    "label": "1",
+                    "active": true
+                  },
+                  {
+                    "url": "http://mhn.test/api/v1/user/organization/hmoPricing/a2620a0d-0089-4bdf-a047-969e2aef23f0/services?page=2",
+                    "label": "2",
+                    "active": false
+                  },
+                  {
+                    "url": "http://mhn.test/api/v1/user/organization/hmoPricing/a2620a0d-0089-4bdf-a047-969e2aef23f0/services?page=3",
+                    "label": "3",
+                    "active": false
+                  },
+                  {
+                    "url": "http://mhn.test/api/v1/user/organization/hmoPricing/a2620a0d-0089-4bdf-a047-969e2aef23f0/services?page=4",
+                    "label": "4",
+                    "active": false
+                  },
+                  {
+                    "url": "http://mhn.test/api/v1/user/organization/hmoPricing/a2620a0d-0089-4bdf-a047-969e2aef23f0/services?page=5",
+                    "label": "5",
+                    "active": false
+                  },
+                  {
+                    "url": "http://mhn.test/api/v1/user/organization/hmoPricing/a2620a0d-0089-4bdf-a047-969e2aef23f0/services?page=6",
+                    "label": "6",
+                    "active": false
+                  },
+                  {
+                    "url": "http://mhn.test/api/v1/user/organization/hmoPricing/a2620a0d-0089-4bdf-a047-969e2aef23f0/services?page=7",
+                    "label": "7",
+                    "active": false
+                  },
+                  {
+                    "url": "http://mhn.test/api/v1/user/organization/hmoPricing/a2620a0d-0089-4bdf-a047-969e2aef23f0/services?page=8",
+                    "label": "8",
+                    "active": false
+                  },
+                  {
+                    "url": "http://mhn.test/api/v1/user/organization/hmoPricing/a2620a0d-0089-4bdf-a047-969e2aef23f0/services?page=9",
+                    "label": "9",
+                    "active": false
+                  },
+                  {
+                    "url": "http://mhn.test/api/v1/user/organization/hmoPricing/a2620a0d-0089-4bdf-a047-969e2aef23f0/services?page=10",
+                    "label": "10",
+                    "active": false
+                  },
+                  {
+                    "url": null,
+                    "label": "...",
+                    "active": false
+                  },
+                  {
+                    "url": "http://mhn.test/api/v1/user/organization/hmoPricing/a2620a0d-0089-4bdf-a047-969e2aef23f0/services?page=27",
+                    "label": "27",
+                    "active": false
+                  },
+                  {
+                    "url": "http://mhn.test/api/v1/user/organization/hmoPricing/a2620a0d-0089-4bdf-a047-969e2aef23f0/services?page=28",
+                    "label": "28",
+                    "active": false
+                  },
+                  {
+                    "url": "http://mhn.test/api/v1/user/organization/hmoPricing/a2620a0d-0089-4bdf-a047-969e2aef23f0/services?page=2",
+                    "label": "Next &raquo;",
+                    "active": false
+                  }
+                ],
+                "next_page_url": "http://mhn.test/api/v1/user/organization/hmoPricing/a2620a0d-0089-4bdf-a047-969e2aef23f0/services?page=2",
+                "path": "http://mhn.test/api/v1/user/organization/hmoPricing/a2620a0d-0089-4bdf-a047-969e2aef23f0/services",
+                "per_page": 15,
+                "prev_page_url": null,
+                "to": 15,
+                "total": 418
+              },
+              "meta": {
+                "current_page": 1,
+                "last_page": 28,
+                "per_page": 15,
+                "total": 418
+              }
+            }
+          }
