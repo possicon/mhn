@@ -5,10 +5,14 @@ info:
 
 http:
   method: GET
-  url: "{{base_url}}/user/organization/panels/profiles"
+  url: "{{base_url}}/user/organization/panels/profiles?filter=alarm"
   headers:
     - name: Accept
       value: application/json
+  params:
+    - name: filter
+      value: alarm
+      type: query
   auth: inherit
 
 settings:

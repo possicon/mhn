@@ -5,16 +5,19 @@ info:
 
 http:
   method: GET
-  url: "{{base_url}}/user/organization/hmos"
-  auth:
-    type: bearer
-    token: 64|wekxmT6fEC7W1savxR3VWd2fcLOu9fkY2pdTExtBe40532c7
+  url: "{{base_url}}/user/organization/hmos?per_page=10"
+  params:
+    - name: per_page
+      value: "10"
+      type: query
+  auth: inherit
 
 settings:
   encodeUrl: true
   timeout: 0
   followRedirects: true
   maxRedirects: 5
+  forwardAuthorizationHeader: true
 
 examples:
   - name: ListHmos

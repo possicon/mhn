@@ -1,0 +1,134 @@
+info:
+  name: upload Xray Test Result
+  type: http
+  seq: 20
+
+http:
+  method: POST
+  url: "{{base_url}}/user/lab/:xray/tests/:test/uploadResult"
+  headers:
+    - name: Accept
+      value: application/json
+  params:
+    - name: test
+      value: 01a0f338-bc2d-7163-934a-928ad64551df
+      type: path
+    - name: xray
+      value: 01a0f338-bc29-73f3-a684-6b0dc8f4d654
+      type: path
+  body:
+    type: multipart-form
+    data:
+      - name: attach_docs
+        type: text
+        value: "1"
+      - name: message
+        type: text
+        value: We are yet to do the heart scan
+      - name: status
+        type: text
+        value: in_progress
+      - name: report_note
+        type: text
+        value: "{{$randomWords}}"
+      - name: files[0]
+        type: file
+        value:
+          - /home/lawpavilion/Music/img.jpeg
+      - name: files[1]
+        type: file
+        value:
+          - NGgLRUCyM/EmmanuelOgbuaguCV.pdf
+        disabled: true
+      - name: send_sms
+        type: text
+        value: "0"
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+  forwardAuthorizationHeader: true
+
+examples:
+  - name: example
+    request:
+      url: "{{base_url}}/user/lab/:xray/tests/:test/uploadResult"
+      method: POST
+      headers:
+        - name: Accept
+          value: application/json
+      params:
+        - name: test
+          value: 01a0f338-bc2d-7163-934a-928ad64551df
+          type: path
+        - name: xray
+          value: 01a0f338-bc29-73f3-a684-6b0dc8f4d654
+          type: path
+      body:
+        type: multipart-form
+        data:
+          - name: attach_docs
+            type: text
+            value: "1"
+          - name: message
+            type: text
+            value: We are yet to do the heart scan
+          - name: status
+            type: text
+            value: in_progress
+          - name: report_note
+            type: text
+            value: "{{$randomWords}}"
+          - name: files[0]
+            type: file
+            value:
+              - /home/lawpavilion/Music/img.jpeg
+          - name: files[1]
+            type: file
+            value:
+              - NGgLRUCyM/EmmanuelOgbuaguCV.pdf
+            disabled: true
+          - name: send_sms
+            type: text
+            value: "0"
+    response:
+      status: 200
+      statusText: OK
+      headers:
+        - name: server
+          value: nginx/1.24.0 (Ubuntu)
+        - name: content-type
+          value: application/json
+        - name: transfer-encoding
+          value: chunked
+        - name: connection
+          value: keep-alive
+        - name: cache-control
+          value: no-cache, private
+        - name: date
+          value: Wed, 30 Sep 2026 17:58:23 GMT
+        - name: x-ratelimit-limit
+          value: "60"
+        - name: x-ratelimit-remaining
+          value: "59"
+        - name: vary
+          value: Origin
+        - name: x-frame-options
+          value: SAMEORIGIN
+        - name: x-xss-protection
+          value: 1; mode=block
+        - name: x-content-type-options
+          value: nosniff
+      body:
+        type: json
+        data: |-
+          {
+            "success": true,
+            "code": 0,
+            "locale": "en",
+            "message": "Result sent",
+            "data": null
+          }
