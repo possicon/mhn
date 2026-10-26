@@ -5,13 +5,13 @@ info:
 
 http:
   method: GET
-  url: "{{base_url}}/user/organization/panelsList?family=microbiology"
+  url: "{{base_url}}/user/organization/panelsList?family=hematology"
   headers:
     - name: Accept
       value: application/json
   params:
     - name: family
-      value: microbiology
+      value: hematology
       type: query
   auth: inherit
 

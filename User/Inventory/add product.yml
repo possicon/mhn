@@ -18,7 +18,7 @@ http:
           "quantity_in_stock":"100",
           "re_order_level":"50",
           // "description":"string"
-          "name":"Zinc",
+          "name":"Levo",
           "description":"paracetemol",
           "amount":1000,
           "medicine_type":"Tablet",

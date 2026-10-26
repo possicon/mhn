@@ -11,7 +11,7 @@ http:
       value: application/json
   params:
     - name: id
-      value: a1443165-2183-4e04-8f37-c04304fc7680
+      value: 01a0a128-1fc4-7359-89a1-e0e0f6012dba
       type: path
   body:
     type: json
@@ -19,8 +19,8 @@ http:
       {
           "amount":4000,
           "care_type":"primary care",
-          "coverage_type":"partial",
-          "percent":50,
+          "coverage_type":"full",
+          "percent":100,
           "is_amount_in_percent":1
       }
   auth: inherit

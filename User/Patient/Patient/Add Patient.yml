@@ -72,7 +72,8 @@ http:
       - name: profile_picture
         type: file
         value:
-          - 7dEy5sYhQ/close.png
+          - /home/lawpavilion/Pictures/Screenshots/Screenshot from 2026-10-03 14-44-25.png
+        contentType: image/png
       - name: nof_fullName
         type: text
         value: David Prince
@@ -137,6 +138,7 @@ settings:
   timeout: 0
   followRedirects: true
   maxRedirects: 5
+  forwardAuthorizationHeader: true
 
 examples:
   - name: Add Patient

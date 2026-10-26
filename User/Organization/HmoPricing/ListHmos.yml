@@ -5,10 +5,13 @@ info:
 
 http:
   method: GET
-  url: "{{base_url}}/user/organization/hmos?per_page=10"
+  url: "{{base_url}}/user/organization/hmos?is_paginated=false&hmo_exist=true"
   params:
-    - name: per_page
-      value: "10"
+    - name: is_paginated
+      value: "false"
+      type: query
+    - name: hmo_exist
+      value: "true"
       type: query
   auth: inherit
 

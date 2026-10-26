@@ -5,7 +5,11 @@ info:
 
 http:
   method: GET
-  url: ""
+  url: "{{base_url}}/user/surgery/procedure/:procedureId"
+  params:
+    - name: procedureId
+      value: 9dc9ee5f-d78f-4633-a0d9-d9701c61b580
+      type: path
   auth: inherit
 
 settings:
@@ -13,3 +17,4 @@ settings:
   timeout: 0
   followRedirects: true
   maxRedirects: 5
+  forwardAuthorizationHeader: true

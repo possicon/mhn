@@ -5,8 +5,11 @@ info:
 
 http:
   method: GET
-  url: "{{base_url}}/user/patient/:id/consultations/:appointmetn_id/xrays"
+  url: "{{base_url}}/user/patient/:id/consultations/:appointmetn_id/xrays?filter=Ultrasounds"
   params:
+    - name: filter
+      value: Ultrasounds
+      type: query
     - name: appointmetn_id
       value: a14427af-e505-4c40-a7ad-6c2bcbf8ff75
       type: path

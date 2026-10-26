@@ -5,13 +5,13 @@ info:
 
 http:
   method: GET
-  url: "{{base_url}}/user/organization/diagnostic/individual?is_paginated=false"
+  url: "{{base_url}}/user/organization/diagnostic/individual?search=Complete Urinalysis"
   headers:
     - name: Accept
       value: application/json
   params:
-    - name: is_paginated
-      value: "false"
+    - name: search
+      value: Complete Urinalysis
       type: query
   auth: inherit
 

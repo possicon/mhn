@@ -1,0 +1,124 @@
+info:
+  name: upload single test Result
+  type: http
+  seq: 17
+
+http:
+  method: POST
+  url: "{{base_url}}/user/organization/test/:test/test_lists/:test_list/uploadResult"
+  headers:
+    - name: Accept
+      value: application/json
+  params:
+    - name: test_list
+      value: 9abdea17-90cc-4157-95d7-6a85accbf83b
+      type: path
+    - name: test
+      value: a28c9b45-4117-4a04-9006-8946bbd92eec
+      type: path
+  body:
+    type: json
+    data: |-
+      {
+        "report_note" : "{{$randomLoremParagraph}}",
+        "send_sms" : 0,
+        "message" : "",
+        "status" : "incomplete",
+        "results" : [
+            {
+              "test_id"  : 1,
+              "note" : "{{$randomLoremParagraph}}",
+              "progress_status" : "complete",
+              "result" : {
+                "growth":"Growth",
+                "organism":"hyhyhy",
+                "sensitivity":"ghththh",
+               "resultType":"microbiology"
+              }
+            }
+        ]
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+  forwardAuthorizationHeader: true
+
+examples:
+  - name: upload a single test result
+    request:
+      url: "{{base_url}}/user/organization/test/:test/test_lists/:test_list/uploadResult"
+      method: POST
+      headers:
+        - name: Accept
+          value: application/json
+      params:
+        - name: test_list
+          value: 9abdea17-90cc-4157-95d7-6a85accbf83b
+          type: path
+        - name: test
+          value: a28c9b45-4117-4a04-9006-8946bbd92eec
+          type: path
+      body:
+        type: json
+        data: |-
+          {
+            "report_note" : "{{$randomLoremParagraph}}",
+            "send_sms" : 0,
+            "message" : "",
+            "status" : "incomplete",
+            "results" : [
+                {
+                  "test_id"  : 1,
+                  "note" : "{{$randomLoremParagraph}}",
+                  "progress_status" : "complete",
+                  "result" : {
+                    "growth":"Growth",
+                    "organism":"hyhyhy",
+                    "sensitivity":"ghththh",
+                   "resultType":"microbiology"
+                  }
+                }
+            ]
+          }
+    response:
+      status: 200
+      statusText: OK
+      headers:
+        - name: server
+          value: nginx/1.24.0 (Ubuntu)
+        - name: content-type
+          value: application/json
+        - name: transfer-encoding
+          value: chunked
+        - name: connection
+          value: keep-alive
+        - name: cache-control
+          value: no-cache, private
+        - name: date
+          value: Mon, 26 Oct 2026 06:10:06 GMT
+        - name: x-ratelimit-limit
+          value: "60"
+        - name: x-ratelimit-remaining
+          value: "59"
+        - name: vary
+          value: Origin
+        - name: x-frame-options
+          value: SAMEORIGIN
+        - name: x-xss-protection
+          value: 1; mode=block
+        - name: x-content-type-options
+          value: nosniff
+      body:
+        type: json
+        data: |-
+          {
+            "success": true,
+            "code": 0,
+            "locale": "en",
+            "message": "Result sent",
+            "data": null
+          }

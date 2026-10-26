@@ -5,10 +5,10 @@ info:
 
 http:
   method: GET
-  url: "{{base_url}}/user/organization/service?price_set=true"
+  url: "{{base_url}}/user/organization/service?filter=ultrasounds"
   params:
-    - name: price_set
-      value: "true"
+    - name: filter
+      value: ultrasounds
       type: query
   auth: inherit
 

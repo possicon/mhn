@@ -11,7 +11,7 @@ http:
       value: application/json
   params:
     - name: id
-      value: ""
+      value: a1442957-1814-4a52-9754-7d5123f349e4
       type: path
   auth: inherit
 
@@ -20,6 +20,7 @@ settings:
   timeout: 0
   followRedirects: true
   maxRedirects: 5
+  forwardAuthorizationHeader: true
 
 examples:
   - name: single patient

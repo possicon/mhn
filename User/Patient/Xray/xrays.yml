@@ -5,9 +5,9 @@ info:
 
 http:
   method: GET
-  url: "{{base_url}}/user/xrays?search=pending"
+  url: "{{base_url}}/user/xrays?status=pending"
   params:
-    - name: search
+    - name: status
       value: pending
       type: query
   auth: inherit
@@ -17,6 +17,7 @@ settings:
   timeout: 0
   followRedirects: true
   maxRedirects: 5
+  forwardAuthorizationHeader: true
 
 examples:
   - name: xrays

@@ -5,7 +5,7 @@ info:
 
 http:
   method: GET
-  url: "{{base_url}}/user/patients/:patientId/appointments"
+  url: "{{base_url}}/user/consultations"
   headers:
     - name: Accept
       value: application/json
@@ -14,9 +14,6 @@ http:
       value: MHN_USAi2dTkjg
       type: query
       disabled: true
-    - name: patientId
-      value: a134bd94-4206-44a3-8038-51e0328a3df0
-      type: path
   auth: inherit
 
 settings:
